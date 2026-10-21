@@ -10,5 +10,6 @@
   ],
   "background": "assets/background.jpg",
   "presenter": "assets/presenter.png",
-  "tts_engine": "piper"
+  "tts_engine": "piper",
+  "piper_length_scale": 1.13
 }
