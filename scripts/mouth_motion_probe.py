@@ -29,9 +29,9 @@ fps = 15
 duration = min(8.0, len(samples) / rate)
 settings = cfg.get("presenter_settings", {}).get("experimental_mouth", {})
 cx = int(settings.get("center_x", 0.50) * 960)
-cy = int(settings.get("center_y", 0.39) * 540)
-width = int(settings.get("width", 0.070) * 960)
-height = int(settings.get("max_open", 0.023) * 540)
+cy = int(settings.get("center_y", 0.355) * 540)
+width = int(settings.get("width", 0.048) * 960)
+height = int(settings.get("max_open", 0.016) * 540)
 frames = out / "mouth-frames"
 frames.mkdir(exist_ok=True)
 for n in range(max(1, math.ceil(duration * fps))):
