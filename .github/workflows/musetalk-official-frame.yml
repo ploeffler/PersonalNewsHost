@@ -1,0 +1,93 @@
+name: MuseTalk official single-frame CPU test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  official-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tools and CPU libraries
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg espeak-ng
+          python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch torchvision
+          python3 -m pip install --disable-pip-version-check 'diffusers>=0.30,<0.37' 'transformers>=4.40,<5' accelerate safetensors huggingface_hub pillow numpy librosa soundfile opencv-python-headless einops omegaconf face-alignment
+      - name: Fetch official source and validate exact preprocessing on CPU
+        shell: bash
+        run: |
+          mkdir -p musetalk-official-preflight
+          set -o pipefail
+          timeout 660s python3 -u - <<'PY' 2>&1 | tee musetalk-official-preflight/run.log
+          import gc,json,resource,subprocess,traceback
+          from pathlib import Path
+          out=Path("musetalk-official-preflight")
+          report={"device":"cpu","pipeline":"official MuseTalk 1.5 preflight","full_official_inference":False}
+          try:
+              import torch, numpy as np, cv2
+              from PIL import Image
+              from huggingface_hub import hf_hub_download
+              torch.set_num_threads(4)
+              subprocess.run(["git","clone","--depth","1","https://github.com/TMElyralab/MuseTalk.git","/tmp/official-musetalk"],check=True)
+              import sys
+              sys.path.insert(0,"/tmp/official-musetalk")
+              from musetalk.utils.audio_processor import AudioProcessor
+              from musetalk.models.unet import PositionalEncoding, UNet
+              from musetalk.models.vae import VAE
+              from transformers import WhisperModel
+              subprocess.run(["espeak-ng","-v","de","-s","140","-w",str(out/"speech.wav"),"Guten Abend. Hier sind die Nachrichten."],check=True)
+              ap=AudioProcessor(feature_extractor_path="openai/whisper-tiny")
+              features,audio_length=ap.get_audio_feature(str(out/"speech.wav"))
+              whisper=WhisperModel.from_pretrained("openai/whisper-tiny").eval()
+              with torch.inference_mode():
+                  chunks=ap.get_whisper_chunk(features,"cpu",torch.float32,whisper,audio_length,fps=5)
+                  conditioned=PositionalEncoding(d_model=384)(chunks[:1])
+              report["official_audio_chunks"]=list(chunks.shape)
+              report["official_positional_encoding"]=list(conditioned.shape)
+              del whisper,features,ap,chunks
+              gc.collect()
+              model_dir=Path("/tmp/official-vae")
+              model_dir.mkdir(exist_ok=True)
+              for fname in ["config.json","diffusion_pytorch_model.bin"]:
+                  source=hf_hub_download(repo_id="stabilityai/sd-vae-ft-mse",filename=fname)
+                  (model_dir/fname).symlink_to(source)
+              vae=VAE(model_path=str(model_dir))
+              im=np.array(Image.open("assets/presenter.png").convert("RGB"))[:,:,::-1].copy()
+              x1,y1,x2,y2=730,105,949,400
+              face=cv2.resize(im[y1:y2,x1:x2],(256,256))
+              with torch.inference_mode():
+                  latents=vae.get_latents_for_unet(face)
+              report["official_vae_latents"]=list(latents.shape)
+              report["official_vae_latents_finite"]=bool(torch.isfinite(latents).all())
+              report["official_mask"]="upper half retained, lower half zero before [-1,1] normalization"
+              unet_weights=hf_hub_download(repo_id="TMElyralab/MuseTalk",filename="musetalkV15/unet.pth")
+              unet_config=hf_hub_download(repo_id="TMElyralab/MuseTalk",filename="musetalkV15/musetalk.json")
+              net=UNet(unet_config=unet_config,model_path=unet_weights,device=torch.device("cpu"))
+              net.model.eval()
+              with torch.inference_mode():
+                  prediction=net.model(latents,torch.tensor([0]),encoder_hidden_states=conditioned).sample
+                  recon=vae.decode_latents(prediction)
+              report["official_unet_output"]=list(prediction.shape)
+              report["official_unet_finite"]=bool(torch.isfinite(prediction).all())
+              report["official_reconstruction_shape"]=list(recon.shape)
+              Image.fromarray(cv2.cvtColor(recon[0],cv2.COLOR_BGR2RGB)).save(out/"official-face.png")
+              report["official_unet_and_decode"]=True
+              report["status"]="success"
+          except Exception as exc:
+              report["status"]="error"
+              report["error"]=repr(exc)
+              traceback.print_exc()
+          report["max_rss_kb"]=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+          (out/"report.json").write_text(json.dumps(report,indent=2)+"\n")
+          print(json.dumps(report,indent=2),flush=True)
+          if report["status"]!="success":raise SystemExit(1)
+          PY
+      - name: Upload official preflight report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: musetalk-official-frame
+          path: musetalk-official-preflight/
+          retention-days: 3
