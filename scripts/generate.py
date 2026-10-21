@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 CONFIG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
 BASE = "https://ploeffler.github.io/PersonalNewsHost/"
-UA = "PersonalNewsHost/0.3 (RSS news reader)"
+UA = "PersonalNewsHost/0.4 (RSS news reader)"
 ATOM = "{http://www.w3.org/2005/Atom}"
 
 def clean(s):
@@ -96,8 +96,11 @@ def main():
     with tempfile.TemporaryDirectory() as tmp:
         wav = Path(tmp) / "speech.wav"
         synthesize(script, wav)
-        bg = ROOT / CONFIG.get("background", "assets/background.jpg")
-        presenter = ROOT / CONFIG.get("presenter", "assets/presenter.png")
+        settings = CONFIG.get("presenter_settings", {})
+        bg = ROOT / settings.get("background", CONFIG.get("background", "assets/background.jpg"))
+        presenter = ROOT / settings.get("portrait", CONFIG.get("presenter", "assets/presenter.png"))
+        if settings.get("lip_sync", {}).get("enabled", False):
+            print("Lip sync requested but no validated engine is installed; using static portrait fallback")
         filters = []
         args = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y"]
         if bg.is_file():
