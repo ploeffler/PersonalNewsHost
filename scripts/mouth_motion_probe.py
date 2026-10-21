@@ -28,7 +28,7 @@ with wave.open(str(audio)) as wav:
 fps = 15
 duration = min(8.0, len(samples) / rate)
 settings = cfg.get("presenter_settings", {}).get("experimental_mouth", {})
-cx = int(settings.get("center_x", 0.50) * 960)
+cx = int(settings.get("center_x", 0.5083) * 960)
 cy = int(settings.get("center_y", 0.3426) * 540)
 width = int(settings.get("width", 0.048) * 960)
 height = int(settings.get("max_open", 0.016) * 540)
