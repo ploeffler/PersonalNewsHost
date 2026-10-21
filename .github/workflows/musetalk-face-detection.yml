@@ -36,11 +36,11 @@ jobs:
               t=time.monotonic()
               fa=FaceAlignment(LandmarksType.TWO_D,flip_input=False,device="cpu")
               boxes=fa.face_detector.detect_from_batch(torch.from_numpy(im).permute(2,0,1).unsqueeze(0).float())
-              result["face_boxes"]=[None if box is None else [float(v) for v in box] for box in boxes]
+              result["face_boxes"]=[None if box is None else [[float(v) for v in row[:4]] for row in __import__("numpy").asarray(box).reshape(-1, __import__("numpy").asarray(box).shape[-1])] for box in boxes]
               result["seconds"]=round(time.monotonic()-t,2)
-              result["face_detected"]=bool(boxes and boxes[0] is not None)
+              result["face_detected"]=bool(len(boxes) and boxes[0] is not None and len(boxes[0]))
               if result["face_detected"]:
-                  x1,y1,x2,y2=map(int,boxes[0])
+                  x1,y1,x2,y2=map(int,result["face_boxes"][0][0])
                   cv2.rectangle(im,(x1,y1),(x2,y2),(0,255,0),3)
                   cv2.imwrite("musetalk-face/face-box.jpg",im)
               result["status"]="success" if result["face_detected"] else "no_face_detected"
