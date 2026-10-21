@@ -1,0 +1,53 @@
+name: MuseTalk full pipeline preflight
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install lightweight inspection tools
+        run: python3 -m pip install --disable-pip-version-check huggingface_hub pillow
+      - name: Inspect presenter and official model dependencies
+        shell: bash
+        run: |
+          mkdir -p musetalk-preflight
+          python3 - <<'PY'
+          import json,os,subprocess,traceback
+          from pathlib import Path
+          from PIL import Image
+          from huggingface_hub import list_repo_files
+          result={"purpose":"Plan actual 5-second MuseTalk 1.5 lip-sync; no synthetic performance claims","actual_lip_sync_generated":False,"inputs":{},"models":{}}
+          portrait=Path("assets/presenter.png")
+          result["inputs"]["portrait_exists"]=portrait.exists()
+          if portrait.exists():
+              with Image.open(portrait) as im:
+                  result["inputs"]["portrait_pixels"]=list(im.size)
+                  result["inputs"]["portrait_mode"]=im.mode
+          result["inputs"]["ffmpeg_available"]=subprocess.run(["which","ffmpeg"],capture_output=True).returncode==0
+          repositories={
+              "musetalk":"TMElyralab/MuseTalk",
+              "whisper":"openai/whisper-tiny",
+              "vae":"stabilityai/sd-vae-ft-mse",
+          }
+          for label,repo in repositories.items():
+              try:
+                  files=list_repo_files(repo)
+                  result["models"][label]={"repository":repo,"accessible":True,"file_count":len(files),
+                      "matching_files":[p for p in files if p.endswith((".pth",".bin",".safetensors",".json"))][:25]}
+              except Exception as exc:
+                  result["models"][label]={"repository":repo,"accessible":False,"error":str(exc)}
+          result["status"]="inspected"
+          Path("musetalk-preflight/report.json").write_text(json.dumps(result,indent=2)+"\n")
+          print(json.dumps(result,indent=2))
+          PY
+      - name: Upload dependency report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: musetalk-pipeline-preflight
+          path: musetalk-preflight/
+          retention-days: 3
