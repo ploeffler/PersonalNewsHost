@@ -1,0 +1,73 @@
+name: MuseTalk 1.5 real UNet CPU forward
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cpu-forward:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install CPU inference dependencies
+        run: |
+          python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
+          python3 -m pip install --disable-pip-version-check diffusers transformers huggingface_hub accelerate safetensors
+      - name: Load real MuseTalk UNet and time one CPU forward
+        shell: bash
+        run: |
+          mkdir -p musetalk-forward
+          set -o pipefail
+          timeout 660s python3 -u - <<'PY' 2>&1 | tee musetalk-forward/run.log
+          import json,time,traceback,resource
+          from pathlib import Path
+          result={"model":"MuseTalk 1.5 actual UNet","real_forward":False,"video_generated":False,"cpu_only":True}
+          output=Path("musetalk-forward/report.json")
+          try:
+              import torch
+              from huggingface_hub import hf_hub_download
+              from diffusers import UNet2DConditionModel
+              torch.set_num_threads(4)
+              t=time.perf_counter()
+              checkpoint=hf_hub_download("TMElyralab/MuseTalk",filename="musetalkV15/unet.pth")
+              config=hf_hub_download("TMElyralab/MuseTalk",filename="musetalkV15/musetalk.json")
+              result["download_seconds"]=round(time.perf_counter()-t,2)
+              config_data=json.loads(Path(config).read_text())
+              result["config_keys"]=list(config_data.keys())
+              model=UNet2DConditionModel.from_config(config_data).float().eval()
+              weights=torch.load(checkpoint,map_location="cpu",weights_only=True)
+              if isinstance(weights,dict) and "state_dict" in weights: weights=weights["state_dict"]
+              incompat=model.load_state_dict(weights,strict=False)
+              result["missing_keys"]=len(incompat.missing_keys)
+              result["unexpected_keys"]=len(incompat.unexpected_keys)
+              if incompat.missing_keys or incompat.unexpected_keys:
+                  raise RuntimeError("Checkpoint does not match UNet configuration; forward benchmark invalid")
+              sample=torch.randn(1,model.config.in_channels,32,32)
+              cross_dim=model.config.cross_attention_dim
+              if isinstance(cross_dim,(tuple,list)): cross_dim=cross_dim[0]
+              audio=torch.randn(1,50,int(cross_dim))
+              result["sample_shape"]=list(sample.shape)
+              result["audio_embedding_shape"]=list(audio.shape)
+              t=time.perf_counter()
+              with torch.inference_mode():
+                  out=model(sample,torch.tensor([0]),encoder_hidden_states=audio).sample
+              result["forward_seconds"]=round(time.perf_counter()-t,3)
+              result["output_shape"]=list(out.shape)
+              result["real_forward"]=True
+              result["status"]="success"
+          except Exception as e:
+              result["status"]="failed"
+              result["error"]=repr(e)
+              traceback.print_exc()
+          result["max_rss_kb"]=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+          output.write_text(json.dumps(result,indent=2)+"\n")
+          print(json.dumps(result,indent=2))
+          if not result["real_forward"]: raise SystemExit(1)
+          PY
+      - name: Upload diagnostics even if test fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: musetalk-unet-forward
+          path: musetalk-forward/
+          retention-days: 3
