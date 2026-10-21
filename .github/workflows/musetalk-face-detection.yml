@@ -35,7 +35,7 @@ jobs:
               torch.set_num_threads(4)
               t=time.monotonic()
               fa=FaceAlignment(LandmarksType.TWO_D,flip_input=False,device="cpu")
-              boxes=fa.face_detector.detect_from_batch(im[None,:,:,:])
+              boxes=fa.face_detector.detect_from_batch(torch.from_numpy(im[None,:,:,:]))
               result["face_boxes"]=[None if box is None else [float(v) for v in box] for box in boxes]
               result["seconds"]=round(time.monotonic()-t,2)
               result["face_detected"]=bool(boxes and boxes[0] is not None)
