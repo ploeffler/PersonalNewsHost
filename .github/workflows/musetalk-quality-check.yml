@@ -133,7 +133,7 @@ jobs:
                           comparison.save(out/"before-after.png")
               del vae,predictions
               gc.collect()
-              subprocess.run(["ffmpeg","-y","-loglevel","error","-framerate","5","-i",str(frames/"frame-%03d.png"),"-i",str(out/"speech.wav"),"-c:v","libx264","-pix_fmt","yuv420p","-c:a","aac","-shortest",str(out/"first-speaking-face.mp4")],check=True)
+              subprocess.run(["ffmpeg","-y","-loglevel","error","-framerate","5","-i",str(frames/"frame-%03d.png"),"-i",str(out/"speech.wav"),"-vf","scale=trunc(iw/2)*2:trunc(ih/2)*2","-c:v","libx264","-pix_fmt","yuv420p","-c:a","aac","-shortest",str(out/"first-speaking-face.mp4")],check=True)
               report["lip_sync_video_generated"]=True
               report["quality_verified"]=False
               report["compositing"]="feathered lower face over unchanged original presenter"
