@@ -1,0 +1,23 @@
+name: Avatar CPU feasibility test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install local video tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg espeak-ng
+      - name: Run isolated avatar render benchmark
+        run: python3 scripts/avatar_probe.py
+      - name: Upload diagnostic report and preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: avatar-feasibility
+          path: avatar-test/
+          retention-days: 1
