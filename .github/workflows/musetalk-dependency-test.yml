@@ -1,0 +1,53 @@
+name: MuseTalk real pipeline dependency test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  dependencies:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install FFmpeg and build tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg libgl1 libglib2.0-0
+          ffmpeg -version | head -n 1
+      - name: Install CPU PyTorch and upstream runtime dependencies
+        shell: bash
+        run: |
+          mkdir -p musetalk-dependencies
+          set -o pipefail
+          timeout 570s bash -c '
+            python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch torchvision
+            python3 -m pip install --disable-pip-version-check numpy pillow opencv-python-headless librosa soundfile omegaconf diffusers transformers huggingface_hub accelerate safetensors einops tqdm
+            python3 -m pip install --disable-pip-version-check mmengine mmdet mmpose
+            python3 -m pip install --disable-pip-version-check --only-binary=:all: "mmcv==2.0.1"
+          ' 2>&1 | tee musetalk-dependencies/install.log
+      - name: Verify official MuseTalk imports
+        if: always()
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import importlib,json,traceback
+          from pathlib import Path
+          modules=["torch","cv2","librosa","omegaconf","diffusers","transformers","mmengine","mmcv","mmdet","mmpose"]
+          report={"purpose":"Check official MuseTalk preprocessing dependencies on free CPU runner","actual_lip_sync_generated":False,"modules":{}}
+          for name in modules:
+              try:
+                  mod=importlib.import_module(name)
+                  report["modules"][name]={"ok":True,"version":str(getattr(mod,"__version__","unknown"))}
+              except Exception as e:
+                  report["modules"][name]={"ok":False,"error":repr(e)}
+          report["ready"]=all(x["ok"] for x in report["modules"].values())
+          Path("musetalk-dependencies/report.json").write_text(json.dumps(report,indent=2)+"\n")
+          print(json.dumps(report,indent=2))
+          PY
+      - name: Upload logs and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: musetalk-dependency-test
+          path: musetalk-dependencies/
+          retention-days: 3
