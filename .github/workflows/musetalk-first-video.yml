@@ -1,0 +1,137 @@
+name: MuseTalk first real audio-conditioned face video
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  first-video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install CPU models and audio tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y espeak-ng ffmpeg
+          python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
+          python3 -m pip install --disable-pip-version-check 'diffusers>=0.30,<0.37' 'transformers>=4.40,<5' accelerate safetensors huggingface_hub pillow numpy librosa soundfile
+      - name: Generate short real conditioned face video
+        shell: bash
+        run: |
+          mkdir -p musetalk-first-video
+          set -o pipefail
+          timeout 660s python3 -u - <<'PY' 2>&1 | tee musetalk-first-video/run.log
+          import gc,json,resource,subprocess,time,traceback
+          from pathlib import Path
+          report={"device":"cpu","input":"assets/presenter.png","audio_conditioned":True,"lip_sync_video_generated":False,"fps":5,"model":"MuseTalk 1.5"}
+          out=Path("musetalk-first-video")
+          try:
+              import torch,numpy as np,librosa
+              from PIL import Image
+              from transformers import AutoFeatureExtractor,WhisperModel
+              from huggingface_hub import hf_hub_download
+              from diffusers import AutoencoderKL,UNet2DConditionModel
+              torch.set_num_threads(4)
+              def memory(label):
+                  report[label+"_rss_kb"]=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+              def unload(*items):
+                  for obj in items:del obj
+                  gc.collect()
+              image=Image.open(report["input"]).convert("RGB")
+              x1,y1,x2,y2=730,105,949,400
+              side=int(max(x2-x1,y2-y1)*1.45)
+              cx,cy=(x1+x2)/2,(y1+y2)/2
+              left=max(0,min(image.width-side,int(cx-side/2)))
+              top=max(0,min(image.height-side,int(cy-side/2)))
+              crop=image.crop((left,top,left+side,top+side)).resize((256,256))
+              crop.save(out/"original-crop.png")
+              pixels=torch.from_numpy(np.asarray(crop,dtype=np.float32)/127.5-1).permute(2,0,1).unsqueeze(0).contiguous()
+              # Match MuseTalk masked/reference latent preparation: lower half masked.
+              masked=pixels.clone()
+              masked[:,:,:,128:]=-1.0
+              subprocess.run(["espeak-ng","-v","de","-s","140","-w",str(out/"speech.wav"),"Guten Abend. Hier sind die Nachrichten."],check=True)
+              samples,sr=librosa.load(out/"speech.wav",sr=16000)
+              report["speech_seconds"]=round(len(samples)/sr,3)
+              extractor=AutoFeatureExtractor.from_pretrained("openai/whisper-tiny")
+              whisper=WhisperModel.from_pretrained("openai/whisper-tiny").eval()
+              with torch.inference_mode():
+                  feats=extractor(samples,sampling_rate=16000,return_tensors="pt").input_features
+                  hidden=whisper.encoder(feats,output_hidden_states=True).hidden_states
+                  sequence=torch.stack(hidden,dim=2) # [1,1500,5,384], 50 audio ticks/sec
+                  nframes=min(16,int(len(samples)/sr*5))
+                  report["frame_count"]=nframes
+                  # 50 audio tokens per frame, centered on the current 5-fps frame.
+                  padded=torch.cat([torch.zeros_like(sequence[:,:20]),sequence,torch.zeros_like(sequence[:,:40])],dim=1)
+                  conditioning=[padded[:,i*10:i*10+10,:,:].reshape(1,50,384).contiguous() for i in range(nframes)]
+              report["conditioning_shape"]=list(conditioning[0].shape)
+              del whisper,hidden,feats,extractor
+              gc.collect()
+              memory("after_whisper")
+              vae=AutoencoderKL.from_pretrained("stabilityai/sd-vae-ft-mse",torch_dtype=torch.float32).eval()
+              with torch.inference_mode():
+                  masked_latent=vae.encode(masked).latent_dist.mode()*vae.config.scaling_factor
+                  original_latent=vae.encode(pixels).latent_dist.mode()*vae.config.scaling_factor
+              report["latent_shape"]=list(original_latent.shape)
+              scaling=float(vae.config.scaling_factor)
+              del vae,masked,pixels
+              gc.collect()
+              memory("after_vae_encode")
+              checkpoint=hf_hub_download("TMElyralab/MuseTalk",filename="musetalkV15/unet.pth")
+              config=hf_hub_download("TMElyralab/MuseTalk",filename="musetalkV15/musetalk.json")
+              unet=UNet2DConditionModel.from_config(json.loads(Path(config).read_text())).float().eval()
+              weights=torch.load(checkpoint,map_location="cpu",weights_only=True)
+              if "state_dict" in weights:weights=weights["state_dict"]
+              unet.load_state_dict(weights,strict=True)
+              del weights
+              gc.collect()
+              inputs=torch.cat([masked_latent,original_latent],dim=1)
+              report["unet_input_shape"]=list(inputs.shape)
+              start=time.perf_counter()
+              predictions=[]
+              with torch.inference_mode():
+                  for idx,audio_tokens in enumerate(conditioning):
+                      prediction=unet(inputs,torch.tensor([0]),encoder_hidden_states=audio_tokens).sample
+                      if not bool(torch.isfinite(prediction).all()):raise RuntimeError("Non-finite frame "+str(idx))
+                      predictions.append(prediction.detach())
+                      print("UNet frame",idx+1,"/",len(conditioning),flush=True)
+              report["unet_seconds"]=round(time.perf_counter()-start,3)
+              report["prediction_finite"]=True
+              del unet,inputs,masked_latent,original_latent,conditioning
+              gc.collect()
+              memory("after_unet")
+              # Decode separately to reduce peak resident memory on free runner.
+              vae=AutoencoderKL.from_pretrained("stabilityai/sd-vae-ft-mse",torch_dtype=torch.float32).eval()
+              frames=out/"frames"
+              frames.mkdir(exist_ok=True)
+              with torch.inference_mode():
+                  for idx,prediction in enumerate(predictions):
+                      decoded=vae.decode(prediction/scaling).sample
+                      result=((decoded[0].clamp(-1,1)+1)*127.5).permute(1,2,0).byte().numpy()
+                      Image.fromarray(result).save(frames/f"frame-{idx:03d}.png")
+                      if idx==0:
+                          comparison=Image.new("RGB",(512,256))
+                          comparison.paste(crop,(0,0))
+                          comparison.paste(Image.fromarray(result),(256,0))
+                          comparison.save(out/"before-after.png")
+              del vae,predictions
+              gc.collect()
+              subprocess.run(["ffmpeg","-y","-loglevel","error","-framerate","5","-i",str(frames/"frame-%03d.png"),"-i",str(out/"speech.wav"),"-c:v","libx264","-pix_fmt","yuv420p","-c:a","aac","-shortest",str(out/"first-speaking-face.mp4")],check=True)
+              report["lip_sync_video_generated"]=True
+              report["video_seconds"]=round(nframes/5,2)
+              report["status"]="success"
+          except Exception as exc:
+              report["status"]="error"
+              report["error"]=repr(exc)
+              traceback.print_exc()
+          report["max_rss_kb"]=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+          (out/"report.json").write_text(json.dumps(report,indent=2)+"\n")
+          print(json.dumps(report,indent=2),flush=True)
+          if report["status"]!="success":raise SystemExit(1)
+          PY
+      - name: Upload experimental speaking face video and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: musetalk-first-speaking-video
+          path: musetalk-first-video/
+          retention-days: 3
