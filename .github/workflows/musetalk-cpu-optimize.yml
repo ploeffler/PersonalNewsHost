@@ -1,0 +1,73 @@
+name: MuseTalk CPU optimization benchmark
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install CPU model dependencies
+        run: |
+          python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
+          python3 -m pip install --disable-pip-version-check diffusers transformers huggingface_hub accelerate safetensors
+      - name: Benchmark actual MuseTalk UNet on CPU
+        shell: bash
+        run: |
+          mkdir -p musetalk-optimize
+          set -o pipefail
+          timeout 660s python3 -u - <<'PY' 2>&1 | tee musetalk-optimize/run.log
+          import json, time, traceback, resource
+          from pathlib import Path
+          import torch
+          from huggingface_hub import hf_hub_download
+          from diffusers import UNet2DConditionModel
+          output=Path("musetalk-optimize/report.json")
+          report={"model":"MuseTalk 1.5 UNet","device":"cpu","benchmark_type":"single real UNet forward with synthetic tensors","video_generated":False,"measurements":[]}
+          try:
+              checkpoint=hf_hub_download("TMElyralab/MuseTalk",filename="musetalkV15/unet.pth")
+              config=hf_hub_download("TMElyralab/MuseTalk",filename="musetalkV15/musetalk.json")
+              model=UNet2DConditionModel.from_config(json.loads(Path(config).read_text())).float().eval()
+              weights=torch.load(checkpoint,map_location="cpu",weights_only=True)
+              if "state_dict" in weights: weights=weights["state_dict"]
+              model.load_state_dict(weights,strict=True)
+              cross_dim=model.config.cross_attention_dim
+              if isinstance(cross_dim,(list,tuple)): cross_dim=cross_dim[0]
+              # A 16x16 latent is a synthetic lower-resolution test, NOT validated lip-sync output.
+              for side,threads in [(16,4),(32,4),(32,2)]:
+                  entry={"latent_side":side,"threads":threads}
+                  try:
+                      torch.set_num_threads(threads)
+                      sample=torch.randn(1,model.config.in_channels,side,side)
+                      audio=torch.randn(1,50,int(cross_dim))
+                      start=time.perf_counter()
+                      with torch.inference_mode():
+                          result=model(sample,torch.tensor([0]),encoder_hidden_states=audio).sample
+                      entry["forward_seconds"]=round(time.perf_counter()-start,3)
+                      entry["output_shape"]=list(result.shape)
+                      entry["status"]="ok"
+                  except Exception as exc:
+                      entry["status"]="failed"
+                      entry["error"]=repr(exc)
+                  report["measurements"].append(entry)
+                  output.write_text(json.dumps(report,indent=2)+"\n")
+                  print(entry,flush=True)
+              report["status"]="complete"
+          except Exception as exc:
+              report["status"]="failed"
+              report["error"]=repr(exc)
+              traceback.print_exc()
+          report["max_rss_kb"]=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+          output.write_text(json.dumps(report,indent=2)+"\n")
+          print(json.dumps(report,indent=2))
+          if report["status"]!="complete": raise SystemExit(1)
+          PY
+      - name: Save diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: musetalk-cpu-optimization
+          path: musetalk-optimize/
+          retention-days: 3
