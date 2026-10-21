@@ -118,7 +118,7 @@ def main():
         else:
             args += ["-f", "lavfi", "-i", "color=c=0x13243a:s=1280x720:r=1"]
         args += ["-i", str(wav)]
-        filters = ["[0:v]scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,format=yuv420p[bg]"]
+        filters = ["[0:v]fps=5,scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,format=yuv420p,setpts=PTS-STARTPTS[bg]"]
         current = "bg"
         if presenter.is_file():
             args += ["-loop", "1", "-i", str(presenter)]
