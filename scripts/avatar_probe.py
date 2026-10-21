@@ -19,8 +19,14 @@ output.mkdir(exist_ok=True)
 report = {"portrait_exists": portrait.is_file(), "cpu_count": os.cpu_count(),
           "lip_sync_implemented": False, "test_duration_seconds": 8}
 audio = output / "test.wav"
-subprocess.run(["espeak-ng", "-v", "de", "-w", str(audio),
-                "Guten Abend. Willkommen bei Personal News Host. Das ist ein Test."], check=True)
+if not portrait.is_file():
+    raise SystemExit("Moderatorbild fehlt: Bitte assets/presenter.png ins Repository hochladen. Kein Testvideo ohne Gesicht.")
+model = root / "models/de_DE-thorsten-high.onnx"
+if not model.is_file():
+    raise SystemExit("Piper-Stimmmodell fehlt; Test abgebrochen statt schlechterer Ersatzstimme.")
+speech = "Guten Abend. Willkommen bei Personal News Host. Das ist ein Test."
+subprocess.run(["piper", "--model", str(model), "--output_file", str(audio)],
+               input=speech, text=True, check=True)
 args = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y"]
 if portrait.is_file():
     args += ["-loop", "1", "-framerate", "15", "-i", str(portrait),
