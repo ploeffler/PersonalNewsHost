@@ -59,12 +59,37 @@ for n in range(max(1, math.ceil(duration * fps))):
     opening = min(1.0, max(0.0, (level-0.012) * 14.0))
     frame = background.copy()
     if opening > 0.06:
-        # Subtle shaded mouth aperture: proof of timing only, not real face synthesis.
+        # Deform existing lower-lip pixels rather than drawing an oval on top.
+        # The original lip seam stays fixed; lower lip/chin moves downward.
+        displacement = max(1, int(round(height * opening)))
+        x0, x1 = max(0, cx - width), min(frame.width, cx + width)
+        y0, y1 = max(0, cy - 9), min(frame.height, cy + 29)
+        patch = np.asarray(background.crop((x0, y0, x1, y1)), dtype=np.uint8)
+        ph, pw = patch.shape[:2]
+        yy, xx = np.mgrid[0:ph, 0:pw]
+        # Taper deformation toward both corners and bottom of the patch.
+        horizontal = np.maximum(0.0, 1.0 - ((xx - (cx-x0)) / max(1.0, width)) ** 2) ** 2
+        vertical = np.clip((yy - (cy-y0) + 2) / 7.0, 0, 1) * np.clip((ph - yy) / 12.0, 0, 1)
+        offset = displacement * horizontal * vertical
+        source_y = np.clip(yy - offset, 0, ph - 1)
+        low = np.floor(source_y).astype(int)
+        high = np.minimum(low + 1, ph - 1)
+        fraction = (source_y - low)[..., None]
+        warped = (patch[low, xx] * (1 - fraction) + patch[high, xx] * fraction).astype(np.uint8)
+        # Feather the warped patch into the original face.
+        feather = (np.clip((xx + 1) / 9, 0, 1)
+                   * np.clip((pw - xx) / 9, 0, 1)
+                   * np.clip((yy + 1) / 6, 0, 1)
+                   * np.clip((ph - yy) / 8, 0, 1))[..., None]
+        blended = (warped * feather + patch * (1 - feather)).astype(np.uint8)
+        frame.paste(Image.fromarray(blended), (x0, y0))
+        # Narrow dark gap between original upper lip and displaced lower lip.
         layer = Image.new("RGBA", frame.size)
         draw = ImageDraw.Draw(layer)
-        h = max(1, int(height * opening))
-        draw.ellipse((cx-width//2, cy-h//2, cx+width//2, cy+h//2), fill=(43, 18, 25, int(130*opening)))
-        layer = layer.filter(ImageFilter.GaussianBlur(1.5))
+        aperture = max(1, int(displacement * 0.65))
+        draw.ellipse((cx-width//2, cy-1, cx+width//2, cy+aperture),
+                     fill=(40, 18, 25, min(160, int(155 * opening))))
+        layer = layer.filter(ImageFilter.GaussianBlur(0.8))
         frame = Image.alpha_composite(frame.convert("RGBA"), layer).convert("RGB")
     frame.save(frames / f"{n:04d}.jpg", quality=88)
 subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-framerate", str(fps),
@@ -72,8 +97,8 @@ subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-framerat
                 "-c:v", "libx264", "-preset", "veryfast", "-pix_fmt", "yuv420p",
                 "-c:a", "aac", "-shortest", str(out / "mouth-motion-experimental.mp4")],
                check=True, timeout=120)
-report = {"type": "experimental_audio_reactive_overlay", "phoneme_lip_sync": False,
+report = {"type": "experimental_lower_lip_pixel_deformation", "phoneme_lip_sync": False,
           "frames": math.ceil(duration * fps), "duration": duration,
-          "mouth_position": [cx, cy], "note": "Visual proof of audio-driven timing only; artificial mouth overlay."}
+          "mouth_position": [cx, cy], "note": "Audio-reactive lower-lip pixel warp with subtle artificial aperture; NOT phoneme-accurate neural lip sync."}
 (out / "mouth-report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
 print(json.dumps(report, indent=2))
