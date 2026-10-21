@@ -139,9 +139,10 @@ def main():
                 # Wrap text to fit the 1280px canvas.
                 import textwrap
                 headline_file.write_text(
-                    "\\n".join(textwrap.wrap(title, width=42, break_long_words=True)),
+                    "\n".join(textwrap.wrap(title, width=42, break_long_words=True)),
                     encoding="utf-8"
                 )
+                print(f"Headline {idx+1}/{story_count}: {start_time:.1f}-{end_time:.1f}s: {title[:65]}")
                 next_label = "v" if idx == story_count - 1 else f"story{idx}"
                 filters.append(
                     f"[{current}]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
@@ -154,13 +155,13 @@ def main():
             filters.append(f"[{current}]null[v]")
         args += ["-filter_complex", ";".join(filters), "-map", "[v]", "-map", "1:a",
                  "-c:v", "libx264", "-preset", "ultrafast", "-tune", "stillimage",
-                 "-r", "1", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k",
+                 "-r", "5", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k",
                  "-shortest", "-movflags", "+faststart", str(DOCS / "latest.mp4")]
         run(args)
     lines = ["<!doctype html><html lang='de'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>",
              "<title>PersonalNewsHost</title><style>body{font:1.1rem system-ui;background:#13243a;color:white;max-width:900px;margin:3rem auto;padding:1rem}a{color:#8ed6ff}video{width:100%}</style>",
              "<h1>PersonalNewsHost</h1><p>Stand: " + html.escape(timestamp) + "</p>",
-             "<video controls src='latest.mp4'></video><p><a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a></p><h2>Quellen</h2><ul>"]
+             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'></video><p><a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a></p><h2>Quellen</h2><ul>"]
     for title, _, link in selected:
         safe = link if link.startswith(("https://", "http://")) else "#"
         lines.append("<li><a rel='noopener noreferrer' href='" + html.escape(safe, quote=True) + "'>" + html.escape(title) + "</a></li>")
