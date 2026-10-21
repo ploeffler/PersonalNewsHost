@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 CONFIG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
 BASE = "https://ploeffler.github.io/PersonalNewsHost/"
-UA = "PersonalNewsHost/0.4 (RSS news reader)"
+UA = "PersonalNewsHost/0.4-scenes (RSS news reader)"
 ATOM = "{http://www.w3.org/2005/Atom}"
 
 def clean(s):
@@ -101,20 +101,50 @@ def main():
         presenter = ROOT / settings.get("portrait", CONFIG.get("presenter", "assets/presenter.png"))
         if settings.get("lip_sync", {}).get("enabled", False):
             print("Lip sync requested but no validated engine is installed; using static portrait fallback")
-        filters = []
+        # Scene schedule: presenter for intro/outro, headlines in the middle.
+        duration_text = subprocess.check_output(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+             "-of", "default=noprint_wrappers=1:nokey=1", str(wav)], text=True
+        ).strip()
+        duration = float(duration_text)
+        scenes = settings.get("scenes", {})
+        intro = max(0.0, min(float(scenes.get("intro_seconds", 8)), duration / 3))
+        outro = max(0.0, min(float(scenes.get("outro_seconds", 8)), duration / 3))
+        outro_start = max(intro, duration - outro)
+        print(f"Scenes: intro={intro:.1f}s, headlines={outro_start-intro:.1f}s, outro={outro:.1f}s")
         args = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y"]
         if bg.is_file():
             args += ["-loop", "1", "-i", str(bg)]
         else:
             args += ["-f", "lavfi", "-i", "color=c=0x13243a:s=1280x720:r=1"]
         args += ["-i", str(wav)]
+        filters = ["[0:v]scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,format=yuv420p[bg]"]
+        current = "bg"
         if presenter.is_file():
             args += ["-loop", "1", "-i", str(presenter)]
-            filters = ["[0:v]scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720[bg]",
-                       "[2:v]scale=440:600:force_original_aspect_ratio=decrease[person]",
-                       "[bg][person]overlay=W-w-55:H-h-30,format=yuv420p[v]"]
+            filters += [
+                "[2:v]scale=440:600:force_original_aspect_ratio=decrease[person]",
+                f"[{current}][person]overlay=x=W-w-55:y=H-h-30:"
+                f"enable='between(t,0,{intro:.3f})+gte(t,{outro_start:.3f})'[composed]"
+            ]
+            current = "composed"
+        if scenes.get("show_headlines", True):
+            headline_file = Path(tmp) / "headlines.txt"
+            headline_file.write_text(
+                "DIE NACHRICHTEN\\n\\n" +
+                "\\n\\n".join(title[:68] for title, _, _ in selected[:5]),
+                encoding="utf-8"
+            )
+            font = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+            # drawtext textfile avoids quoting untrusted RSS headlines in filter syntax.
+            filters.append(
+                f"[{current}]drawtext=fontfile={font}:textfile={headline_file}:"
+                f"fontcolor=white:fontsize=34:line_spacing=16:"
+                f"x=70:y=110:box=1:boxcolor=0x091a2acc:boxborderw=24:"
+                f"enable='between(t,{intro:.3f},{outro_start:.3f})'[v]"
+            )
         else:
-            filters = ["[0:v]scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,format=yuv420p[v]"]
+            filters.append(f"[{current}]null[v]")
         args += ["-filter_complex", ";".join(filters), "-map", "[v]", "-map", "1:a",
                  "-c:v", "libx264", "-preset", "ultrafast", "-tune", "stillimage",
                  "-r", "1", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k",
