@@ -44,3 +44,6 @@ Hochauflösendes Thorsten-Modell, einstellbare Sprechgeschwindigkeit (`piper_len
 
 ## v0.4 – Konfigurierbarer Moderator (Vorbereitung)
 Unter `presenter_settings` in `config.json` lassen sich Name, Geschlecht (Metadaten), Portraitdatei, Hintergrund, Stimmmodell (derzeit nur Thorsten High installiert) und die geplante Lippen-Synchronisation konfigurieren. Das Portrait ist ein selbst hochgeladenes PNG unter `assets/presenter.png`. `lip_sync.enabled` bleibt **false**: Ein echtes Lippen-Synchronisationsmodell ist noch nicht integriert und wird ausdrücklich nicht als funktionierend ausgegeben. Selbst wenn der Schalter auf true gesetzt wird, wird derzeit nur das statische Portrait verwendet und ein Hinweis im Workflow protokolliert. Vor der Integration sind CPU-Laufzeit, Modelllizenzen und GitHub-Actions-Limits zu testen.
+
+## Szenensteuerung
+`presenter_settings.scenes.intro_seconds` und `outro_seconds` steuern die Moderator-Einblendungen; im Mittelteil zeigt FFmpeg automatisch eine Schlagzeilentafel, falls `show_headlines` aktiviert ist. Ohne hochgeladenes Portrait bleibt das Studio sichtbar. Audio läuft kontinuierlich. Es gibt **noch keine** echten Lippenbewegungen oder automatischen externen Nachrichtenbilder. Nach jeder Konfigurationsänderung den Workflow testen.
