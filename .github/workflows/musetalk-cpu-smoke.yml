@@ -1,0 +1,58 @@
+name: MuseTalk CPU compatibility smoke test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cpu-compatibility:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare diagnostics
+        run: mkdir -p musetalk-test
+      - name: Install CPU-only PyTorch
+        run: |
+          python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch torchvision
+      - name: Check real CPU tensor inference
+        run: |
+          python3 - <<'PY'
+          import json, time, platform
+          from pathlib import Path
+          import torch
+          torch.set_num_threads(4)
+          model = torch.nn.Sequential(
+              torch.nn.Conv2d(16,64,3,padding=1),
+              torch.nn.SiLU(),
+              torch.nn.Conv2d(64,64,3,padding=1),
+              torch.nn.SiLU(),
+              torch.nn.Conv2d(64,3,3,padding=1),
+          ).eval()
+          data = torch.randn(1,16,256,256)
+          with torch.inference_mode():
+              for _ in range(2): model(data)
+              t=time.perf_counter()
+              for _ in range(10): result=model(data)
+              elapsed=time.perf_counter()-t
+          report={
+              "test":"CPU-only PyTorch neural inference prerequisite",
+              "device":str(result.device),
+              "torch_version":torch.__version__,
+              "platform":platform.platform(),
+              "input_shape":list(data.shape),
+              "seconds_per_256px_test_pass":round(elapsed/10,4),
+              "model":"small synthetic convolutional network, NOT MuseTalk",
+              "musetalk_inference_tested":False,
+              "lip_sync_video_generated":False,
+              "warning":"Do not extrapolate this timing to MuseTalk; full MuseTalk needs weights and dependencies."
+          }
+          Path("musetalk-test/report.json").write_text(json.dumps(report,indent=2)+"\n")
+          print(json.dumps(report,indent=2))
+          PY
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: musetalk-cpu-compatibility
+          path: musetalk-test/
+          retention-days: 3
