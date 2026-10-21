@@ -46,9 +46,9 @@ jobs:
               crop=image.crop((left,top,left+side,top+side)).resize((256,256))
               crop.save(out/"original-crop.png")
               pixels=torch.from_numpy(np.asarray(crop,dtype=np.float32)/127.5-1).permute(2,0,1).unsqueeze(0).contiguous()
-              # Match MuseTalk masked/reference latent preparation: lower half masked.
+              # Mask the lower half (height axis), never the right half (width axis).
               masked=pixels.clone()
-              masked[:,:,:,128:]=-1.0
+              masked[:,:,128:,:]=-1.0
               subprocess.run(["espeak-ng","-v","de","-s","140","-w",str(out/"speech.wav"),"Guten Abend. Hier sind die Nachrichten."],check=True)
               samples,sr=librosa.load(out/"speech.wav",sr=16000)
               report["speech_seconds"]=round(len(samples)/sr,3)
