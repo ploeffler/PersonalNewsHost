@@ -6,13 +6,21 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - name: Install local video tools
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq ffmpeg espeak-ng
+          sudo apt-get install -y -qq ffmpeg
+      - name: Install Piper
+        run: python3 -m pip install --disable-pip-version-check piper-tts
+      - name: Download same high-quality voice as news
+        run: |
+          mkdir -p models
+          base="https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/thorsten/high"
+          curl -fL --retry 3 "$base/de_DE-thorsten-high.onnx" -o models/de_DE-thorsten-high.onnx
+          curl -fL --retry 3 "$base/de_DE-thorsten-high.onnx.json" -o models/de_DE-thorsten-high.onnx.json
       - name: Run isolated avatar render benchmark
         run: python3 scripts/avatar_probe.py
       - name: Upload diagnostic report and preview
