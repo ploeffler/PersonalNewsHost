@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 CONFIG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
 BASE = "https://ploeffler.github.io/PersonalNewsHost/"
-UA = "PersonalNewsHost/0.1 (RSS news reader)"
+UA = "PersonalNewsHost/0.2 (RSS news reader)"
 ATOM = "{http://www.w3.org/2005/Atom}"
 
 def clean(s):
@@ -50,6 +50,25 @@ def items_from_feed(url):
 def run(args):
     subprocess.run(args, check=True, stdout=subprocess.DEVNULL)
 
+def synthesize(script, wav):
+    """Use local Piper neural TTS if available; retain eSpeak as safe fallback."""
+    import os
+    model = ROOT / "models" / "de_DE-thorsten-medium.onnx"
+    if model.is_file():
+        try:
+            subprocess.run(
+                ["piper", "--model", str(model), "--output_file", str(wav)],
+                input=script, text=True, check=True, timeout=180,
+                stdout=subprocess.DEVNULL
+            )
+            if wav.is_file() and wav.stat().st_size > 44:
+                print("Speech engine: Piper (de_DE-thorsten-medium)")
+                return
+        except (OSError, subprocess.SubprocessError) as exc:
+            print(f"Piper failed; falling back to eSpeak-NG: {exc}")
+    run(["espeak-ng", "-v", CONFIG.get("voice", "de"), "-s", "145", "-w", str(wav), script])
+    print("Speech engine: eSpeak-NG fallback")
+
 def main():
     DOCS.mkdir(exist_ok=True)
     collected, seen = [], set()
@@ -76,7 +95,7 @@ def main():
     (DOCS / "transcript.txt").write_text(script + "\n", encoding="utf-8")
     with tempfile.TemporaryDirectory() as tmp:
         wav = Path(tmp) / "speech.wav"
-        run(["espeak-ng", "-v", CONFIG.get("voice", "de"), "-s", "145", "-w", str(wav), script])
+        synthesize(script, wav)
         bg = ROOT / CONFIG.get("background", "assets/background.jpg")
         presenter = ROOT / CONFIG.get("presenter", "assets/presenter.png")
         filters = []
