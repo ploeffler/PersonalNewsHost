@@ -1,0 +1,74 @@
+name: MuseTalk real presenter VAE CPU test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  vae:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install CPU dependencies
+        run: |
+          python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
+          python3 -m pip install --disable-pip-version-check 'diffusers>=0.30,<0.37' 'transformers>=4.40,<5' accelerate safetensors huggingface_hub pillow numpy
+      - name: Encode and decode real presenter face on CPU
+        shell: bash
+        run: |
+          mkdir -p musetalk-vae
+          set -o pipefail
+          timeout 600s python3 -u - <<'PY' 2>&1 | tee musetalk-vae/run.log
+          import json,time,traceback,resource,gc
+          from pathlib import Path
+          report={"model":"stabilityai/sd-vae-ft-mse","device":"cpu","input":"assets/presenter.png","lip_sync_generated":False}
+          try:
+              import torch,numpy as np
+              from PIL import Image,ImageDraw
+              from diffusers import AutoencoderKL
+              torch.set_num_threads(4)
+              image=Image.open(report["input"]).convert("RGB")
+              report["source_size"]=list(image.size)
+              # Face coordinates measured by actual face-alignment SFD on original 1672x941 image.
+              x1,y1,x2,y2=730,105,949,400
+              cx,cy=(x1+x2)/2,(y1+y2)/2
+              side=int(max(x2-x1,y2-y1)*1.45)
+              left=max(0,min(image.width-side,int(cx-side/2)))
+              top=max(0,min(image.height-side,int(cy-side/2)))
+              crop=image.crop((left,top,left+side,top+side)).resize((256,256))
+              crop.save("musetalk-vae/face-crop.png")
+              # Standard Stable Diffusion VAE input is normalized to [-1,1].
+              arr=np.asarray(crop,dtype=np.float32)/127.5-1
+              tensor=torch.from_numpy(arr).permute(2,0,1).unsqueeze(0)
+              start=time.perf_counter()
+              vae=AutoencoderKL.from_pretrained(report["model"],torch_dtype=torch.float32).eval()
+              report["model_load_seconds"]=round(time.perf_counter()-start,2)
+              with torch.inference_mode():
+                  start=time.perf_counter()
+                  latent=vae.encode(tensor).latent_dist.mode()
+                  report["encode_seconds"]=round(time.perf_counter()-start,2)
+                  report["latent_shape"]=list(latent.shape)
+                  start=time.perf_counter()
+                  decoded=vae.decode(latent).sample
+                  report["decode_seconds"]=round(time.perf_counter()-start,2)
+              reconstruction=((decoded[0].clamp(-1,1)+1)*127.5).permute(1,2,0).byte().numpy()
+              Image.fromarray(reconstruction).save("musetalk-vae/reconstructed-face.png")
+              report["reconstruction_mse"]=round(float(((decoded-tensor)**2).mean().item()),6)
+              report["finite"]=bool(torch.isfinite(decoded).all().item())
+              report["status"]="success" if report["finite"] else "invalid_output"
+          except Exception as exc:
+              report["status"]="error"
+              report["error"]=repr(exc)
+              traceback.print_exc()
+          report["max_rss_kb"]=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+          Path("musetalk-vae/report.json").write_text(json.dumps(report,indent=2)+"\n")
+          print(json.dumps(report,indent=2),flush=True)
+          if report["status"]!="success":raise SystemExit(1)
+          PY
+      - name: Upload reconstructed face and report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: musetalk-vae-presenter
+          path: musetalk-vae/
+          retention-days: 3
