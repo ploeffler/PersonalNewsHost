@@ -1,0 +1,65 @@
+name: MuseTalk real German audio feature test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install CPU audio requirements
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg espeak-ng
+          python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
+          python3 -m pip install --disable-pip-version-check 'transformers>=4.40,<5' librosa soundfile numpy einops huggingface_hub
+      - name: Extract real Whisper encoder features
+        shell: bash
+        run: |
+          mkdir -p musetalk-audio
+          set -o pipefail
+          timeout 480s python3 -u - <<'PY' 2>&1 | tee musetalk-audio/test.log
+          import json,subprocess,time,traceback
+          from pathlib import Path
+          result={"model":"openai/whisper-tiny","device":"cpu","language":"de","actual_lip_sync_generated":False}
+          try:
+              import torch,numpy as np,librosa
+              from transformers import WhisperModel,AutoFeatureExtractor
+              torch.set_num_threads(4)
+              sentence="Guten Abend. Willkommen bei Personal News Host. Hier sind die Nachrichten."
+              result["text"]=sentence
+              subprocess.run(["espeak-ng","-v","de","-s","140","-w","musetalk-audio/sample.wav",sentence],check=True)
+              audio,sr=librosa.load("musetalk-audio/sample.wav",sr=16000)
+              result["audio_seconds"]=round(len(audio)/sr,3)
+              extractor=AutoFeatureExtractor.from_pretrained(result["model"])
+              features=extractor(audio,sampling_rate=sr,return_tensors="pt").input_features
+              start=time.monotonic()
+              whisper=WhisperModel.from_pretrained(result["model"]).eval()
+              with torch.inference_mode():
+                  hidden=whisper.encoder(features,output_hidden_states=True).hidden_states
+                  stacked=torch.stack(hidden,dim=2)
+              result["encoder_seconds"]=round(time.monotonic()-start,2)
+              result["encoder_shape"]=list(stacked.shape)
+              # MuseTalk uses a 50 Hz Whisper feature timeline and 5 fps video.
+              fps=5
+              result["video_fps"]=fps
+              result["expected_video_frames"]=int(result["audio_seconds"]*fps)
+              result["finite"]=bool(torch.isfinite(stacked).all().item())
+              result["status"]="success" if result["finite"] else "non_finite"
+          except Exception as exc:
+              result["status"]="error"
+              result["error"]=repr(exc)
+              traceback.print_exc()
+          Path("musetalk-audio/report.json").write_text(json.dumps(result,indent=2)+"\n")
+          print(json.dumps(result,indent=2))
+          if result["status"]!="success":raise SystemExit(1)
+          PY
+      - name: Upload audio and diagnostic report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: musetalk-real-audio
+          path: musetalk-audio/
+          retention-days: 3
