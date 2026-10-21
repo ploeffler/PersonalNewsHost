@@ -20,6 +20,18 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg espeak-ng fonts-dejavu-core
+      - name: Install neural speech engine
+        run: python3 -m pip install --disable-pip-version-check piper-tts
+      - name: Download German Piper voice
+        run: |
+          mkdir -p models
+          base="https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/thorsten/medium"
+          curl -fL --retry 3 --connect-timeout 15 --max-time 180 "$base/de_DE-thorsten-medium.onnx" -o models/de_DE-thorsten-medium.onnx || true
+          curl -fL --retry 3 --connect-timeout 15 --max-time 60 "$base/de_DE-thorsten-medium.onnx.json" -o models/de_DE-thorsten-medium.onnx.json || true
+          if [ ! -s models/de_DE-thorsten-medium.onnx ] || [ ! -s models/de_DE-thorsten-medium.onnx.json ]; then
+            rm -f models/de_DE-thorsten-medium.onnx models/de_DE-thorsten-medium.onnx.json
+            echo "Piper model unavailable; using eSpeak fallback"
+          fi
       - name: Generate latest bulletin
         run: python3 scripts/generate.py
       - name: Publish generated files
