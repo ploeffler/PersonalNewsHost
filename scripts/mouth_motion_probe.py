@@ -32,6 +32,23 @@ cx = int(settings.get("center_x", 0.50) * 960)
 cy = int(settings.get("center_y", 0.355) * 540)
 width = int(settings.get("width", 0.048) * 960)
 height = int(settings.get("max_open", 0.016) * 540)
+# Calibration image uses exactly the same resized background as the video.
+calibration = background.copy()
+guide = ImageDraw.Draw(calibration)
+for x in range(0, 961, 48):
+    guide.line((x, 0, x, 539), fill=(100, 220, 220), width=1)
+    if x < 960:
+        guide.text((x + 2, 4), str(x), fill="white", stroke_width=1, stroke_fill="black")
+for y in range(0, 541, 27):
+    guide.line((0, y, 959, y), fill=(100, 220, 220), width=1)
+    if y < 540:
+        guide.text((4, y + 2), str(y), fill="white", stroke_width=1, stroke_fill="black")
+guide.ellipse((cx-7, cy-7, cx+7, cy+7), outline="red", width=3)
+guide.line((cx-18, cy, cx+18, cy), fill="red", width=3)
+guide.line((cx, cy-18, cx, cy+18), fill="red", width=3)
+guide.text((cx+15, cy+12), f"CURRENT {cx},{cy}", fill="red", stroke_width=1, stroke_fill="white")
+calibration.save(out / "mouth-calibration.png")
+print(f"Mouth calibration image: mouth-calibration.png, current position ({cx},{cy})")
 frames = out / "mouth-frames"
 frames.mkdir(exist_ok=True)
 for n in range(max(1, math.ceil(duration * fps))):
