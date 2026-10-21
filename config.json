@@ -1,0 +1,13 @@
+{
+  "title": "PersonalNewsHost",
+  "language": "de",
+  "voice": "de",
+  "max_items": 5,
+  "max_description_chars": 180,
+  "feeds": [
+    "https://www.tagesschau.de/xml/rss2/",
+    "https://www.derstandard.at/rss"
+  ],
+  "background": "assets/background.jpg",
+  "presenter": "assets/presenter.png"
+}
