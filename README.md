@@ -1,6 +1,6 @@
-# PersonalNewsHost v0.1
+# PersonalNewsHost v0.2
 
-Kostenfreier Prototyp: RSS-Quellen lesen, kurze deutschsprachige Nachrichtensendung als MP4 mit FFmpeg/eSpeak-NG erstellen und einen Video-RSS-Feed veröffentlichen.
+Kostenfreier Prototyp: RSS-Quellen lesen, kurze deutschsprachige Nachrichtensendung als MP4 mit FFmpeg/Piper (eSpeak-NG als Fallback) erstellen und einen Video-RSS-Feed veröffentlichen.
 
 ## Einrichtung
 1. Unter **Settings → Pages** die Quelle **Deploy from a branch**, Branch **main**, Ordner **/docs** auswählen.
@@ -14,7 +14,7 @@ Video-RSS: https://ploeffler.github.io/PersonalNewsHost/feed.xml
 ## Technische Grenzen
 - 0 € zusätzliche Kosten bei Nutzung der kostenlosen GitHub-Kontingente, solange deren Grenzen eingehalten werden; GitHub Actions und Pages haben Limits und Bedingungen.
 - GitHub Actions Cron ist **nicht garantiert minutengenau** und kann Läufe auslassen.
-- v0.1 nutzt **keine generative Video-KI** und **keinen sprechenden fotorealistischen Avatar**. Optionales Portrait wird als Standbild gezeigt. TTS läuft lokal über eSpeak-NG.
+- v0.2 nutzt **keine generative Video-KI** und **keinen sprechenden fotorealistischen Avatar**. Optionales Portrait wird als Standbild gezeigt. TTS läuft lokal mit dem neuronalen Piper-Modell de_DE-thorsten-medium, sofern der Download gelingt; sonst eSpeak-NG.
 - Die RSS-Zusammenfassung erfolgt regelbasiert (Titel + Feed-Kurzbeschreibung), **nicht** durch eine OpenAI-API. Die ursprüngliche OpenAI-only-Idee ist ohne kostenpflichtige API nicht garantiert umsetzbar.
 - Keine fremden Bilder/Videos automatisch übernehmen; Urheberrecht beachten. Die Nachrichten werden nicht unabhängig verifiziert.
 - Nur die neueste Ausgabe wird gespeichert, damit das Repository nicht stündlich anwächst.
@@ -22,6 +22,8 @@ Video-RSS: https://ploeffler.github.io/PersonalNewsHost/feed.xml
 ## Lokal testen (Ubuntu)
 ```bash
 sudo apt-get update && sudo apt-get install -y ffmpeg espeak-ng fonts-dejavu-core
+python3 -m pip install piper-tts
+# Ohne heruntergeladenes Piper-Modell wird automatisch eSpeak-NG verwendet.
 python3 scripts/generate.py
 ```
 
@@ -33,3 +35,6 @@ python3 scripts/generate.py
 
 ## Sicherheit
 Keine Zugangsdaten im Repository speichern. RSS-Quellen werden nur über HTTP(S) mit Timeouts gelesen. Für öffentlich sichtbare Inhalte und Bildmaterial ist der Betreiber verantwortlich.
+
+## v0.2 – Natürlichere deutsche Stimme
+GitHub Actions installiert Piper TTS und lädt beim Lauf das frei verfügbare deutsche Modell `de_DE-thorsten-medium` samt Konfiguration von `rhasspy/piper-voices` (Hugging Face). Das Modell wird nicht im Repository gespeichert. Schlägt Download oder Synthese fehl, bleibt die bisherige eSpeak-NG-Stimme als Fallback erhalten. Die Nutzungsbedingungen und Lizenzhinweise des jeweiligen Modells sind vor Weiterverbreitung zu prüfen. Kein kostenpflichtiger API-Aufruf.
