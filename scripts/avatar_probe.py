@@ -29,12 +29,14 @@ subprocess.run(["piper", "--model", str(model), "--output_file", str(audio)],
                input=speech, text=True, check=True)
 args = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y"]
 if portrait.is_file():
-    args += ["-loop", "1", "-framerate", "15", "-i", str(portrait),
-             "-vf", "scale=640:360:force_original_aspect_ratio=decrease,"
-                    "pad=640:360:(ow-iw)/2:(oh-ih)/2,format=yuv420p"]
+    args += ["-loop", "1", "-framerate", "15", "-i", str(portrait)]
 else:
     args += ["-f", "lavfi", "-i", "color=c=0x13243a:s=640x360:r=15"]
-args += ["-i", str(audio), "-t", "8", "-c:v", "libx264",
+args += ["-i", str(audio)]
+if portrait.is_file():
+    args += ["-vf", "scale=640:360:force_original_aspect_ratio=decrease,"
+             "pad=640:360:(ow-iw)/2:(oh-ih)/2,format=yuv420p"]
+args += ["-t", "8", "-c:v", "libx264",
          "-preset", "veryfast", "-r", "15", "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-shortest", str(output / "preview.mp4")]
 started = time.monotonic()
