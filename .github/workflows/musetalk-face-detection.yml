@@ -1,0 +1,61 @@
+name: MuseTalk CPU face detection smoke test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  face:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg libgl1 libglib2.0-0
+          python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch torchvision
+          python3 -m pip install --disable-pip-version-check numpy pillow opencv-python-headless librosa omegaconf diffusers transformers huggingface_hub accelerate safetensors einops tqdm mmengine mmdet mmpose face-alignment
+          python3 -m pip install --disable-pip-version-check 'mmcv-lite==2.0.1'
+      - name: Test actual face detector on presenter
+        shell: bash
+        run: |
+          mkdir -p musetalk-face
+          set -o pipefail
+          timeout 480s python3 -u - <<'PY' 2>&1 | tee musetalk-face/test.log
+          import json,traceback,time
+          from pathlib import Path
+          result={"input":"assets/presenter.png","device":"cpu","actual_lip_sync_generated":False}
+          try:
+              import torch,cv2
+              from face_alignment import FaceAlignment,LandmarksType
+              im=cv2.imread(result["input"])
+              if im is None:raise RuntimeError("Presenter image missing")
+              h,w=im.shape[:2]
+              result["image_size"]=[w,h]
+              torch.set_num_threads(4)
+              t=time.monotonic()
+              fa=FaceAlignment(LandmarksType.TWO_D,flip_input=False,device="cpu")
+              boxes=fa.get_detections_for_batch(im[None,:,:,:])
+              result["face_boxes"]=[None if box is None else [float(v) for v in box] for box in boxes]
+              result["seconds"]=round(time.monotonic()-t,2)
+              result["face_detected"]=bool(boxes and boxes[0] is not None)
+              if result["face_detected"]:
+                  x1,y1,x2,y2=map(int,boxes[0])
+                  cv2.rectangle(im,(x1,y1),(x2,y2),(0,255,0),3)
+                  cv2.imwrite("musetalk-face/face-box.jpg",im)
+              result["status"]="success" if result["face_detected"] else "no_face_detected"
+          except Exception as exc:
+              result["status"]="error"
+              result["error"]=repr(exc)
+              traceback.print_exc()
+          Path("musetalk-face/report.json").write_text(json.dumps(result,indent=2)+"\n")
+          print(json.dumps(result,indent=2))
+          if result["status"]!="success":raise SystemExit(1)
+          PY
+      - name: Upload report and annotated image
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: musetalk-face-detection
+          path: musetalk-face/
+          retention-days: 3
