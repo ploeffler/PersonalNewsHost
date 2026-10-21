@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 CONFIG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
 BASE = "https://ploeffler.github.io/PersonalNewsHost/"
-UA = "PersonalNewsHost/0.2 (RSS news reader)"
+UA = "PersonalNewsHost/0.3 (RSS news reader)"
 ATOM = "{http://www.w3.org/2005/Atom}"
 
 def clean(s):
@@ -53,16 +53,16 @@ def run(args):
 def synthesize(script, wav):
     """Use local Piper neural TTS if available; retain eSpeak as safe fallback."""
     import os
-    model = ROOT / "models" / "de_DE-thorsten-medium.onnx"
+    model = ROOT / "models" / "de_DE-thorsten-high.onnx"
     if model.is_file():
         try:
             subprocess.run(
-                ["piper", "--model", str(model), "--output_file", str(wav)],
+                ["piper", "--model", str(model), "--length_scale", str(CONFIG.get("piper_length_scale", 1.13)), "--sentence_silence", "0.38", "--output_file", str(wav)],
                 input=script, text=True, check=True, timeout=180,
                 stdout=subprocess.DEVNULL
             )
             if wav.is_file() and wav.stat().st_size > 44:
-                print("Speech engine: Piper (de_DE-thorsten-medium)")
+                print("Speech engine: Piper (de_DE-thorsten-high)")
                 return
         except (OSError, subprocess.SubprocessError) as exc:
             print(f"Piper failed; falling back to eSpeak-NG: {exc}")
@@ -89,7 +89,7 @@ def main():
     parts = [f"Willkommen bei {CONFIG['title']}. Die Nachrichten vom {timestamp}."]
     limit = max(0, min(int(CONFIG.get("max_description_chars", 180)), 300))
     for title, desc, _ in selected:
-        parts.append(title + ". " + (desc[:limit].rsplit(" ", 1)[0] if len(desc) > limit else desc))
+        parts.append(title.rstrip(".!?") + ".\n" + (desc[:limit].rsplit(" ", 1)[0] if len(desc) > limit else desc))
     parts.append("Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.")
     script = "\n\n".join(parts)
     (DOCS / "transcript.txt").write_text(script + "\n", encoding="utf-8")
