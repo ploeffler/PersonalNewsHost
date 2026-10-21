@@ -128,21 +128,28 @@ def main():
                 f"enable='between(t,0,{intro:.3f})+gte(t,{outro_start:.3f})'[composed]"
             ]
             current = "composed"
-        if scenes.get("show_headlines", True):
-            headline_file = Path(tmp) / "headlines.txt"
-            headline_file.write_text(
-                "DIE NACHRICHTEN\\n\\n" +
-                "\\n\\n".join(title[:68] for title, _, _ in selected[:5]),
-                encoding="utf-8"
-            )
-            font = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-            # drawtext textfile avoids quoting untrusted RSS headlines in filter syntax.
-            filters.append(
-                f"[{current}]drawtext=fontfile={font}:textfile={headline_file}:"
-                f"fontcolor=white:fontsize=34:line_spacing=16:"
-                f"x=70:y=110:box=1:boxcolor=0x091a2acc:boxborderw=24:"
-                f"enable='between(t,{intro:.3f},{outro_start:.3f})'[v]"
-            )
+        if scenes.get("show_headlines", True) and selected:
+            # Each headline gets its own timed overlay, rather than one overflowing text block.
+            story_count = len(selected)
+            story_duration = max(0.0, outro_start - intro) / story_count
+            for idx, (title, _, _) in enumerate(selected):
+                start_time = intro + idx * story_duration
+                end_time = intro + (idx + 1) * story_duration
+                headline_file = Path(tmp) / f"headline_{idx}.txt"
+                # Wrap text to fit the 1280px canvas.
+                import textwrap
+                headline_file.write_text(
+                    "\\n".join(textwrap.wrap(title, width=42, break_long_words=True)),
+                    encoding="utf-8"
+                )
+                next_label = "v" if idx == story_count - 1 else f"story{idx}"
+                filters.append(
+                    f"[{current}]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
+                    f"textfile={headline_file}:fontcolor=white:fontsize=38:line_spacing=15:"
+                    f"x=70:y=(h-text_h)/2:box=1:boxcolor=0x091a2acc:boxborderw=24:"
+                    f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[{next_label}]"
+                )
+                current = next_label
         else:
             filters.append(f"[{current}]null[v]")
         args += ["-filter_complex", ";".join(filters), "-map", "[v]", "-map", "1:a",
