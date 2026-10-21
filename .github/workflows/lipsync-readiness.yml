@@ -1,0 +1,47 @@
+name: Lip-sync CPU readiness
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cpu-readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install CPU benchmark dependency
+        run: python3 -m pip install --disable-pip-version-check numpy
+      - name: Inspect free runner and benchmark CPU
+        run: |
+          mkdir -p lip-sync-test
+          python3 - <<'PY'
+          import json, os, platform, subprocess, time
+          from pathlib import Path
+          import numpy as np
+          n = 256
+          a = np.random.default_rng(42).standard_normal((n,n), dtype=np.float32)
+          b = np.random.default_rng(43).standard_normal((n,n), dtype=np.float32)
+          start = time.perf_counter()
+          for _ in range(100):
+              a @ b
+          elapsed = round(time.perf_counter()-start,3)
+          report = {
+              "purpose": "MuseTalk CPU prerequisite screening, not model inference",
+              "cpu_count": os.cpu_count(),
+              "architecture": platform.machine(),
+              "gpu_devices": os.path.exists("/dev/nvidia0"),
+              "numpy_100_matmul_256_seconds": elapsed,
+              "musetalk_model_tested": False,
+              "actual_lip_sync_generated": False,
+              "decision": "No GPU available; CPU model inference must be separately benchmarked before integration",
+              "budget": "No paid services used",
+          }
+          Path("lip-sync-test/readiness.json").write_text(json.dumps(report,indent=2)+"\n")
+          print(json.dumps(report,indent=2))
+          PY
+      - name: Save CPU readiness report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lip-sync-cpu-readiness
+          path: lip-sync-test/readiness.json
+          retention-days: 3
