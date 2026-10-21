@@ -1,0 +1,57 @@
+name: MuseTalk real model CPU load test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  real-model-load:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install CPU-only PyTorch and model loader
+        run: |
+          python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
+          python3 -m pip install --disable-pip-version-check huggingface_hub safetensors
+      - name: Download actual MuseTalk 1.5 UNet weights and inspect on CPU
+        id: load
+        continue-on-error: true
+        run: |
+          mkdir -p musetalk-real-test
+          timeout 480s python3 - <<'PY' 2>&1 | tee musetalk-real-test/load.log
+          import json, time, traceback
+          from pathlib import Path
+          import torch
+          from huggingface_hub import hf_hub_download
+          result={"model":"TMElyralab/MuseTalk", "file":"musetalkV15/unet.pth",
+                  "actual_model_weights":True, "full_musetalk_inference":False,
+                  "video_generated":False, "cpu_only":True}
+          t=time.monotonic()
+          try:
+              path=hf_hub_download(repo_id="TMElyralab/MuseTalk", filename="musetalkV15/unet.pth")
+              result["download_seconds"]=round(time.monotonic()-t,2)
+              result["weight_file_bytes"]=Path(path).stat().st_size
+              t=time.monotonic()
+              weights=torch.load(path,map_location="cpu",weights_only=True)
+              result["load_seconds"]=round(time.monotonic()-t,2)
+              result["loaded_type"]=type(weights).__name__
+              if isinstance(weights,dict):
+                  result["top_level_keys"]=list(weights)[:15]
+              result["status"]="weights_loaded_on_cpu"
+          except Exception as exc:
+              result["status"]="failed"
+              result["error"]=repr(exc)
+              traceback.print_exc()
+          Path("musetalk-real-test/report.json").write_text(json.dumps(result,indent=2)+"\n")
+          print(json.dumps(result,indent=2))
+          if result["status"]!="weights_loaded_on_cpu":
+              raise SystemExit(1)
+          PY
+          test ${PIPESTATUS[0]} -eq 0
+      - name: Upload report and diagnostic log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: musetalk-real-model-load
+          path: musetalk-real-test/
+          retention-days: 3
