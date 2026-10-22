@@ -11,7 +11,7 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v5
         with:
@@ -25,7 +25,8 @@ jobs:
         if: steps.schedule.outputs.due == 'true'
         run: |
           set -euo pipefail
-          # Install only tools absent from the runner using already cached apt indexes.
+          # Install from cached Ubuntu package indexes; use per-package apt
+          # acquisition timeouts and a longer overall bound for cold runners.
           missing=()
           if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
             missing+=(ffmpeg)
@@ -35,7 +36,7 @@ jobs:
           fi
           if (( ${#missing[@]} )); then
             printf 'Installing missing packages: %s\n' "${missing[*]}"
-            timeout 150s sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends -o Acquire::Retries=0 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20 "${missing[@]}"
+            timeout 420s sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends -o Dpkg::Use-Pty=0 -o Acquire::Retries=0 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 "${missing[@]}"
           fi
           command -v ffmpeg
           command -v ffprobe
