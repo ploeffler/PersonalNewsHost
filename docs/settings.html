@@ -5,7 +5,7 @@
 :root{color-scheme:dark}body{font:16px system-ui,sans-serif;background:#101c2c;color:#f4f7fc;max-width:850px;margin:auto;padding:24px;line-height:1.5}
 h1{font-size:2rem}a{color:#9cddff}fieldset{border:1px solid #52657a;border-radius:12px;padding:18px;margin:18px 0}
 legend{font-weight:700;padding:0 8px}label{display:block;margin:12px 0 5px}
-input,textarea{box-sizing:border-box;width:100%;background:#1c2d42;border:1px solid #71849a;border-radius:8px;color:white;padding:10px;font:inherit}
+input,textarea,select{box-sizing:border-box;width:100%;background:#1c2d42;border:1px solid #71849a;border-radius:8px;color:white;padding:10px;font:inherit}
 textarea{min-height:125px}button{background:#66c9de;border:0;border-radius:8px;padding:12px 16px;color:#081b2d;font-weight:700;cursor:pointer;margin:6px 8px 6px 0}
 button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #f8b55b}
 small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#aaf2c6}code{background:#20344c;padding:2px 5px}
@@ -30,6 +30,9 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 <small>Dateien werden in dieser ersten Version nicht hochgeladen. Pfade verweisen auf bereits vorhandene Dateien im Repository.</small>
 </fieldset>
 <fieldset><legend>Szenen</legend>
+<label for="intro_mode">Intro-Darstellung</label><select id="intro_mode"><option value="avatar">Sprechender Avatar (MuseTalk, experimentell)</option><option value="static">Statischer Hintergrund (ohne Avatar)</option></select>
+<label for="intro_text">Intro-Sprechertext</label><textarea id="intro_text" maxlength="1500" required></textarea><small>Platzhalter {title} wird durch den Sendungstitel ersetzt.</small>
+<label for="outro_text">Outro-Sprechertext</label><textarea id="outro_text" maxlength="1500" required></textarea>
 <label for="intro_seconds">Intro (Sekunden)</label><input id="intro_seconds" type="number" min="0" max="60" required>
 <label for="outro_seconds">Outro (Sekunden)</label><input id="outro_seconds" type="number" min="0" max="60" required>
 <label><input id="show_headlines" type="checkbox" style="width:auto"> Schlagzeilen anzeigen</label>
@@ -53,6 +56,9 @@ function fill(c){
  $("feeds").value=(c.feeds||[]).join("\n");
  const p=c.presenter_settings||{},sc=p.scenes||{};
  $("presenter_name").value=p.name||"";
+ $("intro_mode").value=sc.intro_mode||"avatar";
+ $("intro_text").value=sc.intro_text||"Willkommen bei {title}. Hier sind die Nachrichten.";
+ $("outro_text").value=sc.outro_text||"Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.";
  $("intro_seconds").value=sc.intro_seconds??8;
  $("outro_seconds").value=sc.outro_seconds??8;
  $("show_headlines").checked=sc.show_headlines!==false;
@@ -88,6 +94,10 @@ $("settings").addEventListener("submit",event=>{
  c.presenter_settings??={};c.presenter_settings.name=$("presenter_name").value.trim();
  c.presenter_settings.portrait=c.presenter;c.presenter_settings.background=c.background;
  c.presenter_settings.scenes??={};
+ c.presenter_settings.scenes.intro_mode=$("intro_mode").value;
+ c.presenter_settings.scenes.intro_text=$("intro_text").value.trim();
+ c.presenter_settings.scenes.outro_text=$("outro_text").value.trim();
+ if(!c.presenter_settings.scenes.intro_text||!c.presenter_settings.scenes.outro_text)throw Error("Intro- und Outro-Text dürfen nicht leer sein.");
  c.presenter_settings.scenes.intro_seconds=Number($("intro_seconds").value);
  c.presenter_settings.scenes.outro_seconds=Number($("outro_seconds").value);
  c.presenter_settings.scenes.show_headlines=$("show_headlines").checked;
