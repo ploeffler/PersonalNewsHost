@@ -6,6 +6,18 @@ PersonalNewsHost liest konfigurierbare RSS-Feeds und erzeugt deutschsprachige Na
 
 > **Projektziel:** Möglichst stündlich eine automatisch erzeugte Nachrichtensendung, konfigurierbare Quellen, Moderatorenportrait und Studiokulisse, Video-RSS und **0 € monatliche Zusatzkosten**. Die Umsetzung ist ein Prototyp, kein redaktionell verifiziertes Nachrichtensystem. Die GitHub-Freikontingente und Nutzungsbedingungen müssen eingehalten werden.
 
+## Warum dieses Projekt entstanden ist
+
+PersonalNewsHost ist aus **zwei Motivationen** entstanden.
+
+**1. Programmieren mit einem einfachen Prompt:** Das Projekt soll zeigen, wie man aus einer zunächst einfachen Aufgabenbeschreibung im Gespräch mit ChatGPT schrittweise ein ausführbares Programm entwickeln lassen kann. Der Ausgangspunkt war die Idee, konfigurierbare RSS-Feeds automatisch auszuwerten und daraus stündlich eine Nachrichtensendung als Video zu erzeugen. Das Programm soll **in der Cloud**, also auf fremder Recheninfrastruktur, laufen, ohne dass dafür ein eigener Server oder ein ständig geöffneter Browser nötig ist. Die besondere Herausforderung lautet: **0 € laufende Zusatzkosten**. Das ist mit frei verfügbaren Werkzeugen und kostenlosen Kontingenten grundsätzlich möglich, aber nur innerhalb ihrer jeweiligen Grenzen. Der Weg vom ersten Prompt bis zum funktionierenden Prototyp umfasst mehrere Iterationen, Tests und Korrekturen – nicht bloß einen einzigen Knopfdruck.
+
+**2. KI als Technologie begreifbar machen:** Es gibt nicht **„die KI“** als ein einzelnes, physisches Ding. *Künstliche Intelligenz* bezeichnet eine Familie von Technologien, Modellen und Verfahren. Diese können je nach Modell und Rechenbedarf auf dem eigenen Computer zu Hause oder auf Rechnern in einem Rechenzentrum ausgeführt werden. ChatGPT dient hier als Werkzeug zur Entwicklung des Programms; das bedeutet nicht, dass jede Funktion des fertigen Programms über ChatGPT oder eine OpenAI-API laufen muss. PersonalNewsHost verbindet unterschiedliche Bausteine: klassische RSS-Verarbeitung und Videowerkzeuge ebenso wie lokal ausführbare KI-Modelle für Sprache und Lippenbewegungen.
+
+### Kostenlos ist eine Konfiguration, keine technische Grenze
+
+Die **kostenlose Betriebsweise** ist die Vorgabe dieses Prototyps, nicht das grundsätzliche Limit der Architektur. PersonalNewsHost soll auch mit **kostenpflichtigen Technologien und Diensten** betrieben werden können – beispielsweise für Sprachsynthese, Textanalyse, Bild- oder Videogenerierung oder leistungsfähigere Recheninfrastruktur. Dafür müssen die jeweiligen Anbieter technisch angebunden, Zugangsdaten sicher hinterlegt und ihre Preise berücksichtigt werden. **Die aktuell dokumentierten Workflows enthalten noch keine allgemein konfigurierbare Umschaltung auf solche kostenpflichtigen Anbieter.** Das ist eine geplante Erweiterungsmöglichkeit, keine bereits fertig implementierte Funktion.
+
 ## Aktuelle Ausgaben
 
 - [Nachrichtenseite auf GitHub Pages](https://ploeffler.github.io/PersonalNewsHost/)
