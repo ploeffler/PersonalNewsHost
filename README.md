@@ -276,3 +276,12 @@ Der GitHub-Actions-Cron bleibt technisch auf **stündlich, Minute 17 UTC** einge
 ### Zeitzonen und Sommerzeit
 
 Im Tab **Automatik** kann eine IANA-Zeitzone (z. B. `Europe/Vienna`) gewählt werden. `automation.timezone` und `automation.start_hour_local` steuern das lokale Stundenraster. Ältere Konfigurationen mit `start_hour_utc` funktionieren weiterhin und verwenden standardmäßig UTC. Die Umstellung auf Sommer-/Winterzeit erfolgt automatisch. Doppelt vorkommende Stunden im Herbst werden nur einmal ausgeführt; nicht vorhandene Stunden im Frühjahr entfallen. Der GitHub-Actions-Cron bleibt stündlich und kann verspätet laufen.
+
+## Produktionsversionen
+
+Die Konfiguration enthält `production_version` (Standard: `"1.0"`). Im neuen Tab **Version** kann der Nutzer die Produktionsvariante sehen.
+
+- **1.0 – Minimal:** Die bestehende kostenlose Pipeline ohne kostenpflichtige APIs.
+- **2.0 – Erweitert (geplant):** Künftige optionale kostenpflichtige KI-Dienste. Die Auswahl ist absichtlich deaktiviert, solange Pipeline, Provider-Konfiguration, API-Secrets und Kostenlimits noch nicht implementiert sind.
+
+Die Produktionsprüfung lehnt unbekannte oder noch nicht implementierte Versionen ausdrücklich ab, statt stillschweigend kostenpflichtige Dienste zu starten oder auf eine andere Version zurückzufallen. Die bestehende Konfiguration bleibt kompatibel; fehlt `production_version`, wird 1.0 verwendet.
