@@ -18,10 +18,8 @@ class VideoSmokeTests(unittest.TestCase):
             root = Path(temp)
             (root / "docs").mkdir()
             (root / "assets").mkdir()
-            image = root / "assets" / "intro.png"
-            subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi",
-                            "-i", "color=c=red:s=320x240:d=1", "-frames:v", "1",
-                            str(image)], check=True)
+            image = root / "assets" / "intro.ppm"
+            image.write_bytes(b"P6\\n2 2\\n255\\n" + bytes([255, 0, 0] * 4))
             cfg = copy.deepcopy(generate.CONFIG)
             cfg.update({"title": "Test", "feeds": ["https://example.org/rss"],
                         "max_items": 1, "max_description_chars": 30,
@@ -31,7 +29,7 @@ class VideoSmokeTests(unittest.TestCase):
                 "background": "assets/missing.jpg",
                 "scenes": {"intro_mode": mode, "intro_static_type": kind,
                            "intro_static_color": "#13243a",
-                           "intro_static_image": "assets/intro.png",
+                           "intro_static_image": "assets/intro.ppm",
                            "intro_seconds": 1, "outro_seconds": 1,
                            "show_headlines": True}}
             def audio(_text, destination):
