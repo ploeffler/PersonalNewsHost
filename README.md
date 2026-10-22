@@ -248,3 +248,16 @@ Ohne lokal vorhandenes Piper-Modell `models/de_DE-thorsten-high.onnx` greift der
 
 Die kostenfreie Konfiguration bleibt dabei ein eigenständiger, ohne Bezahlangebote nutzbarer Betriebsmodus.
 
+
+## Telegram für eigene Forks (optional)
+
+Jeder Fork kann Telegram unabhängig aktivieren. In der Web-Konfiguration unter „Telegram-Veröffentlichung“ sind Empfängerart (Kanal, privater Chat, Gruppe) und Versandart (automatisch, nur Video, nur Link) wählbar. Standardmäßig ist Telegram **ausgeschaltet**.
+
+1. Über [@BotFather](https://t.me/BotFather) einen eigenen Bot erstellen.
+2. Den Bot als Administrator mit Veröffentlichungsrechten zum eigenen Kanal hinzufügen oder für einen privaten Chat den Bot zunächst starten.
+3. In **Settings → Secrets and variables → Actions** des eigenen GitHub-Forks die Secrets `TELEGRAM_BOT_TOKEN` und `TELEGRAM_CHAT_ID` anlegen (Chat-ID oder `@kanalname`).
+4. Telegram in `config.json` bzw. auf der Web-Konfigurationsseite aktivieren und speichern.
+
+Nach der erfolgreichen Veröffentlichung unter GitHub Pages versendet der reguläre Produktionsworkflow optional das Video oder einen Link. Bei „Automatisch“ wird bei einem fehlgeschlagenen Video-Upload ein Link gesendet. Telegram-Fehler verhindern nicht die Website-Veröffentlichung. Videos über 49 MiB werden im Automatikmodus nur verlinkt. **Zugangsdaten niemals in `config.json` speichern.**
+
+Hinweis: Die experimentelle parallele MuseTalk-Pipeline veröffentlicht noch nicht automatisch; Telegram hängt vorerst am regulären Produktionsworkflow. Der Versand ist noch nicht mit einem echten Telegram-Bot end-to-end getestet.
