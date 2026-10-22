@@ -161,7 +161,7 @@ def main():
     lines = ["<!doctype html><html lang='de'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>",
              "<title>PersonalNewsHost</title><style>body{font:1.1rem system-ui;background:#13243a;color:white;max-width:900px;margin:3rem auto;padding:1rem}a{color:#8ed6ff}video{width:100%}</style>",
              "<h1>PersonalNewsHost</h1><p>Stand: " + html.escape(timestamp) + "</p>",
-             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'></video><p><a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a></p><h2>Quellen</h2><ul>"]
+             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'></video><p><a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='settings.html'>Konfiguration (Beta)</a></p><h2>Quellen</h2><ul>"]
     for title, _, link in selected:
         safe = link if link.startswith(("https://", "http://")) else "#"
         lines.append("<li><a rel='noopener noreferrer' href='" + html.escape(safe, quote=True) + "'>" + html.escape(title) + "</a></li>")
