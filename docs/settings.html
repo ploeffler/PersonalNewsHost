@@ -136,6 +136,7 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <label for="max_description_chars">Maximale Beschreibungslänge (0–300 Zeichen)</label><input id="max_description_chars" type="number" min="0" max="300" required>
 </fieldset>
 <fieldset class="settings-panel" id="panel-moderation" role="tabpanel" aria-labelledby="tab-moderation"><legend>Stimme und Moderation</legend>
+<label for="tts_engine">Sprachengine</label><select id="tts_engine"><option value="piper">Piper (eSpeak als Fallback)</option><option value="espeak">eSpeak-NG</option></select>
 <label for="piper_length_scale">Piper-Sprechtempo (0,7–1,5; kleiner = schneller)</label><input id="piper_length_scale" type="number" min="0.7" max="1.5" step="0.01" required>
 <label for="voice_pitch_semitones">Stimmlage in Halbtönen (−6 bis +6; negativ = tiefer)</label><input id="voice_pitch_semitones" type="number" min="-6" max="6" step="0.5" value="-1.5" required>
 <small>Standard: −1,5 Halbtöne. Die Sprechgeschwindigkeit bleibt unverändert. Unterstützte neuronale Stimme: de_DE-thorsten-high.</small>
