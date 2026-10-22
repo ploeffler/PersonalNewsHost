@@ -353,6 +353,32 @@ def main():
                 f"enable=\'{presenter_visibility}\'[composed]"
             ]
             current = "composed"
+        # Show source media only during the corresponding narrated story.
+        for idx, asset in enumerate(story_media):
+            if asset is None:
+                continue
+            path, kind = asset
+            input_index = len([a for a in args if a == "-i"])
+            if kind == "image":
+                args += ["-loop", "1", "-i", str(path)]
+            else:
+                args += ["-stream_loop", "-1", "-i", str(path)]
+            start_time = boundaries[idx + 2]
+            end_time = boundaries[idx + 3]
+            media_label = f"rssmedia{idx}"
+            next_label = f"rssscene{idx}"
+            filters.append(
+                f"[{input_index}:v]fps=5,scale=1280:720:force_original_aspect_ratio=decrease,"
+                f"pad=1280:720:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
+                f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS[{media_label}]"
+            )
+            filters.append(
+                f"[{current}][{media_label}]overlay=0:0:"
+                f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
+                f"eof_action=repeat:shortest=0[{next_label}]"
+            )
+            current = next_label
+            print(f"RSS {kind} used for story {idx + 1}: {path.name}")
         # Technical / AI broadcast identity: all graphics are rendered locally by FFmpeg.
         # Use text files so feed titles and brand names cannot inject filter syntax.
         font = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
@@ -409,21 +435,21 @@ def main():
                 source_file.write_text(host[:75], encoding="utf-8")
                 source_label = f"source{idx}"
                 filters.append(
-                    f"[{current}]drawbox=x=38:y=170:w=1204:h=390:color=0x07182b@0.80:t=fill:"
+                    f"[{current}]drawbox=x=38:y={390 if story_media[idx] else 170}:w=1204:h={240 if story_media[idx] else 390}:color=0x07182b@0.80:t=fill:"
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[{source_label}]"
                 )
                 current = source_label
                 filters.append(
                     f"[{current}]drawtext=fontfile={font}:textfile={source_file}:"
-                    f"fontcolor=0x65e1ff:fontsize=23:x=72:y=493:"
+                    f"fontcolor=0x65e1ff:fontsize=23:x=72:y={570 if story_media[idx] else 493}:"
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[credit{idx}]"
                 )
                 current = f"credit{idx}"
                 next_label = "v" if idx == story_count - 1 else f"story{idx}"
                 filters.append(
                     f"[{current}]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
-                    f"textfile={headline_file}:fontcolor=white:fontsize=38:line_spacing=15:"
-                    f"x=72:y=265:box=0:"
+                    f"textfile={headline_file}:fontcolor=white:fontsize={31 if story_media[idx] else 38}:line_spacing=15:"
+                    f"x=72:y={440 if story_media[idx] else 265}:box=0:"
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[{next_label}]"
                 )
                 current = next_label
