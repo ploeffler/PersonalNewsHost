@@ -10,6 +10,7 @@ import tempfile
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
@@ -17,6 +18,41 @@ CONFIG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
 BASE = "https://ploeffler.github.io/PersonalNewsHost/"
 UA = "PersonalNewsHost/0.4-scenes (RSS news reader)"
 ATOM = "{http://www.w3.org/2005/Atom}"
+
+GERMAN_MONTHS = ("Jänner", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember")
+GERMAN_ORDINALS = ("", "ersten", "zweiten", "dritten", "vierten", "fünften", "sechsten", "siebten", "achten", "neunten", "zehnten", "elften", "zwölften", "dreizehnten", "vierzehnten", "fünfzehnten", "sechzehnten", "siebzehnten", "achtzehnten", "neunzehnten")
+
+def german_number(n):
+    """German spoken cardinal numbers, suitable for dates and clock times."""
+    n = int(n)
+    units = ("null", "eins", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun", "zehn", "elf", "zwölf", "dreizehn", "vierzehn", "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn")
+    if n < 20:
+        return units[n]
+    if n < 100:
+        tens = ("", "", "zwanzig", "dreißig", "vierzig", "fünfzig", "sechzig", "siebzig", "achtzig", "neunzig")
+        return tens[n // 10] if n % 10 == 0 else ("ein" if n % 10 == 1 else units[n % 10]) + "und" + tens[n // 10]
+    if n < 1000:
+        return ("ein" if n // 100 == 1 else units[n // 100]) + "hundert" + (german_number(n % 100) if n % 100 else "")
+    if n < 10000:
+        return ("ein" if n // 1000 == 1 else german_number(n // 1000)) + "tausend" + (german_number(n % 1000) if n % 1000 else "")
+    raise ValueError("Number outside supported spoken date range")
+
+def spoken_timestamp(local):
+    """Write the German date and time as words for offline speech synthesis."""
+    day = local.day
+    ordinal = GERMAN_ORDINALS[day] if day < 20 else german_number(day) + "sten"
+    # 20th and 30th are irregular: zwanzigsten, dreißigsten.
+    if day in (20, 30):
+        ordinal = german_number(day) + "sten"
+    elif day > 20:
+        ordinal = german_number(day) + "sten"
+    year = german_number(local.year)
+    hours = german_number(local.hour)
+    if local.minute == 0:
+        clock = hours + " Uhr"
+    else:
+        clock = hours + " Uhr " + german_number(local.minute)
+    return f"Die Nachrichten vom {ordinal} {GERMAN_MONTHS[local.month - 1]} {year}, um {clock}."
 
 def clean(s):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", s or ""))).strip()
@@ -114,7 +150,8 @@ def main():
         raise RuntimeError("No RSS entries available; previous published edition remains unchanged")
     selected = collected[:max(1, min(int(CONFIG.get("max_items", 5)), 10))]
     now = dt.datetime.now(dt.timezone.utc)
-    timestamp = now.strftime("%d.%m.%Y um %H:%M UTC")
+    local_now = now.astimezone(ZoneInfo("Europe/Vienna"))
+    timestamp = local_now.strftime("%d.%m.%Y um %H:%M Uhr")
     settings = CONFIG.get("presenter_settings", {})
     scenes = settings.get("scenes", {})
     moderator = str(settings.get("name") or "NewsHost")
@@ -122,7 +159,7 @@ def main():
         return str(value).replace("{title}", str(CONFIG["title"])).replace("{moderator}", moderator)
     intro_text = expand_scene_text(scenes.get("intro_text") or "Willkommen bei {title}. Hier sind die Nachrichten.")
     outro_text = expand_scene_text(scenes.get("outro_text") or "Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.")
-    parts = [intro_text, f"Die Nachrichten vom {timestamp}."]
+    parts = [intro_text, spoken_timestamp(local_now)]
     limit = max(0, min(int(CONFIG.get("max_description_chars", 180)), 300))
     for title, desc, _ in selected:
         parts.append(title.rstrip(".!?") + ".\n" + (desc[:limit].rsplit(" ", 1)[0] if len(desc) > limit else desc))
