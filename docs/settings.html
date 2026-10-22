@@ -336,6 +336,7 @@ $("v2_country").addEventListener("change",syncResearchLocation);
 
 function fill(c){
  original=c;
+ $("tts_engine").value=c.tts_engine||"piper";
  $("production_version").value=c.production_version||"1.0";
  const v=c.advanced_services||{};
  $("v2_region").value=v.processing_region||"eu";
