@@ -83,11 +83,17 @@ Der Produktivworkflow `.github/workflows/news.yml` wird außerdem per Cron um Mi
 
 Die erste browserbasierte Oberfläche ist unter **[Konfiguration öffnen](https://ploeffler.github.io/PersonalNewsHost/settings.html)** erreichbar. Sie ist als statische GitHub-Pages-Seite umgesetzt und benötigt keinen eigenen Server.
 
-Derzeit kann man RSS-Quellen, Titel, Meldungsanzahl, Textlänge, Piper-Sprechtempo, Moderatorenname, Portrait- und Hintergrundpfad sowie Szeneneinstellungen bearbeiten. Die Seite lädt die öffentliche `config.json` aus dem Repository, validiert Eingaben und bietet den Download einer aktualisierten `config.json` an. Alternativ lässt sich eine vorhandene JSON-Datei importieren.
+Derzeit kann man RSS-Quellen, Titel, Meldungsanzahl, Textlänge, Piper-Sprechtempo und Stimmlage, Moderatorenname, Portrait- und Hintergrundpfad sowie Szeneneinstellungen bearbeiten. Die Seite lädt die öffentliche `config.json` aus dem Repository, validiert Eingaben und bietet den Download einer aktualisierten `config.json` an. Alternativ lässt sich eine vorhandene JSON-Datei importieren.
 
 **Noch nicht umgesetzt:** Automatisches Zurückschreiben der Konfiguration nach GitHub, Upload von Bilddateien, sichere Anmeldung und Start eines Workflows direkt aus der Oberfläche. Die heruntergeladene `config.json` muss derzeit manuell ins Repository übernommen werden. **Keine GitHub-Tokens oder Passwörter in diese Webseite eingeben.**
 
 Damit ist ein erster Teil des v1.0-Ziels vorhanden; die vollständige browserbasierte Administration steht noch aus.
+
+### Stimmlage anpassen
+
+Die Sprecherstimme lässt sich unabhängig vom Sprechtempo über `voice_pitch_semitones` in `config.json` verändern. Der aktuelle Testwert ist **−1,5 Halbtöne** (tiefer); `0` bedeutet unveränderte Tonhöhe. Die Web-Konfiguration erlaubt Werte von −6 bis +6 Halbtönen. FFmpeg verschiebt die Tonhöhe nach der Piper-Synthese und gleicht die Wiedergabegeschwindigkeit aus. Dadurch bleibt das eingestellte Piper-Sprechtempo grundsätzlich erhalten, bei größeren Änderungen können allerdings Klangartefakte entstehen.
+
+**Status:** Implementiert, aber noch nicht durch einen neuen vollständigen GitHub-Actions-Lauf geprüft.
 
 ### Intro und Outro anpassen
 
