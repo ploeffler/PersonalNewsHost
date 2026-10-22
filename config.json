@@ -26,8 +26,6 @@
       "note": "CPU-only lip-sync not yet implemented; enable only after a successful prototype test"
     },
     "scenes": {
-      "intro_seconds": 8,
-      "outro_seconds": 8,
       "show_headlines": true,
       "intro_mode": "avatar",
       "intro_text": "Willkommen bei {title}. Hier sind die Nachrichten.",
