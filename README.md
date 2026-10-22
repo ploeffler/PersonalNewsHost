@@ -291,3 +291,9 @@ Die Produktionsprüfung lehnt unbekannte oder noch nicht implementierte Versione
 Der Tab **Version** enthält den Konfigurationsentwurf `advanced_services` mit `news_provider`, `voice_provider`, `avatar_provider`, `video_provider`, `max_per_video_eur`, `max_per_month_eur` und `allow_paid`. Alle Budgets sind standardmäßig 0 EUR, `allow_paid` ist `false`. Diese Felder sind **noch keine technisch wirksame Kostenkontrolle**; sie werden von der aktuellen Pipeline nicht verwendet. Version 2.0 bleibt im Auswahlfeld gesperrt und der Produktionsworkflow lehnt sie ab. API-Schlüssel gehören ausschließlich in GitHub Actions Secrets. Eine zukünftige Freischaltung setzt Anbieteradapter, verbindliche Budgetprüfungen, Fehlerbehandlung und Tests voraus.
 
 Die automatische Produktion ist in der ausgelieferten Standardkonfiguration deaktiviert. Manuelle Workflow-Starts bleiben möglich.
+
+### Technische Anbieter-Schnittstellen
+
+`scripts/provider_registry.py` definiert austauschbare Verträge für Nachrichten-, Sprach-, Avatar- und Videodienste. `plan(config)` validiert Anbieter und Euro-Budgets rein lokal, ohne Netzwerkzugriffe oder Gebühren. `require_executable_version(config)` lässt aktuell nur 1.0 zu; 2.0 bleibt auch mit ausdrücklicher Zustimmung gesperrt, solange belastbare Abrechnungskontrollen und Adapter fehlen. Die Produktionsprüfung nutzt dieselbe Validierung.
+
+Tests: `python3 -m unittest discover -s tests`. Der Produktionsworkflow führt diese Tests vor der eigentlichen Verarbeitung aus. Die Provider-Verträge sind eine technische Vorbereitung, noch keine funktionierende kostenpflichtige Pipeline.
