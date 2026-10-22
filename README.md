@@ -313,3 +313,7 @@ Im Tab **Version** wird vor dem Anbieter zuerst der gewünschte Datenraum (`adva
 ### Modell- und Endpunktprüfung (noch ohne Freigaben)
 
 `docs/provider-research.json` verlangt jetzt für jeden Kandidaten die Modell-ID, Deployment-Typ, Ausgangs- und Zielregionen, Angaben zu Datenaufbewahrung und Unterauftragsverarbeitern sowie offizielle Quelle und Prüfdatum. `scripts/model_residency.py` prüft offline die Vollständigkeit und die Übereinstimmung der angegebenen Zielregionen mit einer erlaubten Region-Liste. Diese Plausibilitätsprüfung **beweist nicht**, dass ein Dienst tatsächlich dort rechnet, und setzt `approved` daher stets auf `false`. Die AWS-Dokumentation fordert `GetInferenceProfile` für jede Ausgangsregion; Microsoft weist auf die modellabhängige Verfügbarkeit der Deployment-Typen hin. Die Konfiguration aktiviert weiterhin keine externen Dienste. Tests: `python3 -m unittest discover -s tests`.
+
+### Standort-Recherche offline prüfen
+
+Mit `python3 -m scripts.audit_provider_research` lässt sich der öffentliche Recherchekatalog lokal auf fehlende modellgenaue Nachweise prüfen. Der Befehl benötigt keine Zugangsdaten, ruft keine Provider-APIs auf und erzeugt keine Kosten. Das Ergebnis ist ein **Recherchebericht**, keine Live-Verfügbarkeitsprüfung und keine Anbieterfreigabe. Für eine tatsächliche Prüfung bei AWS oder Microsoft werden später konkrete Modell-IDs, Regionen, Endpunkte und gegebenenfalls Kontoberechtigungen benötigt. Bis dahin bleiben alle externen Anbieter gesperrt.
