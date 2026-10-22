@@ -55,7 +55,7 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <p class="lead-copy">Nachrichtensendung, Stimme, Bilder und Ausgabekanäle konfigurieren. Im ersten Tab kannst du die Konfiguration speichern oder herunterladen.</p></header>
 <p id="status" role="status" aria-live="polite">Lade Konfiguration …</p>
 <form id="settings" hidden>
-<nav class="settings-tabs" aria-label="Konfigurationsgruppen" role="tablist"><button type="button" id="tab-github" role="tab" aria-controls="panel-github" aria-selected="true" tabindex="0" data-tab="github">GitHub &amp; Speichern</button><button type="button" id="tab-automation" role="tab" aria-controls="panel-automation" aria-selected="false" tabindex="-1" data-tab="automation">Automatik</button><button type="button" id="tab-sendung" role="tab" aria-controls="panel-sendung" aria-selected="false" tabindex="-1" data-tab="sendung">Sendung</button><button type="button" id="tab-moderation" role="tab" aria-controls="panel-moderation" aria-selected="false" tabindex="-1" data-tab="moderation">Stimme & Moderator</button><button type="button" id="tab-scenes" role="tab" aria-controls="panel-scenes" aria-selected="false" tabindex="-1" data-tab="scenes">Intro & Outro</button><button type="button" id="tab-telegram" role="tab" aria-controls="panel-telegram" aria-selected="false" tabindex="-1" data-tab="telegram">Telegram</button><button type="button" id="tab-images" role="tab" aria-controls="panel-images" aria-selected="false" tabindex="-1" data-tab="images">Bilder</button></nav>
+<nav class="settings-tabs" aria-label="Konfigurationsgruppen" role="tablist"><button type="button" id="tab-github" role="tab" aria-controls="panel-github" aria-selected="true" tabindex="0" data-tab="github">GitHub &amp; Speichern</button><button type="button" id="tab-version" role="tab" aria-controls="panel-version" aria-selected="false" tabindex="-1">Version</button><button type="button" id="tab-automation" role="tab" aria-controls="panel-automation" aria-selected="false" tabindex="-1" data-tab="automation">Automatik</button><button type="button" id="tab-sendung" role="tab" aria-controls="panel-sendung" aria-selected="false" tabindex="-1" data-tab="sendung">Sendung</button><button type="button" id="tab-moderation" role="tab" aria-controls="panel-moderation" aria-selected="false" tabindex="-1" data-tab="moderation">Stimme & Moderator</button><button type="button" id="tab-scenes" role="tab" aria-controls="panel-scenes" aria-selected="false" tabindex="-1" data-tab="scenes">Intro & Outro</button><button type="button" id="tab-telegram" role="tab" aria-controls="panel-telegram" aria-selected="false" tabindex="-1" data-tab="telegram">Telegram</button><button type="button" id="tab-images" role="tab" aria-controls="panel-images" aria-selected="false" tabindex="-1" data-tab="images">Bilder</button></nav>
 <fieldset class="settings-panel active-panel" id="panel-github" role="tabpanel" aria-labelledby="tab-github"><legend>GitHub &amp; Speichern</legend>
 
 <section class="security-panel"><h2>Direkt in GitHub speichern (Beta)</h2>
@@ -74,6 +74,11 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 
 <div id="importrow" hidden><label for="importfile">config.json vom Computer importieren</label><input id="importfile" type="file" accept=".json,application/json"></div>
 
+</fieldset>
+<fieldset class="settings-panel" id="panel-version" role="tabpanel" aria-labelledby="tab-version"><legend>Produktionsversion</legend>
+<label for="production_version">Welche Version soll verwendet werden?</label>
+<select id="production_version"><option value="1.0">Version 1.0 – Minimal (kostenlos)</option><option value="2.0" disabled>Version 2.0 – Erweiterte Dienste (in Vorbereitung)</option></select>
+<p class="muted">Version 1.0 nutzt ausschließlich kostenlose, lokale Werkzeuge und GitHub Actions. Version 2.0 ist für kostenpflichtige KI-Dienste vorgesehen und wird erst auswählbar, wenn die Implementierung und die Kostenkontrollen bereitstehen. Ein Wechsel darf keine kostenpflichtigen Aufrufe ohne ausdrückliche Einrichtung auslösen.</p>
 </fieldset>
 <fieldset class="settings-panel" id="panel-automation" role="tabpanel" aria-labelledby="tab-automation"><legend>Automatische Nachrichtensendungen</legend>
 <label><input id="automation_enabled" type="checkbox" style="width:auto"> Automatische Produktion aktivieren</label>
@@ -139,7 +144,7 @@ function updateStaticOptions(){ $("static_options").hidden=$("intro_mode").value
 $("intro_mode").addEventListener("change",updateStaticOptions);
 $("intro_static_type").addEventListener("change",updateStaticOptions);
 
-const tabIds=["github","automation","sendung","moderation","scenes","telegram","images"];
+const tabIds=["github","version","automation","sendung","moderation","scenes","telegram","images"];
 function activateSettingsTab(id,focus=false){
  for(const name of tabIds){
   const active=name===id;
@@ -191,6 +196,7 @@ for(const id of ["automation_enabled","automation_interval","automation_hour","a
 const fields=["title","max_items","max_description_chars","piper_length_scale","voice_pitch_semitones","presenter","background"];
 function fill(c){
  original=c;
+ $("production_version").value=c.production_version||"1.0";
  for(const key of fields)$(key).value=c[key]??(key==="voice_pitch_semitones"?0:"");
  $("feeds").value=(c.feeds||[]).join("\n");
  const p=c.presenter_settings||{},sc=p.scenes||{};
@@ -241,6 +247,8 @@ $("settings").addEventListener("submit",event=>{
  event.preventDefault();$("result").className="error";
  try{
  const c=structuredClone(original);
+ if($("production_version").value!=="1.0")throw Error("Version 2.0 ist noch nicht verfügbar.");
+ c.production_version=$("production_version").value;
  c.title=$("title").value.trim();
  c.feeds=[...new Set($("feeds").value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean).map(validUrl))];
  if(!c.title||!c.feeds.length||c.feeds.length>30)throw Error("Titel und 1–30 RSS-Feeds sind erforderlich.");
