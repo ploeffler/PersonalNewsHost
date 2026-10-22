@@ -35,9 +35,19 @@ def main():
             sources = segment.get("sources") or []
             publisher = sources[0].get("publisher", "RSS") if sources else "RSS"
             render(segment["headline"], publisher, int(args.segment.split("-")[-1]), picture)
+        color = "13243a"
+        if segment["kind"] == "intro" and not segment["presenter_visible"]:
+            static = segment.get("static_background", {})
+            color = static.get("color", "#13243a").lstrip("#")
+            if static.get("type") == "image":
+                picture = ROOT / static.get("image", "assets/background.jpg")
+                if not picture.is_file():
+                    raise FileNotFoundError("Configured intro image is missing: " + str(picture))
+            else:
+                picture = Path(directory) / "solid-color-only"
         visual_input = (["-loop", "1", "-framerate", "25", "-i", str(picture)]
                         if picture.is_file() else
-                        ["-f", "lavfi", "-i", "color=c=0x13243a:s=1280x720:r=25"])
+                        ["-f", "lavfi", "-i", "color=c=0x" + color + ":s=1280x720:r=25"])
         if not picture.is_file():
             print("Using generated fallback background:", picture)
         filters = "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,format=yuv420p"
