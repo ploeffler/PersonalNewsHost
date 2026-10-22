@@ -353,7 +353,7 @@ def main():
             story_media.append(asset)
             media_credits.append(credit)
         (DOCS / "media-credits.json").write_text(json.dumps(media_credits, ensure_ascii=False, indent=2), encoding="utf-8")
-        # Scene schedule: presenter for intro/outro, headlines in the middle.
+        # Studio stays as background; story media appears on a tilted virtual screen.
         duration_text = subprocess.check_output(
             ["ffprobe", "-v", "error", "-show_entries", "format=duration",
              "-of", "default=noprint_wrappers=1:nokey=1", str(wav)], text=True
@@ -365,6 +365,8 @@ def main():
         outro = duration - outro_start
         print(f"Scenes: intro={intro:.1f}s, headlines={outro_start-intro:.1f}s, outro={outro:.1f}s")
         args = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y"]
+        if not bg.is_file():
+            print(f"WARNING: studio image missing: {bg}; using solid background")
         if bg.is_file():
             args += ["-loop", "1", "-i", str(bg)]
         else:
@@ -422,12 +424,14 @@ def main():
             media_label = f"rssmedia{idx}"
             next_label = f"rssscene{idx}"
             filters.append(
-                f"[{input_index}:v]fps=5,scale=830:720:force_original_aspect_ratio=decrease,"
-                f"pad=830:720:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
-                f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS[{media_label}]"
+                f"[{input_index}:v]fps=5,scale=620:350:force_original_aspect_ratio=decrease,"
+                f"pad=620:350:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
+                f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS,"
+                f"perspective=x0=35:y0=18:x1=590:y1=0:x2=0:y2=348:x3=618:y3=327:"
+                f"sense=destination[{media_label}]"
             )
             filters.append(
-                f"[{current}][{media_label}]overlay=x={450 if idx % 2 == 1 else 0}:y=0:"
+                f"[{current}][{media_label}]overlay=x={570 if idx % 2 == 1 else 90}:y=135:"
                 f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
                 f"eof_action=repeat:shortest=0[{next_label}]"
             )
