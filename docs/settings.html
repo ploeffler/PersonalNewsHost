@@ -79,8 +79,8 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <label><input id="automation_enabled" type="checkbox" style="width:auto"> Automatische Produktion aktivieren</label>
 <label for="automation_interval">Wie oft soll eine Sendung erzeugt werden?</label>
 <select id="automation_interval"><option value="1">Jede Stunde</option><option value="2">Alle 2 Stunden</option><option value="3">Alle 3 Stunden</option><option value="4">Alle 4 Stunden</option><option value="6">Alle 6 Stunden</option><option value="8">Alle 8 Stunden</option><option value="12">Alle 12 Stunden</option><option value="24">Einmal täglich</option></select>
-<label for="automation_timezone">Zeitzone</label><select id="automation_timezone"><option value="UTC">UTC</option><option value="Europe/Vienna">Wien</option><option value="Europe/Berlin">Berlin</option><option value="Europe/Zurich">Zürich</option><option value="Europe/London">London</option><option value="America/New_York">New York</option><option value="America/Los_Angeles">Los Angeles</option><option value="Asia/Tokyo">Tokio</option><option value="Australia/Sydney">Sydney</option></select><label for="automation_hour">Startstunde (Ortszeit)</label><select id="automation_hour"><option value="0">00:00 UTC</option><option value="1">01:00 UTC</option><option value="2">02:00 UTC</option><option value="3">03:00 UTC</option><option value="4">04:00 UTC</option><option value="5">05:00 UTC</option><option value="6">06:00 UTC</option><option value="7">07:00 UTC</option><option value="8">08:00 UTC</option><option value="9">09:00 UTC</option><option value="10">10:00 UTC</option><option value="11">11:00 UTC</option><option value="12">12:00 UTC</option><option value="13">13:00 UTC</option><option value="14">14:00 UTC</option><option value="15">15:00 UTC</option><option value="16">16:00 UTC</option><option value="17">17:00 UTC</option><option value="18">18:00 UTC</option><option value="19">19:00 UTC</option><option value="20">20:00 UTC</option><option value="21">21:00 UTC</option><option value="22">22:00 UTC</option><option value="23">23:00 UTC</option></select>
-<label for="automation_days">Wochentage</label><select id="automation_days"><option value="daily">Jeden Tag</option><option value="weekdays">Montag bis Freitag</option><option value="weekends">Samstag und Sonntag</option></select>
+<label for="automation_timezone">Zeitzone</label><select id="automation_timezone"><option value="UTC">UTC</option><option value="Europe/Vienna">Wien</option><option value="Europe/Berlin">Berlin</option><option value="Europe/Zurich">Zürich</option><option value="Europe/London">London</option><option value="America/New_York">New York</option><option value="America/Los_Angeles">Los Angeles</option><option value="Asia/Tokyo">Tokio</option><option value="Australia/Sydney">Sydney</option></select><label for="automation_hour">Startstunde (Ortszeit)</label><select id="automation_hour"><option value="0">00:00</option><option value="1">01:00</option><option value="2">02:00</option><option value="3">03:00</option><option value="4">04:00</option><option value="5">05:00</option><option value="6">06:00</option><option value="7">07:00</option><option value="8">08:00</option><option value="9">09:00</option><option value="10">10:00</option><option value="11">11:00</option><option value="12">12:00</option><option value="13">13:00</option><option value="14">14:00</option><option value="15">15:00</option><option value="16">16:00</option><option value="17">17:00</option><option value="18">18:00</option><option value="19">19:00</option><option value="20">20:00</option><option value="21">21:00</option><option value="22">22:00</option><option value="23">23:00</option></select>
+<p id="automation_preview" class="security-panel" aria-live="polite"></p><label for="automation_days">Wochentage</label><select id="automation_days"><option value="daily">Jeden Tag</option><option value="weekdays">Montag bis Freitag</option><option value="weekends">Samstag und Sonntag</option></select>
 <small>GitHub Actions prüft stündlich ungefähr um Minute 17 (UTC), ob die gewählte Stunde fällig ist. Die tatsächliche Ausführung kann sich durch GitHub verzögern oder in Einzelfällen ausfallen. Startstunde bedeutet Stundenraster, keine minutengenaue Startzeit. Die gewählte Zeitzone berücksichtigt Sommer- und Winterzeit. Doppelte Stunden im Herbst werden nur einmal ausgeführt; entfallende Stunden im Frühjahr werden übersprungen. Manuelle Workflow-Starts bleiben auch bei deaktivierter Automatik möglich.</small>
 </fieldset>
 <fieldset class="settings-panel" id="panel-sendung" role="tabpanel" aria-labelledby="tab-sendung"><legend>Sendung</legend>
@@ -165,6 +165,29 @@ $("settings").addEventListener("invalid",event=>{
  if(panel)activateSettingsTab(panel.id.replace("panel-",""));
 },true);
 activateSettingsTab("github");
+
+function refreshAutomationPreview(){
+ const el=$("automation_preview");
+ if(!$("automation_enabled").checked){el.textContent="Automatik deaktiviert. Manuelle Starts sind weiterhin möglich.";return;}
+ const tz=$("automation_timezone").value, interval=Number($("automation_interval").value), start=Number($("automation_hour").value),days=$("automation_days").value;
+ const fmt=new Intl.DateTimeFormat("en-GB",{timeZone:tz,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23",weekday:"short"});
+ const matches=[];
+ const now=Date.now(),startMs=Math.ceil(now/3600000)*3600000;
+ const seen=new Set();
+ for(let i=0;i<24*21 && matches.length<5;i++){
+  const t=new Date(startMs+i*3600000),p=Object.fromEntries(fmt.formatToParts(t).map(x=>[x.type,x.value]));
+  const hour=Number(p.hour),day=p.weekday;
+  const allowed=days==="daily"||(days==="weekdays"&&!["Sat","Sun"].includes(day))||(days==="weekends"&&["Sat","Sun"].includes(day));
+  const key=p.year+"-"+p.month+"-"+p.day+" "+p.hour;
+  if(allowed&&(hour-start+24)%interval===0&&!seen.has(key)){
+   seen.add(key);
+   const shown=new Intl.DateTimeFormat("de-AT",{timeZone:tz,weekday:"short",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit",timeZoneName:"short"}).format(t);
+   matches.push(shown.replace(/:00/,":17"));
+  }
+ }
+ el.textContent="Nächste mögliche Produktionsfenster (ungefähr): "+(matches.join(" · ")||"Keine in den nächsten 21 Tagen")+". GitHub Actions kann später starten oder Läufe auslassen.";
+}
+for(const id of ["automation_enabled","automation_interval","automation_hour","automation_timezone","automation_days"])$(id).addEventListener("change",refreshAutomationPreview);
 const fields=["title","max_items","max_description_chars","piper_length_scale","voice_pitch_semitones","presenter","background"];
 function fill(c){
  original=c;
@@ -193,6 +216,7 @@ function fill(c){
  $("telegram_delivery").value=tg.delivery||"auto";
  $("telegram_caption").value=tg.caption||"{title} – neue Nachrichtensendung\\n{url}";
  updateStaticOptions();
+ refreshAutomationPreview();
  $("settings").hidden=false;$("status").textContent="Konfiguration geladen. Änderungen werden erst durch Übernahme in GitHub wirksam.";
 }
 async function load(){
