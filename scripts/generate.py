@@ -178,10 +178,14 @@ def main():
             current = "introcomposed"
         if presenter.is_file():
             args += ["-loop", "1", "-i", str(presenter)]
+            presenter_visibility = (
+                f"gte(t,{outro_start:.3f})" if intro_mode == "static"
+                else f"between(t,0,{intro:.3f})+gte(t,{outro_start:.3f})"
+            )
             filters += [
                 f"[{3 if intro_mode == 'static' else 2}:v]scale=440:600:force_original_aspect_ratio=decrease[person]",
                 f"[{current}][person]overlay=x=W-w-55:y=H-h-30:"
-                f"enable='{('gte(t,'+str(outro_start)+')') if intro_mode == 'static' else ('between(t,0,'+str(intro)+')+gte(t,'+str(outro_start)+')')}'[composed]"
+                f"enable=\'{presenter_visibility}\'[composed]"
             ]
             current = "composed"
         if scenes.get("show_headlines", True) and selected:
