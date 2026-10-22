@@ -40,19 +40,29 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 [hidden]{display:none!important}
 @media(max-width:640px){.settings-grid{grid-template-columns:minmax(0,1fr)}.settings-grid>.wide{grid-column:auto}.action-bar{flex-direction:column}.action-bar button{width:100%}fieldset{margin-bottom:14px}h2{font-size:1.25rem}h3{font-size:1.1rem}main{padding:14px}}
 @media(prefers-reduced-motion:no-preference){button{transition:filter .15s ease,transform .15s ease}button:hover:not(:disabled){filter:brightness(1.08)}}
+
+@media(min-width:768px){
+.settings-tabs{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;border-bottom:1px solid #45627e;margin:16px 0 22px;scrollbar-width:thin}
+.settings-tabs button{white-space:nowrap;background:transparent;color:#c6d8ea;border-radius:10px 10px 0 0;margin:0;padding:12px clamp(10px,1.6vw,20px);font-size:.94rem}
+.settings-tabs button[aria-selected="true"]{background:#254765;color:#fff;box-shadow:inset 0 -3px #71d8f1}
+.settings-panel{display:none}
+.settings-panel.active-panel{display:block}
+}
+@media(max-width:767.98px){.settings-tabs{display:none}.settings-panel{display:block!important}}
 </style></head><body><main class="container-fluid">
 <header class="page-header"><p><a href="./">← Zur Nachrichtenseite</a></p>
 <h1>PersonalNewsHost konfigurieren</h1>
 <p class="lead-copy">Nachrichtensendung, Stimme, Bilder und Ausgabekanäle konfigurieren. Einstellungen als Datei herunterladen oder mit einem GitHub-Token direkt speichern.</p></header>
 <p id="status" role="status" aria-live="polite">Lade Konfiguration …</p>
 <form id="settings" hidden>
-<fieldset><legend>Sendung</legend>
+<nav class="settings-tabs" aria-label="Konfigurationsgruppen" role="tablist"><button type="button" id="tab-sendung" role="tab" aria-controls="panel-sendung" aria-selected="true" tabindex="0" data-tab="sendung">Sendung</button><button type="button" id="tab-moderation" role="tab" aria-controls="panel-moderation" aria-selected="false" tabindex="-1" data-tab="moderation">Stimme & Moderator</button><button type="button" id="tab-scenes" role="tab" aria-controls="panel-scenes" aria-selected="false" tabindex="-1" data-tab="scenes">Intro & Outro</button><button type="button" id="tab-telegram" role="tab" aria-controls="panel-telegram" aria-selected="false" tabindex="-1" data-tab="telegram">Telegram</button><button type="button" id="tab-images" role="tab" aria-controls="panel-images" aria-selected="false" tabindex="-1" data-tab="images">Bilder</button></nav>
+<fieldset class="settings-panel" id="panel-sendung" role="tabpanel" aria-labelledby="tab-sendung"><legend>Sendung</legend>
 <label for="title">Sendungstitel</label><input id="title" required maxlength="120">
 <label for="feeds">RSS-Feeds (eine HTTPS-Adresse pro Zeile)</label><textarea id="feeds" required spellcheck="false"></textarea>
 <label for="max_items">Anzahl Meldungen (1–10)</label><input id="max_items" type="number" min="1" max="10" required>
 <label for="max_description_chars">Maximale Beschreibungslänge (0–300 Zeichen)</label><input id="max_description_chars" type="number" min="0" max="300" required>
 </fieldset>
-<fieldset><legend>Stimme und Moderation</legend>
+<fieldset class="settings-panel" id="panel-moderation" role="tabpanel" aria-labelledby="tab-moderation"><legend>Stimme und Moderation</legend>
 <label for="piper_length_scale">Piper-Sprechtempo (0,7–1,5; kleiner = schneller)</label><input id="piper_length_scale" type="number" min="0.7" max="1.5" step="0.01" required>
 <label for="voice_pitch_semitones">Stimmlage in Halbtönen (−6 bis +6; negativ = tiefer)</label><input id="voice_pitch_semitones" type="number" min="-6" max="6" step="0.5" value="-1.5" required>
 <small>Standard: −1,5 Halbtöne. Die Sprechgeschwindigkeit bleibt unverändert. Unterstützte neuronale Stimme: de_DE-thorsten-high.</small>
@@ -61,7 +71,7 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <label for="background">Hintergrundpfad im Repository</label><input id="background" placeholder="assets/background.jpg" required>
 <small>Bilder können unten hochgeladen werden. Pfade verweisen auf Dateien im Repository.</small>
 </fieldset>
-<fieldset><legend>Intro und Outro – Darstellung und Sprechertext</legend>
+<fieldset class="settings-panel" id="panel-scenes" role="tabpanel" aria-labelledby="tab-scenes"><legend>Intro und Outro – Darstellung und Sprechertext</legend>
 <h2>Intro: Avatar oder einfärbiger Hintergrund / Bild</h2>
 <label for="intro_mode">Intro-Darstellung</label><select id="intro_mode"><option value="avatar">Sprechender Avatar (MuseTalk, experimentell)</option><option value="static">Statischer Hintergrund (ohne Avatar)</option></select>
 <div id="static_options"><h3>Intro ohne Avatar – Hintergrund auswählen</h3><label for="intro_static_type">Hintergrundart</label><select id="intro_static_type"><option value="color">Einfärbig</option><option value="image">Bilddatei</option></select>
@@ -74,14 +84,14 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <label for="outro_seconds">Outro (Sekunden)</label><input id="outro_seconds" type="number" min="0" max="60" required>
 <label><input id="show_headlines" type="checkbox" style="width:auto"> Schlagzeilen anzeigen</label>
 </fieldset>
-<fieldset><legend>Telegram-Veröffentlichung (optional)</legend>
+<fieldset class="settings-panel" id="panel-telegram" role="tabpanel" aria-labelledby="tab-telegram"><legend>Telegram-Veröffentlichung (optional)</legend>
 <label><input id="telegram_enabled" type="checkbox" style="width:auto"> Telegram nach der Website-Veröffentlichung benachrichtigen</label>
 <label for="telegram_recipient">Empfängerart</label><select id="telegram_recipient"><option value="channel">Kanal</option><option value="private">Privater Chat</option><option value="group">Gruppe</option></select>
 <label for="telegram_delivery">Versandart</label><select id="telegram_delivery"><option value="auto">Automatisch: Video, bei Fehler Link</option><option value="video">Nur Video</option><option value="link">Nur Link</option></select>
 <label for="telegram_caption">Telegram-Nachricht (Platzhalter: {title}, {url})</label><textarea id="telegram_caption" maxlength="1024"></textarea>
 <small>GitHub → Settings → Secrets and variables → Actions: TELEGRAM_BOT_TOKEN und TELEGRAM_CHAT_ID einrichten. Niemals Tokens in die öffentliche Konfiguration eintragen.</small>
 </fieldset>
-<fieldset><legend>Eigene Bilder hochladen (Beta)</legend>
+<fieldset class="settings-panel" id="panel-images" role="tabpanel" aria-labelledby="tab-images"><legend>Eigene Bilder hochladen (Beta)</legend>
 <p>PNG oder JPEG, maximal 4 MB je Bild. Die Dateien werden öffentlich im GitHub-Repository gespeichert. Keine privaten Fotos oder Zugangsdaten hochladen.</p>
 <label for="upload_presenter">Moderator-Porträt</label><input id="upload_presenter" type="file" accept="image/png,image/jpeg,.png,.jpg,.jpeg">
 <label for="upload_background">Studiohintergrund</label><input id="upload_background" type="file" accept="image/png,image/jpeg,.png,.jpg,.jpeg">
@@ -114,6 +124,33 @@ const $=id=>document.getElementById(id);
 function updateStaticOptions(){ $("static_options").hidden=$("intro_mode").value!=="static"; $("intro_static_image").disabled=$("intro_static_type").value!=="image"; }
 $("intro_mode").addEventListener("change",updateStaticOptions);
 $("intro_static_type").addEventListener("change",updateStaticOptions);
+
+const tabIds=["sendung","moderation","scenes","telegram","images"];
+function activateSettingsTab(id,focus=false){
+ for(const name of tabIds){
+  const active=name===id;
+  const tab=$("tab-"+name),panel=$("panel-"+name);
+  tab.setAttribute("aria-selected",String(active));
+  tab.tabIndex=active?0:-1;
+  panel.classList.toggle("active-panel",active);
+ }
+ if(focus)$("tab-"+id).focus();
+}
+for(const id of tabIds){
+ $("tab-"+id).addEventListener("click",()=>activateSettingsTab(id));
+ $("tab-"+id).addEventListener("keydown",event=>{
+  if(!["ArrowRight","ArrowLeft","Home","End"].includes(event.key))return;
+  event.preventDefault();
+  const index=tabIds.indexOf(id);
+  const next=event.key==="Home"?0:event.key==="End"?tabIds.length-1:(index+(event.key==="ArrowRight"?1:-1)+tabIds.length)%tabIds.length;
+  activateSettingsTab(tabIds[next],true);
+ });
+}
+$("settings").addEventListener("invalid",event=>{
+ const panel=event.target.closest(".settings-panel");
+ if(panel)activateSettingsTab(panel.id.replace("panel-",""));
+},true);
+activateSettingsTab("sendung");
 const fields=["title","max_items","max_description_chars","piper_length_scale","voice_pitch_semitones","presenter","background"];
 function fill(c){
  original=c;
