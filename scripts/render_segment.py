@@ -26,10 +26,12 @@ def main():
     with tempfile.TemporaryDirectory() as directory:
         speech = Path(directory) / "speech.wav"
         from generate import synthesize
+        if not (ROOT / "models/de_DE-thorsten-high.onnx").is_file():
+            raise RuntimeError("Piper model missing; refuse eSpeak fallback in quality test")
         synthesize(segment["speech_text"], speech)
-        visual_input = (["-loop", "1", "-framerate", "5", "-i", str(picture)]
+        visual_input = (["-loop", "1", "-framerate", "25", "-i", str(picture)]
                         if picture.is_file() else
-                        ["-f", "lavfi", "-i", "color=c=0x13243a:s=1280x720:r=5"])
+                        ["-f", "lavfi", "-i", "color=c=0x13243a:s=1280x720:r=25"])
         if not picture.is_file():
             print("Using generated fallback background:", picture)
         filters = "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,format=yuv420p"
@@ -42,7 +44,7 @@ def main():
         subprocess.run([
             "ffmpeg", "-y", "-loglevel", "error", *visual_input, "-i", str(speech),
             "-vf", filters,
-            "-c:v", "libx264", "-preset", "ultrafast", "-r", "25",
+            "-c:v", "libx264", "-preset", "ultrafast", "-r", "25", "-pix_fmt", "yuv420p",
             "-c:a", "aac", "-ar", "48000", "-b:a", "160k", "-shortest", str(target)
         ], check=True)
     print("Rendered", args.segment, target.stat().st_size)
