@@ -123,6 +123,44 @@ def download_media(candidates, mode, directory, index, max_bytes):
             print(f"RSS media skipped: {type(exc).__name__}: {exc}")
     return None
 
+def search_commons_image(title):
+    """Find a conservatively matched, public-domain/CC0 illustrative photo."""
+    from urllib.parse import urlencode
+    words = re.findall(r"[^\\W_]{4,}", title, flags=re.UNICODE)
+    stop = {"diese", "einer", "einem", "einen", "wegen", "heute", "nach", "über", "gegen", "mehr", "beim", "durch", "sowie", "neuen", "neuer", "nicht", "wird", "sind"}
+    terms = [w for w in words if w.casefold() not in stop][:5]
+    if len(terms) < 2:
+        return None
+    params = {
+        "action": "query", "format": "json", "generator": "search",
+        "gsrsearch": " ".join(terms), "gsrnamespace": "6", "gsrlimit": "8",
+        "prop": "imageinfo", "iiprop": "url|extmetadata|mime",
+        "iiurlwidth": "1280"
+    }
+    api = "https://commons.wikimedia.org/w/api.php?" + urlencode(params)
+    try:
+        req = urllib.request.Request(api, headers={"User-Agent": UA + " (free-image fallback)"})
+        with urllib.request.urlopen(req, timeout=10) as response:
+            result = json.loads(response.read(350_000))
+        pages = result.get("query", {}).get("pages", {})
+        for page in pages.values():
+            filename = page.get("title", "").casefold()
+            matched = sum(1 for word in terms if word.casefold() in filename)
+            if matched < 2:
+                continue
+            info = (page.get("imageinfo") or [{}])[0]
+            license_name = info.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "").lower()
+            if not (license_name == "cc0" or "public domain" in license_name or license_name.startswith("pd-")):
+                continue
+            if not info.get("mime", "").startswith("image/"):
+                continue
+            image_url = info.get("thumburl") or info.get("url")
+            if image_url and image_url.startswith("https://"):
+                return image_url, page.get("title", ""), info.get("descriptionurl", "")
+    except Exception as exc:
+        print(f"Commons image search unavailable: {exc}")
+    return None
+
 def items_from_feed(url):
     root = ET.fromstring(fetch(url))
     result = []
@@ -299,7 +337,22 @@ def main():
         if media_mode not in ("off", "images", "images_and_videos"):
             raise ValueError("Unsupported RSS media mode")
         max_media_bytes = max(1, min(25, int(media_settings.get("max_download_mb", 12)))) * 1024 * 1024
-        story_media = [download_media(entry[3], media_mode, Path(tmp), i, max_media_bytes) for i, entry in enumerate(selected)]
+        story_media = []
+        media_credits = []
+        for i, entry in enumerate(selected):
+            asset = download_media(entry[3], media_mode, Path(tmp), i, max_media_bytes)
+            credit = None
+            if asset is None and media_mode != "off" and media_settings.get("web_image_fallback", True):
+                result = search_commons_image(entry[0])
+                if result:
+                    url, image_title, source_url = result
+                    asset = download_media([(url, "image")], "images", Path(tmp), i, max_media_bytes)
+                    if asset:
+                        credit = {"title": image_title, "source": source_url, "note": "Illustrationsbild, nicht zwingend Aufnahme des Ereignisses"}
+                        print(f"Commons fallback for story {i + 1}: {image_title}")
+            story_media.append(asset)
+            media_credits.append(credit)
+        (DOCS / "media-credits.json").write_text(json.dumps(media_credits, ensure_ascii=False, indent=2), encoding="utf-8")
         # Scene schedule: presenter for intro/outro, headlines in the middle.
         duration_text = subprocess.check_output(
             ["ffprobe", "-v", "error", "-show_entries", "format=duration",
