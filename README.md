@@ -333,3 +333,7 @@ Im Tab **Version** stehen die Kontinent-/Datenraumliste mit Globussymbolen und d
 ### Version 2.0 als vierstufige Reiteransicht
 
 Im Reiter **Version** besitzt der Bereich **Version 2.0 vorbereiten** vier Unterreiter: **Rechenstandort**, **Dienste**, **Standortnachweis** und **Kostenobergrenzen**. Zwischen ihnen kann per Reiter, Tastatur (Pfeiltasten, Pos1/Ende) oder **Zurück/Weiter** navigiert werden. Eine Fortschrittsanzeige benennt den aktuellen Schritt. Die Felder bleiben im Formular und werden nicht beim Reiterwechsel zurückgesetzt. Diese Bedienoberfläche aktiviert Version 2.0 nicht und führt keine kostenpflichtigen Anfragen aus.
+
+### Abgleich der Konfiguration mit der Produktion
+
+Der produktive Generator berücksichtigt `tts_engine` mit den Werten `piper` (mit eSpeak-Fallback) und `espeak`. Die bisherige Weboberfläche bietet für diese Auswahl noch kein Feld. `presenter_settings.voice_model` ist weiterhin nicht frei auswählbar, da der GitHub-Workflow nur `de_DE-thorsten-high` herunterlädt. `intro_mode`, `intro_static_type`, `intro_static_color` und `intro_static_image` sind derzeit noch nicht vollständig mit dem produktiven FFmpeg-Generator verbunden. Lippensynchronisation bleibt experimentell; externe KI-Dienste und wirksame Kostenlimits bleiben gesperrt. Nicht implementierte Funktionen dürfen nicht als produktiv beworben werden.
