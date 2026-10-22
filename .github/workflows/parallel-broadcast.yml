@@ -50,6 +50,8 @@ jobs:
           pattern: rendered-*
           path: rendered
           merge-multiple: true
+      - name: Install FFmpeg for final assembly
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - run: python3 scripts/assemble_segments.py
       - uses: actions/upload-artifact@v4
         with:
