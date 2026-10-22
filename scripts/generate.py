@@ -437,22 +437,25 @@ def main():
             )
             current = next_label
             print(f"RSS {kind} used for story {idx + 1}: {path.name}")
-        # During each narrated story, alternate presenter sides. The story
-        # media occupies the opposite side, leaving a narrow headline panel.
+        # Compose the presenter as a studio anchor, not a small corner inset.
+        # The full 1280x720 studio remains the base layer. Story screens are
+        # composited first, then the larger presenter in front of the screen.
         if presenter.is_file():
             person_input = 3 if intro_mode == "static" else 2
             for idx in range(len(selected)):
                 start_time = boundaries[idx + 2]
                 end_time = boundaries[idx + 3]
                 on_left = idx % 2 == 1
-                x = "35" if on_left else "W-w-35"
+                # Alternate between two natural anchor positions in the set.
+                x = "115" if on_left else "W-w-115"
                 label = f"hoststory{idx}"
                 filters.append(
-                    f"[{person_input}:v]fps=5,scale=380:570:force_original_aspect_ratio=decrease,"
-                    f"format=rgba[personstory{idx}]"
+                    f"[{person_input}:v]fps=5,scale=530:665:"
+                    f"force_original_aspect_ratio=decrease,format=rgba"
+                    f"[personstory{idx}]"
                 )
                 filters.append(
-                    f"[{current}][personstory{idx}]overlay=x={x}:y=H-h-25:"
+                    f"[{current}][personstory{idx}]overlay=x={x}:y=65:"
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
                     f"eof_action=repeat[{label}]"
                 )
