@@ -133,6 +133,9 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <label for="title">Sendungstitel</label><input id="title" required maxlength="120">
 <label for="feeds">RSS-Feeds (eine HTTPS-Adresse pro Zeile)</label><textarea id="feeds" required spellcheck="false"></textarea>
 <label for="max_items">Anzahl Meldungen (1–10)</label><input id="max_items" type="number" min="1" max="10" required>
+<label for="editorial_style">Nachrichtenstil</label><select id="editorial_style"><option value="original">Original – RSS-Text übernehmen</option><option value="classic">Klassisch – vollständige Sätze, sachlich</option><option value="brief">Kurz – Überschrift und maximal ein vollständiger Satz</option></select>
+<small>Die Aufbereitung erfolgt kostenlos und regelbasiert, ohne externe KI. Es werden keine zusätzlichen Fakten erfunden.</small>
+<label for="editorial_sentences">Maximale Beschreibungssätze im klassischen Stil (1–4)</label><input id="editorial_sentences" type="number" min="1" max="4" value="2">
 <label for="max_description_chars">Maximale Beschreibungslänge (0–300 Zeichen)</label><input id="max_description_chars" type="number" min="0" max="300" required>
 </fieldset>
 <fieldset class="settings-panel" id="panel-moderation" role="tabpanel" aria-labelledby="tab-moderation"><legend>Stimme und Moderation</legend>
