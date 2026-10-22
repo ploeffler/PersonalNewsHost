@@ -167,8 +167,47 @@ def main():
     script = "\n\n".join(parts)
     (DOCS / "transcript.txt").write_text(script + "\n", encoding="utf-8")
     with tempfile.TemporaryDirectory() as tmp:
+        # Render each spoken segment independently, then concatenate losslessly.
+        # The measured WAV sample counts become authoritative scene boundaries.
+        import wave
         wav = Path(tmp) / "speech.wav"
-        synthesize(script, wav)
+        segment_paths = []
+        segment_durations = []
+        sample_params = None
+        with wave.open(str(wav), "wb") as combined:
+            for idx, part in enumerate(parts):
+                segment = Path(tmp) / f"segment_{idx:02d}.wav"
+                synthesize(part, segment)
+                segment_paths.append(segment)
+                with wave.open(str(segment), "rb") as source:
+                    params = (source.getnchannels(), source.getsampwidth(), source.getframerate(), source.getcomptype())
+                    if sample_params is None:
+                        sample_params = params
+                        combined.setnchannels(params[0])
+                        combined.setsampwidth(params[1])
+                        combined.setframerate(params[2])
+                    elif params != sample_params:
+                        raise RuntimeError("Speech segments have incompatible WAV formats")
+                    segment_durations.append(source.getnframes() / source.getframerate())
+                    while True:
+                        data = source.readframes(65536)
+                        if not data:
+                            break
+                        combined.writeframesraw(data)
+        boundaries = [0.0]
+        for seconds in segment_durations:
+            boundaries.append(boundaries[-1] + seconds)
+        timeline = {
+            "version": 1,
+            "segments": [
+                {"type": "intro" if idx < 2 else "outro" if idx == len(parts)-1 else "story",
+                 "story_index": idx-2 if 2 <= idx < len(parts)-1 else None,
+                 "start": round(boundaries[idx], 4), "end": round(boundaries[idx+1], 4)}
+                for idx in range(len(parts))
+            ],
+            "duration": round(boundaries[-1], 4)
+        }
+        (DOCS / "timeline.json").write_text(json.dumps(timeline, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
         settings = CONFIG.get("presenter_settings", {})
         bg = ROOT / settings.get("background", CONFIG.get("background", "assets/background.jpg"))
         presenter = ROOT / settings.get("portrait", CONFIG.get("presenter", "assets/presenter.png"))
@@ -181,9 +220,9 @@ def main():
         ).strip()
         duration = float(duration_text)
         scenes = settings.get("scenes", {})
-        intro = max(0.0, min(float(scenes.get("intro_seconds", 8)), duration / 3))
-        outro = max(0.0, min(float(scenes.get("outro_seconds", 8)), duration / 3))
-        outro_start = max(intro, duration - outro)
+        intro = boundaries[2]
+        outro_start = boundaries[-2]
+        outro = duration - outro_start
         print(f"Scenes: intro={intro:.1f}s, headlines={outro_start-intro:.1f}s, outro={outro:.1f}s")
         args = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y"]
         if bg.is_file():
@@ -267,10 +306,9 @@ def main():
         if scenes.get("show_headlines", True) and selected:
             # Each headline gets its own timed overlay, rather than one overflowing text block.
             story_count = len(selected)
-            story_duration = max(0.0, outro_start - intro) / story_count
             for idx, (title, _, _) in enumerate(selected):
-                start_time = intro + idx * story_duration
-                end_time = intro + (idx + 1) * story_duration
+                start_time = boundaries[idx + 2]
+                end_time = boundaries[idx + 3]
                 headline_file = Path(tmp) / f"headline_{idx}.txt"
                 # Wrap text to fit the 1280px canvas.
                 import textwrap
