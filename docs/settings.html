@@ -357,6 +357,8 @@ function fill(c){
  refreshResidency();
  for(const key of fields)$(key).value=c[key]??(key==="voice_pitch_semitones"?0:"");
  $("feeds").value=(c.feeds||[]).join("\n");
+  $("editorial_style").value=c.editorial?.style||"original";
+  $("editorial_sentences").value=c.editorial?.max_sentences??2;
  const p=c.presenter_settings||{},sc=p.scenes||{};
  $("presenter_name").value=p.name||"";
  $("intro_mode").value=sc.intro_mode||"avatar";
@@ -413,6 +415,7 @@ $("settings").addEventListener("submit",event=>{
  c.feeds=[...new Set($("feeds").value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean).map(validUrl))];
  if(!c.title||!c.feeds.length||c.feeds.length>30)throw Error("Titel und 1–30 RSS-Feeds sind erforderlich.");
  for(const key of ["max_items","max_description_chars"])c[key]=Number($(key).value);
+  c.editorial={style:$("editorial_style").value,max_sentences:Number($("editorial_sentences").value)};
  c.piper_length_scale=Number($("piper_length_scale").value);
  c.voice_pitch_semitones=Number($("voice_pitch_semitones").value);
  c.presenter=$("presenter").value.trim();c.background=$("background").value.trim();
