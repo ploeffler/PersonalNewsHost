@@ -29,8 +29,9 @@ Der produktive Workflow überschreibt die neueste Ausgabe; ein vollständiges Se
 | RSS-Themenanalyse und vorsichtiges Clustering | Experimentell |
 | Sieben parallele Segmente: Intro, fünf Meldungen, Outro | Experimentell |
 | MuseTalk 1.5 mit Piper, 10 neuronale FPS und 25 Ausgabe-FPS | Einzeltests erfolgreich |
-| MuseTalk für vollständiges Intro und Outro | Segmentjobs erfolgreich; Gesamtzusammenschnitt noch in Prüfung |
-| Automatische Nachrichtenbilder / Fremdvideos | Noch nicht implementiert |
+| MuseTalk für vollständiges Intro und Outro | Vollständiger 7-Segment-Test erfolgreich; noch nicht produktiv |
+| Individuelle Nachrichtentafeln | Im Testworkflow implementiert, noch nicht neu getestet |
+| Externe Nachrichtenfotos / Fremdvideos | Noch nicht implementiert |
 | Redaktionelle Faktenprüfung und automatische Freigabe | Noch nicht implementiert |
 
 **Wichtig:** Die produktive Sendung verwendet derzeit **keinen sprechenden KI-Avatar**. MuseTalk ist ausschließlich in manuell gestarteten Testworkflows aktiv. Ein erfolgreicher Testlauf bedeutet nicht automatisch, dass dessen Video öffentlich erscheint.
@@ -53,7 +54,7 @@ Die wesentlichen Optionen in `config.json`:
 | `feeds` | Liste der RSS-Adressen |
 | `max_items` | Maximale Zahl der Meldungen |
 | `max_description_chars` | Länge der verwendeten Feed-Kurzbeschreibung |
-| `piper_length_scale` | Sprechtempo der Piper-Stimme |
+| `piper_length_scale` | Sprechtempo der Piper-Stimme; aktuell 1.06 (kleiner = schneller) |
 | `presenter` | Portraitdatei |
 | `background` | Hintergrunddatei |
 | `presenter_settings` | Name, Metadaten, Portrait, Stimme und Szeneneinstellungen |
@@ -102,9 +103,15 @@ Testvideo als GitHub-Actions-Artefakt
 
 Das Clustering verwendet eine konservative Ähnlichkeitsheuristik. Ähnliche Artikel werden **nicht** zu neuen, vermeintlich bestätigten Fakten verschmolzen: Der gesprochene Beitrag stammt jeweils aus einer führenden RSS-Meldung. Weitere ähnliche Quellen werden als Prüfkandidaten markiert.
 
-Der Moderator erscheint im experimentellen Konzept nur in Intro und Outro. Die fünf Nachrichtenbeiträge benötigen daher keine rechenintensive Lippenanimation. Für die MuseTalk-Segmente werden **10 KI-Bilder pro Sekunde** berechnet; FFmpeg interpoliert auf **25 FPS**. Die Stimme bleibt Piper `de_DE-thorsten-high`. Die Segmentjobs wurden bereits erfolgreich ausgeführt; die Integration des vollständigen Zusammenschnitts wird noch getestet.
+Der Moderator erscheint im experimentellen Konzept nur in Intro und Outro. Die fünf Nachrichtenbeiträge benötigen daher keine rechenintensive Lippenanimation. Für die MuseTalk-Segmente werden **10 KI-Bilder pro Sekunde** berechnet; FFmpeg interpoliert auf **25 FPS**. Die Stimme bleibt Piper `de_DE-thorsten-high`. Der vollständige Zusammenschnitt war in Testlauf #39800872982 erfolgreich. Die neuesten Änderungen sind noch nicht getestet.
 
 Testworkflow: [Parallel broadcast with MuseTalk](https://github.com/ploeffler/PersonalNewsHost/actions/workflows/parallel-musetalk-broadcast.yml)
+
+## Neu: Nachrichtentafeln und Node.js 24
+
+Der experimentelle Renderer erzeugt mit `scripts/story_card.py` und Pillow für jeden Beitrag eine individuelle Nachrichtentafel mit Schlagzeile, Quellenbezeichnung und Akzentfarbe. Diese ersetzt den bisherigen einfarbigen blauen Ersatzhintergrund. Echte Nachrichtenfotos sind weiterhin nicht integriert. Die Änderung ist noch nicht in einem vollständigen Lauf geprüft.
+
+Die GitHub-Actions-Versionen wurden wegen der Node.js-20-Annotations auf `actions/checkout@v5`, `actions/upload-artifact@v6` und `actions/download-artifact@v7` angehoben. Auch das muss noch in einem neuen Lauf geprüft werden.
 
 ## Workflows und wichtige Dateien
 
@@ -119,6 +126,7 @@ Testworkflow: [Parallel broadcast with MuseTalk](https://github.com/ploeffler/Pe
 | `scripts/analyze_topics.py` | RSS-Themenkandidaten |
 | `scripts/build_broadcast_plan.py` | Szenen- und Sprechplan |
 | `scripts/render_segment.py` | Nachrichtenbeiträge und Standbildszenen |
+| `scripts/story_card.py` | Automatisch erzeugte Nachrichtentafeln |
 | `scripts/render_musetalk_segment.py` | MuseTalk-Intro/-Outro mit Piper |
 | `scripts/assemble_segments.py` | Zusammenfügen der Testsegmente |
 | `assets/` | Moderatorenbild und optionale Kulisse |
@@ -145,7 +153,7 @@ Ohne lokal vorhandenes Piper-Modell `models/de_DE-thorsten-high.onnx` greift der
 
 ## Nächste Entwicklungsschritte
 
-1. Den korrigierten vollständigen MuseTalk-Sendungsworkflow erfolgreich zusammenfügen und Bild/Ton prüfen.
+1. Den vollständigen MuseTalk-Workflow mit neuem Sprechtempo, Nachrichtentafeln und aktualisierten Actions testen.
 2. Für die Nachrichtenbeiträge rechtlich nutzbare Bilder und bessere Szenenübergänge ergänzen.
 3. Themenauswahl und redaktionelle Prüfung verbessern.
 4. Erst nach Qualitätstests eine kontrollierte Übernahme der experimentellen Pipeline in die stündliche Veröffentlichung vorsehen.
