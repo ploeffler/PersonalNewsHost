@@ -215,7 +215,9 @@ def main():
     collected, seen = [], set()
     for url in CONFIG["feeds"]:
         try:
-            for title, desc, link, media in items_from_feed(url):
+            for entry in items_from_feed(url):
+                title, desc, link = entry[:3]
+                media = entry[3] if len(entry) > 3 else []
                 key = title.casefold()
                 if key not in seen:
                     seen.add(key)
