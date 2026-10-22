@@ -41,6 +41,7 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 <h2>Wie werden Änderungen aktiv?</h2>
 <p>Die heruntergeladene Datei muss im Repository die vorhandene <code>config.json</code> ersetzen. Danach wird die neue Konfiguration beim nächsten Produktionslauf eingelesen.</p>
 <p><a href="https://github.com/ploeffler/PersonalNewsHost/edit/main/config.json" rel="noopener noreferrer">config.json auf GitHub bearbeiten</a> · <a href="https://github.com/ploeffler/PersonalNewsHost/actions/workflows/news.yml" rel="noopener noreferrer">Produktionsworkflow starten</a></p>
+<div id="importrow" hidden><label for="importfile">config.json vom Computer importieren</label><input id="importfile" type="file" accept=".json,application/json"></div>
 <script>
 "use strict";
 let original=null;
@@ -60,11 +61,11 @@ function fill(c){
 async function load(){
  $("status").textContent="Lade Konfiguration …";$("result").textContent="";
  try{
- const response=await fetch("../config.json",{cache:"no-store"});
+ const response=await fetch("https://raw.githubusercontent.com/ploeffler/PersonalNewsHost/main/config.json",{cache:"no-store"});
  if(!response.ok)throw new Error("Konfiguration nicht unter ../config.json erreichbar (HTTP "+response.status+").");
  fill(await response.json());
  }catch(e){
- $("status").textContent="Die Repository-Konfiguration kann auf GitHub Pages nicht direkt geladen werden. Bitte config.json von GitHub herunterladen und unten importieren.";
+ $("status").textContent="Die Repository-Konfiguration konnte nicht von GitHub geladen werden. Bitte config.json von GitHub herunterladen und unten importieren.";
  $("importrow").hidden=false;
  }
 }
@@ -99,5 +100,5 @@ $("reset").addEventListener("click",load);
 $("importfile").addEventListener("change",async e=>{try{fill(JSON.parse(await e.target.files[0].text()));$("status").textContent="Lokale Konfiguration importiert."}catch(err){$("status").textContent="Ungültige JSON-Datei: "+err.message}});
 load();
 </script>
-<div id="importrow" hidden><label for="importfile">config.json vom Computer importieren</label><input id="importfile" type="file" accept=".json,application/json"></div>
+
 </body></html>
