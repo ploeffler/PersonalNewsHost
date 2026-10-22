@@ -43,6 +43,13 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 <label for="outro_seconds">Outro (Sekunden)</label><input id="outro_seconds" type="number" min="0" max="60" required>
 <label><input id="show_headlines" type="checkbox" style="width:auto"> Schlagzeilen anzeigen</label>
 </fieldset>
+<fieldset><legend>Telegram-Veröffentlichung (optional)</legend>
+<label><input id="telegram_enabled" type="checkbox" style="width:auto"> Telegram nach der Website-Veröffentlichung benachrichtigen</label>
+<label for="telegram_recipient">Empfängerart</label><select id="telegram_recipient"><option value="channel">Kanal</option><option value="private">Privater Chat</option><option value="group">Gruppe</option></select>
+<label for="telegram_delivery">Versandart</label><select id="telegram_delivery"><option value="auto">Automatisch: Video, bei Fehler Link</option><option value="video">Nur Video</option><option value="link">Nur Link</option></select>
+<label for="telegram_caption">Telegram-Nachricht (Platzhalter: {title}, {url})</label><textarea id="telegram_caption" maxlength="1024"></textarea>
+<small>GitHub → Settings → Secrets and variables → Actions: TELEGRAM_BOT_TOKEN und TELEGRAM_CHAT_ID einrichten. Niemals Tokens in die öffentliche Konfiguration eintragen.</small>
+</fieldset>
 <fieldset><legend>Eigene Bilder hochladen (Beta)</legend>
 <p>PNG oder JPEG, maximal 4 MB je Bild. Die Dateien werden öffentlich im GitHub-Repository gespeichert. Keine privaten Fotos oder Zugangsdaten hochladen.</p>
 <label for="upload_presenter">Moderator-Porträt</label><input id="upload_presenter" type="file" accept="image/png,image/jpeg,.png,.jpg,.jpeg">
@@ -92,6 +99,11 @@ function fill(c){
  $("intro_seconds").value=sc.intro_seconds??8;
  $("outro_seconds").value=sc.outro_seconds??8;
  $("show_headlines").checked=sc.show_headlines!==false;
+ const tg=c.telegram||{};
+ $("telegram_enabled").checked=tg.enabled===true;
+ $("telegram_recipient").value=tg.recipient_type||"channel";
+ $("telegram_delivery").value=tg.delivery||"auto";
+ $("telegram_caption").value=tg.caption||"{title} – neue Nachrichtensendung\\n{url}";
  updateStaticOptions();
  $("settings").hidden=false;$("status").textContent="Konfiguration geladen. Änderungen werden erst durch Übernahme in GitHub wirksam.";
 }
@@ -139,6 +151,8 @@ $("settings").addEventListener("submit",event=>{
  c.presenter_settings.scenes.intro_seconds=Number($("intro_seconds").value);
  c.presenter_settings.scenes.outro_seconds=Number($("outro_seconds").value);
  c.presenter_settings.scenes.show_headlines=$("show_headlines").checked;
+ c.telegram={enabled:$("telegram_enabled").checked,recipient_type:$("telegram_recipient").value,delivery:$("telegram_delivery").value,caption:$("telegram_caption").value.trim()};
+ if(!c.telegram.caption)throw Error("Telegram-Nachricht darf nicht leer sein.");
  preparedConfig=c;
  if(savingDirectly)return;
  const blob=new Blob([JSON.stringify(c,null,2)+"\n"],{type:"application/json"});
