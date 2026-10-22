@@ -149,7 +149,7 @@ def edit_news(title, description, style, max_sentences, limit):
     sentences = [x for x in sentences if x.casefold().rstrip(".!?") != title.casefold().rstrip(".!?")]
     count = 1 if style == "brief" else max_sentences
     selected = sentences[:count]
-    return title.rstrip(".!?") + "." + ("\\n" + " ".join(selected) if selected else "")
+    return title.rstrip(".!?") + "." + ("\n" + " ".join(selected) if selected else "")
 
 def main():
     DOCS.mkdir(exist_ok=True)
