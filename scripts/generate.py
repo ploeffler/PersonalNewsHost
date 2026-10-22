@@ -64,6 +64,66 @@ def fetch(url):
     with urllib.request.urlopen(req, timeout=12) as resp:
         return resp.read(1_500_000)
 
+MEDIA_NS = "{http://search.yahoo.com/mrss/}"
+
+def media_candidates(node):
+    """Return image/video URLs explicitly attached to a feed entry."""
+    from urllib.parse import urljoin
+    found = []
+    def add(url, kind):
+        if url:
+            found.append((url, kind))
+    for tag in ("enclosure", MEDIA_NS + "content", MEDIA_NS + "thumbnail"):
+        for el in node.findall(tag):
+            url = el.get("url", "")
+            mime = el.get("type", "").lower()
+            medium = el.get("medium", "").lower()
+            kind = "video" if mime.startswith("video/") or medium == "video" else "image" if mime.startswith("image/") or medium == "image" or tag.endswith("thumbnail") else None
+            if kind:
+                add(url, kind)
+    raw = node.findtext("description") or node.findtext(ATOM + "content") or node.findtext(ATOM + "summary") or ""
+    for tag, kind in (("img", "image"), ("video", "video"), ("source", "video")):
+        for match in re.finditer(r"<" + tag + r"\\b[^>]*?\\bsrc=[\\\"']([^\\\"']+)", raw, re.I):
+            add(html.unescape(match.group(1)), kind)
+    return found
+
+def download_media(candidates, mode, directory, index, max_bytes):
+    """Download only directly linked, small media files; reject non-media responses."""
+    from urllib.parse import urlparse
+    if mode == "off":
+        return None
+    allowed = {"image"} if mode == "images" else {"image", "video"}
+    for url, kind in candidates:
+        if kind not in allowed:
+            continue
+        parsed = urlparse(url)
+        if parsed.scheme not in ("https", "http") or not parsed.hostname:
+            continue
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "image/*,video/*"})
+            with urllib.request.urlopen(req, timeout=12) as response:
+                mime = response.headers.get_content_type()
+                if not mime.startswith(kind + "/"):
+                    continue
+                if int(response.headers.get("Content-Length", "0")) > max_bytes:
+                    continue
+                path = directory / f"rss_media_{index}.{ 'mp4' if kind == 'video' else 'img' }"
+                with path.open("wb") as output:
+                    size = 0
+                    while True:
+                        chunk = response.read(65536)
+                        if not chunk:
+                            break
+                        size += len(chunk)
+                        if size > max_bytes:
+                            raise ValueError("RSS media too large")
+                        output.write(chunk)
+            subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", str(path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=12)
+            return (path, kind)
+        except Exception as exc:
+            print(f"RSS media skipped: {type(exc).__name__}: {exc}")
+    return None
+
 def items_from_feed(url):
     root = ET.fromstring(fetch(url))
     result = []
@@ -72,7 +132,7 @@ def items_from_feed(url):
         desc = clean(node.findtext("description"))
         link = clean(node.findtext("link"))
         if title:
-            result.append((title, desc, link))
+            result.append((title, desc, link, media_candidates(node)))
     if not result:
         for node in root.findall(".//" + ATOM + "entry")[:15]:
             title = clean(node.findtext(ATOM + "title"))
@@ -80,7 +140,7 @@ def items_from_feed(url):
             link_node = node.find(ATOM + "link")
             link = link_node.get("href", "") if link_node is not None else ""
             if title:
-                result.append((title, summary, link))
+                result.append((title, summary, link, media_candidates(node)))
     return result
 
 def run(args):
@@ -156,11 +216,11 @@ def main():
     collected, seen = [], set()
     for url in CONFIG["feeds"]:
         try:
-            for title, desc, link in items_from_feed(url):
+            for title, desc, link, media in items_from_feed(url):
                 key = title.casefold()
                 if key not in seen:
                     seen.add(key)
-                    collected.append((title, desc, link))
+                    collected.append((title, desc, link, media))
         except Exception as exc:
             print(f"Feed skipped: {url}: {exc}")
     if not collected:
@@ -179,9 +239,9 @@ def main():
     parts = [intro_text, spoken_timestamp(local_now)]
     limit = max(0, min(int(CONFIG.get("max_description_chars", 180)), 300))
     editorial = CONFIG.get("editorial", {})
-    style = editorial.get("style", "original")
+    style = editorial.get("style", "classic")
     max_sentences = max(1, min(4, int(editorial.get("max_sentences", 2))))
-    for title, desc, _ in selected:
+    for title, desc, _, _ in selected:
         parts.append(edit_news(title, desc, style, max_sentences, limit))
     parts.append(outro_text)
     script = "\n\n".join(parts)
@@ -233,6 +293,12 @@ def main():
         presenter = ROOT / settings.get("portrait", CONFIG.get("presenter", "assets/presenter.png"))
         if settings.get("lip_sync", {}).get("enabled", False):
             print("Lip sync requested but no validated engine is installed; using static portrait fallback")
+        media_settings = CONFIG.get("media", {})
+        media_mode = media_settings.get("mode", "images_and_videos")
+        if media_mode not in ("off", "images", "images_and_videos"):
+            raise ValueError("Unsupported RSS media mode")
+        max_media_bytes = max(1, min(25, int(media_settings.get("max_download_mb", 12)))) * 1024 * 1024
+        story_media = [download_media(entry[3], media_mode, Path(tmp), i, max_media_bytes) for i, entry in enumerate(selected)]
         # Scene schedule: presenter for intro/outro, headlines in the middle.
         duration_text = subprocess.check_output(
             ["ffprobe", "-v", "error", "-show_entries", "format=duration",
@@ -326,7 +392,7 @@ def main():
         if scenes.get("show_headlines", True) and selected:
             # Each headline gets its own timed overlay, rather than one overflowing text block.
             story_count = len(selected)
-            for idx, (title, _, _) in enumerate(selected):
+            for idx, (title, _, _, _) in enumerate(selected):
                 start_time = boundaries[idx + 2]
                 end_time = boundaries[idx + 3]
                 headline_file = Path(tmp) / f"headline_{idx}.txt"
@@ -372,7 +438,7 @@ def main():
              "<title>PersonalNewsHost</title><style>body{font:1.1rem system-ui;background:#13243a;color:white;max-width:900px;margin:3rem auto;padding:1rem}a{color:#8ed6ff}video{width:100%}</style>",
              "<h1>PersonalNewsHost</h1><p>Stand: " + html.escape(timestamp) + "</p>",
              "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'></video><p><a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='settings.html'>Konfiguration (Beta)</a> · <a href='browser-studio.html'>Browser-Studio (Beta)</a></p><h2>Quellen</h2><ul>"]
-    for title, _, link in selected:
+    for title, _, link, _ in selected:
         safe = link if link.startswith(("https://", "http://")) else "#"
         lines.append("<li><a rel='noopener noreferrer' href='" + html.escape(safe, quote=True) + "'>" + html.escape(title) + "</a></li>")
     lines.append("</ul><p>Automatisch aus RSS erstellt; Inhalte nicht unabhängig überprüft.</p></html>")
