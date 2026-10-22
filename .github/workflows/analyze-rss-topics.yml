@@ -1,0 +1,20 @@
+name: Analyze RSS topic overlap
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compare RSS articles across sources
+        run: python3 scripts/analyze_topics.py --output topic-analysis.json
+      - name: Upload topic report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rss-topic-analysis
+          path: topic-analysis.json
+          retention-days: 3
