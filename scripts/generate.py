@@ -48,7 +48,7 @@ def items_from_feed(url):
     return result
 
 def run(args):
-    subprocess.run(args, check=True, stdout=subprocess.DEVNULL)
+    subprocess.run(args, check=True, stdout=subprocess.DEVNULL, timeout=480)
 
 def adjust_voice_pitch(wav):
     """Lower or raise voice pitch with FFmpeg while preserving speech duration."""
