@@ -91,6 +91,8 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <label for="v2_voice">Sprachausgabe</label><select id="v2_voice"><option value="local">Lokal (kostenlos)</option><option value="openai">OpenAI (geplant)</option><option value="other">Anderer Anbieter (geplant)</option></select>
 <label for="v2_avatar">Moderator / Avatar</label><select id="v2_avatar"><option value="static">Statisches Bild (kostenlos)</option><option value="paid">Externer KI-Avatar (geplant)</option></select>
 <label for="v2_video">Videoproduktion</label><select id="v2_video"><option value="local">Lokal (kostenlos)</option><option value="paid">Externer Videodienst (geplant)</option></select>
+<section class="security-panel"><h3>3. Standortnachweis je Anbieter</h3><p id="v2_residency_summary" role="status" aria-live="polite"></p><div id="v2_residency_list"></div><small>Kein Anbieter wurde bisher anhand belastbarer Standortunterlagen verifiziert. Firmensitz und vermutete Serverregion gelten nicht als Nachweis. Eine tatsächliche Freigabe ist noch nicht möglich.</small></section>
+<h3>4. Kostenobergrenzen (Entwurf)</h3>
 <div class="settings-grid"><div><label for="v2_max_video">Maximalbetrag pro Sendung (EUR)</label><input id="v2_max_video" type="number" min="0" max="1000" step="0.01" value="0"></div><div><label for="v2_max_month">Monatliches Limit (EUR)</label><input id="v2_max_month" type="number" min="0" max="10000" step="0.01" value="0"></div></div>
 <label><input id="v2_allow_paid" type="checkbox"> Kostenpflichtige Dienste künftig ausdrücklich erlauben</label>
 <small>Standard: keine Freigabe und 0 €. API-Schlüssel gehören ausschließlich in GitHub Actions Secrets, niemals in diese öffentliche Konfiguration. Budgetwerte sind derzeit nur Entwürfe, keine wirksame Abrechnungssperre. Version 2.0 bleibt deaktiviert, bis technische Budgetkontrolle und Anbieteranbindungen implementiert sind.</small></section>
@@ -209,6 +211,22 @@ function refreshAutomationPreview(){
 }
 for(const id of ["automation_enabled","automation_interval","automation_hour","automation_timezone","automation_days"])$(id).addEventListener("change",refreshAutomationPreview);
 const fields=["title","max_items","max_description_chars","piper_length_scale","voice_pitch_semitones","presenter","background"];
+function refreshResidency(){
+ const region=$("v2_region").selectedOptions[0]?.textContent||"",country=$("v2_country").value,strict=$("v2_region_strict").checked;
+ const pairs=[["Nachrichtenaufbereitung","v2_news","disabled"],["Sprachausgabe","v2_voice","local"],["Avatar","v2_avatar","static"],["Videoproduktion","v2_video","local"]];
+ const list=$("v2_residency_list");list.replaceChildren();
+ let unknown=0;
+ for(const [label,id,local] of pairs){
+  const value=$(id).value,option=$(id).selectedOptions[0]?.textContent||value,free=value===local;
+  if(!free)unknown++;
+  const line=document.createElement("p");
+  line.textContent=label+" – "+option+": "+(free?"kein externer KI-Dienst ausgewählt":"Rechenstandort nicht verifiziert; Quelle: keine; Prüfdatum: offen");
+  list.appendChild(line);
+ }
+ $("v2_residency_summary").textContent="Vorgabe: "+region+(country?", "+country:"")+"; "+(strict?"strikte Prüfung":"Prüfung nicht strikt")+"; "+unknown+" externe Dienst(e) ohne Standortnachweis.";
+}
+for(const id of ["v2_region","v2_country","v2_region_strict","v2_news","v2_voice","v2_avatar","v2_video"])$(id).addEventListener("change",refreshResidency);
+
 function fill(c){
  original=c;
  $("production_version").value=c.production_version||"1.0";
@@ -223,6 +241,7 @@ function fill(c){
  $("v2_max_video").value=v.max_per_video_eur??0;
  $("v2_max_month").value=v.max_per_month_eur??0;
  $("v2_allow_paid").checked=v.allow_paid===true;
+ refreshResidency();
  for(const key of fields)$(key).value=c[key]??(key==="voice_pitch_semitones"?0:"");
  $("feeds").value=(c.feeds||[]).join("\n");
  const p=c.presenter_settings||{},sc=p.scenes||{};
