@@ -11,10 +11,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Compare RSS articles across sources
         run: python3 scripts/analyze_topics.py --output topic-analysis.json
+      - name: Build review-aware broadcast plan
+        run: python3 scripts/build_broadcast_plan.py --analysis topic-analysis.json --output broadcast-plan.json
       - name: Upload topic report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: rss-topic-analysis
-          path: topic-analysis.json
+          path: |
+            topic-analysis.json
+            broadcast-plan.json
           retention-days: 3
