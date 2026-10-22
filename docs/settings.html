@@ -29,13 +29,14 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 <label for="background">Hintergrundpfad im Repository</label><input id="background" placeholder="assets/background.jpg" required>
 <small>Dateien werden in dieser ersten Version nicht hochgeladen. Pfade verweisen auf bereits vorhandene Dateien im Repository.</small>
 </fieldset>
-<fieldset><legend>Szenen</legend>
+<fieldset><legend>Intro und Outro – Darstellung und Sprechertext</legend>
+<h2>Intro: Avatar oder einfärbiger Hintergrund / Bild</h2>
 <label for="intro_mode">Intro-Darstellung</label><select id="intro_mode"><option value="avatar">Sprechender Avatar (MuseTalk, experimentell)</option><option value="static">Statischer Hintergrund (ohne Avatar)</option></select>
-<label for="intro_static_type">Statischer Intro-Hintergrund</label><select id="intro_static_type"><option value="color">Einfärbig</option><option value="image">Bilddatei</option></select>
+<div id="static_options"><h3>Intro ohne Avatar – Hintergrund auswählen</h3><label for="intro_static_type">Hintergrundart</label><select id="intro_static_type"><option value="color">Einfärbig</option><option value="image">Bilddatei</option></select>
 <label for="intro_static_color">Hintergrundfarbe</label><input id="intro_static_color" type="color" value="#13243a">
 <label for="intro_static_image">Bildpfad im Repository (bei Bilddatei)</label><input id="intro_static_image" placeholder="assets/background.jpg">
 <small>Diese Einstellungen gelten nur für das Intro ohne Avatar. Eine Bilddatei muss bereits im Repository liegen.</small>
-<label for="intro_text">Intro-Sprechertext</label><textarea id="intro_text" maxlength="1500" required></textarea><small>Platzhalter {title} wird durch den Sendungstitel ersetzt.</small>
+</div><label for="intro_text">Intro-Sprechertext</label><textarea id="intro_text" maxlength="1500" required></textarea><small>Platzhalter {title} wird durch den Sendungstitel ersetzt.</small>
 <label for="outro_text">Outro-Sprechertext</label><textarea id="outro_text" maxlength="1500" required></textarea>
 <label for="intro_seconds">Intro (Sekunden)</label><input id="intro_seconds" type="number" min="0" max="60" required>
 <label for="outro_seconds">Outro (Sekunden)</label><input id="outro_seconds" type="number" min="0" max="60" required>
@@ -53,6 +54,9 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 "use strict";
 let original=null;
 const $=id=>document.getElementById(id);
+function updateStaticOptions(){ $("static_options").hidden=$("intro_mode").value!=="static"; $("intro_static_color").parentElement.hidden=false; $("intro_static_color").closest("label").hidden=false; $("intro_static_image").disabled=$("intro_static_type").value!=="image"; }
+$("intro_mode").addEventListener("change",updateStaticOptions);
+$("intro_static_type").addEventListener("change",updateStaticOptions);
 const fields=["title","max_items","max_description_chars","piper_length_scale","presenter","background"];
 function fill(c){
  original=c;
@@ -69,6 +73,7 @@ function fill(c){
  $("intro_seconds").value=sc.intro_seconds??8;
  $("outro_seconds").value=sc.outro_seconds??8;
  $("show_headlines").checked=sc.show_headlines!==false;
+ updateStaticOptions();
  $("settings").hidden=false;$("status").textContent="Konfiguration geladen. Änderungen werden erst durch Übernahme in GitHub wirksam.";
 }
 async function load(){
