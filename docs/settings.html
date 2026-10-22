@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Konfiguration · PersonalNewsHost</title>
+<style>
+:root{color-scheme:dark}body{font:16px system-ui,sans-serif;background:#101c2c;color:#f4f7fc;max-width:850px;margin:auto;padding:24px;line-height:1.5}
+h1{font-size:2rem}a{color:#9cddff}fieldset{border:1px solid #52657a;border-radius:12px;padding:18px;margin:18px 0}
+legend{font-weight:700;padding:0 8px}label{display:block;margin:12px 0 5px}
+input,textarea{box-sizing:border-box;width:100%;background:#1c2d42;border:1px solid #71849a;border-radius:8px;color:white;padding:10px;font:inherit}
+textarea{min-height:125px}button{background:#66c9de;border:0;border-radius:8px;padding:12px 16px;color:#081b2d;font-weight:700;cursor:pointer;margin:6px 8px 6px 0}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #f8b55b}
+small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#aaf2c6}code{background:#20344c;padding:2px 5px}
+</style></head><body>
+<p><a href="./">← Zur Nachrichtenseite</a></p>
+<h1>PersonalNewsHost konfigurieren</h1>
+<p>Erste Version der webbasierten Konfiguration: Einstellungen bearbeiten, prüfen und als <code>config.json</code> herunterladen. <strong>Das Speichern im GitHub-Repository ist noch nicht automatisiert.</strong> Keine Zugangsdaten eingeben.</p>
+<p id="status" role="status" aria-live="polite">Lade Konfiguration …</p>
+<form id="settings" hidden>
+<fieldset><legend>Sendung</legend>
+<label for="title">Sendungstitel</label><input id="title" required maxlength="120">
+<label for="feeds">RSS-Feeds (eine HTTPS-Adresse pro Zeile)</label><textarea id="feeds" required spellcheck="false"></textarea>
+<label for="max_items">Anzahl Meldungen (1–10)</label><input id="max_items" type="number" min="1" max="10" required>
+<label for="max_description_chars">Maximale Beschreibungslänge (0–300 Zeichen)</label><input id="max_description_chars" type="number" min="0" max="300" required>
+</fieldset>
+<fieldset><legend>Stimme und Moderation</legend>
+<label for="piper_length_scale">Piper-Sprechtempo (0,7–1,5; kleiner = schneller)</label><input id="piper_length_scale" type="number" min="0.7" max="1.5" step="0.01" required>
+<small>Die aktuell unterstützte neuronale Stimme ist de_DE-thorsten-high.</small>
+<label for="presenter_name">Name des Moderators</label><input id="presenter_name" maxlength="100">
+<label for="presenter">Portraitpfad im Repository</label><input id="presenter" placeholder="assets/presenter.png" required>
+<label for="background">Hintergrundpfad im Repository</label><input id="background" placeholder="assets/background.jpg" required>
+<small>Dateien werden in dieser ersten Version nicht hochgeladen. Pfade verweisen auf bereits vorhandene Dateien im Repository.</small>
+</fieldset>
+<fieldset><legend>Szenen</legend>
+<label for="intro_seconds">Intro (Sekunden)</label><input id="intro_seconds" type="number" min="0" max="60" required>
+<label for="outro_seconds">Outro (Sekunden)</label><input id="outro_seconds" type="number" min="0" max="60" required>
+<label><input id="show_headlines" type="checkbox" style="width:auto"> Schlagzeilen anzeigen</label>
+</fieldset>
+<button type="submit">Konfiguration prüfen und herunterladen</button>
+<button type="button" id="reset">Neu laden</button>
+<p id="result" role="status" aria-live="polite"></p>
+</form>
+<h2>Wie werden Änderungen aktiv?</h2>
+<p>Die heruntergeladene Datei muss im Repository die vorhandene <code>config.json</code> ersetzen. Danach wird die neue Konfiguration beim nächsten Produktionslauf eingelesen.</p>
+<p><a href="https://github.com/ploeffler/PersonalNewsHost/edit/main/config.json" rel="noopener noreferrer">config.json auf GitHub bearbeiten</a> · <a href="https://github.com/ploeffler/PersonalNewsHost/actions/workflows/news.yml" rel="noopener noreferrer">Produktionsworkflow starten</a></p>
+<script>
+"use strict";
+let original=null;
+const $=id=>document.getElementById(id);
+const fields=["title","max_items","max_description_chars","piper_length_scale","presenter","background"];
+function fill(c){
+ original=c;
+ for(const key of fields)$(key).value=c[key]??"";
+ $("feeds").value=(c.feeds||[]).join("\n");
+ const p=c.presenter_settings||{},sc=p.scenes||{};
+ $("presenter_name").value=p.name||"";
+ $("intro_seconds").value=sc.intro_seconds??8;
+ $("outro_seconds").value=sc.outro_seconds??8;
+ $("show_headlines").checked=sc.show_headlines!==false;
+ $("settings").hidden=false;$("status").textContent="Konfiguration geladen. Änderungen werden erst durch Übernahme in GitHub wirksam.";
+}
+async function load(){
+ $("status").textContent="Lade Konfiguration …";$("result").textContent="";
+ try{
+ const response=await fetch("../config.json",{cache:"no-store"});
+ if(!response.ok)throw new Error("Konfiguration nicht unter ../config.json erreichbar (HTTP "+response.status+").");
+ fill(await response.json());
+ }catch(e){
+ $("status").textContent="Die Repository-Konfiguration kann auf GitHub Pages nicht direkt geladen werden. Bitte config.json von GitHub herunterladen und unten importieren.";
+ $("importrow").hidden=false;
+ }
+}
+function validUrl(raw){
+ const url=new URL(raw);
+ if(url.protocol!=="https:"||url.username||url.password||!url.hostname||/^(localhost|127\.|10\.|192\.168\.)/.test(url.hostname))throw Error("Nur öffentliche HTTPS-RSS-Adressen ohne Zugangsdaten verwenden: "+raw);
+ return url.href;
+}
+$("settings").addEventListener("submit",event=>{
+ event.preventDefault();$("result").className="error";
+ try{
+ const c=structuredClone(original);
+ c.title=$("title").value.trim();
+ c.feeds=[...new Set($("feeds").value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean).map(validUrl))];
+ if(!c.title||!c.feeds.length||c.feeds.length>30)throw Error("Titel und 1–30 RSS-Feeds sind erforderlich.");
+ for(const key of ["max_items","max_description_chars"])c[key]=Number($(key).value);
+ c.piper_length_scale=Number($("piper_length_scale").value);
+ c.presenter=$("presenter").value.trim();c.background=$("background").value.trim();
+ for(const key of ["presenter","background"])if(!/^assets\/[a-zA-Z0-9_./-]+$/.test(c[key])||c[key].includes(".."))throw Error("Ungültiger Asset-Pfad: "+c[key]);
+ c.presenter_settings??={};c.presenter_settings.name=$("presenter_name").value.trim();
+ c.presenter_settings.portrait=c.presenter;c.presenter_settings.background=c.background;
+ c.presenter_settings.scenes??={};
+ c.presenter_settings.scenes.intro_seconds=Number($("intro_seconds").value);
+ c.presenter_settings.scenes.outro_seconds=Number($("outro_seconds").value);
+ c.presenter_settings.scenes.show_headlines=$("show_headlines").checked;
+ const blob=new Blob([JSON.stringify(c,null,2)+"\n"],{type:"application/json"});
+ const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="config.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+ $("result").className="ok";$("result").textContent="config.json heruntergeladen. Bitte im GitHub-Repository übernehmen.";
+ }catch(e){$("result").textContent=e.message}
+});
+$("reset").addEventListener("click",load);
+$("importfile").addEventListener("change",async e=>{try{fill(JSON.parse(await e.target.files[0].text()));$("status").textContent="Lokale Konfiguration importiert."}catch(err){$("status").textContent="Ungültige JSON-Datei: "+err.message}});
+load();
+</script>
+<div id="importrow" hidden><label for="importfile">config.json vom Computer importieren</label><input id="importfile" type="file" accept=".json,application/json"></div>
+</body></html>
