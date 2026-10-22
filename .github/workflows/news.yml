@@ -25,15 +25,16 @@ jobs:
         if: steps.schedule.outputs.due == 'true'
         run: |
           set -euo pipefail
-          # FFmpeg and DejaVu fonts are normally preinstalled on GitHub Ubuntu runners.
-          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null || ! command -v espeak-ng >/dev/null || ! test -f /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf; then
-            echo "Installing missing tools only (bounded to 3 minutes)"
-            timeout 180s sudo apt-get update -qq -o Acquire::Retries=1 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20
-            timeout 180s sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq -o Acquire::Retries=1 ffmpeg espeak-ng fonts-dejavu-core
-          else
-            echo "Using preinstalled FFmpeg, eSpeak-NG and fonts"
+          # Avoid apt-get update: the package-index refresh has repeatedly stalled.
+          # Ubuntu runners normally include FFmpeg and DejaVu; only eSpeak may be missing.
+          command -v ffmpeg
+          command -v ffprobe
+          test -f /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+          if ! command -v espeak-ng >/dev/null; then
+            echo "Installing eSpeak-NG using cached package indexes (no apt update)"
+            timeout 90s sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends -o Acquire::Retries=0 -o Acquire::http::Timeout=15 -o Acquire::https::Timeout=15 espeak-ng
           fi
-          ffmpeg -version | head -n 1
+          ffmpeg -version | sed -n '1p'
           espeak-ng --version
       - name: Smoke-test FFmpeg intro modes
         if: steps.schedule.outputs.due == 'true'
