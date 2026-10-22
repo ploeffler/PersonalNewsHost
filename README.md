@@ -185,9 +185,28 @@ Ohne lokal vorhandenes Piper-Modell `models/de_DE-thorsten-high.onnx` greift der
 - Keine Zugangsdaten in `config.json` oder das öffentliche Repository schreiben. RSS-Inhalte sind fremde, nicht vertrauenswürdige Eingaben.
 - Für Inhalt, sachliche Richtigkeit und Veröffentlichung der Sendung bleibt der Betreiber verantwortlich.
 
-## Nächste Entwicklungsschritte
+## Roadmap
 
-1. Den vollständigen MuseTalk-Workflow mit neuem Sprechtempo, Nachrichtentafeln und aktualisierten Actions testen.
-2. Für die Nachrichtenbeiträge rechtlich nutzbare Bilder und bessere Szenenübergänge ergänzen.
-3. Themenauswahl und redaktionelle Prüfung verbessern.
-4. Erst nach Qualitätstests eine kontrollierte Übernahme der experimentellen Pipeline in die stündliche Veröffentlichung vorsehen.
+### Version 1.0 – Kostenfreier, vollständig konfigurierbarer Nachrichtenbetrieb
+
+**Version 1.0 ist das Ziel für den vollständigen kostenlosen Ablauf:** von der RSS-Quelle bis zur automatisch veröffentlichten Nachrichtensendung einschließlich einer **Konfigurationsoberfläche im Webbrowser**. Die Version 1.0 ist noch nicht erreicht.
+
+**Für v1.0 vorgesehen:**
+
+1. **Produktionspipeline abschließen:** Den vollständigen MuseTalk-Workflow mit erhöhtem Sprechtempo, individuellen Nachrichtentafeln und aktualisierten GitHub Actions testen; Bild, Ton und Übergänge prüfen.
+2. **Stündliche Veröffentlichung:** Die erprobte Segment-Pipeline kontrolliert in den automatischen Veröffentlichungsablauf übernehmen, inklusive MP4, Webseite, Transkript und Video-RSS.
+3. **Webbasierte Konfiguration entwickeln:** RSS-Quellen hinzufügen, entfernen und bearbeiten; Sendungstitel, Anzahl der Meldungen, Stimme und Sprechtempo einstellen; Moderatorbild und Hintergrund hochladen beziehungsweise auswählen; Szenenoptionen verwalten.
+4. **Konfiguration sicher speichern:** Änderungen aus der Weboberfläche nachvollziehbar in die Projektkonfiguration übernehmen. Eine mögliche Umsetzung ist eine statische Oberfläche über GitHub Pages mit autorisiertem Speichern im GitHub-Repository. Authentifizierung und Schreibberechtigungen müssen vor der Umsetzung geklärt werden; **keine Zugangstokens im öffentlichen Quellcode oder in dauerhaftem Browserspeicher ablegen**.
+5. **Bedienung und Zuverlässigkeit:** Konfigurationswerte validieren, Fehlermeldungen anzeigen, eine Testsendung manuell anstoßen können und den Status des letzten Laufs sichtbar machen.
+6. **Qualität und Quellen:** Themenauswahl und redaktionelle Prüfhilfen verbessern. Optional rechtlich nutzbares Nachrichtenbildmaterial ergänzen; selbst erzeugte Nachrichtentafeln bleiben als Fallback verfügbar.
+
+**Abnahmekriterium für v1.0:** Ein Anwender kann die kostenlose Nachrichtensendung **über eine Webseite konfigurieren**, ohne `config.json` von Hand zu bearbeiten, und die konfigurierte Sendung wird über den Cloud-Workflow automatisch erzeugt und als Video sowie Video-RSS bereitgestellt – ohne eigenen dauerhaft laufenden Server oder kostenpflichtige API. Die Nutzung bleibt an kostenlose Kontingente und deren Bedingungen gebunden.
+
+### Nach Version 1.0 – Optionale Erweiterungen
+
+- Austauschbare kostenpflichtige oder selbst gehostete Dienste für Recherche, Sprachsynthese, Bild- und Videogenerierung sowie Rechenleistung.
+- Zusätzliche Bild- und Videoquellen, Sendungslayouts, Moderatoren und Stimmen.
+- Erweiterte redaktionelle Prüf- und Freigabeprozesse.
+
+Die kostenfreie Konfiguration bleibt dabei ein eigenständiger, ohne Bezahlangebote nutzbarer Betriebsmodus.
+
