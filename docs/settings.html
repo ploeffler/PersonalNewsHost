@@ -1,18 +1,49 @@
 <!doctype html>
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Konfiguration · PersonalNewsHost</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <style>
-:root{color-scheme:dark}body{font:16px system-ui,sans-serif;background:#101c2c;color:#f4f7fc;max-width:850px;margin:auto;padding:24px;line-height:1.5}
-h1{font-size:2rem}a{color:#9cddff}fieldset{border:1px solid #52657a;border-radius:12px;padding:18px;margin:18px 0}
-legend{font-weight:700;padding:0 8px}label{display:block;margin:12px 0 5px}
-input,textarea,select{box-sizing:border-box;width:100%;background:#1c2d42;border:1px solid #71849a;border-radius:8px;color:white;padding:10px;font:inherit}
-textarea{min-height:125px}button{background:#66c9de;border:0;border-radius:8px;padding:12px 16px;color:#081b2d;font-weight:700;cursor:pointer;margin:6px 8px 6px 0}
-button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #f8b55b}
-small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#aaf2c6}code{background:#20344c;padding:2px 5px}
-</style></head><body>
-<p><a href="./">← Zur Nachrichtenseite</a></p>
+:root{color-scheme:dark;--bs-body-bg:#0c1727;--bs-body-color:#edf4fc;--bs-border-color:#354963}
+body{background:linear-gradient(155deg,#0d2038 0%,#0c1727 52%,#101d30 100%);color:#edf4fc;line-height:1.55;min-height:100vh}
+main{max-width:1050px;margin:auto;padding:clamp(16px,3vw,36px)}
+.page-header{padding:clamp(16px,3vw,30px) 0 12px}
+.page-header h1{font-size:clamp(1.65rem,4vw,2.45rem);font-weight:750;letter-spacing:-.03em}
+.lead-copy{color:#bdcfe2;max-width:75ch}
+a{color:#85d8f6}a:hover{color:#c0f0ff}
+fieldset{border:1px solid #38516c;border-radius:16px;padding:clamp(16px,2.7vw,26px);margin:0 0 22px;background:#14243a;box-shadow:0 8px 26px #0002;min-width:0}
+legend{float:none;width:auto;padding:0 10px;margin:0 0 8px;font-size:1.16rem;font-weight:700;color:#e9f5ff}
+label{display:block;margin:16px 0 6px;font-weight:550}
+input:not([type="checkbox"]):not([type="color"]),textarea,select{box-sizing:border-box;width:100%;max-width:100%;background:#0c1b2e!important;border:1px solid #58718e!important;border-radius:9px!important;color:#f5f9ff!important;padding:11px 12px!important;font:inherit;min-height:45px}
+input[type="file"]{font-size:.91rem}
+input[type="file"]::file-selector-button{background:#304e6d;color:#fff;border:0;border-radius:5px;padding:7px 10px;margin-right:12px}
+input[type="color"]{display:block;width:90px;height:46px;padding:4px;border:1px solid #58718e;border-radius:9px;background:#0c1b2e}
+input[type="checkbox"]{width:19px;height:19px;margin-right:9px;vertical-align:middle;accent-color:#6acfe7}
+textarea{min-height:115px;resize:vertical}
+select option{background:#0c1b2e;color:#fff}
+button{border:0;border-radius:9px;padding:12px 16px;font-weight:700;cursor:pointer;margin:6px 8px 6px 0;min-height:44px}
+button[type="submit"],#save_github{background:#65cde5;color:#082238}
+#reset{background:#304760;color:#fff}
+#upload_images{background:#bdd9f2;color:#102439}
+button:disabled{opacity:.55;cursor:wait}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #ffcc74;outline-offset:2px}
+small,.muted{display:block;color:#b8cbdf;margin-top:6px}
+.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#aaf2c6}
+code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
+#status,#result,#save_status,#upload_status{overflow-wrap:anywhere}
+#static_options{margin-top:14px;border-left:3px solid #547b9e;padding-left:15px}
+.action-bar{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.action-bar button{margin:0}
+.settings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}
+.settings-grid>.wide{grid-column:1/-1}
+.security-panel{background:#182b43;border:1px solid #476482;border-radius:16px;padding:clamp(16px,2.7vw,26px);margin-bottom:22px}
+.section-links{overflow-wrap:anywhere}
+[hidden]{display:none!important}
+@media(max-width:640px){.settings-grid{grid-template-columns:minmax(0,1fr)}.settings-grid>.wide{grid-column:auto}.action-bar{flex-direction:column}.action-bar button{width:100%}fieldset{margin-bottom:14px}h2{font-size:1.25rem}h3{font-size:1.1rem}main{padding:14px}}
+@media(prefers-reduced-motion:no-preference){button{transition:filter .15s ease,transform .15s ease}button:hover:not(:disabled){filter:brightness(1.08)}}
+</style></head><body><main class="container-fluid">
+<header class="page-header"><p><a href="./">← Zur Nachrichtenseite</a></p>
 <h1>PersonalNewsHost konfigurieren</h1>
-<p>Erste Version der webbasierten Konfiguration: Einstellungen bearbeiten, prüfen und als <code>config.json</code> herunterladen. <strong>Das Speichern im GitHub-Repository ist noch nicht automatisiert.</strong> Keine Zugangsdaten eingeben.</p>
+<p class="lead-copy">Nachrichtensendung, Stimme, Bilder und Ausgabekanäle konfigurieren. Einstellungen als Datei herunterladen oder mit einem GitHub-Token direkt speichern.</p></header>
 <p id="status" role="status" aria-live="polite">Lade Konfiguration …</p>
 <form id="settings" hidden>
 <fieldset><legend>Sendung</legend>
@@ -59,20 +90,20 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 <p id="upload_status" role="status" aria-live="polite"></p>
 <small>Nach erfolgreichem Upload werden die Bildpfade in die Felder übernommen. Anschließend „Direkt auf GitHub speichern“ verwenden, damit config.json ebenfalls aktualisiert wird. Den Token dafür erneut eingeben.</small>
 </fieldset>
-<button type="submit">Konfiguration prüfen und herunterladen</button>
+<div class="action-bar"><button type="submit">Konfiguration herunterladen</button>
 <button type="button" id="save_github">Direkt auf GitHub speichern</button>
-<button type="button" id="reset">Neu laden</button>
+<button type="button" id="reset">Neu laden</button></div>
 <p id="result" role="status" aria-live="polite"></p>
 </form>
-<h2>Direkt in GitHub speichern (Beta)</h2>
+<section class="security-panel"><h2>Direkt in GitHub speichern (Beta)</h2>
 <p>Optional: Ein <strong>Fine-grained Personal Access Token</strong> mit Zugriff ausschließlich auf <code>ploeffler/PersonalNewsHost</code> und Berechtigung <strong>Contents: Read and write</strong> ermöglicht das Speichern ohne Download. Der Token wird nur für diese Sitzung im Eingabefeld gehalten, nicht gespeichert oder ins Repository übertragen. Verwende keinen klassischen Token mit breiten Rechten. Auf einem gemeinsam genutzten Gerät besser die Download-Funktion verwenden.</p>
 <label for="github_token">GitHub Fine-grained Token (nur für direkten Speichervorgang)</label><input id="github_token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…">
 <label><input id="confirm_save" type="checkbox" style="width:auto"> Ich möchte config.json auf main im Repository überschreiben.</label>
-<p id="save_status" role="status" aria-live="polite"></p>
-<h2>Wie werden Änderungen aktiv?</h2>
+<p id="save_status" role="status" aria-live="polite"></p></section>
+<section class="security-panel"><h2>Wie werden Änderungen aktiv?</h2>
 <p>Die heruntergeladene Datei muss im Repository die vorhandene <code>config.json</code> ersetzen. Danach wird die neue Konfiguration beim nächsten Produktionslauf eingelesen.</p>
 <p><a href="https://github.com/ploeffler/PersonalNewsHost/edit/main/config.json" rel="noopener noreferrer">config.json auf GitHub bearbeiten</a> · <a href="https://github.com/ploeffler/PersonalNewsHost/actions/workflows/news.yml" rel="noopener noreferrer">Produktionsworkflow starten</a></p>
-<div id="importrow" hidden><label for="importfile">config.json vom Computer importieren</label><input id="importfile" type="file" accept=".json,application/json"></div>
+</section><div id="importrow" hidden><label for="importfile">config.json vom Computer importieren</label><input id="importfile" type="file" accept=".json,application/json"></div>
 <script id="embedded-config" type="application/json">{"title":"PersonalNewsHost","language":"de","voice":"de","max_items":5,"max_description_chars":180,"feeds":["https://www.tagesschau.de/xml/rss2/","https://www.derstandard.at/rss"],"background":"assets/background.jpg","presenter":"assets/presenter.png","tts_engine":"piper","piper_length_scale":1.06,"presenter_settings":{"name":"NewsHost","gender":"custom","portrait":"assets/presenter.png","background":"assets/background.jpg","voice_model":"de_DE-thorsten-high","lip_sync":{"enabled":false,"engine":"none","fallback":"static","note":"CPU-only lip-sync not yet implemented; enable only after a successful prototype test"},"scenes":{"intro_seconds":8,"outro_seconds":8,"show_headlines":true,"intro_mode":"avatar","intro_text":"Willkommen bei {title}. Hier sind die Nachrichten.","outro_text":"Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.","intro_static_type":"color","intro_static_color":"#13243a","intro_static_image":"assets/background.jpg"}},"voice_pitch_semitones":-1.5}</script>
 <script>
 "use strict";
@@ -245,4 +276,4 @@ $("importfile").addEventListener("change",async e=>{try{fill(JSON.parse(await e.
 load();
 </script>
 
-</body></html>
+</main></body></html>
