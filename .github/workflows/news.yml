@@ -16,13 +16,19 @@ jobs:
       - uses: actions/checkout@v5
         with:
           persist-credentials: true
+      - name: Check configured production schedule
+        id: schedule
+        run: python3 scripts/check_schedule.py
       - name: Install free local tools
+        if: steps.schedule.outputs.due == 'true'
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg espeak-ng fonts-dejavu-core
       - name: Install neural speech engine
+        if: steps.schedule.outputs.due == 'true'
         run: python3 -m pip install --disable-pip-version-check piper-tts
       - name: Download German Piper voice
+        if: steps.schedule.outputs.due == 'true'
         run: |
           mkdir -p models
           base="https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/thorsten/high"
@@ -33,10 +39,13 @@ jobs:
             echo "Piper model unavailable; using eSpeak fallback"
           fi
       - name: Generate latest bulletin
+        if: steps.schedule.outputs.due == 'true'
         run: python3 scripts/generate.py
       - name: Sync public configuration for settings page
+        if: steps.schedule.outputs.due == 'true'
         run: cp config.json docs/config.json
       - name: Publish generated files
+        if: steps.schedule.outputs.due == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -46,7 +55,7 @@ jobs:
             git push
           fi
       - name: Send optional Telegram notification
-        if: success()
+        if: steps.schedule.outputs.due == 'true' && success()
         continue-on-error: true
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
