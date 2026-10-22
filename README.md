@@ -79,6 +79,12 @@ Der produktive Workflow überschreibt die neueste Ausgabe; ein vollständiges Se
 
 Der Produktivworkflow `.github/workflows/news.yml` wird außerdem per Cron um Minute 17 jeder Stunde angefordert. GitHub garantiert weder einen exakten Startzeitpunkt noch die Ausführung jedes geplanten Laufs.
 
+## Direktes Speichern der Web-Konfiguration (Beta)
+
+Unter [settings.html](https://ploeffler.github.io/PersonalNewsHost/settings.html) gibt es neben dem JSON-Download jetzt **Direkt auf GitHub speichern**. Hierfür kann der Repository-Eigentümer einen [Fine-grained Personal Access Token](https://github.com/settings/personal-access-tokens/new) erzeugen, ausschließlich für `ploeffler/PersonalNewsHost`, mit `Contents: Read and write`. Token nur auf der vertrauenswürdigen GitHub-Pages-Projektseite eingeben; nicht in GitHub-Dateien, Screenshots, Issues oder Chats veröffentlichen. Die Webseite speichert den Token nicht dauerhaft und leert das Feld nach dem Versuch. Die GitHub-API aktualisiert `config.json` auf `main` mit dem aktuellen Datei-SHA, damit Konflikte nicht still überschrieben werden. Die alte Download-/Import-Möglichkeit bleibt erhalten. GitHub Pages lädt bevorzugt die veröffentlichte `docs/config.json` und fällt bei Fehlern auf die eingebettete Konfiguration zurück.
+
+**Wichtig:** Dies ist eine erste Implementierung und noch nicht im Browser mit einem echten Token getestet. Änderungen wirken erst nach einem folgenden Produktionslauf. Eine sichere OAuth-Anmeldung ohne manuell erstellten Token und das Hochladen von Bilddateien stehen noch aus.
+
 ## Web-Konfiguration (erste Beta)
 
 Die erste browserbasierte Oberfläche ist unter **[Konfiguration öffnen](https://ploeffler.github.io/PersonalNewsHost/settings.html)** erreichbar. Sie ist als statische GitHub-Pages-Seite umgesetzt und benötigt keinen eigenen Server.
