@@ -36,9 +36,15 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq ffmpeg espeak-ng fonts-dejavu-core
+      - name: Determine segment renderer
+        id: engine
+        env:
+          SEGMENT: ${{ matrix.segment }}
+        run: |
+          python3 -c 'import json,os; p=json.load(open("broadcast-plan.json")); print("renderer="+next(x["render_engine"] for x in p["segments"] if x["id"]==os.environ["SEGMENT"]))' >> "$GITHUB_OUTPUT"
       - name: Install Piper and MuseTalk CPU dependencies
         run: |
-          if [[ "${{ matrix.segment }}" == "intro" || "${{ matrix.segment }}" == "outro" ]]; then
+          if [[ "${{ steps.engine.outputs.renderer }}" == "musetalk" ]]; then
             python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch torchvision
             python3 -m pip install --disable-pip-version-check 'diffusers>=0.30,<0.37' 'transformers>=4.40,<5' accelerate safetensors huggingface_hub pillow numpy librosa soundfile opencv-python-headless einops omegaconf face-alignment piper-tts
           else
@@ -54,7 +60,7 @@ jobs:
           test -s models/de_DE-thorsten-high.onnx.json
       - name: Render segment
         run: |
-          if [[ "${{ matrix.segment }}" == "intro" || "${{ matrix.segment }}" == "outro" ]]; then
+          if [[ "${{ steps.engine.outputs.renderer }}" == "musetalk" ]]; then
             timeout 1600s python3 -u scripts/render_musetalk_segment.py --segment "${{ matrix.segment }}"
           else
             python3 scripts/render_segment.py --segment "${{ matrix.segment }}"
