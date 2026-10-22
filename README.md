@@ -1,49 +1,151 @@
-# PersonalNewsHost v0.4
+# PersonalNewsHost
 
-Kostenfreier Prototyp: RSS-Quellen lesen, kurze deutschsprachige Nachrichtensendung als MP4 mit FFmpeg/Piper (eSpeak-NG als Fallback) erstellen und einen Video-RSS-Feed veröffentlichen.
+**Experimentelles, automatisiertes RSS-Nachrichtenstudio – ohne kostenpflichtige APIs oder eigenen Server.**
+
+PersonalNewsHost liest konfigurierbare RSS-Feeds und erzeugt deutschsprachige Nachrichtenvideos. Die derzeitige **Produktivversion** veröffentlicht regelmäßig ein MP4 mit Piper-Sprachausgabe, einer Webseite und einem Video-RSS-Feed über GitHub Pages. Daneben entsteht ein **separater, noch nicht veröffentlichender Testzweig der Verarbeitung** mit Themen-Clustering, parallelen Videosegmenten und einem lippensynchronen Moderator auf Basis von MuseTalk.
+
+> **Projektziel:** Möglichst stündlich eine automatisch erzeugte Nachrichtensendung, konfigurierbare Quellen, Moderatorenportrait und Studiokulisse, Video-RSS und **0 € monatliche Zusatzkosten**. Die Umsetzung ist ein Prototyp, kein redaktionell verifiziertes Nachrichtensystem. Die GitHub-Freikontingente und Nutzungsbedingungen müssen eingehalten werden.
+
+## Aktuelle Ausgaben
+
+- [Nachrichtenseite auf GitHub Pages](https://ploeffler.github.io/PersonalNewsHost/)
+- [Video-RSS-Feed](https://ploeffler.github.io/PersonalNewsHost/feed.xml)
+- [Letztes Video](https://ploeffler.github.io/PersonalNewsHost/latest.mp4)
+- [Transkript](https://ploeffler.github.io/PersonalNewsHost/transcript.txt)
+
+Der produktive Workflow überschreibt die neueste Ausgabe; ein vollständiges Sendungsarchiv wird derzeit nicht geführt.
+
+## Funktionsstand
+
+| Funktion | Status |
+| --- | --- |
+| Konfigurierbare RSS-Quellen | Produktiv |
+| Regelbasierte Auswahl von Meldungen | Produktiv |
+| Deutsche Sprachausgabe mit Piper `de_DE-thorsten-high` | Produktiv |
+| eSpeak-NG als Fallback bei fehlendem Piper-Modell | Produktiv |
+| MP4, Webseite, Transkript und Video-RSS | Produktiv |
+| Automatischer stündlicher GitHub-Actions-Lauf | Aktiv, best effort |
+| Konfigurierbares Portrait und Hintergrund | Standbilder produktiv; Hintergrunddatei optional |
+| RSS-Themenanalyse und vorsichtiges Clustering | Experimentell |
+| Sieben parallele Segmente: Intro, fünf Meldungen, Outro | Experimentell |
+| MuseTalk 1.5 mit Piper, 10 neuronale FPS und 25 Ausgabe-FPS | Einzeltests erfolgreich |
+| MuseTalk für vollständiges Intro und Outro | Segmentjobs erfolgreich; Gesamtzusammenschnitt noch in Prüfung |
+| Automatische Nachrichtenbilder / Fremdvideos | Noch nicht implementiert |
+| Redaktionelle Faktenprüfung und automatische Freigabe | Noch nicht implementiert |
+
+**Wichtig:** Die produktive Sendung verwendet derzeit **keinen sprechenden KI-Avatar**. MuseTalk ist ausschließlich in manuell gestarteten Testworkflows aktiv. Ein erfolgreicher Testlauf bedeutet nicht automatisch, dass dessen Video öffentlich erscheint.
 
 ## Einrichtung
-1. Unter **Settings → Pages** die Quelle **Deploy from a branch**, Branch **main**, Ordner **/docs** auswählen.
-2. Unter **Actions** den Workflow **Generate news video** manuell starten; danach ist ein stündlicher Lauf (best effort) geplant.
-3. In `config.json` RSS-Quellen, Titel, Sprecherstimme und Dateinamen anpassen.
-4. Eigene Dateien optional unter `assets/background.jpg` und `assets/presenter.png` ablegen (nur Material mit Nutzungsrechten).
 
-Website: https://ploeffler.github.io/PersonalNewsHost/
-Video-RSS: https://ploeffler.github.io/PersonalNewsHost/feed.xml
+1. Repository auf GitHub verwenden und unter **Settings → Pages** die Veröffentlichung aus **main /docs** aktivieren.
+2. Unter **Actions → Generate news video** den Produktivworkflow einmal manuell starten.
+3. `config.json` anpassen: RSS-Feeds, Titel, Anzahl der Meldungen und Piper-Sprechtempo.
+4. Optional eigenes Portrait unter `assets/presenter.png` und eigene Studiokulisse unter `assets/background.jpg` bereitstellen. Nur Material verwenden, für das die erforderlichen Rechte vorliegen.
 
-## Technische Grenzen
-- 0 € zusätzliche Kosten bei Nutzung der kostenlosen GitHub-Kontingente, solange deren Grenzen eingehalten werden; GitHub Actions und Pages haben Limits und Bedingungen.
-- GitHub Actions Cron ist **nicht garantiert minutengenau** und kann Läufe auslassen.
-- v0.4 nutzt **keine generative Video-KI** und **keinen sprechenden fotorealistischen Avatar**. Optionales Portrait wird als Standbild gezeigt. TTS läuft lokal mit dem neuronalen Piper-Modell de_DE-thorsten-high, sofern der Download gelingt; sonst eSpeak-NG.
-- Die RSS-Zusammenfassung erfolgt regelbasiert (Titel + Feed-Kurzbeschreibung), **nicht** durch eine OpenAI-API. Die ursprüngliche OpenAI-only-Idee ist ohne kostenpflichtige API nicht garantiert umsetzbar.
-- Keine fremden Bilder/Videos automatisch übernehmen; Urheberrecht beachten. Die Nachrichten werden nicht unabhängig verifiziert.
-- Nur die neueste Ausgabe wird gespeichert, damit das Repository nicht stündlich anwächst.
+Der Produktivworkflow `.github/workflows/news.yml` wird außerdem per Cron um Minute 17 jeder Stunde angefordert. GitHub garantiert weder einen exakten Startzeitpunkt noch die Ausführung jedes geplanten Laufs.
+
+## Konfiguration
+
+Die wesentlichen Optionen in `config.json`:
+
+| Einstellung | Bedeutung |
+| --- | --- |
+| `feeds` | Liste der RSS-Adressen |
+| `max_items` | Maximale Zahl der Meldungen |
+| `max_description_chars` | Länge der verwendeten Feed-Kurzbeschreibung |
+| `piper_length_scale` | Sprechtempo der Piper-Stimme |
+| `presenter` | Portraitdatei |
+| `background` | Hintergrunddatei |
+| `presenter_settings` | Name, Metadaten, Portrait, Stimme und Szeneneinstellungen |
+
+`presenter_settings.lip_sync.enabled` ist in der **Produktivkonfiguration weiterhin `false`**. Der MuseTalk-Testworkflow liest seine eigene Verarbeitungslogik; das Umstellen dieses Schalters aktiviert MuseTalk **nicht** automatisch im Produktivworkflow. Die Einstellung `gender` ist derzeit nur ein Metadatenfeld und erzeugt keine andere Stimme oder Person.
+
+## Technische Architektur
+
+### 1. Produktive Veröffentlichung
+
+```text
+RSS-Feeds
+   ↓
+scripts/generate.py
+   ↓
+Titel und Kurzbeschreibungen → Piper TTS → FFmpeg
+   ↓
+docs/latest.mp4 + docs/index.html
+docs/transcript.txt + docs/feed.xml
+   ↓
+GitHub Pages
+```
+
+Workflow: [Generate news video](https://github.com/ploeffler/PersonalNewsHost/actions/workflows/news.yml)
+
+### 2. Experimentelle parallele Nachrichtensendung
+
+```text
+RSS-Feeds
+   ↓
+scripts/analyze_topics.py
+   ↓
+Themenkandidaten und Quellenhinweise
+   ↓
+scripts/build_broadcast_plan.py
+   ↓
+Intro ───────── MuseTalk + Piper
+Meldungen 1–5 ─ FFmpeg + Piper   (parallel)
+Outro ───────── MuseTalk + Piper
+   ↓
+scripts/assemble_segments.py
+   ↓
+Testvideo als GitHub-Actions-Artefakt
+(keine automatische Veröffentlichung)
+```
+
+Das Clustering verwendet eine konservative Ähnlichkeitsheuristik. Ähnliche Artikel werden **nicht** zu neuen, vermeintlich bestätigten Fakten verschmolzen: Der gesprochene Beitrag stammt jeweils aus einer führenden RSS-Meldung. Weitere ähnliche Quellen werden als Prüfkandidaten markiert.
+
+Der Moderator erscheint im experimentellen Konzept nur in Intro und Outro. Die fünf Nachrichtenbeiträge benötigen daher keine rechenintensive Lippenanimation. Für die MuseTalk-Segmente werden **10 KI-Bilder pro Sekunde** berechnet; FFmpeg interpoliert auf **25 FPS**. Die Stimme bleibt Piper `de_DE-thorsten-high`. Die Segmentjobs wurden bereits erfolgreich ausgeführt; die Integration des vollständigen Zusammenschnitts wird noch getestet.
+
+Testworkflow: [Parallel broadcast with MuseTalk](https://github.com/ploeffler/PersonalNewsHost/actions/workflows/parallel-musetalk-broadcast.yml)
+
+## Workflows und wichtige Dateien
+
+| Datei | Aufgabe |
+| --- | --- |
+| `.github/workflows/news.yml` | Stündliche Produktivveröffentlichung |
+| `.github/workflows/analyze-rss-topics.yml` | Themenanalyse testen |
+| `.github/workflows/parallel-broadcast.yml` | Parallele Sendung ohne MuseTalk testen |
+| `.github/workflows/musetalk-piper-10fps.yml` | Lippenanimation einzeln testen |
+| `.github/workflows/parallel-musetalk-broadcast.yml` | Vollständige experimentelle Sendung |
+| `scripts/generate.py` | Produktive Generierung |
+| `scripts/analyze_topics.py` | RSS-Themenkandidaten |
+| `scripts/build_broadcast_plan.py` | Szenen- und Sprechplan |
+| `scripts/render_segment.py` | Nachrichtenbeiträge und Standbildszenen |
+| `scripts/render_musetalk_segment.py` | MuseTalk-Intro/-Outro mit Piper |
+| `scripts/assemble_segments.py` | Zusammenfügen der Testsegmente |
+| `assets/` | Moderatorenbild und optionale Kulisse |
+| `docs/` | Veröffentlichte Dateien |
 
 ## Lokal testen (Ubuntu)
+
 ```bash
-sudo apt-get update && sudo apt-get install -y ffmpeg espeak-ng fonts-dejavu-core
+sudo apt-get update
+sudo apt-get install -y ffmpeg espeak-ng fonts-dejavu-core
 python3 -m pip install piper-tts
-# Ohne heruntergeladenes Piper-Modell wird automatisch eSpeak-NG verwendet.
 python3 scripts/generate.py
 ```
 
-## Dateien
-- `config.json`: Quellen und Darstellung
-- `scripts/generate.py`: RSS → Text → Sprache → Video → RSS
-- `docs/`: GitHub Pages Ausgabe
-- `.github/workflows/news.yml`: stündlicher Workflow
+Ohne lokal vorhandenes Piper-Modell `models/de_DE-thorsten-high.onnx` greift der Produktivgenerator auf eSpeak-NG zurück. Der GitHub-Produktivworkflow versucht das Piper-Modell automatisch herunterzuladen. Die MuseTalk-Testumgebung benötigt zusätzliche große Modelle und CPU-Pakete; dafür sind die separaten Actions-Workflows vorgesehen.
 
-## Sicherheit
-Keine Zugangsdaten im Repository speichern. RSS-Quellen werden nur über HTTP(S) mit Timeouts gelesen. Für öffentlich sichtbare Inhalte und Bildmaterial ist der Betreiber verantwortlich.
+## Kosten, Grenzen und Verantwortung
 
-## v0.4 – Natürlichere deutsche Stimme
-GitHub Actions installiert Piper TTS und lädt beim Lauf das frei verfügbare deutsche Modell `de_DE-thorsten-high` samt Konfiguration von `rhasspy/piper-voices` (Hugging Face). Das Modell wird nicht im Repository gespeichert. Schlägt Download oder Synthese fehl, bleibt die bisherige eSpeak-NG-Stimme als Fallback erhalten. Die Nutzungsbedingungen und Lizenzhinweise des jeweiligen Modells sind vor Weiterverbreitung zu prüfen. Kein kostenpflichtiger API-Aufruf.
+- **0 € ist ein Ziel unter Bedingungen, keine Kosten- oder Verfügbarkeitsgarantie.** GitHub Actions und GitHub Pages unterliegen Kontingenten, Nutzungsregeln und möglichen Änderungen. Besonders CPU-lastige MuseTalk-Tests können viel Actions-Laufzeit verbrauchen.
+- Keine kostenpflichtige OpenAI-API ist in den aktuellen Workflows eingebunden. Die Texte werden regelbasiert aus RSS-Metadaten erstellt; dies ist **keine** KI-gestützte Recherche oder unabhängige Faktenprüfung.
+- Automatische Übernahme fremder Fotos oder Videos ist nicht implementiert. Für Portraits, Bilder, Audio, RSS-Inhalte und verwendete Modelle sind Urheber-, Persönlichkeits- und Lizenzrechte zu prüfen.
+- Keine Zugangsdaten in `config.json` oder das öffentliche Repository schreiben. RSS-Inhalte sind fremde, nicht vertrauenswürdige Eingaben.
+- Für Inhalt, sachliche Richtigkeit und Veröffentlichung der Sendung bleibt der Betreiber verantwortlich.
 
-## v0.4 – Sprechqualität
-Hochauflösendes Thorsten-Modell, einstellbare Sprechgeschwindigkeit (`piper_length_scale`), zusätzliche Satzpausen. Bei fehlendem Modell bleibt eSpeak als Fallback erhalten. Das größere Modell kann die Laufzeit erhöhen.
+## Nächste Entwicklungsschritte
 
-## v0.4 – Konfigurierbarer Moderator (Vorbereitung)
-Unter `presenter_settings` in `config.json` lassen sich Name, Geschlecht (Metadaten), Portraitdatei, Hintergrund, Stimmmodell (derzeit nur Thorsten High installiert) und die geplante Lippen-Synchronisation konfigurieren. Das Portrait ist ein selbst hochgeladenes PNG unter `assets/presenter.png`. `lip_sync.enabled` bleibt **false**: Ein echtes Lippen-Synchronisationsmodell ist noch nicht integriert und wird ausdrücklich nicht als funktionierend ausgegeben. Selbst wenn der Schalter auf true gesetzt wird, wird derzeit nur das statische Portrait verwendet und ein Hinweis im Workflow protokolliert. Vor der Integration sind CPU-Laufzeit, Modelllizenzen und GitHub-Actions-Limits zu testen.
-
-## Szenensteuerung
-`presenter_settings.scenes.intro_seconds` und `outro_seconds` steuern die Moderator-Einblendungen; im Mittelteil zeigt FFmpeg automatisch eine Schlagzeilentafel, falls `show_headlines` aktiviert ist. Ohne hochgeladenes Portrait bleibt das Studio sichtbar. Audio läuft kontinuierlich. Es gibt **noch keine** echten Lippenbewegungen oder automatischen externen Nachrichtenbilder. Nach jeder Konfigurationsänderung den Workflow testen.
+1. Den korrigierten vollständigen MuseTalk-Sendungsworkflow erfolgreich zusammenfügen und Bild/Ton prüfen.
+2. Für die Nachrichtenbeiträge rechtlich nutzbare Bilder und bessere Szenenübergänge ergänzen.
+3. Themenauswahl und redaktionelle Prüfung verbessern.
+4. Erst nach Qualitätstests eine kontrollierte Übernahme der experimentellen Pipeline in die stündliche Veröffentlichung vorsehen.
