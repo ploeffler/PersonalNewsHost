@@ -285,3 +285,9 @@ Die Konfiguration enthält `production_version` (Standard: `"1.0"`). Im neuen Ta
 - **2.0 – Erweitert (geplant):** Künftige optionale kostenpflichtige KI-Dienste. Die Auswahl ist absichtlich deaktiviert, solange Pipeline, Provider-Konfiguration, API-Secrets und Kostenlimits noch nicht implementiert sind.
 
 Die Produktionsprüfung lehnt unbekannte oder noch nicht implementierte Versionen ausdrücklich ab, statt stillschweigend kostenpflichtige Dienste zu starten oder auf eine andere Version zurückzufallen. Die bestehende Konfiguration bleibt kompatibel; fehlt `production_version`, wird 1.0 verwendet.
+
+### Vorbereitung für Version 2.0 (ohne kostenpflichtige Aufrufe)
+
+Der Tab **Version** enthält den Konfigurationsentwurf `advanced_services` mit `news_provider`, `voice_provider`, `avatar_provider`, `video_provider`, `max_per_video_eur`, `max_per_month_eur` und `allow_paid`. Alle Budgets sind standardmäßig 0 EUR, `allow_paid` ist `false`. Diese Felder sind **noch keine technisch wirksame Kostenkontrolle**; sie werden von der aktuellen Pipeline nicht verwendet. Version 2.0 bleibt im Auswahlfeld gesperrt und der Produktionsworkflow lehnt sie ab. API-Schlüssel gehören ausschließlich in GitHub Actions Secrets. Eine zukünftige Freischaltung setzt Anbieteradapter, verbindliche Budgetprüfungen, Fehlerbehandlung und Tests voraus.
+
+Die automatische Produktion ist in der ausgelieferten Standardkonfiguration deaktiviert. Manuelle Workflow-Starts bleiben möglich.
