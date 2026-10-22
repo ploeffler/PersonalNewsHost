@@ -1,5 +1,6 @@
 {
   "title": "PersonalNewsHost",
+  "production_version": "1.0",
   "language": "de",
   "voice": "de",
   "max_items": 5,
@@ -36,5 +37,29 @@
       "intro_static_image": "assets/background.jpg"
     }
   },
-  "voice_pitch_semitones": -1.5
+  "voice_pitch_semitones": -1.5,
+  "telegram": {
+    "enabled": false,
+    "recipient_type": "channel",
+    "delivery": "auto",
+    "caption": "{title} – neue Nachrichtensendung\n{url}"
+  },
+  "automation": {
+    "enabled": false,
+    "interval_hours": 1,
+    "start_hour_utc": 0,
+    "days": "daily"
+  },
+  "advanced_services": {
+    "processing_region": "eu",
+    "processing_country": "",
+    "require_verified_region": true,
+    "news_provider": "disabled",
+    "voice_provider": "local",
+    "avatar_provider": "static",
+    "video_provider": "local",
+    "max_per_video_eur": 0,
+    "max_per_month_eur": 0,
+    "allow_paid": false
+  }
 }
