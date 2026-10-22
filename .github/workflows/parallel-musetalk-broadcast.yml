@@ -1,0 +1,88 @@
+name: Parallel broadcast with MuseTalk intro and outro (experimental)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      segments: ${{ steps.matrix.outputs.segments }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/analyze_topics.py
+      - run: python3 scripts/build_broadcast_plan.py
+      - id: matrix
+        run: |
+          python3 -c 'import json; print("segments="+json.dumps([x["id"] for x in json.load(open("broadcast-plan.json"))["segments"]]))' >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: broadcast-plan
+          path: broadcast-plan.json
+  render:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        segment: ${{ fromJSON(needs.prepare.outputs.segments) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: broadcast-plan
+      - name: Install FFmpeg and fonts
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg espeak-ng fonts-dejavu-core
+      - name: Install Piper and MuseTalk CPU dependencies
+        run: |
+          if [[ "${{ matrix.segment }}" == "intro" || "${{ matrix.segment }}" == "outro" ]]; then
+            python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch torchvision
+            python3 -m pip install --disable-pip-version-check 'diffusers>=0.30,<0.37' 'transformers>=4.40,<5' accelerate safetensors huggingface_hub pillow numpy librosa soundfile opencv-python-headless einops omegaconf face-alignment piper-tts
+          else
+            python3 -m pip install --disable-pip-version-check piper-tts
+          fi
+      - name: Download German Piper voice
+        run: |
+          mkdir -p models
+          base="https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/thorsten/high"
+          curl -fL --retry 3 --connect-timeout 15 --max-time 180 "$base/de_DE-thorsten-high.onnx" -o models/de_DE-thorsten-high.onnx
+          curl -fL --retry 3 --connect-timeout 15 --max-time 60 "$base/de_DE-thorsten-high.onnx.json" -o models/de_DE-thorsten-high.onnx.json
+          test -s models/de_DE-thorsten-high.onnx
+          test -s models/de_DE-thorsten-high.onnx.json
+      - name: Render segment
+        run: |
+          if [[ "${{ matrix.segment }}" == "intro" || "${{ matrix.segment }}" == "outro" ]]; then
+            timeout 1600s python3 -u scripts/render_musetalk_segment.py --segment "${{ matrix.segment }}"
+          else
+            python3 scripts/render_segment.py --segment "${{ matrix.segment }}"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rendered-${{ matrix.segment }}
+          path: |
+            rendered/*.mp4
+            musetalk-render/report.json
+  assemble:
+    needs: [prepare, render]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: broadcast-plan
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: rendered-*
+          path: rendered
+          merge-multiple: true
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: python3 scripts/assemble_segments.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: musetalk-parallel-broadcast-demo
+          path: parallel-demo.mp4
+          retention-days: 3
