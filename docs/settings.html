@@ -55,7 +55,7 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <p class="lead-copy">Nachrichtensendung, Stimme, Bilder und Ausgabekanäle konfigurieren. Im ersten Tab kannst du die Konfiguration speichern oder herunterladen.</p></header>
 <p id="status" role="status" aria-live="polite">Lade Konfiguration …</p>
 <form id="settings" hidden>
-<nav class="settings-tabs" aria-label="Konfigurationsgruppen" role="tablist"><button type="button" id="tab-github" role="tab" aria-controls="panel-github" aria-selected="true" tabindex="0" data-tab="github">GitHub &amp; Speichern</button><button type="button" id="tab-sendung" role="tab" aria-controls="panel-sendung" aria-selected="false" tabindex="-1" data-tab="sendung">Sendung</button><button type="button" id="tab-moderation" role="tab" aria-controls="panel-moderation" aria-selected="false" tabindex="-1" data-tab="moderation">Stimme & Moderator</button><button type="button" id="tab-scenes" role="tab" aria-controls="panel-scenes" aria-selected="false" tabindex="-1" data-tab="scenes">Intro & Outro</button><button type="button" id="tab-telegram" role="tab" aria-controls="panel-telegram" aria-selected="false" tabindex="-1" data-tab="telegram">Telegram</button><button type="button" id="tab-images" role="tab" aria-controls="panel-images" aria-selected="false" tabindex="-1" data-tab="images">Bilder</button></nav>
+<nav class="settings-tabs" aria-label="Konfigurationsgruppen" role="tablist"><button type="button" id="tab-github" role="tab" aria-controls="panel-github" aria-selected="true" tabindex="0" data-tab="github">GitHub &amp; Speichern</button><button type="button" id="tab-automation" role="tab" aria-controls="panel-automation" aria-selected="false" tabindex="-1" data-tab="automation">Automatik</button><button type="button" id="tab-sendung" role="tab" aria-controls="panel-sendung" aria-selected="false" tabindex="-1" data-tab="sendung">Sendung</button><button type="button" id="tab-moderation" role="tab" aria-controls="panel-moderation" aria-selected="false" tabindex="-1" data-tab="moderation">Stimme & Moderator</button><button type="button" id="tab-scenes" role="tab" aria-controls="panel-scenes" aria-selected="false" tabindex="-1" data-tab="scenes">Intro & Outro</button><button type="button" id="tab-telegram" role="tab" aria-controls="panel-telegram" aria-selected="false" tabindex="-1" data-tab="telegram">Telegram</button><button type="button" id="tab-images" role="tab" aria-controls="panel-images" aria-selected="false" tabindex="-1" data-tab="images">Bilder</button></nav>
 <fieldset class="settings-panel active-panel" id="panel-github" role="tabpanel" aria-labelledby="tab-github"><legend>GitHub &amp; Speichern</legend>
 
 <section class="security-panel"><h2>Direkt in GitHub speichern (Beta)</h2>
@@ -74,6 +74,14 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 
 <div id="importrow" hidden><label for="importfile">config.json vom Computer importieren</label><input id="importfile" type="file" accept=".json,application/json"></div>
 
+</fieldset>
+<fieldset class="settings-panel" id="panel-automation" role="tabpanel" aria-labelledby="tab-automation"><legend>Automatische Nachrichtensendungen</legend>
+<label><input id="automation_enabled" type="checkbox" style="width:auto"> Automatische Produktion aktivieren</label>
+<label for="automation_interval">Wie oft soll eine Sendung erzeugt werden?</label>
+<select id="automation_interval"><option value="1">Jede Stunde</option><option value="2">Alle 2 Stunden</option><option value="3">Alle 3 Stunden</option><option value="4">Alle 4 Stunden</option><option value="6">Alle 6 Stunden</option><option value="8">Alle 8 Stunden</option><option value="12">Alle 12 Stunden</option><option value="24">Einmal täglich</option></select>
+<label for="automation_hour">Startstunde (UTC)</label><select id="automation_hour"><option value="0">00:00 UTC</option><option value="1">01:00 UTC</option><option value="2">02:00 UTC</option><option value="3">03:00 UTC</option><option value="4">04:00 UTC</option><option value="5">05:00 UTC</option><option value="6">06:00 UTC</option><option value="7">07:00 UTC</option><option value="8">08:00 UTC</option><option value="9">09:00 UTC</option><option value="10">10:00 UTC</option><option value="11">11:00 UTC</option><option value="12">12:00 UTC</option><option value="13">13:00 UTC</option><option value="14">14:00 UTC</option><option value="15">15:00 UTC</option><option value="16">16:00 UTC</option><option value="17">17:00 UTC</option><option value="18">18:00 UTC</option><option value="19">19:00 UTC</option><option value="20">20:00 UTC</option><option value="21">21:00 UTC</option><option value="22">22:00 UTC</option><option value="23">23:00 UTC</option></select>
+<label for="automation_days">Wochentage</label><select id="automation_days"><option value="daily">Jeden Tag</option><option value="weekdays">Montag bis Freitag</option><option value="weekends">Samstag und Sonntag</option></select>
+<small>GitHub Actions prüft stündlich ungefähr um Minute 17 (UTC), ob die gewählte Stunde fällig ist. Die tatsächliche Ausführung kann sich durch GitHub verzögern oder in Einzelfällen ausfallen. Startstunde bedeutet Stundenraster, keine minutengenaue Startzeit. Zeitangaben sind UTC, ohne automatische Sommerzeitumstellung. Manuelle Workflow-Starts bleiben auch bei deaktivierter Automatik möglich.</small>
 </fieldset>
 <fieldset class="settings-panel" id="panel-sendung" role="tabpanel" aria-labelledby="tab-sendung"><legend>Sendung</legend>
 <label for="title">Sendungstitel</label><input id="title" required maxlength="120">
@@ -131,7 +139,7 @@ function updateStaticOptions(){ $("static_options").hidden=$("intro_mode").value
 $("intro_mode").addEventListener("change",updateStaticOptions);
 $("intro_static_type").addEventListener("change",updateStaticOptions);
 
-const tabIds=["github","sendung","moderation","scenes","telegram","images"];
+const tabIds=["github","automation","sendung","moderation","scenes","telegram","images"];
 function activateSettingsTab(id,focus=false){
  for(const name of tabIds){
   const active=name===id;
@@ -173,6 +181,11 @@ function fill(c){
  $("intro_seconds").value=sc.intro_seconds??8;
  $("outro_seconds").value=sc.outro_seconds??8;
  $("show_headlines").checked=sc.show_headlines!==false;
+ const a=c.automation||{};
+ $("automation_enabled").checked=a.enabled!==false;
+ $("automation_interval").value=String(a.interval_hours??1);
+ $("automation_hour").value=String(a.start_hour_utc??0);
+ $("automation_days").value=a.days||"daily";
  const tg=c.telegram||{};
  $("telegram_enabled").checked=tg.enabled===true;
  $("telegram_recipient").value=tg.recipient_type||"channel";
@@ -225,6 +238,7 @@ $("settings").addEventListener("submit",event=>{
  c.presenter_settings.scenes.intro_seconds=Number($("intro_seconds").value);
  c.presenter_settings.scenes.outro_seconds=Number($("outro_seconds").value);
  c.presenter_settings.scenes.show_headlines=$("show_headlines").checked;
+ c.automation={enabled:$("automation_enabled").checked,interval_hours:Number($("automation_interval").value),start_hour_utc:Number($("automation_hour").value),days:$("automation_days").value};
  c.telegram={enabled:$("telegram_enabled").checked,recipient_type:$("telegram_recipient").value,delivery:$("telegram_delivery").value,caption:$("telegram_caption").value.trim()};
  if(!c.telegram.caption)throw Error("Telegram-Nachricht darf nicht leer sein.");
  preparedConfig=c;
