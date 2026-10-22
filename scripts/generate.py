@@ -68,7 +68,6 @@ MEDIA_NS = "{http://search.yahoo.com/mrss/}"
 
 def media_candidates(node):
     """Return image/video URLs explicitly attached to a feed entry."""
-    from urllib.parse import urljoin
     found = []
     def add(url, kind):
         if url:
@@ -83,7 +82,7 @@ def media_candidates(node):
                 add(url, kind)
     raw = node.findtext("description") or node.findtext(ATOM + "content") or node.findtext(ATOM + "summary") or ""
     for tag, kind in (("img", "image"), ("video", "video"), ("source", "video")):
-        for match in re.finditer(r"<" + tag + r"\\b[^>]*?\\bsrc=[\\\"']([^\\\"']+)", raw, re.I):
+        for match in re.finditer(r"<" + tag + r"\b[^>]*?\bsrc\s*=\s*['\"]([^'\"]+)", raw, re.I):
             add(html.unescape(match.group(1)), kind)
     return found
 
