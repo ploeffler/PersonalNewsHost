@@ -29,18 +29,18 @@ def main():
         if not (ROOT / "models/de_DE-thorsten-high.onnx").is_file():
             raise RuntimeError("Piper model missing; refuse eSpeak fallback in quality test")
         synthesize(segment["speech_text"], speech)
+        if segment["kind"] == "story":
+            from story_card import render
+            picture = Path(directory) / "story-card.png"
+            sources = segment.get("sources") or []
+            publisher = sources[0].get("publisher", "RSS") if sources else "RSS"
+            render(segment["headline"], publisher, int(args.segment.split("-")[-1]), picture)
         visual_input = (["-loop", "1", "-framerate", "25", "-i", str(picture)]
                         if picture.is_file() else
                         ["-f", "lavfi", "-i", "color=c=0x13243a:s=1280x720:r=25"])
         if not picture.is_file():
             print("Using generated fallback background:", picture)
         filters = "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,format=yuv420p"
-        if segment["kind"] == "story":
-            headline = Path(directory) / "headline.txt"
-            headline.write_text("\n".join(textwrap.wrap(segment["headline"], width=43)), encoding="utf-8")
-            filters += (f",drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
-                        f"textfile={headline}:fontcolor=white:fontsize=42:line_spacing=14:"
-                        "x=(w-text_w)/2:y=(h-text_h)/2:box=1:boxcolor=0x091a2add:boxborderw=30")
         subprocess.run([
             "ffmpeg", "-y", "-loglevel", "error", *visual_input, "-i", str(speech),
             "-vf", filters,
