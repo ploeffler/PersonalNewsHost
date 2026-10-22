@@ -13,13 +13,13 @@ class ProviderRegistryTests(unittest.TestCase):
         result = plan({"advanced_services": {"voice_provider": "openai"}})
         self.assertTrue(result["paid_requested"])
         self.assertFalse(result["ready"])
-        self.assertEqual(len(result["blockers"]), 3)
+        self.assertEqual(len(result["blockers"]), 4)
 
     def test_even_consented_paid_is_blocked(self):
         config = {"production_version": "2.0", "advanced_services": {
             "voice_provider": "openai", "allow_paid": True,
             "max_per_video_eur": 1, "max_per_month_eur": 10}}
-        self.assertEqual(len(plan(config)["blockers"]), 1)
+        self.assertEqual(len(plan(config)["blockers"]), 2)
         with self.assertRaises(RuntimeError):
             require_executable_version(config)
 
@@ -31,6 +31,20 @@ class ProviderRegistryTests(unittest.TestCase):
         ):
             with self.assertRaises(ValueError):
                 plan(config)
+
+    def test_processing_location_validation(self):
+        for advanced in (
+            {"processing_region": "moon"},
+            {"processing_region": "eu", "processing_country": "US"},
+            {"processing_country": "ZZ"},
+            {"require_verified_region": "yes"},
+        ):
+            with self.assertRaises(ValueError):
+                plan({"advanced_services": advanced})
+        location = plan({"advanced_services": {
+            "processing_region": "eu", "processing_country": "AT",
+            "require_verified_region": True}})["processing_location"]
+        self.assertEqual(location["country"], "AT")
 
     def test_legacy_version_remains_valid(self):
         require_executable_version({})
