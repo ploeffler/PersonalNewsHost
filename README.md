@@ -79,6 +79,16 @@ Der produktive Workflow überschreibt die neueste Ausgabe; ein vollständiges Se
 
 Der Produktivworkflow `.github/workflows/news.yml` wird außerdem per Cron um Minute 17 jeder Stunde angefordert. GitHub garantiert weder einen exakten Startzeitpunkt noch die Ausführung jedes geplanten Laufs.
 
+## Web-Konfiguration (erste Beta)
+
+Die erste browserbasierte Oberfläche ist unter **[Konfiguration öffnen](https://ploeffler.github.io/PersonalNewsHost/settings.html)** erreichbar. Sie ist als statische GitHub-Pages-Seite umgesetzt und benötigt keinen eigenen Server.
+
+Derzeit kann man RSS-Quellen, Titel, Meldungsanzahl, Textlänge, Piper-Sprechtempo, Moderatorenname, Portrait- und Hintergrundpfad sowie Szeneneinstellungen bearbeiten. Die Seite lädt die öffentliche `config.json` aus dem Repository, validiert Eingaben und bietet den Download einer aktualisierten `config.json` an. Alternativ lässt sich eine vorhandene JSON-Datei importieren.
+
+**Noch nicht umgesetzt:** Automatisches Zurückschreiben der Konfiguration nach GitHub, Upload von Bilddateien, sichere Anmeldung und Start eines Workflows direkt aus der Oberfläche. Die heruntergeladene `config.json` muss derzeit manuell ins Repository übernommen werden. **Keine GitHub-Tokens oder Passwörter in diese Webseite eingeben.**
+
+Damit ist ein erster Teil des v1.0-Ziels vorhanden; die vollständige browserbasierte Administration steht noch aus.
+
 ## Konfiguration
 
 Die wesentlichen Optionen in `config.json`:
