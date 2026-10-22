@@ -7,6 +7,8 @@ from dataclasses import dataclass
 from decimal import Decimal, InvalidOperation
 from typing import Protocol
 
+from .processing_location import validate_location
+
 
 class NewsProvider(Protocol):
     def prepare(self, articles: list[dict]) -> str: ...
@@ -70,6 +72,7 @@ def plan(config: dict) -> dict:
     advanced = config.get("advanced_services", {})
     if not isinstance(advanced, dict):
         raise ValueError("advanced_services must be an object")
+    location = validate_location(advanced)
     chosen = {}
     for stage, default in DEFAULTS.items():
         key = advanced.get(stage + "_provider", default)
@@ -82,6 +85,7 @@ def plan(config: dict) -> dict:
     allowed = advanced.get("allow_paid", False) is True
     return {
         "providers": {stage: spec.key for stage, spec in chosen.items()},
+        "processing_location": location,
         "paid_requested": paid,
         "consent": allowed,
         "per_video_eur": str(per_video),
@@ -90,6 +94,7 @@ def plan(config: dict) -> dict:
         "blockers": (
             (["Paid services are not authorized"] if paid and not allowed else [])
             + (["Positive per-video and monthly budgets required"] if paid and (per_video <= 0 or per_month <= 0) else [])
+            + (["Processing location not verified for this provider"] if paid and location["strict"] else [])
             + (["Paid adapters and enforceable billing controls are not implemented"] if paid else [])
         ),
     }
