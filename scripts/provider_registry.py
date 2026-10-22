@@ -9,8 +9,10 @@ from typing import Protocol
 
 try:
     from .processing_location import validate_location
+    from .provider_catalog import evaluate
 except ImportError:
     from processing_location import validate_location
+    from provider_catalog import evaluate
 
 
 class NewsProvider(Protocol):
@@ -85,10 +87,12 @@ def plan(config: dict) -> dict:
     per_video = _budget(advanced.get("max_per_video_eur", 0), "max_per_video_eur")
     per_month = _budget(advanced.get("max_per_month_eur", 0), "max_per_month_eur")
     paid = any(spec.paid for spec in chosen.values())
+    residency = {stage: evaluate(stage, spec.key, location["region"], location["country"], location["strict"]) for stage, spec in chosen.items()}
     allowed = advanced.get("allow_paid", False) is True
     return {
         "providers": {stage: spec.key for stage, spec in chosen.items()},
         "processing_location": location,
+        "residency": residency,
         "paid_requested": paid,
         "consent": allowed,
         "per_video_eur": str(per_video),
@@ -97,7 +101,7 @@ def plan(config: dict) -> dict:
         "blockers": (
             (["Paid services are not authorized"] if paid and not allowed else [])
             + (["Positive per-video and monthly budgets required"] if paid and (per_video <= 0 or per_month <= 0) else [])
-            + (["Processing location not verified for this provider"] if paid and location["strict"] else [])
+            + (["Processing location not verified for selected providers"] if location["strict"] and any(not item["allowed"] for item in residency.values()) else [])
             + (["Paid adapters and enforceable billing controls are not implemented"] if paid else [])
         ),
     }
