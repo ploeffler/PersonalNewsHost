@@ -122,7 +122,7 @@ def main():
     parts = [intro_text, f"Die Nachrichten vom {timestamp}."]
     limit = max(0, min(int(CONFIG.get("max_description_chars", 180)), 300))
     for title, desc, _ in selected:
-        parts.append(title.rstrip(".!?") + ".\\n" + (desc[:limit].rsplit(" ", 1)[0] if len(desc) > limit else desc))
+        parts.append(title.rstrip(".!?") + ".\n" + (desc[:limit].rsplit(" ", 1)[0] if len(desc) > limit else desc))
     parts.append(outro_text)
     script = "\n\n".join(parts)
     (DOCS / "transcript.txt").write_text(script + "\n", encoding="utf-8")
