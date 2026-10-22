@@ -15,10 +15,18 @@ def build(analysis,config):
     now=datetime.datetime.now(datetime.timezone.utc)
     max_items=max(1,min(int(config.get("max_items",5)),10))
     limit=max(0,min(int(config.get("max_description_chars",180)),300))
+    scenes=config.get("presenter_settings",{}).get("scenes",{})
+    mode=scenes.get("intro_mode","avatar")
+    if mode not in ("avatar","static"):raise ValueError("Invalid intro mode")
+    intro=scenes.get("intro_text","Willkommen bei {title}. Hier sind die Nachrichten.")
+    outro=scenes.get("outro_text","Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.")
+    if not isinstance(intro,str) or not isinstance(outro,str):raise ValueError("Invalid narration text")
+    intro=intro.replace("{title}",str(config.get("title","PersonalNewsHost")))
+    if not 1<=len(intro.strip())<=1500 or not 1<=len(outro.strip())<=1500:raise ValueError("Narration text length invalid")
     segments=[{
-        "id":"intro","kind":"intro","render_engine":"musetalk",
-        "presenter_visible":True,
-        "speech_text":f"Willkommen bei {config.get('title','PersonalNewsHost')}. Hier sind die Nachrichten.",
+        "id":"intro","kind":"intro","render_engine":"musetalk" if mode=="avatar" else "ffmpeg",
+        "presenter_visible":mode=="avatar",
+        "speech_text":intro,
         "sources":[],"review_required":False
     }]
     pending=[]
@@ -45,7 +53,7 @@ def build(analysis,config):
     segments.append({
         "id":"outro","kind":"outro","render_engine":"musetalk",
         "presenter_visible":True,
-        "speech_text":"Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.",
+        "speech_text":outro,
         "sources":[],"review_required":False
     })
     return {"schema_version":1,"generated_utc":now.isoformat(),
