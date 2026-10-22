@@ -80,11 +80,11 @@ function fill(c){
 async function load(){
  $("status").textContent="Lade Konfiguration …";$("result").textContent="";
  try{
- const response=await fetch("https://raw.githubusercontent.com/ploeffler/PersonalNewsHost/main/config.json",{cache:"no-store"});
- if(!response.ok)throw new Error("Konfiguration nicht unter ../config.json erreichbar (HTTP "+response.status+").");
+ const response=await fetch("./config.json",{cache:"no-store"});
+ if(!response.ok)throw new Error("Konfiguration nicht unter ./config.json erreichbar (HTTP "+response.status+").");
  fill(await response.json());
  }catch(e){
- $("status").textContent="Die Repository-Konfiguration konnte nicht von GitHub geladen werden. Bitte config.json von GitHub herunterladen und unten importieren.";
+ $("status").textContent="Die veröffentlichte Konfiguration konnte nicht geladen werden. Bitte Seite neu laden oder config.json importieren.";
  $("importrow").hidden=false;
  }
 }
