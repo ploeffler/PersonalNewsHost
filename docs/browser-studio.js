@@ -101,7 +101,7 @@
        const mime=["video/webm;codecs=vp9,opus","video/webm;codecs=vp8,opus","video/webm"].find(x=>MediaRecorder.isTypeSupported(x));
        if(!mime)throw Error("Kein kompatibler WebM-Codec verfügbar");
        chunks=[];stream=canvas.captureStream(FPS);
-       for(const track of audioDestination.stream.getAudioTracks())stream.addTrack(track);
+       for(const track of audioDestination.stream.getAudioTracks())stream.addTrack(track.clone());
        recorder=new MediaRecorder(stream,{mimeType:mime,videoBitsPerSecond:2500000});
        recorder.ondataavailable=e=>{if(e.data.size)chunks.push(e.data);};
        recorder.onstop=()=>{
