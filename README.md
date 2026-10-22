@@ -89,6 +89,18 @@ Derzeit kann man RSS-Quellen, Titel, Meldungsanzahl, Textlänge, Piper-Sprechtem
 
 Damit ist ein erster Teil des v1.0-Ziels vorhanden; die vollständige browserbasierte Administration steht noch aus.
 
+### Intro und Outro anpassen
+
+In der Web-Konfiguration stehen jetzt weitere Szenenoptionen zur Verfügung:
+
+- **Intro-Darstellung:** `Avatar` (MuseTalk-Lippenanimation wie im bisherigen experimentellen Intro) oder `Statischer Hintergrund` (FFmpeg ohne Avatar und ohne MuseTalk-Rechenaufwand).
+- **Intro-Text:** frei editierbarer Sprechertext. Der Platzhalter `{title}` wird durch den konfigurierten Sendungstitel ersetzt.
+- **Outro-Text:** ebenfalls frei editierbarer Sprechertext.
+
+Die Optionen werden in `config.json` unter `presenter_settings.scenes.intro_mode`, `intro_text` und `outro_text` gespeichert. Der experimentelle Sendungsplan und sein Renderer berücksichtigen diese Einstellungen. Das **Outro verwendet weiterhin den Avatar**; die Auswahl zwischen Avatar und Standbild betrifft zunächst nur das Intro. Ein eigener Hintergrund unter `assets/background.jpg` muss vorhanden sein, wenn statt der technischen Ersatzfarbe ein individuelles Standbild erscheinen soll.
+
+**Status:** Code umgesetzt, aber noch nicht durch einen neuen vollständigen Workflow-Lauf bestätigt. Der bisherige stündliche Produktivgenerator übernimmt diese neuen Texte und die Intro-Moduswahl noch nicht; das folgt bei der Integration der neuen Pipeline.
+
 ## Konfiguration
 
 Die wesentlichen Optionen in `config.json`:
