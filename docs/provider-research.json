@@ -1,0 +1,40 @@
+{
+  "reviewed_on": "2026-10-22",
+  "scope": "Documented deployment modes only. No account/model/endpoint has been verified for PersonalNewsHost.",
+  "candidates": [
+    {
+      "id": "azure_eu_data_zone",
+      "name": "Microsoft Foundry Models – EU Data Zone",
+      "service": "news",
+      "processing_scope": "EU Data Boundary (may include EFTA)",
+      "country_guarantee": false,
+      "model_verified": false,
+      "ready": false,
+      "documentation": "https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/deployment-types",
+      "notes": "Data Zone processing is bounded to Microsoft's defined zone; availability depends on model and deployment type. Not necessarily restricted to EU member states."
+    },
+    {
+      "id": "azure_geography",
+      "name": "Microsoft Foundry Models – regional/geography deployment",
+      "service": "news",
+      "processing_scope": "Configured Azure geography",
+      "country_guarantee": false,
+      "model_verified": false,
+      "ready": false,
+      "documentation": "https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/deployment-types",
+      "notes": "Requires checking selected Azure geography, model and deployment SKU; not a universal single-country guarantee."
+    },
+    {
+      "id": "aws_bedrock_eu_geo",
+      "name": "Amazon Bedrock – EU geographic inference profile",
+      "service": "news",
+      "processing_scope": "EU geographic inference profile",
+      "country_guarantee": false,
+      "model_verified": false,
+      "ready": false,
+      "documentation": "https://docs.aws.amazon.com/bedrock/latest/userguide/geographic-cross-region-inference.html",
+      "notes": "Inference may move between supported regions within the profile geography. Model/profile and destination region list must be checked."
+    }
+  ],
+  "warning": "These are documented deployment possibilities, not approved providers or verified processing commitments for the project's concrete usage."
+}
