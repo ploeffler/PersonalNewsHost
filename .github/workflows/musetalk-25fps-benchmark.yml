@@ -86,7 +86,7 @@ jobs:
               features,audio_length=ap.get_audio_feature(str(out/"speech.wav"))
               whisper=WhisperModel.from_pretrained("openai/whisper-tiny").eval()
               with torch.inference_mode():
-                  chunks=ap.get_whisper_chunk(features,"cpu",torch.float32,whisper,audio_length,fps=5)
+                  chunks=ap.get_whisper_chunk(features,"cpu",torch.float32,whisper,audio_length,fps=25)
                   all_audio=PositionalEncoding(d_model=384)(chunks)
               del whisper,features,ap,chunks
               gc.collect()
