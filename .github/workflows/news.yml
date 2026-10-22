@@ -25,15 +25,21 @@ jobs:
         if: steps.schedule.outputs.due == 'true'
         run: |
           set -euo pipefail
-          # Avoid apt-get update: the package-index refresh has repeatedly stalled.
-          # Ubuntu runners normally include FFmpeg and DejaVu; only eSpeak may be missing.
-          command -v ffmpeg || echo "FFmpeg missing"
-          command -v ffprobe || echo "FFprobe missing"
-          fc-match DejaVuSans || true
-          if ! command -v espeak-ng >/dev/null; then
-            echo "Installing eSpeak-NG using cached package indexes (no apt update)"
-            timeout 90s sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends -o Acquire::Retries=0 -o Acquire::http::Timeout=15 -o Acquire::https::Timeout=15 espeak-ng
+          # Install only tools absent from the runner using already cached apt indexes.
+          missing=()
+          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
+            missing+=(ffmpeg)
           fi
+          if ! command -v espeak-ng >/dev/null; then
+            missing+=(espeak-ng)
+          fi
+          if (( ${#missing[@]} )); then
+            printf 'Installing missing packages: %s\n' "${missing[*]}"
+            timeout 150s sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends -o Acquire::Retries=0 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20 "${missing[@]}"
+          fi
+          command -v ffmpeg
+          command -v ffprobe
+          command -v espeak-ng
           ffmpeg -version | sed -n '1p'
           espeak-ng --version
       - name: Smoke-test FFmpeg intro modes
