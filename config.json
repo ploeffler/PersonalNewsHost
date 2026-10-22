@@ -36,5 +36,11 @@
       "intro_static_image": "assets/background.jpg"
     }
   },
-  "voice_pitch_semitones": -1.5
+  "voice_pitch_semitones": -1.5,
+  "telegram": {
+    "enabled": false,
+    "recipient_type": "channel",
+    "delivery": "auto",
+    "caption": "{title} – neue Nachrichtensendung\n{url}"
+  }
 }
