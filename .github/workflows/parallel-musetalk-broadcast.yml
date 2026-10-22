@@ -66,6 +66,7 @@ jobs:
           path: |
             rendered/*.mp4
             musetalk-render/report.json
+          if-no-files-found: error
   assemble:
     needs: [prepare, render]
     runs-on: ubuntu-latest
@@ -77,8 +78,21 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           pattern: rendered-*
-          path: rendered
-          merge-multiple: true
+          path: downloaded
+          merge-multiple: false
+      - name: Collect segment MP4 files
+        run: |
+          mkdir -p rendered
+          for segment in intro story-01 story-02 story-03 story-04 story-05 outro; do
+            file="downloaded/rendered-${segment}/rendered/${segment}.mp4"
+            if [ ! -s "$file" ]; then
+              echo "::error::Missing segment video: $file"
+              find downloaded -type f -print
+              exit 1
+            fi
+            cp "$file" "rendered/${segment}.mp4"
+          done
+          ls -lh rendered/*.mp4
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - run: python3 scripts/assemble_segments.py
       - uses: actions/upload-artifact@v4
