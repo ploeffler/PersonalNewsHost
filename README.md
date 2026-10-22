@@ -317,3 +317,7 @@ Im Tab **Version** wird vor dem Anbieter zuerst der gewünschte Datenraum (`adva
 ### Standort-Recherche offline prüfen
 
 Mit `python3 -m scripts.audit_provider_research` lässt sich der öffentliche Recherchekatalog lokal auf fehlende modellgenaue Nachweise prüfen. Der Befehl benötigt keine Zugangsdaten, ruft keine Provider-APIs auf und erzeugt keine Kosten. Das Ergebnis ist ein **Recherchebericht**, keine Live-Verfügbarkeitsprüfung und keine Anbieterfreigabe. Für eine tatsächliche Prüfung bei AWS oder Microsoft werden später konkrete Modell-IDs, Regionen, Endpunkte und gegebenenfalls Kontoberechtigungen benötigt. Bis dahin bleiben alle externen Anbieter gesperrt.
+
+### Standort-Prüfstatus in der Konfiguration
+
+Im Tab **Version** liest die Konfigurationsseite `docs/provider-research.json` und zeigt je recherchierter Anbieteroption die fehlenden Pflichtangaben an. Der Button **Prüfdaten aktualisieren** lädt die JSON-Datei erneut. Es erfolgt keine externe Anbieter-API-Abfrage; der Browser liest nur die öffentliche Datei der eigenen GitHub-Pages-Seite. Die Anzeige ist eine dokumentarische Vollständigkeitsprüfung und kein Nachweis einer tatsächlichen Datenresidenz oder Modellverfügbarkeit. Alle externen Optionen bleiben nicht freigegeben.
