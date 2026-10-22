@@ -195,15 +195,15 @@ def synthesize(script, wav):
 
 def edit_news(title, description, style, max_sentences, limit):
     """Offline, conservative editorial formatting without inventing facts."""
-    title = re.sub(r"\\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", title))).strip()
-    description = re.sub(r"\\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", description))).strip()
+    title = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", title))).strip()
+    description = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", description))).strip()
     if style == "original":
         clipped = description[:limit].rsplit(" ", 1)[0] if len(description) > limit else description
         return title.rstrip(".!?") + ".\n" + clipped
     if style not in ("classic", "brief"):
         raise ValueError("Unknown editorial style")
     # Only complete sentences; never invent context or paraphrase factual claims.
-    sentences = re.split(r"(?<=[.!?])\\s+", description)
+    sentences = re.split(r"(?<=[.!?])\s+", description)
     sentences = [x.strip() for x in sentences if x.strip() and x.strip()[-1] in ".!?"]
     sentences = [x for x in sentences if x.casefold().rstrip(".!?") != title.casefold().rstrip(".!?")]
     count = 1 if style == "brief" else max_sentences
