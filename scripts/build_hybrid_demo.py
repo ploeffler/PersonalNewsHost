@@ -8,7 +8,7 @@ def run(*args):
     subprocess.run(args, check=True)
 
 def probe(path):
-    return json.loads(subprocess.check_output(["ffprobe","-v","error","-show_entries","format=duration","-of","json",str(path)],text=True))["format"]["duration"])
+    return float(json.loads(subprocess.check_output(["ffprobe","-v","error","-show_entries","format=duration","-of","json",str(path)],text=True))["format"]["duration"])
 
 def main():
     folder=Path("musetalk-hybrid-interpolation")
