@@ -422,17 +422,37 @@ def main():
             media_label = f"rssmedia{idx}"
             next_label = f"rssscene{idx}"
             filters.append(
-                f"[{input_index}:v]fps=5,scale=1280:720:force_original_aspect_ratio=decrease,"
-                f"pad=1280:720:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
+                f"[{input_index}:v]fps=5,scale=830:720:force_original_aspect_ratio=decrease,"
+                f"pad=830:720:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
                 f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS[{media_label}]"
             )
             filters.append(
-                f"[{current}][{media_label}]overlay=0:0:"
+                f"[{current}][{media_label}]overlay=x={450 if idx % 2 == 1 else 0}:y=0:"
                 f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
                 f"eof_action=repeat:shortest=0[{next_label}]"
             )
             current = next_label
             print(f"RSS {kind} used for story {idx + 1}: {path.name}")
+        # During each narrated story, alternate presenter sides. The story
+        # media occupies the opposite side, leaving a narrow headline panel.
+        if presenter.is_file():
+            person_input = 3 if intro_mode == "static" else 2
+            for idx in range(len(selected)):
+                start_time = boundaries[idx + 2]
+                end_time = boundaries[idx + 3]
+                on_left = idx % 2 == 1
+                x = "35" if on_left else "W-w-35"
+                label = f"hoststory{idx}"
+                filters.append(
+                    f"[{person_input}:v]fps=5,scale=380:570:force_original_aspect_ratio=decrease,"
+                    f"format=rgba[personstory{idx}]"
+                )
+                filters.append(
+                    f"[{current}][personstory{idx}]overlay=x={x}:y=H-h-25:"
+                    f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
+                    f"eof_action=repeat[{label}]"
+                )
+                current = label
         # Technical / AI broadcast identity: all graphics are rendered locally by FFmpeg.
         # Use text files so feed titles and brand names cannot inject filter syntax.
         font = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
@@ -479,7 +499,7 @@ def main():
                 # Wrap text to fit the 1280px canvas.
                 import textwrap
                 headline_file.write_text(
-                    "\n".join(textwrap.wrap(title, width=42, break_long_words=True)),
+                    "\n".join(textwrap.wrap(title, width=27, break_long_words=True)),
                     encoding="utf-8"
                 )
                 print(f"Headline {idx+1}/{story_count}: {start_time:.1f}-{end_time:.1f}s: {title[:65]}")
@@ -488,14 +508,15 @@ def main():
                 host = urlparse(selected[idx][2]).hostname or "Quelle im Web"
                 source_file.write_text(host[:75], encoding="utf-8")
                 source_label = f"source{idx}"
+                text_x = 480 if idx % 2 == 1 else 40
                 filters.append(
-                    f"[{current}]drawbox=x=38:y={390 if story_media[idx] else 170}:w=1204:h={240 if story_media[idx] else 390}:color=0x07182b@0.80:t=fill:"
+                    f"[{current}]drawbox=x={text_x}:y={390 if story_media[idx] else 170}:w=760:h={240 if story_media[idx] else 390}:color=0x07182b@0.80:t=fill:"
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[{source_label}]"
                 )
                 current = source_label
                 filters.append(
                     f"[{current}]drawtext=fontfile={font}:textfile={source_file}:"
-                    f"fontcolor=0x65e1ff:fontsize=23:x=72:y={570 if story_media[idx] else 493}:"
+                    f"fontcolor=0x65e1ff:fontsize=23:x={text_x + 28}:y={570 if story_media[idx] else 493}:"
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[credit{idx}]"
                 )
                 current = f"credit{idx}"
@@ -503,7 +524,7 @@ def main():
                 filters.append(
                     f"[{current}]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
                     f"textfile={headline_file}:fontcolor=white:fontsize={31 if story_media[idx] else 38}:line_spacing=15:"
-                    f"x=72:y={440 if story_media[idx] else 265}:box=0:"
+                    f"x={text_x + 28}:y={440 if story_media[idx] else 265}:box=0:"
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[{next_label}]"
                 )
                 current = next_label
