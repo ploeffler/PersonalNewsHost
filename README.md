@@ -272,3 +272,7 @@ Der Tab **Automatik** auf der Web-Konfigurationsseite steuert `automation` in `c
 - `days`: `daily`, `weekdays` oder `weekends`.
 
 Der GitHub-Actions-Cron bleibt technisch auf **stündlich, Minute 17 UTC** eingestellt. Ein kurzer Prüfjob überspringt alle rechenintensiven Schritte, wenn der gewählte Termin nicht fällig ist. So funktioniert die Konfiguration in eigenen Forks ohne GitHub-Workflow-Bearbeitung. Die GitHub-Actions-Ausführung ist **nicht minutengenau garantiert** und kann verzögert oder ausgelassen werden. Zeitangaben sind UTC; lokale Sommer-/Winterzeit wird nicht automatisch umgerechnet. Für das Aktivieren der geplanten Workflows im eigenen Fork gelten die GitHub-Einstellungen des Forks.
+
+### Zeitzonen und Sommerzeit
+
+Im Tab **Automatik** kann eine IANA-Zeitzone (z. B. `Europe/Vienna`) gewählt werden. `automation.timezone` und `automation.start_hour_local` steuern das lokale Stundenraster. Ältere Konfigurationen mit `start_hour_utc` funktionieren weiterhin und verwenden standardmäßig UTC. Die Umstellung auf Sommer-/Winterzeit erfolgt automatisch. Doppelt vorkommende Stunden im Herbst werden nur einmal ausgeführt; nicht vorhandene Stunden im Frühjahr entfallen. Der GitHub-Actions-Cron bleibt stündlich und kann verspätet laufen.
