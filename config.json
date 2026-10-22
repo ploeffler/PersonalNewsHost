@@ -30,7 +30,10 @@
       "show_headlines": true,
       "intro_mode": "avatar",
       "intro_text": "Willkommen bei {title}. Hier sind die Nachrichten.",
-      "outro_text": "Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite."
+      "outro_text": "Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.",
+      "intro_static_type": "color",
+      "intro_static_color": "#13243a",
+      "intro_static_image": "assets/background.jpg"
     }
   }
 }
