@@ -52,10 +52,29 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 </style></head><body><main class="container-fluid">
 <header class="page-header"><p><a href="./">← Zur Nachrichtenseite</a></p>
 <h1>PersonalNewsHost konfigurieren</h1>
-<p class="lead-copy">Nachrichtensendung, Stimme, Bilder und Ausgabekanäle konfigurieren. Einstellungen als Datei herunterladen oder mit einem GitHub-Token direkt speichern.</p></header>
+<p class="lead-copy">Nachrichtensendung, Stimme, Bilder und Ausgabekanäle konfigurieren. Im ersten Tab kannst du die Konfiguration speichern oder herunterladen.</p></header>
 <p id="status" role="status" aria-live="polite">Lade Konfiguration …</p>
 <form id="settings" hidden>
-<nav class="settings-tabs" aria-label="Konfigurationsgruppen" role="tablist"><button type="button" id="tab-sendung" role="tab" aria-controls="panel-sendung" aria-selected="true" tabindex="0" data-tab="sendung">Sendung</button><button type="button" id="tab-moderation" role="tab" aria-controls="panel-moderation" aria-selected="false" tabindex="-1" data-tab="moderation">Stimme & Moderator</button><button type="button" id="tab-scenes" role="tab" aria-controls="panel-scenes" aria-selected="false" tabindex="-1" data-tab="scenes">Intro & Outro</button><button type="button" id="tab-telegram" role="tab" aria-controls="panel-telegram" aria-selected="false" tabindex="-1" data-tab="telegram">Telegram</button><button type="button" id="tab-images" role="tab" aria-controls="panel-images" aria-selected="false" tabindex="-1" data-tab="images">Bilder</button></nav>
+<nav class="settings-tabs" aria-label="Konfigurationsgruppen" role="tablist"><button type="button" id="tab-github" role="tab" aria-controls="panel-github" aria-selected="true" tabindex="0" data-tab="github">GitHub &amp; Speichern</button><button type="button" id="tab-sendung" role="tab" aria-controls="panel-sendung" aria-selected="false" tabindex="-1" data-tab="sendung">Sendung</button><button type="button" id="tab-moderation" role="tab" aria-controls="panel-moderation" aria-selected="false" tabindex="-1" data-tab="moderation">Stimme & Moderator</button><button type="button" id="tab-scenes" role="tab" aria-controls="panel-scenes" aria-selected="false" tabindex="-1" data-tab="scenes">Intro & Outro</button><button type="button" id="tab-telegram" role="tab" aria-controls="panel-telegram" aria-selected="false" tabindex="-1" data-tab="telegram">Telegram</button><button type="button" id="tab-images" role="tab" aria-controls="panel-images" aria-selected="false" tabindex="-1" data-tab="images">Bilder</button></nav>
+<fieldset class="settings-panel active-panel" id="panel-github" role="tabpanel" aria-labelledby="tab-github"><legend>GitHub &amp; Speichern</legend>
+
+<section class="security-panel"><h2>Direkt in GitHub speichern (Beta)</h2>
+<p>Optional: Ein <strong>Fine-grained Personal Access Token</strong> mit Zugriff ausschließlich auf <code>ploeffler/PersonalNewsHost</code> und Berechtigung <strong>Contents: Read and write</strong> ermöglicht das Speichern ohne Download. Der Token wird nur für diese Sitzung im Eingabefeld gehalten, nicht gespeichert oder ins Repository übertragen. Verwende keinen klassischen Token mit breiten Rechten. Auf einem gemeinsam genutzten Gerät besser die Download-Funktion verwenden.</p>
+<label for="github_token">GitHub Fine-grained Token (nur für direkten Speichervorgang)</label><input id="github_token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…">
+<label><input id="confirm_save" type="checkbox" style="width:auto"> Ich möchte config.json auf main im Repository überschreiben.</label>
+<p id="save_status" role="status" aria-live="polite"></p></section>
+<section class="security-panel"><h2>Wie werden Änderungen aktiv?</h2>
+<p>Die heruntergeladene Datei muss im Repository die vorhandene <code>config.json</code> ersetzen. Danach wird die neue Konfiguration beim nächsten Produktionslauf eingelesen.</p>
+<p><a href="https://github.com/ploeffler/PersonalNewsHost/edit/main/config.json" rel="noopener noreferrer">config.json auf GitHub bearbeiten</a> · <a href="https://github.com/ploeffler/PersonalNewsHost/actions/workflows/news.yml" rel="noopener noreferrer">Produktionsworkflow starten</a></p>
+</section>
+<div class="action-bar"><button type="submit">Konfiguration herunterladen</button>
+<button type="button" id="save_github">Direkt auf GitHub speichern</button>
+<button type="button" id="reset">Neu laden</button></div>
+<p id="result" role="status" aria-live="polite"></p>
+
+<div id="importrow" hidden><label for="importfile">config.json vom Computer importieren</label><input id="importfile" type="file" accept=".json,application/json"></div>
+
+</fieldset>
 <fieldset class="settings-panel" id="panel-sendung" role="tabpanel" aria-labelledby="tab-sendung"><legend>Sendung</legend>
 <label for="title">Sendungstitel</label><input id="title" required maxlength="120">
 <label for="feeds">RSS-Feeds (eine HTTPS-Adresse pro Zeile)</label><textarea id="feeds" required spellcheck="false"></textarea>
@@ -100,20 +119,7 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <p id="upload_status" role="status" aria-live="polite"></p>
 <small>Nach erfolgreichem Upload werden die Bildpfade in die Felder übernommen. Anschließend „Direkt auf GitHub speichern“ verwenden, damit config.json ebenfalls aktualisiert wird. Den Token dafür erneut eingeben.</small>
 </fieldset>
-<div class="action-bar"><button type="submit">Konfiguration herunterladen</button>
-<button type="button" id="save_github">Direkt auf GitHub speichern</button>
-<button type="button" id="reset">Neu laden</button></div>
-<p id="result" role="status" aria-live="polite"></p>
 </form>
-<section class="security-panel"><h2>Direkt in GitHub speichern (Beta)</h2>
-<p>Optional: Ein <strong>Fine-grained Personal Access Token</strong> mit Zugriff ausschließlich auf <code>ploeffler/PersonalNewsHost</code> und Berechtigung <strong>Contents: Read and write</strong> ermöglicht das Speichern ohne Download. Der Token wird nur für diese Sitzung im Eingabefeld gehalten, nicht gespeichert oder ins Repository übertragen. Verwende keinen klassischen Token mit breiten Rechten. Auf einem gemeinsam genutzten Gerät besser die Download-Funktion verwenden.</p>
-<label for="github_token">GitHub Fine-grained Token (nur für direkten Speichervorgang)</label><input id="github_token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…">
-<label><input id="confirm_save" type="checkbox" style="width:auto"> Ich möchte config.json auf main im Repository überschreiben.</label>
-<p id="save_status" role="status" aria-live="polite"></p></section>
-<section class="security-panel"><h2>Wie werden Änderungen aktiv?</h2>
-<p>Die heruntergeladene Datei muss im Repository die vorhandene <code>config.json</code> ersetzen. Danach wird die neue Konfiguration beim nächsten Produktionslauf eingelesen.</p>
-<p><a href="https://github.com/ploeffler/PersonalNewsHost/edit/main/config.json" rel="noopener noreferrer">config.json auf GitHub bearbeiten</a> · <a href="https://github.com/ploeffler/PersonalNewsHost/actions/workflows/news.yml" rel="noopener noreferrer">Produktionsworkflow starten</a></p>
-</section><div id="importrow" hidden><label for="importfile">config.json vom Computer importieren</label><input id="importfile" type="file" accept=".json,application/json"></div>
 <script id="embedded-config" type="application/json">{"title":"PersonalNewsHost","language":"de","voice":"de","max_items":5,"max_description_chars":180,"feeds":["https://www.tagesschau.de/xml/rss2/","https://www.derstandard.at/rss"],"background":"assets/background.jpg","presenter":"assets/presenter.png","tts_engine":"piper","piper_length_scale":1.06,"presenter_settings":{"name":"NewsHost","gender":"custom","portrait":"assets/presenter.png","background":"assets/background.jpg","voice_model":"de_DE-thorsten-high","lip_sync":{"enabled":false,"engine":"none","fallback":"static","note":"CPU-only lip-sync not yet implemented; enable only after a successful prototype test"},"scenes":{"intro_seconds":8,"outro_seconds":8,"show_headlines":true,"intro_mode":"avatar","intro_text":"Willkommen bei {title}. Hier sind die Nachrichten.","outro_text":"Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.","intro_static_type":"color","intro_static_color":"#13243a","intro_static_image":"assets/background.jpg"}},"voice_pitch_semitones":-1.5}</script>
 <script>
 "use strict";
@@ -125,7 +131,7 @@ function updateStaticOptions(){ $("static_options").hidden=$("intro_mode").value
 $("intro_mode").addEventListener("change",updateStaticOptions);
 $("intro_static_type").addEventListener("change",updateStaticOptions);
 
-const tabIds=["sendung","moderation","scenes","telegram","images"];
+const tabIds=["github","sendung","moderation","scenes","telegram","images"];
 function activateSettingsTab(id,focus=false){
  for(const name of tabIds){
   const active=name===id;
@@ -150,7 +156,7 @@ $("settings").addEventListener("invalid",event=>{
  const panel=event.target.closest(".settings-panel");
  if(panel)activateSettingsTab(panel.id.replace("panel-",""));
 },true);
-activateSettingsTab("sendung");
+activateSettingsTab("github");
 const fields=["title","max_items","max_description_chars","piper_length_scale","voice_pitch_semitones","presenter","background"];
 function fill(c){
  original=c;
