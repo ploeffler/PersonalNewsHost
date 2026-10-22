@@ -56,7 +56,7 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 "use strict";
 let original=null;
 const $=id=>document.getElementById(id);
-function updateStaticOptions(){ $("static_options").hidden=$("intro_mode").value!=="static"; $("intro_static_color").parentElement.hidden=false; $("intro_static_color").closest("label").hidden=false; $("intro_static_image").disabled=$("intro_static_type").value!=="image"; }
+function updateStaticOptions(){ $("static_options").hidden=$("intro_mode").value!=="static"; $("intro_static_image").disabled=$("intro_static_type").value!=="image"; }
 $("intro_mode").addEventListener("change",updateStaticOptions);
 $("intro_static_type").addEventListener("change",updateStaticOptions);
 const fields=["title","max_items","max_description_chars","piper_length_scale","voice_pitch_semitones","presenter","background"];
