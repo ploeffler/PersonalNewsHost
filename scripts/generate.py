@@ -191,6 +191,42 @@ def main():
                 f"enable=\'{presenter_visibility}\'[composed]"
             ]
             current = "composed"
+        # Technical / AI broadcast identity: all graphics are rendered locally by FFmpeg.
+        # Use text files so feed titles and brand names cannot inject filter syntax.
+        font = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+        brand_file = Path(tmp) / "brand.txt"
+        brand_file.write_text(str(CONFIG["title"]), encoding="utf-8")
+        outro_file = Path(tmp) / "outro.txt"
+        outro_file.write_text("MEHR NACHRICHTEN  /  QUELLEN AUF DER WEBSEITE", encoding="utf-8")
+        filters.append(
+            f"[{current}]drawgrid=width=80:height=80:thickness=1:color=0x36d9ff@0.12:"
+            f"enable='lt(t,{intro:.3f})+gte(t,{outro_start:.3f})'[grid]"
+        )
+        current = "grid"
+        filters.append(
+            f"[{current}]drawbox=x=0:y=0:w=iw:h=12:color=0x30d8ff@0.95:t=fill:"
+            f"enable='lt(t,{intro:.3f})+gte(t,{outro_start:.3f})'[accent]"
+        )
+        current = "accent"
+        filters.append(
+            f"[{current}]drawtext=fontfile={font}:textfile={brand_file}:"
+            f"fontcolor=white:fontsize=68:x=(w-text_w)/2:y=(h-text_h)/2-35:"
+            f"borderw=2:bordercolor=0x0a1830:"
+            f"enable='lt(t,{intro:.3f})+gte(t,{outro_start:.3f})'[brand]"
+        )
+        current = "brand"
+        filters.append(
+            f"[{current}]drawtext=fontfile={font}:text='KI  /  NEWS  /  LIVE':"
+            f"fontcolor=0x54ddff:fontsize=24:x=(w-text_w)/2:y=h/2+65:"
+            f"enable='lt(t,{intro:.3f})'[introtag]"
+        )
+        current = "introtag"
+        filters.append(
+            f"[{current}]drawtext=fontfile={font}:textfile={outro_file}:"
+            f"fontcolor=0x54ddff:fontsize=22:x=(w-text_w)/2:y=h/2+65:"
+            f"enable='gte(t,{outro_start:.3f})'[outrotag]"
+        )
+        current = "outrotag"
         if scenes.get("show_headlines", True) and selected:
             # Each headline gets its own timed overlay, rather than one overflowing text block.
             story_count = len(selected)
@@ -206,11 +242,27 @@ def main():
                     encoding="utf-8"
                 )
                 print(f"Headline {idx+1}/{story_count}: {start_time:.1f}-{end_time:.1f}s: {title[:65]}")
+                source_file = Path(tmp) / f"source_{idx}.txt"
+                from urllib.parse import urlparse
+                host = urlparse(selected[idx][2]).hostname or "Quelle im Web"
+                source_file.write_text(host[:75], encoding="utf-8")
+                source_label = f"source{idx}"
+                filters.append(
+                    f"[{current}]drawbox=x=38:y=170:w=1204:h=390:color=0x07182b@0.80:t=fill:"
+                    f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[{source_label}]"
+                )
+                current = source_label
+                filters.append(
+                    f"[{current}]drawtext=fontfile={font}:textfile={source_file}:"
+                    f"fontcolor=0x65e1ff:fontsize=23:x=72:y=493:"
+                    f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[credit{idx}]"
+                )
+                current = f"credit{idx}"
                 next_label = "v" if idx == story_count - 1 else f"story{idx}"
                 filters.append(
                     f"[{current}]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
                     f"textfile={headline_file}:fontcolor=white:fontsize=38:line_spacing=15:"
-                    f"x=70:y=(h-text_h)/2:box=1:boxcolor=0x091a2acc:boxborderw=24:"
+                    f"x=72:y=265:box=0:"
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[{next_label}]"
                 )
                 current = next_label
