@@ -81,6 +81,12 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <p class="muted">Version 1.0 nutzt ausschließlich kostenlose, lokale Werkzeuge und GitHub Actions. Version 2.0 ist für kostenpflichtige KI-Dienste vorgesehen und wird erst auswählbar, wenn die Implementierung und die Kostenkontrollen bereitstehen. Ein Wechsel darf keine kostenpflichtigen Aufrufe ohne ausdrückliche Einrichtung auslösen.</p>
 <section class="security-panel"><h2>Version 2.0 vorbereiten</h2>
 <p>Die folgenden Angaben werden als Entwurf gespeichert. Sie starten keine kostenpflichtigen API-Aufrufe.</p>
+<h3>1. Rechenstandort zuerst auswählen</h3>
+<label for="v2_region">Bevorzugter Kontinent / Datenraum</label><select id="v2_region"><option value="eu">Europa (EU/EWR bevorzugt)</option><option value="europe">Europa (auch außerhalb EU/EWR)</option><option value="north_america">Nordamerika</option><option value="south_america">Südamerika</option><option value="asia">Asien</option><option value="oceania">Ozeanien</option><option value="africa">Afrika</option><option value="any">Weltweit – keine Ortsvorgabe</option></select>
+<label for="v2_country">Bevorzugtes Land der Verarbeitung</label><select id="v2_country"><option value="">Kein bestimmtes Land</option><option value="AT">Österreich</option><option value="DE">Deutschland</option><option value="FR">Frankreich</option><option value="IE">Irland</option><option value="NL">Niederlande</option><option value="SE">Schweden</option><option value="CH">Schweiz</option><option value="GB">Vereinigtes Königreich</option><option value="US">USA</option><option value="CA">Kanada</option><option value="BR">Brasilien</option><option value="JP">Japan</option><option value="SG">Singapur</option><option value="IN">Indien</option><option value="AU">Australien</option><option value="ZA">Südafrika</option></select>
+<label><input id="v2_region_strict" type="checkbox" checked> Nur Anbieter mit nachgewiesenem Rechenstandort zulassen (strikt)</label>
+<small>Maßgeblich ist der tatsächliche Ort der Verarbeitung, nicht der Firmensitz. Rechenstandort, Datenhaltung, Unterauftragsverarbeiter und mögliche Weiterleitungen müssen je Dienst und Modell nachgewiesen werden. Die Anbieter unten sind noch nicht regional geprüft und daher nicht ausführbar.</small>
+<h3>2. Dienste auswählen</h3>
 <label for="v2_news">KI-Nachrichtenaufbereitung</label><select id="v2_news"><option value="disabled">Deaktiviert</option><option value="openai">OpenAI (geplant)</option><option value="other">Anderer Anbieter (geplant)</option></select>
 <label for="v2_voice">Sprachausgabe</label><select id="v2_voice"><option value="local">Lokal (kostenlos)</option><option value="openai">OpenAI (geplant)</option><option value="other">Anderer Anbieter (geplant)</option></select>
 <label for="v2_avatar">Moderator / Avatar</label><select id="v2_avatar"><option value="static">Statisches Bild (kostenlos)</option><option value="paid">Externer KI-Avatar (geplant)</option></select>
@@ -207,6 +213,9 @@ function fill(c){
  original=c;
  $("production_version").value=c.production_version||"1.0";
  const v=c.advanced_services||{};
+ $("v2_region").value=v.processing_region||"eu";
+ $("v2_country").value=v.processing_country||"";
+ $("v2_region_strict").checked=v.require_verified_region!==false;
  $("v2_news").value=v.news_provider||"disabled";
  $("v2_voice").value=v.voice_provider||"local";
  $("v2_avatar").value=v.avatar_provider||"static";
@@ -266,7 +275,7 @@ $("settings").addEventListener("submit",event=>{
  const c=structuredClone(original);
  if($("production_version").value!=="1.0")throw Error("Version 2.0 ist noch nicht verfügbar.");
  c.production_version=$("production_version").value;
- c.advanced_services={news_provider:$("v2_news").value,voice_provider:$("v2_voice").value,avatar_provider:$("v2_avatar").value,video_provider:$("v2_video").value,max_per_video_eur:Number($("v2_max_video").value),max_per_month_eur:Number($("v2_max_month").value),allow_paid:$("v2_allow_paid").checked};
+ c.advanced_services={processing_region:$("v2_region").value,processing_country:$("v2_country").value,require_verified_region:$("v2_region_strict").checked,news_provider:$("v2_news").value,voice_provider:$("v2_voice").value,avatar_provider:$("v2_avatar").value,video_provider:$("v2_video").value,max_per_video_eur:Number($("v2_max_video").value),max_per_month_eur:Number($("v2_max_month").value),allow_paid:$("v2_allow_paid").checked};
  c.title=$("title").value.trim();
  c.feeds=[...new Set($("feeds").value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean).map(validUrl))];
  if(!c.title||!c.feeds.length||c.feeds.length>30)throw Error("Titel und 1–30 RSS-Feeds sind erforderlich.");
