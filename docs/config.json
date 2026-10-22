@@ -1,0 +1,40 @@
+{
+  "title": "PersonalNewsHost",
+  "language": "de",
+  "voice": "de",
+  "max_items": 5,
+  "max_description_chars": 180,
+  "feeds": [
+    "https://www.tagesschau.de/xml/rss2/",
+    "https://www.derstandard.at/rss"
+  ],
+  "background": "assets/background.jpg",
+  "presenter": "assets/presenter.png",
+  "tts_engine": "piper",
+  "piper_length_scale": 1.06,
+  "presenter_settings": {
+    "name": "NewsHost",
+    "gender": "custom",
+    "portrait": "assets/presenter.png",
+    "background": "assets/background.jpg",
+    "voice_model": "de_DE-thorsten-high",
+    "lip_sync": {
+      "enabled": false,
+      "engine": "none",
+      "fallback": "static",
+      "note": "CPU-only lip-sync not yet implemented; enable only after a successful prototype test"
+    },
+    "scenes": {
+      "intro_seconds": 8,
+      "outro_seconds": 8,
+      "show_headlines": true,
+      "intro_mode": "avatar",
+      "intro_text": "Willkommen bei {title}. Hier sind die Nachrichten.",
+      "outro_text": "Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.",
+      "intro_static_type": "color",
+      "intro_static_color": "#13243a",
+      "intro_static_image": "assets/background.jpg"
+    }
+  },
+  "voice_pitch_semitones": -1.5
+}
