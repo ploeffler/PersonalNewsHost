@@ -18,6 +18,28 @@ PersonalNewsHost ist aus **zwei Motivationen** entstanden.
 
 Die **kostenlose Betriebsweise** ist die Vorgabe dieses Prototyps, nicht das grundsätzliche Limit der Architektur. PersonalNewsHost soll auch mit **kostenpflichtigen Technologien und Diensten** betrieben werden können – beispielsweise für Sprachsynthese, Textanalyse, Bild- oder Videogenerierung oder leistungsfähigere Recheninfrastruktur. Dafür müssen die jeweiligen Anbieter technisch angebunden, Zugangsdaten sicher hinterlegt und ihre Preise berücksichtigt werden. **Die aktuell dokumentierten Workflows enthalten noch keine allgemein konfigurierbare Umschaltung auf solche kostenpflichtigen Anbieter.** Das ist eine geplante Erweiterungsmöglichkeit, keine bereits fertig implementierte Funktion.
 
+## Entwicklungschronik
+
+Die folgende Chronik zeigt, wie aus einer einfachen Idee im Dialog mit ChatGPT schrittweise ein ausführbares Cloud-Projekt wurde. Die Schritte beschreiben **Entwicklungs- und Teststände**, nicht durchgehend produktiv veröffentlichte Funktionen.
+
+| Phase | Entwicklung | Ergebnis |
+| --- | --- | --- |
+| **1. Ausgangsidee (21.10.2026)** | Der erste Prompt beschreibt konfigurierbare RSS-Feeds, eine stündlich erzeugte Nachrichtensendung als Video, einen austauschbaren Hintergrund und einen fotorealistischen Moderator. | Das Grundkonzept von PersonalNewsHost entsteht. |
+| **2. Rahmenbedingungen** | Die Anwendung soll ohne eigenen Server und ohne offenen Browser laufen. Als monatliches Zusatzbudget werden ausdrücklich **0 €** festgelegt; GitHub als Plattform ist erlaubt. | GitHub Actions, GitHub Pages und kostenlose lokal ausführbare Werkzeuge bilden die Basis. |
+| **3. Erste funktionsfähige Version** | RSS-Meldungen werden regelbasiert zu Sprechertexten verarbeitet; FFmpeg erstellt das Video, GitHub Pages stellt es bereit. | Automatische MP4-Veröffentlichung, Webseite, Transkript und ein Video-RSS-Feed. |
+| **4. Natürlichere Sprache** | Die zunächst mögliche eSpeak-Ausgabe wird durch das deutsche neuronale Piper-Modell `de_DE-thorsten-high` ergänzt. | Deutlich natürlichere Sprachausgabe ohne kostenpflichtigen Sprachdienst. |
+| **5. Themenanalyse** | Ein eigenständiger Testschritt untersucht Ähnlichkeiten innerhalb eines RSS-Feeds und zwischen mehreren Feeds. | Konservative Themenkandidaten; mögliche Mehrfachmeldungen werden zur Prüfung markiert, nicht ungeprüft zusammengeführt. |
+| **6. Parallele Videoproduktion** | Die Sendung wird in sieben separat erzeugbare Segmente zerlegt: Intro, fünf Nachrichten und Outro. | Ein vollständiger FFmpeg/Piper-Test wird erfolgreich zusammengesetzt. |
+| **7. Sprechender Moderator** | MuseTalk 1.5 wird mit Piper getestet. Nach einem ersten Versuch mit 5 neuronalen Bildern pro Sekunde folgt ein verbesserter Versuch mit 10 FPS und Interpolation auf 25 FPS. | Die Lippenbewegungen werden im zweiten Test als deutlich besser beurteilt. |
+| **8. Vollständige MuseTalk-Testsendung (22.10.2026)** | Intro und Outro werden mit MuseTalk erzeugt, die fünf Meldungen mit FFmpeg; die Segmente werden parallel gerendert und anschließend verbunden. | [GitHub-Actions-Lauf #39800872982](https://github.com/ploeffler/PersonalNewsHost/actions/runs/39800872982) schließt mit allen neun Jobs erfolgreich ab. |
+| **9. Bildgestaltung und Feinschliff** | Die Sprechgeschwindigkeit wird leicht erhöht. Individuelle, lokal erzeugte Nachrichtentafeln ersetzen in den Testbeiträgen den bisherigen blauen Ersatzhintergrund. Zudem werden die GitHub Actions auf Node.js-24-kompatible Versionen aktualisiert. | Änderungen sind im Repository umgesetzt; ihre Prüfung in einer neuen vollständigen Sendung steht noch aus. |
+
+### Was diese Chronik zeigen soll
+
+Der Ausgangspunkt war **kein fertiges Pflichtenheft und kein von Hand programmiertes Gesamtsystem**, sondern eine Beschreibung des gewünschten Ergebnisses. Die Umsetzung entstand durch Nachfragen, Entscheidungen, Codeänderungen, automatisierte Tests und die Beurteilung der erzeugten Videos. ChatGPT unterstützte die Entwicklung; die fertigen Workflows verwenden unterschiedliche frei verfügbare Programme und Modelle und benötigen für ihren Betrieb keine dauerhafte ChatGPT-Sitzung.
+
+**Der Null-Euro-Ansatz ist dabei eine bewusst gewählte Betriebsvariante.** Er beweist nicht, dass Rechenleistung grundsätzlich kostenlos ist: Sie wird hier innerhalb verfügbarer kostenloser Kontingente bereitgestellt. Kostenpflichtige Modelle, APIs oder Rechenumgebungen bleiben mögliche spätere Erweiterungen.
+
 ## Aktuelle Ausgaben
 
 - [Nachrichtenseite auf GitHub Pages](https://ploeffler.github.io/PersonalNewsHost/)
