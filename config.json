@@ -51,6 +51,9 @@
     "days": "daily"
   },
   "advanced_services": {
+    "processing_region": "eu",
+    "processing_country": "",
+    "require_verified_region": true,
     "news_provider": "disabled",
     "voice_provider": "local",
     "avatar_provider": "static",
