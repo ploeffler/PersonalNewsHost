@@ -31,6 +31,10 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 </fieldset>
 <fieldset><legend>Szenen</legend>
 <label for="intro_mode">Intro-Darstellung</label><select id="intro_mode"><option value="avatar">Sprechender Avatar (MuseTalk, experimentell)</option><option value="static">Statischer Hintergrund (ohne Avatar)</option></select>
+<label for="intro_static_type">Statischer Intro-Hintergrund</label><select id="intro_static_type"><option value="color">Einfärbig</option><option value="image">Bilddatei</option></select>
+<label for="intro_static_color">Hintergrundfarbe</label><input id="intro_static_color" type="color" value="#13243a">
+<label for="intro_static_image">Bildpfad im Repository (bei Bilddatei)</label><input id="intro_static_image" placeholder="assets/background.jpg">
+<small>Diese Einstellungen gelten nur für das Intro ohne Avatar. Eine Bilddatei muss bereits im Repository liegen.</small>
 <label for="intro_text">Intro-Sprechertext</label><textarea id="intro_text" maxlength="1500" required></textarea><small>Platzhalter {title} wird durch den Sendungstitel ersetzt.</small>
 <label for="outro_text">Outro-Sprechertext</label><textarea id="outro_text" maxlength="1500" required></textarea>
 <label for="intro_seconds">Intro (Sekunden)</label><input id="intro_seconds" type="number" min="0" max="60" required>
@@ -57,6 +61,9 @@ function fill(c){
  const p=c.presenter_settings||{},sc=p.scenes||{};
  $("presenter_name").value=p.name||"";
  $("intro_mode").value=sc.intro_mode||"avatar";
+ $("intro_static_type").value=sc.intro_static_type||"color";
+ $("intro_static_color").value=sc.intro_static_color||"#13243a";
+ $("intro_static_image").value=sc.intro_static_image||"assets/background.jpg";
  $("intro_text").value=sc.intro_text||"Willkommen bei {title}. Hier sind die Nachrichten.";
  $("outro_text").value=sc.outro_text||"Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.";
  $("intro_seconds").value=sc.intro_seconds??8;
@@ -95,6 +102,10 @@ $("settings").addEventListener("submit",event=>{
  c.presenter_settings.portrait=c.presenter;c.presenter_settings.background=c.background;
  c.presenter_settings.scenes??={};
  c.presenter_settings.scenes.intro_mode=$("intro_mode").value;
+ c.presenter_settings.scenes.intro_static_type=$("intro_static_type").value;
+ c.presenter_settings.scenes.intro_static_color=$("intro_static_color").value;
+ c.presenter_settings.scenes.intro_static_image=$("intro_static_image").value.trim();
+ if(!/^assets\/[a-zA-Z0-9_./-]+$/.test(c.presenter_settings.scenes.intro_static_image)||c.presenter_settings.scenes.intro_static_image.includes(".."))throw Error("Ungültiger Intro-Bildpfad.");
  c.presenter_settings.scenes.intro_text=$("intro_text").value.trim();
  c.presenter_settings.scenes.outro_text=$("outro_text").value.trim();
  if(!c.presenter_settings.scenes.intro_text||!c.presenter_settings.scenes.outro_text)throw Error("Intro- und Outro-Text dürfen nicht leer sein.");
