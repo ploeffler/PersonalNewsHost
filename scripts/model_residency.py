@@ -11,6 +11,9 @@ def validate_candidate(candidate, permitted_regions):
     if candidate.get("subprocessors_reviewed") is not True:
         missing.append("subprocessors_reviewed")
     destinations = candidate.get("destination_regions", [])
+    source = candidate.get("source_region")
+    if source and permitted_regions and source not in permitted_regions:
+        missing.append("source_region_outside_policy")
     if not isinstance(destinations, list) or not destinations:
         if "destination_regions" not in missing:
             missing.append("destination_regions")
