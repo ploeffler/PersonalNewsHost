@@ -227,7 +227,7 @@ def main():
             ],
             "duration": round(boundaries[-1], 4)
         }
-        (DOCS / "timeline.json").write_text(json.dumps(timeline, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+        (DOCS / "timeline.json").write_text(json.dumps(timeline, ensure_ascii=False, indent=2), encoding="utf-8")
         settings = CONFIG.get("presenter_settings", {})
         bg = ROOT / settings.get("background", CONFIG.get("background", "assets/background.jpg"))
         presenter = ROOT / settings.get("portrait", CONFIG.get("presenter", "assets/presenter.png"))
