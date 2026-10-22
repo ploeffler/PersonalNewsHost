@@ -139,6 +139,8 @@ jobs:
           print(json.dumps(report,indent=2),flush=True)
           if report["status"]=="error":raise SystemExit(1)
           PY
+      - name: Assemble experimental presenter intro and published bulletin
+        run: python3 scripts/build_hybrid_demo.py
       - name: Upload hybrid interpolation video and report
         if: always()
         uses: actions/upload-artifact@v4
