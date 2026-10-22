@@ -79,6 +79,10 @@ Der produktive Workflow überschreibt die neueste Ausgabe; ein vollständiges Se
 
 Der Produktivworkflow `.github/workflows/news.yml` wird außerdem per Cron um Minute 17 jeder Stunde angefordert. GitHub garantiert weder einen exakten Startzeitpunkt noch die Ausführung jedes geplanten Laufs.
 
+### Bild-Upload (Beta)
+
+Die Web-Konfiguration unterstützt jetzt den Upload eines eigenen Moderator-Porträts und Studiohintergrunds (PNG/JPEG, bis 4 MB, 320×240 bis 6000×6000 Pixel). Ein auf das Repository beschränkter Fine-grained GitHub Token mit `Contents: Read and write` ist erforderlich. Hochgeladene Bilder sind in diesem **öffentlichen** Repository öffentlich sichtbar. Der Upload erzeugt eindeutige Dateinamen unter `assets/` und setzt die Bildpfade im Formular. **Danach muss separat „Direkt auf GitHub speichern“ verwendet werden**, damit die neue `config.json` wirksam wird. Ein fehlgeschlagener zweiter Schritt kann bereits hochgeladene, noch unbenutzte Dateien hinterlassen. Diese Beta-Funktion ist noch nicht im Browser mit echten Bilddateien getestet.
+
 ## Direktes Speichern der Web-Konfiguration (Beta)
 
 Unter [settings.html](https://ploeffler.github.io/PersonalNewsHost/settings.html) gibt es neben dem JSON-Download jetzt **Direkt auf GitHub speichern**. Hierfür kann der Repository-Eigentümer einen [Fine-grained Personal Access Token](https://github.com/settings/personal-access-tokens/new) erzeugen, ausschließlich für `ploeffler/PersonalNewsHost`, mit `Contents: Read and write`. Token nur auf der vertrauenswürdigen GitHub-Pages-Projektseite eingeben; nicht in GitHub-Dateien, Screenshots, Issues oder Chats veröffentlichen. Die Webseite speichert den Token nicht dauerhaft und leert das Feld nach dem Versuch. Die GitHub-API aktualisiert `config.json` auf `main` mit dem aktuellen Datei-SHA, damit Konflikte nicht still überschrieben werden. Die alte Download-/Import-Möglichkeit bleibt erhalten. GitHub Pages lädt bevorzugt die veröffentlichte `docs/config.json` und fällt bei Fehlern auf die eingebettete Konfiguration zurück.
