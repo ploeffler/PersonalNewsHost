@@ -321,3 +321,7 @@ Mit `python3 -m scripts.audit_provider_research` lässt sich der öffentliche Re
 ### Standort-Prüfstatus in der Konfiguration
 
 Im Tab **Version** liest die Konfigurationsseite `docs/provider-research.json` und zeigt je recherchierter Anbieteroption die fehlenden Pflichtangaben an. Der Button **Prüfdaten aktualisieren** lädt die JSON-Datei erneut. Es erfolgt keine externe Anbieter-API-Abfrage; der Browser liest nur die öffentliche Datei der eigenen GitHub-Pages-Seite. Die Anzeige ist eine dokumentarische Vollständigkeitsprüfung und kein Nachweis einer tatsächlichen Datenresidenz oder Modellverfügbarkeit. Alle externen Optionen bleiben nicht freigegeben.
+
+### Anbieterfilter nach Standort und Nachweisstatus
+
+Der Recherchebereich im Tab **Version** kann nach Verarbeitungsraum, Land, Dienst und Nachweisstatus gefiltert werden. Ein geografischer Treffer wird **nur** angezeigt, wenn der Katalog ausdrücklich `verification_status: verified`, `model_verified: true` und passende `verified_regions` bzw. `verified_countries` enthält. Die bislang unverifizierten Kandidaten erscheinen daher bei Länder-/Regionsfiltern bewusst nicht. Filterung ist keine technische Freigabe; die 2.0-Ausführung bleibt gesperrt. Die angezeigten Treffer beruhen ausschließlich auf Katalogeinträgen, nicht auf einer Live-Prüfung.
