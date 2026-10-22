@@ -15,12 +15,25 @@ def tokens(text):
     return {w for w in re.findall(r"[a-zäöü0-9]{3,}",value) if w not in STOP}
 
 def similarity(a,b):
+    """Conservative candidate scoring using headlines plus supporting descriptions."""
     x,y=tokens(a["title"]),tokens(b["title"])
     if not x or not y:return 0.0
     if x==y:return 1.0
-    common=x&y
-    if len(common)<2:return 0.0
-    return len(common)/len(x|y)+min(.12,.04*sum(len(w)>=7 for w in common))
+    overlap=x&y
+    title_score=len(overlap)/len(x|y)
+    # The descriptions help distinguish events when titles use different wording.
+    dx,dy=tokens(a.get("description","")),tokens(b.get("description",""))
+    evidence=(x|dx)&(y|dy)
+    description_score=len(evidence)/max(1,min(len(x|dx),len(y|dy)))
+    # The following score is only for review candidates, not factual merging.
+    if len(overlap)>=2:
+        return max(title_score+.04*sum(len(w)>=7 for w in overlap),
+                   min(.72, .20+description_score))
+    # Strong shared proper-name / technical-term signal in a title plus
+    # supporting description; a lone generic keyword must not suffice.
+    if len(overlap)==1 and next(iter(overlap)) in {"php","kiew","meta","facebook"}:
+        return min(.65,.28+description_score)
+    return 0.0
 
 def parse_feed(data,url):
     root=ET.fromstring(data)
@@ -37,7 +50,7 @@ def parse_feed(data,url):
         if title:output.append({"title":title,"description":desc,"link":link,"source":urlparse(url).netloc})
     return output
 
-def group_items(items,threshold=.50):
+def group_items(items,threshold=.38):
     groups=[]
     for item in items:
         match=None;best=threshold
@@ -58,7 +71,7 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--config",default="config.json")
     parser.add_argument("--output",default="topic-analysis.json")
-    parser.add_argument("--threshold",type=float,default=.50)
+    parser.add_argument("--threshold",type=float,default=.38)
     args=parser.parse_args()
     config=json.loads(Path(args.config).read_text(encoding="utf-8"))
     items=[];errors=[]
