@@ -3,7 +3,7 @@
  const canvas=document.getElementById("stage"),ctx=canvas.getContext("2d");
  const status=document.getElementById("status"),play=document.getElementById("play"),exportButton=document.getElementById("export"),stop=document.getElementById("stop");
  const W=1280,H=720,INTRO=5,STORY=7,OUTRO=5,FPS=30;
- let stories=[],frame=0,recorder=null,stream=null,chunks=[],running=false,finishRequested=false;
+ let stories=[],timeline=null,frame=0,recorder=null,stream=null,chunks=[],running=false,finishRequested=false;
  const audio=document.getElementById("narration");audio.preload="metadata";
  let audioContext=null,audioDestination=null;
  const setStatus=s=>{status.textContent=s;};
@@ -42,7 +42,7 @@
  }
  function draw(time){
    const {total,intro,outro,storyLength}=sceneTiming();
-   const t=Math.min(time,total),isIntro=t<intro,isOutro=t>=total-outro;
+   const t=Math.min(time,total),introEnd=timeline?timeline.segments[1].end:intro,outroStart=timeline?timeline.segments[timeline.segments.length-1].start:total-outro,isIntro=t<introEnd,isOutro=t>=outroStart;
    ctx.fillStyle="#071425";ctx.fillRect(0,0,W,H);
    const glow=ctx.createRadialGradient(900,250,0,900,250,780);
    glow.addColorStop(0,"#0e4b68");glow.addColorStop(1,"#071425");
@@ -60,8 +60,9 @@
      ctx.font="20px system-ui";ctx.fillText(isIntro?"Nachrichten in Bewegung":"Quellen und Transkript auf der Webseite",0,99);
      ctx.restore();
    }else{
-     const idx=Math.min(stories.length-1,Math.floor((t-intro)/Math.max(.001,storyLength)));
-     const item=stories[idx];const progress=((t-intro)%Math.max(.001,storyLength))/Math.max(.001,storyLength);
+     const segment=timeline&&timeline.segments.find(x=>x.type==="story"&&t>=x.start&&t<x.end);
+     const idx=segment?segment.story_index:Math.min(stories.length-1,Math.max(0,Math.floor((t-intro)/Math.max(.001,storyLength))));
+     const item=stories[idx];const progress=segment?(t-segment.start)/Math.max(.001,segment.end-segment.start):((t-intro)%Math.max(.001,storyLength))/Math.max(.001,storyLength);
      ctx.fillStyle="rgba(3,15,30,.82)";ctx.fillRect(42,180,1196,395);
      ctx.fillStyle="#27d4f5";ctx.fillRect(42,180,Math.max(0,1196*progress),5);
      ctx.fillStyle="#4ce0ff";ctx.font="bold 23px monospace";ctx.fillText("MELDUNG "+String(idx+1).padStart(2,"0")+" / "+String(stories.length).padStart(2,"0"),76,240);
@@ -138,9 +139,15 @@
    if(recorder&&recorder.state==="recording"){complete();setStatus("Aufzeichnung wird abgeschlossen …");}
    else {reset();setStatus("Gestoppt.");}
  });
+ fetch("timeline.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(data=>{
+   if(data&&Array.isArray(data.segments)&&data.segments.length>=3&&data.segments.every(x=>Number.isFinite(x.start)&&Number.isFinite(x.end)&&x.end>=x.start)){
+     timeline=data;
+     setStatus("Präzise Zeitmarken geladen.");
+   }else setStatus("Noch keine Zeitmarken veröffentlicht; vorläufige Synchronisation.");
+ }).catch(()=>setStatus("Zeitmarken nicht verfügbar; vorläufige Synchronisation."));
  fetch("transcript.txt",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("Transkript nicht verfügbar");return r.text();}).then(raw=>{
    stories=parseTranscript(raw);
    if(!stories.length)throw Error("Keine Meldungen im Transkript gefunden");
-   draw(0);setStatus(stories.length+" Meldungen geladen. Audio aus latest.mp4; Schlagzeilen näherungsweise verteilt.");
+   draw(0);setStatus(stories.length+" Meldungen geladen. "+(timeline?"Präzise Szenenzeitmarken aktiv.":"Zeitmarken werden geladen oder sind noch nicht veröffentlicht."));
  }).catch(e=>{setStatus("Fehler: "+e.message);play.disabled=true;exportButton.disabled=true;});
 })();
