@@ -79,6 +79,15 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <label for="production_version">Welche Version soll verwendet werden?</label>
 <select id="production_version"><option value="1.0">Version 1.0 – Minimal (kostenlos)</option><option value="2.0" disabled>Version 2.0 – Erweiterte Dienste (in Vorbereitung)</option></select>
 <p class="muted">Version 1.0 nutzt ausschließlich kostenlose, lokale Werkzeuge und GitHub Actions. Version 2.0 ist für kostenpflichtige KI-Dienste vorgesehen und wird erst auswählbar, wenn die Implementierung und die Kostenkontrollen bereitstehen. Ein Wechsel darf keine kostenpflichtigen Aufrufe ohne ausdrückliche Einrichtung auslösen.</p>
+<section class="security-panel"><h2>Version 2.0 vorbereiten</h2>
+<p>Die folgenden Angaben werden als Entwurf gespeichert. Sie starten keine kostenpflichtigen API-Aufrufe.</p>
+<label for="v2_news">KI-Nachrichtenaufbereitung</label><select id="v2_news"><option value="disabled">Deaktiviert</option><option value="openai">OpenAI (geplant)</option><option value="other">Anderer Anbieter (geplant)</option></select>
+<label for="v2_voice">Sprachausgabe</label><select id="v2_voice"><option value="local">Lokal (kostenlos)</option><option value="openai">OpenAI (geplant)</option><option value="other">Anderer Anbieter (geplant)</option></select>
+<label for="v2_avatar">Moderator / Avatar</label><select id="v2_avatar"><option value="static">Statisches Bild (kostenlos)</option><option value="paid">Externer KI-Avatar (geplant)</option></select>
+<label for="v2_video">Videoproduktion</label><select id="v2_video"><option value="local">Lokal (kostenlos)</option><option value="paid">Externer Videodienst (geplant)</option></select>
+<div class="settings-grid"><div><label for="v2_max_video">Maximalbetrag pro Sendung (EUR)</label><input id="v2_max_video" type="number" min="0" max="1000" step="0.01" value="0"></div><div><label for="v2_max_month">Monatliches Limit (EUR)</label><input id="v2_max_month" type="number" min="0" max="10000" step="0.01" value="0"></div></div>
+<label><input id="v2_allow_paid" type="checkbox"> Kostenpflichtige Dienste künftig ausdrücklich erlauben</label>
+<small>Standard: keine Freigabe und 0 €. API-Schlüssel gehören ausschließlich in GitHub Actions Secrets, niemals in diese öffentliche Konfiguration. Budgetwerte sind derzeit nur Entwürfe, keine wirksame Abrechnungssperre. Version 2.0 bleibt deaktiviert, bis technische Budgetkontrolle und Anbieteranbindungen implementiert sind.</small></section>
 </fieldset>
 <fieldset class="settings-panel" id="panel-automation" role="tabpanel" aria-labelledby="tab-automation"><legend>Automatische Nachrichtensendungen</legend>
 <label><input id="automation_enabled" type="checkbox" style="width:auto"> Automatische Produktion aktivieren</label>
@@ -197,6 +206,14 @@ const fields=["title","max_items","max_description_chars","piper_length_scale","
 function fill(c){
  original=c;
  $("production_version").value=c.production_version||"1.0";
+ const v=c.advanced_services||{};
+ $("v2_news").value=v.news_provider||"disabled";
+ $("v2_voice").value=v.voice_provider||"local";
+ $("v2_avatar").value=v.avatar_provider||"static";
+ $("v2_video").value=v.video_provider||"local";
+ $("v2_max_video").value=v.max_per_video_eur??0;
+ $("v2_max_month").value=v.max_per_month_eur??0;
+ $("v2_allow_paid").checked=v.allow_paid===true;
  for(const key of fields)$(key).value=c[key]??(key==="voice_pitch_semitones"?0:"");
  $("feeds").value=(c.feeds||[]).join("\n");
  const p=c.presenter_settings||{},sc=p.scenes||{};
@@ -249,6 +266,7 @@ $("settings").addEventListener("submit",event=>{
  const c=structuredClone(original);
  if($("production_version").value!=="1.0")throw Error("Version 2.0 ist noch nicht verfügbar.");
  c.production_version=$("production_version").value;
+ c.advanced_services={news_provider:$("v2_news").value,voice_provider:$("v2_voice").value,avatar_provider:$("v2_avatar").value,video_provider:$("v2_video").value,max_per_video_eur:Number($("v2_max_video").value),max_per_month_eur:Number($("v2_max_month").value),allow_paid:$("v2_allow_paid").checked};
  c.title=$("title").value.trim();
  c.feeds=[...new Set($("feeds").value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean).map(validUrl))];
  if(!c.title||!c.feeds.length||c.feeds.length>30)throw Error("Titel und 1–30 RSS-Feeds sind erforderlich.");
