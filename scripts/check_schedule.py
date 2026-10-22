@@ -7,6 +7,9 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 config = json.loads((Path(__file__).resolve().parents[1] / "config.json").read_text(encoding="utf-8"))
+version = str(config.get("production_version", "1.0"))
+if version != "1.0":
+    raise SystemExit(f"Production version {version} is not implemented. No paid services will be called.")
 settings = config.get("automation", {})
 manual = os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
 enabled = settings.get("enabled", True)
