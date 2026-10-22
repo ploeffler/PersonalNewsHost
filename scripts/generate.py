@@ -50,6 +50,30 @@ def items_from_feed(url):
 def run(args):
     subprocess.run(args, check=True, stdout=subprocess.DEVNULL)
 
+def adjust_voice_pitch(wav):
+    """Lower or raise voice pitch with FFmpeg while preserving speech duration."""
+    import math
+    import wave
+    semitones = float(CONFIG.get("voice_pitch_semitones", 0))
+    if not math.isfinite(semitones) or not -6 <= semitones <= 6:
+        raise ValueError("voice_pitch_semitones must be between -6 and 6")
+    if abs(semitones) < 0.01:
+        return
+    with wave.open(str(wav), "rb") as audio:
+        rate = audio.getframerate()
+    factor = 2 ** (semitones / 12)
+    target = Path(wav).with_name(Path(wav).stem + "-pitch.wav")
+    try:
+        subprocess.run([
+            "ffmpeg", "-y", "-loglevel", "error", "-i", str(wav),
+            "-af", f"asetrate={rate}*{factor:.8f},aresample={rate},atempo={1/factor:.8f}",
+            "-ar", str(rate), "-c:a", "pcm_s16le", str(target)
+        ], check=True)
+        target.replace(wav)
+        print(f"Voice pitch adjusted: {semitones:+.1f} semitones (tempo preserved)")
+    finally:
+        target.unlink(missing_ok=True)
+
 def synthesize(script, wav):
     """Use local Piper neural TTS if available; retain eSpeak as safe fallback."""
     import os
@@ -63,11 +87,13 @@ def synthesize(script, wav):
             )
             if wav.is_file() and wav.stat().st_size > 44:
                 print("Speech engine: Piper (de_DE-thorsten-high)")
+                adjust_voice_pitch(wav)
                 return
         except (OSError, subprocess.SubprocessError) as exc:
             print(f"Piper failed; falling back to eSpeak-NG: {exc}")
     run(["espeak-ng", "-v", CONFIG.get("voice", "de"), "-s", "145", "-w", str(wav), script])
     print("Speech engine: eSpeak-NG fallback")
+    adjust_voice_pitch(wav)
 
 def main():
     DOCS.mkdir(exist_ok=True)
