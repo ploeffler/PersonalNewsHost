@@ -437,11 +437,18 @@ def main():
             )
             current = next_label
             print(f"RSS {kind} used for story {idx + 1}: {path.name}")
-        # Compose the presenter as a studio anchor, not a small corner inset.
-        # The full 1280x720 studio remains the base layer. Story screens are
-        # composited first, then the larger presenter in front of the screen.
-        if presenter.is_file():
-            person_input = 3 if intro_mode == "static" else 2
+        # Use the dedicated transparent host cutout for narrated stories.
+        # Keep the configured presenter portrait for intro/outro only.
+        story_host = ROOT / "assets/host.png"
+        if story_host.is_file():
+            story_host_input = len([arg for arg in args if arg == "-i"])
+            args += ["-loop", "1", "-i", str(story_host)]
+        else:
+            story_host_input = None
+            print("WARNING: assets/host.png missing; no story presenter overlay")
+        # Full-frame studio with alternating foreground presenter.
+        if story_host_input is not None:
+            person_input = story_host_input
             for idx in range(len(selected)):
                 start_time = boundaries[idx + 2]
                 end_time = boundaries[idx + 3]
