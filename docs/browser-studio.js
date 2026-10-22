@@ -4,7 +4,7 @@
  const status=document.getElementById("status"),play=document.getElementById("play"),exportButton=document.getElementById("export"),stop=document.getElementById("stop");
  const W=1280,H=720,INTRO=5,STORY=7,OUTRO=5,FPS=30;
  let stories=[],frame=0,recorder=null,stream=null,chunks=[],running=false,finishRequested=false;
- const audio=new Audio("latest.mp4");audio.preload="metadata";
+ const audio=document.getElementById("narration");audio.preload="metadata";
  let audioContext=null,audioDestination=null;
  const setStatus=s=>{status.textContent=s;};
  async function prepareAudio(){
@@ -17,6 +17,7 @@
      source.connect(audioContext.destination);
      source.connect(audioDestination);
    }
+   audio.muted=false;audio.volume=Number(document.getElementById("volume").value)/100;
    await audioContext.resume();
    if(audio.readyState<1)await new Promise((resolve,reject)=>{
      audio.addEventListener("loadedmetadata",resolve,{once:true});
@@ -116,6 +117,7 @@
        recorder.start(1000);
      }
      await audio.play();
+     if(audio.paused)throw Error("Tonwiedergabe wurde vom Browser blockiert");
      running=true;setStatus(save?"Video und Ton werden lokal aufgezeichnet …":"Nachrichtensendung mit Ton läuft.");
      frame=requestAnimationFrame(tick);
    }catch(e){
@@ -124,6 +126,12 @@
    }
  }
  audio.addEventListener("ended",()=>{if(running)complete();});
+ audio.addEventListener("error",()=>setStatus("Audiofehler: latest.mp4 konnte nicht geladen oder dekodiert werden."));
+ document.getElementById("volume").addEventListener("input",e=>{audio.volume=Number(e.target.value)/100;audio.muted=false;});
+ document.getElementById("testAudio").addEventListener("click",async()=>{
+   try{await prepareAudio();audio.currentTime=0;await audio.play();setStatus("Tonprobe läuft. Falls nichts hörbar ist: Lautstärke und Audioausgabegerät prüfen.");}
+   catch(e){setStatus("Tonprobe fehlgeschlagen: "+e.message);}
+ });
  play.addEventListener("click",()=>begin(false));
  exportButton.addEventListener("click",()=>begin(true));
  stop.addEventListener("click",()=>{
