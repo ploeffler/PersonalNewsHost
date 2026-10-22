@@ -9,13 +9,13 @@ jobs:
     outputs:
       segments: ${{ steps.matrix.outputs.segments }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: python3 scripts/analyze_topics.py
       - run: python3 scripts/build_broadcast_plan.py
       - id: matrix
         run: |
           python3 -c 'import json; print("segments="+json.dumps([x["id"] for x in json.load(open("broadcast-plan.json"))["segments"]]))' >> "$GITHUB_OUTPUT"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: broadcast-plan
           path: broadcast-plan.json
@@ -27,8 +27,8 @@ jobs:
       matrix:
         segment: ${{ fromJSON(needs.prepare.outputs.segments) }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - uses: actions/checkout@v5
+      - uses: actions/download-artifact@v7
         with:
           name: broadcast-plan
       - name: Install FFmpeg, fonts and neural speech engine
@@ -45,7 +45,7 @@ jobs:
           test -s models/de_DE-thorsten-high.onnx
           test -s models/de_DE-thorsten-high.onnx.json
       - run: python3 scripts/render_segment.py --segment "${{ matrix.segment }}"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: rendered-${{ matrix.segment }}
           path: rendered/*.mp4
@@ -53,11 +53,11 @@ jobs:
     needs: [prepare, render]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - uses: actions/checkout@v5
+      - uses: actions/download-artifact@v7
         with:
           name: broadcast-plan
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v7
         with:
           pattern: rendered-*
           path: rendered
@@ -65,7 +65,7 @@ jobs:
       - name: Install FFmpeg for final assembly
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - run: python3 scripts/assemble_segments.py
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: parallel-broadcast-demo
           path: parallel-demo.mp4
