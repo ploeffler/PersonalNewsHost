@@ -237,12 +237,12 @@ for(const id of ["automation_enabled","automation_interval","automation_hour","a
 const fields=["title","max_items","max_description_chars","piper_length_scale","voice_pitch_semitones","presenter","background"];
 const auditRequired=["provider","service","model_id","deployment_type","source_region","destination_regions","processing_scope","data_retention_policy","subprocessors_reviewed","evidence_url","checked_on"];
 const auditLabels={provider:"Anbieter",service:"Dienst",model_id:"Modell-ID",deployment_type:"Bereitstellungstyp",source_region:"Ausgangsregion",destination_regions:"Zielregionen",processing_scope:"Verarbeitungsraum",data_retention_policy:"Datenaufbewahrung",subprocessors_reviewed:"Unterauftragsverarbeiter geprüft",evidence_url:"Offizielle Beleg-URL",checked_on:"Prüfdatum"};
+$("v2_prev").addEventListener("click",()=>selectV2Tab(Number(document.querySelector('[data-v2-tab][aria-selected="true"]').dataset.v2Tab)-1));
+$("v2_next").addEventListener("click",()=>selectV2Tab(Number(document.querySelector('[data-v2-tab][aria-selected="true"]').dataset.v2Tab)+1));
 function selectV2Tab(index){
  index=Number(index);
  if(!Number.isInteger(index)||index<0||index>3)return;
- $("v2_prev").addEventListener("click",()=>selectV2Tab(Number(document.querySelector('[data-v2-tab][aria-selected="true"]').dataset.v2Tab)-1));
-$("v2_next").addEventListener("click",()=>selectV2Tab(Number(document.querySelector('[data-v2-tab][aria-selected="true"]').dataset.v2Tab)+1));
-document.querySelectorAll("[data-v2-tab]").forEach(tab=>{
+ document.querySelectorAll("[data-v2-tab]").forEach(tab=>{
   const active=tab.dataset.v2Tab===String(index);
   tab.setAttribute("aria-selected",String(active));
   tab.tabIndex=active?0:-1;
