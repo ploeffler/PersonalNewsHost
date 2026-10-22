@@ -78,7 +78,10 @@ def synthesize(script, wav):
     """Use local Piper neural TTS if available; retain eSpeak as safe fallback."""
     import os
     model = ROOT / "models" / "de_DE-thorsten-high.onnx"
-    if model.is_file():
+    engine = CONFIG.get("tts_engine", "piper")
+    if engine not in ("piper", "espeak"):
+        raise ValueError("Unsupported tts_engine")
+    if engine == "piper" and model.is_file():
         try:
             subprocess.run(
                 ["piper", "--model", str(model), "--length_scale", str(CONFIG.get("piper_length_scale", 1.13)), "--sentence_silence", "0.38", "--output_file", str(wav)],
