@@ -92,6 +92,7 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <label for="v2_avatar">Moderator / Avatar</label><select id="v2_avatar"><option value="static">Statisches Bild (kostenlos)</option><option value="paid">Externer KI-Avatar (geplant)</option></select>
 <label for="v2_video">Videoproduktion</label><select id="v2_video"><option value="local">Lokal (kostenlos)</option><option value="paid">Externer Videodienst (geplant)</option></select>
 <section class="security-panel"><h3>3. Standortnachweis je Anbieter</h3><p id="v2_residency_summary" role="status" aria-live="polite"></p><div id="v2_residency_list"></div><small>Kein Anbieter wurde bisher anhand belastbarer Standortunterlagen verifiziert. Firmensitz und vermutete Serverregion gelten nicht als Nachweis. Eine tatsächliche Freigabe ist noch nicht möglich.</small></section>
+<section class="security-panel"><h3>Fehlende Nachweise pro Anbieter</h3><p id="v2_audit_status" role="status">Prüfdaten werden geladen …</p><div id="v2_audit_results"></div><button type="button" id="v2_audit_refresh">Prüfdaten aktualisieren</button><small>Diese Anzeige prüft nur Vollständigkeit öffentlich dokumentierter Angaben, nicht die tatsächliche Modellverfügbarkeit. Keine Anbieterfreigabe.</small></section>
 <section class="security-panel"><h3>Dokumentierte EU-Verarbeitungsoptionen (Recherche)</h3>
 <p>Die folgenden Optionen sind <strong>keine freigegebenen Anbieter</strong>. Sie zeigen nur, welche regionalen Betriebsarten die Hersteller dokumentieren. Modell, Endpoint, Vertragsbedingungen und tatsächlicher Verarbeitungsort müssen vor einer Freigabe geprüft werden.</p>
 <p><strong>Microsoft Foundry – EU Data Zone:</strong> Verarbeitung innerhalb der von Microsoft definierten EU-Datenzone; diese kann auch EFTA-Gebiete umfassen. <a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/deployment-types" target="_blank" rel="noopener noreferrer">Offizielle Dokumentation</a></p>
@@ -219,6 +220,29 @@ function refreshAutomationPreview(){
 }
 for(const id of ["automation_enabled","automation_interval","automation_hour","automation_timezone","automation_days"])$(id).addEventListener("change",refreshAutomationPreview);
 const fields=["title","max_items","max_description_chars","piper_length_scale","voice_pitch_semitones","presenter","background"];
+const auditRequired=["provider","service","model_id","deployment_type","source_region","destination_regions","processing_scope","data_retention_policy","subprocessors_reviewed","evidence_url","checked_on"];
+const auditLabels={provider:"Anbieter",service:"Dienst",model_id:"Modell-ID",deployment_type:"Bereitstellungstyp",source_region:"Ausgangsregion",destination_regions:"Zielregionen",processing_scope:"Verarbeitungsraum",data_retention_policy:"Datenaufbewahrung",subprocessors_reviewed:"Unterauftragsverarbeiter geprüft",evidence_url:"Offizielle Beleg-URL",checked_on:"Prüfdatum"};
+async function refreshProviderAudit(){
+ const status=$("v2_audit_status"),target=$("v2_audit_results");
+ status.textContent="Prüfdaten werden geladen …";target.replaceChildren();
+ try{
+  const response=await fetch("./provider-research.json",{cache:"no-store"});
+  if(!response.ok)throw new Error("HTTP "+response.status);
+  const data=await response.json();
+  if(!Array.isArray(data.candidates))throw new Error("Ungültiger Katalog");
+  for(const candidate of data.candidates){
+   const missing=auditRequired.filter(key=>key==="subprocessors_reviewed"?candidate[key]!==true:!candidate[key]||(Array.isArray(candidate[key])&&candidate[key].length===0));
+   const article=document.createElement("div");
+   const heading=document.createElement("strong");heading.textContent=(candidate.name||candidate.id||"Unbekannt")+" – nicht freigegeben";
+   const detail=document.createElement("p");detail.textContent=missing.length?"Fehlende Nachweise: "+missing.map(key=>auditLabels[key]).join(", "):"Pflichtfelder vorhanden; unabhängige Standortprüfung und Freigabe fehlen weiterhin.";
+   article.append(heading,detail);target.appendChild(article);
+  }
+  status.textContent=data.candidates.length+" Anbieteroptionen geprüft (offline, keine Live-Verfügbarkeitsabfrage).";
+ }catch(error){status.textContent="Prüfdaten nicht verfügbar: "+error.message;}
+}
+$("v2_audit_refresh").addEventListener("click",refreshProviderAudit);
+refreshProviderAudit();
+
 function refreshResidency(){
  const region=$("v2_region").selectedOptions[0]?.textContent||"",country=$("v2_country").value,strict=$("v2_region_strict").checked;
  const pairs=[["Nachrichtenaufbereitung","v2_news","disabled"],["Sprachausgabe","v2_voice","local"],["Avatar","v2_avatar","static"],["Videoproduktion","v2_video","local"]];
