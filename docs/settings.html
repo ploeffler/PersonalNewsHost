@@ -279,12 +279,29 @@ function refreshResidency(){
 }
 for(const id of ["v2_region","v2_country","v2_region_strict","v2_news","v2_voice","v2_avatar","v2_video"])$(id).addEventListener("change",refreshResidency);
 
+const locationCountries={eu:["AT","DE","FR","IE","NL","SE"],europe:["AT","DE","FR","IE","NL","SE","CH","GB"],north_america:["US","CA"],south_america:["BR"],asia:["JP","SG","IN"],oceania:["AU"],africa:["ZA"],any:null};
+function updateCountryChoices(){
+ const region=$("v2_region").value,allowed=locationCountries[region];
+ for(const option of $("v2_country").options)option.hidden=option.value!==""&&Array.isArray(allowed)&&!allowed.includes(option.value);
+ if($("v2_country").selectedOptions[0]?.hidden)$("v2_country").value="";
+}
+function syncResearchLocation(){
+ const region=$("v2_region").value,country=$("v2_country").value;
+ $("v2_audit_region").value=region==="any"?"all":region;
+ $("v2_audit_country").value=country;
+ if(auditCatalog)renderProviderAudit(auditCatalog);
+}
+$("v2_region").addEventListener("change",()=>{updateCountryChoices();syncResearchLocation();});
+$("v2_country").addEventListener("change",syncResearchLocation);
+
 function fill(c){
  original=c;
  $("production_version").value=c.production_version||"1.0";
  const v=c.advanced_services||{};
  $("v2_region").value=v.processing_region||"eu";
  $("v2_country").value=v.processing_country||"";
+ updateCountryChoices();
+ syncResearchLocation();
  $("v2_region_strict").checked=v.require_verified_region!==false;
  $("v2_news").value=v.news_provider||"disabled";
  $("v2_voice").value=v.voice_provider||"local";
