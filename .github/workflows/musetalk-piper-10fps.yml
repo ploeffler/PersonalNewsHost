@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Install tools and CPU libraries
         run: |
           sudo apt-get update -qq
@@ -155,7 +155,7 @@ jobs:
           PY
       - name: Upload hybrid interpolation video and report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: musetalk-piper-intro-10fps
           path: musetalk-hybrid-interpolation/
