@@ -329,3 +329,7 @@ Der Recherchebereich im Tab **Version** kann nach Verarbeitungsraum, Land, Diens
 ### Standortauswahl mit Symbolen
 
 Im Tab **Version** stehen die Kontinent-/Datenraumliste mit Globussymbolen und die Länderliste mit Flaggen nebeneinander (mobil untereinander). Ein Wechsel des Kontinents blendet unpassende Länder aus und entfernt eine eventuell nicht mehr passende Länderauswahl. Kontinent und Land werden automatisch in die Filter der Anbieterrecherche übernommen; dort erscheinen weiterhin nur nachgewiesene Standorte. Die gespeicherten Konfigurationswerte (`processing_region`, `processing_country`) und die Sperre für Version 2.0 bleiben unverändert.
+
+### Version 2.0 als vierstufige Reiteransicht
+
+Im Reiter **Version** besitzt der Bereich **Version 2.0 vorbereiten** vier Unterreiter: **Rechenstandort**, **Dienste**, **Standortnachweis** und **Kostenobergrenzen**. Zwischen ihnen kann per Reiter, Tastatur (Pfeiltasten, Pos1/Ende) oder **Zurück/Weiter** navigiert werden. Eine Fortschrittsanzeige benennt den aktuellen Schritt. Die Felder bleiben im Formular und werden nicht beim Reiterwechsel zurückgesetzt. Diese Bedienoberfläche aktiviert Version 2.0 nicht und führt keine kostenpflichtigen Anfragen aus.
