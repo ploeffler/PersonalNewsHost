@@ -46,6 +46,14 @@ class ProviderRegistryTests(unittest.TestCase):
             "require_verified_region": True}})["processing_location"]
         self.assertEqual(location["country"], "AT")
 
+    def test_unverified_provider_residency(self):
+        strict = plan({"advanced_services": {"voice_provider": "openai", "processing_region": "eu"}})
+        self.assertFalse(strict["residency"]["voice"]["allowed"])
+        self.assertIsNone(strict["residency"]["voice"]["evidence_url"])
+        relaxed = plan({"advanced_services": {"voice_provider": "openai", "require_verified_region": False}})
+        self.assertTrue(relaxed["residency"]["voice"]["allowed"])
+        self.assertFalse(relaxed["ready"])
+
     def test_legacy_version_remains_valid(self):
         require_executable_version({})
         require_executable_version({"production_version": "1.0"})
