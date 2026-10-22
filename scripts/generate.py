@@ -156,12 +156,32 @@ def main():
         args += ["-i", str(wav)]
         filters = ["[0:v]fps=5,scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,format=yuv420p,setpts=PTS-STARTPTS[bg]"]
         current = "bg"
+        intro_mode = scenes.get("intro_mode", "avatar")
+        if intro_mode not in ("avatar", "static"):
+            raise ValueError("Unsupported intro mode")
+        if intro_mode == "static":
+            kind = scenes.get("intro_static_type", "color")
+            if kind == "color":
+                color = str(scenes.get("intro_static_color", "#13243a"))
+                if not re.fullmatch(r"#[0-9a-fA-F]{6}", color):
+                    raise ValueError("Invalid intro color")
+                args += ["-f", "lavfi", "-i", f"color=c=0x{color[1:]}:s=1280x720:r=5"]
+            elif kind == "image":
+                still = ROOT / str(scenes.get("intro_static_image", "assets/background.jpg"))
+                if not still.is_file():
+                    raise FileNotFoundError("Intro image missing")
+                args += ["-loop", "1", "-i", str(still)]
+            else:
+                raise ValueError("Invalid intro type")
+            filters.append("[2:v]fps=5,scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,format=yuv420p[introframe]")
+            filters.append(f"[{current}][introframe]overlay=0:0:enable='lt(t,{intro:.3f})'[introcomposed]")
+            current = "introcomposed"
         if presenter.is_file():
             args += ["-loop", "1", "-i", str(presenter)]
             filters += [
-                "[2:v]scale=440:600:force_original_aspect_ratio=decrease[person]",
+                f"[{3 if intro_mode == 'static' else 2}:v]scale=440:600:force_original_aspect_ratio=decrease[person]",
                 f"[{current}][person]overlay=x=W-w-55:y=H-h-30:"
-                f"enable='between(t,0,{intro:.3f})+gte(t,{outro_start:.3f})'[composed]"
+                f"enable='{('gte(t,'+str(outro_start)+')') if intro_mode == 'static' else ('between(t,0,'+str(intro)+')+gte(t,'+str(outro_start)+')')}'[composed]"
             ]
             current = "composed"
         if scenes.get("show_headlines", True) and selected:
