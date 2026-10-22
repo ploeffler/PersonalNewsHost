@@ -51,6 +51,7 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 <p>Die heruntergeladene Datei muss im Repository die vorhandene <code>config.json</code> ersetzen. Danach wird die neue Konfiguration beim nächsten Produktionslauf eingelesen.</p>
 <p><a href="https://github.com/ploeffler/PersonalNewsHost/edit/main/config.json" rel="noopener noreferrer">config.json auf GitHub bearbeiten</a> · <a href="https://github.com/ploeffler/PersonalNewsHost/actions/workflows/news.yml" rel="noopener noreferrer">Produktionsworkflow starten</a></p>
 <div id="importrow" hidden><label for="importfile">config.json vom Computer importieren</label><input id="importfile" type="file" accept=".json,application/json"></div>
+<script id="embedded-config" type="application/json">{"title":"PersonalNewsHost","language":"de","voice":"de","max_items":5,"max_description_chars":180,"feeds":["https://www.tagesschau.de/xml/rss2/","https://www.derstandard.at/rss"],"background":"assets/background.jpg","presenter":"assets/presenter.png","tts_engine":"piper","piper_length_scale":1.06,"presenter_settings":{"name":"NewsHost","gender":"custom","portrait":"assets/presenter.png","background":"assets/background.jpg","voice_model":"de_DE-thorsten-high","lip_sync":{"enabled":false,"engine":"none","fallback":"static","note":"CPU-only lip-sync not yet implemented; enable only after a successful prototype test"},"scenes":{"intro_seconds":8,"outro_seconds":8,"show_headlines":true,"intro_mode":"avatar","intro_text":"Willkommen bei {title}. Hier sind die Nachrichten.","outro_text":"Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.","intro_static_type":"color","intro_static_color":"#13243a","intro_static_image":"assets/background.jpg"}},"voice_pitch_semitones":-1.5}</script>
 <script>
 "use strict";
 let original=null;
@@ -80,12 +81,12 @@ function fill(c){
 async function load(){
  $("status").textContent="Lade Konfiguration …";$("result").textContent="";
  try{
- const response=await fetch("./config.json",{cache:"no-store"});
- if(!response.ok)throw new Error("Konfiguration nicht unter ./config.json erreichbar (HTTP "+response.status+").");
- fill(await response.json());
+   const embedded=JSON.parse($("embedded-config").textContent);
+   fill(embedded);
+   $("status").textContent="Konfiguration aus der Webseite geladen. Zum Übernehmen die heruntergeladene config.json in GitHub ersetzen.";
  }catch(e){
- $("status").textContent="Die veröffentlichte Konfiguration konnte nicht geladen werden. Bitte Seite neu laden oder config.json importieren.";
- $("importrow").hidden=false;
+   $("status").textContent="Konfiguration konnte nicht geladen werden: "+e.message;
+   $("importrow").hidden=false;
  }
 }
 function validUrl(raw){
