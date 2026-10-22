@@ -19,7 +19,7 @@ class VideoSmokeTests(unittest.TestCase):
             (root / "docs").mkdir()
             (root / "assets").mkdir()
             image = root / "assets" / "intro.ppm"
-            image.write_bytes(b"P6\\n2 2\\n255\\n" + bytes([255, 0, 0] * 4))
+            image.write_bytes(b"P6\n2 2\n255\n" + bytes([255, 0, 0] * 4))
             cfg = copy.deepcopy(generate.CONFIG)
             cfg.update({"title": "Test", "feeds": ["https://example.org/rss"],
                         "max_items": 1, "max_description_chars": 30,
@@ -37,7 +37,7 @@ class VideoSmokeTests(unittest.TestCase):
                     wav.setnchannels(1)
                     wav.setsampwidth(2)
                     wav.setframerate(16000)
-                    wav.writeframes(b"\\0\\0" * 16000 * 5)
+                    wav.writeframes(bytes(16000 * 5 * 2))
             with patch.object(generate, "ROOT", root), patch.object(generate, "DOCS", root / "docs"), patch.object(generate, "CONFIG", cfg), patch.object(generate, "items_from_feed", return_value=[("Testmeldung", "Kurzer Text", "https://example.org")]), patch.object(generate, "synthesize", side_effect=audio):
                 generate.main()
             video = root / "docs" / "latest.mp4"
