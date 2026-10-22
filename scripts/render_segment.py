@@ -25,9 +25,13 @@ def main():
     with tempfile.TemporaryDirectory() as directory:
         speech = Path(directory) / "speech.wav"
         subprocess.run(["espeak-ng", "-v", "de", "-s", "145", "-w", str(speech), segment["speech_text"]], check=True)
+        visual_input = (["-loop", "1", "-framerate", "5", "-i", str(picture)]
+                        if picture.is_file() else
+                        ["-f", "lavfi", "-i", "color=c=0x13243a:s=1280x720:r=5"])
+        if not picture.is_file():
+            print("Using generated fallback background:", picture)
         subprocess.run([
-            "ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-framerate", "5",
-            "-i", str(picture), "-i", str(speech),
+            "ffmpeg", "-y", "-loglevel", "error", *visual_input, "-i", str(speech),
             "-vf", "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,format=yuv420p",
             "-c:v", "libx264", "-preset", "ultrafast", "-r", "5",
             "-c:a", "aac", "-b:a", "96k", "-shortest", str(target)
