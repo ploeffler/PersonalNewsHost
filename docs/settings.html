@@ -44,9 +44,15 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 <label><input id="show_headlines" type="checkbox" style="width:auto"> Schlagzeilen anzeigen</label>
 </fieldset>
 <button type="submit">Konfiguration prüfen und herunterladen</button>
+<button type="button" id="save_github">Direkt auf GitHub speichern</button>
 <button type="button" id="reset">Neu laden</button>
 <p id="result" role="status" aria-live="polite"></p>
 </form>
+<h2>Direkt in GitHub speichern (Beta)</h2>
+<p>Optional: Ein <strong>Fine-grained Personal Access Token</strong> mit Zugriff ausschließlich auf <code>ploeffler/PersonalNewsHost</code> und Berechtigung <strong>Contents: Read and write</strong> ermöglicht das Speichern ohne Download. Der Token wird nur für diese Sitzung im Eingabefeld gehalten, nicht gespeichert oder ins Repository übertragen. Verwende keinen klassischen Token mit breiten Rechten. Auf einem gemeinsam genutzten Gerät besser die Download-Funktion verwenden.</p>
+<label for="github_token">GitHub Fine-grained Token (nur für direkten Speichervorgang)</label><input id="github_token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…">
+<label><input id="confirm_save" type="checkbox" style="width:auto"> Ich möchte config.json auf main im Repository überschreiben.</label>
+<p id="save_status" role="status" aria-live="polite"></p>
 <h2>Wie werden Änderungen aktiv?</h2>
 <p>Die heruntergeladene Datei muss im Repository die vorhandene <code>config.json</code> ersetzen. Danach wird die neue Konfiguration beim nächsten Produktionslauf eingelesen.</p>
 <p><a href="https://github.com/ploeffler/PersonalNewsHost/edit/main/config.json" rel="noopener noreferrer">config.json auf GitHub bearbeiten</a> · <a href="https://github.com/ploeffler/PersonalNewsHost/actions/workflows/news.yml" rel="noopener noreferrer">Produktionsworkflow starten</a></p>
@@ -55,6 +61,7 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 <script>
 "use strict";
 let original=null;
+let preparedConfig=null;
 const $=id=>document.getElementById(id);
 function updateStaticOptions(){ $("static_options").hidden=$("intro_mode").value!=="static"; $("intro_static_image").disabled=$("intro_static_type").value!=="image"; }
 $("intro_mode").addEventListener("change",updateStaticOptions);
@@ -120,10 +127,36 @@ $("settings").addEventListener("submit",event=>{
  c.presenter_settings.scenes.intro_seconds=Number($("intro_seconds").value);
  c.presenter_settings.scenes.outro_seconds=Number($("outro_seconds").value);
  c.presenter_settings.scenes.show_headlines=$("show_headlines").checked;
+ preparedConfig=c;
  const blob=new Blob([JSON.stringify(c,null,2)+"\n"],{type:"application/json"});
  const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="config.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
  $("result").className="ok";$("result").textContent="config.json heruntergeladen. Bitte im GitHub-Repository übernehmen.";
  }catch(e){$("result").textContent=e.message}
+});
+$("save_github").addEventListener("click",async()=>{
+ const status=$("save_status");status.className="error";status.textContent="";
+ const token=$("github_token").value.trim();
+ if(!token){status.textContent="Bitte zuerst einen Fine-grained Token eingeben.";return}
+ if(!$("confirm_save").checked){status.textContent="Bitte das Überschreiben ausdrücklich bestätigen.";return}
+ // Use the same validated configuration as the download action.
+ preparedConfig=null;
+ $("settings").requestSubmit();
+ if(!preparedConfig){status.textContent="Bitte zuerst die ungültigen Eingaben korrigieren.";return}
+ const btn=$("save_github");btn.disabled=true;
+ const url="https://api.github.com/repos/ploeffler/PersonalNewsHost/contents/config.json";
+ const headers={"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"};
+ try{
+  const current=await fetch(url,{headers,cache:"no-store"});
+  if(!current.ok)throw Error("GitHub-Lesezugriff fehlgeschlagen (HTTP "+current.status+"). Token und Repository-Rechte prüfen.");
+  const meta=await current.json();
+  const bytes=new TextEncoder().encode(JSON.stringify(preparedConfig,null,2)+"\n");
+  let binary="";for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));
+  const response=await fetch(url,{method:"PUT",headers:{...headers,"Content-Type":"application/json"},body:JSON.stringify({message:"Update PersonalNewsHost configuration via web settings",content:btoa(binary),sha:meta.sha,branch:"main"})});
+  if(!response.ok)throw Error("GitHub-Speichern fehlgeschlagen (HTTP "+response.status+"). "+(response.status===409?"Datei wurde zwischenzeitlich verändert; bitte neu laden.":"Zugriffsrechte und GitHub-Antwort prüfen."));
+  status.className="ok";status.textContent="config.json erfolgreich auf GitHub gespeichert. Der nächste Produktionslauf verwendet die neue Konfiguration.";
+  original=structuredClone(preparedConfig);
+ }catch(e){status.textContent=e.message}
+ finally{$("github_token").value="";btn.disabled=false;$("confirm_save").checked=false}
 });
 $("reset").addEventListener("click",load);
 $("importfile").addEventListener("change",async e=>{try{fill(JSON.parse(await e.target.files[0].text()));$("status").textContent="Lokale Konfiguration importiert."}catch(err){$("status").textContent="Ungültige JSON-Datei: "+err.message}});
