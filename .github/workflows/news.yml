@@ -10,8 +10,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   generate:
-    runs-on: ubuntu-latest
-    timeout-minutes: 25
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v5
         with:
@@ -25,23 +25,29 @@ jobs:
         if: steps.schedule.outputs.due == 'true'
         run: |
           set -euo pipefail
-          # Install from cached Ubuntu package indexes; use per-package apt
-          # acquisition timeouts and a longer overall bound for cold runners.
           missing=()
-          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then
-            missing+=(ffmpeg)
-          fi
-          if ! command -v espeak-ng >/dev/null; then
-            missing+=(espeak-ng)
-          fi
+          if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then missing+=(ffmpeg); fi
+          if ! command -v espeak-ng >/dev/null; then missing+=(espeak-ng); fi
           if (( ${#missing[@]} )); then
-            printf 'Installing missing packages: %s\n' "${missing[*]}"
-            timeout 420s sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends -o Dpkg::Use-Pty=0 -o Acquire::Retries=0 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 "${missing[@]}"
+            # Avoid the sometimes very slow Azure mirror; try Ubuntu's primary
+            # archive first, then a different official mirror if necessary.
+            sudo cp /etc/apt/sources.list.d/ubuntu.sources /tmp/pnh-ubuntu.sources.bak
+            for mirror in https://archive.ubuntu.com/ubuntu https://mirrors.edge.kernel.org/ubuntu; do
+              echo "Trying Ubuntu mirror: $mirror"
+              sudo sed -E "s#https?://(azure.archive.ubuntu.com|archive.ubuntu.com|security.ubuntu.com|mirrors.edge.kernel.org)/ubuntu/?#${mirror}#g" /tmp/pnh-ubuntu.sources.bak | sudo tee /etc/apt/sources.list.d/ubuntu.sources >/dev/null
+              # Keep security repositories from the runner intact; replace only
+              # archive endpoints and refresh indexes for the selected mirror.
+              if timeout 180s sudo apt-get update -o Acquire::Retries=2 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20 &&
+                 timeout 600s sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends -o Dpkg::Use-Pty=0 -o Acquire::Retries=2 -o Acquire::http::Timeout=25 -o Acquire::https::Timeout=25 "${missing[@]}"; then
+                break
+              fi
+              echo "::warning::Package install failed on $mirror; trying next mirror"
+            done
           fi
           command -v ffmpeg
           command -v ffprobe
           command -v espeak-ng
-          ffmpeg -version | sed -n '1p'
+          ffmpeg -version | head -n 1
           espeak-ng --version
       - name: Smoke-test FFmpeg intro modes
         if: steps.schedule.outputs.due == 'true'
