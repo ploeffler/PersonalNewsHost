@@ -11,7 +11,14 @@
       "model_verified": false,
       "ready": false,
       "documentation": "https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/deployment-types",
-      "notes": "Data Zone processing is bounded to Microsoft's defined zone; availability depends on model and deployment type. Not necessarily restricted to EU member states."
+      "notes": "Data Zone processing is bounded to Microsoft's defined zone; availability depends on model and deployment type. Not necessarily restricted to EU member states.",
+      "model_id": null,
+      "deployment_type": "DataZoneStandard",
+      "source_region": null,
+      "destination_regions": [],
+      "data_retention_policy": null,
+      "subprocessors_reviewed": false,
+      "verification_status": "pending_model_and_endpoint"
     },
     {
       "id": "azure_geography",
@@ -22,7 +29,14 @@
       "model_verified": false,
       "ready": false,
       "documentation": "https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/deployment-types",
-      "notes": "Requires checking selected Azure geography, model and deployment SKU; not a universal single-country guarantee."
+      "notes": "Requires checking selected Azure geography, model and deployment SKU; not a universal single-country guarantee.",
+      "model_id": null,
+      "deployment_type": "Standard",
+      "source_region": null,
+      "destination_regions": [],
+      "data_retention_policy": null,
+      "subprocessors_reviewed": false,
+      "verification_status": "pending_model_and_endpoint"
     },
     {
       "id": "aws_bedrock_eu_geo",
@@ -33,8 +47,35 @@
       "model_verified": false,
       "ready": false,
       "documentation": "https://docs.aws.amazon.com/bedrock/latest/userguide/geographic-cross-region-inference.html",
-      "notes": "Inference may move between supported regions within the profile geography. Model/profile and destination region list must be checked."
+      "notes": "Inference may move between supported regions within the profile geography. Model/profile and destination region list must be checked.",
+      "model_id": null,
+      "deployment_type": null,
+      "source_region": null,
+      "destination_regions": [],
+      "data_retention_policy": null,
+      "subprocessors_reviewed": false,
+      "verification_status": "pending_model_and_endpoint"
     }
   ],
-  "warning": "These are documented deployment possibilities, not approved providers or verified processing commitments for the project's concrete usage."
+  "warning": "These are documented deployment possibilities, not approved providers or verified processing commitments for the project's concrete usage.",
+  "verification_schema_version": 1,
+  "required_for_approval": [
+    "provider",
+    "service",
+    "model_id",
+    "deployment_type",
+    "source_region",
+    "destination_regions",
+    "processing_scope",
+    "data_retention_policy",
+    "subprocessors_reviewed",
+    "evidence_url",
+    "checked_on"
+  ],
+  "verification_notes": [
+    "Microsoft: check exact model availability for deployment SKU and Azure geography; EU Data Zone can include EFTA.",
+    "AWS: call GetInferenceProfile from every intended source Region and verify every returned destination model ARN region.",
+    "A provider headquarters or marketing region is not proof of a specific processing location.",
+    "Do not store credentials or customer data in this public catalog."
+  ]
 }
