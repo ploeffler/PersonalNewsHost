@@ -223,6 +223,7 @@ for(const id of ["automation_enabled","automation_interval","automation_hour","a
 const fields=["title","max_items","max_description_chars","piper_length_scale","voice_pitch_semitones","presenter","background"];
 const auditRequired=["provider","service","model_id","deployment_type","source_region","destination_regions","processing_scope","data_retention_policy","subprocessors_reviewed","evidence_url","checked_on"];
 const auditLabels={provider:"Anbieter",service:"Dienst",model_id:"Modell-ID",deployment_type:"Bereitstellungstyp",source_region:"Ausgangsregion",destination_regions:"Zielregionen",processing_scope:"Verarbeitungsraum",data_retention_policy:"Datenaufbewahrung",subprocessors_reviewed:"Unterauftragsverarbeiter geprüft",evidence_url:"Offizielle Beleg-URL",checked_on:"Prüfdatum"};
+let auditCatalog=null;
 async function refreshProviderAudit(){
  const status=$("v2_audit_status"),target=$("v2_audit_results");
  status.textContent="Prüfdaten werden geladen …";target.replaceChildren();
@@ -231,17 +232,33 @@ async function refreshProviderAudit(){
   if(!response.ok)throw new Error("HTTP "+response.status);
   const data=await response.json();
   if(!Array.isArray(data.candidates))throw new Error("Ungültiger Katalog");
-  for(const candidate of data.candidates){
+  auditCatalog=data;
+  renderProviderAudit(data);
+ }catch(error){status.textContent="Prüfdaten nicht verfügbar: "+error.message;}
+}
+function renderProviderAudit(data){
+ const status=$("v2_audit_status"),target=$("v2_audit_results");target.replaceChildren();
+ let count=0;
+ for(const candidate of data.candidates){
+  const service=$("v2_audit_service").value,region=$("v2_audit_region").value,country=$("v2_audit_country").value,filter=$("v2_audit_filter").value;
+  if(service!=="all"&&candidate.service!==service)continue;
+  const verified=candidate.verification_status==="verified"&&candidate.model_verified===true;
+  if(region!=="all"&&(!verified||!Array.isArray(candidate.verified_regions)||!candidate.verified_regions.includes(region)))continue;
+  if(country&&(!verified||!Array.isArray(candidate.verified_countries)||!candidate.verified_countries.includes(country)))continue;
    const missing=auditRequired.filter(key=>key==="subprocessors_reviewed"?candidate[key]!==true:!candidate[key]||(Array.isArray(candidate[key])&&candidate[key].length===0));
+   const complete=missing.length===0;
+   if(filter==="pending"&&complete||filter==="complete"&&!complete||filter==="approved"&&!(verified&&candidate.ready===true&&complete))continue;
+   count++;
    const article=document.createElement("div");
    const heading=document.createElement("strong");heading.textContent=(candidate.name||candidate.id||"Unbekannt")+" – nicht freigegeben";
    const detail=document.createElement("p");detail.textContent=missing.length?"Fehlende Nachweise: "+missing.map(key=>auditLabels[key]).join(", "):"Pflichtfelder vorhanden; unabhängige Standortprüfung und Freigabe fehlen weiterhin.";
    article.append(heading,detail);target.appendChild(article);
   }
-  status.textContent=data.candidates.length+" Anbieteroptionen geprüft (offline, keine Live-Verfügbarkeitsabfrage).";
- }catch(error){status.textContent="Prüfdaten nicht verfügbar: "+error.message;}
+ status.textContent=count+" von "+data.candidates.length+" Anbieteroptionen angezeigt (Katalogdaten, keine Live-Abfrage).";
+ if(!count){const p=document.createElement("p");p.textContent="Keine Anbieter mit nachgewiesenen passenden Kriterien gefunden.";target.appendChild(p);}
 }
 $("v2_audit_refresh").addEventListener("click",refreshProviderAudit);
+for(const id of ["v2_audit_region","v2_audit_country","v2_audit_service","v2_audit_filter"])$(id).addEventListener("change",()=>{if(auditCatalog)renderProviderAudit(auditCatalog);});
 refreshProviderAudit();
 
 function refreshResidency(){
