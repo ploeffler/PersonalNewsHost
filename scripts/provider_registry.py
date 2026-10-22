@@ -7,7 +7,10 @@ from dataclasses import dataclass
 from decimal import Decimal, InvalidOperation
 from typing import Protocol
 
-from .processing_location import validate_location
+try:
+    from .processing_location import validate_location
+except ImportError:
+    from processing_location import validate_location
 
 
 class NewsProvider(Protocol):
