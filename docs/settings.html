@@ -89,9 +89,11 @@ function fill(c){
 async function load(){
  $("status").textContent="Lade Konfiguration …";$("result").textContent="";
  try{
-   const embedded=JSON.parse($("embedded-config").textContent);
-   fill(embedded);
-   $("status").textContent="Konfiguration aus der Webseite geladen. Zum Übernehmen die heruntergeladene config.json in GitHub ersetzen.";
+   let config;
+   try { const response=await fetch("./config.json",{cache:"no-store"}); if(!response.ok)throw Error("HTTP "+response.status); config=await response.json(); }
+   catch { config=JSON.parse($("embedded-config").textContent); }
+   fill(config);
+   $("status").textContent="Konfiguration geladen. Änderungen können heruntergeladen oder direkt auf GitHub gespeichert werden.";
  }catch(e){
    $("status").textContent="Konfiguration konnte nicht geladen werden: "+e.message;
    $("importrow").hidden=false;
