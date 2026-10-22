@@ -105,8 +105,8 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <label for="intro_static_color">Hintergrundfarbe</label><input id="intro_static_color" type="color" value="#13243a">
 <label for="intro_static_image">Bildpfad im Repository (bei Bilddatei)</label><input id="intro_static_image" placeholder="assets/background.jpg">
 <small>Diese Einstellungen gelten nur für das Intro ohne Avatar. Eine Bilddatei muss bereits im Repository liegen.</small>
-</div><label for="intro_text">Intro-Sprechertext</label><textarea id="intro_text" maxlength="1500" required></textarea><small>Platzhalter {title} wird durch den Sendungstitel ersetzt.</small>
-<label for="outro_text">Outro-Sprechertext</label><textarea id="outro_text" maxlength="1500" required></textarea>
+</div><label for="intro_text">Intro-Sprechertext</label><textarea id="intro_text" maxlength="1500" required></textarea><small>Platzhalter: {title} = Sendungstitel, {moderator} = Name des Moderators.</small>
+<label for="outro_text">Outro-Sprechertext</label><textarea id="outro_text" maxlength="1500" required></textarea><small>Auch hier sind {title} und {moderator} verfügbar.</small>
 <label for="intro_seconds">Intro (Sekunden)</label><input id="intro_seconds" type="number" min="0" max="60" required>
 <label for="outro_seconds">Outro (Sekunden)</label><input id="outro_seconds" type="number" min="0" max="60" required>
 <label><input id="show_headlines" type="checkbox" style="width:auto"> Schlagzeilen anzeigen</label>
