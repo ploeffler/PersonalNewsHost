@@ -219,7 +219,7 @@ def main():
         args += ["-filter_complex", ";".join(filters), "-map", "[v]", "-map", "1:a",
                  "-c:v", "libx264", "-preset", "ultrafast", "-tune", "stillimage",
                  "-r", "5", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k",
-                 "-shortest", "-movflags", "+faststart", str(DOCS / "latest.mp4")]
+                 "-t", f"{duration:.3f}", "-shortest", "-movflags", "+faststart", str(DOCS / "latest.mp4")]
         run(args)
     lines = ["<!doctype html><html lang='de'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>",
              "<title>PersonalNewsHost</title><style>body{font:1.1rem system-ui;background:#13243a;color:white;max-width:900px;margin:3rem auto;padding:1rem}a{color:#8ed6ff}video{width:100%}</style>",
