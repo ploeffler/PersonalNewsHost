@@ -31,7 +31,7 @@ def similarity(a,b):
                    min(.72, .20+description_score))
     # Strong shared proper-name / technical-term signal in a title plus
     # supporting description; a lone generic keyword must not suffice.
-    if len(overlap)==1 and next(iter(overlap)) in {"php","kiew","meta","facebook"}:
+    if len(overlap)==1 and next(iter(overlap)) in {"php","kiew"}:
         return min(.65,.28+description_score)
     return 0.0
 
