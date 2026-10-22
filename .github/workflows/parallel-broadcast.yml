@@ -31,7 +31,19 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: broadcast-plan
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng
+      - name: Install FFmpeg, fonts and neural speech engine
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg espeak-ng fonts-dejavu-core
+          python3 -m pip install --disable-pip-version-check piper-tts
+      - name: Download German Piper voice
+        run: |
+          mkdir -p models
+          base="https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/thorsten/high"
+          curl -fL --retry 3 --connect-timeout 15 --max-time 180 "$base/de_DE-thorsten-high.onnx" -o models/de_DE-thorsten-high.onnx
+          curl -fL --retry 3 --connect-timeout 15 --max-time 60 "$base/de_DE-thorsten-high.onnx.json" -o models/de_DE-thorsten-high.onnx.json
+          test -s models/de_DE-thorsten-high.onnx
+          test -s models/de_DE-thorsten-high.onnx.json
       - run: python3 scripts/render_segment.py --segment "${{ matrix.segment }}"
       - uses: actions/upload-artifact@v4
         with:
