@@ -261,3 +261,14 @@ Jeder Fork kann Telegram unabhängig aktivieren. In der Web-Konfiguration unter 
 Nach der erfolgreichen Veröffentlichung unter GitHub Pages versendet der reguläre Produktionsworkflow optional das Video oder einen Link. Bei „Automatisch“ wird bei einem fehlgeschlagenen Video-Upload ein Link gesendet. Telegram-Fehler verhindern nicht die Website-Veröffentlichung. Videos über 49 MiB werden im Automatikmodus nur verlinkt. **Zugangsdaten niemals in `config.json` speichern.**
 
 Hinweis: Die experimentelle parallele MuseTalk-Pipeline veröffentlicht noch nicht automatisch; Telegram hängt vorerst am regulären Produktionsworkflow. Der Versand ist noch nicht mit einem echten Telegram-Bot end-to-end getestet.
+
+## Automatik / Produktionsintervall
+
+Der Tab **Automatik** auf der Web-Konfigurationsseite steuert `automation` in `config.json`:
+
+- `enabled`: automatische Produktion ein-/ausschalten (manuelle Starts bleiben möglich).
+- `interval_hours`: 1, 2, 3, 4, 6, 8, 12 oder 24 Stunden.
+- `start_hour_utc`: Stundenraster in UTC (0–23).
+- `days`: `daily`, `weekdays` oder `weekends`.
+
+Der GitHub-Actions-Cron bleibt technisch auf **stündlich, Minute 17 UTC** eingestellt. Ein kurzer Prüfjob überspringt alle rechenintensiven Schritte, wenn der gewählte Termin nicht fällig ist. So funktioniert die Konfiguration in eigenen Forks ohne GitHub-Workflow-Bearbeitung. Die GitHub-Actions-Ausführung ist **nicht minutengenau garantiert** und kann verzögert oder ausgelassen werden. Zeitangaben sind UTC; lokale Sommer-/Winterzeit wird nicht automatisch umgerechnet. Für das Aktivieren der geplanten Workflows im eigenen Fork gelten die GitHub-Einstellungen des Forks.
