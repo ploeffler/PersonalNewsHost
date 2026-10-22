@@ -23,7 +23,8 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 </fieldset>
 <fieldset><legend>Stimme und Moderation</legend>
 <label for="piper_length_scale">Piper-Sprechtempo (0,7–1,5; kleiner = schneller)</label><input id="piper_length_scale" type="number" min="0.7" max="1.5" step="0.01" required>
-<small>Die aktuell unterstützte neuronale Stimme ist de_DE-thorsten-high.</small>
+<label for="voice_pitch_semitones">Stimmlage in Halbtönen (−6 bis +6; negativ = tiefer)</label><input id="voice_pitch_semitones" type="number" min="-6" max="6" step="0.5" value="-1.5" required>
+<small>Standard: −1,5 Halbtöne. Die Sprechgeschwindigkeit bleibt unverändert. Unterstützte neuronale Stimme: de_DE-thorsten-high.</small>
 <label for="presenter_name">Name des Moderators</label><input id="presenter_name" maxlength="100">
 <label for="presenter">Portraitpfad im Repository</label><input id="presenter" placeholder="assets/presenter.png" required>
 <label for="background">Hintergrundpfad im Repository</label><input id="background" placeholder="assets/background.jpg" required>
@@ -57,10 +58,10 @@ const $=id=>document.getElementById(id);
 function updateStaticOptions(){ $("static_options").hidden=$("intro_mode").value!=="static"; $("intro_static_color").parentElement.hidden=false; $("intro_static_color").closest("label").hidden=false; $("intro_static_image").disabled=$("intro_static_type").value!=="image"; }
 $("intro_mode").addEventListener("change",updateStaticOptions);
 $("intro_static_type").addEventListener("change",updateStaticOptions);
-const fields=["title","max_items","max_description_chars","piper_length_scale","presenter","background"];
+const fields=["title","max_items","max_description_chars","piper_length_scale","voice_pitch_semitones","presenter","background"];
 function fill(c){
  original=c;
- for(const key of fields)$(key).value=c[key]??"";
+ for(const key of fields)$(key).value=c[key]??(key==="voice_pitch_semitones"?0:"");
  $("feeds").value=(c.feeds||[]).join("\n");
  const p=c.presenter_settings||{},sc=p.scenes||{};
  $("presenter_name").value=p.name||"";
@@ -101,6 +102,7 @@ $("settings").addEventListener("submit",event=>{
  if(!c.title||!c.feeds.length||c.feeds.length>30)throw Error("Titel und 1–30 RSS-Feeds sind erforderlich.");
  for(const key of ["max_items","max_description_chars"])c[key]=Number($(key).value);
  c.piper_length_scale=Number($("piper_length_scale").value);
+ c.voice_pitch_semitones=Number($("voice_pitch_semitones").value);
  c.presenter=$("presenter").value.trim();c.background=$("background").value.trim();
  for(const key of ["presenter","background"])if(!/^assets\/[a-zA-Z0-9_./-]+$/.test(c[key])||c[key].includes(".."))throw Error("Ungültiger Asset-Pfad: "+c[key]);
  c.presenter_settings??={};c.presenter_settings.name=$("presenter_name").value.trim();
