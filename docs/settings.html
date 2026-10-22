@@ -62,6 +62,7 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 "use strict";
 let original=null;
 let preparedConfig=null;
+let savingDirectly=false;
 const $=id=>document.getElementById(id);
 function updateStaticOptions(){ $("static_options").hidden=$("intro_mode").value!=="static"; $("intro_static_image").disabled=$("intro_static_type").value!=="image"; }
 $("intro_mode").addEventListener("change",updateStaticOptions);
@@ -128,6 +129,7 @@ $("settings").addEventListener("submit",event=>{
  c.presenter_settings.scenes.outro_seconds=Number($("outro_seconds").value);
  c.presenter_settings.scenes.show_headlines=$("show_headlines").checked;
  preparedConfig=c;
+ if(savingDirectly)return;
  const blob=new Blob([JSON.stringify(c,null,2)+"\n"],{type:"application/json"});
  const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="config.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
  $("result").className="ok";$("result").textContent="config.json heruntergeladen. Bitte im GitHub-Repository übernehmen.";
@@ -140,7 +142,9 @@ $("save_github").addEventListener("click",async()=>{
  if(!$("confirm_save").checked){status.textContent="Bitte das Überschreiben ausdrücklich bestätigen.";return}
  // Use the same validated configuration as the download action.
  preparedConfig=null;
+ savingDirectly=true;
  $("settings").requestSubmit();
+ savingDirectly=false;
  if(!preparedConfig){status.textContent="Bitte zuerst die ungültigen Eingaben korrigieren.";return}
  const btn=$("save_github");btn.disabled=true;
  const url="https://api.github.com/repos/ploeffler/PersonalNewsHost/contents/config.json";
