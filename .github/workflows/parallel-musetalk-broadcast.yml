@@ -42,7 +42,7 @@ jobs:
             python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch torchvision
             python3 -m pip install --disable-pip-version-check 'diffusers>=0.30,<0.37' 'transformers>=4.40,<5' accelerate safetensors huggingface_hub pillow numpy librosa soundfile opencv-python-headless einops omegaconf face-alignment piper-tts
           else
-            python3 -m pip install --disable-pip-version-check piper-tts
+            python3 -m pip install --disable-pip-version-check piper-tts pillow
           fi
       - name: Download German Piper voice
         run: |
