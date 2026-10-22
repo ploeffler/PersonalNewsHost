@@ -18,6 +18,12 @@ def build(analysis,config):
     scenes=config.get("presenter_settings",{}).get("scenes",{})
     mode=scenes.get("intro_mode","avatar")
     if mode not in ("avatar","static"):raise ValueError("Invalid intro mode")
+    static_type=scenes.get("intro_static_type","color")
+    if static_type not in ("color","image"):raise ValueError("Invalid intro static type")
+    static_color=scenes.get("intro_static_color","#13243a")
+    if not isinstance(static_color,str) or not re.fullmatch(r"#[0-9a-fA-F]{6}",static_color):raise ValueError("Invalid intro color")
+    static_image=scenes.get("intro_static_image","assets/background.jpg")
+    if not isinstance(static_image,str) or not re.fullmatch(r"assets/[a-zA-Z0-9_./-]+",static_image) or ".." in static_image:raise ValueError("Invalid intro image path")
     intro=scenes.get("intro_text","Willkommen bei {title}. Hier sind die Nachrichten.")
     outro=scenes.get("outro_text","Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.")
     if not isinstance(intro,str) or not isinstance(outro,str):raise ValueError("Invalid narration text")
@@ -26,6 +32,7 @@ def build(analysis,config):
     segments=[{
         "id":"intro","kind":"intro","render_engine":"musetalk" if mode=="avatar" else "ffmpeg",
         "presenter_visible":mode=="avatar",
+        "static_background":{"type":static_type,"color":static_color,"image":static_image},
         "speech_text":intro,
         "sources":[],"review_required":False
     }]
