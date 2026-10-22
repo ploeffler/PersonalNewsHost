@@ -63,7 +63,11 @@
     "allow_paid": false
   },
   "editorial": {
-    "style": "original",
+    "style": "classic",
     "max_sentences": 2
+  },
+  "media": {
+    "mode": "images_and_videos",
+    "max_download_mb": 12
   }
 }
