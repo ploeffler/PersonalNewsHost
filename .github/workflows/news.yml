@@ -21,6 +21,24 @@ jobs:
       - name: Check configured production schedule
         id: schedule
         run: python3 scripts/check_schedule.py
+      - name: Restore cached Ubuntu packages
+        if: steps.schedule.outputs.due == 'true'
+        uses: actions/cache@v4
+        with:
+          path: /tmp/pnh-debs
+          key: pnh-ubuntu2404-amd64-debs-v1
+      - name: Restore Python download cache
+        if: steps.schedule.outputs.due == 'true'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pnh-pip-ubuntu2404-py3-v1
+      - name: Restore Piper voice model
+        if: steps.schedule.outputs.due == 'true'
+        uses: actions/cache@v4
+        with:
+          path: models/
+          key: pnh-piper-de-thorsten-high-v1
       - name: Install free local tools
         if: steps.schedule.outputs.due == 'true'
         run: |
@@ -29,6 +47,9 @@ jobs:
           if ! command -v ffmpeg >/dev/null || ! command -v ffprobe >/dev/null; then missing+=(ffmpeg); fi
           if ! command -v espeak-ng >/dev/null; then missing+=(espeak-ng); fi
           if (( ${#missing[@]} )); then
+            mkdir -p /tmp/pnh-debs
+            # Reuse previously downloaded .deb archives before contacting mirrors.
+            sudo cp -n /tmp/pnh-debs/*.deb /var/cache/apt/archives/ 2>/dev/null || true
             # Avoid the sometimes very slow Azure mirror; try Ubuntu's primary
             # archive first, then a different official mirror if necessary.
             sudo cp /etc/apt/sources.list.d/ubuntu.sources /tmp/pnh-ubuntu.sources.bak
@@ -44,6 +65,8 @@ jobs:
               echo "::warning::Package install failed on $mirror; trying next mirror"
             done
           fi
+          mkdir -p /tmp/pnh-debs
+          sudo find /var/cache/apt/archives -maxdepth 1 -name '*.deb' -exec cp -n {} /tmp/pnh-debs/ \;
           command -v ffmpeg
           command -v ffprobe
           command -v espeak-ng
@@ -54,14 +77,18 @@ jobs:
         run: python3 -m unittest discover -s tests -p test_video_smoke.py -v
       - name: Install neural speech engine
         if: steps.schedule.outputs.due == 'true'
-        run: python3 -m pip install --disable-pip-version-check piper-tts
+        run: python3 -m pip install --disable-pip-version-check --prefer-binary piper-tts
       - name: Download German Piper voice
         if: steps.schedule.outputs.due == 'true'
         run: |
           mkdir -p models
           base="https://huggingface.co/rhasspy/piper-voices/resolve/main/de/de_DE/thorsten/high"
-          curl -fL --retry 3 --connect-timeout 15 --max-time 180 "$base/de_DE-thorsten-high.onnx" -o models/de_DE-thorsten-high.onnx || true
-          curl -fL --retry 3 --connect-timeout 15 --max-time 60 "$base/de_DE-thorsten-high.onnx.json" -o models/de_DE-thorsten-high.onnx.json || true
+          if [ ! -s models/de_DE-thorsten-high.onnx ]; then
+            curl -fL --retry 3 --connect-timeout 15 --max-time 180 "$base/de_DE-thorsten-high.onnx" -o models/de_DE-thorsten-high.onnx || true
+          fi
+          if [ ! -s models/de_DE-thorsten-high.onnx.json ]; then
+            curl -fL --retry 3 --connect-timeout 15 --max-time 60 "$base/de_DE-thorsten-high.onnx.json" -o models/de_DE-thorsten-high.onnx.json || true
+          fi
           if [ ! -s models/de_DE-thorsten-high.onnx ] || [ ! -s models/de_DE-thorsten-high.onnx.json ]; then
             rm -f models/de_DE-thorsten-high.onnx models/de_DE-thorsten-high.onnx.json
             echo "Piper model unavailable; using eSpeak fallback"
