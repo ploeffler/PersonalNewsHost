@@ -167,7 +167,10 @@ def main():
                     raise ValueError("Invalid intro color")
                 args += ["-f", "lavfi", "-i", f"color=c=0x{color[1:]}:s=1280x720:r=5"]
             elif kind == "image":
-                still = ROOT / str(scenes.get("intro_static_image", "assets/background.jpg"))
+                relative = str(scenes.get("intro_static_image", "assets/background.jpg"))
+                if not re.fullmatch(r"assets/[A-Za-z0-9_./-]+", relative) or ".." in relative:
+                    raise ValueError("Invalid intro image path")
+                still = ROOT / relative
                 if not still.is_file():
                     raise FileNotFoundError("Intro image missing")
                 args += ["-loop", "1", "-i", str(still)]
