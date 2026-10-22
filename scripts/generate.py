@@ -112,11 +112,18 @@ def main():
     selected = collected[:max(1, min(int(CONFIG.get("max_items", 5)), 10))]
     now = dt.datetime.now(dt.timezone.utc)
     timestamp = now.strftime("%d.%m.%Y um %H:%M UTC")
-    parts = [f"Willkommen bei {CONFIG['title']}. Die Nachrichten vom {timestamp}."]
+    settings = CONFIG.get("presenter_settings", {})
+    scenes = settings.get("scenes", {})
+    moderator = str(settings.get("name") or "NewsHost")
+    def expand_scene_text(value):
+        return str(value).replace("{title}", str(CONFIG["title"])).replace("{moderator}", moderator)
+    intro_text = expand_scene_text(scenes.get("intro_text") or "Willkommen bei {title}. Hier sind die Nachrichten.")
+    outro_text = expand_scene_text(scenes.get("outro_text") or "Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.")
+    parts = [intro_text, f"Die Nachrichten vom {timestamp}."]
     limit = max(0, min(int(CONFIG.get("max_description_chars", 180)), 300))
     for title, desc, _ in selected:
-        parts.append(title.rstrip(".!?") + ".\n" + (desc[:limit].rsplit(" ", 1)[0] if len(desc) > limit else desc))
-    parts.append("Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.")
+        parts.append(title.rstrip(".!?") + ".\\n" + (desc[:limit].rsplit(" ", 1)[0] if len(desc) > limit else desc))
+    parts.append(outro_text)
     script = "\n\n".join(parts)
     (DOCS / "transcript.txt").write_text(script + "\n", encoding="utf-8")
     with tempfile.TemporaryDirectory() as tmp:
