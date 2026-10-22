@@ -405,6 +405,7 @@ $("settings").addEventListener("submit",event=>{
  if($("production_version").value!=="1.0")throw Error("Version 2.0 ist noch nicht verfügbar.");
  c.production_version=$("production_version").value;
  c.advanced_services={processing_region:$("v2_region").value,processing_country:$("v2_country").value,require_verified_region:$("v2_region_strict").checked,news_provider:$("v2_news").value,voice_provider:$("v2_voice").value,avatar_provider:$("v2_avatar").value,video_provider:$("v2_video").value,max_per_video_eur:Number($("v2_max_video").value),max_per_month_eur:Number($("v2_max_month").value),allow_paid:$("v2_allow_paid").checked};
+ c.tts_engine=$("tts_engine").value;
  c.title=$("title").value.trim();
  c.feeds=[...new Set($("feeds").value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean).map(validUrl))];
  if(!c.title||!c.feeds.length||c.feeds.length>30)throw Error("Titel und 1–30 RSS-Feeds sind erforderlich.");
