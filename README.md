@@ -325,3 +325,7 @@ Im Tab **Version** liest die Konfigurationsseite `docs/provider-research.json` u
 ### Anbieterfilter nach Standort und Nachweisstatus
 
 Der Recherchebereich im Tab **Version** kann nach Verarbeitungsraum, Land, Dienst und Nachweisstatus gefiltert werden. Ein geografischer Treffer wird **nur** angezeigt, wenn der Katalog ausdrücklich `verification_status: verified`, `model_verified: true` und passende `verified_regions` bzw. `verified_countries` enthält. Die bislang unverifizierten Kandidaten erscheinen daher bei Länder-/Regionsfiltern bewusst nicht. Filterung ist keine technische Freigabe; die 2.0-Ausführung bleibt gesperrt. Die angezeigten Treffer beruhen ausschließlich auf Katalogeinträgen, nicht auf einer Live-Prüfung.
+
+### Standortauswahl mit Symbolen
+
+Im Tab **Version** stehen die Kontinent-/Datenraumliste mit Globussymbolen und die Länderliste mit Flaggen nebeneinander (mobil untereinander). Ein Wechsel des Kontinents blendet unpassende Länder aus und entfernt eine eventuell nicht mehr passende Länderauswahl. Kontinent und Land werden automatisch in die Filter der Anbieterrecherche übernommen; dort erscheinen weiterhin nur nachgewiesene Standorte. Die gespeicherten Konfigurationswerte (`processing_region`, `processing_country`) und die Sperre für Version 2.0 bleiben unverändert.
