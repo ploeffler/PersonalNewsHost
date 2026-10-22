@@ -237,6 +237,25 @@ for(const id of ["automation_enabled","automation_interval","automation_hour","a
 const fields=["title","max_items","max_description_chars","piper_length_scale","voice_pitch_semitones","presenter","background"];
 const auditRequired=["provider","service","model_id","deployment_type","source_region","destination_regions","processing_scope","data_retention_policy","subprocessors_reviewed","evidence_url","checked_on"];
 const auditLabels={provider:"Anbieter",service:"Dienst",model_id:"Modell-ID",deployment_type:"Bereitstellungstyp",source_region:"Ausgangsregion",destination_regions:"Zielregionen",processing_scope:"Verarbeitungsraum",data_retention_policy:"Datenaufbewahrung",subprocessors_reviewed:"Unterauftragsverarbeiter geprüft",evidence_url:"Offizielle Beleg-URL",checked_on:"Prüfdatum"};
+function selectV2Tab(index){
+ document.querySelectorAll("[data-v2-tab]").forEach(tab=>{
+  const active=tab.dataset.v2Tab===String(index);
+  tab.setAttribute("aria-selected",String(active));
+  tab.tabIndex=active?0:-1;
+  document.getElementById(tab.getAttribute("aria-controls")).hidden=!active;
+ });
+}
+document.querySelectorAll("[data-v2-tab]").forEach(tab=>{
+ tab.addEventListener("click",()=>selectV2Tab(tab.dataset.v2Tab));
+ tab.addEventListener("keydown",event=>{
+  const tabs=Array.from(document.querySelectorAll("[data-v2-tab]"));
+  const i=tabs.indexOf(tab);
+  const next=event.key==="ArrowRight"?(i+1)%tabs.length:event.key==="ArrowLeft"?(i+tabs.length-1)%tabs.length:event.key==="Home"?0:event.key==="End"?tabs.length-1:-1;
+  if(next<0)return;
+  event.preventDefault();selectV2Tab(next);tabs[next].focus();
+ });
+});
+
 let auditCatalog=null;
 async function refreshProviderAudit(){
  const status=$("v2_audit_status"),target=$("v2_audit_results");
