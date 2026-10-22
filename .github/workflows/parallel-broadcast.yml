@@ -1,0 +1,57 @@
+name: Parallel broadcast prototype
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      segments: ${{ steps.matrix.outputs.segments }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/analyze_topics.py
+      - run: python3 scripts/build_broadcast_plan.py
+      - id: matrix
+        run: |
+          python3 -c 'import json; print("segments="+json.dumps([x["id"] for x in json.load(open("broadcast-plan.json"))["segments"]]))' >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: broadcast-plan
+          path: broadcast-plan.json
+  render:
+    needs: prepare
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        segment: ${{ fromJSON(needs.prepare.outputs.segments) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: broadcast-plan
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng
+      - run: python3 scripts/render_segment.py --segment "${{ matrix.segment }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rendered-${{ matrix.segment }}
+          path: rendered/*.mp4
+  assemble:
+    needs: [prepare, render]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: broadcast-plan
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: rendered-*
+          path: rendered
+          merge-multiple: true
+      - run: python3 scripts/assemble_segments.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: parallel-broadcast-demo
+          path: parallel-demo.mp4
