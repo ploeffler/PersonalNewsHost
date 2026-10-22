@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Browser-Studio · PersonalNewsHost</title>
+<style>
+:root{color-scheme:dark}body{font:16px system-ui;background:#071323;color:#e8f6ff;max-width:1100px;margin:auto;padding:24px}a{color:#70dcff}
+canvas{width:100%;aspect-ratio:16/9;background:#09182b;border:1px solid #28526b;border-radius:12px}
+.controls{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}button{background:#18badf;color:#041725;border:0;border-radius:8px;padding:12px 18px;font-weight:bold;cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}
+small,#status{color:#b5d2e4}video{max-width:100%}
+</style></head><body><p><a href="./">← Zur Nachrichtenseite</a></p>
+<h1>PersonalNewsHost · Browser-Studio</h1>
+<p>Technisch/KI-Animationen werden direkt auf deinem Gerät berechnet. Keine externen APIs, keine Übertragung deiner Berechnung.</p>
+<canvas id="stage" width="1280" height="720" aria-label="Animierte Nachrichtensendung"></canvas>
+<div class="controls"><button id="play">Animation starten</button><button id="export">WebM exportieren</button><button id="stop" disabled>Stoppen</button></div>
+<p id="status" role="status">Lade Nachrichten …</p><p><small>Experimentelle Vorschau: Die Browserfassung ist derzeit stumm und unabhängig vom automatisch erzeugten MP4/RSS-Feed. Export erfordert MediaRecorder und Canvas-Capture-Unterstützung. Browser und Geräte unterscheiden sich bei der WebM-Unterstützung.</small></p>
+<script src="browser-studio.js" defer></script></body></html>
