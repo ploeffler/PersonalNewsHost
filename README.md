@@ -337,3 +337,7 @@ Im Reiter **Version** besitzt der Bereich **Version 2.0 vorbereiten** vier Unter
 ### Abgleich der Konfiguration mit der Produktion
 
 Der produktive Generator berücksichtigt `tts_engine` mit den Werten `piper` (mit eSpeak-Fallback) und `espeak`. Die bisherige Weboberfläche bietet für diese Auswahl noch kein Feld. `presenter_settings.voice_model` ist weiterhin nicht frei auswählbar, da der GitHub-Workflow nur `de_DE-thorsten-high` herunterlädt. `intro_mode`, `intro_static_type`, `intro_static_color` und `intro_static_image` sind derzeit noch nicht vollständig mit dem produktiven FFmpeg-Generator verbunden. Lippensynchronisation bleibt experimentell; externe KI-Dienste und wirksame Kostenlimits bleiben gesperrt. Nicht implementierte Funktionen dürfen nicht als produktiv beworben werden.
+
+### Weitere Konfigurationsfunktionen (22.10.2026)
+
+Die Produktivkette wertet jetzt `tts_engine` (`piper` oder `espeak`) aus; die Web-Konfiguration kann diesen Wert bearbeiten und speichern. Der FFmpeg-Generator berücksichtigt nun auch `presenter_settings.scenes.intro_mode=static` mit `intro_static_type=color` oder `image`, `intro_static_color` und `intro_static_image`. Das Portrait bleibt im statischen Intro ausgeblendet und kann im Outro erscheinen. Diese neuen Änderungen sind eingecheckt, aber ein vollständiger produktiver FFmpeg-Testlauf steht noch aus. Weitere Modellwahl und Lippensynchronisation sind nicht produktiv verfügbar.
