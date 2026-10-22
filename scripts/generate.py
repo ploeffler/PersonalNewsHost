@@ -140,7 +140,7 @@ def edit_news(title, description, style, max_sentences, limit):
     description = re.sub(r"\\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", description))).strip()
     if style == "original":
         clipped = description[:limit].rsplit(" ", 1)[0] if len(description) > limit else description
-        return title.rstrip(".!?") + ".\\n" + clipped
+        return title.rstrip(".!?") + ".\n" + clipped
     if style not in ("classic", "brief"):
         raise ValueError("Unknown editorial style")
     # Only complete sentences; never invent context or paraphrase factual claims.
@@ -178,8 +178,11 @@ def main():
     outro_text = expand_scene_text(scenes.get("outro_text") or "Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.")
     parts = [intro_text, spoken_timestamp(local_now)]
     limit = max(0, min(int(CONFIG.get("max_description_chars", 180)), 300))
+    editorial = CONFIG.get("editorial", {})
+    style = editorial.get("style", "original")
+    max_sentences = max(1, min(4, int(editorial.get("max_sentences", 2))))
     for title, desc, _ in selected:
-        parts.append(title.rstrip(".!?") + ".\n" + (desc[:limit].rsplit(" ", 1)[0] if len(desc) > limit else desc))
+        parts.append(edit_news(title, desc, style, max_sentences, limit))
     parts.append(outro_text)
     script = "\n\n".join(parts)
     (DOCS / "transcript.txt").write_text(script + "\n", encoding="utf-8")
