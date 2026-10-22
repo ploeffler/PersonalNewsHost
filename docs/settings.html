@@ -28,7 +28,7 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 <label for="presenter_name">Name des Moderators</label><input id="presenter_name" maxlength="100">
 <label for="presenter">Portraitpfad im Repository</label><input id="presenter" placeholder="assets/presenter.png" required>
 <label for="background">Hintergrundpfad im Repository</label><input id="background" placeholder="assets/background.jpg" required>
-<small>Dateien werden in dieser ersten Version nicht hochgeladen. Pfade verweisen auf bereits vorhandene Dateien im Repository.</small>
+<small>Bilder können unten hochgeladen werden. Pfade verweisen auf Dateien im Repository.</small>
 </fieldset>
 <fieldset><legend>Intro und Outro – Darstellung und Sprechertext</legend>
 <h2>Intro: Avatar oder einfärbiger Hintergrund / Bild</h2>
@@ -42,6 +42,15 @@ small,.muted{color:#becbd8}.error{color:#ffb5b5;white-space:pre-wrap}.ok{color:#
 <label for="intro_seconds">Intro (Sekunden)</label><input id="intro_seconds" type="number" min="0" max="60" required>
 <label for="outro_seconds">Outro (Sekunden)</label><input id="outro_seconds" type="number" min="0" max="60" required>
 <label><input id="show_headlines" type="checkbox" style="width:auto"> Schlagzeilen anzeigen</label>
+</fieldset>
+<fieldset><legend>Eigene Bilder hochladen (Beta)</legend>
+<p>PNG oder JPEG, maximal 4 MB je Bild. Die Dateien werden öffentlich im GitHub-Repository gespeichert. Keine privaten Fotos oder Zugangsdaten hochladen.</p>
+<label for="upload_presenter">Moderator-Porträt</label><input id="upload_presenter" type="file" accept="image/png,image/jpeg,.png,.jpg,.jpeg">
+<label for="upload_background">Studiohintergrund</label><input id="upload_background" type="file" accept="image/png,image/jpeg,.png,.jpg,.jpeg">
+<label><input id="confirm_upload" type="checkbox" style="width:auto"> Ich bestätige, dass die Bilder öffentlich auf GitHub gespeichert werden dürfen.</label>
+<button type="button" id="upload_images">Ausgewählte Bilder auf GitHub hochladen</button>
+<p id="upload_status" role="status" aria-live="polite"></p>
+<small>Nach erfolgreichem Upload werden die Bildpfade in die Felder übernommen. Anschließend „Direkt auf GitHub speichern“ verwenden, damit config.json ebenfalls aktualisiert wird. Den Token dafür erneut eingeben.</small>
 </fieldset>
 <button type="submit">Konfiguration prüfen und herunterladen</button>
 <button type="button" id="save_github">Direkt auf GitHub speichern</button>
@@ -163,6 +172,59 @@ $("save_github").addEventListener("click",async()=>{
   original=structuredClone(preparedConfig);
  }catch(e){status.textContent=e.message}
  finally{$("github_token").value="";btn.disabled=false;$("confirm_save").checked=false}
+});
+
+function base64FromBytes(bytes){
+ let binary="";
+ for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));
+ return btoa(binary);
+}
+async function githubUploadImage(file,kind,headers){
+ if(!file)return null;
+ if(file.size===0||file.size>4*1024*1024)throw Error("Bild muss zwischen 1 Byte und 4 MB groß sein: "+file.name);
+ const bytes=new Uint8Array(await file.arrayBuffer());
+ const png=bytes.length>24&&[137,80,78,71,13,10,26,10].every((b,i)=>bytes[i]===b);
+ const jpg=bytes.length>4&&bytes[0]===255&&bytes[1]===216&&bytes[2]===255&&bytes[bytes.length-2]===255&&bytes[bytes.length-1]===217;
+ if(!png&&!jpg)throw Error("Nur echte PNG- oder JPEG-Bilder erlaubt: "+file.name);
+ let bitmap;
+ try{bitmap=await createImageBitmap(new Blob([bytes],{type:png?"image/png":"image/jpeg"}));}
+ catch{throw Error("Bild konnte nicht gelesen werden: "+file.name)}
+ const {width,height}=bitmap;bitmap.close();
+ if(width<320||height<240||width>6000||height>6000)throw Error("Bildgröße muss zwischen 320×240 und 6000×6000 Pixeln liegen: "+file.name);
+ const ext=png?"png":"jpg";
+ const suffix=crypto.randomUUID().replaceAll("-","").slice(0,12);
+ const path="assets/"+kind+"-"+suffix+"."+ext;
+ const url="https://api.github.com/repos/ploeffler/PersonalNewsHost/contents/"+path;
+ const res=await fetch(url,{method:"PUT",headers:{...headers,"Content-Type":"application/json"},body:JSON.stringify({message:"Upload "+kind+" image via PersonalNewsHost settings",content:base64FromBytes(bytes),branch:"main"})});
+ if(!res.ok)throw Error("GitHub-Upload fehlgeschlagen (HTTP "+res.status+"): "+file.name);
+ return path;
+}
+$("upload_images").addEventListener("click",async()=>{
+ const status=$("upload_status");status.className="error";status.textContent="";
+ const presenter=$("upload_presenter").files[0],background=$("upload_background").files[0];
+ const token=$("github_token").value.trim();
+ if(!presenter&&!background){status.textContent="Bitte mindestens ein Bild auswählen.";return}
+ if(!token){status.textContent="Bitte unten den GitHub-Token eingeben.";return}
+ if(!$("confirm_upload").checked){status.textContent="Bitte die öffentliche Veröffentlichung bestätigen.";return}
+ const btn=$("upload_images");btn.disabled=true;
+ const headers={"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"};
+ const uploaded=[];
+ try{
+  for(const [file,kind,input] of [[presenter,"presenter","presenter"],[background,"background","background"]]){
+   if(!file)continue;
+   status.textContent="Lade "+kind+" hoch …";
+   const path=await githubUploadImage(file,kind,headers);
+   $(input).value=path;
+   if(kind==="background"&&$("intro_static_type").value==="image")$("intro_static_image").value=path;
+   uploaded.push(path);
+  }
+  status.className="ok";status.textContent="Hochgeladen: "+uploaded.join(", ")+". Jetzt den GitHub-Token erneut eingeben und „Direkt auf GitHub speichern“ klicken.";
+ }catch(e){
+  status.textContent=e.message+(uploaded.length?" Bereits hochgeladen: "+uploaded.join(", ")+". Bitte Bildpfade anschließend speichern.":"");
+ }finally{
+  $("github_token").value="";$("confirm_upload").checked=false;btn.disabled=false;
+  $("upload_presenter").value="";$("upload_background").value="";
+ }
 });
 $("reset").addEventListener("click",load);
 $("importfile").addEventListener("change",async e=>{try{fill(JSON.parse(await e.target.files[0].text()));$("status").textContent="Lokale Konfiguration importiert."}catch(err){$("status").textContent="Ungültige JSON-Datei: "+err.message}});
