@@ -68,6 +68,7 @@
   },
   "media": {
     "mode": "images_and_videos",
-    "max_download_mb": 12
+    "max_download_mb": 12,
+    "web_image_fallback": true
   }
 }
