@@ -28,7 +28,8 @@
         "width": 0.13,
         "height": 0.045
       },
-      "note": "Offline speech-energy mouth deformation (not phoneme-accurate neural lip sync)"
+      "note": "Offline speech-energy mouth deformation (not phoneme-accurate neural lip sync)",
+      "fps": 12
     },
     "scenes": {
       "show_headlines": true,
