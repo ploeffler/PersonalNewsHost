@@ -600,11 +600,25 @@ def main():
                     f"[personstory{idx}]"
                 )
                 filters.append(
-                    f"[{current}][personstory{idx}]overlay=x={x}:y=165:"
+                    f"[{current}][personstory{idx}]overlay=x={x}:y=200:"
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
                     f"eof_action=repeat[{label}]"
                 )
                 current = label
+        # Restore the right-hand desk foreground after placing the host.
+        # This occludes the lower body and hands naturally, as if the
+        # presenter were sitting behind the physical news desk.
+        # Only the right-hand part is restored, so left media cards stay visible.
+        filters.append(
+            "[0:v]fps=5,scale=1280:720:force_original_aspect_ratio=increase,"
+            "crop=1280:720,crop=560:230:720:490,format=yuv420p,"
+            "setpts=PTS-STARTPTS[deskforeground]"
+        )
+        filters.append(
+            f"[{current}][deskforeground]overlay=x=720:y=490:"
+            f"enable='gte(t,{intro:.3f})':eof_action=repeat:shortest=0[behinddesk]"
+        )
+        current = "behinddesk"
         # Technical / AI broadcast identity: all graphics are rendered locally by FFmpeg.
         # Use text files so feed titles and brand names cannot inject filter syntax.
         font = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
