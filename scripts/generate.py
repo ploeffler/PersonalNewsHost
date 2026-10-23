@@ -577,9 +577,24 @@ def main():
                 current = next_label
         # Outro mirrors the left-side news layout and replaces media with sources.
         outro_media = Path(tmp) / "outro_media.txt"
-        outro_media.write_text("QUELLEN & BELEGE", encoding="utf-8")
+        outro_media.write_text("RSS-QUELLEN", encoding="utf-8")
         outro_detail = Path(tmp) / "outro_detail.txt"
-        outro_detail.write_text("Alle Artikel und Quellen:\nploeffler.github.io/PersonalNewsHost/", encoding="utf-8")
+        # Display the actual configured RSS feed addresses, not a generic news-site URL.
+        # Wrap long addresses so they fit the left-hand media card.
+        import textwrap
+        feed_lines = []
+        for feed_url in CONFIG.get("feeds", []):
+            feed_lines.extend(textwrap.wrap(str(feed_url), width=43, break_long_words=True, break_on_hyphens=False))
+        visible_feed_lines = feed_lines[:5]
+        if len(feed_lines) > 5:
+            visible_feed_lines.append("Weitere RSS-Feeds in config.json")
+        outro_detail.write_text("\n".join(visible_feed_lines) or "Keine RSS-Feeds konfiguriert", encoding="utf-8")
+        outro_editorial = Path(tmp) / "outro_editorial.txt"
+        outro_editorial.write_text(
+            "Redaktionell bearbeitet durch:\n"
+            "PersonalNewsHost (Python, RSS, Piper TTS, FFmpeg)",
+            encoding="utf-8"
+        )
         outro_headline = Path(tmp) / "outro_headline.txt"
         outro_headline.write_text("Danke fürs Zusehen!\nWeitere Nachrichten online.", encoding="utf-8")
         outro_enable = f"gte(t,{outro_start:.3f})"
@@ -595,8 +610,8 @@ def main():
             )
             current = next_label
         for label, file, size, color, x, y in (
-            ("outromediatitle", outro_media, 35, "0x54ddff", 85, 130),
-            ("outromediadetail", outro_detail, 25, "white", 85, 205),
+            ("outromediatitle", outro_media, 35, "0x54ddff", 85, 100),
+            ("outromediadetail", outro_detail, 22, "white", 85, 157),\n            ("outroeditorial", outro_editorial, 19, "0x9addeb", 85, 310),
             ("outroheadline", outro_headline, 31, "white", 85, 462),
         ):
             next_label = f"{label}layer"
