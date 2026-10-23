@@ -123,6 +123,49 @@ def download_media(candidates, mode, directory, index, max_bytes):
             print(f"RSS media skipped: {type(exc).__name__}: {exc}")
     return None
 
+def improve_news_image(path, settings):
+    """Conservative local enhancement; optional neural Real-ESRGAN executable."""
+    import shutil
+    from PIL import Image, ImageEnhance, ImageFilter, ImageOps
+    mode = settings.get("enhancement", "balanced")
+    if mode == "off":
+        return path, "original"
+    try:
+        with Image.open(path) as src:
+            image = ImageOps.exif_transpose(src).convert("RGB")
+            width, height = image.size
+            if width < 64 or height < 64:
+                return path, "original"
+            # AI mode uses an explicitly installed local CLI, never a paid API.
+            if mode == "ai":
+                executable = shutil.which("realesrgan-ncnn-vulkan")
+                if executable:
+                    output = path.with_name(path.stem + "_ai.png")
+                    try:
+                        subprocess.run([executable, "-i", str(path), "-o", str(output),
+                                        "-s", "2", "-n", "realesrgan-x4plus"],
+                                       check=True, timeout=90, capture_output=True)
+                        if output.is_file() and output.stat().st_size:
+                            return output, "neural_ai"
+                    except (OSError, subprocess.SubprocessError) as exc:
+                        print(f"AI enhancement fallback: {exc}")
+                else:
+                    print("AI enhancer not installed; using conservative enhancement")
+            # Do not invent details or aggressively sharpen journalistic images.
+            factor = min(2.0, 1100 / min(width, height))
+            if factor > 1.05:
+                image = image.resize((round(width * factor), round(height * factor)),
+                                     Image.Resampling.LANCZOS)
+            image = ImageEnhance.Contrast(image).enhance(1.045)
+            image = ImageEnhance.Sharpness(image).enhance(1.12)
+            output = path.with_name(path.stem + "_enhanced.png")
+            image.save(output, optimize=True)
+            return output, "conservative"
+    except Exception as exc:
+        print(f"Image enhancement skipped: {type(exc).__name__}: {exc}")
+        return path, "original"
+
+
 def search_commons_image(title):
     """Find a conservatively matched, public-domain/CC0 illustrative photo."""
     from urllib.parse import urlencode
@@ -467,6 +510,13 @@ def main():
                     if asset:
                         credit = {"title": image_title, "source": source_url, "note": "Illustrationsbild, nicht zwingend Aufnahme des Ereignisses"}
                         print(f"Commons fallback for story {i + 1}: {image_title}")
+            if asset and asset[1] == "image":
+                improved_path, method = improve_news_image(asset[0], media_settings)
+                asset = (improved_path, "image")
+                if credit is None:
+                    credit = {}
+                credit["image_processing"] = method
+                credit["original_media_retained"] = True
             story_media.append(asset)
             media_credits.append(credit)
         (DOCS / "media-credits.json").write_text(json.dumps(media_credits, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -610,6 +660,8 @@ def main():
         filters.append(
             "[0:v]fps=5,scale=1280:720:force_original_aspect_ratio=increase,"
             "crop=1280:720,crop=560:230:720:490,format=rgba,"
+            "geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':"
+            "a='255*min(1,max(0,Y/55))',"
             "setpts=PTS-STARTPTS[deskforeground]"
         )
         filters.append(
