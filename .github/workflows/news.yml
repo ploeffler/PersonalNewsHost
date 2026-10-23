@@ -85,7 +85,7 @@ jobs:
           mkdir -p models
           if [ ! -s models/FSRCNN_x2.pb ]; then
             curl -fL --retry 3 --connect-timeout 15 --max-time 90 \
-              "https://raw.githubusercontent.com/opencv/opencv_contrib/4.x/modules/dnn_superres/samples/FSRCNN_x2.pb" \
+              "https://raw.githubusercontent.com/Saafke/FSRCNN_Tensorflow/master/models/FSRCNN_x2.pb" \
               -o models/FSRCNN_x2.pb || rm -f models/FSRCNN_x2.pb
           fi
           python3 - <<'PY'
