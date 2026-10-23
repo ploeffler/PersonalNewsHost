@@ -541,11 +541,10 @@ def main():
             media_label = f"rssmedia{idx}"
             next_label = f"rssscene{idx}"
             filters.append(
-                f"[{input_index}:v]fps=5,scale=620:384:force_original_aspect_ratio=decrease:force_divisible_by=2,"
+                f"[{input_index}:v]fps=20,scale=620:384:flags=lanczos:"
+                f"force_original_aspect_ratio=decrease:force_divisible_by=2,"
                 f"pad=620:384:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
-                f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS,"
-                f"perspective=x0=35:y0=18:x1=590:y1=0:x2=0:y2=382:x3=618:y3=361:"
-                f"sense=destination[{media_label}]"
+                f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS[{media_label}]"
             )
             filters.append(
                 f"[{current}][{media_label}]overlay=x=60:y=60:"
@@ -610,7 +609,7 @@ def main():
         # Only the right-hand part is restored, so left media cards stay visible.
         filters.append(
             "[0:v]fps=5,scale=1280:720:force_original_aspect_ratio=increase,"
-            "crop=1280:720,crop=560:230:720:490,format=yuv420p,"
+            "crop=1280:720,crop=560:230:720:490,format=rgba,"
             "setpts=PTS-STARTPTS[deskforeground]"
         )
         filters.append(
