@@ -478,7 +478,8 @@ def main():
                 label = f"hoststory{idx}"
                 filters.append(
                     f"[hostinput{idx}]fps={lip_render_fps},scale=530:665:"
-                    f"force_original_aspect_ratio=decrease,format=rgba,"\n                    f"crop=iw:min(ih\\,470):0:0"
+                    f"force_original_aspect_ratio=decrease,format=rgba,"
+                    f"crop=iw:min(ih\\,470):0:0"
                     f"[personstory{idx}]"
                 )
                 filters.append(
