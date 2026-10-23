@@ -397,7 +397,7 @@ def main():
             filters.append("[2:v]fps=5,scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,format=yuv420p[introframe]")
             filters.append(f"[{current}][introframe]overlay=0:0:enable='lt(t,{intro:.3f})'[introcomposed]")
             current = "introcomposed"
-        if presenter.is_file():
+        if False and presenter.is_file():  # Legacy portrait disabled
             args += ["-loop", "1", "-i", str(presenter)]
             presenter_visibility = (
                 f"gte(t,{outro_start:.3f})" if intro_mode == "static"
@@ -424,14 +424,14 @@ def main():
             media_label = f"rssmedia{idx}"
             next_label = f"rssscene{idx}"
             filters.append(
-                f"[{input_index}:v]fps=5,scale=620:350:force_original_aspect_ratio=decrease,"
-                f"pad=620:350:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
+                f"[{input_index}:v]fps=5,scale=620:385:force_original_aspect_ratio=decrease,"
+                f"pad=620:385:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
                 f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS,"
-                f"perspective=x0=35:y0=18:x1=590:y1=0:x2=0:y2=348:x3=618:y3=327:"
+                f"perspective=x0=35:y0=18:x1=590:y1=0:x2=0:y2=383:x3=618:y3=361:"
                 f"sense=destination[{media_label}]"
             )
             filters.append(
-                f"[{current}][{media_label}]overlay=x=60:y=105:"
+                f"[{current}][{media_label}]overlay=x=60:y=60:"
                 f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
                 f"eof_action=repeat:shortest=0[{next_label}]"
             )
@@ -448,7 +448,7 @@ def main():
                 try:
                     from lipsync import generate_frames
                     frame_dir = Path(tmp) / "lipframes"
-                    lip_fps = max(5, min(15, int(lip_settings.get("fps", 12))))
+                    lip_fps = max(5, min(24, int(lip_settings.get("fps", 20))))
                     count = generate_frames(
                         story_host, wav, frame_dir, fps=lip_fps,
                         mouth=lip_settings.get("mouth")
@@ -473,7 +473,7 @@ def main():
             filters.append(f"[{story_host_input}:v]split={len(selected)}{labels}")
             for idx in range(len(selected)):
                 start_time = boundaries[idx + 2]
-                end_time = boundaries[idx + 3]
+                end_time = duration if idx == len(selected) - 1 else boundaries[idx + 3]
                 x = "W-w-65"
                 label = f"hoststory{idx}"
                 filters.append(
@@ -494,22 +494,22 @@ def main():
         brand_file = Path(tmp) / "brand.txt"
         brand_file.write_text(str(CONFIG["title"]), encoding="utf-8")
         outro_file = Path(tmp) / "outro.txt"
-        outro_file.write_text("MEHR NACHRICHTEN  /  QUELLEN AUF DER WEBSEITE", encoding="utf-8")
+        outro_file.write_text("QUELLEN & WEITERE NACHRICHTEN", encoding="utf-8")
         filters.append(
             f"[{current}]drawgrid=width=80:height=80:thickness=1:color=0x36d9ff@0.12:"
-            f"enable='lt(t,{intro:.3f})+gte(t,{outro_start:.3f})'[grid]"
+            f"enable='lt(t,{intro:.3f})'[grid]"
         )
         current = "grid"
         filters.append(
             f"[{current}]drawbox=x=0:y=0:w=iw:h=12:color=0x30d8ff@0.95:t=fill:"
-            f"enable='lt(t,{intro:.3f})+gte(t,{outro_start:.3f})'[accent]"
+            f"enable='lt(t,{intro:.3f})'[accent]"
         )
         current = "accent"
         filters.append(
             f"[{current}]drawtext=fontfile={font}:textfile={brand_file}:"
             f"fontcolor=white:fontsize=68:x=(w-text_w)/2:y=(h-text_h)/2-35:"
             f"borderw=2:bordercolor=0x0a1830:"
-            f"enable='lt(t,{intro:.3f})+gte(t,{outro_start:.3f})'[brand]"
+            f"enable='lt(t,{intro:.3f})'[brand]"
         )
         current = "brand"
         filters.append(
@@ -521,7 +521,7 @@ def main():
         filters.append(
             f"[{current}]drawtext=fontfile={font}:textfile={outro_file}:"
             f"fontcolor=0x54ddff:fontsize=22:x=(w-text_w)/2:y=h/2+65:"
-            f"enable='gte(t,{outro_start:.3f})'[outrotag]"
+            f"enable='lt(t,0)'[outrotag]"
         )
         current = "outrotag"
         if scenes.get("show_headlines", True) and selected:
@@ -534,8 +534,8 @@ def main():
                 # Wrap text to fit the 1280px canvas.
                 import textwrap
                 wrapped = textwrap.wrap(title, width=34, break_long_words=True)
-                if len(wrapped) > 4:
-                    wrapped = wrapped[:4]
+                if len(wrapped) > 3:
+                    wrapped = wrapped[:3]
                     wrapped[-1] = wrapped[-1].rstrip(" .") + "…"
                 headline_file.write_text("\n".join(wrapped), encoding="utf-8")
                 print(f"Headline {idx+1}/{story_count}: {start_time:.1f}-{end_time:.1f}s: {title[:65]}")
@@ -547,8 +547,8 @@ def main():
                 # Unified left-side editorial card, with media above the title.
                 card_x, card_w = 55, 635
                 has_media = story_media[idx] is not None
-                card_y = 390 if has_media else 195
-                card_h = 235 if has_media else 325
+                card_y = 425 if has_media else 195
+                card_h = 200 if has_media else 325
                 filters.append(
                     f"[{current}]drawbox=x={card_x}:y={card_y}:w={card_w}:h={card_h}:"
                     f"color=0x07182b@0.91:t=fill:"
@@ -575,11 +575,41 @@ def main():
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[{next_label}]"
                 )
                 current = next_label
-        else:
-            filters.append(f"[{current}]null[v]")
+        # Outro mirrors the left-side news layout and replaces media with sources.
+        outro_media = Path(tmp) / "outro_media.txt"
+        outro_media.write_text("QUELLEN & BELEGE", encoding="utf-8")
+        outro_detail = Path(tmp) / "outro_detail.txt"
+        outro_detail.write_text("Alle Artikel und Quellen:\nploeffler.github.io/PersonalNewsHost/", encoding="utf-8")
+        outro_headline = Path(tmp) / "outro_headline.txt"
+        outro_headline.write_text("Danke fürs Zusehen!\nWeitere Nachrichten online.", encoding="utf-8")
+        outro_enable = f"gte(t,{outro_start:.3f})"
+        for label, x, y, w, h, color in (
+            ("outromedia", 55, 60, 635, 355, "0x07182b@0.94"),
+            ("outrocard", 55, 425, 635, 200, "0x07182b@0.94"),
+            ("outrostripe", 55, 425, 7, 200, "0x35d9ff@0.98"),
+        ):
+            next_label = f"{label}layer"
+            filters.append(
+                f"[{current}]drawbox=x={x}:y={y}:w={w}:h={h}:color={color}:t=fill:"
+                f"enable='{outro_enable}'[{next_label}]"
+            )
+            current = next_label
+        for label, file, size, color, x, y in (
+            ("outromediatitle", outro_media, 35, "0x54ddff", 85, 130),
+            ("outromediadetail", outro_detail, 25, "white", 85, 205),
+            ("outroheadline", outro_headline, 31, "white", 85, 462),
+        ):
+            next_label = f"{label}layer"
+            filters.append(
+                f"[{current}]drawtext=fontfile={font}:textfile={file}:"
+                f"fontcolor={color}:fontsize={size}:line_spacing=12:x={x}:y={y}:"
+                f"enable='{outro_enable}'[{next_label}]"
+            )
+            current = next_label
+        filters.append(f"[{current}]null[v]")
         args += ["-filter_complex", ";".join(filters), "-map", "[v]", "-map", "1:a",
                  "-c:v", "libx264", "-preset", "ultrafast", "-tune", "stillimage",
-                 "-r", "12", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k",
+                 "-r", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k",
                  "-t", f"{duration:.3f}", "-shortest", "-movflags", "+faststart", str(DOCS / "latest.mp4")]
         run(args)
     lines = ["<!doctype html><html lang='de'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>",
