@@ -441,6 +441,7 @@ def main():
         # If the optional animation fails, keep the proven static overlay.
         story_host = ROOT / "assets/host.png"
         story_host_input = None
+        lip_render_fps = 5
         lip_settings = settings.get("lip_sync", {})
         if story_host.is_file():
             if lip_settings.get("enabled", False):
@@ -453,6 +454,7 @@ def main():
                         mouth=lip_settings.get("mouth")
                     )
                     if count:
+                        lip_render_fps = lip_fps
                         story_host_input = len([arg for arg in args if arg == "-i"])
                         args += ["-framerate", str(lip_fps), "-i", str(frame_dir / "lip_%06d.png")]
                         print(f"Audio-driven lip animation: {count} frames")
@@ -475,8 +477,8 @@ def main():
                 x = "W-w-65"
                 label = f"hoststory{idx}"
                 filters.append(
-                    f"[hostinput{idx}]fps={lip_fps if lip_settings.get('enabled', False) and 'lip_fps' in locals() and story_host_input is not None else 5},scale=530:665:"
-                    f"force_original_aspect_ratio=decrease,format=rgba"
+                    f"[hostinput{idx}]fps={lip_render_fps},scale=530:665:"
+                    f"force_original_aspect_ratio=decrease,format=rgba,"\n                    f"crop=iw:min(ih\\,470):0:0"
                     f"[personstory{idx}]"
                 )
                 filters.append(
