@@ -123,6 +123,39 @@ def download_media(candidates, mode, directory, index, max_bytes):
             print(f"RSS media skipped: {type(exc).__name__}: {exc}")
     return None
 
+def article_image_candidates(url):
+    """Read publisher's article image metadata without paid services."""
+    from html.parser import HTMLParser
+    from urllib.parse import urljoin, urlparse
+
+    class ArticleImages(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.images = []
+        def handle_starttag(self, tag, attrs):
+            if tag.lower() != "meta":
+                return
+            values = dict((k.lower(), v or "") for k, v in attrs)
+            key = (values.get("property") or values.get("name") or "").lower()
+            if key in ("og:image", "og:image:url", "twitter:image", "twitter:image:src"):
+                candidate = urljoin(url, html.unescape(values.get("content", "")))
+                if urlparse(candidate).scheme in ("https", "http"):
+                    self.images.append((candidate, "image"))
+
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html"})
+        with urllib.request.urlopen(req, timeout=8) as response:
+            if "html" not in response.headers.get_content_type():
+                return []
+            body = response.read(500_000).decode("utf-8", errors="replace")
+        parser = ArticleImages()
+        parser.feed(body)
+        return list(dict.fromkeys(parser.images))
+    except Exception as exc:
+        print(f"Article image metadata unavailable: {type(exc).__name__}: {exc}")
+        return []
+
+
 def improve_news_image(path, settings):
     """Offline CPU neural upscaling with FSRCNN x2; conservative fallback."""
     from PIL import Image, ImageEnhance, ImageOps
@@ -506,8 +539,14 @@ def main():
         story_media = []
         media_credits = []
         for i, entry in enumerate(selected):
-            asset = download_media(entry[3], media_mode, Path(tmp), i, max_media_bytes)
-            credit = None
+            article_images = (article_image_candidates(entry[2])
+                              if media_mode != "off" and media_settings.get("prefer_article_images", True)
+                              else [])
+            # Prefer original article image metadata to small RSS thumbnails.
+            videos = [candidate for candidate in entry[3] if candidate[1] == "video"]
+            candidates = (videos if media_mode == "images_and_videos" else []) + article_images + entry[3]
+            asset = download_media(candidates, media_mode, Path(tmp), i, max_media_bytes)
+            credit = {"source": entry[2], "image_origin": "article_metadata_or_rss"}
             if asset is None and media_mode != "off" and media_settings.get("web_image_fallback", True):
                 result = search_commons_image(entry[0])
                 if result:
@@ -650,10 +689,7 @@ def main():
                 label = f"hoststory{idx}"
                 filters.append(
                     f"[hostinput{idx}]fps={lip_render_fps},scale=610:765:"
-                    f"force_original_aspect_ratio=decrease,format=rgba,"
-                    f"crop=iw:min(ih\\,370):0:0,"
-                    f"geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':"
-                    f"a='alpha(X,Y)*min(1,max(0,(370-Y)/60))'"
+                    f"force_original_aspect_ratio=decrease,format=rgba"
                     f"[personstory{idx}]"
                 )
                 filters.append(
@@ -668,13 +704,13 @@ def main():
         # Only the right-hand part is restored, so left media cards stay visible.
         filters.append(
             "[0:v]fps=5,scale=1280:720:force_original_aspect_ratio=increase,"
-            "crop=1280:720,crop=560:230:720:490,format=rgba,"
+            "crop=1280:720,crop=560:190:720:530,format=rgba,"
             "geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':"
-            "a='255*min(1,max(0,Y/55))',"
+            "a='255*min(1,max(0,Y/8))',"
             "setpts=PTS-STARTPTS[deskforeground]"
         )
         filters.append(
-            f"[{current}][deskforeground]overlay=x=720:y=490:"
+            f"[{current}][deskforeground]overlay=x=720:y=530:"
             f"enable='gte(t,{intro:.3f})':eof_action=repeat:shortest=0[behinddesk]"
         )
         current = "behinddesk"
