@@ -24,6 +24,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ ! -f telegram_sent.json ]; then exit 0; fi
           git add telegram_sent.json
           if ! git diff --cached --quiet; then
             git commit -m "Update Telegram deletion ledger"
