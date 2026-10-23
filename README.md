@@ -251,6 +251,12 @@ Die kostenfreie Konfiguration bleibt dabei ein eigenständiger, ohne Bezahlangeb
 
 ## Telegram für eigene Forks (optional)
 
+**Sicherheit bei Forks:** GitHub kopiert beim Forken **keine Repository- oder Actions-Secrets**. Ein Fork kann deshalb weder den Bot-Token noch die Chat-ID des ursprünglichen PersonalNewsHost-Repositories lesen oder verwenden. `${{ secrets.TELEGRAM_BOT_TOKEN }}` und `${{ secrets.TELEGRAM_CHAT_ID }}` beziehen sich immer auf die Secrets des Repositories, in dem der Workflow läuft. Ohne eigene Secrets ist der Telegram-Versand nicht möglich; bei aktivierter Telegram-Option meldet der Versand einen Fehler, ohne die Website-Veröffentlichung rückgängig zu machen. Jeder Fork-Betreiber benötigt einen **eigenen Bot-Token und ein eigenes Ziel**. Es gibt keine gemeinsamen oder fest im Quellcode hinterlegten Telegram-Zugangsdaten.
+
+**Schutz des Originalprojekts:** Tokens niemals in `config.json`, Workflow-Dateien, Commits, Issues, Pull Requests, Screenshots oder Logs eintragen. Ausschließlich **Settings → Secrets and variables → Actions** verwenden. GitHub-Secrets werden zwar in Logs nach Möglichkeit maskiert, aber die Maskierung ist keine vollständige Sicherheitsgrenze. Wer Schreibzugriff auf Workflows im Originalrepository hat, kann potenziell dessen Secrets missbrauchen; deshalb Schreibrechte und Workflow-Änderungen streng begrenzen. Bei Verdacht auf Offenlegung den Token über BotFather widerrufen und ersetzen.
+
+**Telegram-Ablaufzeit:** Gesendete Telegram-Nachrichten werden nach frühestens 25 Stunden durch den separaten stündlichen Workflow `telegram-cleanup.yml` gelöscht. GitHub-Actions-Verzögerungen können die Löschung verschieben. Die Löschung betrifft nicht die MP4-Datei auf GitHub Pages und nicht den Video-RSS-Feed. Die automatische Löschung benötigt dieselben **fork-eigenen** Secrets. Ein erfolgreicher End-to-End-Test mit einem echten Bot steht noch aus.
+
 Jeder Fork kann Telegram unabhängig aktivieren. In der Web-Konfiguration unter „Telegram-Veröffentlichung“ sind Empfängerart (Kanal, privater Chat, Gruppe) und Versandart (automatisch, nur Video, nur Link) wählbar. Standardmäßig ist Telegram **ausgeschaltet**.
 
 1. Über [@BotFather](https://t.me/BotFather) einen eigenen Bot erstellen.
