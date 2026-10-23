@@ -728,7 +728,8 @@ def main():
             current = next_label
         for label, file, size, color, x, y in (
             ("outromediatitle", outro_media, 35, "0x54ddff", 85, 100),
-            ("outromediadetail", outro_detail, 22, "white", 85, 157),\n            ("outroeditorial", outro_editorial, 19, "0x9addeb", 85, 310),
+            ("outromediadetail", outro_detail, 22, "white", 85, 157),
+            ("outroeditorial", outro_editorial, 19, "0x9addeb", 85, 310),
             ("outroheadline", outro_headline, 31, "white", 85, 462),
         ):
             next_label = f"{label}layer"
