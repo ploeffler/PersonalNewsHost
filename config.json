@@ -69,7 +69,13 @@
   },
   "editorial": {
     "style": "classic",
-    "max_sentences": 2
+    "max_sentences": 2,
+    "crosscheck": {
+      "enabled": true,
+      "max_sources": 2,
+      "method": "independent_publisher_headline_search",
+      "note": "Finds other publisher coverage, not factual verification of individual claims"
+    }
   },
   "media": {
     "mode": "images_and_videos",
