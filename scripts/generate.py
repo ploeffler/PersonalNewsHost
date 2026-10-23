@@ -699,22 +699,37 @@ def main():
                     f"eof_action=repeat[{label}]"
                 )
                 current = label
-        # Restore the right-hand desk foreground after placing the host.
-        # This occludes the lower body and hands naturally, as if the
-        # presenter were sitting behind the physical news desk.
-        # Only the right-hand part is restored, so left media cards stay visible.
-        filters.append(
-            "[0:v]fps=5,scale=1280:720:force_original_aspect_ratio=increase,"
-            "crop=1280:720,crop=560:190:720:530,format=rgba,"
-            "geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':"
-            "a='255*min(1,max(0,Y/8))',"
-            "setpts=PTS-STARTPTS[deskforeground]"
-        )
-        filters.append(
-            f"[{current}][deskforeground]overlay=x=720:y=530:"
-            f"enable='gte(t,{intro:.3f})':eof_action=repeat:shortest=0[behinddesk]"
-        )
-        current = "behinddesk"
+        # An independent transparent desk image is the correct foreground.
+        # Unlike cropping the studio photo, it can cover the presenter's hands
+        # without copying unwanted background pixels over the presenter.
+        desk_path = ROOT / settings.get("desk_foreground", "assets/desk_foreground.png")
+        if desk_path.is_file():
+            desk_input = len([arg for arg in args if arg == "-i"])
+            args += ["-loop", "1", "-i", str(desk_path)]
+            filters.append(
+                f"[{desk_input}:v]fps=5,scale=1280:720,format=rgba,"
+                "setpts=PTS-STARTPTS[deskforeground]"
+            )
+            filters.append(
+                f"[{current}][deskforeground]overlay=x=0:y=0:"
+                f"enable='gte(t,{intro:.3f})':eof_action=repeat:shortest=0[behinddesk]"
+            )
+            current = "behinddesk"
+        else:
+            # Compatibility with existing studios until the separate desk
+            # PNG is uploaded. Never treat the whole background as foreground.
+            filters.append(
+                "[0:v]fps=5,scale=1280:720:force_original_aspect_ratio=increase,"
+                "crop=1280:720,crop=560:190:720:530,format=rgba,"
+                "geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':"
+                "a='255*min(1,max(0,Y/8))',"
+                "setpts=PTS-STARTPTS[deskforeground]"
+            )
+            filters.append(
+                f"[{current}][deskforeground]overlay=x=720:y=530:"
+                f"enable='gte(t,{intro:.3f})':eof_action=repeat:shortest=0[behinddesk]"
+            )
+            current = "behinddesk"
         # Technical / AI broadcast identity: all graphics are rendered locally by FFmpeg.
         # Use text files so feed titles and brand names cannot inject filter syntax.
         font = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
