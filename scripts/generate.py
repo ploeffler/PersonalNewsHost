@@ -447,13 +447,14 @@ def main():
                 try:
                     from lipsync import generate_frames
                     frame_dir = Path(tmp) / "lipframes"
+                    lip_fps = max(5, min(15, int(lip_settings.get("fps", 12))))
                     count = generate_frames(
-                        story_host, wav, frame_dir, fps=5,
+                        story_host, wav, frame_dir, fps=lip_fps,
                         mouth=lip_settings.get("mouth")
                     )
                     if count:
                         story_host_input = len([arg for arg in args if arg == "-i"])
-                        args += ["-framerate", "5", "-i", str(frame_dir / "lip_%06d.png")]
+                        args += ["-framerate", str(lip_fps), "-i", str(frame_dir / "lip_%06d.png")]
                         print(f"Audio-driven lip animation: {count} frames")
                 except Exception as exc:
                     print(f"WARNING: lip animation failed; static host fallback: {exc}")
@@ -462,7 +463,7 @@ def main():
                 args += ["-loop", "1", "-i", str(story_host)]
         else:
             print("WARNING: assets/host.png missing; no story presenter overlay")
-        # Full-frame studio with alternating foreground presenter.
+        # Keep the presenter on the right, with the lower body hidden behind the desk line.
         if story_host_input is not None:
             # Split the presenter stream so each story gets an independent
             # filter input; avoid reusing an already consumed FFmpeg pad.
@@ -471,16 +472,15 @@ def main():
             for idx in range(len(selected)):
                 start_time = boundaries[idx + 2]
                 end_time = boundaries[idx + 3]
-                on_left = idx % 2 == 1
-                x = "115" if on_left else "W-w-115"
+                x = "W-w-65"
                 label = f"hoststory{idx}"
                 filters.append(
-                    f"[hostinput{idx}]fps=5,scale=530:665:"
+                    f"[hostinput{idx}]fps={lip_fps if lip_settings.get('enabled', False) and 'lip_fps' in locals() and story_host_input is not None else 5},scale=530:665:"
                     f"force_original_aspect_ratio=decrease,format=rgba"
                     f"[personstory{idx}]"
                 )
                 filters.append(
-                    f"[{current}][personstory{idx}]overlay=x={x}:y=65:"
+                    f"[{current}][personstory{idx}]overlay=x={x}:y=90:"
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
                     f"eof_action=repeat[{label}]"
                 )
@@ -564,7 +564,7 @@ def main():
             filters.append(f"[{current}]null[v]")
         args += ["-filter_complex", ";".join(filters), "-map", "[v]", "-map", "1:a",
                  "-c:v", "libx264", "-preset", "ultrafast", "-tune", "stillimage",
-                 "-r", "5", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k",
+                 "-r", "12", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k",
                  "-t", f"{duration:.3f}", "-shortest", "-movflags", "+faststart", str(DOCS / "latest.mp4")]
         run(args)
     lines = ["<!doctype html><html lang='de'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>",
