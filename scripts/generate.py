@@ -401,7 +401,7 @@ def main():
             args += ["-loop", "1", "-i", str(presenter)]
             presenter_visibility = (
                 f"gte(t,{outro_start:.3f})" if intro_mode == "static"
-                else f"between(t,0,{intro:.3f})+gte(t,{outro_start:.3f})"
+                else f"gte(t,{outro_start:.3f})"
             )
             filters += [
                 f"[{3 if intro_mode == 'static' else 2}:v]scale=440:600:force_original_aspect_ratio=decrease[person]",
@@ -431,7 +431,7 @@ def main():
                 f"sense=destination[{media_label}]"
             )
             filters.append(
-                f"[{current}][{media_label}]overlay=x={570 if idx % 2 == 1 else 90}:y=135:"
+                f"[{current}][{media_label}]overlay=x=60:y=105:"
                 f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
                 f"eof_action=repeat:shortest=0[{next_label}]"
             )
@@ -479,11 +479,11 @@ def main():
                 filters.append(
                     f"[hostinput{idx}]fps={lip_render_fps},scale=530:665:"
                     f"force_original_aspect_ratio=decrease,format=rgba,"
-                    f"crop=iw:min(ih\\,470):0:0"
+                    f"crop=iw:min(ih\\,345):0:0"
                     f"[personstory{idx}]"
                 )
                 filters.append(
-                    f"[{current}][personstory{idx}]overlay=x={x}:y=90:"
+                    f"[{current}][personstory{idx}]overlay=x={x}:y=145:"
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
                     f"eof_action=repeat[{label}]"
                 )
@@ -533,33 +533,45 @@ def main():
                 headline_file = Path(tmp) / f"headline_{idx}.txt"
                 # Wrap text to fit the 1280px canvas.
                 import textwrap
-                headline_file.write_text(
-                    "\n".join(textwrap.wrap(title, width=27, break_long_words=True)),
-                    encoding="utf-8"
-                )
+                wrapped = textwrap.wrap(title, width=34, break_long_words=True)
+                if len(wrapped) > 4:
+                    wrapped = wrapped[:4]
+                    wrapped[-1] = wrapped[-1].rstrip(" .") + "…"
+                headline_file.write_text("\n".join(wrapped), encoding="utf-8")
                 print(f"Headline {idx+1}/{story_count}: {start_time:.1f}-{end_time:.1f}s: {title[:65]}")
                 source_file = Path(tmp) / f"source_{idx}.txt"
                 from urllib.parse import urlparse
                 host = urlparse(selected[idx][2]).hostname or "Quelle im Web"
                 source_file.write_text(host[:75], encoding="utf-8")
                 source_label = f"source{idx}"
-                text_x = 480 if idx % 2 == 1 else 40
+                # Unified left-side editorial card, with media above the title.
+                card_x, card_w = 55, 635
+                has_media = story_media[idx] is not None
+                card_y = 390 if has_media else 195
+                card_h = 235 if has_media else 325
                 filters.append(
-                    f"[{current}]drawbox=x={text_x}:y={390 if story_media[idx] else 170}:w=760:h={240 if story_media[idx] else 390}:color=0x07182b@0.80:t=fill:"
-                    f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[{source_label}]"
+                    f"[{current}]drawbox=x={card_x}:y={card_y}:w={card_w}:h={card_h}:"
+                    f"color=0x07182b@0.91:t=fill:"
+                    f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[card{idx}]"
                 )
-                current = source_label
+                current = f"card{idx}"
+                filters.append(
+                    f"[{current}]drawbox=x={card_x}:y={card_y}:w=7:h={card_h}:"
+                    f"color=0x35d9ff@0.98:t=fill:"
+                    f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[stripe{idx}]"
+                )
+                current = f"stripe{idx}"
                 filters.append(
                     f"[{current}]drawtext=fontfile={font}:textfile={source_file}:"
-                    f"fontcolor=0x65e1ff:fontsize=23:x={text_x + 28}:y={570 if story_media[idx] else 493}:"
+                    f"fontcolor=0x67dfff:fontsize=21:x={card_x + 24}:y={card_y + card_h - 38}:"
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[credit{idx}]"
                 )
                 current = f"credit{idx}"
                 next_label = "v" if idx == story_count - 1 else f"story{idx}"
                 filters.append(
-                    f"[{current}]drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:"
-                    f"textfile={headline_file}:fontcolor=white:fontsize={31 if story_media[idx] else 38}:line_spacing=15:"
-                    f"x={text_x + 28}:y={440 if story_media[idx] else 265}:box=0:"
+                    f"[{current}]drawtext=fontfile={font}:"
+                    f"textfile={headline_file}:fontcolor=white:fontsize={28 if has_media else 34}:"
+                    f"line_spacing=8:x={card_x + 24}:y={card_y + 22}:"
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[{next_label}]"
                 )
                 current = next_label
