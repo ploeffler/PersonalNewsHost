@@ -124,10 +124,9 @@ def download_media(candidates, mode, directory, index, max_bytes):
     return None
 
 def improve_news_image(path, settings):
-    """Conservative local enhancement; optional neural Real-ESRGAN executable."""
-    import shutil
-    from PIL import Image, ImageEnhance, ImageFilter, ImageOps
-    mode = settings.get("enhancement", "balanced")
+    """Offline CPU neural upscaling with FSRCNN x2; conservative fallback."""
+    from PIL import Image, ImageEnhance, ImageOps
+    mode = settings.get("enhancement", "ai")
     if mode == "off":
         return path, "original"
     try:
@@ -136,22 +135,29 @@ def improve_news_image(path, settings):
             width, height = image.size
             if width < 64 or height < 64:
                 return path, "original"
-            # AI mode uses an explicitly installed local CLI, never a paid API.
             if mode == "ai":
-                executable = shutil.which("realesrgan-ncnn-vulkan")
-                if executable:
-                    output = path.with_name(path.stem + "_ai.png")
+                model = ROOT / "models" / "FSRCNN_x2.pb"
+                if model.is_file() and model.stat().st_size > 1000:
                     try:
-                        subprocess.run([executable, "-i", str(path), "-o", str(output),
-                                        "-s", "2", "-n", "realesrgan-x4plus"],
-                                       check=True, timeout=90, capture_output=True)
-                        if output.is_file() and output.stat().st_size:
-                            return output, "neural_ai"
-                    except (OSError, subprocess.SubprocessError) as exc:
-                        print(f"AI enhancement fallback: {exc}")
+                        import cv2
+                        import numpy as np
+                        # Keep CPU processing bounded on GitHub's free runners.
+                        if max(image.size) > 1100:
+                            image = ImageOps.contain(image, (1100, 1100),
+                                                     method=Image.Resampling.LANCZOS)
+                        network = cv2.dnn_superres.DnnSuperResImpl_create()
+                        network.readModel(str(model))
+                        network.setModel("fsrcnn", 2)
+                        rgb = np.asarray(image)
+                        enhanced = network.upsample(cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR))
+                        output = path.with_name(path.stem + "_ai.png")
+                        Image.fromarray(cv2.cvtColor(enhanced, cv2.COLOR_BGR2RGB)).save(output)
+                        print(f"Neural FSRCNN x2 enhancement: {path.name}")
+                        return output, "neural_fsrcnn_x2"
+                    except Exception as exc:
+                        print(f"Neural image enhancement fallback: {type(exc).__name__}: {exc}")
                 else:
-                    print("AI enhancer not installed; using conservative enhancement")
-            # Do not invent details or aggressively sharpen journalistic images.
+                    print("FSRCNN model unavailable; using conservative enhancement")
             factor = min(2.0, 1100 / min(width, height))
             if factor > 1.05:
                 image = image.resize((round(width * factor), round(height * factor)),
