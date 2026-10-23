@@ -259,6 +259,63 @@ def referenced_sources(text):
     return found[:8]
 
 
+def crosscheck_headline(title, original_url, max_results=2):
+    """Look for independently published coverage using free Google News RSS.
+
+    This is corroboration of the *topic/headline*, not verification of every
+    claim. Publisher domains must differ from the original and each other.
+    Fail closed on unavailable search services.
+    """
+    from urllib.parse import urlencode, urlparse
+    from difflib import SequenceMatcher
+    stop = {"und", "oder", "eine", "einer", "eines", "einem", "einen",
+            "über", "nach", "beim", "sich", "dass", "wird", "sind",
+            "auch", "mehr", "gegen", "wegen", "durch", "heute", "neue"}
+    def terms(value):
+        return {w.casefold() for w in re.findall(r"[^\\W_]{4,}", value, re.UNICODE)
+                if w.casefold() not in stop}
+    original_terms = terms(title)
+    result = {"status": "unavailable", "matches": [], "scope": "headline/topic",
+              "claim_verified": False}
+    if len(original_terms) < 2:
+        result["status"] = "insufficient_terms"
+        return result
+    query = " ".join(list(dict.fromkeys(re.findall(r"[^\\W_]{4,}", title, re.UNICODE)))[:7])
+    url = "https://news.google.com/rss/search?" + urlencode(
+        {"q": query, "hl": "de", "gl": "AT", "ceid": "AT:de"})
+    original_host = (urlparse(original_url).hostname or "").removeprefix("www.")
+    seen = {original_host}
+    try:
+        root = ET.fromstring(fetch(url))
+        for item in root.findall(".//item")[:20]:
+            candidate_title = clean(item.findtext("title"))
+            publisher = item.find("source")
+            publisher_name = clean(publisher.text) if publisher is not None else ""
+            publisher_url = publisher.get("url", "") if publisher is not None else ""
+            publisher_host = (urlparse(publisher_url).hostname or "").removeprefix("www.")
+            candidate_url = clean(item.findtext("link"))
+            candidate_terms = terms(candidate_title)
+            overlap = len(original_terms & candidate_terms) / max(1, min(len(original_terms), len(candidate_terms)))
+            similarity = SequenceMatcher(None, title.casefold(), candidate_title.casefold()).ratio()
+            if not publisher_host or publisher_host in seen or (overlap < 0.5 and similarity < 0.55):
+                continue
+            seen.add(publisher_host)
+            result["matches"].append({
+                "publisher": publisher_name or publisher_host,
+                "publisher_domain": publisher_host,
+                "headline": candidate_title,
+                "url": candidate_url,
+                "overlap": round(overlap, 2)
+            })
+            if len(result["matches"]) >= max_results:
+                break
+        result["status"] = "other_coverage_found" if result["matches"] else "no_matching_coverage"
+    except Exception as exc:
+        result["error"] = type(exc).__name__
+        print(f"Cross-check unavailable: {type(exc).__name__}: {exc}")
+    return result
+
+
 def edit_news(title, description, style, max_sentences, limit):
     """Offline, conservative editorial formatting without inventing facts."""
     title = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", title))).strip()
@@ -309,21 +366,38 @@ def main():
     style = editorial.get("style", "classic")
     max_sentences = max(1, min(4, int(editorial.get("max_sentences", 2))))
     source_mentions = []
+    crosschecks = []
+    verification = editorial.get("crosscheck", {})
+    verify_enabled = verification.get("enabled", True)
+    max_results = max(1, min(3, int(verification.get("max_sources", 2))))
     for title, desc, link, _ in selected:
         mentions = referenced_sources(title + ". " + desc)
         source_mentions.append({"title": title, "article_url": link,
                                 "mentioned_sources": mentions,
                                 "checked_scope": "RSS title and description only",
                                 "independently_verified": False})
-        # Preserve the original attribution: a mentioned source is not a
-        # second independently checked report.
+        checked = (crosscheck_headline(title, link, max_results)
+                   if verify_enabled else {"status": "disabled", "matches": [],
+                                           "scope": "headline/topic", "claim_verified": False})
+        checked["original_title"] = title
+        checked["original_url"] = link
+        crosschecks.append(checked)
         edited = edit_news(title, desc, style, max_sentences, limit)
         if mentions:
-            attribution = "Im RSS-Beitrag werden als weitere Quellen genannt: " + ", ".join(mentions) + "."
-            edited += "\n" + attribution
+            edited += "\n" + "Im RSS-Beitrag werden als weitere Quellen genannt: " + ", ".join(mentions) + "."
+        if checked["matches"]:
+            publishers = ", ".join(match["publisher"] for match in checked["matches"])
+            edited += "\n" + "Auch " + publishers + " berichten über das Thema. Einzelne Aussagen wurden nicht unabhängig verifiziert."
+        elif checked["status"] == "no_matching_coverage":
+            edited += "\n" + "Bei der automatischen Gegenrecherche wurde keine ausreichend ähnliche Meldung einer anderen Quelle gefunden."
+        elif checked["status"] == "unavailable":
+            edited += "\n" + "Eine unabhängige Gegenrecherche war technisch nicht möglich."
         parts.append(edited)
     (DOCS / "source-mentions.json").write_text(
         json.dumps(source_mentions, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    (DOCS / "crosschecks.json").write_text(
+        json.dumps(crosschecks, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     parts.append(outro_text)
     script = "\n\n".join(parts)
