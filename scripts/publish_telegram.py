@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Optional Telegram delivery. Credentials are GitHub Actions secrets, never config.json."""
 import json
+import datetime as dt
 import os
 import sys
 import urllib.error
@@ -50,6 +51,15 @@ def send(method, payload, video_file=None):
     if not result.get("ok"):
         raise RuntimeError("Telegram API returned an error")
     print("Telegram delivery succeeded: " + method)
+    message_id = result.get("result", {}).get("message_id")
+    if message_id is not None:
+        ledger = ROOT / "telegram_sent.json"
+        try:
+            entries = json.loads(ledger.read_text(encoding="utf-8")) if ledger.exists() else []
+        except (ValueError, OSError):
+            entries = []
+        entries.append({"chat_id": chat_id, "message_id": message_id, "sent_at": dt.datetime.now(dt.timezone.utc).isoformat()})
+        ledger.write_text(json.dumps(entries, indent=2) + "\n", encoding="utf-8")
 
 payload = {"chat_id": chat_id}
 if delivery != "link" and video.is_file() and video.stat().st_size <= 49 * 1024 * 1024:
