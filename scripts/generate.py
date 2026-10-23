@@ -687,7 +687,7 @@ def main():
                 x = "W-w-35"
                 label = f"hoststory{idx}"
                 legacy_crop = (
-                    "crop=iw:min(ih\\\\,340):0:0,"
+                    "crop=iw:min(ih\\,340):0:0,"
                     if not (ROOT / settings.get("desk_foreground", "assets/desk_foreground.png")).is_file()
                     else ""
                 )
