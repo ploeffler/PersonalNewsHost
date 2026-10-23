@@ -19,10 +19,16 @@
     "background": "assets/background.jpg",
     "voice_model": "de_DE-thorsten-high",
     "lip_sync": {
-      "enabled": false,
-      "engine": "none",
+      "enabled": true,
+      "engine": "audio_envelope",
       "fallback": "static",
-      "note": "CPU-only lip-sync not yet implemented; enable only after a successful prototype test"
+      "mouth": {
+        "x": 0.5,
+        "y": 0.34,
+        "width": 0.13,
+        "height": 0.045
+      },
+      "note": "Offline speech-energy mouth deformation (not phoneme-accurate neural lip sync)"
     },
     "scenes": {
       "show_headlines": true,
