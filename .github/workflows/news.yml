@@ -77,7 +77,7 @@ jobs:
         run: python3 -m unittest discover -s tests -p test_video_smoke.py -v
       - name: Install neural speech engine
         if: steps.schedule.outputs.due == 'true'
-        run: python3 -m pip install --disable-pip-version-check --prefer-binary piper-tts
+        run: python3 -m pip install --disable-pip-version-check --prefer-binary piper-tts Pillow
       - name: Download German Piper voice
         if: steps.schedule.outputs.due == 'true'
         run: |
