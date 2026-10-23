@@ -437,27 +437,45 @@ def main():
             )
             current = next_label
             print(f"RSS {kind} used for story {idx + 1}: {path.name}")
-        # Use the dedicated transparent host cutout for narrated stories.
-        # Keep the configured presenter portrait for intro/outro only.
+        # Animate the transparent host with the final narrated WAV.
+        # If the optional animation fails, keep the proven static overlay.
         story_host = ROOT / "assets/host.png"
+        story_host_input = None
+        lip_settings = settings.get("lip_sync", {})
         if story_host.is_file():
-            story_host_input = len([arg for arg in args if arg == "-i"])
-            args += ["-loop", "1", "-i", str(story_host)]
+            if lip_settings.get("enabled", False):
+                try:
+                    from lipsync import generate_frames
+                    frame_dir = Path(tmp) / "lipframes"
+                    count = generate_frames(
+                        story_host, wav, frame_dir, fps=5,
+                        mouth=lip_settings.get("mouth")
+                    )
+                    if count:
+                        story_host_input = len([arg for arg in args if arg == "-i"])
+                        args += ["-framerate", "5", "-i", str(frame_dir / "lip_%06d.png")]
+                        print(f"Audio-driven lip animation: {count} frames")
+                except Exception as exc:
+                    print(f"WARNING: lip animation failed; static host fallback: {exc}")
+            if story_host_input is None:
+                story_host_input = len([arg for arg in args if arg == "-i"])
+                args += ["-loop", "1", "-i", str(story_host)]
         else:
-            story_host_input = None
             print("WARNING: assets/host.png missing; no story presenter overlay")
         # Full-frame studio with alternating foreground presenter.
         if story_host_input is not None:
-            person_input = story_host_input
+            # Split the presenter stream so each story gets an independent
+            # filter input; avoid reusing an already consumed FFmpeg pad.
+            labels = "".join(f"[hostinput{idx}]" for idx in range(len(selected)))
+            filters.append(f"[{story_host_input}:v]split={len(selected)}{labels}")
             for idx in range(len(selected)):
                 start_time = boundaries[idx + 2]
                 end_time = boundaries[idx + 3]
                 on_left = idx % 2 == 1
-                # Alternate between two natural anchor positions in the set.
                 x = "115" if on_left else "W-w-115"
                 label = f"hoststory{idx}"
                 filters.append(
-                    f"[{person_input}:v]fps=5,scale=530:665:"
+                    f"[hostinput{idx}]fps=5,scale=530:665:"
                     f"force_original_aspect_ratio=decrease,format=rgba"
                     f"[personstory{idx}]"
                 )
