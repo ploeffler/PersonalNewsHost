@@ -46,13 +46,12 @@ def spoken_timestamp(local):
         ordinal = german_number(day) + "sten"
     elif day > 20:
         ordinal = german_number(day) + "sten"
-    year = german_number(local.year)
     hours = german_number(local.hour)
     if local.minute == 0:
         clock = hours + " Uhr"
     else:
         clock = hours + " Uhr " + german_number(local.minute)
-    return f"Heute ist der {ordinal[:-1]} {GERMAN_MONTHS[local.month - 1]}. Es ist {clock}. Nachrichten aus dem Jahr {year}."
+    return f"Heute ist der {ordinal[:-1]} {GERMAN_MONTHS[local.month - 1]}. Es ist {clock}."
 
 def clean(s):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", s or ""))).strip()
