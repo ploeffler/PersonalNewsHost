@@ -231,6 +231,34 @@ def synthesize(script, wav):
     print("Speech engine: eSpeak-NG fallback")
     adjust_voice_pitch(wav)
 
+def referenced_sources(text):
+    """Find explicitly attributed third-party sources in RSS text.
+
+    Detection is deliberately conservative: it reports mentions, not
+    independent verification or confirmation of the underlying claims.
+    """
+    text = clean(text)
+    patterns = (
+        r"\\b(?:laut|nach Angaben von|nach Angaben des|nach Angaben der|wie|berichtet|meldet|meldete)\\s+"
+        r"(?:der\\s+|des\\s+|dem\\s+|die\\s+|das\\s+)?"
+        r"([A-ZÄÖÜ][\\wÄÖÜäöüß&.-]*(?:\\s+[A-ZÄÖÜ][\\wÄÖÜäöüß&.-]*){0,3})",
+        r"\\b(?:gegenüber|unter Berufung auf)\\s+"
+        r"([A-ZÄÖÜ][\\wÄÖÜäöüß&.-]*(?:\\s+[A-ZÄÖÜ][\\wÄÖÜäöüß&.-]*){0,3})",
+    )
+    stop = {"Die", "Der", "Das", "Dem", "Den", "Einem", "Einer", "Angaben",
+            "Heute", "Gestern", "Montag", "Dienstag", "Mittwoch",
+            "Donnerstag", "Freitag", "Samstag", "Sonntag"}
+    found = []
+    for pattern in patterns:
+        for match in re.finditer(pattern, text):
+            candidate = match.group(1).strip(" ,.;:")
+            if candidate.split()[0] in stop or len(candidate) < 3:
+                continue
+            if candidate not in found:
+                found.append(candidate)
+    return found[:8]
+
+
 def edit_news(title, description, style, max_sentences, limit):
     """Offline, conservative editorial formatting without inventing facts."""
     title = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", title))).strip()
@@ -280,8 +308,23 @@ def main():
     editorial = CONFIG.get("editorial", {})
     style = editorial.get("style", "classic")
     max_sentences = max(1, min(4, int(editorial.get("max_sentences", 2))))
-    for title, desc, _, _ in selected:
-        parts.append(edit_news(title, desc, style, max_sentences, limit))
+    source_mentions = []
+    for title, desc, link, _ in selected:
+        mentions = referenced_sources(title + ". " + desc)
+        source_mentions.append({"title": title, "article_url": link,
+                                "mentioned_sources": mentions,
+                                "checked_scope": "RSS title and description only",
+                                "independently_verified": False})
+        # Preserve the original attribution: a mentioned source is not a
+        # second independently checked report.
+        edited = edit_news(title, desc, style, max_sentences, limit)
+        if mentions:
+            attribution = "Im RSS-Beitrag werden als weitere Quellen genannt: " + ", ".join(mentions) + "."
+            edited += "\n" + attribution
+        parts.append(edited)
+    (DOCS / "source-mentions.json").write_text(
+        json.dumps(source_mentions, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     parts.append(outro_text)
     script = "\n\n".join(parts)
     (DOCS / "transcript.txt").write_text(script + "\n", encoding="utf-8")
