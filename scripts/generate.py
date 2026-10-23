@@ -594,13 +594,13 @@ def main():
                 x = "W-w-65"
                 label = f"hoststory{idx}"
                 filters.append(
-                    f"[hostinput{idx}]fps={lip_render_fps},scale=530:665:"
+                    f"[hostinput{idx}]fps={lip_render_fps},scale=610:765:"
                     f"force_original_aspect_ratio=decrease,format=rgba,"
                     f"crop=iw:min(ih\\,345):0:0"
                     f"[personstory{idx}]"
                 )
                 filters.append(
-                    f"[{current}][personstory{idx}]overlay=x={x}:y=145:"
+                    f"[{current}][personstory{idx}]overlay=x={x}:y=165:"
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
                     f"eof_action=repeat[{label}]"
                 )
@@ -692,32 +692,39 @@ def main():
                     f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[{next_label}]"
                 )
                 current = next_label
-        # Outro mirrors the left-side news layout and replaces media with sources.
+        # Render source credits on top of every earlier story layer.
+        # Use the configured RSS URLs rather than the article landing-page URLs.
         outro_media = Path(tmp) / "outro_media.txt"
         outro_media.write_text("RSS-QUELLEN", encoding="utf-8")
         outro_detail = Path(tmp) / "outro_detail.txt"
-        # Display the actual configured RSS feed addresses, not a generic news-site URL.
-        # Wrap long addresses so they fit the left-hand media card.
         import textwrap
         feed_lines = []
         for feed_url in CONFIG.get("feeds", []):
-            feed_lines.extend(textwrap.wrap(str(feed_url), width=43, break_long_words=True, break_on_hyphens=False))
-        visible_feed_lines = feed_lines[:5]
+            # Break after URL separators, but never truncate the only source.
+            url_text = str(feed_url).strip()
+            feed_lines.extend(textwrap.wrap(url_text, width=45, break_long_words=True,
+                                            break_on_hyphens=False))
+        if not feed_lines:
+            feed_lines = ["Keine RSS-Feeds konfiguriert"]
         if len(feed_lines) > 5:
-            visible_feed_lines.append("Weitere RSS-Feeds in config.json")
-        outro_detail.write_text("\n".join(visible_feed_lines) or "Keine RSS-Feeds konfiguriert", encoding="utf-8")
+            feed_lines = feed_lines[:5] + ["Weitere URLs in config.json"]
+        outro_detail.write_text("\n".join(feed_lines), encoding="utf-8")
         outro_editorial = Path(tmp) / "outro_editorial.txt"
         outro_editorial.write_text(
-            "Redaktionell bearbeitet durch:\n"
-            "PersonalNewsHost (Python, RSS, Piper TTS, FFmpeg)",
+            "KI-gestuetzte redaktionelle Bearbeitung:\n"
+            "Quellensuche, Abgleich und Zusammenfassung",
             encoding="utf-8"
         )
         outro_headline = Path(tmp) / "outro_headline.txt"
-        outro_headline.write_text("Danke fürs Zusehen!\nWeitere Nachrichten online.", encoding="utf-8")
+        outro_headline.write_text(
+            "PERSONAL NEWS HOST\n"
+            "Produktion: Python, Piper TTS, FFmpeg",
+            encoding="utf-8"
+        )
         outro_enable = f"gte(t,{outro_start:.3f})"
         for label, x, y, w, h, color in (
-            ("outromedia", 55, 60, 635, 355, "0x07182b@0.94"),
-            ("outrocard", 55, 425, 635, 200, "0x07182b@0.94"),
+            ("outromedia", 55, 60, 635, 355, "0x07182b@0.97"),
+            ("outrocard", 55, 425, 635, 200, "0x07182b@0.97"),
             ("outrostripe", 55, 425, 7, 200, "0x35d9ff@0.98"),
         ):
             next_label = f"{label}layer"
@@ -727,15 +734,15 @@ def main():
             )
             current = next_label
         for label, file, size, color, x, y in (
-            ("outromediatitle", outro_media, 35, "0x54ddff", 85, 100),
-            ("outromediadetail", outro_detail, 22, "white", 85, 157),
-            ("outroeditorial", outro_editorial, 19, "0x9addeb", 85, 310),
-            ("outroheadline", outro_headline, 31, "white", 85, 462),
+            ("outromediatitle", outro_media, 35, "0x54ddff", 85, 92),
+            ("outromediadetail", outro_detail, 23, "white", 85, 155),
+            ("outroeditorial", outro_editorial, 20, "0x9addeb", 85, 296),
+            ("outroheadline", outro_headline, 28, "white", 85, 463),
         ):
             next_label = f"{label}layer"
             filters.append(
                 f"[{current}]drawtext=fontfile={font}:textfile={file}:"
-                f"fontcolor={color}:fontsize={size}:line_spacing=12:x={x}:y={y}:"
+                f"fontcolor={color}:fontsize={size}:line_spacing=10:x={x}:y={y}:"
                 f"enable='{outro_enable}'[{next_label}]"
             )
             current = next_label
