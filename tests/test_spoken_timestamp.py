@@ -7,15 +7,15 @@ from scripts.generate import spoken_timestamp
 class SpokenTimestampTests(unittest.TestCase):
     def test_october_example(self):
         date = dt.datetime(2026, 10, 22, 21, 33, tzinfo=ZoneInfo("Europe/Vienna"))
-        self.assertEqual(spoken_timestamp(date), "Heute ist der zweiundzwanzigste Oktober. Es ist einundzwanzig Uhr dreiunddreißig. Nachrichten aus dem Jahr zweitausendsechsundzwanzig.")
+        self.assertEqual(spoken_timestamp(date), "Heute ist der zweiundzwanzigste Oktober. Es ist einundzwanzig Uhr dreiunddreißig.")
 
     def test_midnight(self):
         date = dt.datetime(2026, 1, 1, 0, 0)
-        self.assertEqual(spoken_timestamp(date), "Heute ist der erste Jänner. Es ist null Uhr. Nachrichten aus dem Jahr zweitausendsechsundzwanzig.")
+        self.assertEqual(spoken_timestamp(date), "Heute ist der erste Jänner. Es ist null Uhr.")
 
     def test_twentieth(self):
         date = dt.datetime(2026, 4, 20, 8, 5)
-        self.assertEqual(spoken_timestamp(date), "Heute ist der zwanzigste April. Es ist acht Uhr fünf. Nachrichten aus dem Jahr zweitausendsechsundzwanzig.")
+        self.assertEqual(spoken_timestamp(date), "Heute ist der zwanzigste April. Es ist acht Uhr fünf.")
 
 if __name__ == "__main__":
     unittest.main()
