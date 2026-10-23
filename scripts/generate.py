@@ -686,11 +686,15 @@ def main():
                 end_time = duration if idx == len(selected) - 1 else boundaries[idx + 3]
                 x = "W-w-35"
                 label = f"hoststory{idx}"
+                legacy_crop = (
+                    "crop=iw:min(ih\\\\,340):0:0,"
+                    if not (ROOT / settings.get("desk_foreground", "assets/desk_foreground.png")).is_file()
+                    else ""
+                )
                 filters.append(
                     f"[hostinput{idx}]fps={lip_render_fps},scale=610:765:"
                     f"force_original_aspect_ratio=decrease,format=rgba,"
-                    f"crop=iw:min(ih\\,340):0:0"
-                    f"[personstory{idx}]"
+                    f"{legacy_crop}null[personstory{idx}]"
                 )
                 filters.append(
                     f"[{current}][personstory{idx}]overlay=x={x}:y=200:"
