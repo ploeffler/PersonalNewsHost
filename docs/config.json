@@ -80,6 +80,12 @@
   "media": {
     "mode": "images_and_videos",
     "max_download_mb": 12,
-    "web_image_fallback": true
+    "web_image_fallback": true,
+    "enhancement": "ai",
+    "enhancement_modes": [
+      "off",
+      "balanced",
+      "ai"
+    ]
   }
 }
