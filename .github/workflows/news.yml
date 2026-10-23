@@ -78,6 +78,29 @@ jobs:
       - name: Install neural speech engine
         if: steps.schedule.outputs.due == 'true'
         run: python3 -m pip install --disable-pip-version-check --prefer-binary piper-tts Pillow
+      - name: Install offline AI image upscaler
+        if: steps.schedule.outputs.due == 'true'
+        run: |
+          python3 -m pip install --disable-pip-version-check --prefer-binary opencv-contrib-python-headless numpy
+          mkdir -p models
+          if [ ! -s models/FSRCNN_x2.pb ]; then
+            curl -fL --retry 3 --connect-timeout 15 --max-time 90 \
+              "https://raw.githubusercontent.com/opencv/opencv_contrib/4.x/modules/dnn_superres/samples/FSRCNN_x2.pb" \
+              -o models/FSRCNN_x2.pb || rm -f models/FSRCNN_x2.pb
+          fi
+          python3 - <<'PY'
+          import cv2
+          from pathlib import Path
+          print("OpenCV:", cv2.__version__)
+          model = Path("models/FSRCNN_x2.pb")
+          if model.is_file():
+              sr = cv2.dnn_superres.DnnSuperResImpl_create()
+              sr.readModel(str(model))
+              sr.setModel("fsrcnn", 2)
+              print("Offline FSRCNN x2 model ready")
+          else:
+              print("::warning::FSRCNN model unavailable; conservative fallback will be used")
+          PY
       - name: Download German Piper voice
         if: steps.schedule.outputs.due == 'true'
         run: |
