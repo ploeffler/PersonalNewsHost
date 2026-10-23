@@ -646,11 +646,14 @@ def main():
             for idx in range(len(selected)):
                 start_time = boundaries[idx + 2]
                 end_time = duration if idx == len(selected) - 1 else boundaries[idx + 3]
-                x = "W-w-65"
+                x = "W-w-35"
                 label = f"hoststory{idx}"
                 filters.append(
                     f"[hostinput{idx}]fps={lip_render_fps},scale=610:765:"
-                    f"force_original_aspect_ratio=decrease,format=rgba"
+                    f"force_original_aspect_ratio=decrease,format=rgba,"
+                    f"crop=iw:min(ih\\,370):0:0,"
+                    f"geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':"
+                    f"a='alpha(X,Y)*min(1,max(0,(370-Y)/60))'"
                     f"[personstory{idx}]"
                 )
                 filters.append(
