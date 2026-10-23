@@ -56,13 +56,13 @@ def generate_frames(portrait, wav_path, output_dir, fps=5, mouth=None):
     peak = max(sorted(energy)[int(len(energy) * .85)] if energy else 0, 0.012)
     previous = 0.0
     for i, rms in enumerate(energy):
-        target = max(0, min(1, (rms / peak - 0.16) / 0.95))
-        previous = 0.55 * previous + 0.45 * target
+        target = max(0, min(1, (rms / peak - 0.08) / 0.65))
+        previous = 0.25 * previous + 0.75 * target
         opening = previous
         frame = img.copy()
         if opening > 0.05:
             # Stretch the lip region around its midpoint; keep a smooth boundary.
-            scale = 1.0 + opening * 0.42
+            scale = 1.0 + opening * 0.90
             new_h = max(2, round(original.height * scale))
             stretched = original.resize((original.width, new_h), Image.Resampling.BICUBIC)
             patch = Image.new("RGBA", original.size, (0, 0, 0, 0))
