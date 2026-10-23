@@ -58,7 +58,7 @@ def send(method, payload, video_file=None):
             entries = json.loads(ledger.read_text(encoding="utf-8")) if ledger.exists() else []
         except (ValueError, OSError):
             entries = []
-        entries.append({"chat_id": chat_id, "message_id": message_id, "sent_at": dt.datetime.now(dt.timezone.utc).isoformat()})
+        entries.append({"message_id": message_id, "sent_at": dt.datetime.now(dt.timezone.utc).isoformat()})
         ledger.write_text(json.dumps(entries, indent=2) + "\n", encoding="utf-8")
 
 payload = {"chat_id": chat_id}
