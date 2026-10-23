@@ -140,3 +140,15 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           PUBLIC_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: python3 scripts/publish_telegram.py
+      - name: Persist Telegram deletion schedule
+        if: steps.schedule.outputs.due == 'true' && success()
+        run: |
+          if [ -f telegram_sent.json ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add telegram_sent.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Record Telegram messages for 25-hour expiry"
+              git push
+            fi
+          fi
