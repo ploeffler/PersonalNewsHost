@@ -1,3 +1,11 @@
+## Konfiguration in Forks und Datenschutz
+
+**Achtung: Anders als GitHub Actions Secrets wird `config.json` beim Forken mitkopiert.** Die Datei und `docs/config.json` sind öffentlich einsehbar. Sie dürfen keine Tokens, Passwörter, privaten Empfängerkennungen oder andere vertrauliche Daten enthalten.
+
+Für neue Installationen steht die neutrale Vorlage [`config.example.json`](config.example.json) bereit. Nach dem Forken die eigene `config.json` durch eine Kopie dieser Vorlage ersetzen, persönliche RSS-Feeds und Einstellungen hinzufügen und erst dann die Produktion aktivieren. Die neutrale Vorlage hat keine voreingestellten RSS-Feeds und deaktiviert Telegram sowie die Automatik. Eigene Zugangsdaten ausschließlich als GitHub Actions Secrets des jeweiligen Forks hinterlegen.
+
+**Wichtig:** Das Ersetzen der Datei im Fork entfernt alte Inhalte nicht aus der Git-Historie. Eine öffentliche Repository-Konfiguration ist daher kein geeigneter Ort für Geheimnisse. Die Konfigurations-Webseite speichert weiterhin im öffentlichen Repository; diese Speicherung ist **nicht privat**. Eine automatische Isolation der gesamten Konfiguration zwischen Original und Fork ist noch nicht umgesetzt. Der Schutz der Telegram-Secrets bleibt davon unabhängig gewährleistet.
+
 # PersonalNewsHost
 
 **Experimentelles, automatisiertes RSS-Nachrichtenstudio – ohne kostenpflichtige APIs oder eigenen Server.**
