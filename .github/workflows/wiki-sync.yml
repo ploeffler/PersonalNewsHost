@@ -46,8 +46,6 @@ jobs:
           cd "$RUNNER_TEMP/wiki"
           python3 - "$GITHUB_WORKSPACE/docs/guide" <<'PY'
           import pathlib
-          import re
-          import shutil
           import sys
 
           source = pathlib.Path(sys.argv[1])
