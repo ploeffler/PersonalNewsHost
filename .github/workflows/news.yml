@@ -16,6 +16,24 @@ jobs:
       - uses: actions/checkout@v5
         with:
           persist-credentials: true
+      - name: Load private configuration
+        env:
+          PERSONALNEWSHOST_CONFIG: ${{ secrets.PERSONALNEWSHOST_CONFIG }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          raw = os.environ.get("PERSONALNEWSHOST_CONFIG", "").strip()
+          if raw:
+              config = json.loads(raw)
+              if not isinstance(config, dict):
+                  raise ValueError("PERSONALNEWSHOST_CONFIG must be a JSON object")
+              Path("config.json").write_text(json.dumps(config, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+              print("Private repository configuration loaded from Actions secret.")
+          else:
+              print("No private configuration secret; using public defaults.")
+          PY
       - name: Test provider configuration contracts
         run: python3 -m unittest discover -s tests
       - name: Check configured production schedule
@@ -121,7 +139,12 @@ jobs:
         run: python3 scripts/generate.py
       - name: Sync public configuration for settings page
         if: steps.schedule.outputs.due == 'true'
-        run: cp config.json docs/config.json
+        run: |
+          if [ -n "\${{ secrets.PERSONALNEWSHOST_CONFIG }}" ]; then
+            echo 'Private configuration active; not publishing it to GitHub Pages.'
+          else
+            cp config.json docs/config.json
+          fi
       - name: Publish generated files
         if: steps.schedule.outputs.due == 'true'
         run: |
