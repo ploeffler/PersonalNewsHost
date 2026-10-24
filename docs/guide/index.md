@@ -8,4 +8,4 @@ Willkommen in der Wissensbasis zu PersonalNewsHost.
 - [Technische Architektur und Workflows](technik.md)
 - [Entwicklungsgeschichte und Roadmap](entwicklung.md)
 
-**Hinweis zur GitHub-Wiki:** Diese Dokumentation liegt versioniert im Repository unter `docs/guide/`. Das separate GitHub-Wiki unter `github.com/ploeffler/PersonalNewsHost/wiki` muss in den Repository-Einstellungen aktiviert und separat mit Inhalten befüllt werden; ein Repository-Commit allein erstellt dort keine Wiki-Seiten.
+**Wiki-Synchronisation:** Diese Dokumentation wird im Repository unter `docs/guide/` gepflegt. Der Workflow `.github/workflows/wiki-sync.yml` überträgt die Seiten in das separate GitHub-Wiki, sobald das Actions Secret `WIKI_TOKEN` mit Wiki-Schreibzugriff eingerichtet ist. Das Wiki muss zuvor mit einer ersten Seite initialisiert werden.
