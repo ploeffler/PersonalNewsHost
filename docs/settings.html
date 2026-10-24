@@ -58,7 +58,7 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 .settings-panel.active-panel{display:block}
 }
 @media(max-width:767.98px){.settings-tabs{display:none}.settings-panel{display:block!important}}
-</style></head><body><main class="container-fluid">
+</style><script src="https://cdn.jsdelivr.net/npm/libsodium-wrappers@0.7.15/dist/browsers/sodium.js"></script></head><body><main class="container-fluid">
 <header class="page-header"><p><a href="./">← Zur Nachrichtenseite</a></p>
 <h1>PersonalNewsHost konfigurieren</h1>
 <p class="lead-copy">Nachrichtensendung, Stimme, Bilder und Ausgabekanäle konfigurieren. Im ersten Tab kannst du die Konfiguration speichern oder herunterladen.</p></header>
@@ -68,12 +68,12 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <fieldset class="settings-panel active-panel" id="panel-github" role="tabpanel" aria-labelledby="tab-github"><legend>GitHub &amp; Speichern</legend>
 
 <section class="security-panel"><h2>Direkt in GitHub speichern (Beta)</h2>
-<p>Optional: Ein <strong>Fine-grained Personal Access Token</strong> mit Zugriff ausschließlich auf <code>ploeffler/PersonalNewsHost</code> und Berechtigung <strong>Contents: Read and write</strong> ermöglicht das Speichern ohne Download. Der Token wird nur für diese Sitzung im Eingabefeld gehalten, nicht gespeichert oder ins Repository übertragen. Verwende keinen klassischen Token mit breiten Rechten. Auf einem gemeinsam genutzten Gerät besser die Download-Funktion verwenden.</p>
+<p>Ein <strong>Fine-grained Personal Access Token</strong> mit Zugriff auf dein eigenes Repository und Berechtigung <strong>Secrets: Read and write</strong> ermöglicht verschlüsseltes Speichern in GitHub Actions Secrets. Für Bild-Uploads ist zusätzlich <strong>Contents: Read and write</strong> nötig. Der Token wird nur für diese Sitzung im Eingabefeld gehalten, nicht gespeichert oder ins Repository übertragen. Verwende keinen klassischen Token mit breiten Rechten. Auf einem gemeinsam genutzten Gerät besser die Download-Funktion verwenden.</p>
 <label for="github_token">GitHub Fine-grained Token (nur für direkten Speichervorgang)</label><input id="github_token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…">
-<label><input id="confirm_save" type="checkbox" style="width:auto"> Ich möchte config.json auf main im Repository überschreiben.</label>
+<label><input id="confirm_save" type="checkbox" style="width:auto"> Ich möchte die Konfiguration verschlüsselt als GitHub Actions Secret speichern.</label>
 <p id="save_status" role="status" aria-live="polite"></p></section>
 <section class="security-panel"><h2>Wie werden Änderungen aktiv?</h2>
-<p>Die heruntergeladene Datei muss im Repository die vorhandene <code>config.json</code> ersetzen. Danach wird die neue Konfiguration beim nächsten Produktionslauf eingelesen.</p>
+<p>Die öffentliche <code>config.json</code> dient als Vorlage. Über „Direkt auf GitHub speichern“ wird die Konfiguration verschlüsselt als <code>PERSONALNEWSHOST_CONFIG</code> im eigenen Repository gespeichert. GitHub Secrets sind nach dem Speichern nicht wieder auslesbar: Für spätere Änderungen die exportierte Konfiguration erneut importieren oder die Werte neu eingeben.</p>
 <p><a href="https://github.com/ploeffler/PersonalNewsHost/edit/main/config.json" rel="noopener noreferrer">config.json auf GitHub bearbeiten</a> · <a href="https://github.com/ploeffler/PersonalNewsHost/actions/workflows/news.yml" rel="noopener noreferrer">Produktionsworkflow starten</a></p>
 </section>
 <div class="action-bar"><button type="submit">Konfiguration herunterladen</button>
@@ -478,17 +478,19 @@ $("save_github").addEventListener("click",async()=>{
  savingDirectly=false;
  if(!preparedConfig){status.textContent="Bitte zuerst die ungültigen Eingaben korrigieren.";return}
  const btn=$("save_github");btn.disabled=true;
- const url="https://api.github.com/repos/ploeffler/PersonalNewsHost/contents/config.json";
+ const repo=location.hostname.endsWith(".github.io") ? location.hostname.split(".")[0]+"/"+location.pathname.split("/").filter(Boolean)[0] : "ploeffler/PersonalNewsHost";
  const headers={"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"};
  try{
-  const current=await fetch(url,{headers,cache:"no-store"});
-  if(!current.ok)throw Error("GitHub-Lesezugriff fehlgeschlagen (HTTP "+current.status+"). Token und Repository-Rechte prüfen.");
-  const meta=await current.json();
-  const bytes=new TextEncoder().encode(JSON.stringify(preparedConfig,null,2)+"\n");
-  let binary="";for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));
-  const response=await fetch(url,{method:"PUT",headers:{...headers,"Content-Type":"application/json"},body:JSON.stringify({message:"Update PersonalNewsHost configuration via web settings",content:btoa(binary),sha:meta.sha,branch:"main"})});
-  if(!response.ok)throw Error("GitHub-Speichern fehlgeschlagen (HTTP "+response.status+"). "+(response.status===409?"Datei wurde zwischenzeitlich verändert; bitte neu laden.":"Zugriffsrechte und GitHub-Antwort prüfen."));
-  status.className="ok";status.textContent="config.json erfolgreich auf GitHub gespeichert. Der nächste Produktionslauf verwendet die neue Konfiguration.";
+  if(typeof sodium==="undefined")throw Error("Verschlüsselungsbibliothek nicht geladen; Speichern abgebrochen.");
+  await sodium.ready;
+  const keyResponse=await fetch("https://api.github.com/repos/"+repo+"/actions/secrets/public-key",{headers,cache:"no-store"});
+  if(!keyResponse.ok)throw Error("GitHub Secrets Public Key nicht abrufbar (HTTP "+keyResponse.status+"). Token benötigt Secrets: Read and write.");
+  const key=await keyResponse.json();
+  const data=new TextEncoder().encode(JSON.stringify(preparedConfig));
+  const encrypted=sodium.crypto_box_seal(data,sodium.from_base64(key.key,sodium.base64_variants.ORIGINAL));
+  const response=await fetch("https://api.github.com/repos/"+repo+"/actions/secrets/PERSONALNEWSHOST_CONFIG",{method:"PUT",headers:{...headers,"Content-Type":"application/json"},body:JSON.stringify({encrypted_value:sodium.to_base64(encrypted,sodium.base64_variants.ORIGINAL),key_id:key.key_id})});
+  if(!response.ok)throw Error("GitHub Secrets Speichern fehlgeschlagen (HTTP "+response.status+"). Secrets-Berechtigung prüfen.");
+  status.className="ok";status.textContent="Konfiguration als verschlüsseltes GitHub Actions Secret im Repository "+repo+" gespeichert. Für spätere Bearbeitung die Konfiguration exportieren; Secrets können nicht wieder ausgelesen werden.";
   original=structuredClone(preparedConfig);
  }catch(e){status.textContent=e.message}
  finally{$("github_token").value="";btn.disabled=false;$("confirm_save").checked=false}
