@@ -1,5 +1,7 @@
 # PersonalNewsHost – Dokumentation
 
+**Sprache:** Deutsch · [English](en/index.md)
+
 Willkommen in der Wissensbasis zu PersonalNewsHost.
 
 - [Schritt-für-Schritt-Installation](installation.md)
