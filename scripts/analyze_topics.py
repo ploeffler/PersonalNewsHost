@@ -5,6 +5,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
+try:
+    from scripts.research_language import event_candidate, normalize_language
+except ModuleNotFoundError:
+    from research_language import event_candidate, normalize_language
+
 STOP=set("der die das den dem des ein eine einer einem eines und oder zu zur zum im in am an auf aus bei mit von für nach über unter als ist sind wird werden wurde wurden hat haben auch noch schon mehr neue neuen neuer neues nun jetzt heute gestern aktuell gegen wegen durch um vor vom ins beim ihr ihre ihren seinen seine seinem dieser diese dieses dessen deren so wie was warum wer wo wenn dass nicht kein keine erste ersten zwei drei".split())
 
 def clean(value):
@@ -40,6 +45,10 @@ def parse_feed(data,url):
     atom="{http://www.w3.org/2005/Atom}"
     nodes=root.findall(".//item") or root.findall(".//"+atom+"entry")
     output=[]
+    feed_lang = root.findtext(".//language") or root.findtext(".//"+atom+"feed/"+atom+"language") or ""
+    if not feed_lang:
+        feed_lang = root.attrib.get("{http://www.w3.org/XML/1998/namespace}lang", "")
+    language = normalize_language(feed_lang, default="unknown")
     for node in nodes[:30]:
         title=clean(node.findtext("title") or node.findtext(atom+"title"))
         desc=clean(node.findtext("description") or node.findtext(atom+"summary") or node.findtext(atom+"content"))
@@ -47,7 +56,7 @@ def parse_feed(data,url):
         if not link:
             element=node.find(atom+"link")
             if element is not None:link=element.get("href","")
-        if title:output.append({"title":title,"description":desc,"link":link,"source":urlparse(url).netloc})
+        if title:output.append({"title":title,"description":desc,"link":link,"source":urlparse(url).netloc,"language":language})
     return output
 
 def group_items(items,threshold=.38):
@@ -67,11 +76,37 @@ def group_items(items,threshold=.38):
         group["review_required"]=group["article_count"]>1
     return groups
 
+def bilingual_candidates(items, threshold=0.3):
+    """Cross-language review candidates only; never merge or claim verification."""
+    results = []
+    for i, first in enumerate(items):
+        for second in items[i + 1:]:
+            if first.get("language") not in ("de", "en") or second.get("language") not in ("de", "en"):
+                continue
+            if first["language"] == second["language"]:
+                continue
+            if first.get("source") == second.get("source"):
+                continue
+            evidence = event_candidate(first["title"], second["title"])
+            if not evidence["candidate"] or evidence["score"] < threshold:
+                continue
+            results.append({
+                "first": {"title": first["title"], "url": first.get("link", ""),
+                          "source": first.get("source", ""), "language": first["language"]},
+                "second": {"title": second["title"], "url": second.get("link", ""),
+                           "source": second.get("source", ""), "language": second["language"]},
+                "score": evidence["score"], "shared_terms": evidence["shared_terms"],
+                "review_required": True, "independent_verification": False
+            })
+    return sorted(results, key=lambda result: -result["score"])
+
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--config",default="config.json")
     parser.add_argument("--output",default="topic-analysis.json")
     parser.add_argument("--threshold",type=float,default=.38)
+    parser.add_argument("--bilingual-output",default="",help="Optional JSON report for DE/EN review candidates")
     args=parser.parse_args()
     config=json.loads(Path(args.config).read_text(encoding="utf-8"))
     items=[];errors=[]
@@ -84,10 +119,19 @@ def main():
         except Exception as exc:errors.append({"feed":url,"error":str(exc)})
     if not items:raise SystemExit("No RSS entries; cannot analyze")
     groups=group_items(items,args.threshold)
+    bilingual = bilingual_candidates(items)
+    if args.bilingual_output:
+        report_path = Path(args.bilingual_output)
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        report_path.write_text(json.dumps({"generated_utc": datetime.now(timezone.utc).isoformat(),
+            "candidate_count": len(bilingual), "candidates": bilingual,
+            "note": "Review candidates only; not evidence of independent factual verification"},
+            ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
     report={"generated_utc":datetime.now(timezone.utc).isoformat(),"total_articles":len(items),
       "topic_count":len(groups),"multi_article_topics":sum(g["article_count"]>1 for g in groups),
       "multi_source_topics":sum(g["multi_source"] for g in groups),
       "feed_errors":errors,"topics":groups,
+      "bilingual_candidate_count":len(bilingual), "bilingual_candidates":bilingual,
       "method":"Conservative headline similarity; potential matches require review; source descriptions are not automatically blended"}
     target=Path(args.output);target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
