@@ -57,6 +57,28 @@ def build(analysis,config):
             "note":"Other sources are similarity candidates, not incorporated into spoken facts" if review else ""
         })
         if len(segments)-1>=max_items:break
+    # Bilingual candidates are editorial hints, never narration inputs.
+    bilingual_review = []
+    for candidate in analysis.get("bilingual_candidates", []):
+        if not isinstance(candidate, dict):
+            continue
+        first, second = candidate.get("first", {}), candidate.get("second", {})
+        if not isinstance(first, dict) or not isinstance(second, dict):
+            continue
+        if {first.get("language"), second.get("language")} != {"de", "en"}:
+            continue
+        bilingual_review.append({
+            "kind": "cross_language_event_candidate",
+            "first": {key: first.get(key, "") for key in ("title", "url", "source", "language")},
+            "second": {key: second.get(key, "") for key in ("title", "url", "source", "language")},
+            "score": candidate.get("score", 0),
+            "shared_terms": candidate.get("shared_terms", []),
+            "review_required": True,
+            "independent_verification": False,
+            "publication_approved": False,
+            "note": "Possible same event only; verify sources and claims independently"
+        })
+    pending.extend(bilingual_review)
     segments.append({
         "id":"outro","kind":"outro","render_engine":"musetalk",
         "presenter_visible":True,
@@ -69,6 +91,7 @@ def build(analysis,config):
         "rendering":{"parallelizable":True,"presenter_engine":"musetalk","story_engine":"ffmpeg",
                      "publish_enabled":False},
         "segments":segments,"review_queue":pending,
+        "bilingual_review_count":len(bilingual_review),
         "feed_errors":analysis.get("feed_errors",[])}
 
 def main():
