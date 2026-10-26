@@ -88,6 +88,22 @@
   "Ausgewählte Bilder auf GitHub hochladen": "Upload selected images to GitHub",
   "GitHub Fine-grained Token (nur für direkten Speichervorgang)": "GitHub fine-grained token (for direct saving only)"
 };
+  Object.assign(staticEnglish, {
+  "Nachrichtensendung, Stimme, Bilder und Ausgabekanäle konfigurieren. Im ersten Tab kannst du die Konfiguration speichern oder herunterladen.": "Configure the news broadcast, voice, images and publishing channels. Use the first tab to save or download your configuration.",
+  "Die öffentliche config.json dient als Vorlage. Über „Direkt auf GitHub speichern“ wird die Konfiguration verschlüsselt als PERSONALNEWSHOST_CONFIG im eigenen Repository gespeichert. GitHub Secrets sind nach dem Speichern nicht wieder auslesbar: Für spätere Änderungen die exportierte Konfiguration erneut importieren oder die Werte neu eingeben.": "The public config.json is a template. Saving to GitHub stores the configuration as an encrypted Actions secret named PERSONALNEWSHOST_CONFIG. GitHub secrets cannot be read back; keep a local JSON backup.",
+  "Die Aufbereitung erfolgt kostenlos und regelbasiert, ohne externe KI. Es werden keine zusätzlichen Fakten erfunden.": "News editing uses free, rule-based processing without external AI. No additional facts are invented.",
+  "Die Länderliste wird passend zum gewählten Kontinent gefiltert. Beide Listen stehen auf breiten Bildschirmen nebeneinander.": "Countries are filtered by the selected continent. On wide screens the lists appear side by side.",
+  "Kein Anbieter wurde bisher anhand belastbarer Standortunterlagen verifiziert. Firmensitz und vermutete Serverregion gelten nicht als Standortnachweis.": "No provider has yet been verified against reliable processing-location documentation. Company headquarters and assumed server regions are not proof.",
+  "Standorttreffer erfordern überprüfte Region und Land; unbekannte Standorte werden nicht zugeordnet.": "Location matches require verified region and country; unknown locations are not assigned.",
+  "Die Einstellungen gelten nur für das Intro ohne Avatar. Eine Bilddatei muss bereits im Repository liegen.": "These settings apply only to an intro without an avatar. Image files must already exist in the repository.",
+  "Diese Einstellungen gelten nur für das Intro ohne Avatar. Eine Bilddatei muss bereits im Repository liegen.": "These settings apply only to an intro without an avatar. Image files must already exist in the repository.",
+  "Platzhalter: {title} = Sendungstitel, {moderator} = Name des Moderators.": "Placeholders: {title} = broadcast title, {moderator} = presenter name.",
+  "Auch hier sind {title} und {moderator} verfügbar.": "The {title} and {moderator} placeholders are also available here.",
+  "Bilder können unten hochgeladen werden. Pfade verweisen auf Dateien im Repository.": "You can upload images below. Paths refer to files in the repository.",
+  "Nach erfolgreichem Upload werden die Bildpfade in die Felder übernommen. Anschließend „Direkt auf GitHub speichern“ verwenden.": "After uploading, image paths are added to the fields. Then use Save to GitHub.",
+  "Standard: keine Freigabe und 0 €. API-Schlüssel gehören ausschließlich in GitHub Actions Secrets, niemals in diese öffentliche Konfiguration.": "Default: no authorization and €0. API keys belong in GitHub Actions Secrets, never in public configuration.",
+  "GitHub Actions prüft stündlich ungefähr um Minute 17 (UTC), ob die gewählte Stunde fällig ist. Die tatsächliche Ausführung kann sich verzögern.": "GitHub Actions checks approximately at minute 17 (UTC) every hour. Actual execution may be delayed."
+});
   function translateStaticText(root) {
     if (lang !== "en") return;
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
