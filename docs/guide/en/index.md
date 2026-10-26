@@ -4,7 +4,7 @@ Welcome to the English documentation of PersonalNewsHost. The German documentati
 
 - [Installation](../installation.md) (German)
 - [Configuration and privacy](konfiguration.md) (English)
-- [Operations, Telegram and security](../betrieb-und-sicherheit.md) (German)
+- [Operations, Telegram and security](betrieb-und-sicherheit.md) (English)
 - [Technical architecture and workflows](../technik.md) (German)
 - [Development history and roadmap](../entwicklung.md) (German)
 
