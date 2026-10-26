@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out documentation
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           persist-credentials: false
 
@@ -46,6 +46,7 @@ jobs:
           cd "$RUNNER_TEMP/wiki"
           python3 - "$GITHUB_WORKSPACE/docs/guide" <<'PY'
           import pathlib
+          import re
           import sys
 
           source = pathlib.Path(sys.argv[1])
