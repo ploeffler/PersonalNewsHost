@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Editorial review · PersonalNewsHost</title>
+<style>
+:root{color-scheme:dark}body{font:16px/1.5 system-ui,sans-serif;background:#0c1727;color:#edf4fc;max-width:1100px;margin:auto;padding:24px}
+a{color:#8dd8ff}header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+h1{font-size:1.8rem}button,input{font:inherit}button{background:#254c70;color:white;border:1px solid #7396b2;border-radius:7px;padding:8px 14px;cursor:pointer}
+.panel{border:1px solid #3c5670;background:#14243a;border-radius:12px;padding:16px;margin:16px 0}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}.source{overflow-wrap:anywhere;padding:12px;background:#1c3048;border-radius:8px}
+.meta{color:#bdd0e0}.notice{border-left:4px solid #edbd69;padding-left:12px}.empty{padding:18px}
+@media(max-width:650px){.pair{grid-template-columns:1fr}}
+</style></head><body>
+<header><div><a href="index.html">PersonalNewsHost</a> / <span id="section">Redaktionelle Prüfung</span></div><button id="language" type="button">EN</button></header>
+<h1 id="heading">DE/EN-Recherchekandidaten</h1>
+<p id="disclaimer" class="notice">Ähnlichkeit bedeutet keine unabhängige Bestätigung. Alle Treffer erfordern redaktionelle Prüfung und sind nicht zur automatischen Veröffentlichung freigegeben.</p>
+<div class="panel"><label id="upload-label" for="upload">Optional: JSON-Bericht aus dem GitHub-Actions-Artefakt öffnen</label> <input id="upload" type="file" accept=".json,application/json">
+<p id="hint" class="meta">Standardmäßig wird der zuletzt veröffentlichte Prüfbericht geladen, falls vorhanden. Dateien bleiben beim lokalen Import im Browser.</p>
+</div>
+<p id="status" role="status"></p><main id="results"></main>
+<script>
+(()=>{
+const labels={
+de:{section:"Redaktionelle Prüfung",heading:"DE/EN-Recherchekandidaten",disclaimer:"Ähnlichkeit bedeutet keine unabhängige Bestätigung. Alle Treffer erfordern redaktionelle Prüfung und sind nicht zur automatischen Veröffentlichung freigegeben.",upload:"Optional: JSON-Bericht aus dem GitHub-Actions-Artefakt öffnen",hint:"Standardmäßig wird der zuletzt veröffentlichte Prüfbericht geladen, falls vorhanden. Dateien bleiben beim lokalen Import im Browser.",empty:"Keine sprachübergreifenden Prüfkandidaten im Bericht.",missing:"Noch kein veröffentlichter Bericht. Bitte einen JSON-Bericht aus dem GitHub-Actions-Artefakt auswählen.",loaded:"Prüfkandidaten:",error:"Ungültiger Prüfbericht",score:"Ähnlichkeit",review:"Prüfung erforderlich",date:"Bericht"},
+en:{section:"Editorial review",heading:"DE/EN research candidates",disclaimer:"Similarity does not constitute independent verification. All candidates require editorial review and are not approved for automatic publication.",upload:"Optional: Open a JSON report from the GitHub Actions artifact",hint:"The latest published report is loaded if available. Imported files stay in your browser.",empty:"No cross-language candidates in this report.",missing:"No published report yet. Select a JSON report from the GitHub Actions artifact.",loaded:"Review candidates:",error:"Invalid review report",score:"Similarity",review:"Review required",date:"Report"}
+};
+let lang=new URLSearchParams(location.search).get("lang")||localStorage.getItem("pnh-ui-lang")||"de";
+if(!labels[lang])lang="de";
+let report=null;
+const $=id=>document.getElementById(id);
+function render(){
+document.documentElement.lang=lang;
+for(const id of ["section","heading","disclaimer","hint"])$(id).textContent=labels[lang][id];
+$("upload-label").textContent=labels[lang].upload;
+$("language").textContent=lang==="de"?"EN":"DE";
+$("results").replaceChildren();
+if(!report)return;
+const entries=report.candidates||report.bilingual_candidates||[];
+$("status").textContent=labels[lang].loaded+" "+entries.length+(report.generated_utc?" · "+labels[lang].date+": "+report.generated_utc:"");
+if(!entries.length){const p=document.createElement("p");p.textContent=labels[lang].empty;$("results").append(p);return;}
+for(const entry of entries){
+const article=document.createElement("article");article.className="panel";
+const heading=document.createElement("h2");heading.textContent=labels[lang].review+" · "+labels[lang].score+": "+(Number(entry.score)*100).toFixed(0)+"%";article.append(heading);
+const pair=document.createElement("div");pair.className="pair";
+for(const item of [entry.first,entry.second]){
+const box=document.createElement("div");box.className="source";
+const h=document.createElement("h3");h.textContent=(item.language||"?").toUpperCase()+" · "+(item.source||"");box.append(h);
+const p=document.createElement("p");p.textContent=item.title||"";box.append(p);
+try{const url=new URL(item.url);if(["https:","http:"].includes(url.protocol)){const a=document.createElement("a");a.href=url.href;a.target="_blank";a.rel="noopener noreferrer";a.textContent=url.hostname+" ↗";box.append(a);}}catch{}
+pair.append(box);
+}
+article.append(pair);$("results").append(article);
+}
+}
+function accept(data){
+if(!data||!Array.isArray(data.candidates)&&!Array.isArray(data.bilingual_candidates))throw Error(labels[lang].error);
+report=data;render();
+}
+$("language").addEventListener("click",()=>{lang=lang==="de"?"en":"de";localStorage.setItem("pnh-ui-lang",lang);const u=new URL(location.href);u.searchParams.set("lang",lang);history.replaceState(null,"",u);render();});
+$("upload").addEventListener("change",async event=>{const file=event.target.files[0];if(!file)return;try{accept(JSON.parse(await file.text()));}catch(err){$("status").textContent=labels[lang].error+": "+err.message;}});
+render();
+fetch("bilingual-review.json",{cache:"no-store"}).then(response=>{if(!response.ok)throw Error("Not published");return response.json();}).then(accept).catch(()=>{$("status").textContent=labels[lang].missing;});
+})();
+</script></body></html>
