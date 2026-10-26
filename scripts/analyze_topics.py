@@ -126,7 +126,7 @@ def main():
         report_path.write_text(json.dumps({"generated_utc": datetime.now(timezone.utc).isoformat(),
             "candidate_count": len(bilingual), "candidates": bilingual,
             "note": "Review candidates only; not evidence of independent factual verification"},
-            ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+            ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     report={"generated_utc":datetime.now(timezone.utc).isoformat(),"total_articles":len(items),
       "topic_count":len(groups),"multi_article_topics":sum(g["article_count"]>1 for g in groups),
       "multi_source_topics":sum(g["multi_source"] for g in groups),
