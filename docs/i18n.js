@@ -119,8 +119,49 @@
       }
     }
   }
+  const dynamicEnglish = {
+    "Lade Konfiguration …":"Loading configuration…",
+    "Lokale Konfiguration importiert.":"Local configuration imported.",
+    "Bitte mindestens ein Bild auswählen.":"Please select at least one image.",
+    "Bitte unten den GitHub-Token eingeben.":"Please enter the GitHub token below.",
+    "Bitte die öffentliche Veröffentlichung bestätigen.":"Please confirm public publication.",
+    "Bitte die öffentliche Veröffentlichung bestätigen.":"Please confirm public publication.",
+    "Ungültige JSON-Datei: ":"Invalid JSON file: ",
+    "Lade ":"Uploading ",
+    " hoch …":"…",
+    "Hochgeladen: ":"Uploaded: ",
+    "Bereits hochgeladen: ":"Already uploaded: ",
+    "Bild konnte nicht gelesen werden: ":"Could not read image: ",
+    "GitHub-Upload fehlgeschlagen (HTTP ":"GitHub upload failed (HTTP ",
+    "Nur echte PNG- oder JPEG-Bilder erlaubt: ":"Only genuine PNG or JPEG images are allowed: ",
+    "Bildgröße muss zwischen 320×240 und 6000×6000 Pixeln liegen: ":"Image dimensions must be between 320×240 and 6000×6000 pixels: "
+  };
+  function translateStatus(value) {
+    if (lang !== "en" || !value) return value;
+    if (Object.prototype.hasOwnProperty.call(dynamicEnglish, value)) return dynamicEnglish[value];
+    for (const [de, en] of Object.entries(dynamicEnglish)) {
+      if (value.startsWith(de)) return en + value.slice(de.length);
+    }
+    return value;
+  }
+  function watchStatuses() {
+    if (lang !== "en") return;
+    for (const id of ["status","result","save_status","upload_status"]) {
+      const element = document.getElementById(id);
+      if (!element) continue;
+      const observer = new MutationObserver(() => {
+        const oldText = element.textContent;
+        const translated = translateStatus(oldText);
+        if (translated !== oldText) element.textContent = translated;
+      });
+      observer.observe(element, {childList:true,characterData:true,subtree:true});
+      const translated = translateStatus(element.textContent);
+      if (translated !== element.textContent) element.textContent = translated;
+    }
+  }
   function apply() {
     translateStaticText(document.body);
+    watchStatuses();
     document.querySelectorAll("[data-i18n]").forEach(el => {
       const key = el.getAttribute("data-i18n");
       if (dictionaries[lang][key]) el.textContent = dictionaries[lang][key];
