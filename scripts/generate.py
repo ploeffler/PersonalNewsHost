@@ -138,12 +138,7 @@ def extract_article_text(url):
             return None
         body = data.get("content", "")
         # Keep prose; do not read markup, link targets or embedded code aloud.
-        body = re.sub(r"(?s)```.*?```", " ", body)
-        body = re.sub(r'!\\[[^]]*\\]\\([^)]*\\)', " ", body)
-        body = re.sub(r'\\[([^]]+)\\]\\([^)]*\\)', r'\\1', body)
-        body = re.sub(r'(?m)^\\s{0,3}#{1,6}\\s+', "", body)
-        body = re.sub(r'(?m)^\\s*[-*]\\s+', "", body)
-        body = re.sub(r'\\s+', " ", body).strip()
+        body = " ".join(body.split())
         if len(body) < 160:
             return None
         return body[:12000]
