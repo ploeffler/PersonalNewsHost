@@ -544,6 +544,48 @@ def group_news_items(items, enabled=True):
     return [group[0] for group in groups], groups
 
 
+def subtitle_timestamp(milliseconds, separator="."):
+    hours, remainder = divmod(milliseconds, 3600000)
+    minutes, remainder = divmod(remainder, 60000)
+    seconds, millis = divmod(remainder, 1000)
+    return f"{hours:02d}:{minutes:02d}:{seconds:02d}{separator}{millis:03d}"
+
+
+def write_subtitles(parts, boundaries, directory):
+    """Use measured speech boundaries; estimate cue timing within each segment.
+
+    No speech recognition is needed. Text is the exact input to synthesis;
+    within-segment timing is proportional to character counts, not word alignment.
+    """
+    import textwrap
+    if len(boundaries) != len(parts) + 1:
+        raise ValueError("Subtitle text and speech boundaries must match")
+    cues = []
+    for index, part in enumerate(parts):
+        start = round(boundaries[index] * 1000)
+        end = round(boundaries[index + 1] * 1000)
+        if end <= start:
+            continue
+        lines = textwrap.wrap(" ".join(part.split()), width=42,
+                              break_long_words=False, break_on_hyphens=False)
+        chunks = ["\n".join(lines[i:i + 2]) for i in range(0, len(lines), 2)]
+        total = sum(len(chunk) for chunk in chunks)
+        consumed = 0
+        for chunk in chunks:
+            cue_start = start + round((end - start) * consumed / total)
+            consumed += len(chunk)
+            cue_end = start + round((end - start) * consumed / total)
+            if cue_end > cue_start:
+                cues.append((cue_start, cue_end, chunk))
+    vtt, srt = ["WEBVTT\n\n"], []
+    for index, (start, end, text) in enumerate(cues, 1):
+        # WebVTT cue text parses markup; escape publisher text literally.
+        vtt.append(f"{subtitle_timestamp(start)} --> {subtitle_timestamp(end)}\n{html.escape(text)}\n\n")
+        srt.append(f"{index}\n{subtitle_timestamp(start, ',')} --> {subtitle_timestamp(end, ',')}\n{html.escape(text)}\n\n")
+    (directory / "subtitles.de.vtt").write_text("".join(vtt), encoding="utf-8")
+    (directory / "subtitles.de.srt").write_text("".join(srt), encoding="utf-8")
+
+
 def main():
     DOCS.mkdir(exist_ok=True)
     collected, seen = [], set()
@@ -663,6 +705,7 @@ def main():
         boundaries = [0.0]
         for seconds in segment_durations:
             boundaries.append(boundaries[-1] + seconds)
+        write_subtitles(parts, boundaries, DOCS)
         timeline = {
             "version": 1,
             "segments": [
@@ -1032,7 +1075,7 @@ def main():
     lines = ["<!doctype html><html lang='de'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>",
              "<title>PersonalNewsHost</title><style>body{font:1.1rem system-ui;background:#13243a;color:white;max-width:900px;margin:3rem auto;padding:1rem}a{color:#8ed6ff}video{width:100%}.site-logo{display:block;width:min(320px,75vw);height:auto;margin:0 auto 1.2rem}.logo-link{display:block;text-align:center}</style>",
              "<a class='logo-link' href='" + BASE + "' aria-label='Zur Nachrichtenseite'><img class='site-logo' src='https://raw.githubusercontent.com/ploeffler/PersonalNewsHost/main/assets/logo.png' alt='PersonalNewsHost Logo'></a><h1>PersonalNewsHost</h1><p>Stand: " + html.escape(timestamp) + "</p>",
-             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'></video><p><a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='settings.html'>Konfiguration (Beta)</a> · <a href='browser-studio.html'>Browser-Studio (Beta)</a></p><h2>Quellen</h2><ul>"]
+             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'><track kind='subtitles' src='subtitles.de.vtt?v=" + now.strftime("%Y%m%d%H%M%S") + "' srclang='de' label='Deutsch' default></video><p><a href='subtitles.de.srt' download>Untertitel (SRT)</a> · <a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='settings.html'>Konfiguration (Beta)</a> · <a href='browser-studio.html'>Browser-Studio (Beta)</a></p><h2>Quellen</h2><ul>"]
     for story_idx, (title, _, link, _) in enumerate(selected):
         safe = link if link.startswith(("https://", "http://")) else "#"
         lines.append("<li><a rel='noopener noreferrer' href='" + html.escape(safe, quote=True) + "'>" + html.escape(title) + "</a>")
