@@ -61,12 +61,12 @@ jobs:
           for src, dest in mapping.items():
               text = (source / src).read_text(encoding="utf-8")
               for old, new in mapping.items():
-                  text = text.replace(f"]({old})", f"]({new})")
+                  text = text.replace(f"]({old})", f"]({new.removesuffix('.md')})")
               # Relative links to repository files resolve differently in a wiki.
               text = re.sub(r'\]\((?:\.\./)+([^):#]+)\)', lambda m: '](' + 'https://github.com/' + 'ploeffler/PersonalNewsHost/blob/main/' + m.group(1) + ')', text)
               pathlib.Path(dest).write_text(text, encoding="utf-8")
           pathlib.Path("_Sidebar.md").write_text(
-              "\n".join(f"- [{label}]({filename})" for label, filename in [
+              "\n".join(f"- [{label}]({filename.removesuffix('.md')})" for label, filename in [
                   ("Startseite", "Home.md"),
                   ("Installation", "Installation.md"),
                   ("Konfiguration", "Konfiguration.md"),
