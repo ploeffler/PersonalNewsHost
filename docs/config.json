@@ -6,7 +6,12 @@
   "max_items": 5,
   "max_description_chars": 180,
   "feeds": [
-    "https://www.derstandard.at/rss"
+    "https://www.derstandard.at/rss",
+    "https://api.krone.at/v1/rss/rssfeed-nachrichten.html",
+    "https://rss.orf.at/news.xml",
+    "https://www.kleinezeitung.at/rss/steiermark",
+    "https://www.kleinezeitung.at/rss/oesterreich",
+    "https://www.bmi.gv.at/rss/stmk_presse.xml"
   ],
   "background": "assets/background.jpg",
   "presenter": "assets/presenter.png",
@@ -76,6 +81,15 @@
       "max_sources": 2,
       "method": "independent_publisher_headline_search",
       "note": "Finds other publisher coverage, not factual verification of individual claims"
+    },
+    "topic_clustering": {
+      "enabled": true,
+      "mode": "conservative",
+      "note": "Groups only highly similar headlines; does not fabricate a unified narrative"
+    },
+    "selection": {
+      "mode": "freshness_and_source_diversity",
+      "note": "Newest first, with one story per distinct publisher before filling remaining slots"
     }
   },
   "media": {
