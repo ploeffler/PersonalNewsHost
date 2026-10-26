@@ -9,8 +9,10 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v5
+      - name: Run regression tests
+        run: python3 -m unittest discover -s tests
       - name: Compare RSS articles across sources
-        run: python3 scripts/analyze_topics.py --output topic-analysis.json
+        run: python3 scripts/analyze_topics.py --output topic-analysis.json --bilingual-output bilingual-review.json
       - name: Build review-aware broadcast plan
         run: python3 scripts/build_broadcast_plan.py --analysis topic-analysis.json --output broadcast-plan.json
       - name: Upload topic report
@@ -20,5 +22,6 @@ jobs:
           name: rss-topic-analysis
           path: |
             topic-analysis.json
+            bilingual-review.json
             broadcast-plan.json
           retention-days: 3
