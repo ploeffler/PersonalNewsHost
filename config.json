@@ -8,7 +8,9 @@
   "feeds": [
     "https://www.derstandard.at/rss",
     "https://api.krone.at/v1/rss/rssfeed-nachrichten.html",
-    "https://rss.orf.at/news.xml"
+    "https://rss.orf.at/news.xml",
+    "https://www.kleinezeitung.at/rss/steiermark",
+    "https://www.kleinezeitung.at/rss/oesterreich"
   ],
   "background": "assets/background.jpg",
   "presenter": "assets/presenter.png",
