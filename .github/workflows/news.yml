@@ -134,6 +134,10 @@ jobs:
             rm -f models/de_DE-thorsten-high.onnx models/de_DE-thorsten-high.onnx.json
             echo "Piper model unavailable; using eSpeak fallback"
           fi
+      - uses: actions/setup-node@v4
+        if: steps.schedule.outputs.due == 'true'
+        with:
+          node-version: '22'
       - name: Install local rdrr article extractor
         if: steps.schedule.outputs.due == 'true'
         run: |
