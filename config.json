@@ -78,6 +78,11 @@
       "max_sources": 2,
       "method": "independent_publisher_headline_search",
       "note": "Finds other publisher coverage, not factual verification of individual claims"
+    },
+    "topic_clustering": {
+      "enabled": true,
+      "mode": "conservative",
+      "note": "Groups only highly similar headlines; does not fabricate a unified narrative"
     }
   },
   "media": {
