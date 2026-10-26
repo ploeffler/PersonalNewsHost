@@ -122,6 +122,36 @@ def download_media(candidates, mode, directory, index, max_bytes):
             print(f"RSS media skipped: {type(exc).__name__}: {exc}")
     return None
 
+def extract_article_text(url):
+    """Extract selected article locally via rdrr CLI, falling back to RSS on failure."""
+    from urllib.parse import urlparse
+    parsed = urlparse(url or "")
+    if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
+        return None
+    try:
+        proc = subprocess.run(
+            ["rdrr", url, "--format", "json", "--no-history", "--strict"],
+            capture_output=True, text=True, timeout=25, check=True,
+        )
+        data = json.loads(proc.stdout)
+        if data.get("extractionEmpty"):
+            return None
+        body = data.get("content", "")
+        # Keep prose; do not read markup, link targets or embedded code aloud.
+        body = re.sub(r"(?s)```.*?```", " ", body)
+        body = re.sub(r"!\\[[^]]*\\]\\([^)]*\\)", " ", body)
+        body = re.sub(r"\\[([^]]+)\\]\\([^)]*\\)", r"\\1", body)
+        body = re.sub(r"(?m)^\\s{0,3}#{1,6}\\s+", "", body)
+        body = re.sub(r"(?m)^\\s*[-*]\\s+", "", body)
+        body = re.sub(r"\\s+", " ", body).strip()
+        if len(body) < 160:
+            return None
+        return body[:12000]
+    except (OSError, subprocess.SubprocessError, ValueError, json.JSONDecodeError) as exc:
+        print(f"rdrr article extraction unavailable for {parsed.hostname}: {type(exc).__name__}: {exc}")
+        return None
+
+
 def article_image_candidates(url):
     """Read publisher's article image metadata without paid services."""
     from html.parser import HTMLParser
@@ -574,7 +604,7 @@ def main():
         checked["original_title"] = title
         checked["original_url"] = link
         crosschecks.append(checked)
-        edited = edit_news(title, desc, style, max_sentences, limit)
+        article_text = extract_article_text(link)\n        source_text = article_text or desc\n        print(f"Story {story_idx + 1}: {'rdrr full article' if article_text else 'RSS fallback'}")\n        edited = edit_news(title, source_text, style, max_sentences, limit)
         if len(related) > 1:
             from urllib.parse import urlparse
             publishers = sorted({(urlparse(x[2]).hostname or "Unbekannt").removeprefix("www.")
