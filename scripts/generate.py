@@ -604,7 +604,10 @@ def main():
         checked["original_title"] = title
         checked["original_url"] = link
         crosschecks.append(checked)
-        article_text = extract_article_text(link)\n        source_text = article_text or desc\n        print(f"Story {story_idx + 1}: {'rdrr full article' if article_text else 'RSS fallback'}")\n        edited = edit_news(title, source_text, style, max_sentences, limit)
+        article_text = extract_article_text(link)
+        source_text = article_text or desc
+        print(f"Story {story_idx + 1}: {'rdrr full article' if article_text else 'RSS fallback'}")
+        edited = edit_news(title, source_text, style, max_sentences, limit)
         if len(related) > 1:
             from urllib.parse import urlparse
             publishers = sorted({(urlparse(x[2]).hostname or "Unbekannt").removeprefix("www.")
