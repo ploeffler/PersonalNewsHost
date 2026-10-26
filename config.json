@@ -6,7 +6,9 @@
   "max_items": 5,
   "max_description_chars": 180,
   "feeds": [
-    "https://www.derstandard.at/rss"
+    "https://www.derstandard.at/rss",
+    "https://api.krone.at/v1/rss/rssfeed-nachrichten.html",
+    "https://rss.orf.at/news.xml"
   ],
   "background": "assets/background.jpg",
   "presenter": "assets/presenter.png",
