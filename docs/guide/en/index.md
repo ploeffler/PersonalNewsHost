@@ -3,7 +3,7 @@
 Welcome to the English documentation of PersonalNewsHost. The German documentation remains the canonical reference until individual pages have been translated.
 
 - [Installation](../installation.md) (German)
-- [Configuration and privacy](../konfiguration.md) (German)
+- [Configuration and privacy](konfiguration.md) (English)
 - [Operations, Telegram and security](../betrieb-und-sicherheit.md) (German)
 - [Technical architecture and workflows](../technik.md) (German)
 - [Development history and roadmap](../entwicklung.md) (German)
