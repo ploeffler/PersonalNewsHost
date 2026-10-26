@@ -1,3 +1,5 @@
+<p align="center"><a href="https://ploeffler.github.io/PersonalNewsHost/"><img src="assets/logo.png" alt="PersonalNewsHost Logo" width="320"></a></p>
+
 # PersonalNewsHost
 
 **Deine persönliche, automatisch produzierte Nachrichtensendung – aus frei wählbaren RSS-Quellen.**
