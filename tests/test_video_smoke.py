@@ -40,9 +40,12 @@ class VideoSmokeTests(unittest.TestCase):
                     wav.writeframes(bytes(16000 * 5 * 2))
             with patch.object(generate, "ROOT", root), patch.object(generate, "DOCS", root / "docs"), patch.object(generate, "CONFIG", cfg), patch.object(generate, "items_from_feed", return_value=[("Testmeldung", "Kurzer Text", "https://example.org")]), patch.object(generate, "synthesize", side_effect=audio):
                 generate.main()
+            page = (root / "docs" / "index.html").read_text()
+            self.assertIn("<track kind='subtitles'", page)
+            self.assertIn("subtitles.de.vtt?v=", page)
             video = root / "docs" / "latest.mp4"
             self.assertGreater(video.stat().st_size, 1000)
-            for name in ("index.html", "feed.xml", "transcript.txt"):
+            for name in ("index.html", "feed.xml", "transcript.txt", "subtitles.de.vtt", "subtitles.de.srt"):
                 self.assertTrue((root / "docs" / name).is_file())
 
     def test_avatar_intro(self):
