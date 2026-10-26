@@ -242,6 +242,57 @@ def search_commons_image(title):
         print(f"Commons image search unavailable: {exc}")
     return None
 
+FEED_DATES = {}
+
+def feed_timestamp(node):
+    """Parse RSS 2, RDF Dublin Core and Atom dates as UTC timestamps."""
+    from datetime import timezone
+    dc = "{http://purl.org/dc/elements/1.1/}"
+    candidates = [node.findtext(tag) for tag in
+                  ("pubDate", dc + "date", ATOM + "published", ATOM + "updated")]
+    for value in candidates:
+        if not value:
+            continue
+        try:
+            parsed = email.utils.parsedate_to_datetime(value)
+            if parsed is None:
+                raise ValueError("Unrecognized RSS date")
+        except (ValueError, TypeError):
+            try:
+                parsed = dt.datetime.fromisoformat(value.replace("Z", "+00:00"))
+            except ValueError:
+                continue
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.timestamp()
+    return 0.0
+
+def select_balanced_groups(groups, limit):
+    """Prioritize fresh stories and independent publishers without feed-order bias."""
+    from urllib.parse import urlparse
+    def publisher(entry):
+        return (urlparse(entry[2]).hostname or "").removeprefix("www.")
+    def newest(group):
+        return max(FEED_DATES.get(entry[2], 0.0) for entry in group)
+    ranked = sorted(groups, key=newest, reverse=True)
+    selected, represented = [], set()
+    # First pass: one story per previously unrepresented publisher.
+    for group in ranked:
+        domains = {publisher(entry) for entry in group}
+        if domains - represented:
+            selected.append(group)
+            represented.update(domains)
+            if len(selected) >= limit:
+                return selected
+    # Second pass: fill remaining slots with the newest topics.
+    for group in ranked:
+        if group not in selected:
+            selected.append(group)
+            if len(selected) >= limit:
+                break
+    return selected
+
+
 def items_from_feed(url):
     root = ET.fromstring(fetch(url))
     result = []
@@ -250,6 +301,7 @@ def items_from_feed(url):
         desc = clean(node.findtext("description"))
         link = clean(node.findtext("link"))
         if title:
+            FEED_DATES[link] = feed_timestamp(node)
             result.append((title, desc, link, media_candidates(node)))
     # ORF publishes RSS 1.0 (RDF), where items are in an XML namespace.
     if not result:
@@ -259,7 +311,8 @@ def items_from_feed(url):
             desc = clean(node.findtext(rss1 + "description"))
             link = clean(node.findtext(rss1 + "link"))
             if title:
-                result.append((title, desc, link, media_candidates(node)))
+                FEED_DATES[link] = feed_timestamp(node)
+            result.append((title, desc, link, media_candidates(node)))
     if not result:
         for node in root.findall(".//" + ATOM + "entry")[:15]:
             title = clean(node.findtext(ATOM + "title"))
@@ -267,6 +320,7 @@ def items_from_feed(url):
             link_node = node.find(ATOM + "link")
             link = link_node.get("href", "") if link_node is not None else ""
             if title:
+                FEED_DATES[link] = feed_timestamp(node)
                 result.append((title, summary, link, media_candidates(node)))
     return result
 
@@ -485,8 +539,8 @@ def main():
     representatives, all_groups = group_news_items(
         collected, enabled=clustering.get("enabled", True))
     max_items = max(1, min(int(CONFIG.get("max_items", 5)), 10))
-    selected = representatives[:max_items]
-    story_groups = all_groups[:max_items]
+    story_groups = select_balanced_groups(all_groups, max_items)
+    selected = [group[0] for group in story_groups]
     now = dt.datetime.now(dt.timezone.utc)
     local_now = now.astimezone(ZoneInfo("Europe/Vienna"))
     timestamp = local_now.strftime("%d.%m.%Y um %H:%M Uhr")
