@@ -103,7 +103,8 @@
       }
     }
   }
-  function apply() {\n    translateStaticText(document.body);
+  function apply() {
+    translateStaticText(document.body);
     document.querySelectorAll("[data-i18n]").forEach(el => {
       const key = el.getAttribute("data-i18n");
       if (dictionaries[lang][key]) el.textContent = dictionaries[lang][key];
