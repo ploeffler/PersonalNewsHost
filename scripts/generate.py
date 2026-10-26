@@ -251,6 +251,15 @@ def items_from_feed(url):
         link = clean(node.findtext("link"))
         if title:
             result.append((title, desc, link, media_candidates(node)))
+    # ORF publishes RSS 1.0 (RDF), where items are in an XML namespace.
+    if not result:
+        rss1 = "{http://purl.org/rss/1.0/}"
+        for node in root.findall(".//" + rss1 + "item")[:15]:
+            title = clean(node.findtext(rss1 + "title"))
+            desc = clean(node.findtext(rss1 + "description"))
+            link = clean(node.findtext(rss1 + "link"))
+            if title:
+                result.append((title, desc, link, media_candidates(node)))
     if not result:
         for node in root.findall(".//" + ATOM + "entry")[:15]:
             title = clean(node.findtext(ATOM + "title"))
