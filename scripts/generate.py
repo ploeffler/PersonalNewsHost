@@ -423,6 +423,48 @@ def edit_news(title, description, style, max_sentences, limit):
     selected = sentences[:count]
     return title.rstrip(".!?") + "." + ("\n" + " ".join(selected) if selected else "")
 
+def group_news_items(items, enabled=True):
+    """Conservatively group near-identical headlines from different publishers.
+
+    Never merge based on a person's name or a broad topic alone.
+    Returns (representative stories, groups of original entries).
+    """
+    from urllib.parse import urlparse
+    from difflib import SequenceMatcher
+    stop = {"und", "oder", "aber", "eine", "einer", "einem", "einen",
+            "sich", "nach", "über", "wegen", "durch", "gegen", "beim",
+            "sind", "wird", "werden", "heute", "neue", "neuer", "neuen",
+            "auch", "mehr", "dass", "nicht", "jetzt", "schon", "noch"}
+    def tokens(title):
+        return set(w for w in re.findall(r"[^\\W_]{4,}", title.casefold(), re.UNICODE)
+                   if w not in stop)
+    def publisher(entry):
+        return (urlparse(entry[2]).hostname or "").removeprefix("www.")
+    def same_event(a, b):
+        ta, tb = tokens(a[0]), tokens(b[0])
+        if len(ta) < 3 or len(tb) < 3:
+            return False
+        overlap = len(ta & tb)
+        containment = overlap / min(len(ta), len(tb))
+        jaccard = overlap / len(ta | tb)
+        similarity = SequenceMatcher(None, a[0].casefold(), b[0].casefold()).ratio()
+        return overlap >= 3 and ((containment >= .8 and jaccard >= .58) or
+                                 (jaccard >= .72 and similarity >= .68))
+    groups = []
+    for item in items:
+        found = False
+        if enabled:
+            for group in groups:
+                if publisher(item) not in {publisher(x) for x in group} and all(
+                        same_event(item, x) for x in group):
+                    group.append(item)
+                    found = True
+                    break
+        if not found:
+            groups.append([item])
+    return [group[0] for group in groups], groups
+
+
 def main():
     DOCS.mkdir(exist_ok=True)
     collected, seen = [], set()
@@ -439,7 +481,12 @@ def main():
             print(f"Feed skipped: {url}: {exc}")
     if not collected:
         raise RuntimeError("No RSS entries available; previous published edition remains unchanged")
-    selected = collected[:max(1, min(int(CONFIG.get("max_items", 5)), 10))]
+    clustering = CONFIG.get("editorial", {}).get("topic_clustering", {})
+    representatives, all_groups = group_news_items(
+        collected, enabled=clustering.get("enabled", True))
+    max_items = max(1, min(int(CONFIG.get("max_items", 5)), 10))
+    selected = representatives[:max_items]
+    story_groups = all_groups[:max_items]
     now = dt.datetime.now(dt.timezone.utc)
     local_now = now.astimezone(ZoneInfo("Europe/Vienna"))
     timestamp = local_now.strftime("%d.%m.%Y um %H:%M Uhr")
@@ -460,7 +507,8 @@ def main():
     verification = editorial.get("crosscheck", {})
     verify_enabled = verification.get("enabled", True)
     max_results = max(1, min(3, int(verification.get("max_sources", 2))))
-    for title, desc, link, _ in selected:
+    for story_idx, (title, desc, link, _) in enumerate(selected):
+        related = story_groups[story_idx]
         mentions = referenced_sources(title + ". " + desc)
         source_mentions.append({"title": title, "article_url": link,
                                 "mentioned_sources": mentions,
@@ -473,6 +521,11 @@ def main():
         checked["original_url"] = link
         crosschecks.append(checked)
         edited = edit_news(title, desc, style, max_sentences, limit)
+        if len(related) > 1:
+            from urllib.parse import urlparse
+            publishers = sorted({(urlparse(x[2]).hostname or "Unbekannt").removeprefix("www.")
+                                 for x in related})
+            edited += "\\n" + "Über dieses Ereignis berichten auch: " + ", ".join(publishers[1:]) + "."
         if mentions:
             edited += "\n" + "Im RSS-Beitrag werden als weitere Quellen genannt: " + ", ".join(mentions) + "."
         if checked["matches"]:
@@ -483,6 +536,11 @@ def main():
         elif checked["status"] == "unavailable":
             edited += "\n" + "Eine unabhängige Gegenrecherche war technisch nicht möglich."
         parts.append(edited)
+    (DOCS / "story-groups.json").write_text(
+        json.dumps([{"headline": group[0][0], "sources": [
+            {"title": item[0], "url": item[2], "description": item[1]}
+            for item in group]} for group in story_groups],
+            ensure_ascii=False, indent=2), encoding="utf-8")
     (DOCS / "source-mentions.json").write_text(
         json.dumps(source_mentions, ensure_ascii=False, indent=2), encoding="utf-8"
     )
@@ -893,9 +951,13 @@ def main():
              "<title>PersonalNewsHost</title><style>body{font:1.1rem system-ui;background:#13243a;color:white;max-width:900px;margin:3rem auto;padding:1rem}a{color:#8ed6ff}video{width:100%}.site-logo{display:block;width:min(320px,75vw);height:auto;margin:0 auto 1.2rem}.logo-link{display:block;text-align:center}</style>",
              "<a class='logo-link' href='" + BASE + "' aria-label='Zur Nachrichtenseite'><img class='site-logo' src='https://raw.githubusercontent.com/ploeffler/PersonalNewsHost/main/assets/logo.png' alt='PersonalNewsHost Logo'></a><h1>PersonalNewsHost</h1><p>Stand: " + html.escape(timestamp) + "</p>",
              "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'></video><p><a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='settings.html'>Konfiguration (Beta)</a> · <a href='browser-studio.html'>Browser-Studio (Beta)</a></p><h2>Quellen</h2><ul>"]
-    for title, _, link, _ in selected:
+    for story_idx, (title, _, link, _) in enumerate(selected):
         safe = link if link.startswith(("https://", "http://")) else "#"
-        lines.append("<li><a rel='noopener noreferrer' href='" + html.escape(safe, quote=True) + "'>" + html.escape(title) + "</a></li>")
+        lines.append("<li><a rel='noopener noreferrer' href='" + html.escape(safe, quote=True) + "'>" + html.escape(title) + "</a>")
+        for source in story_groups[story_idx][1:]:
+            if source[2].startswith(("https://", "http://")):
+                lines.append(" – <a rel='noopener noreferrer' href='" + html.escape(source[2], quote=True) + "'>" + html.escape(source[0]) + "</a>")
+        lines.append("</li>")
     lines.append("</ul><p>Automatisch aus RSS erstellt; Inhalte nicht unabhängig überprüft.</p></html>")
     (DOCS / "index.html").write_text("\n".join(lines), encoding="utf-8")
     pubdate = email.utils.format_datetime(now)
