@@ -1,0 +1,52 @@
+name: Test Telegram delivery
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Secret destination
+        type: choice
+        options: [default, secondary]
+        default: default
+permissions: {}
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Check bot and destination, then send one test message
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ inputs.target == 'secondary' && secrets.TELEGRAM_CHAT_ID_SECONDARY || secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys, urllib.request, urllib.parse, urllib.error
+          token = os.environ['TELEGRAM_BOT_TOKEN'].strip()
+          chat = os.environ['TELEGRAM_CHAT_ID'].strip()
+          if not token or not chat:
+              sys.exit('Missing bot token or destination secret')
+          def call(method, payload):
+              req = urllib.request.Request('https://api.telegram.org/bot' + token + '/' + method,
+                  urllib.parse.urlencode(payload).encode(), method='POST')
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as response:
+                      result = json.load(response)
+              except urllib.error.HTTPError as exc:
+                  try:
+                      result = json.loads(exc.read())
+                  except ValueError:
+                      sys.exit(method + ': HTTP ' + str(exc.code))
+              except (urllib.error.URLError, TimeoutError):
+                  sys.exit(method + ': network failure; no retry')
+              if not result.get('ok'):
+                  description = str(result.get('description', 'Unknown API error'))
+                  for value in (token, chat):
+                      description = description.replace(value, '[REDACTED]')
+                  sys.exit(method + ': ' + description)
+              print(method + ': OK')
+              return result['result']
+          call('getMe', {})
+          destination = call('getChat', {'chat_id': chat})
+          if destination.get('type') not in ('channel', 'group', 'supergroup', 'private'):
+              sys.exit('Unsupported destination type')
+          call('sendMessage', {'chat_id': chat, 'text': 'PersonalNewsHost: Telegram-Test erfolgreich. Dies ist eine einmalige Testnachricht.'})
+          PY
