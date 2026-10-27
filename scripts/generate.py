@@ -122,6 +122,80 @@ def download_media(candidates, mode, directory, index, max_bytes):
             print(f"RSS media skipped: {type(exc).__name__}: {exc}")
     return None
 
+def spoken_prose(text):
+    """Remove article markup and media targets before editing or synthesis.
+
+    Balanced delimiters handle image URLs containing parentheses without
+    truncating the following prose. Link labels are retained; image credits,
+    reference definitions and code blocks are not narration.
+    """
+    text = html.unescape(text or "")
+    text = re.sub(r"(?ms)^\s*(`{3,}|~{3,})[^\n]*\n.*?^\s*\1\s*$", " ", text)
+    text = re.sub(r"(?is)<(script|style)\b[^>]*>.*?</\1\s*>", " ", text)
+    references = set()
+    def definition(match):
+        references.add(" ".join(match.group(1).casefold().split()))
+        return ""
+    text = re.sub(r"(?m)^ {0,3}\[([^\]\n]+)\]:[^\n]*(?:\n[ \t]+[^\n]+)*", definition, text)
+
+    def closing(value, start, left, right):
+        depth = 1
+        i = start + 1
+        while i < len(value):
+            if value[i] == "\\":
+                i += 2
+                continue
+            if value[i] == left:
+                depth += 1
+            elif value[i] == right:
+                depth -= 1
+                if depth == 0:
+                    return i
+            i += 1
+        return None
+
+    def inline(value):
+        result = []
+        i = 0
+        while i < len(value):
+            if value[i] == "\\" and i + 1 < len(value):
+                result.append(value[i + 1])
+                i += 2
+                continue
+            image = value.startswith("![", i)
+            opening = i + 1 if image else i
+            if value[opening:opening + 1] == "[":
+                end = closing(value, opening, "[", "]")
+                if end is not None:
+                    label = value[opening + 1:end]
+                    target_end = None
+                    following = end + 1
+                    if value[following:following + 1] == "(":
+                        target_end = closing(value, following, "(", ")")
+                    elif value[following:following + 1] == "[":
+                        ref_end = closing(value, following, "[", "]")
+                        if ref_end is not None:
+                            target_end = ref_end
+                    elif " ".join(label.casefold().split()) in references:
+                        target_end = end
+                    if target_end is not None:
+                        result.append(" " if image else inline(label))
+                        i = target_end + 1
+                        continue
+            result.append(value[i])
+            i += 1
+        return "".join(result)
+
+    text = inline(text)
+    text = re.sub(r"(?m)^\s{0,3}(?:#{1,6}\s+|>\s*|[-+*]\s+)", "", text)
+    for marker in ("**", "__", "~~", "*", "_", "`"):
+        escaped = re.escape(marker)
+        text = re.sub(escaped + r"(?=\S)(.+?)(?<=\S)" + escaped, r"\1", text)
+    # Bare/autolink targets are not useful spoken article content either.
+    text = re.sub(r"<?https?://[^\s<>]+>?", " ", text)
+    return clean(text)
+
+
 def extract_article_text(url):
     """Extract selected article locally via rdrr CLI, falling back to RSS on failure."""
     from urllib.parse import urlparse
@@ -138,7 +212,7 @@ def extract_article_text(url):
             return None
         body = data.get("content", "")
         # Keep prose; do not read markup, link targets or embedded code aloud.
-        body = " ".join(body.split())
+        body = spoken_prose(body)
         if len(body) < 160:
             return None
         return body[:12000]
@@ -487,8 +561,8 @@ def crosscheck_headline(title, original_url, max_results=2):
 
 def edit_news(title, description, style, max_sentences, limit):
     """Offline, conservative editorial formatting without inventing facts."""
-    title = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", title))).strip()
-    description = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", description))).strip()
+    title = spoken_prose(title)
+    description = spoken_prose(description)
     if style == "original":
         clipped = description[:limit].rsplit(" ", 1)[0] if len(description) > limit else description
         return title.rstrip(".!?") + ".\n" + clipped
