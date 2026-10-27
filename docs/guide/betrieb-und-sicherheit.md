@@ -37,7 +37,7 @@
 
 **Schutz des Originalprojekts:** Tokens niemals in `config.json`, Workflow-Dateien, Commits, Issues, Pull Requests, Screenshots oder Logs eintragen. Ausschließlich **Settings → Secrets and variables → Actions** verwenden. GitHub-Secrets werden zwar in Logs nach Möglichkeit maskiert, aber die Maskierung ist keine vollständige Sicherheitsgrenze. Wer Schreibzugriff auf Workflows im Originalrepository hat, kann potenziell dessen Secrets missbrauchen; deshalb Schreibrechte und Workflow-Änderungen streng begrenzen. Bei Verdacht auf Offenlegung den Token über BotFather widerrufen und ersetzen.
 
-**Telegram-Ablaufzeit:** Gesendete Telegram-Nachrichten werden nach frühestens 25 Stunden durch den separaten stündlichen Workflow `telegram-cleanup.yml` gelöscht. GitHub-Actions-Verzögerungen können die Löschung verschieben. Die Löschung betrifft nicht die MP4-Datei auf GitHub Pages und nicht den Video-RSS-Feed. Die automatische Löschung benötigt dieselben **fork-eigenen** Secrets. Ein erfolgreicher End-to-End-Test mit einem echten Bot steht noch aus.
+**Telegram-Ablaufzeit:** Die Aufbewahrung und Löschung werden direkt im Telegram-Ziel eingestellt. PersonalNewsHost löscht keine Nachrichten.
 
 Jeder Fork kann Telegram unabhängig aktivieren. In der Web-Konfiguration unter „Telegram-Veröffentlichung“ sind Empfängerart (Kanal, privater Chat, Gruppe) und Versandart (automatisch, nur Video, nur Link) wählbar. Standardmäßig ist Telegram **ausgeschaltet**.
 
@@ -59,17 +59,13 @@ In den Telegram-Einstellungen steht jetzt „Zielkanal“ zur Verfügung:
 Secret `TELEGRAM_CHAT_ID_SECONDARY`. Beide Ziele verwenden denselben Bot aus
 `TELEGRAM_BOT_TOKEN`. Bot-Token und Chat-IDs niemals in JSON oder HTML eintragen.
 Der Bot benötigt im jeweiligen Kanal die Berechtigung zum Veröffentlichen
-und Löschen seiner Nachrichten. Die vorhandene Empfängerart ist nur eine Beschreibung.
+seiner Nachrichten. Die vorhandene Empfängerart ist nur eine Beschreibung.
 
-`telegram.auto_delete: false` deaktiviert die Löschplanung für **neue** Nachrichten.
-Ohne dieses Feld bleibt das bisherige Verhalten (Löschung aktiviert) erhalten.
-Bereits geplante Löschungen bleiben bestehen. Die stündliche Bereinigung löscht
-frühestens nach 25 Stunden; GitHub kann Termine verzögern. Telegram erlaubt
-gewöhnlich nur die Löschung von Nachrichten unter 48 Stunden.
-Die Löschliste enthält Zielalias und SHA-256-Prüfsumme der Ziel-ID, keine Ziel-ID
-im Klartext. Bei geänderten Secrets oder alten Einträgen ohne Zielnachweis
-wird aus Sicherheitsgründen nicht gelöscht. Alte Ziele bis zur Bereinigung
-beibehalten; bestehende Legacy-Einträge müssen nach Prüfung manuell migriert werden.
+Die Löschfrist wird direkt im Telegram-Ziel definiert. PersonalNewsHost plant
+keine Löschungen und ruft keine Telegram-Löschfunktion auf. Der bisherige
+Cleanup-Workflow wurde entfernt; der alte Skript-Einstieg bleibt ohne Löschwirkung.
+Bereits vorhandene Löschlisten bleiben unverändert und werden nicht ausgeführt.
+Das alte Konfigurationsfeld `telegram.auto_delete` wird ignoriert.
 
 Der Produktionsworkflow entfernt das alte Video vor der Generierung und prüft
 anschließend mit ffprobe auf eine Videospur. Erst nach erfolgreicher Generierung

@@ -28,7 +28,7 @@ Never put credentials into `config.json`, commits, issues, pull requests, screen
 
 Telegram is optional and disabled by default. Create a bot with [@BotFather](https://t.me/BotFather), grant only the necessary permissions and set the two Telegram secrets in **your own fork**.
 
-Depending on settings, PersonalNewsHost can publish a video or a link after the news page is updated. The separate `telegram-cleanup.yml` workflow attempts to delete Telegram messages **no earlier than 25 hours after sending**. GitHub scheduling delays can postpone deletion. The video on GitHub Pages and the video RSS feed are not deleted by this cleanup.
+Retention and deletion are configured directly in the Telegram destination. PersonalNewsHost does not delete messages.
 
 Telegram integration should be tested with a real bot and destination before relying on it.
 

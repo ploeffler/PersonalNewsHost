@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Optional Telegram delivery. Credentials are GitHub Actions secrets, never config.json."""
 import json
-import datetime as dt
 import os
 import sys
 import urllib.error
@@ -28,12 +27,6 @@ if not token or not chat_id:
 video = ROOT / "docs" / "latest.mp4"
 if not video.is_file() or video.stat().st_size == 0:
     sys.exit("Generated video missing or empty; refusing Telegram delivery")
-# Read before sending: corrupt state must never silently erase pending deletions.
-ledger = ROOT / "telegram_sent.json"
-entries = json.loads(ledger.read_text(encoding="utf-8")) if ledger.exists() else []
-if not isinstance(entries, list):
-    sys.exit("Invalid Telegram deletion ledger")
-
 delivery = tg.get("delivery", "auto")
 if delivery not in ("auto", "video", "link"):
     sys.exit("Invalid telegram.delivery")
@@ -63,17 +56,6 @@ def send(method, payload, video_file=None):
     if not result.get("ok"):
         raise RuntimeError("Telegram API returned an error")
     print("Telegram delivery succeeded: " + method)
-    message_id = result.get("result", {}).get("message_id")
-    if tg.get("auto_delete", True):
-        if message_id is None:
-            raise RuntimeError("Telegram response missing message_id")
-        import hashlib
-        entries.append({"message_id": message_id, "target": target,
-                        "chat_hash": hashlib.sha256(chat_id.encode()).hexdigest(),
-                        "sent_at": dt.datetime.now(dt.timezone.utc).isoformat()})
-        temporary = ledger.with_suffix(".tmp")
-        temporary.write_text(json.dumps(entries, indent=2) + "\n", encoding="utf-8")
-        temporary.replace(ledger)
 
 payload = {"chat_id": chat_id}
 if delivery != "link" and video.is_file() and video.stat().st_size <= 49 * 1024 * 1024:
