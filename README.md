@@ -31,6 +31,7 @@ PersonalNewsHost dokumentiert genau diesen Weg. Das Projekt verbindet klassische
 - Einen anpassbaren Moderator und ein virtuelles Studio verwenden.
 - Deutschsprachige Sprache, Nachrichtengrafiken und Bildmaterial kombinieren.
 - Die aktuelle Sendung als Video, Webseite und Video-RSS bereitstellen.
+- Deutsche Untertitel im Webplayer zuschalten und als SRT herunterladen (ab der nächsten erfolgreich erzeugten Sendung). Die Abschnittsgrenzen folgen der Sprache; die Zeitverteilung innerhalb eines Abschnitts ist angenähert.
 - Optional über einen eigenen Telegram-Bot veröffentlichen; Aufbewahrung und Löschung werden direkt im Telegram-Ziel eingestellt.
 - In einem eigenen GitHub-Fork unabhängig betrieben werden.
 

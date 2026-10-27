@@ -122,6 +122,80 @@ def download_media(candidates, mode, directory, index, max_bytes):
             print(f"RSS media skipped: {type(exc).__name__}: {exc}")
     return None
 
+def spoken_prose(text):
+    """Remove article markup and media targets before editing or synthesis.
+
+    Balanced delimiters handle image URLs containing parentheses without
+    truncating the following prose. Link labels are retained; image credits,
+    reference definitions and code blocks are not narration.
+    """
+    text = html.unescape(text or "")
+    text = re.sub(r"(?ms)^\s*(`{3,}|~{3,})[^\n]*\n.*?^\s*\1\s*$", " ", text)
+    text = re.sub(r"(?is)<(script|style)\b[^>]*>.*?</\1\s*>", " ", text)
+    references = set()
+    def definition(match):
+        references.add(" ".join(match.group(1).casefold().split()))
+        return ""
+    text = re.sub(r"(?m)^ {0,3}\[([^\]\n]+)\]:[^\n]*(?:\n[ \t]+[^\n]+)*", definition, text)
+
+    def closing(value, start, left, right):
+        depth = 1
+        i = start + 1
+        while i < len(value):
+            if value[i] == "\\":
+                i += 2
+                continue
+            if value[i] == left:
+                depth += 1
+            elif value[i] == right:
+                depth -= 1
+                if depth == 0:
+                    return i
+            i += 1
+        return None
+
+    def inline(value):
+        result = []
+        i = 0
+        while i < len(value):
+            if value[i] == "\\" and i + 1 < len(value):
+                result.append(value[i + 1])
+                i += 2
+                continue
+            image = value.startswith("![", i)
+            opening = i + 1 if image else i
+            if value[opening:opening + 1] == "[":
+                end = closing(value, opening, "[", "]")
+                if end is not None:
+                    label = value[opening + 1:end]
+                    target_end = None
+                    following = end + 1
+                    if value[following:following + 1] == "(":
+                        target_end = closing(value, following, "(", ")")
+                    elif value[following:following + 1] == "[":
+                        ref_end = closing(value, following, "[", "]")
+                        if ref_end is not None:
+                            target_end = ref_end
+                    elif " ".join(label.casefold().split()) in references:
+                        target_end = end
+                    if target_end is not None:
+                        result.append(" " if image else inline(label))
+                        i = target_end + 1
+                        continue
+            result.append(value[i])
+            i += 1
+        return "".join(result)
+
+    text = inline(text)
+    text = re.sub(r"(?m)^\s{0,3}(?:#{1,6}\s+|>\s*|[-+*]\s+)", "", text)
+    for marker in ("**", "__", "~~", "*", "_", "`"):
+        escaped = re.escape(marker)
+        text = re.sub(escaped + r"(?=\S)(.+?)(?<=\S)" + escaped, r"\1", text)
+    # Bare/autolink targets are not useful spoken article content either.
+    text = re.sub(r"<?https?://[^\s<>]+>?", " ", text)
+    return clean(text)
+
+
 def extract_article_text(url):
     """Extract selected article locally via rdrr CLI, falling back to RSS on failure."""
     from urllib.parse import urlparse
@@ -138,7 +212,7 @@ def extract_article_text(url):
             return None
         body = data.get("content", "")
         # Keep prose; do not read markup, link targets or embedded code aloud.
-        body = " ".join(body.split())
+        body = spoken_prose(body)
         if len(body) < 160:
             return None
         return body[:12000]
@@ -487,8 +561,8 @@ def crosscheck_headline(title, original_url, max_results=2):
 
 def edit_news(title, description, style, max_sentences, limit):
     """Offline, conservative editorial formatting without inventing facts."""
-    title = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", title))).strip()
-    description = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", description))).strip()
+    title = spoken_prose(title)
+    description = spoken_prose(description)
     if style == "original":
         clipped = description[:limit].rsplit(" ", 1)[0] if len(description) > limit else description
         return title.rstrip(".!?") + ".\n" + clipped
@@ -542,6 +616,48 @@ def group_news_items(items, enabled=True):
         if not found:
             groups.append([item])
     return [group[0] for group in groups], groups
+
+
+def subtitle_timestamp(milliseconds, separator="."):
+    hours, remainder = divmod(milliseconds, 3600000)
+    minutes, remainder = divmod(remainder, 60000)
+    seconds, millis = divmod(remainder, 1000)
+    return f"{hours:02d}:{minutes:02d}:{seconds:02d}{separator}{millis:03d}"
+
+
+def write_subtitles(parts, boundaries, directory):
+    """Use measured speech boundaries; estimate cue timing within each segment.
+
+    No speech recognition is needed. Text is the exact input to synthesis;
+    within-segment timing is proportional to character counts, not word alignment.
+    """
+    import textwrap
+    if len(boundaries) != len(parts) + 1:
+        raise ValueError("Subtitle text and speech boundaries must match")
+    cues = []
+    for index, part in enumerate(parts):
+        start = round(boundaries[index] * 1000)
+        end = round(boundaries[index + 1] * 1000)
+        if end <= start:
+            continue
+        lines = textwrap.wrap(" ".join(part.split()), width=42,
+                              break_long_words=False, break_on_hyphens=False)
+        chunks = ["\n".join(lines[i:i + 2]) for i in range(0, len(lines), 2)]
+        total = sum(len(chunk) for chunk in chunks)
+        consumed = 0
+        for chunk in chunks:
+            cue_start = start + round((end - start) * consumed / total)
+            consumed += len(chunk)
+            cue_end = start + round((end - start) * consumed / total)
+            if cue_end > cue_start:
+                cues.append((cue_start, cue_end, chunk))
+    vtt, srt = ["WEBVTT\n\n"], []
+    for index, (start, end, text) in enumerate(cues, 1):
+        # WebVTT cue text parses markup; escape publisher text literally.
+        vtt.append(f"{subtitle_timestamp(start)} --> {subtitle_timestamp(end)}\n{html.escape(text)}\n\n")
+        srt.append(f"{index}\n{subtitle_timestamp(start, ',')} --> {subtitle_timestamp(end, ',')}\n{html.escape(text)}\n\n")
+    (directory / "subtitles.de.vtt").write_text("".join(vtt), encoding="utf-8")
+    (directory / "subtitles.de.srt").write_text("".join(srt), encoding="utf-8")
 
 
 def main():
@@ -663,6 +779,7 @@ def main():
         boundaries = [0.0]
         for seconds in segment_durations:
             boundaries.append(boundaries[-1] + seconds)
+        write_subtitles(parts, boundaries, DOCS)
         timeline = {
             "version": 1,
             "segments": [
@@ -724,11 +841,12 @@ def main():
         outro_start = boundaries[-2]
         outro = duration - outro_start
         print(f"Scenes: intro={intro:.1f}s, headlines={outro_start-intro:.1f}s, outro={outro:.1f}s")
-        args = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y"]
+        args = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y",
+                "-filter_complex_threads", "1"]
         if not bg.is_file():
             print(f"WARNING: studio image missing: {bg}; using solid background")
         if bg.is_file():
-            args += ["-loop", "1", "-i", str(bg)]
+            args += ["-loop", "1", "-framerate", "5", "-i", str(bg)]
         else:
             args += ["-f", "lavfi", "-i", "color=c=0x13243a:s=1280x720:r=1"]
         args += ["-i", str(wav)]
@@ -751,7 +869,7 @@ def main():
                 still = ROOT / relative
                 if not still.is_file():
                     raise FileNotFoundError("Intro image missing")
-                args += ["-loop", "1", "-i", str(still)]
+                args += ["-loop", "1", "-framerate", "5", "-i", str(still)]
             else:
                 raise ValueError("Invalid intro type")
             filters.append("[2:v]fps=5,scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,format=yuv420p[introframe]")
@@ -776,7 +894,7 @@ def main():
             path, kind = asset
             input_index = len([a for a in args if a == "-i"])
             if kind == "image":
-                args += ["-loop", "1", "-i", str(path)]
+                args += ["-loop", "1", "-framerate", "5", "-i", str(path)]
             else:
                 args += ["-stream_loop", "-1", "-i", str(path)]
             start_time = boundaries[idx + 2]
@@ -784,7 +902,7 @@ def main():
             media_label = f"rssmedia{idx}"
             next_label = f"rssscene{idx}"
             filters.append(
-                f"[{input_index}:v]fps=20,scale=620:384:flags=lanczos:"
+                f"[{input_index}:v]fps={5 if kind == 'image' else 20},scale=620:384:flags=lanczos:"
                 f"force_original_aspect_ratio=decrease:force_divisible_by=2,"
                 f"pad=620:384:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
                 f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS[{media_label}]"
@@ -821,43 +939,36 @@ def main():
                     print(f"WARNING: lip animation failed; static host fallback: {exc}")
             if story_host_input is None:
                 story_host_input = len([arg for arg in args if arg == "-i"])
-                args += ["-loop", "1", "-i", str(story_host)]
+                args += ["-loop", "1", "-framerate", "5", "-i", str(story_host)]
         else:
             print("WARNING: assets/host.png missing; no story presenter overlay")
         # Keep the presenter on the right, with the lower body hidden behind the desk line.
         if story_host_input is not None:
-            # Split the presenter stream so each story gets an independent
-            # filter input; avoid reusing an already consumed FFmpeg pad.
-            labels = "".join(f"[hostinput{idx}]" for idx in range(len(selected)))
-            filters.append(f"[{story_host_input}:v]split={len(selected)}{labels}")
-            for idx in range(len(selected)):
-                start_time = boundaries[idx + 2]
-                end_time = duration if idx == len(selected) - 1 else boundaries[idx + 3]
-                x = "W-w-35"
-                label = f"hoststory{idx}"
-                legacy_crop = (
-                    "crop=iw:min(ih\\,340):0:0,"
-                    if not (ROOT / settings.get("desk_foreground", "assets/desk_foreground.png")).is_file()
-                    else ""
-                )
-                filters.append(
-                    f"[hostinput{idx}]fps={lip_render_fps},scale=610:765:"
-                    f"force_original_aspect_ratio=decrease,format=rgba,"
-                    f"{legacy_crop}null[personstory{idx}]"
-                )
-                filters.append(
-                    f"[{current}][personstory{idx}]overlay=x={x}:y=200:"
-                    f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
-                    f"eof_action=repeat[{label}]"
-                )
-                current = label
+            # The presenter is visible continuously from the first story through
+            # the outro. Scale and composite it once rather than duplicating the
+            # animated stream and its full-duration filters for every story.
+            legacy_crop = (
+                "crop=iw:min(ih\\,340):0:0,"
+                if not (ROOT / settings.get("desk_foreground", "assets/desk_foreground.png")).is_file()
+                else ""
+            )
+            filters.append(
+                f"[{story_host_input}:v]fps={lip_render_fps},scale=610:765:"
+                f"force_original_aspect_ratio=decrease,format=rgba,"
+                f"{legacy_crop}null[storypresenter]"
+            )
+            filters.append(
+                f"[{current}][storypresenter]overlay=x=W-w-35:y=200:"
+                f"enable='gte(t,{intro:.3f})':eof_action=repeat[withpresenter]"
+            )
+            current = "withpresenter"
         # An independent transparent desk image is the correct foreground.
         # Unlike cropping the studio photo, it can cover the presenter's hands
         # without copying unwanted background pixels over the presenter.
         desk_path = ROOT / settings.get("desk_foreground", "assets/desk_foreground.png")
         if desk_path.is_file():
             desk_input = len([arg for arg in args if arg == "-i"])
-            args += ["-loop", "1", "-i", str(desk_path)]
+            args += ["-loop", "1", "-framerate", "5", "-i", str(desk_path)]
             filters.append(
                 f"[{desk_input}:v]fps=5,scale=1280:720,format=rgba,"
                 "setpts=PTS-STARTPTS[deskforeground]"
@@ -1032,7 +1143,7 @@ def main():
     lines = ["<!doctype html><html lang='de'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>",
              "<title>PersonalNewsHost</title><style>body{font:1.1rem system-ui;background:#13243a;color:white;max-width:900px;margin:3rem auto;padding:1rem}a{color:#8ed6ff}video{width:100%}.site-logo{display:block;width:min(320px,75vw);height:auto;margin:0 auto 1.2rem}.logo-link{display:block;text-align:center}</style>",
              "<a class='logo-link' href='" + BASE + "' aria-label='Zur Nachrichtenseite'><img class='site-logo' src='https://raw.githubusercontent.com/ploeffler/PersonalNewsHost/main/assets/logo.png' alt='PersonalNewsHost Logo'></a><h1>PersonalNewsHost</h1><p>Stand: " + html.escape(timestamp) + "</p>",
-             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'></video><p><a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='settings.html'>Konfiguration (Beta)</a> · <a href='browser-studio.html'>Browser-Studio (Beta)</a></p><h2>Quellen</h2><ul>"]
+             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'><track kind='subtitles' src='subtitles.de.vtt?v=" + now.strftime("%Y%m%d%H%M%S") + "' srclang='de' label='Deutsch' default></video><p><a href='subtitles.de.srt' download>Untertitel (SRT)</a> · <a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='settings.html'>Konfiguration (Beta)</a> · <a href='browser-studio.html'>Browser-Studio (Beta)</a></p><h2>Quellen</h2><ul>"]
     for story_idx, (title, _, link, _) in enumerate(selected):
         safe = link if link.startswith(("https://", "http://")) else "#"
         lines.append("<li><a rel='noopener noreferrer' href='" + html.escape(safe, quote=True) + "'>" + html.escape(title) + "</a>")
