@@ -55,10 +55,10 @@
     "caption": "{title} – neue Nachrichtensendung\n{url}"
   },
   "automation": {
-    "enabled": false,
-    "interval_hours": 1,
+    "enabled": true,
+    "interval_hours": 3,
     "start_hour_local": 0,
-    "timezone": "UTC",
+    "timezone": "Europe/Vienna",
     "days": "daily"
   },
   "advanced_services": {
