@@ -42,7 +42,7 @@ Hochgeladene Bilder in `assets/` werden als Repository-Dateien veröffentlicht u
 | `automation.timezone` | IANA-Zeitzone, z. B. `Europe/Vienna` |
 | `telegram.enabled` | Telegram-Versand aktivieren |
 
-Der GitHub-Actions-Zeitplan prüft stündlich ungefähr um Minute 17 UTC, ob eine Produktion fällig ist. GitHub garantiert keine minutengenaue Ausführung. Manuelle Starts sind unabhängig von der Automatik möglich.
+Der GitHub-Actions-Zeitplan prüft stündlich ungefähr um Minute 17 UTC, ob eine Produktion fällig ist. GitHub garantiert keine minutengenaue Ausführung. Verspätete oder ausgelassene Termine werden beim nächsten Lauf auf einem erlaubten Wochentag mit höchstens einer aktuellen Sendung nachgeholt; alte Sendungen werden nicht einzeln nachproduziert. Als Nachweis zählt das Veröffentlichungsdatum in `docs/feed.xml`, das erst nach erfolgreicher Produktion ins Repository übernommen wird. Fehlgeschlagene Versuche bleiben damit offen. Fehlt dieses Datum oder ist es unlesbar, erzeugt der nächste erlaubte Lauf eine Ausgabe. Bereits veröffentlichte Zeitfenster werden übersprungen. Nach dem Warten auf die gemeinsame Workflow-Sperre lädt der Produktionsworkflow den neuesten Branchstand, damit er auch zwischenzeitlich veröffentlichte Ausgaben berücksichtigt. Manuelle Starts sind unabhängig von der Automatik möglich.
 
 ## Sicherheit und Kosten
 

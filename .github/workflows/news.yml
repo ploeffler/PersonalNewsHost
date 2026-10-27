@@ -15,6 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
+          # The concurrency lock is acquired before checkout. Read the newest
+          # publication even if this scheduled event waited in the queue.
+          ref: ${{ github.ref_name }}
           persist-credentials: true
       - name: Load private configuration
         env:
