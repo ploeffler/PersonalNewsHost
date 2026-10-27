@@ -62,7 +62,7 @@ Configure your preferred schedule in the web interface and save the private conf
 3. Store `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` as Actions secrets **in your fork**.
 4. Enable Telegram in the web settings, save and run a test.
 
-A separate workflow attempts to delete Telegram messages **no earlier than 25 hours after sending**. GitHub scheduling delays may postpone deletion. The Pages video is unaffected. Telegram is disabled by default.
+Retention and deletion are configured directly in the Telegram destination. PersonalNewsHost does not delete messages.
 
 ## 10. Troubleshooting and security
 

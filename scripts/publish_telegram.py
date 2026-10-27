@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Optional Telegram delivery. Credentials are GitHub Actions secrets, never config.json."""
 import json
-import datetime as dt
 import os
 import sys
 import urllib.error
@@ -17,11 +16,17 @@ if not tg.get("enabled", False):
     sys.exit(0)
 
 token = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
-chat_id = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
+target = tg.get("target", "default")
+if target not in ("default", "secondary"):
+    sys.exit("Invalid telegram.target")
+chat_id = os.environ.get("TELEGRAM_CHAT_ID" if target == "default" else "TELEGRAM_CHAT_ID_SECONDARY", "").strip()
 if not token or not chat_id:
     print("Telegram enabled but TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID is missing.", file=sys.stderr)
     sys.exit(1)
 
+video = ROOT / "docs" / "latest.mp4"
+if not video.is_file() or video.stat().st_size == 0:
+    sys.exit("Generated video missing or empty; refusing Telegram delivery")
 delivery = tg.get("delivery", "auto")
 if delivery not in ("auto", "video", "link"):
     sys.exit("Invalid telegram.delivery")
@@ -51,15 +56,6 @@ def send(method, payload, video_file=None):
     if not result.get("ok"):
         raise RuntimeError("Telegram API returned an error")
     print("Telegram delivery succeeded: " + method)
-    message_id = result.get("result", {}).get("message_id")
-    if message_id is not None:
-        ledger = ROOT / "telegram_sent.json"
-        try:
-            entries = json.loads(ledger.read_text(encoding="utf-8")) if ledger.exists() else []
-        except (ValueError, OSError):
-            entries = []
-        entries.append({"message_id": message_id, "sent_at": dt.datetime.now(dt.timezone.utc).isoformat()})
-        ledger.write_text(json.dumps(entries, indent=2) + "\n", encoding="utf-8")
 
 payload = {"chat_id": chat_id}
 if delivery != "link" and video.is_file() and video.stat().st_size <= 49 * 1024 * 1024:
@@ -68,7 +64,8 @@ if delivery != "link" and video.is_file() and video.stat().st_size <= 49 * 1024 
         sys.exit(0)
     except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, RuntimeError) as exc:
         print("Video upload failed: " + str(exc).replace(token, "[REDACTED]"), file=sys.stderr)
-        if delivery == "video":
+        if delivery == "video" or not isinstance(exc, urllib.error.HTTPError) or exc.code not in (400, 413):
+            # Timeouts may mean Telegram accepted the upload: avoid duplicate posts.
             sys.exit(1)
 elif delivery == "video":
     sys.exit("Video missing or too large for direct Telegram delivery")

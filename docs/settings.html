@@ -169,6 +169,8 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 </fieldset>
 <fieldset class="settings-panel" id="panel-telegram" role="tabpanel" aria-labelledby="tab-telegram"><legend>Telegram-Veröffentlichung (optional)</legend>
 <label><input id="telegram_enabled" type="checkbox" style="width:auto"> Telegram nach der Website-Veröffentlichung benachrichtigen</label>
+<p>Die Löschfrist wird direkt im Telegram-Ziel festgelegt. PersonalNewsHost löscht keine Nachrichten.</p>
+<label for="telegram_target">Zielkanal (GitHub-Secret)</label><select id="telegram_target"><option value="default">Standard: TELEGRAM_CHAT_ID</option><option value="secondary">Zweiter Kanal: TELEGRAM_CHAT_ID_SECONDARY</option></select>
 <label for="telegram_recipient">Empfängerart</label><select id="telegram_recipient"><option value="channel">Kanal</option><option value="private">Privater Chat</option><option value="group">Gruppe</option></select>
 <label for="telegram_delivery">Versandart</label><select id="telegram_delivery"><option value="auto">Automatisch: Video, bei Fehler Link</option><option value="video">Nur Video</option><option value="link">Nur Link</option></select>
 <label for="telegram_caption">Telegram-Nachricht (Platzhalter: {title}, {url})</label><textarea id="telegram_caption" maxlength="1024"></textarea>
@@ -402,6 +404,7 @@ function fill(c){
  $("automation_days").value=a.days||"daily";
  const tg=c.telegram||{};
  $("telegram_enabled").checked=tg.enabled===true;
+ $("telegram_target").value=tg.target||"default";
  $("telegram_recipient").value=tg.recipient_type||"channel";
  $("telegram_delivery").value=tg.delivery||"auto";
  $("telegram_caption").value=tg.caption||"{title} – neue Nachrichtensendung\\n{url}";
@@ -458,7 +461,7 @@ $("settings").addEventListener("submit",event=>{
  if(!c.presenter_settings.scenes.intro_text||!c.presenter_settings.scenes.outro_text)throw Error("Intro- und Outro-Text dürfen nicht leer sein.");
  c.presenter_settings.scenes.show_headlines=$("show_headlines").checked;
  c.automation={enabled:$("automation_enabled").checked,interval_hours:Number($("automation_interval").value),start_hour_local:Number($("automation_hour").value),timezone:$("automation_timezone").value,days:$("automation_days").value};
- c.telegram={enabled:$("telegram_enabled").checked,recipient_type:$("telegram_recipient").value,delivery:$("telegram_delivery").value,caption:$("telegram_caption").value.trim()};
+ c.telegram={target:$("telegram_target").value,enabled:$("telegram_enabled").checked,recipient_type:$("telegram_recipient").value,delivery:$("telegram_delivery").value,caption:$("telegram_caption").value.trim()};
  if(!c.telegram.caption)throw Error("Telegram-Nachricht darf nicht leer sein.");
  preparedConfig=c;
  if(savingDirectly)return;
