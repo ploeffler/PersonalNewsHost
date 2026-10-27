@@ -426,6 +426,70 @@ def items_from_feed(url):
 def run(args):
     subprocess.run(args, check=True, stdout=subprocess.DEVNULL, timeout=480)
 
+def render_stage(seconds, titles, boundaries):
+    """Name the scene at FFmpeg's current output timestamp, not input loading."""
+    if seconds < boundaries[2]:
+        return 'Intro'
+    for index, title in enumerate(titles):
+        if seconds < boundaries[index + 3]:
+            return f'Beitrag {index + 1}/{len(titles)}: {" ".join(title.split())}'
+    return 'Outro'
+
+
+def render_time(progress):
+    """Read the latest complete FFmpeg progress timestamp (in microseconds)."""
+    try:
+        lines = progress.read_text(encoding='utf-8').splitlines()
+    except OSError:
+        return None
+    for line in reversed(lines):
+        if line.startswith('out_time_us='):
+            try:
+                return max(0, int(line.split('=', 1)[1]) / 1_000_000)
+            except ValueError:
+                continue
+    return None
+
+
+def run_render(args, titles, boundaries):
+    """Keep existing timeout/error handling while reporting live render scenes."""
+    import threading
+    import time
+    duration = boundaries[-1]
+    with tempfile.TemporaryDirectory() as tmp:
+        progress = Path(tmp) / 'ffmpeg-progress.txt'
+        stopped = threading.Event()
+        last_stage = None
+        last_log = 0.0
+        position = 0.0
+
+        def report():
+            nonlocal last_stage, last_log, position
+            current = render_time(progress)
+            if current is not None:
+                position = max(position, min(current, duration))
+            stage = render_stage(position, titles, boundaries)
+            now = time.monotonic()
+            if stage != last_stage or now - last_log >= 15:
+                print(f'[Render] {stage} | Videozeit {position:.1f}/{duration:.1f} s', flush=True)
+                last_stage, last_log = stage, now
+
+        def monitor():
+            while not stopped.wait(1):
+                report()
+
+        report()
+        watcher = threading.Thread(target=monitor, name='render-progress', daemon=True)
+        watcher.start()
+        try:
+            run([args[0], '-progress', str(progress), '-stats_period', '1', '-nostats', *args[1:]])
+        finally:
+            stopped.set()
+            watcher.join()
+            report()
+        print('[Render] Rendering abgeschlossen.', flush=True)
+
+
 def adjust_voice_pitch(wav):
     """Lower or raise voice pitch with FFmpeg while preserving speech duration."""
     import math
@@ -1139,7 +1203,7 @@ def main():
                  "-c:v", "libx264", "-preset", "ultrafast", "-tune", "stillimage",
                  "-r", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k",
                  "-t", f"{duration:.3f}", "-shortest", "-movflags", "+faststart", str(DOCS / "latest.mp4")]
-        run(args)
+        run_render(args, [item[0] for item in selected], boundaries)
     lines = ["<!doctype html><html lang='de'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>",
              "<title>PersonalNewsHost</title><style>body{font:1.1rem system-ui;background:#13243a;color:white;max-width:900px;margin:3rem auto;padding:1rem}a{color:#8ed6ff}video{width:100%}.site-logo{display:block;width:min(320px,75vw);height:auto;margin:0 auto 1.2rem}.logo-link{display:block;text-align:center}</style>",
              "<a class='logo-link' href='" + BASE + "' aria-label='Zur Nachrichtenseite'><img class='site-logo' src='https://raw.githubusercontent.com/ploeffler/PersonalNewsHost/main/assets/logo.png' alt='PersonalNewsHost Logo'></a><h1>PersonalNewsHost</h1><p>Stand: " + html.escape(timestamp) + "</p>",
