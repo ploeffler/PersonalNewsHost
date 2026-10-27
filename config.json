@@ -49,10 +49,11 @@
   },
   "voice_pitch_semitones": -1.5,
   "telegram": {
-    "enabled": false,
+    "enabled": true,
     "recipient_type": "channel",
     "delivery": "auto",
-    "caption": "{title} – neue Nachrichtensendung\n{url}"
+    "caption": "{title} – neue Nachrichtensendung\n{url}",
+    "target": "default"
   },
   "automation": {
     "enabled": false,
