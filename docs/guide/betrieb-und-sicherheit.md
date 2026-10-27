@@ -50,3 +50,39 @@ Nach der erfolgreichen Veröffentlichung unter GitHub Pages versendet der regul�
 
 Hinweis: Die experimentelle parallele MuseTalk-Pipeline veröffentlicht noch nicht automatisch; Telegram hängt vorerst am regulären Produktionsworkflow. Der Versand ist noch nicht mit einem echten Telegram-Bot end-to-end getestet.
 
+
+
+### Zielwahl und optionale Löschung
+
+In den Telegram-Einstellungen steht jetzt „Zielkanal“ zur Verfügung:
+`default` verwendet das Actions-Secret `TELEGRAM_CHAT_ID`, `secondary` das
+Secret `TELEGRAM_CHAT_ID_SECONDARY`. Beide Ziele verwenden denselben Bot aus
+`TELEGRAM_BOT_TOKEN`. Bot-Token und Chat-IDs niemals in JSON oder HTML eintragen.
+Der Bot benötigt im jeweiligen Kanal die Berechtigung zum Veröffentlichen
+und Löschen seiner Nachrichten. Die vorhandene Empfängerart ist nur eine Beschreibung.
+
+`telegram.auto_delete: false` deaktiviert die Löschplanung für **neue** Nachrichten.
+Ohne dieses Feld bleibt das bisherige Verhalten (Löschung aktiviert) erhalten.
+Bereits geplante Löschungen bleiben bestehen. Die stündliche Bereinigung löscht
+frühestens nach 25 Stunden; GitHub kann Termine verzögern. Telegram erlaubt
+gewöhnlich nur die Löschung von Nachrichten unter 48 Stunden.
+Die Löschliste enthält Zielalias und SHA-256-Prüfsumme der Ziel-ID, keine Ziel-ID
+im Klartext. Bei geänderten Secrets oder alten Einträgen ohne Zielnachweis
+wird aus Sicherheitsgründen nicht gelöscht. Alte Ziele bis zur Bereinigung
+beibehalten; bestehende Legacy-Einträge müssen nach Prüfung manuell migriert werden.
+
+Der Produktionsworkflow entfernt das alte Video vor der Generierung und prüft
+anschließend mit ffprobe auf eine Videospur. Erst nach erfolgreicher Generierung
+und Git-Veröffentlichung folgt der optionale Versand. Bei unklarem Upload-Ergebnis
+(z. B. Timeout) erfolgt kein automatischer Link-Nachversand, um Doppelposts zu vermeiden.
+Ein manueller Start des Produktionsworkflows kann bei aktiviertem Telegram senden.
+
+Es werden keine kostenpflichtigen Dienste oder zusätzlichen Pakete benötigt.
+Standard-Ubuntu-Runner sind für öffentliche Repositories kostenlos; bei privaten
+Forks gelten die GitHub-Freikontingente. Quellen:
+[GitHub Actions Abrechnung](https://docs.github.com/en/billing/concepts/product-billing/github-actions),
+[Telegram deleteMessage](https://core.telegram.org/bots/api#deletemessage).
+
+Offline-Prüfung: `python3 -m unittest discover -s tests -p test_telegram.py -v`.
+Diese Tests ersetzen alle Telegram-Netzwerkaufrufe durch Mocks.
+Ein echter Versandtest erfordert eine ausdrückliche Freigabe.

@@ -146,7 +146,11 @@ jobs:
           rdrr --help >/dev/null
       - name: Generate latest bulletin
         if: steps.schedule.outputs.due == 'true'
-        run: python3 scripts/generate.py
+        run: |
+          rm -f docs/latest.mp4
+          python3 scripts/generate.py
+          test -s docs/latest.mp4
+          ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 docs/latest.mp4 | grep -q .
       - name: Sync public configuration for settings page
         if: steps.schedule.outputs.due == 'true'
         env:
@@ -173,10 +177,11 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_ID_SECONDARY: ${{ secrets.TELEGRAM_CHAT_ID_SECONDARY }}
           PUBLIC_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: python3 scripts/publish_telegram.py
       - name: Persist Telegram deletion schedule
-        if: steps.schedule.outputs.due == 'true' && success()
+        if: always() && steps.schedule.outputs.due == 'true'
         run: |
           if [ -f telegram_sent.json ]; then
             git config user.name "github-actions[bot]"
