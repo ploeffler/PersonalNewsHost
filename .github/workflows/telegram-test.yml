@@ -7,21 +7,34 @@ on:
         type: choice
         options: [default, secondary]
         default: default
-permissions: {}
+      delivery:
+        description: Send a test message or resend the current video
+        type: choice
+        options: [text, video]
+        default: text
+permissions:
+  contents: read
 jobs:
   test:
     runs-on: ubuntu-24.04
     timeout-minutes: 3
     steps:
+      - uses: actions/checkout@v5
+        if: inputs.delivery == 'video'
+        with:
+          persist-credentials: false
       - name: Check bot and destination, then send one test message
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ inputs.target == 'secondary' && secrets.TELEGRAM_CHAT_ID_SECONDARY || secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_ID_SECONDARY: ${{ secrets.TELEGRAM_CHAT_ID_SECONDARY }}
+          TARGET: ${{ inputs.target }}
+          DELIVERY: ${{ inputs.delivery }}
         run: |
           python3 - <<'PY'
           import json, os, sys, urllib.request, urllib.parse, urllib.error
           token = os.environ['TELEGRAM_BOT_TOKEN'].strip()
-          chat = os.environ['TELEGRAM_CHAT_ID'].strip()
+          chat = os.environ['TELEGRAM_CHAT_ID_SECONDARY' if os.environ['TARGET'] == 'secondary' else 'TELEGRAM_CHAT_ID'].strip()
           if not token or not chat:
               sys.exit('Missing bot token or destination secret')
           def call(method, payload):
@@ -48,5 +61,23 @@ jobs:
           destination = call('getChat', {'chat_id': chat})
           if destination.get('type') not in ('channel', 'group', 'supergroup', 'private'):
               sys.exit('Unsupported destination type')
-          call('sendMessage', {'chat_id': chat, 'text': 'PersonalNewsHost: Telegram-Test erfolgreich. Dies ist eine einmalige Testnachricht.'})
+          if os.environ['DELIVERY'] != 'video':
+              call('sendMessage', {'chat_id': chat, 'text': 'PersonalNewsHost: Telegram-Test erfolgreich. Dies ist eine einmalige Testnachricht.'})
           PY
+      - name: Resend existing video without link fallback
+        if: inputs.delivery == 'video'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_ID_SECONDARY: ${{ secrets.TELEGRAM_CHAT_ID_SECONDARY }}
+          TARGET: ${{ inputs.target }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path('config.json')
+          cfg = json.loads(path.read_text())
+          cfg.setdefault('telegram', {}).update(enabled=True, target=os.environ['TARGET'], delivery='video')
+          path.write_text(json.dumps(cfg, ensure_ascii=False))
+          PY
+          python3 scripts/publish_telegram.py
