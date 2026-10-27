@@ -767,11 +767,12 @@ def main():
         outro_start = boundaries[-2]
         outro = duration - outro_start
         print(f"Scenes: intro={intro:.1f}s, headlines={outro_start-intro:.1f}s, outro={outro:.1f}s")
-        args = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y"]
+        args = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y",
+                "-filter_complex_threads", "1"]
         if not bg.is_file():
             print(f"WARNING: studio image missing: {bg}; using solid background")
         if bg.is_file():
-            args += ["-loop", "1", "-i", str(bg)]
+            args += ["-loop", "1", "-framerate", "5", "-i", str(bg)]
         else:
             args += ["-f", "lavfi", "-i", "color=c=0x13243a:s=1280x720:r=1"]
         args += ["-i", str(wav)]
@@ -794,7 +795,7 @@ def main():
                 still = ROOT / relative
                 if not still.is_file():
                     raise FileNotFoundError("Intro image missing")
-                args += ["-loop", "1", "-i", str(still)]
+                args += ["-loop", "1", "-framerate", "5", "-i", str(still)]
             else:
                 raise ValueError("Invalid intro type")
             filters.append("[2:v]fps=5,scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,format=yuv420p[introframe]")
@@ -819,7 +820,7 @@ def main():
             path, kind = asset
             input_index = len([a for a in args if a == "-i"])
             if kind == "image":
-                args += ["-loop", "1", "-i", str(path)]
+                args += ["-loop", "1", "-framerate", "5", "-i", str(path)]
             else:
                 args += ["-stream_loop", "-1", "-i", str(path)]
             start_time = boundaries[idx + 2]
@@ -827,7 +828,7 @@ def main():
             media_label = f"rssmedia{idx}"
             next_label = f"rssscene{idx}"
             filters.append(
-                f"[{input_index}:v]fps=20,scale=620:384:flags=lanczos:"
+                f"[{input_index}:v]fps={5 if kind == 'image' else 20},scale=620:384:flags=lanczos:"
                 f"force_original_aspect_ratio=decrease:force_divisible_by=2,"
                 f"pad=620:384:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
                 f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS[{media_label}]"
@@ -864,43 +865,36 @@ def main():
                     print(f"WARNING: lip animation failed; static host fallback: {exc}")
             if story_host_input is None:
                 story_host_input = len([arg for arg in args if arg == "-i"])
-                args += ["-loop", "1", "-i", str(story_host)]
+                args += ["-loop", "1", "-framerate", "5", "-i", str(story_host)]
         else:
             print("WARNING: assets/host.png missing; no story presenter overlay")
         # Keep the presenter on the right, with the lower body hidden behind the desk line.
         if story_host_input is not None:
-            # Split the presenter stream so each story gets an independent
-            # filter input; avoid reusing an already consumed FFmpeg pad.
-            labels = "".join(f"[hostinput{idx}]" for idx in range(len(selected)))
-            filters.append(f"[{story_host_input}:v]split={len(selected)}{labels}")
-            for idx in range(len(selected)):
-                start_time = boundaries[idx + 2]
-                end_time = duration if idx == len(selected) - 1 else boundaries[idx + 3]
-                x = "W-w-35"
-                label = f"hoststory{idx}"
-                legacy_crop = (
-                    "crop=iw:min(ih\\,340):0:0,"
-                    if not (ROOT / settings.get("desk_foreground", "assets/desk_foreground.png")).is_file()
-                    else ""
-                )
-                filters.append(
-                    f"[hostinput{idx}]fps={lip_render_fps},scale=610:765:"
-                    f"force_original_aspect_ratio=decrease,format=rgba,"
-                    f"{legacy_crop}null[personstory{idx}]"
-                )
-                filters.append(
-                    f"[{current}][personstory{idx}]overlay=x={x}:y=200:"
-                    f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
-                    f"eof_action=repeat[{label}]"
-                )
-                current = label
+            # The presenter is visible continuously from the first story through
+            # the outro. Scale and composite it once rather than duplicating the
+            # animated stream and its full-duration filters for every story.
+            legacy_crop = (
+                "crop=iw:min(ih\\,340):0:0,"
+                if not (ROOT / settings.get("desk_foreground", "assets/desk_foreground.png")).is_file()
+                else ""
+            )
+            filters.append(
+                f"[{story_host_input}:v]fps={lip_render_fps},scale=610:765:"
+                f"force_original_aspect_ratio=decrease,format=rgba,"
+                f"{legacy_crop}null[storypresenter]"
+            )
+            filters.append(
+                f"[{current}][storypresenter]overlay=x=W-w-35:y=200:"
+                f"enable='gte(t,{intro:.3f})':eof_action=repeat[withpresenter]"
+            )
+            current = "withpresenter"
         # An independent transparent desk image is the correct foreground.
         # Unlike cropping the studio photo, it can cover the presenter's hands
         # without copying unwanted background pixels over the presenter.
         desk_path = ROOT / settings.get("desk_foreground", "assets/desk_foreground.png")
         if desk_path.is_file():
             desk_input = len([arg for arg in args if arg == "-i"])
-            args += ["-loop", "1", "-i", str(desk_path)]
+            args += ["-loop", "1", "-framerate", "5", "-i", str(desk_path)]
             filters.append(
                 f"[{desk_input}:v]fps=5,scale=1280:720,format=rgba,"
                 "setpts=PTS-STARTPTS[deskforeground]"
