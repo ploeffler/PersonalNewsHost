@@ -49,3 +49,16 @@ Der GitHub-Actions-Zeitplan prüft stündlich ungefähr um Minute 17 UTC, ob ein
 Die kostenlose CPU-Version ist für ein Budget von **0 € monatlichen Zusatzkosten** ausgelegt, unterliegt aber den GitHub-Freikontingenten und den Bedingungen externer Dienste. Die spätere GPU-Version mit kostenpflichtigen Diensten ist nicht automatisch aktiviert.
 
 Verwende GitHub-Tokens nur auf einer vertrauenswürdigen Konfigurationsseite und niemals in Chats, Issues oder öffentlichen Dateien. Der Browser benötigt für das direkte Speichern einen Token; die Konfigurationsseite ist keine vollwertige Benutzerverwaltung.
+
+## Senderlogo in der Sendung
+
+Unter **Bilder → Senderlogo hochladen** lässt sich ein PNG- oder JPEG-Bild
+(maximal 4 MB, mindestens 32×16 Pixel) hochladen. Ein transparentes PNG eignet
+sich für einen Sender-Identifier ohne rechteckigen Hintergrund. Danach die
+Konfiguration speichern, damit der eingetragene Bildpfad übernommen wird.
+
+Das optionale Feld `station_logo` enthält den Repository-Pfad, beispielsweise
+`assets/station-logo.png`. Das Bild erscheint während der gesamten Sendung
+oben rechts mit 30 Pixel Abstand zum Rand und wird proportional auf maximal
+160×90 Pixel skaliert. Ein leerer Pfad deaktiviert die Einblendung. Bestehende
+Konfigurationen ohne dieses Feld verwenden standardmäßig `assets/logo.png`.

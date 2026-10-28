@@ -1146,6 +1146,26 @@ def main():
                 f"enable='{outro_enable}'[{next_label}]"
             )
             current = next_label
+        # Apply station branding last so it stays above intro, stories and outro.
+        logo_path = str(CONFIG.get("station_logo", "assets/logo.png")).strip()
+        if logo_path:
+            if not re.fullmatch(r"assets/[A-Za-z0-9_./-]+", logo_path) or ".." in logo_path:
+                raise ValueError("Invalid station logo path")
+            logo = ROOT / logo_path
+            if logo.is_file():
+                logo_input = args.count("-i")
+                args += ["-loop", "1", "-framerate", "5", "-i", str(logo)]
+                filters.append(
+                    f"[{logo_input}:v]scale=160:90:force_original_aspect_ratio=decrease,"
+                    "format=rgba,setsar=1[stationlogo]"
+                )
+                filters.append(
+                    f"[{current}][stationlogo]overlay=x=W-w-30:y=30:"
+                    "eof_action=repeat:shortest=0[withstationlogo]"
+                )
+                current = "withstationlogo"
+            else:
+                print("WARNING: station logo missing; rendering without station logo")
         filters.append(f"[{current}]null[v]")
         args += ["-filter_complex", ";".join(filters), "-map", "[v]", "-map", "1:a",
                  "-c:v", "libx264", "-preset", "ultrafast", "-tune", "stillimage",
