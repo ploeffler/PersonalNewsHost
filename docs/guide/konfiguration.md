@@ -62,4 +62,3 @@ Das optionale Feld `station_logo` enthält den Repository-Pfad, beispielsweise
 oben rechts mit 30 Pixel Abstand zum Rand und wird proportional auf maximal
 160×90 Pixel skaliert. Ein leerer Pfad deaktiviert die Einblendung. Bestehende
 Konfigurationen ohne dieses Feld rendern unverändert ohne Logo.
-
