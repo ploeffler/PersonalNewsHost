@@ -10,6 +10,8 @@ on:
     - cron: '7,22,37,52 * * * *'
 permissions:
   contents: write
+  pages: write
+  id-token: write
 concurrency:
   group: personalnewshost-publish
   cancel-in-progress: false
@@ -17,6 +19,9 @@ jobs:
   updates:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v5
       - name: Load private configuration
@@ -47,3 +52,10 @@ jobs:
             git commit -m 'Publish short news updates'
             git push
           fi
+      - name: Upload public site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+      - name: Deploy public site
+        id: deployment
+        uses: actions/deploy-pages@v4
