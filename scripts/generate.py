@@ -978,7 +978,24 @@ def main():
             if kind == "image":
                 args += ["-loop", "1", "-framerate", "5", "-i", str(path)]
             else:
-                args +…227 tokens truncated… print(f"RSS {kind} used for story {idx + 1}: {path.name}")
+                args += ["-stream_loop", "-1", "-i", str(path)]
+            start_time = boundaries[idx + 2]
+            end_time = boundaries[idx + 3]
+            media_label = f"rssmedia{idx}"
+            next_label = f"rssscene{idx}"
+            filters.append(
+                f"[{input_index}:v]fps={5 if kind == 'image' else 20},scale=620:384:flags=lanczos:"
+                f"force_original_aspect_ratio=decrease:force_divisible_by=2,"
+                f"pad=620:384:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
+                f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS[{media_label}]"
+            )
+            filters.append(
+                f"[{current}][{media_label}]overlay=x=60:y=60:"
+                f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
+                f"eof_action=repeat:shortest=0[{next_label}]"
+            )
+            current = next_label
+            print(f"RSS {kind} used for story {idx + 1}: {path.name}")
         # Animate the transparent host with the final narrated WAV.
         # If the optional animation fails, keep the proven static overlay.
         story_host = ROOT / "assets/host.png"
@@ -1256,7 +1273,7 @@ def main():
     lines = ["<!doctype html><html lang='de'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>",
              "<title>PersonalNewsHost</title><style>body{font:1.1rem system-ui;background:#13243a;color:white;max-width:900px;margin:3rem auto;padding:1rem}a{color:#8ed6ff}video{width:100%}.site-logo{display:block;width:min(320px,75vw);height:auto;margin:0 auto 1.2rem}.logo-link{display:block;text-align:center}</style>",
              "<a class='logo-link' href='" + BASE + "' aria-label='Zur Nachrichtenseite'><img class='site-logo' src='https://raw.githubusercontent.com/ploeffler/PersonalNewsHost/main/assets/logo.png' alt='PersonalNewsHost Logo'></a><h1>PersonalNewsHost</h1><p>Stand: " + html.escape(timestamp) + "</p>",
-             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'><track kind='subtitles' src='subtitles.de.vtt?v=" + now.strftime("%Y%m%d%H%M%S") + "' srclang='de' label='Deutsch' default></video><p><a href='subtitles.de.srt' download>Untertitel (SRT)</a> · <a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='settings.html'>Konfiguration (Beta)</a> · <a href='browser-studio.html'>Browser-Studio (Beta)</a></p><h2>Quellen</h2><ul>"]
+             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'><track kind='subtitles' src='subtitles.de.vtt?v=" + now.strftime("%Y%m%d%H%M%S") + "' srclang='de' label='Deutsch' default></video><p><a href='subtitles.de.srt' download>Untertitel (SRT)</a> · <a href='short-updates.html'>Kurzupdates</a> · <a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='settings.html'>Konfiguration (Beta)</a> · <a href='browser-studio.html'>Browser-Studio (Beta)</a></p><h2>Quellen</h2><ul>"]
     for story_idx, (title, _, link, _) in enumerate(selected):
         safe = link if link.startswith(("https://", "http://")) else "#"
         lines.append("<li><a rel='noopener noreferrer' href='" + html.escape(safe, quote=True) + "'>" + html.escape(title) + "</a>")

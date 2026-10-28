@@ -121,5 +121,10 @@
     ],
     "prefer_article_images": true
   },
-  "fork_config_initialized": false
+  "fork_config_initialized": false,
+  "short_updates": {
+    "enabled": true,
+    "freshness_minutes": 60,
+    "interval_minutes": 15
+  }
 }

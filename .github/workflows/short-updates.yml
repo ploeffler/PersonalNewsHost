@@ -1,0 +1,49 @@
+name: Create short news updates
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/short-updates.yml
+      - scripts/short_updates.py
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+permissions:
+  contents: write
+concurrency:
+  group: personalnewshost-publish
+  cancel-in-progress: false
+jobs:
+  updates:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Load private configuration
+        env:
+          PRIVATE_CONFIG: ${{ secrets.PERSONALNEWSHOST_CONFIG }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          if os.environ.get('PRIVATE_CONFIG', '').strip():
+              config = json.loads(os.environ['PRIVATE_CONFIG'])
+              if not isinstance(config, dict):
+                  raise ValueError('Configuration must be an object')
+              Path('config.json').write_text(json.dumps(config))
+          PY
+      - name: Test short update rules
+        run: python3 -m unittest discover -s tests -p test_short_updates.py
+      - name: Install speech tools
+        run: sudo apt-get update && sudo apt-get install -y espeak-ng ffmpeg
+      - name: Create updates and expire old entries
+        run: python3 scripts/short_updates.py
+      - name: Publish short updates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/short-updates.json docs/short-update-state.json docs/short-update-audio/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish short news updates'
+            git push
+          fi
