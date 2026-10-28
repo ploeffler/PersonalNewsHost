@@ -17,6 +17,8 @@ const screenshots=process.env.PNH_SCREENSHOTS_DIR || os.tmpdir();
  await page.locator('#feed_country').selectOption('AT');await page.locator('#feed_region').selectOption('Steiermark');
  assert.ok(await page.locator('.feed-region-label img[alt="Wappen Steiermark"]').count()>0);
  assert.equal(await page.locator('.feed-region-label img[alt="Wappen Steiermark"]').first().evaluate(img=>img.complete&&img.naturalWidth>0),true);
+ assert.ok(await page.locator('img.feed-source-logo').count()>0);
+ assert.equal(await page.locator('img.feed-source-logo').first().evaluate(img=>img.complete&&img.naturalWidth>0),true);
  const orf=page.getByRole('checkbox',{name:'steiermark.ORF.at',exact:true});await orf.check();
  assert.ok((await page.locator('#feeds').inputValue()).includes('https://rss.orf.at/steiermark.xml'));
  await page.locator('#feed_reload').click();await page.waitForFunction(()=>!document.querySelector('#feed_reload').disabled);

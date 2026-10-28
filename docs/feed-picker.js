@@ -56,12 +56,22 @@
     const haystack = [entry.name,entry.publisher,entry.region,entry.category,COUNTRIES[entry.publisher_country],entry.url,entry.group === "news" ? "Nachrichten" : "Behörden Blaulicht"].join(" ").toLocaleLowerCase("de");
     return !filters.search || haystack.includes(filters.search.toLocaleLowerCase("de"));
   }
+  function sourceLogo(entry, logos) {
+    for (const raw of [entry.source_page,entry.evidence_url,entry.url]) {
+      try {
+        const host = new URL(raw).hostname, asset = logos?.[host];
+        if (asset?.status === "cached" && /^assets\/source-logos\/[a-f0-9]+\.(png|ico|jpg|gif|webp)$/.test(asset.icon)) return {...asset,host};
+      } catch { /* Missing publisher address: try the next recorded URL. */ }
+    }
+    return null;
+  }
   class FeedPicker {
     constructor(document, fetcher) {
       this.document = document;
       this.fetcher = fetcher || window.fetch.bind(window);
       this.catalogues = {};
       this.icons = {};
+      this.logos = {};
       this.entries = [];
       this.openGroups = new Set();
       this.knownGroups = new Set();
@@ -99,12 +109,12 @@
     async load() {
       this.$("feed_reload").disabled = true;
       this.$("feed_load_status").textContent = "Lade recherchierte Quellen …";
-      const requests = [["news","feed-catalog.json"],["authorities","police-feed-catalog.json"],["icons","assets/regions/index.json"]];
+      const requests = [["news","feed-catalog.json"],["authorities","police-feed-catalog.json"],["icons","assets/regions/index.json"],["logos","assets/source-logos/index.json"]];
       const results = await Promise.allSettled(requests.map(async ([key,url]) => {
         const response = await this.fetcher(url,{cache:"no-store"});
         if (!response.ok) throw Error("HTTP " + response.status);
         const data = await response.json();
-        if (key !== "icons" && !Array.isArray(data.feeds)) throw Error("Ungültiger Katalog");
+        if (!["icons","logos"].includes(key) && !Array.isArray(data.feeds)) throw Error("Ungültiger Katalog");
         return data;
       }));
       const failures = [];
@@ -112,8 +122,9 @@
         const key = requests[index][0];
         if (result.status === "fulfilled") {
           if (key === "icons") this.icons = result.value;
+          else if (key === "logos") this.logos = result.value;
           else this.catalogues[key] = result.value;
-        } else failures.push(key === "news" ? "Nachrichten" : key === "authorities" ? "Behörden/Blaulicht" : "Wappen");
+        } else failures.push(key === "news" ? "Nachrichten" : key === "authorities" ? "Behörden/Blaulicht" : key === "logos" ? "Quellenlogos" : "Wappen");
       });
       const unique = new Map();
       for (const [group,data] of Object.entries(this.catalogues)) for (const entry of catalogueEntries(data,group)) if (!unique.has(entry.url)) unique.set(entry.url,entry);
@@ -153,7 +164,17 @@
       else if (entry.status === "review") meta.push("Aktualität prüfen");
       else if (entry.kind === "custom") meta.push("Eigene / bisherige Adresse");
       content.append(this.node("small",meta.filter(Boolean).join(" · "),"feed-meta"));
-      label.append(checkbox,content); row.append(label);
+      const fallback = this.node("span",(entry.publisher || entry.name || "RSS").split(/\s+/).slice(0,2).map(part => part[0]).join("").toUpperCase(),"feed-source-logo feed-logo-fallback");
+      fallback.setAttribute("aria-hidden","true");
+      const asset = sourceLogo(entry,this.logos);
+      let logo = fallback;
+      if (asset) {
+        logo = this.node("img",undefined,"feed-source-logo");
+        logo.src = asset.icon; logo.alt = ""; logo.title = asset.host.endsWith("presseportal.de") ? "Logo Presseportal (Veröffentlichungsplattform)" : "Quellenlogo: " + asset.host;
+        logo.width = 26; logo.height = 26; logo.loading = "lazy";
+        logo.addEventListener("error",() => logo.replaceWith(fallback),{once:true});
+      }
+      label.append(checkbox,logo,content); row.append(label);
       if (publicUrl(entry.url)) { const link = this.node("a",entry.kind === "web" ? "Webseite ↗" : "Feed ↗","feed-link"); link.href = entry.url; link.target = "_blank"; link.rel = "noopener noreferrer"; link.setAttribute("aria-label",(entry.name || entry.url) + " öffnen"); row.append(link); }
       checkbox.addEventListener("change", () => {
         const values = selections(this.textarea.value), current = new Set(values);
@@ -214,5 +235,5 @@
       }
     }
   }
-  return {FeedPicker,selections,publicUrl,regionOf,catalogueEntries,matches,COUNTRIES,REGIONS};
+  return {FeedPicker,selections,publicUrl,regionOf,catalogueEntries,matches,sourceLogo,COUNTRIES,REGIONS};
 });

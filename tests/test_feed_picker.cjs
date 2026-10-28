@@ -1,7 +1,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const {selections, publicUrl, regionOf, catalogueEntries, matches} = require('../docs/feed-picker.js');
+const {selections, publicUrl, regionOf, catalogueEntries, matches, sourceLogo} = require('../docs/feed-picker.js');
 const selected = new Set(['https://example.org/old']);
 assert.deepEqual(selections('https://example.org\nhttps://example.org/\n\nhttps://own.example/rss'), ['https://example.org/','https://own.example/rss']);
 for (const url of ['javascript:alert(1)','https://user:secret@example.org/rss','http://example.org/rss','https://localhost/rss']) assert.equal(publicUrl(url),null);
@@ -23,3 +23,9 @@ const icons=JSON.parse(fs.readFileSync(path.join(docs,'assets/regions/index.json
 assert.equal(Object.keys(icons.AT).length,9);assert.equal(Object.keys(icons.DE).length,16);
 for(const regions of Object.values(icons))for(const asset of Object.values(regions))assert.ok(fs.existsSync(path.join(docs,asset.icon)));
 console.log('Feed picker: URL safety, selection preservation, region matching, warning restrictions and all 25 icon files verified.');
+
+assert.equal(sourceLogo({url:'https://example.org/rss'},{'example.org':{status:'cached',icon:'assets/source-logos/abcd.png'}}).host,'example.org');
+assert.equal(sourceLogo({url:'https://example.org/rss'},{'example.org':{status:'cached',icon:'https://external.example/icon.png'}}),null);
+assert.equal(sourceLogo({url:'https://own.example/rss'},{}),null);
+assert.equal(sourceLogo({source_page:'https://publisher.example/',url:'https://rss.example/rss'},{'publisher.example':{status:'cached',icon:'assets/source-logos/1234.ico'}}).host,'publisher.example');
+console.log('Local publisher favicon selection and missing-icon fallback verified.');

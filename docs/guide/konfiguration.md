@@ -105,3 +105,15 @@ nicht neu auswählbar. Bereits bestehende Konfigurationen werden nicht still
 umgeschrieben; entsprechende Quellen können abgewählt werden.
 
 Die Wappen dienen der geografischen Zuordnung. [Bildnachweise](../assets/regions/README.md).
+
+Jeder Feed zeigt nach Möglichkeit das lokal gespeicherte Favicon seiner Quelle.
+Fehlt es oder kann es nicht geladen werden, erscheinen Initialen. Bei gemeinsam
+gehosteten Quellen kann es sich um das Plattformlogo handeln. Eigene neue
+Domains verursachen keine automatischen externen Favicon-Anfragen im Browser.
+[Bildnachweise der Quellenlogos](../assets/source-logos/README.md).
+
+Der Recherche-Workflow aktualisiert die Quellenlogos automatisch in einem
+anschließenden gemeinsamen Job. Neue oder fehlende Logos werden gesucht,
+bestehende nach 30 Tagen geprüft. Die aktualisierten Dateien liegen im Artefakt
+`feed-research-with-logos`; veröffentlicht werden sie nach ihrer Übernahme ins
+Repository.

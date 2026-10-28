@@ -32,3 +32,6 @@
 #feed_load_status,#feed_selection_status{font-size:.84rem}
 @media(max-width:640px){.feed-picker{padding:12px}.feed-filters{grid-template-columns:1fr 1fr}.feed-search{grid-column:1/-1}.feed-toolbar{flex-direction:column;gap:8px}.feed-toolbar button{min-height:36px;padding:8px 12px}.feed-list{max-height:560px}.feed-item{padding:8px 5px}.feed-group>summary{padding:12px 8px}}
 @media(max-width:380px){.feed-filters{grid-template-columns:1fr}.feed-search{grid-column:auto}}
+
+.feed-source-logo{display:block;box-sizing:border-box;flex:none;width:26px;height:26px;margin:2px 9px 0 0;padding:3px;border-radius:5px;object-fit:contain;background:#f1f5f9}
+.feed-logo-fallback{display:flex;align-items:center;justify-content:center;background:#294861;color:#d2e8f7;font-size:.65rem;font-weight:700;padding:0}

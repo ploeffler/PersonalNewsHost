@@ -9,8 +9,9 @@ bereitgestellt; Quellen werden nicht automatisch in der Sendung aktiviert.
 
 1. Unter **Actions → Research feed catalogues → Run workflow** die Gruppe wählen:
    `news`, `authorities` oder `both`.
-2. Nach Abschluss die Artefakte `feed-research-news` und/oder
-   `feed-research-authorities` herunterladen. Aufbewahrungszeit: 14 Tage.
+2. Nach Abschluss das gemeinsame Artefakt `feed-research-with-logos` herunterladen.
+   Es enthält die erfolgreichen Quellengruppen und ihre Quellenlogos. Die einzelnen
+   Recherche-Artefakte sind ebenfalls verfügbar. Aufbewahrungszeit: 14 Tage.
 3. JSON, OPML, Quellenübersicht und Prüfprotokoll prüfen. Bestätigte Änderungen
    können anschließend per Pull Request ins Repository übernommen werden.
 
@@ -26,3 +27,15 @@ nicht beurteilt. Die Sendungsanbindung solcher Warnungen bleibt ein eigener
 Arbeitsschritt.
 
 [Technik, lokale Ausführung und Fehlerverhalten](../../research/README.md)
+
+## Quellenlogos automatisch aktualisieren
+
+Nach der Quellenrecherche läuft ein gemeinsamer Logo-Abgleich. Er ergänzt neue
+oder fehlende Favicons, überprüft vorhandene Logos nach 30 Tagen und erhält
+funktionierende gespeicherte Logos bei vorübergehenden Abruffehlern. Die
+Zuordnungsdatei und lokalen Bilder sind im gemeinsamen Artefakt enthalten.
+Nicht verfügbare Logos erhalten im Formular einen Initialen-Platzhalter.
+
+Der Workflow veröffentlicht die Ergebnisse weiterhin nicht automatisch. Nach
+Übernahme der Dateien ins Repository kann die Konfigurationsseite die neuen
+Kataloge und Logos laden.
