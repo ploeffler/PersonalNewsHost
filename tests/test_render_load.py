@@ -3,6 +3,8 @@ import copy
 import json
 import importlib.util
 import math
+import struct
+import threading
 import os
 import shutil
 import subprocess
@@ -39,17 +41,31 @@ class ProductionRenderTests(unittest.TestCase):
                 image.save(portrait)
             config = copy.deepcopy(generate.CONFIG)
             config.update(max_items=5, feeds=['https://example.org/rss'])
+            config['production'] = {'parallel_workers': 2}
             config['editorial'] = {'crosscheck': {'enabled': False}, 'topic_clustering': {'enabled': False}}
             config['media'] = {'mode': 'images', 'web_image_fallback': False, 'enhancement': 'off'}
             config['presenter_settings']['lip_sync'] = {'enabled': True, 'fps': 20}
             entries = [(f'Meldung {i}', 'Dies ist eine lokale Testmeldung.', f'https://example.org/{i}', []) for i in range(5)]
+            # Eight segments: two intro parts, five stories and the outro.
+            # Pair each task with another worker, proving actual TTS overlap.
+            speech_barrier = threading.Barrier(2, timeout=5)
             def speech(text, destination):
+                speech_barrier.wait()
+                index = int(destination.stem.split('_')[-1])
                 with wave.open(str(destination), 'wb') as audio:
                     audio.setparams((1, 2, 16000, 0, 'NONE', 'not compressed'))
-                    audio.writeframes(bytes(round(seconds / 8 * 16000) * 2))
+                    audio.writeframes(struct.pack('<h', index + 1) * round(seconds / 8 * 16000))
             def frames(_portrait, audio, directory, fps, mouth):
                 with wave.open(str(audio), 'rb') as wav:
                     count = math.ceil(wav.getnframes() / wav.getframerate() * fps)
+                    speech_frames = round(seconds / 8 * 16000)
+                    pause_frames = round(1.2 * 16000)
+                    for index in range(8):
+                        self.assertEqual(wav.readframes(speech_frames),
+                                         struct.pack('<h', index + 1) * speech_frames)
+                        if 1 <= index < 7:
+                            self.assertEqual(wav.readframes(pause_frames), bytes(pause_frames * 2))
+                    self.assertEqual(wav.readframes(1), b'')
                 directory.mkdir()
                 # Decode the same realistic PNG sequence without spending benchmark
                 # time generating thousands of mouth deformations.
@@ -65,6 +81,10 @@ class ProductionRenderTests(unittest.TestCase):
             with patch.object(generate, 'ROOT', root), patch.object(generate, 'DOCS', docs), patch.object(generate, 'CONFIG', config), patch.object(generate, 'items_from_feed', return_value=entries), patch.object(generate, 'synthesize', side_effect=speech), patch.object(generate, 'extract_article_text', return_value=None), patch.object(generate, 'article_image_candidates', return_value=[]), patch.object(generate, 'download_media', return_value=(picture, 'image')), patch.object(generate, 'run', side_effect=run), patch.dict(sys.modules, {'lipsync': types.SimpleNamespace(generate_frames=frames)}):
                 generate.main()
             elapsed = time.monotonic() - started
+            timeline = json.loads((docs / 'timeline.json').read_text())
+            self.assertEqual([part['story_index'] for part in timeline['segments'][2:-1]], list(range(5)))
+            credits = json.loads((docs / 'media-credits.json').read_text())
+            self.assertEqual([credit['source'] for credit in credits], [entry[2] for entry in entries])
             command = next(args for args in commands if '-filter_complex' in args)
             graph = command[command.index('-filter_complex') + 1]
             self.assertNotIn('split=5', graph)

@@ -121,5 +121,8 @@
     ],
     "prefer_article_images": true
   },
-  "fork_config_initialized": false
+  "fork_config_initialized": false,
+  "production": {
+    "parallel_workers": 2
+  }
 }
