@@ -37,6 +37,38 @@ class TelegramTests(unittest.TestCase):
         self.assertIn(b'chat_id=second', self.http.call_args.args[0].data)
         self.assertFalse((self.root / 'telegram_sent.json').exists())
 
+    def test_video_caption_lists_broadcast_topics_in_order(self):
+        self.config['telegram']['delivery'] = 'video'
+        self.config['telegram']['caption'] = '{title}\n{url}'
+        (self.root / 'docs/story-groups.json').write_text(json.dumps([
+            {'headline': 'Erstes Thema'}, {'headline': 'Zweites\nThema'}]))
+        with self.assertRaises(SystemExit) as result:
+            self.run_script('publish_telegram.py')
+        self.assertEqual(result.exception.code, 0)
+        request = self.http.call_args.args[0]
+        self.assertTrue(request.full_url.endswith('/sendVideo'))
+        self.assertIn('Themen:\n• Erstes Thema\n• Zweites Thema', request.data.decode())
+        self.assertIn('latest.mp4', request.data.decode())
+
+    def test_long_caption_and_emoji_topics_fit_telegram_limit(self):
+        self.config['telegram']['caption'] = 'X' * 2000
+        (self.root / 'docs/story-groups.json').write_text(json.dumps([
+            {'headline': str(i) + '😀' * 500} for i in range(5)]))
+        self.run_script('publish_telegram.py')
+        from urllib.parse import parse_qs
+        caption = parse_qs(self.http.call_args.args[0].data.decode())['text'][0]
+        self.assertLessEqual(len(caption.encode('utf-16-le')) // 2, 1024)
+        for i in range(5):
+            self.assertIn('• ' + str(i), caption)
+
+    def test_invalid_topic_file_preserves_caption(self):
+        self.config['telegram']['caption'] = 'Meine Beschriftung'
+        (self.root / 'docs/story-groups.json').write_text('invalid json')
+        self.run_script('publish_telegram.py')
+        from urllib.parse import parse_qs
+        caption = parse_qs(self.http.call_args.args[0].data.decode())['text'][0]
+        self.assertEqual(caption, 'Meine Beschriftung')
+
     def test_cleanup_never_calls_telegram(self):
         ledger = self.root / 'telegram_sent.json'
         ledger.write_text('[{"message_id":7,"sent_at":"2020-01-01T00:00:00+00:00"}]')
