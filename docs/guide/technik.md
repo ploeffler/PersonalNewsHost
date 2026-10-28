@@ -19,6 +19,22 @@ GitHub Pages
 
 Workflow: [Generate news video](https://github.com/ploeffler/PersonalNewsHost/actions/workflows/news.yml)
 
+Die produktive Erstellung verarbeitet Artikel und Gegenrecherche, Sprachsegmente
+sowie Medienaufbereitung pro Phase parallel. `production.parallel_workers` begrenzt
+die gleichzeitig laufenden Aufgaben (Standard: 2, Bereich: 1–4). Mit 1 läuft die
+Aufbereitung wieder nacheinander. Dies gilt auch für ältere Konfigurationen ohne
+diesen Eintrag: Sie nutzen standardmäßig zwei Aufgaben.
+
+Die Ergebnisse werden in der geplanten Sendungsreihenfolge zusammengeführt.
+Jedes Sprachsegment und jeder Medienbeitrag erhält eigene temporäre Dateien.
+Ein Fehler bei einem erforderlichen Arbeitsschritt bricht die Erstellung ab;
+es wird keine Sendung mit fehlenden Sprachsegmenten zusammengesetzt. Die
+bestehenden Rückfälle auf RSS, Ersatzstimme und fehlende Bilder bleiben erhalten.
+Pausen und Untertitel richten sich weiterhin nach den gemessenen Audiodauern.
+Das fertige Video wird abschließend in einem gemeinsamen FFmpeg-Durchlauf
+berechnet; die parallelen Schritte benötigen keine zusätzlichen Actions-Jobs.
+Die tatsächliche Beschleunigung hängt von Netzwerk, CPU und Spracherzeugung ab.
+
 ### 2. Experimentelle parallele Nachrichtensendung
 
 ```text

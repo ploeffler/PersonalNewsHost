@@ -136,5 +136,8 @@
       "ai"
     ],
     "prefer_article_images": true
+  },
+  "production": {
+    "parallel_workers": 2
   }
 }

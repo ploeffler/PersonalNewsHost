@@ -682,6 +682,31 @@ def subtitle_timestamp(milliseconds, separator="."):
     return f"{hours:02d}:{minutes:02d}:{seconds:02d}{separator}{millis:03d}"
 
 
+def parallel_map(function, values, stage):
+    """Bound concurrent work while returning results in bulletin order.
+
+    Workers own their outputs; only the caller assembles shared metadata.
+    A failed task aborts the stage, so incomplete audio cannot be assembled.
+    """
+    from concurrent.futures import ThreadPoolExecutor
+    values = list(values)
+    workers = max(1, min(4, int(CONFIG.get("production", {}).get("parallel_workers", 2))))
+    workers = min(workers, len(values))
+    if not values:
+        return []
+    print(f"[Production] {stage}: {len(values)} tasks, {workers} workers", flush=True)
+    if workers == 1:
+        return [function(value) for value in values]
+    with ThreadPoolExecutor(max_workers=workers, thread_name_prefix="bulletin") as pool:
+        futures = [pool.submit(function, value) for value in values]
+        try:
+            return [future.result() for future in futures]
+        except BaseException:
+            for future in futures:
+                future.cancel()
+            raise
+
+
 def append_silence(output, seconds, channels, sample_width, sample_rate):
     """Append PCM silence and return its exact duration in seconds."""
     frames = round(seconds * sample_rate)
@@ -774,19 +799,20 @@ def main():
     verification = editorial.get("crosscheck", {})
     verify_enabled = verification.get("enabled", True)
     max_results = max(1, min(3, int(verification.get("max_sources", 2))))
-    for story_idx, (title, desc, link, _) in enumerate(selected):
+
+    def prepare_story(indexed_entry):
+        story_idx, (title, desc, link, _) = indexed_entry
         related = story_groups[story_idx]
         mentions = referenced_sources(title + ". " + desc)
-        source_mentions.append({"title": title, "article_url": link,
+        source_mention = {"title": title, "article_url": link,
                                 "mentioned_sources": mentions,
                                 "checked_scope": "RSS title and description only",
-                                "independently_verified": False})
+                                "independently_verified": False}
         checked = (crosscheck_headline(title, link, max_results)
                    if verify_enabled else {"status": "disabled", "matches": [],
                                            "scope": "headline/topic", "claim_verified": False})
         checked["original_title"] = title
         checked["original_url"] = link
-        crosschecks.append(checked)
         article_text = extract_article_text(link)
         source_text = article_text or desc
         print(f"Story {story_idx + 1}: {'rdrr full article' if article_text else 'RSS fallback'}")
@@ -807,7 +833,12 @@ def main():
             edited += "\n" + "Bei der automatischen Gegenrecherche wurde keine ausreichend ähnliche Meldung einer anderen Quelle gefunden."
         elif checked["status"] == "unavailable":
             edited += "\n" + "Eine unabhängige Gegenrecherche war technisch nicht möglich."
+        return edited, source_mention, checked
+
+    for edited, source_mention, checked in parallel_map(prepare_story, enumerate(selected), "Articles and research"):
         parts.append(edited)
+        source_mentions.append(source_mention)
+        crosschecks.append(checked)
     (DOCS / "story-groups.json").write_text(
         json.dumps([{"headline": group[0][0], "section": section_ids[index], "sources": [
             {"title": item[0], "url": item[2], "description": item[1]}
@@ -827,15 +858,18 @@ def main():
         # The measured WAV sample counts become authoritative scene boundaries.
         import wave
         wav = Path(tmp) / "speech.wav"
-        segment_paths = []
         segment_durations = []
         speech_durations = []
         sample_params = None
+        def synthesize_segment(indexed_part):
+            idx, part = indexed_part
+            segment = Path(tmp) / f"segment_{idx:02d}.wav"
+            synthesize(part, segment)
+            return segment
+
+        segment_paths = parallel_map(synthesize_segment, enumerate(parts), "Speech")
         with wave.open(str(wav), "wb") as combined:
-            for idx, part in enumerate(parts):
-                segment = Path(tmp) / f"segment_{idx:02d}.wav"
-                synthesize(part, segment)
-                segment_paths.append(segment)
+            for idx, segment in enumerate(segment_paths):
                 with wave.open(str(segment), "rb") as source:
                     params = (source.getnchannels(), source.getsampwidth(), source.getframerate(), source.getcomptype())
                     if sample_params is None:
@@ -883,22 +917,24 @@ def main():
         if media_mode not in ("off", "images", "images_and_videos"):
             raise ValueError("Unsupported RSS media mode")
         max_media_bytes = max(1, min(25, int(media_settings.get("max_download_mb", 12)))) * 1024 * 1024
-        story_media = []
-        media_credits = []
-        for i, entry in enumerate(selected):
+        def prepare_media(indexed_entry):
+            i, entry = indexed_entry
+            # Each worker owns a separate directory, including enhancement files.
+            media_directory = Path(tmp) / f"media_{i:02d}"
+            media_directory.mkdir()
             article_images = (article_image_candidates(entry[2])
                               if media_mode != "off" and media_settings.get("prefer_article_images", True)
                               else [])
             # Prefer original article image metadata to small RSS thumbnails.
             videos = [candidate for candidate in entry[3] if candidate[1] == "video"]
             candidates = (videos if media_mode == "images_and_videos" else []) + article_images + entry[3]
-            asset = download_media(candidates, media_mode, Path(tmp), i, max_media_bytes)
+            asset = download_media(candidates, media_mode, media_directory, i, max_media_bytes)
             credit = {"source": entry[2], "image_origin": "article_metadata_or_rss"}
             if asset is None and media_mode != "off" and media_settings.get("web_image_fallback", True):
                 result = search_commons_image(entry[0])
                 if result:
                     url, image_title, source_url = result
-                    asset = download_media([(url, "image")], "images", Path(tmp), i, max_media_bytes)
+                    asset = download_media([(url, "image")], "images", media_directory, i, max_media_bytes)
                     if asset:
                         credit = {"title": image_title, "source": source_url, "note": "Illustrationsbild, nicht zwingend Aufnahme des Ereignisses"}
                         print(f"Commons fallback for story {i + 1}: {image_title}")
@@ -909,8 +945,11 @@ def main():
                     credit = {}
                 credit["image_processing"] = method
                 credit["original_media_retained"] = True
-            story_media.append(asset)
-            media_credits.append(credit)
+            return asset, credit
+
+        media_results = parallel_map(prepare_media, enumerate(selected), "Media")
+        story_media = [asset for asset, credit in media_results]
+        media_credits = [credit for asset, credit in media_results]
         (DOCS / "media-credits.json").write_text(json.dumps(media_credits, ensure_ascii=False, indent=2), encoding="utf-8")
         # Studio stays as background; story media appears on a tilted virtual screen.
         duration_text = subprocess.check_output(
@@ -978,7 +1017,24 @@ def main():
             if kind == "image":
                 args += ["-loop", "1", "-framerate", "5", "-i", str(path)]
             else:
-                args +…227 tokens truncated… print(f"RSS {kind} used for story {idx + 1}: {path.name}")
+                args += ["-stream_loop", "-1", "-i", str(path)]
+            start_time = boundaries[idx + 2]
+            end_time = boundaries[idx + 3]
+            media_label = f"rssmedia{idx}"
+            next_label = f"rssscene{idx}"
+            filters.append(
+                f"[{input_index}:v]fps={5 if kind == 'image' else 20},scale=620:384:flags=lanczos:"
+                f"force_original_aspect_ratio=decrease:force_divisible_by=2,"
+                f"pad=620:384:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
+                f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS[{media_label}]"
+            )
+            filters.append(
+                f"[{current}][{media_label}]overlay=x=60:y=60:"
+                f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
+                f"eof_action=repeat:shortest=0[{next_label}]"
+            )
+            current = next_label
+            print(f"RSS {kind} used for story {idx + 1}: {path.name}")
         # Animate the transparent host with the final narrated WAV.
         # If the optional animation fails, keep the proven static overlay.
         story_host = ROOT / "assets/host.png"
