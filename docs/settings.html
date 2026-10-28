@@ -180,6 +180,9 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <p>PNG oder JPEG, maximal 4 MB je Bild. Die Dateien werden öffentlich im GitHub-Repository gespeichert. Keine privaten Fotos oder Zugangsdaten hochladen.</p>
 <label for="upload_presenter">Moderator-Porträt</label><input id="upload_presenter" type="file" accept="image/png,image/jpeg,.png,.jpg,.jpeg">
 <label for="upload_background">Studiohintergrund</label><input id="upload_background" type="file" accept="image/png,image/jpeg,.png,.jpg,.jpeg">
+<label for="station_logo">Senderlogo: Bildpfad im Repository (optional)</label><input id="station_logo" placeholder="assets/station-logo.png">
+<label for="upload_station_logo">Senderlogo hochladen</label><input id="upload_station_logo" type="file" accept="image/png,image/jpeg,.png,.jpg,.jpeg">
+<small>Oben rechts während der gesamten Sendung, maximal 160×90 Pixel mit 30 Pixel Rand. Transparentes PNG empfohlen, mindestens 32×16 Pixel. Zum Deaktivieren den Bildpfad leeren. Nach dem Upload die Konfiguration speichern.</small>
 <label><input id="confirm_upload" type="checkbox" style="width:auto"> Ich bestätige, dass die Bilder öffentlich auf GitHub gespeichert werden dürfen.</label>
 <button type="button" id="upload_images">Ausgewählte Bilder auf GitHub hochladen</button>
 <p id="upload_status" role="status" aria-live="polite"></p>
@@ -382,6 +385,7 @@ function fill(c){
  $("v2_allow_paid").checked=v.allow_paid===true;
  refreshResidency();
  for(const key of fields)$(key).value=c[key]??(key==="voice_pitch_semitones"?0:"");
+ $("station_logo").value=c.station_logo||"";
  $("feeds").value=(c.feeds||[]).join("\n");
   $("editorial_style").value=c.editorial?.style||"classic";
   $("editorial_sentences").value=c.editorial?.max_sentences??2;
@@ -447,6 +451,8 @@ $("settings").addEventListener("submit",event=>{
  c.piper_length_scale=Number($("piper_length_scale").value);
  c.voice_pitch_semitones=Number($("voice_pitch_semitones").value);
  c.presenter=$("presenter").value.trim();c.background=$("background").value.trim();
+ c.station_logo=$("station_logo").value.trim();
+ if(c.station_logo&&(!/^assets\/[a-zA-Z0-9_./-]+$/.test(c.station_logo)||c.station_logo.includes("..")))throw Error("Ungültiger Senderlogo-Pfad.");
  for(const key of ["presenter","background"])if(!/^assets\/[a-zA-Z0-9_./-]+$/.test(c[key])||c[key].includes(".."))throw Error("Ungültiger Asset-Pfad: "+c[key]);
  c.presenter_settings??={};c.presenter_settings.name=$("presenter_name").value.trim();
  c.presenter_settings.portrait=c.presenter;c.presenter_settings.background=c.background;
@@ -516,11 +522,13 @@ async function githubUploadImage(file,kind,headers){
  try{bitmap=await createImageBitmap(new Blob([bytes],{type:png?"image/png":"image/jpeg"}));}
  catch{throw Error("Bild konnte nicht gelesen werden: "+file.name)}
  const {width,height}=bitmap;bitmap.close();
- if(width<320||height<240||width>6000||height>6000)throw Error("Bildgröße muss zwischen 320×240 und 6000×6000 Pixeln liegen: "+file.name);
+ const minWidth=kind==="station-logo"?32:320,minHeight=kind==="station-logo"?16:240;
+ if(width<minWidth||height<minHeight||width>6000||height>6000)throw Error("Bildgröße muss zwischen "+minWidth+"×"+minHeight+" und 6000×6000 Pixeln liegen: "+file.name);
  const ext=png?"png":"jpg";
  const suffix=crypto.randomUUID().replaceAll("-","").slice(0,12);
  const path="assets/"+kind+"-"+suffix+"."+ext;
- const url="https://api.github.com/repos/ploeffler/PersonalNewsHost/contents/"+path;
+ const repo=location.hostname.endsWith(".github.io") ? location.hostname.split(".")[0]+"/"+location.pathname.split("/").filter(Boolean)[0] : "ploeffler/PersonalNewsHost";
+ const url="https://api.github.com/repos/"+repo+"/contents/"+path;
  const res=await fetch(url,{method:"PUT",headers:{...headers,"Content-Type":"application/json"},body:JSON.stringify({message:"Upload "+kind+" image via PersonalNewsHost settings",content:base64FromBytes(bytes),branch:"main"})});
  if(!res.ok)throw Error("GitHub-Upload fehlgeschlagen (HTTP "+res.status+"): "+file.name);
  return path;
@@ -528,15 +536,16 @@ async function githubUploadImage(file,kind,headers){
 $("upload_images").addEventListener("click",async()=>{
  const status=$("upload_status");status.className="error";status.textContent="";
  const presenter=$("upload_presenter").files[0],background=$("upload_background").files[0];
+ const stationLogo=$("upload_station_logo").files[0];
  const token=$("github_token").value.trim();
- if(!presenter&&!background){status.textContent="Bitte mindestens ein Bild auswählen.";return}
+ if(!presenter&&!background&&!stationLogo){status.textContent="Bitte mindestens ein Bild auswählen.";return}
  if(!token){status.textContent="Bitte unten den GitHub-Token eingeben.";return}
  if(!$("confirm_upload").checked){status.textContent="Bitte die öffentliche Veröffentlichung bestätigen.";return}
  const btn=$("upload_images");btn.disabled=true;
  const headers={"Authorization":"Bearer "+token,"Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"};
  const uploaded=[];
  try{
-  for(const [file,kind,input] of [[presenter,"presenter","presenter"],[background,"background","background"]]){
+  for(const [file,kind,input] of [[presenter,"presenter","presenter"],[background,"background","background"],[stationLogo,"station-logo","station_logo"]]){
    if(!file)continue;
    status.textContent="Lade "+kind+" hoch …";
    const path=await githubUploadImage(file,kind,headers);
@@ -550,6 +559,7 @@ $("upload_images").addEventListener("click",async()=>{
  }finally{
   $("github_token").value="";$("confirm_upload").checked=false;btn.disabled=false;
   $("upload_presenter").value="";$("upload_background").value="";
+  $("upload_station_logo").value="";
  }
 });
 $("reset").addEventListener("click",load);
