@@ -79,10 +79,10 @@ class ProductionRenderTests(unittest.TestCase):
             self.assertTrue(any(s['codec_type'] == 'audio' for s in streams))
             video = next(s for s in streams if s['codec_type'] == 'video')
             self.assertEqual((video['width'], video['height']), (1280, 720))
-            self.assertAlmostEqual(float(metadata['format']['duration']), seconds, delta=0.2)
+            self.assertAlmostEqual(float(metadata['format']['duration']), seconds + 6 * 1.2, delta=0.2)
             # Inspect the actual rendered intro: five successive topic cards
             # must produce five distinct images, not a static list or overlap.
-            intro_duration = seconds / 4
+            intro_duration = seconds / 4 + 1.2
             cards = []
             for idx in range(5):
                 cards.append(subprocess.check_output([

@@ -584,13 +584,24 @@ def edit_news(title, description, style, max_sentences, limit):
     """Offline, conservative editorial formatting without inventing facts."""
     title = spoken_prose(title)
     description = spoken_prose(description)
+    # Police releases prefix the prose with political district | locality.
+    description = re.sub(
+        r"^([^|.!?]+?)\s*\|\s*([^|.!?]+?)\.\s*[–—-]\s*",
+        lambda match: f"{match[2].strip()} im Bezirk {match[1].strip()}: ",
+        description,
+    )
     if style == "original":
         clipped = description[:limit].rsplit(" ", 1)[0] if len(description) > limit else description
         return title.rstrip(".!?") + ".\n" + clipped
     if style not in ("classic", "brief"):
         raise ValueError("Unknown editorial style")
     # Only complete sentences; never invent context or paraphrase factual claims.
-    sentences = re.split(r"(?<=[.!?])\s+", description)
+    # An ordinal day followed by a month belongs to the same sentence.
+    months = "|".join((*GERMAN_MONTHS, "Januar", "Februar"))
+    protected = re.sub(r"\b(\d{1,2})\.\s+(?=(?:" + months + r")\b)",
+                       lambda match: match[1] + "\u2024 ", description)
+    sentences = [part.replace("\u2024", ".")
+                 for part in re.split(r"(?<=[.!?])\s+", protected)]
     sentences = [x.strip() for x in sentences if x.strip() and x.strip()[-1] in ".!?"]
     sentences = [x for x in sentences if x.casefold().rstrip(".!?") != title.casefold().rstrip(".!?")]
     count = 1 if style == "brief" else max_sentences
@@ -639,6 +650,31 @@ def group_news_items(items, enabled=True):
     return [group[0] for group in groups], groups
 
 
+def news_section(entry, feed_url, settings):
+    """Prefer explicit feed assignments, then bounded headline keywords."""
+    sections = settings.get("sections", [])
+    valid = {section["id"] for section in sections}
+    assigned = settings.get("feed_sections", {}).get(feed_url)
+    if assigned in valid:
+        return assigned
+    title = entry[0].casefold()
+    for section in sections:
+        if any(re.search(r"(?<!\w)" + re.escape(word.casefold()) + r"(?!\w)", title)
+               for word in section.get("keywords", []) if word):
+            return section["id"]
+    return settings.get("default", "general") if settings.get("default", "general") in valid else "general"
+
+
+def prepare_sections(groups, feeds, settings):
+    """Annotate selected stories; optionally order them by configured section."""
+    planned = [(group, news_section(group[0], feeds.get((group[0][0], group[0][2]), ""), settings))
+               for group in groups]
+    if settings.get("enabled", False):
+        order = {section["id"]: index for index, section in enumerate(settings.get("sections", []))}
+        planned.sort(key=lambda item: order.get(item[1], len(order)))
+    return planned
+
+
 def subtitle_timestamp(milliseconds, separator="."):
     hours, remainder = divmod(milliseconds, 3600000)
     minutes, remainder = divmod(remainder, 60000)
@@ -646,7 +682,15 @@ def subtitle_timestamp(milliseconds, separator="."):
     return f"{hours:02d}:{minutes:02d}:{seconds:02d}{separator}{millis:03d}"
 
 
-def write_subtitles(parts, boundaries, directory):
+def append_silence(output, seconds, channels, sample_width, sample_rate):
+    """Append PCM silence and return its exact duration in seconds."""
+    frames = round(seconds * sample_rate)
+    sample = b"\x80" if sample_width == 1 else b"\x00" * sample_width
+    output.writeframesraw(sample * channels * frames)
+    return frames / sample_rate
+
+
+def write_subtitles(parts, boundaries, directory, speech_durations=None):
     """Use measured speech boundaries; estimate cue timing within each segment.
 
     No speech recognition is needed. Text is the exact input to synthesis;
@@ -658,7 +702,7 @@ def write_subtitles(parts, boundaries, directory):
     cues = []
     for index, part in enumerate(parts):
         start = round(boundaries[index] * 1000)
-        end = round(boundaries[index + 1] * 1000)
+        end = round((boundaries[index] + speech_durations[index]) * 1000) if speech_durations is not None else round(boundaries[index + 1] * 1000)
         if end <= start:
             continue
         lines = textwrap.wrap(" ".join(part.split()), width=42,
@@ -684,6 +728,7 @@ def write_subtitles(parts, boundaries, directory):
 def main():
     DOCS.mkdir(exist_ok=True)
     collected, seen = [], set()
+    entry_feeds = {}
     for url in CONFIG["feeds"]:
         try:
             for entry in items_from_feed(url):
@@ -693,6 +738,7 @@ def main():
                 if key not in seen:
                     seen.add(key)
                     collected.append((title, desc, link, media))
+                    entry_feeds[(title, link)] = url
         except Exception as exc:
             print(f"Feed skipped: {url}: {exc}")
     if not collected:
@@ -702,6 +748,11 @@ def main():
         collected, enabled=clustering.get("enabled", True))
     max_items = max(1, min(int(CONFIG.get("max_items", 5)), 10))
     story_groups = select_balanced_groups(all_groups, max_items)
+    section_settings = CONFIG.get("editorial", {}).get("broadcast_sections", {})
+    section_plan = prepare_sections(story_groups, entry_feeds, section_settings)
+    story_groups = [group for group, section in section_plan]
+    section_ids = [section for group, section in section_plan]
+    section_labels = {section["id"]: section["label"] for section in section_settings.get("sections", [])}
     selected = [group[0] for group in story_groups]
     now = dt.datetime.now(dt.timezone.utc)
     local_now = now.astimezone(ZoneInfo("Europe/Vienna"))
@@ -740,6 +791,8 @@ def main():
         source_text = article_text or desc
         print(f"Story {story_idx + 1}: {'rdrr full article' if article_text else 'RSS fallback'}")
         edited = edit_news(title, source_text, style, max_sentences, limit)
+        if section_settings.get("enabled", False) and (story_idx == 0 or section_ids[story_idx] != section_ids[story_idx - 1]):
+            edited = "Nun zum Bereich " + section_labels.get(section_ids[story_idx], "Allgemein") + ".\n" + edited
         if len(related) > 1:
             from urllib.parse import urlparse
             publishers = sorted({(urlparse(x[2]).hostname or "Unbekannt").removeprefix("www.")
@@ -756,9 +809,9 @@ def main():
             edited += "\n" + "Eine unabhängige Gegenrecherche war technisch nicht möglich."
         parts.append(edited)
     (DOCS / "story-groups.json").write_text(
-        json.dumps([{"headline": group[0][0], "sources": [
+        json.dumps([{"headline": group[0][0], "section": section_ids[index], "sources": [
             {"title": item[0], "url": item[2], "description": item[1]}
-            for item in group]} for group in story_groups],
+            for item in group]} for index, group in enumerate(story_groups)],
             ensure_ascii=False, indent=2), encoding="utf-8")
     (DOCS / "source-mentions.json").write_text(
         json.dumps(source_mentions, ensure_ascii=False, indent=2), encoding="utf-8"
@@ -776,6 +829,7 @@ def main():
         wav = Path(tmp) / "speech.wav"
         segment_paths = []
         segment_durations = []
+        speech_durations = []
         sample_params = None
         with wave.open(str(wav), "wb") as combined:
             for idx, part in enumerate(parts):
@@ -792,20 +846,27 @@ def main():
                     elif params != sample_params:
                         raise RuntimeError("Speech segments have incompatible WAV formats")
                     segment_durations.append(source.getnframes() / source.getframerate())
+                    speech_durations.append(segment_durations[-1])
                     while True:
                         data = source.readframes(65536)
                         if not data:
                             break
                         combined.writeframesraw(data)
+                    # Keep the outgoing scene during the pause, then introduce
+                    # the next headline with its first spoken word.
+                    if 1 <= idx < len(parts) - 1:
+                        segment_durations[-1] += append_silence(
+                            combined, 1.2, params[0], params[1], params[2])
         boundaries = [0.0]
         for seconds in segment_durations:
             boundaries.append(boundaries[-1] + seconds)
-        write_subtitles(parts, boundaries, DOCS)
+        write_subtitles(parts, boundaries, DOCS, speech_durations)
         timeline = {
             "version": 1,
             "segments": [
                 {"type": "intro" if idx < 2 else "outro" if idx == len(parts)-1 else "story",
                  "story_index": idx-2 if 2 <= idx < len(parts)-1 else None,
+                 "section": section_ids[idx-2] if 2 <= idx < len(parts)-1 else None,
                  "start": round(boundaries[idx], 4), "end": round(boundaries[idx+1], 4)}
                 for idx in range(len(parts))
             ],
@@ -917,24 +978,7 @@ def main():
             if kind == "image":
                 args += ["-loop", "1", "-framerate", "5", "-i", str(path)]
             else:
-                args += ["-stream_loop", "-1", "-i", str(path)]
-            start_time = boundaries[idx + 2]
-            end_time = boundaries[idx + 3]
-            media_label = f"rssmedia{idx}"
-            next_label = f"rssscene{idx}"
-            filters.append(
-                f"[{input_index}:v]fps={5 if kind == 'image' else 20},scale=620:384:flags=lanczos:"
-                f"force_original_aspect_ratio=decrease:force_divisible_by=2,"
-                f"pad=620:384:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
-                f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS[{media_label}]"
-            )
-            filters.append(
-                f"[{current}][{media_label}]overlay=x=60:y=60:"
-                f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
-                f"eof_action=repeat:shortest=0[{next_label}]"
-            )
-            current = next_label
-            print(f"RSS {kind} used for story {idx + 1}: {path.name}")
+                args +…227 tokens truncated… print(f"RSS {kind} used for story {idx + 1}: {path.name}")
         # Animate the transparent host with the final narrated WAV.
         # If the optional animation fails, keep the proven static overlay.
         story_host = ROOT / "assets/host.png"

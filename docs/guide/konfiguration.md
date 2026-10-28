@@ -62,3 +62,23 @@ Das optionale Feld `station_logo` enthält den Repository-Pfad, beispielsweise
 oben rechts mit 30 Pixel Abstand zum Rand und wird proportional auf maximal
 160×90 Pixel skaliert. Ein leerer Pfad deaktiviert die Einblendung. Bestehende
 Konfigurationen ohne dieses Feld verwenden standardmäßig `assets/logo.png`.
+
+## Sendungsbereiche vorbereiten
+
+Unter `editorial.broadcast_sections` sind Allgemein, Wirtschaft und Lokales
+vorbereitet. `enabled: false` lässt Reihenfolge und Ansagen unverändert.
+Die Bereichskennung wird bereits beim nächsten Lauf in `story-groups.json`
+und `timeline.json` ausgegeben.
+
+Mit `enabled: true` werden die ausgewählten Meldungen in der Reihenfolge von
+`sections` gruppiert. Vor der ersten Meldung jedes belegten Bereichs wird
+„Nun zum Bereich …“ gesprochen. Leere Bereiche werden ausgelassen.
+Die bestehende Auswahl und die Gesamtzahl der Meldungen bleiben erhalten;
+Bereiche haben noch keine eigenen Kontingente oder grafischen Trenner.
+
+`feed_sections` ordnet vollständige Feed-URLs einer Bereichskennung zu und
+hat Vorrang vor den Schlagwörtern in `sections[].keywords`. Schlagwörter
+werden ohne Beachtung der Großschreibung als ganze Wörter im Titel gesucht.
+Ohne Treffer greift `default` (Allgemein). Polizei Steiermark und der
+Steiermark-Feed der Kleinen Zeitung sind Lokales zugeordnet. Dies ist eine
+regelbasierte Vorbereitung; die Zuordnung sollte redaktionell geprüft werden.

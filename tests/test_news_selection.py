@@ -15,6 +15,26 @@ def story(title, host, number):
 
 
 class NewsSelectionTests(unittest.TestCase):
+    def test_sections_feed_priority_fallback_and_activation(self):
+        settings = {'enabled': False, 'default': 'general',
+                    'sections': [{'id': 'general', 'label': 'Allgemein'},
+                                 {'id': 'economy', 'label': 'Wirtschaft', 'keywords': ['Inflation']},
+                                 {'id': 'local', 'label': 'Lokales'}],
+                    'feed_sections': {'police': 'local'}}
+        local = story('Inflation im Bezirk', 'police.at', 1)
+        economy = story('Inflation sinkt', 'news.at', 2)
+        general = story('Parlament tagt', 'news.at', 3)
+        groups = [[local], [economy], [general]]
+        feeds = {(local[0], local[2]): 'police'}
+        planned = news.prepare_sections(groups, feeds, settings)
+        self.assertEqual([section for _, section in planned], ['local', 'economy', 'general'])
+        self.assertEqual([group for group, _ in planned], groups)
+        settings['enabled'] = True
+        planned = news.prepare_sections(groups, feeds, settings)
+        self.assertEqual([group for group, _ in planned], [[general], [economy], [local]])
+        self.assertEqual(news.news_section(story('Hyperinflation', 'news.at', 4), '', settings), 'general')
+
+
     def setUp(self):
         news.FEED_DATES.clear()
 

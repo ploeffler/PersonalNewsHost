@@ -8,6 +8,24 @@ from scripts.generate import edit_news, extract_article_text, spoken_prose
 
 
 class ArticleMarkupTests(unittest.TestCase):
+    def test_police_district_locality_and_date(self):
+        description = ('Liezen | Döllach. – Montagnachmittag, 26. Oktober 2026, '
+                       'kam es auf dem Ennsradweg zu einem Verkehrsunfall. '
+                       'Ein 74-jähriger Radfahrer wurde dabei verletzt. Weitere Details folgen.')
+        result = edit_news('Verkehrsunfall', description, 'classic', 2, 180)
+        self.assertEqual(result, 'Verkehrsunfall.\nDöllach im Bezirk Liezen: '
+                         'Montagnachmittag, 26. Oktober 2026, kam es auf dem Ennsradweg '
+                         'zu einem Verkehrsunfall. Ein 74-jähriger Radfahrer wurde dabei verletzt.')
+
+
+    def test_date_is_not_a_sentence_boundary(self):
+        for month in ('Oktober', 'Jänner', 'Januar'):
+            with self.subTest(month=month):
+                description = f'Am 26. {month} wurde der Mann verletzt. Er wurde versorgt.'
+                self.assertEqual(edit_news('Unfall', description, 'brief', 2, 180),
+                                 f'Unfall.\nAm 26. {month} wurde der Mann verletzt.')
+
+
     def test_actual_image_credit_and_emphasis(self):
         article = ('![EPA/TOLGA AKMEN](https://i.ds.at/88n6aw/rs:fill:600:0/plain/lido-images/photo.jpg)\n'
                    'Die goldenen Zwei: **Harry Kane** und **Alexia Putellas** haben gewonnen.')
