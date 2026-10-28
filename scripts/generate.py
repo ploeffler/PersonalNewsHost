@@ -53,6 +53,15 @@ def spoken_timestamp(local):
         clock = hours + " Uhr " + german_number(local.minute)
     return f"Heute ist der {ordinal[:-1]} {GERMAN_MONTHS[local.month - 1]}. Es ist {clock}."
 
+def intro_headline_slots(titles, duration):
+    """Show each bulletin headline once, covering only the measured intro."""
+    if not titles or duration <= 0:
+        return []
+    count = len(titles)
+    return [(title, duration * idx / count, duration * (idx + 1) / count)
+            for idx, title in enumerate(titles)]
+
+
 def clean(s):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", s or ""))).strip()
 
@@ -1030,6 +1039,34 @@ def main():
         )
         current = "outrotag"
         if scenes.get("show_headlines", True) and selected:
+            # Preview the bulletin topics in order during the spoken intro.
+            # Equal slots use measured audio duration, without lengthening it.
+            import textwrap
+            slots = intro_headline_slots([entry[0] for entry in selected], intro)
+            filters.append(
+                f"[{current}]drawbox=x=120:y=470:w=1040:h=160:"
+                f"color=0x07182b@0.91:t=fill:enable='lt(t,{intro:.6f})'[introtopicscard]"
+            )
+            current = "introtopicscard"
+            for idx, (title, start, end) in enumerate(slots):
+                wrapped = textwrap.wrap(clean(title), width=54, break_long_words=True)
+                if len(wrapped) > 2:
+                    wrapped = wrapped[:2]
+                    wrapped[-1] = wrapped[-1].rstrip(" .") + "…"
+                topic_file = Path(tmp) / f"intro_topic_{idx}.txt"
+                topic_file.write_text("\n".join(wrapped), encoding="utf-8")
+                enable = f"gte(t,{start:.6f})*lt(t,{end:.6f})"
+                filters.append(
+                    f"[{current}]drawtext=fontfile={font}:text='THEMA {idx + 1} / {len(slots)}':"
+                    f"fontcolor=0x54ddff:fontsize=22:x=150:y=485:"
+                    f"enable='{enable}'[introtopicnumber{idx}]"
+                )
+                filters.append(
+                    f"[introtopicnumber{idx}]drawtext=fontfile={font}:textfile={topic_file}:"
+                    f"fontcolor=white:fontsize=30:line_spacing=10:x=150:y=525:"
+                    f"enable='{enable}'[introtopic{idx}]"
+                )
+                current = f"introtopic{idx}"
             # Each headline gets its own timed overlay, rather than one overflowing text block.
             story_count = len(selected)
             for idx, (title, _, _, _) in enumerate(selected):

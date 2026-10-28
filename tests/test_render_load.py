@@ -71,11 +71,24 @@ class ProductionRenderTests(unittest.TestCase):
             self.assertEqual(graph.count('scale=610:765:'), 1)
             self.assertIn('[withpresenter]', graph)
             self.assertEqual(graph.count('pad=620:384:'), 5)
+            for idx in range(5):
+                self.assertIn(f'intro_topic_{idx}.txt', graph)
+                self.assertIn(f'[introtopic{idx}]', graph)
             metadata = json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-show_streams', '-show_format', '-of', 'json', str(docs / 'latest.mp4')], text=True))
             streams = metadata['streams']
             self.assertTrue(any(s['codec_type'] == 'audio' for s in streams))
             video = next(s for s in streams if s['codec_type'] == 'video')
             self.assertEqual((video['width'], video['height']), (1280, 720))
             self.assertAlmostEqual(float(metadata['format']['duration']), seconds, delta=0.2)
+            # Inspect the actual rendered intro: five successive topic cards
+            # must produce five distinct images, not a static list or overlap.
+            intro_duration = seconds / 4
+            cards = []
+            for idx in range(5):
+                cards.append(subprocess.check_output([
+                    'ffmpeg', '-v', 'error', '-ss', str(intro_duration * (idx + 0.5) / 5),
+                    '-i', str(docs / 'latest.mp4'), '-vf', 'crop=1040:160:120:470',
+                    '-frames:v', '1', '-f', 'rawvideo', '-pix_fmt', 'rgb24', 'pipe:1']))
+            self.assertEqual(len(set(cards)), 5)
             self.assertTrue((docs / 'subtitles.de.vtt').read_text().startswith('WEBVTT'))
             print(f'Production layout: {seconds:.1f}s video rendered in {elapsed:.2f}s')
