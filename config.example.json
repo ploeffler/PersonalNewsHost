@@ -75,6 +75,38 @@
       "max_sources": 2,
       "method": "independent_publisher_headline_search",
       "note": "Finds other publisher coverage, not factual verification of individual claims"
+    },
+    "broadcast_sections": {
+      "enabled": false,
+      "default": "general",
+      "sections": [
+        {
+          "id": "general",
+          "label": "Allgemein",
+          "keywords": []
+        },
+        {
+          "id": "economy",
+          "label": "Wirtschaft",
+          "keywords": [
+            "Wirtschaft",
+            "Inflation",
+            "Börse",
+            "Zinsen",
+            "Arbeitsmarkt",
+            "Konjunktur"
+          ]
+        },
+        {
+          "id": "local",
+          "label": "Lokales",
+          "keywords": []
+        }
+      ],
+      "feed_sections": {
+        "https://www.bmi.gv.at/rss/stmk_presse.xml": "local",
+        "https://www.kleinezeitung.at/rss/steiermark": "local"
+      }
     }
   },
   "media": {

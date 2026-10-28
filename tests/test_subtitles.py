@@ -1,10 +1,37 @@
 import tempfile
 import unittest
 from pathlib import Path
-from scripts.generate import write_subtitles, subtitle_timestamp
+from scripts.generate import append_silence, write_subtitles, subtitle_timestamp
 
 
 class SubtitleTests(unittest.TestCase):
+    def test_pcm_pause_has_exact_duration_and_silent_samples(self):
+        import io
+        import wave
+        for width in (1, 2):
+            with self.subTest(width=width):
+                buffer = io.BytesIO()
+                with wave.open(buffer, 'wb') as output:
+                    output.setnchannels(2)
+                    output.setsampwidth(width)
+                    output.setframerate(22050)
+                    self.assertEqual(append_silence(output, 1.2, 2, width, 22050), 1.2)
+                buffer.seek(0)
+                with wave.open(buffer, 'rb') as recorded:
+                    self.assertEqual(recorded.getnframes(), 26460)
+                    self.assertEqual(recorded.readframes(26460),
+                                     (b'\x80' if width == 1 else b'\x00\x00') * 2 * 26460)
+
+
+    def test_subtitles_end_before_transition_pause(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            write_subtitles(['Erste Meldung.', 'Zweite Meldung.'], [0, 3.2, 5.2], root, [2, 2])
+            vtt = (root / 'subtitles.de.vtt').read_text()
+            self.assertIn('00:00:00.000 --> 00:00:02.000', vtt)
+            self.assertIn('00:00:03.200 --> 00:00:05.200', vtt)
+
+
     def test_timestamps_carry_and_long_duration(self):
         self.assertEqual(subtitle_timestamp(3600001), "01:00:00.001")
         self.assertEqual(subtitle_timestamp(60000, ","), "00:01:00,000")
