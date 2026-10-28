@@ -33,6 +33,31 @@ class ArticleMarkupTests(unittest.TestCase):
         text = 'Österreich meldet 3,5 Prozent (Stand: 12 Uhr). A_B bleibt als Kennung erhalten.'
         self.assertEqual(spoken_prose(text), text)
 
+    def test_parenthesized_image_credits_are_removed(self):
+        for credit in ('(Bild: APA)', '(Bild krone.at)', '(bild: Fotograf)',
+                       '( Bild: Agentur (Archiv))', '(Bild: **APA**)'):
+            with self.subTest(credit=credit):
+                self.assertEqual(spoken_prose('Vorher. ' + credit + ' Danach.'),
+                                 'Vorher. Danach.')
+
+    def test_image_credits_do_not_remove_other_parentheses(self):
+        text = 'Text (Bild: APA) mit (Stand: heute) und (Bildung ist wichtig). (Bild: ORF) Ende.'
+        self.assertEqual(spoken_prose(text),
+                         'Text mit (Stand: heute) und (Bildung ist wichtig). Ende.')
+        self.assertEqual(spoken_prose('Text (Bild: ohne Ende'), 'Text (Bild: ohne Ende')
+
+    def test_extraction_removes_image_credit_before_length_limit(self):
+        prose = 'Dies ist ein ausführlicher Artikel ohne Bildnachweise. ' * 5
+        article = '(Bild: ' + 'x' * 13000 + ') ' + prose
+        with patch('scripts.generate.subprocess.run', return_value=SimpleNamespace(stdout=json.dumps({'content': article}))):
+            self.assertEqual(extract_article_text('https://example.org/story'), prose.strip())
+
+    def test_rss_fallback_removes_image_credits_in_all_styles(self):
+        for style in ('original', 'classic', 'brief'):
+            with self.subTest(style=style):
+                self.assertEqual(edit_news('Meldung', 'Der Bericht (Bild: APA) ist aktuell.', style, 2, 180),
+                                 'Meldung.\nDer Bericht ist aktuell.')
+
     def test_image_only_extraction_falls_back_to_rss(self):
         article = '![Sehr lange Bildbeschreibung](https://example.org/' + 'x' * 200 + '.jpg)'
         with patch('scripts.generate.subprocess.run', return_value=SimpleNamespace(stdout=json.dumps({'content': article}))):
