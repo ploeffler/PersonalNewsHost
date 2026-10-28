@@ -82,3 +82,26 @@ werden ohne Beachtung der Großschreibung als ganze Wörter im Titel gesucht.
 Ohne Treffer greift `default` (Allgemein). Polizei Steiermark und der
 Steiermark-Feed der Kleinen Zeitung sind Lokales zugeordnet. Dies ist eine
 regelbasierte Vorbereitung; die Zuordnung sollte redaktionell geprüft werden.
+
+## RSS-Quellen auswählen
+
+Im Tab **Sendung** zeigt der RSS-Bereich die veröffentlichten Recherche-Kataloge
+als Checkbox-Liste. Die Einträge sind nach Nachrichten beziehungsweise Behörden
+und Blaulicht, Land, Bundesland/Region und Thema gegliedert. Bei deutschen und
+österreichischen Bundesländern erscheinen lokal gespeicherte Wappen-Icons.
+
+Suche und Filter für Land, Bundesland, Sprache und Quellengruppe grenzen die
+Liste ein. „Nur ausgewählte Quellen“ zeigt die aktuelle Auswahl. Bis zu 30
+Quellen sind auswählbar. Feeds mit Prüfhinweis können zusätzlich eingeblendet
+werden; bereits ausgewählte Einträge bleiben erhalten. Im aufklappbaren Bereich
+für eigene Feed-Adressen lassen sich URLs ergänzen oder direkt bearbeiten.
+Checkboxen und Adressliste sind synchron; gespeichert wird weiterhin `feeds`.
+
+„Liste neu laden“ lädt die im Repository veröffentlichten Katalogdateien erneut.
+Es startet keine neue Recherche. Eigene und bisherige Quellen bleiben auch
+bei fehlenden Katalogdateien erhalten. Warnquellen ohne Sendungsadapter sowie
+Web-/API-Angebote ohne RSS werden mit ihrem Status angezeigt und sind noch
+nicht neu auswählbar. Bereits bestehende Konfigurationen werden nicht still
+umgeschrieben; entsprechende Quellen können abgewählt werden.
+
+Die Wappen dienen der geografischen Zuordnung. [Bildnachweise](../assets/regions/README.md).
