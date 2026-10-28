@@ -29,8 +29,12 @@ class VideoSmokeTests(unittest.TestCase):
                 from PIL import Image
                 logo = Image.new("RGBA", (160, 90), (0, 0, 0, 0))
                 logo.paste((255, 0, 0, 255), (80, 0, 160, 90))
-                logo.save(root / "assets/station-logo.png")
-                cfg["station_logo"] = "assets/station-logo.png"
+                if station_logo == "default":
+                    logo.save(root / "assets/logo.png")
+                    cfg.pop("station_logo")
+                else:
+                    logo.save(root / "assets/station-logo.png")
+                    cfg["station_logo"] = "assets/station-logo.png"
             cfg["presenter_settings"] = {
                 "name": "Test", "portrait": "assets/missing.png",
                 "background": "assets/missing.jpg",
@@ -82,6 +86,9 @@ class VideoSmokeTests(unittest.TestCase):
 
     def test_transparent_station_logo_throughout_broadcast(self):
         self.render("static", "color", station_logo=True)
+
+    def test_default_station_logo_without_config_field(self):
+        self.render("static", "color", station_logo="default")
 
 
 if __name__ == "__main__":

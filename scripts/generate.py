@@ -1135,7 +1135,7 @@ def main():
             )
             current = next_label
         # Apply station branding last so it stays above intro, stories and outro.
-        logo_path = str(CONFIG.get("station_logo", "")).strip()
+        logo_path = str(CONFIG.get("station_logo", "assets/logo.png")).strip()
         if logo_path:
             if not re.fullmatch(r"assets/[A-Za-z0-9_./-]+", logo_path) or ".." in logo_path:
                 raise ValueError("Invalid station logo path")

@@ -61,4 +61,4 @@ Das optionale Feld `station_logo` enthält den Repository-Pfad, beispielsweise
 `assets/station-logo.png`. Das Bild erscheint während der gesamten Sendung
 oben rechts mit 30 Pixel Abstand zum Rand und wird proportional auf maximal
 160×90 Pixel skaliert. Ein leerer Pfad deaktiviert die Einblendung. Bestehende
-Konfigurationen ohne dieses Feld rendern unverändert ohne Logo.
+Konfigurationen ohne dieses Feld verwenden standardmäßig `assets/logo.png`.
