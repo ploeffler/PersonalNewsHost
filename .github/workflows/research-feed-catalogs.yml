@@ -1,0 +1,68 @@
+name: Research feed catalogues
+run-name: Feed research · ${{ inputs.group }}
+on:
+  workflow_dispatch:
+    inputs:
+      group:
+        description: Welche Quellengruppe recherchieren?
+        required: true
+        default: both
+        type: choice
+        options:
+          - both
+          - news
+          - authorities
+permissions:
+  contents: read
+concurrency:
+  group: feed-research-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  news:
+    name: Nachrichtenquellen DE / EN
+    if: inputs.group == 'both' || inputs.group == 'news'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test research runner and catalogue validation
+        run: python3 -m unittest discover -s tests -p test_feed_research.py
+      - name: Research and validate news feeds
+        run: python3 -B research/run.py --group news --output-dir "${{ runner.temp }}/feed-research/news"
+      - name: Upload news research results
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: feed-research-news
+          path: ${{ runner.temp }}/feed-research/news/
+          if-no-files-found: warn
+          retention-days: 14
+  authorities:
+    name: Behörden, Blaulicht und Warnquellen DE / AT
+    if: inputs.group == 'both' || inputs.group == 'authorities'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test research runner and catalogue validation
+        run: python3 -m unittest discover -s tests -p test_feed_research.py
+      - name: Research and validate authority and emergency feeds
+        run: python3 -B research/run.py --group authorities --output-dir "${{ runner.temp }}/feed-research/authorities"
+      - name: Upload authority research results
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: feed-research-authorities
+          path: ${{ runner.temp }}/feed-research/authorities/
+          if-no-files-found: warn
+          retention-days: 14
