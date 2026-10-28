@@ -191,6 +191,18 @@ def spoken_prose(text):
     for marker in ("**", "__", "~~", "*", "_", "`"):
         escaped = re.escape(marker)
         text = re.sub(escaped + r"(?=\S)(.+?)(?<=\S)" + escaped, r"\1", text)
+    # Publisher photo credits such as "(Bild: APA)" are not narration.
+    # Reuse balanced delimiters so nested credit parentheses disappear too.
+    parts = []
+    start = 0
+    for match in re.finditer(r"\(\s*Bild\b", text, flags=re.IGNORECASE):
+        if match.start() < start:
+            continue
+        end = closing(text, match.start(), "(", ")")
+        if end is not None:
+            parts.extend((text[start:match.start()], " "))
+            start = end + 1
+    text = "".join(parts) + text[start:]
     # Bare/autolink targets are not useful spoken article content either.
     text = re.sub(r"<?https?://[^\s<>]+>?", " ", text)
     return clean(text)
