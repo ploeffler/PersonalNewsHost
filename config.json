@@ -3,10 +3,11 @@
   "production_version": "1.0",
   "language": "de",
   "voice": "de",
-  "max_items": 10,
+  "max_items": 5,
   "max_description_chars": 180,
   "feeds": [
     "https://www.derstandard.at/rss",
+    "https://www.derstandard.at/rss/live",
     "https://api.krone.at/v1/rss/rssfeed-nachrichten.html",
     "https://rss.orf.at/news.xml",
     "https://www.kleinezeitung.at/rss/steiermark",
@@ -49,16 +50,17 @@
   },
   "voice_pitch_semitones": -1.5,
   "telegram": {
-    "enabled": false,
+    "enabled": true,
     "recipient_type": "channel",
     "delivery": "auto",
-    "caption": "{title} – neue Nachrichtensendung\n{url}"
+    "caption": "{title} – neue Nachrichtensendung\n{url}",
+    "target": "default"
   },
   "automation": {
-    "enabled": false,
-    "interval_hours": 1,
+    "enabled": true,
+    "interval_hours": 3,
     "start_hour_local": 0,
-    "timezone": "UTC",
+    "timezone": "Europe/Vienna",
     "days": "daily"
   },
   "advanced_services": {
@@ -90,6 +92,43 @@
     "selection": {
       "mode": "freshness_and_source_diversity",
       "note": "Newest first, with one story per distinct publisher before filling remaining slots"
+    },
+    "broadcast_sections": {
+      "enabled": false,
+      "default": "general",
+      "sections": [
+        {
+          "id": "general",
+          "label": "Allgemein",
+          "keywords": []
+        },
+        {
+          "id": "economy",
+          "label": "Wirtschaft",
+          "keywords": [
+            "Wirtschaft",
+            "Inflation",
+            "Börse",
+            "Zinsen",
+            "Arbeitsmarkt",
+            "Konjunktur"
+          ]
+        },
+        {
+          "id": "local",
+          "label": "Lokales",
+          "keywords": []
+        }
+      ],
+      "feed_sections": {
+        "https://www.bmi.gv.at/rss/stmk_presse.xml": "local",
+        "https://www.kleinezeitung.at/rss/steiermark": "local"
+      }
+    },
+    "pipeline": {
+      "enabled": true,
+      "method": "local_extractive_multi_source",
+      "max_store_age_minutes": 30
     }
   },
   "media": {
@@ -103,5 +142,10 @@
       "ai"
     ],
     "prefer_article_images": true
+  },
+  "station_logo": "assets/logo-video.png",
+  "article_enrichment": {
+    "enabled": true,
+    "max_fetches_per_run": 24
   }
 }

@@ -61,7 +61,7 @@ Stelle auf der Konfigurationsseite die gewünschte Automatik ein und speichere e
 4. Aktiviere Telegram in der Webkonfiguration und speichere die Einstellungen.
 5. Starte einen Testlauf und prüfe den tatsächlichen Versand.
 
-Die Telegram-Nachrichten werden durch einen separaten Workflow **frühestens nach 25 Stunden** gelöscht, soweit GitHub Actions rechtzeitig ausgeführt wird und Telegram die Löschung noch erlaubt. Das MP4 auf GitHub Pages bleibt davon unberührt. Telegram ist standardmäßig deaktiviert.
+Aufbewahrung und Löschung werden direkt im Telegram-Ziel eingestellt. PersonalNewsHost löscht keine Nachrichten.
 
 ## 10. Fehlerbehebung und Sicherheit
 

@@ -37,7 +37,7 @@
 
 **Schutz des Originalprojekts:** Tokens niemals in `config.json`, Workflow-Dateien, Commits, Issues, Pull Requests, Screenshots oder Logs eintragen. Ausschließlich **Settings → Secrets and variables → Actions** verwenden. GitHub-Secrets werden zwar in Logs nach Möglichkeit maskiert, aber die Maskierung ist keine vollständige Sicherheitsgrenze. Wer Schreibzugriff auf Workflows im Originalrepository hat, kann potenziell dessen Secrets missbrauchen; deshalb Schreibrechte und Workflow-Änderungen streng begrenzen. Bei Verdacht auf Offenlegung den Token über BotFather widerrufen und ersetzen.
 
-**Telegram-Ablaufzeit:** Gesendete Telegram-Nachrichten werden nach frühestens 25 Stunden durch den separaten stündlichen Workflow `telegram-cleanup.yml` gelöscht. GitHub-Actions-Verzögerungen können die Löschung verschieben. Die Löschung betrifft nicht die MP4-Datei auf GitHub Pages und nicht den Video-RSS-Feed. Die automatische Löschung benötigt dieselben **fork-eigenen** Secrets. Ein erfolgreicher End-to-End-Test mit einem echten Bot steht noch aus.
+**Telegram-Ablaufzeit:** Die Aufbewahrung und Löschung werden direkt im Telegram-Ziel eingestellt. PersonalNewsHost löscht keine Nachrichten.
 
 Jeder Fork kann Telegram unabhängig aktivieren. In der Web-Konfiguration unter „Telegram-Veröffentlichung“ sind Empfängerart (Kanal, privater Chat, Gruppe) und Versandart (automatisch, nur Video, nur Link) wählbar. Standardmäßig ist Telegram **ausgeschaltet**.
 
@@ -50,3 +50,35 @@ Nach der erfolgreichen Veröffentlichung unter GitHub Pages versendet der regul�
 
 Hinweis: Die experimentelle parallele MuseTalk-Pipeline veröffentlicht noch nicht automatisch; Telegram hängt vorerst am regulären Produktionsworkflow. Der Versand ist noch nicht mit einem echten Telegram-Bot end-to-end getestet.
 
+
+
+### Zielwahl und optionale Löschung
+
+In den Telegram-Einstellungen steht jetzt „Zielkanal“ zur Verfügung:
+`default` verwendet das Actions-Secret `TELEGRAM_CHAT_ID`, `secondary` das
+Secret `TELEGRAM_CHAT_ID_SECONDARY`. Beide Ziele verwenden denselben Bot aus
+`TELEGRAM_BOT_TOKEN`. Bot-Token und Chat-IDs niemals in JSON oder HTML eintragen.
+Der Bot benötigt im jeweiligen Kanal die Berechtigung zum Veröffentlichen
+seiner Nachrichten. Die vorhandene Empfängerart ist nur eine Beschreibung.
+
+Die Löschfrist wird direkt im Telegram-Ziel definiert. PersonalNewsHost plant
+keine Löschungen und ruft keine Telegram-Löschfunktion auf. Der bisherige
+Cleanup-Workflow wurde entfernt; der alte Skript-Einstieg bleibt ohne Löschwirkung.
+Bereits vorhandene Löschlisten bleiben unverändert und werden nicht ausgeführt.
+Das alte Konfigurationsfeld `telegram.auto_delete` wird ignoriert.
+
+Der Produktionsworkflow entfernt das alte Video vor der Generierung und prüft
+anschließend mit ffprobe auf eine Videospur. Erst nach erfolgreicher Generierung
+und Git-Veröffentlichung folgt der optionale Versand. Bei unklarem Upload-Ergebnis
+(z. B. Timeout) erfolgt kein automatischer Link-Nachversand, um Doppelposts zu vermeiden.
+Ein manueller Start des Produktionsworkflows kann bei aktiviertem Telegram senden.
+
+Es werden keine kostenpflichtigen Dienste oder zusätzlichen Pakete benötigt.
+Standard-Ubuntu-Runner sind für öffentliche Repositories kostenlos; bei privaten
+Forks gelten die GitHub-Freikontingente. Quellen:
+[GitHub Actions Abrechnung](https://docs.github.com/en/billing/concepts/product-billing/github-actions),
+[Telegram deleteMessage](https://core.telegram.org/bots/api#deletemessage).
+
+Offline-Prüfung: `python3 -m unittest discover -s tests -p test_telegram.py -v`.
+Diese Tests ersetzen alle Telegram-Netzwerkaufrufe durch Mocks.
+Ein echter Versandtest erfordert eine ausdrückliche Freigabe.

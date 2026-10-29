@@ -31,7 +31,8 @@ PersonalNewsHost dokumentiert genau diesen Weg. Das Projekt verbindet klassische
 - Einen anpassbaren Moderator und ein virtuelles Studio verwenden.
 - Deutschsprachige Sprache, Nachrichtengrafiken und Bildmaterial kombinieren.
 - Die aktuelle Sendung als Video, Webseite und Video-RSS bereitstellen.
-- Optional über einen eigenen Telegram-Bot veröffentlichen; Telegram-Nachrichten sollen nach 25 Stunden automatisch gelöscht werden.
+- Deutsche Untertitel im Webplayer zuschalten und als SRT herunterladen (ab der nächsten erfolgreich erzeugten Sendung). Die Abschnittsgrenzen folgen der Sprache; die Zeitverteilung innerhalb eines Abschnitts ist angenähert.
+- Optional über einen eigenen Telegram-Bot veröffentlichen; Aufbewahrung und Löschung werden direkt im Telegram-Ziel eingestellt.
 - In einem eigenen GitHub-Fork unabhängig betrieben werden.
 
 PersonalNewsHost ist ein **laufend weiterentwickelter Prototyp**. Nicht jede geplante oder experimentelle Funktion ist bereits vollständig produktiv erprobt. Es ersetzt keine unabhängige journalistische Faktenprüfung.

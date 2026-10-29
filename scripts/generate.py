@@ -53,6 +53,15 @@ def spoken_timestamp(local):
         clock = hours + " Uhr " + german_number(local.minute)
     return f"Heute ist der {ordinal[:-1]} {GERMAN_MONTHS[local.month - 1]}. Es ist {clock}."
 
+def intro_headline_slots(titles, duration):
+    """Show each bulletin headline once, covering only the measured intro."""
+    if not titles or duration <= 0:
+        return []
+    count = len(titles)
+    return [(title, duration * idx / count, duration * (idx + 1) / count)
+            for idx, title in enumerate(titles)]
+
+
 def clean(s):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", s or ""))).strip()
 
@@ -122,6 +131,92 @@ def download_media(candidates, mode, directory, index, max_bytes):
             print(f"RSS media skipped: {type(exc).__name__}: {exc}")
     return None
 
+def spoken_prose(text):
+    """Remove article markup and media targets before editing or synthesis.
+
+    Balanced delimiters handle image URLs containing parentheses without
+    truncating the following prose. Link labels are retained; image credits,
+    reference definitions and code blocks are not narration.
+    """
+    text = html.unescape(text or "")
+    text = re.sub(r"(?ms)^\s*(`{3,}|~{3,})[^\n]*\n.*?^\s*\1\s*$", " ", text)
+    text = re.sub(r"(?is)<(script|style)\b[^>]*>.*?</\1\s*>", " ", text)
+    references = set()
+    def definition(match):
+        references.add(" ".join(match.group(1).casefold().split()))
+        return ""
+    text = re.sub(r"(?m)^ {0,3}\[([^\]\n]+)\]:[^\n]*(?:\n[ \t]+[^\n]+)*", definition, text)
+
+    def closing(value, start, left, right):
+        depth = 1
+        i = start + 1
+        while i < len(value):
+            if value[i] == "\\":
+                i += 2
+                continue
+            if value[i] == left:
+                depth += 1
+            elif value[i] == right:
+                depth -= 1
+                if depth == 0:
+                    return i
+            i += 1
+        return None
+
+    def inline(value):
+        result = []
+        i = 0
+        while i < len(value):
+            if value[i] == "\\" and i + 1 < len(value):
+                result.append(value[i + 1])
+                i += 2
+                continue
+            image = value.startswith("![", i)
+            opening = i + 1 if image else i
+            if value[opening:opening + 1] == "[":
+                end = closing(value, opening, "[", "]")
+                if end is not None:
+                    label = value[opening + 1:end]
+                    target_end = None
+                    following = end + 1
+                    if value[following:following + 1] == "(":
+                        target_end = closing(value, following, "(", ")")
+                    elif value[following:following + 1] == "[":
+                        ref_end = closing(value, following, "[", "]")
+                        if ref_end is not None:
+                            target_end = ref_end
+                    elif " ".join(label.casefold().split()) in references:
+                        target_end = end
+                    if target_end is not None:
+                        result.append(" " if image else inline(label))
+                        i = target_end + 1
+                        continue
+            result.append(value[i])
+            i += 1
+        return "".join(result)
+
+    text = inline(text)
+    text = re.sub(r"(?m)^\s{0,3}(?:#{1,6}\s+|>\s*|[-+*]\s+)", "", text)
+    for marker in ("**", "__", "~~", "*", "_", "`"):
+        escaped = re.escape(marker)
+        text = re.sub(escaped + r"(?=\S)(.+?)(?<=\S)" + escaped, r"\1", text)
+    # Publisher photo credits such as "(Bild: APA)" are not narration.
+    # Reuse balanced delimiters so nested credit parentheses disappear too.
+    parts = []
+    start = 0
+    for match in re.finditer(r"\(\s*Bild\b", text, flags=re.IGNORECASE):
+        if match.start() < start:
+            continue
+        end = closing(text, match.start(), "(", ")")
+        if end is not None:
+            parts.extend((text[start:match.start()], " "))
+            start = end + 1
+    text = "".join(parts) + text[start:]
+    # Bare/autolink targets are not useful spoken article content either.
+    text = re.sub(r"<?https?://[^\s<>]+>?", " ", text)
+    return clean(text)
+
+
 def extract_article_text(url):
     """Extract selected article locally via rdrr CLI, falling back to RSS on failure."""
     from urllib.parse import urlparse
@@ -138,7 +233,7 @@ def extract_article_text(url):
             return None
         body = data.get("content", "")
         # Keep prose; do not read markup, link targets or embedded code aloud.
-        body = " ".join(body.split())
+        body = spoken_prose(body)
         if len(body) < 160:
             return None
         return body[:12000]
@@ -487,15 +582,26 @@ def crosscheck_headline(title, original_url, max_results=2):
 
 def edit_news(title, description, style, max_sentences, limit):
     """Offline, conservative editorial formatting without inventing facts."""
-    title = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", title))).strip()
-    description = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", description))).strip()
+    title = spoken_prose(title)
+    description = spoken_prose(description)
+    # Police releases prefix the prose with political district | locality.
+    description = re.sub(
+        r"^([^|.!?]+?)\s*\|\s*([^|.!?]+?)\.\s*[–—-]\s*",
+        lambda match: f"{match[2].strip()} im Bezirk {match[1].strip()}: ",
+        description,
+    )
     if style == "original":
         clipped = description[:limit].rsplit(" ", 1)[0] if len(description) > limit else description
         return title.rstrip(".!?") + ".\n" + clipped
     if style not in ("classic", "brief"):
         raise ValueError("Unknown editorial style")
     # Only complete sentences; never invent context or paraphrase factual claims.
-    sentences = re.split(r"(?<=[.!?])\s+", description)
+    # An ordinal day followed by a month belongs to the same sentence.
+    months = "|".join((*GERMAN_MONTHS, "Januar", "Februar"))
+    protected = re.sub(r"\b(\d{1,2})\.\s+(?=(?:" + months + r")\b)",
+                       lambda match: match[1] + "\u2024 ", description)
+    sentences = [part.replace("\u2024", ".")
+                 for part in re.split(r"(?<=[.!?])\s+", protected)]
     sentences = [x.strip() for x in sentences if x.strip() and x.strip()[-1] in ".!?"]
     sentences = [x for x in sentences if x.casefold().rstrip(".!?") != title.casefold().rstrip(".!?")]
     count = 1 if style == "brief" else max_sentences
@@ -544,6 +650,81 @@ def group_news_items(items, enabled=True):
     return [group[0] for group in groups], groups
 
 
+def news_section(entry, feed_url, settings):
+    """Prefer explicit feed assignments, then bounded headline keywords."""
+    sections = settings.get("sections", [])
+    valid = {section["id"] for section in sections}
+    assigned = settings.get("feed_sections", {}).get(feed_url)
+    if assigned in valid:
+        return assigned
+    title = entry[0].casefold()
+    for section in sections:
+        if any(re.search(r"(?<!\w)" + re.escape(word.casefold()) + r"(?!\w)", title)
+               for word in section.get("keywords", []) if word):
+            return section["id"]
+    return settings.get("default", "general") if settings.get("default", "general") in valid else "general"
+
+
+def prepare_sections(groups, feeds, settings):
+    """Annotate selected stories; optionally order them by configured section."""
+    planned = [(group, news_section(group[0], feeds.get((group[0][0], group[0][2]), ""), settings))
+               for group in groups]
+    if settings.get("enabled", False):
+        order = {section["id"]: index for index, section in enumerate(settings.get("sections", []))}
+        planned.sort(key=lambda item: order.get(item[1], len(order)))
+    return planned
+
+
+def subtitle_timestamp(milliseconds, separator="."):
+    hours, remainder = divmod(milliseconds, 3600000)
+    minutes, remainder = divmod(remainder, 60000)
+    seconds, millis = divmod(remainder, 1000)
+    return f"{hours:02d}:{minutes:02d}:{seconds:02d}{separator}{millis:03d}"
+
+
+def append_silence(output, seconds, channels, sample_width, sample_rate):
+    """Append PCM silence and return its exact duration in seconds."""
+    frames = round(seconds * sample_rate)
+    sample = b"\x80" if sample_width == 1 else b"\x00" * sample_width
+    output.writeframesraw(sample * channels * frames)
+    return frames / sample_rate
+
+
+def write_subtitles(parts, boundaries, directory, speech_durations=None):
+    """Use measured speech boundaries; estimate cue timing within each segment.
+
+    No speech recognition is needed. Text is the exact input to synthesis;
+    within-segment timing is proportional to character counts, not word alignment.
+    """
+    import textwrap
+    if len(boundaries) != len(parts) + 1:
+        raise ValueError("Subtitle text and speech boundaries must match")
+    cues = []
+    for index, part in enumerate(parts):
+        start = round(boundaries[index] * 1000)
+        end = round((boundaries[index] + speech_durations[index]) * 1000) if speech_durations is not None else round(boundaries[index + 1] * 1000)
+        if end <= start:
+            continue
+        lines = textwrap.wrap(" ".join(part.split()), width=42,
+                              break_long_words=False, break_on_hyphens=False)
+        chunks = ["\n".join(lines[i:i + 2]) for i in range(0, len(lines), 2)]
+        total = sum(len(chunk) for chunk in chunks)
+        consumed = 0
+        for chunk in chunks:
+            cue_start = start + round((end - start) * consumed / total)
+            consumed += len(chunk)
+            cue_end = start + round((end - start) * consumed / total)
+            if cue_end > cue_start:
+                cues.append((cue_start, cue_end, chunk))
+    vtt, srt = ["WEBVTT\n\n"], []
+    for index, (start, end, text) in enumerate(cues, 1):
+        # WebVTT cue text parses markup; escape publisher text literally.
+        vtt.append(f"{subtitle_timestamp(start)} --> {subtitle_timestamp(end)}\n{html.escape(text)}\n\n")
+        srt.append(f"{index}\n{subtitle_timestamp(start, ',')} --> {subtitle_timestamp(end, ',')}\n{html.escape(text)}\n\n")
+    (directory / "subtitles.de.vtt").write_text("".join(vtt), encoding="utf-8")
+    (directory / "subtitles.de.srt").write_text("".join(srt), encoding="utf-8")
+
+
 def main():
     try:
         from .validate_config import validate_config
@@ -551,25 +732,69 @@ def main():
         from validate_config import validate_config
     validate_config(CONFIG)
     DOCS.mkdir(exist_ok=True)
-    collected, seen = [], set()
-    for url in CONFIG["feeds"]:
+    pipeline_enabled = CONFIG.get("editorial", {}).get("pipeline", {}).get("enabled", True)
+    prepared_by_group = {}
+    if pipeline_enabled:
         try:
-            for entry in items_from_feed(url):
-                title, desc, link = entry[:3]
-                media = entry[3] if len(entry) > 3 else []
-                key = title.casefold()
-                if key not in seen:
-                    seen.add(key)
-                    collected.append((title, desc, link, media))
-        except Exception as exc:
-            print(f"Feed skipped: {url}: {exc}")
-    if not collected:
-        raise RuntimeError("No RSS entries available; previous published edition remains unchanged")
-    clustering = CONFIG.get("editorial", {}).get("topic_clustering", {})
-    representatives, all_groups = group_news_items(
-        collected, enabled=clustering.get("enabled", True))
-    max_items = max(1, min(int(CONFIG.get("max_items", 5)), 10))
-    story_groups = select_balanced_groups(all_groups, max_items)
+            from scripts.editorial_pipeline import production_plan, verify
+        except ModuleNotFoundError:
+            from editorial_pipeline import production_plan, verify
+        pipeline = CONFIG.get("editorial", {}).get("pipeline", {})
+        if pipeline.get("method", "local_extractive_multi_source") != "local_extractive_multi_source":
+            raise ValueError("Unsupported editorial pipeline method")
+        report, ready = production_plan(
+            DOCS / "news-store.json", dt.datetime.now(dt.timezone.utc).timestamp(),
+            max_sentences=int(CONFIG.get("editorial", {}).get("max_sentences", 2)),
+            limit=int(CONFIG.get("max_items", 5)),
+            max_store_age_minutes=max(1, min(120, int(pipeline.get("max_store_age_minutes", 30)))))
+        story_groups = []
+        entry_feeds = {}
+        for prepared in ready:
+            members = [report["sources"][sid] for sid in prepared["member_ids"]]
+            # Recheck the exact final wording before any voice is synthesized.
+            final_check = verify(prepared["draft"], members, report["sources"])
+            if final_check["status"] != "approved":
+                prepared["verification"] = final_check
+                prepared["selected"] = False
+                report["production_error"] = "approval_invalidated_before_speech"
+                (DOCS / "editorial-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+                raise RuntimeError("Editorial approval invalidated before speech production")
+            group = []
+            for member in members:
+                media = [(asset["url"], asset["kind"]) for asset in member.get("media", [])]
+                entry = (member["title"], member.get("text", ""), member.get("url", ""), media)
+                group.append(entry)
+                entry_feeds[(entry[0], entry[2])] = next(iter(member.get("feed_urls", [])), "")
+                FEED_DATES[entry[2]] = prepared["newest_at"]
+            story_groups.append(group)
+            prepared_by_group[id(group)] = prepared
+    else:
+        collected, seen = [], set()
+        entry_feeds = {}
+        for url in CONFIG["feeds"]:
+            try:
+                for entry in items_from_feed(url):
+                    title, desc, link = entry[:3]
+                    media = entry[3] if len(entry) > 3 else []
+                    key = title.casefold()
+                    if key not in seen:
+                        seen.add(key)
+                        collected.append((title, desc, link, media))
+                        entry_feeds[(title, link)] = url
+            except Exception as exc:
+                print(f"Feed skipped: {url}: {exc}")
+        if not collected:
+            raise RuntimeError("No RSS entries available; previous published edition remains unchanged")
+        clustering = CONFIG.get("editorial", {}).get("topic_clustering", {})
+        representatives, all_groups = group_news_items(
+            collected, enabled=clustering.get("enabled", True))
+        max_items = max(1, min(int(CONFIG.get("max_items", 5)), 10))
+        story_groups = select_balanced_groups(all_groups, max_items)
+    section_settings = CONFIG.get("editorial", {}).get("broadcast_sections", {})
+    section_plan = prepare_sections(story_groups, entry_feeds, section_settings)
+    story_groups = [group for group, section in section_plan]
+    section_ids = [section for group, section in section_plan]
+    section_labels = {section["id"]: section["label"] for section in section_settings.get("sections", [])}
     selected = [group[0] for group in story_groups]
     now = dt.datetime.now(dt.timezone.utc)
     local_now = now.astimezone(ZoneInfo("Europe/Vienna"))
@@ -598,35 +823,52 @@ def main():
                                 "mentioned_sources": mentions,
                                 "checked_scope": "RSS title and description only",
                                 "independently_verified": False})
-        checked = (crosscheck_headline(title, link, max_results)
-                   if verify_enabled else {"status": "disabled", "matches": [],
-                                           "scope": "headline/topic", "claim_verified": False})
-        checked["original_title"] = title
-        checked["original_url"] = link
-        crosschecks.append(checked)
-        article_text = extract_article_text(link)
-        source_text = article_text or desc
-        print(f"Story {story_idx + 1}: {'rdrr full article' if article_text else 'RSS fallback'}")
-        edited = edit_news(title, source_text, style, max_sentences, limit)
-        if len(related) > 1:
-            from urllib.parse import urlparse
-            publishers = sorted({(urlparse(x[2]).hostname or "Unbekannt").removeprefix("www.")
-                                 for x in related})
-            edited += "\\n" + "Über dieses Ereignis berichten auch: " + ", ".join(publishers[1:]) + "."
-        if mentions:
-            edited += "\n" + "Im RSS-Beitrag werden als weitere Quellen genannt: " + ", ".join(mentions) + "."
-        if checked["matches"]:
-            publishers = ", ".join(match["publisher"] for match in checked["matches"])
-            edited += "\n" + "Auch " + publishers + " berichten über das Thema. Einzelne Aussagen wurden nicht unabhängig verifiziert."
-        elif checked["status"] == "no_matching_coverage":
-            edited += "\n" + "Bei der automatischen Gegenrecherche wurde keine ausreichend ähnliche Meldung einer anderen Quelle gefunden."
-        elif checked["status"] == "unavailable":
-            edited += "\n" + "Eine unabhängige Gegenrecherche war technisch nicht möglich."
+        prepared = prepared_by_group.get(id(related))
+        if pipeline_enabled:
+            if prepared is None or prepared["verification"]["status"] != "approved":
+                raise RuntimeError("Unapproved story cannot enter the broadcast")
+            edited = prepared["draft"]["text"]
+            checked = {"status": "source_support_approved", "matches": [],
+                       "scope": "stored_source_support", "claim_verified": False,
+                       "pipeline_group_id": prepared["id"], "verification": prepared["verification"]}
+            crosschecks.append(checked)
+            print(f"Story {story_idx + 1}: stored, edited and source-checked group {prepared['id']}")
+        else:
+            checked = (crosscheck_headline(title, link, max_results)
+                       if verify_enabled else {"status": "disabled", "matches": [],
+                                               "scope": "headline/topic", "claim_verified": False})
+            checked["original_title"] = title
+            checked["original_url"] = link
+            crosschecks.append(checked)
+            article_text = extract_article_text(link)
+            source_text = article_text or desc
+            print(f"Story {story_idx + 1}: {'rdrr full article' if article_text else 'RSS fallback'}")
+            edited = edit_news(title, source_text, style, max_sentences, limit)
+        if section_settings.get("enabled", False) and (story_idx == 0 or section_ids[story_idx] != section_ids[story_idx - 1]):
+            edited = "Nun zum Bereich " + section_labels.get(section_ids[story_idx], "Allgemein") + ".\n" + edited
+        if not pipeline_enabled:
+            if len(related) > 1:
+                from urllib.parse import urlparse
+                publishers = sorted({(urlparse(x[2]).hostname or "Unbekannt").removeprefix("www.")
+                                     for x in related})
+                edited += "\\n" + "Über dieses Ereignis berichten auch: " + ", ".join(publishers[1:]) + "."
+            if mentions:
+                edited += "\n" + "Im RSS-Beitrag werden als weitere Quellen genannt: " + ", ".join(mentions) + "."
+            if checked["matches"]:
+                publishers = ", ".join(match["publisher"] for match in checked["matches"])
+                edited += "\n" + "Auch " + publishers + " berichten über das Thema. Einzelne Aussagen wurden nicht unabhängig verifiziert."
+            elif checked["status"] == "no_matching_coverage":
+                edited += "\n" + "Bei der automatischen Gegenrecherche wurde keine ausreichend ähnliche Meldung einer anderen Quelle gefunden."
+            elif checked["status"] == "unavailable":
+                edited += "\n" + "Eine unabhängige Gegenrecherche war technisch nicht möglich."
         parts.append(edited)
     (DOCS / "story-groups.json").write_text(
-        json.dumps([{"headline": group[0][0], "sources": [
+        json.dumps([{"headline": group[0][0], "section": section_ids[index],
+            "pipeline_group_id": prepared_by_group.get(id(group), {}).get("id"),
+            "editorial_text": prepared_by_group.get(id(group), {}).get("draft", {}).get("text"),
+            "sources": [
             {"title": item[0], "url": item[2], "description": item[1]}
-            for item in group]} for group in story_groups],
+            for item in group]} for index, group in enumerate(story_groups)],
             ensure_ascii=False, indent=2), encoding="utf-8")
     (DOCS / "source-mentions.json").write_text(
         json.dumps(source_mentions, ensure_ascii=False, indent=2), encoding="utf-8"
@@ -644,6 +886,7 @@ def main():
         wav = Path(tmp) / "speech.wav"
         segment_paths = []
         segment_durations = []
+        speech_durations = []
         sample_params = None
         with wave.open(str(wav), "wb") as combined:
             for idx, part in enumerate(parts):
@@ -660,19 +903,27 @@ def main():
                     elif params != sample_params:
                         raise RuntimeError("Speech segments have incompatible WAV formats")
                     segment_durations.append(source.getnframes() / source.getframerate())
+                    speech_durations.append(segment_durations[-1])
                     while True:
                         data = source.readframes(65536)
                         if not data:
                             break
                         combined.writeframesraw(data)
+                    # Keep the outgoing scene during the pause, then introduce
+                    # the next headline with its first spoken word.
+                    if 1 <= idx < len(parts) - 1:
+                        segment_durations[-1] += append_silence(
+                            combined, 1.2, params[0], params[1], params[2])
         boundaries = [0.0]
         for seconds in segment_durations:
             boundaries.append(boundaries[-1] + seconds)
+        write_subtitles(parts, boundaries, DOCS, speech_durations)
         timeline = {
             "version": 1,
             "segments": [
                 {"type": "intro" if idx < 2 else "outro" if idx == len(parts)-1 else "story",
                  "story_index": idx-2 if 2 <= idx < len(parts)-1 else None,
+                 "section": section_ids[idx-2] if 2 <= idx < len(parts)-1 else None,
                  "start": round(boundaries[idx], 4), "end": round(boundaries[idx+1], 4)}
                 for idx in range(len(parts))
             ],
@@ -729,11 +980,12 @@ def main():
         outro_start = boundaries[-2]
         outro = duration - outro_start
         print(f"Scenes: intro={intro:.1f}s, headlines={outro_start-intro:.1f}s, outro={outro:.1f}s")
-        args = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y"]
+        args = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y",
+                "-filter_complex_threads", "1"]
         if not bg.is_file():
             print(f"WARNING: studio image missing: {bg}; using solid background")
         if bg.is_file():
-            args += ["-loop", "1", "-i", str(bg)]
+            args += ["-loop", "1", "-framerate", "5", "-i", str(bg)]
         else:
             args += ["-f", "lavfi", "-i", "color=c=0x13243a:s=1280x720:r=1"]
         args += ["-i", str(wav)]
@@ -756,7 +1008,7 @@ def main():
                 still = ROOT / relative
                 if not still.is_file():
                     raise FileNotFoundError("Intro image missing")
-                args += ["-loop", "1", "-i", str(still)]
+                args += ["-loop", "1", "-framerate", "5", "-i", str(still)]
             else:
                 raise ValueError("Invalid intro type")
             filters.append("[2:v]fps=5,scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,format=yuv420p[introframe]")
@@ -781,7 +1033,7 @@ def main():
             path, kind = asset
             input_index = len([a for a in args if a == "-i"])
             if kind == "image":
-                args += ["-loop", "1", "-i", str(path)]
+                args += ["-loop", "1", "-framerate", "5", "-i", str(path)]
             else:
                 args += ["-stream_loop", "-1", "-i", str(path)]
             start_time = boundaries[idx + 2]
@@ -789,7 +1041,7 @@ def main():
             media_label = f"rssmedia{idx}"
             next_label = f"rssscene{idx}"
             filters.append(
-                f"[{input_index}:v]fps=20,scale=620:384:flags=lanczos:"
+                f"[{input_index}:v]fps={5 if kind == 'image' else 20},scale=620:384:flags=lanczos:"
                 f"force_original_aspect_ratio=decrease:force_divisible_by=2,"
                 f"pad=620:384:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
                 f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS[{media_label}]"
@@ -826,43 +1078,36 @@ def main():
                     print(f"WARNING: lip animation failed; static host fallback: {exc}")
             if story_host_input is None:
                 story_host_input = len([arg for arg in args if arg == "-i"])
-                args += ["-loop", "1", "-i", str(story_host)]
+                args += ["-loop", "1", "-framerate", "5", "-i", str(story_host)]
         else:
             print("WARNING: assets/host.png missing; no story presenter overlay")
         # Keep the presenter on the right, with the lower body hidden behind the desk line.
         if story_host_input is not None:
-            # Split the presenter stream so each story gets an independent
-            # filter input; avoid reusing an already consumed FFmpeg pad.
-            labels = "".join(f"[hostinput{idx}]" for idx in range(len(selected)))
-            filters.append(f"[{story_host_input}:v]split={len(selected)}{labels}")
-            for idx in range(len(selected)):
-                start_time = boundaries[idx + 2]
-                end_time = duration if idx == len(selected) - 1 else boundaries[idx + 3]
-                x = "W-w-35"
-                label = f"hoststory{idx}"
-                legacy_crop = (
-                    "crop=iw:min(ih\\,340):0:0,"
-                    if not (ROOT / settings.get("desk_foreground", "assets/desk_foreground.png")).is_file()
-                    else ""
-                )
-                filters.append(
-                    f"[hostinput{idx}]fps={lip_render_fps},scale=610:765:"
-                    f"force_original_aspect_ratio=decrease,format=rgba,"
-                    f"{legacy_crop}null[personstory{idx}]"
-                )
-                filters.append(
-                    f"[{current}][personstory{idx}]overlay=x={x}:y=200:"
-                    f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
-                    f"eof_action=repeat[{label}]"
-                )
-                current = label
+            # The presenter is visible continuously from the first story through
+            # the outro. Scale and composite it once rather than duplicating the
+            # animated stream and its full-duration filters for every story.
+            legacy_crop = (
+                "crop=iw:min(ih\\,340):0:0,"
+                if not (ROOT / settings.get("desk_foreground", "assets/desk_foreground.png")).is_file()
+                else ""
+            )
+            filters.append(
+                f"[{story_host_input}:v]fps={lip_render_fps},scale=610:765:"
+                f"force_original_aspect_ratio=decrease,format=rgba,"
+                f"{legacy_crop}null[storypresenter]"
+            )
+            filters.append(
+                f"[{current}][storypresenter]overlay=x=W-w-35:y=200:"
+                f"enable='gte(t,{intro:.3f})':eof_action=repeat[withpresenter]"
+            )
+            current = "withpresenter"
         # An independent transparent desk image is the correct foreground.
         # Unlike cropping the studio photo, it can cover the presenter's hands
         # without copying unwanted background pixels over the presenter.
         desk_path = ROOT / settings.get("desk_foreground", "assets/desk_foreground.png")
         if desk_path.is_file():
             desk_input = len([arg for arg in args if arg == "-i"])
-            args += ["-loop", "1", "-i", str(desk_path)]
+            args += ["-loop", "1", "-framerate", "5", "-i", str(desk_path)]
             filters.append(
                 f"[{desk_input}:v]fps=5,scale=1280:720,format=rgba,"
                 "setpts=PTS-STARTPTS[deskforeground]"
@@ -924,6 +1169,34 @@ def main():
         )
         current = "outrotag"
         if scenes.get("show_headlines", True) and selected:
+            # Preview the bulletin topics in order during the spoken intro.
+            # Equal slots use measured audio duration, without lengthening it.
+            import textwrap
+            slots = intro_headline_slots([entry[0] for entry in selected], intro)
+            filters.append(
+                f"[{current}]drawbox=x=120:y=470:w=1040:h=160:"
+                f"color=0x07182b@0.91:t=fill:enable='lt(t,{intro:.6f})'[introtopicscard]"
+            )
+            current = "introtopicscard"
+            for idx, (title, start, end) in enumerate(slots):
+                wrapped = textwrap.wrap(clean(title), width=54, break_long_words=True)
+                if len(wrapped) > 2:
+                    wrapped = wrapped[:2]
+                    wrapped[-1] = wrapped[-1].rstrip(" .") + "…"
+                topic_file = Path(tmp) / f"intro_topic_{idx}.txt"
+                topic_file.write_text("\n".join(wrapped), encoding="utf-8")
+                enable = f"gte(t,{start:.6f})*lt(t,{end:.6f})"
+                filters.append(
+                    f"[{current}]drawtext=fontfile={font}:text='THEMA {idx + 1} / {len(slots)}':"
+                    f"fontcolor=0x54ddff:fontsize=22:x=150:y=485:"
+                    f"enable='{enable}'[introtopicnumber{idx}]"
+                )
+                filters.append(
+                    f"[introtopicnumber{idx}]drawtext=fontfile={font}:textfile={topic_file}:"
+                    f"fontcolor=white:fontsize=30:line_spacing=10:x=150:y=525:"
+                    f"enable='{enable}'[introtopic{idx}]"
+                )
+                current = f"introtopic{idx}"
             # Each headline gets its own timed overlay, rather than one overflowing text block.
             story_count = len(selected)
             for idx, (title, _, _, _) in enumerate(selected):
@@ -993,8 +1266,8 @@ def main():
         outro_detail.write_text("\n".join(feed_lines), encoding="utf-8")
         outro_editorial = Path(tmp) / "outro_editorial.txt"
         outro_editorial.write_text(
-            "KI-gestuetzte redaktionelle Bearbeitung:\n"
-            "Quellensuche, Abgleich und Zusammenfassung",
+            "Redaktionelle Bearbeitung:\n"
+            "Quellensynthese und Quellenpruefung",
             encoding="utf-8"
         )
         outro_headline = Path(tmp) / "outro_headline.txt"
@@ -1028,6 +1301,12 @@ def main():
                 f"enable='{outro_enable}'[{next_label}]"
             )
             current = next_label
+        # Apply station branding last so it stays above intro, stories and outro.
+        try:
+            from scripts.video_branding import apply_branding
+        except ModuleNotFoundError:
+            from video_branding import apply_branding
+        current = apply_branding(args, filters, current, ROOT, CONFIG)
         filters.append(f"[{current}]null[v]")
         args += ["-filter_complex", ";".join(filters), "-map", "[v]", "-map", "1:a",
                  "-c:v", "libx264", "-preset", "ultrafast", "-tune", "stillimage",
@@ -1037,7 +1316,7 @@ def main():
     lines = ["<!doctype html><html lang='de'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>",
              "<title>PersonalNewsHost</title><style>body{font:1.1rem system-ui;background:#13243a;color:white;max-width:900px;margin:3rem auto;padding:1rem}a{color:#8ed6ff}video{width:100%}.site-logo{display:block;width:min(320px,75vw);height:auto;margin:0 auto 1.2rem}.logo-link{display:block;text-align:center}</style>",
              "<a class='logo-link' href='" + BASE + "' aria-label='Zur Nachrichtenseite'><img class='site-logo' src='https://raw.githubusercontent.com/ploeffler/PersonalNewsHost/main/assets/logo.png' alt='PersonalNewsHost Logo'></a><h1>PersonalNewsHost</h1><p>Stand: " + html.escape(timestamp) + "</p>",
-             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'></video><p><a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='settings.html'>Konfiguration (Beta)</a> · <a href='browser-studio.html'>Browser-Studio (Beta)</a></p><h2>Quellen</h2><ul>"]
+             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'><track kind='subtitles' src='subtitles.de.vtt?v=" + now.strftime("%Y%m%d%H%M%S") + "' srclang='de' label='Deutsch' default></video><p><a href='subtitles.de.srt' download>Untertitel (SRT)</a> · <a href='short-updates.html'>Kurzupdates</a> · <a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='settings.html'>Konfiguration (Beta)</a> · <a href='browser-studio.html'>Browser-Studio (Beta)</a></p><h2>Quellen</h2><ul>"]
     for story_idx, (title, _, link, _) in enumerate(selected):
         safe = link if link.startswith(("https://", "http://")) else "#"
         lines.append("<li><a rel='noopener noreferrer' href='" + html.escape(safe, quote=True) + "'>" + html.escape(title) + "</a>")
@@ -1061,6 +1340,14 @@ def main():
             '<enclosure url="' + BASE + 'latest.mp4" length="' + str((DOCS / "latest.mp4").stat().st_size) + '" type="video/mp4"/>'
             '</item></channel></rss>')
     (DOCS / "feed.xml").write_text(feed, encoding="utf-8")
+    try:
+        from scripts.broadcast_archive import archive_broadcast, decorate_homepage
+    except ModuleNotFoundError:
+        from broadcast_archive import archive_broadcast, decorate_homepage
+    archive_broadcast(DOCS, now.timestamp(), "Nachrichten " + timestamp,
+                      [{"title": item[0], "url": item[2]} for group in story_groups for item in group])
+    home = DOCS / "index.html"
+    home.write_text(decorate_homepage(home.read_text(encoding="utf-8")), encoding="utf-8")
     print(f"Generated {len(selected)} stories; video size {(DOCS / 'latest.mp4').stat().st_size} bytes")
 
 if __name__ == "__main__":

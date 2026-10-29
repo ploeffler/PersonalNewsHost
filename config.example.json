@@ -3,11 +3,14 @@
   "production_version": "1.0",
   "language": "de",
   "voice": "de",
-  "max_items": 10,
+  "max_items": 5,
   "max_description_chars": 180,
-  "feeds": [],
+  "feeds": [
+    "https://www.derstandard.at/rss/live"
+  ],
   "background": "assets/background.jpg",
   "presenter": "assets/presenter.png",
+  "station_logo": "assets/logo-video.png",
   "tts_engine": "piper",
   "piper_length_scale": 1.06,
   "presenter_settings": {
@@ -74,6 +77,43 @@
       "max_sources": 2,
       "method": "independent_publisher_headline_search",
       "note": "Finds other publisher coverage, not factual verification of individual claims"
+    },
+    "broadcast_sections": {
+      "enabled": false,
+      "default": "general",
+      "sections": [
+        {
+          "id": "general",
+          "label": "Allgemein",
+          "keywords": []
+        },
+        {
+          "id": "economy",
+          "label": "Wirtschaft",
+          "keywords": [
+            "Wirtschaft",
+            "Inflation",
+            "Börse",
+            "Zinsen",
+            "Arbeitsmarkt",
+            "Konjunktur"
+          ]
+        },
+        {
+          "id": "local",
+          "label": "Lokales",
+          "keywords": []
+        }
+      ],
+      "feed_sections": {
+        "https://www.bmi.gv.at/rss/stmk_presse.xml": "local",
+        "https://www.kleinezeitung.at/rss/steiermark": "local"
+      }
+    },
+    "pipeline": {
+      "enabled": true,
+      "method": "local_extractive_multi_source",
+      "max_store_age_minutes": 30
     }
   },
   "media": {
@@ -88,5 +128,14 @@
     ],
     "prefer_article_images": true
   },
-  "fork_config_initialized": false
+  "fork_config_initialized": false,
+  "short_updates": {
+    "enabled": true,
+    "freshness_minutes": 60,
+    "interval_minutes": 15
+  },
+  "article_enrichment": {
+    "enabled": true,
+    "max_fetches_per_run": 24
+  }
 }

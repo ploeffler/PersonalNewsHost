@@ -42,7 +42,7 @@ Hochgeladene Bilder in `assets/` werden als Repository-Dateien veröffentlicht u
 | `automation.timezone` | IANA-Zeitzone, z. B. `Europe/Vienna` |
 | `telegram.enabled` | Telegram-Versand aktivieren |
 
-Der GitHub-Actions-Zeitplan prüft stündlich ungefähr um Minute 17 UTC, ob eine Produktion fällig ist. GitHub garantiert keine minutengenaue Ausführung. Manuelle Starts sind unabhängig von der Automatik möglich.
+Der GitHub-Actions-Zeitplan prüft stündlich ungefähr um Minute 17 UTC, ob eine Produktion fällig ist. GitHub garantiert keine minutengenaue Ausführung. Verspätete oder ausgelassene Termine werden beim nächsten Lauf auf einem erlaubten Wochentag mit höchstens einer aktuellen Sendung nachgeholt; alte Sendungen werden nicht einzeln nachproduziert. Als Nachweis zählt das Veröffentlichungsdatum in `docs/feed.xml`, das erst nach erfolgreicher Produktion ins Repository übernommen wird. Fehlgeschlagene Versuche bleiben damit offen. Fehlt dieses Datum oder ist es unlesbar, erzeugt der nächste erlaubte Lauf eine Ausgabe. Bereits veröffentlichte Zeitfenster werden übersprungen. Nach dem Warten auf die gemeinsame Workflow-Sperre lädt der Produktionsworkflow den neuesten Branchstand, damit er auch zwischenzeitlich veröffentlichte Ausgaben berücksichtigt. Manuelle Starts sind unabhängig von der Automatik möglich.
 
 ## Sicherheit und Kosten
 
@@ -63,3 +63,35 @@ python3 scripts/validate_config.py /pfad/config.json
 ```
 
 Beide Repositorykonfigurationen werden standardmäßig geprüft. Der reguläre News-Workflow validiert nach Laden des privaten Konfigurations-Secrets und vor Produktion; `generate.main()` prüft ebenfalls vor Feed-Abrufen und Dateiausgabe.
+## Senderlogo in der Sendung
+
+Unter **Bilder → Senderlogo hochladen** lässt sich ein PNG- oder JPEG-Bild
+(maximal 4 MB, mindestens 32×16 Pixel) hochladen. Ein transparentes PNG eignet
+sich für einen Sender-Identifier ohne rechteckigen Hintergrund. Danach die
+Konfiguration speichern, damit der eingetragene Bildpfad übernommen wird.
+
+Das optionale Feld `station_logo` enthält den Repository-Pfad, beispielsweise
+`assets/station-logo.png`. Das Bild erscheint während der gesamten Sendung
+oben rechts mit 30 Pixel Abstand zum Rand und wird proportional auf maximal
+160×90 Pixel skaliert. Ein leerer Pfad deaktiviert die Einblendung. Bestehende
+Konfigurationen ohne dieses Feld verwenden standardmäßig `assets/logo.png`.
+
+## Sendungsbereiche vorbereiten
+
+Unter `editorial.broadcast_sections` sind Allgemein, Wirtschaft und Lokales
+vorbereitet. `enabled: false` lässt Reihenfolge und Ansagen unverändert.
+Die Bereichskennung wird bereits beim nächsten Lauf in `story-groups.json`
+und `timeline.json` ausgegeben.
+
+Mit `enabled: true` werden die ausgewählten Meldungen in der Reihenfolge von
+`sections` gruppiert. Vor der ersten Meldung jedes belegten Bereichs wird
+„Nun zum Bereich …“ gesprochen. Leere Bereiche werden ausgelassen.
+Die bestehende Auswahl und die Gesamtzahl der Meldungen bleiben erhalten;
+Bereiche haben noch keine eigenen Kontingente oder grafischen Trenner.
+
+`feed_sections` ordnet vollständige Feed-URLs einer Bereichskennung zu und
+hat Vorrang vor den Schlagwörtern in `sections[].keywords`. Schlagwörter
+werden ohne Beachtung der Großschreibung als ganze Wörter im Titel gesucht.
+Ohne Treffer greift `default` (Allgemein). Polizei Steiermark und der
+Steiermark-Feed der Kleinen Zeitung sind Lokales zugeordnet. Dies ist eine
+regelbasierte Vorbereitung; die Zuordnung sollte redaktionell geprüft werden.

@@ -15,6 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
+          # The concurrency lock is acquired before checkout. Read the newest
+          # publication even if this scheduled event waited in the queue.
+          ref: ${{ github.ref_name }}
           persist-credentials: true
       - name: Load private configuration
         env:
@@ -94,12 +97,12 @@ jobs:
           command -v espeak-ng
           ffmpeg -version | head -n 1
           espeak-ng --version
-      - name: Smoke-test FFmpeg intro modes
-        if: steps.schedule.outputs.due == 'true'
-        run: python3 -m unittest discover -s tests -p test_video_smoke.py -v
       - name: Install neural speech engine
         if: steps.schedule.outputs.due == 'true'
         run: python3 -m pip install --disable-pip-version-check --prefer-binary piper-tts Pillow
+      - name: Smoke-test FFmpeg intro modes
+        if: steps.schedule.outputs.due == 'true'
+        run: python3 -m unittest discover -s tests -p test_video_smoke.py -v
       - name: Install offline AI image upscaler
         if: steps.schedule.outputs.due == 'true'
         run: |
@@ -148,9 +151,22 @@ jobs:
           node --version
           npm install --global --no-audit --no-fund rdrr@0.7.0
           rdrr --help >/dev/null
-      - name: Generate latest bulletin
+      - name: Store RSS messages from the last 24 hours
         if: steps.schedule.outputs.due == 'true'
-        run: python3 scripts/generate.py
+        run: |
+          rm -f docs/editorial-report.json
+          python3 scripts/collect_news.py
+      - name: Generate latest bulletin
+        id: production
+        if: steps.schedule.outputs.due == 'true'
+        run: |
+          rm -f docs/latest.mp4
+          python3 scripts/generate.py
+          test -s docs/latest.mp4
+          ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 docs/latest.mp4 | grep -q .
+      - name: Mark the approved broadcast groups in the news store
+        if: steps.schedule.outputs.due == 'true'
+        run: python3 scripts/collect_news.py --annotations-only
       - name: Sync public configuration for settings page
         if: steps.schedule.outputs.due == 'true'
         env:
@@ -177,17 +193,14 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_ID_SECONDARY: ${{ secrets.TELEGRAM_CHAT_ID_SECONDARY }}
           PUBLIC_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: python3 scripts/publish_telegram.py
-      - name: Persist Telegram deletion schedule
-        if: steps.schedule.outputs.due == 'true' && success()
-        run: |
-          if [ -f telegram_sent.json ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add telegram_sent.json
-            if ! git diff --cached --quiet; then
-              git commit -m "Record Telegram messages for 25-hour expiry"
-              git push
-            fi
-          fi
+      - name: Preserve editorial audit even when no story is approved
+        if: always() && (steps.production.outcome == 'success' || steps.production.outcome == 'failure')
+        uses: actions/upload-artifact@v6
+        with:
+          name: editorial-source-check
+          path: docs/editorial-report.json
+          if-no-files-found: ignore
+          retention-days: 14
