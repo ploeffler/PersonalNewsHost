@@ -147,5 +147,8 @@
   "article_enrichment": {
     "enabled": true,
     "max_fetches_per_run": 24
+  },
+  "production": {
+    "parallel_workers": 2
   }
 }
