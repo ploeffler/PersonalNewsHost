@@ -8,6 +8,7 @@ on:
       - scripts/video_branding.py
       - scripts/short_update_video.py
       - assets/logo-video.png
+      - scripts/article_enrichment.py
       - scripts/collect_news.py
       - scripts/short_updates.py
       - scripts/publish_short_updates_telegram.py
@@ -51,6 +52,7 @@ jobs:
           python3 -m unittest discover -s tests -p "test_short_updates*.py"
           python3 -m unittest discover -s tests -p test_telegram.py
           python3 -m unittest discover -s tests -p test_collect_news.py
+          python3 -m unittest discover -s tests -p test_article_enrichment.py
       - name: Create updates and expire old entries
         run: python3 scripts/short_updates.py
       - name: Store RSS messages from the last 24 hours

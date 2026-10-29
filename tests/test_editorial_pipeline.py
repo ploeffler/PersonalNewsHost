@@ -41,6 +41,11 @@ class EditorialPipelineTests(unittest.TestCase):
             self.assertTrue(body.endswith('second.org.' if len(items)>1 else 'example.org.'))
             self.assertEqual(p.verify(draft,items,report['sources'])['status'],'approved')
 
+    def test_classified_puzzles_are_reported_separately_from_failed_source_checks(self):
+        item=article('s','Smart Sudoku sehr schwierig 776b','');item.update(content_kind='non_news',exclusion_reason='puzzle')
+        report=p.prepare(stored([item]),NOW)
+        self.assertFalse(report['groups']);self.assertEqual(report['excluded_articles'][0]['reason'],'puzzle')
+
     def test_question_headline_is_not_changed_to_a_statement(self):
         item=article('q','Ist die Strecke in München wieder frei?', 'Die Bahnstrecke bleibt bis zum Abend gesperrt.')
         draft=p.prepare(stored([item]),NOW)['groups'][0]['draft']
