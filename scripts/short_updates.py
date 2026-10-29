@@ -77,6 +77,8 @@ def main():
     old_ids = {u['id'] for u in state.get('updates', [])}
     media_dir = ROOT / 'docs' / 'short-update-audio'
     media_dir.mkdir(exist_ok=True)
+    video_dir = ROOT / "docs" / "short-update-video"
+    video_dir.mkdir(exist_ok=True)
     for update in result['updates']:
         if update['id'] not in old_ids:
             update['text'] = news.edit_news(update['title'], update['description'], 'classic', 3, 900)
@@ -90,11 +92,28 @@ def main():
                     update['audio'] = 'short-update-audio/' + audio.name
                 except Exception as exc:
                     print(f'Speech unavailable: {type(exc).__name__}')
+        if update.get('audio') and re.fullmatch(r'short-update-audio/[a-f0-9]{24}\.wav', update['audio']):
+            video = video_dir / (update['id'] + '.mp4')
+            if not video.is_file():
+                try:
+                    try:
+                        from scripts.short_update_video import render_short_update
+                    except ModuleNotFoundError:
+                        from short_update_video import render_short_update
+                    render_short_update(update, ROOT / 'docs' / update['audio'], video, ROOT, news.CONFIG)
+                except Exception as exc:
+                    print(f'Short-update video unavailable: {type(exc).__name__}')
+            if video.is_file():
+                update['video'] = 'short-update-video/' + video.name
         update.pop('description', None)
     keep = {u.get('audio') for u in result['updates']}
     for audio in media_dir.glob('*.wav'):
         if 'short-update-audio/' + audio.name not in keep:
             audio.unlink()
+    keep_videos = {u.get('video') for u in result['updates']}
+    for video in video_dir.glob('*.mp4'):
+        if 'short-update-video/' + video.name not in keep_videos:
+            video.unlink()
     state_path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
     path.write_text(json.dumps({'updated_at': now, 'updates': result['updates']}, ensure_ascii=False, indent=2) + '\n')
 

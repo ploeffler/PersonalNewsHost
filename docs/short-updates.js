@@ -23,7 +23,9 @@ function render() {
       const source = document.createElement('a'); source.href = u.url;
       source.textContent = 'Quelle: ' + u.source; source.rel = 'noopener noreferrer'; article.append(source);
     }
-    if (/^short-update-audio\/[a-f0-9]{24}\.wav$/.test(u.audio || '')) {
+    if (/^short-update-video\/[a-f0-9]{24}\.mp4$/.test(u.video || '')) {
+      const video = document.createElement('video'); video.controls = true; video.preload = 'none'; video.src = u.video; video.style.width = '100%'; article.append(video);
+    } else if (/^short-update-audio\/[a-f0-9]{24}\.wav$/.test(u.audio || '')) {
       const audio = document.createElement('audio'); audio.controls = true; audio.preload = 'none'; audio.src = u.audio; article.append(audio);
     }
     container.append(article);

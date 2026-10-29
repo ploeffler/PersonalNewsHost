@@ -1,0 +1,4 @@
+Tool: built-in image_gen (background-extraction), transparent_background=true.
+Input: assets/logo.png
+
+Use case: background-extraction. Edit target: provided Personal NewsHost sender logo. Remove only the dark blue square background outside the emblem silhouette so it is actually transparent. Preserve the entire globe, outer luminous circular ring, orange orbit, newspaper icons, blue head, and the exact existing Personal NewsHost lettering, red banners and white play triangle. Keep all colors, proportions and visual identity unchanged. No extra words, no redesign, no new backdrop, no checkerboard painted in. Produce a clean alpha cutout appropriate as a small corner watermark in video, with transparent outer corners and no opaque rectangular background.

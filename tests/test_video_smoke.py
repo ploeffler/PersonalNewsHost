@@ -30,7 +30,7 @@ class VideoSmokeTests(unittest.TestCase):
                 logo = Image.new("RGBA", (160, 90), (0, 0, 0, 0))
                 logo.paste((255, 0, 0, 255), (80, 0, 160, 90))
                 if station_logo == "default":
-                    logo.save(root / "assets/logo.png")
+                    logo.save(root / "assets/logo-video.png")
                     cfg.pop("station_logo")
                 else:
                     logo.save(root / "assets/station-logo.png")
