@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 12,
+  "revision": 13,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -710,7 +710,7 @@
       "id": "T072",
       "epic": "E7",
       "title": "Testabdeckung und CI",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T002"
       ],
@@ -725,7 +725,19 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A01",
-      "lease": null,
+      "lease": {
+        "client": "codex-t072",
+        "token": "a5596a76033443a290539bce45202ef6",
+        "expires_at": 1793325441.5012813,
+        "files": [
+          ".github/workflows/foundation-ci.yml",
+          ".github/workflows/render-regression.yml",
+          "scripts/check_repository.py",
+          "tests/fixtures/offline-feeds/",
+          "tests/test_offline_outputs.py",
+          "tests/test_repository_checks.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [
@@ -5366,6 +5378,15 @@
       "client": "codex-t072",
       "at": 1793311038.9768348,
       "note": "Pending repository checker and two tests integrated as isolated baseline. Local foundation workflow remains an unpublished reference; other 0.1 changes excluded."
+    },
+    {
+      "operation_id": "f913c11a411f4373b42f591bbdc502df",
+      "revision": 13,
+      "action": "claim",
+      "task": "T072",
+      "client": "codex-t072",
+      "at": 1793311041.5012813,
+      "note": ""
     }
   ]
 }
