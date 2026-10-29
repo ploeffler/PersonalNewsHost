@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 15,
+  "revision": 16,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -710,7 +710,7 @@
       "id": "T072",
       "epic": "E7",
       "title": "Testabdeckung und CI",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T002"
       ],
@@ -725,19 +725,7 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A01",
-      "lease": {
-        "client": "codex-t072",
-        "token": "a5596a76033443a290539bce45202ef6",
-        "expires_at": 1793326741.2254498,
-        "files": [
-          ".github/workflows/foundation-ci.yml",
-          ".github/workflows/render-regression.yml",
-          "scripts/check_repository.py",
-          "tests/fixtures/offline-feeds/",
-          "tests/test_offline_outputs.py",
-          "tests/test_repository_checks.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-t072",
         "commit": "ed35ad980abb82df0961b4dc44e6e0f025013707",
@@ -749,11 +737,14 @@
           "tests/fixtures/offline-feeds/",
           "tests/test_offline_outputs.py",
           "tests/test_repository_checks.py"
-        ]
+        ],
+        "reviewer": "human-ploeffler",
+        "decision": "Repository owner explicitly approved PR #171 freigeben und integrieren after green CI. Executed on behalf of human reviewer; automated independent review could not start due usage limit. 255 offline tests, both GitHub checks and namespace proof pass. No version release implied."
       },
       "local_work_pending": false,
       "evidence": [
-        "b9381bb8cf2012751396af875c0e85ce3f93e936"
+        "ed35ad980abb82df0961b4dc44e6e0f025013707",
+        "255 local offline Python tests; Ruff and JS contracts pass. GitHub foundation https://github.com/ploeffler/PersonalNewsHost/actions/runs/40965067713 and render https://github.com/ploeffler/PersonalNewsHost/actions/runs/40965067875 both SUCCESS, OS network namespace verified."
       ],
       "implementation_note": "",
       "coordination_note": "Pending repository checker and two tests integrated as isolated baseline. Local foundation workflow remains an unpublished reference; other 0.1 changes excluded."
@@ -5417,6 +5408,15 @@
       "client": "codex-t072",
       "at": 1793312550.3623545,
       "note": "PR #171 integrated following explicit human approval in this conversation."
+    },
+    {
+      "operation_id": "9a0ae9a01d6d464598652a0e28cb2a6a",
+      "revision": 16,
+      "action": "complete",
+      "task": "T072",
+      "client": "human-ploeffler",
+      "at": 1793312552.8990743,
+      "note": "Repository owner explicitly approved PR #171 freigeben und integrieren after green CI. Executed on behalf of human reviewer; automated independent review could not start due usage limit. 255 offline tests, both GitHub checks and namespace proof pass. No version release implied."
     }
   ]
 }
