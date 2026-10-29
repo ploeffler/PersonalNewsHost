@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 2,
+  "revision": 3,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -25,7 +25,7 @@
       "lease": {
         "client": "codex-t001",
         "token": "5d6de00d6e3a4f8ba47e85cf127becb2",
-        "expires_at": 1793323592.0477993,
+        "expires_at": 1793323766.6314604,
         "files": [
           "docs/guide/architektur-ist.md"
         ]
@@ -5257,6 +5257,15 @@
       "client": "codex-t001",
       "at": 1793309192.0477993,
       "note": ""
+    },
+    {
+      "operation_id": "20a2a9c16b31408ab5745198f689dd19",
+      "revision": 3,
+      "action": "heartbeat",
+      "task": "T001",
+      "client": "codex-t001",
+      "at": 1793309366.6314604,
+      "note": "Implementation published as PR https://github.com/ploeffler/PersonalNewsHost/pull/169 targeting Full-featured-Newsoutlet; commit 8c5a90af7724a8240295e62d2fdda51d5ac9f504. Coverage: 40 scripts, 43 tests, 34 workflows, 197 config paths; links/diff checks and 22 coordination tests pass. Await independent PR review/integration; do not complete task or release 0.1 yet."
     }
   ]
 }
