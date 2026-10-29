@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 24,
+  "revision": 25,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1007,7 +1007,7 @@
       "id": "T100",
       "epic": "E9",
       "title": "Provider-Interface, Registry und Mock-Provider",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T002"
       ],
@@ -1039,7 +1039,20 @@
           "tests/test_configured_providers.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-t100",
+        "commit": "fb5a7f2557f4863981131fca75ea58b602b4f626",
+        "checks": "276 local offline tests and lint/link/secret checks pass. GitHub foundation SUCCESS https://github.com/ploeffler/PersonalNewsHost/actions/runs/40971149183 ; render SUCCESS https://github.com/ploeffler/PersonalNewsHost/actions/runs/40971149194 . Independent t072_review approved final implementation.",
+        "files": [
+          "config.example.json",
+          "config.schema.json",
+          "scripts/configured_providers.py",
+          "scripts/provider_runtime.py",
+          "scripts/run_provider.py",
+          "scripts/validate_config.py",
+          "tests/test_configured_providers.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [
         "scripts/provider_runtime.py",
@@ -5526,6 +5539,15 @@
       "client": "codex-t100",
       "at": 1793315452.5222042,
       "note": "PR https://github.com/ploeffler/PersonalNewsHost/pull/173 head acb6c0bfbaf2d0856f9aae04cb69be4fb5879f1c. 276 offline tests, lint/link/secret checks pass; independent t072_review recommends approval after rate-attempt fix. Await GitHub foundation/render checks before integration and independent completion."
+    },
+    {
+      "operation_id": "b2439626ff7344f787439d3f5a6eb71a",
+      "revision": 25,
+      "action": "submit",
+      "task": "T100",
+      "client": "codex-t100",
+      "at": 1793315530.09587,
+      "note": "PR #173 merged into development branch after independent review and both CI checks."
     }
   ]
 }
