@@ -1,11 +1,11 @@
 # Playlist auf der Hauptseite
 
-Die Hauptseite zeigt rechts neben dem Player eine zeitlich aufsteigende Playlist:
+Die Hauptseite zeigt rechts neben dem Player eine Playlist mit den neuesten Beiträgen zuerst:
 
-1. Vorletzte Sendung.
-2. Noch vorhandene Kurzupdates zwischen den beiden Sendungen.
-3. Neueste Sendung.
-4. Noch vorhandene Kurzupdates seit der neuesten Sendung.
+1. Noch vorhandene Kurzupdates seit der neuesten Sendung, neueste zuerst.
+2. Neueste Sendung.
+3. Noch vorhandene Kurzupdates zwischen den beiden Sendungen, neueste zuerst.
+4. Vorletzte Sendung.
 
 Beim Öffnen ist die neueste Sendung ausgewählt. Ein Klick wechselt den Player und die Quellen. Für Sendungen gehören auch Transkript und Untertitel zur ausgewählten Ausgabe. Kurzupdates verwenden ihre vorhandene Audiodatei; reine Textupdates zeigen den Text im Playerbereich. Die Kennzeichnung VIDEO, AUDIO oder TEXT macht das Format sichtbar. Auf kleinen Bildschirmen steht die Playlist unter dem Player.
 

@@ -10,7 +10,7 @@
       .sort((a,b) => b.created_at-a.created_at).slice(0,5);
     return [...longs.map((b,i) => ({...b,kind:'broadcast',label:i === longs.length-1 ? 'Neueste Sendung' : 'Vorherige Sendung'})),
       ...shorts.map(u => ({...u,kind:'update',label:'Kurzupdate'}))]
-      .sort((a,b) => a.created_at-b.created_at || (a.kind === 'broadcast' ? -1 : 1));
+      .sort((a,b) => b.created_at-a.created_at || (a.kind === 'broadcast' ? -1 : 1));
   }
   if (typeof module !== 'undefined' && module.exports) module.exports = {buildItems, asset};
   if (!root.document) return;
@@ -77,7 +77,7 @@
     }
     if(!items.length){const li=document.createElement('li');li.className='playlist-empty';li.textContent='Noch keine gespeicherten Beiträge.';list.append(li);}
     const current=items.find(item=>key(item)===selected);
-    if(!current){const latest=items.filter(i=>i.kind==='broadcast').at(-1);if(latest)select(latest,false);else if(selected){video.pause();audio.pause();audio.hidden=true;text.hidden=false;text.textContent='Dieses Kurzupdate ist abgelaufen.';selected=null;}}
+    if(!current){const latest=items.find(i=>i.kind==='broadcast');if(latest)select(latest,false);else if(selected){video.pause();audio.pause();audio.hidden=true;text.hidden=false;text.textContent='Dieses Kurzupdate ist abgelaufen.';selected=null;}}
     if(focusKey){const button=[...list.querySelectorAll('button')].find(b=>b.dataset.key===focusKey);if(button)button.focus({preventScroll:true});}
   }
   async function refresh(){
