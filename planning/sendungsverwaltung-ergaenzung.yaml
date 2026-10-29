@@ -1,0 +1,232 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  scope: Wiederkehrende Showproduktion und avatarfreie Ausgabe ohne Host/Gast
+  status: planned
+tasks:
+- id: T250
+  epic: E22
+  title: Sendungsverwaltung und wiederkehrende Produktionspläne
+  status: todo
+  depends_on:
+  - T010
+  - T070
+  - T180
+  - T240
+  instructions:
+  - Geschützte Showverwaltung zum Erstellen, Bearbeiten, Duplizieren, Aktivieren und
+    Pausieren von Sendungen bereitstellen.
+  - Je Show Name, Format, Rubriken/Quellen, Zieldauer, Studio, optionale Hosts und
+    Gäste, Ausgaben sowie wiederkehrenden Produktionsplan konfigurieren.
+  - Zeitpläne mit Zeitzone, Uhrzeit, Wochentagen und Startdatum; tägliche und wöchentliche
+    Wiederholung sowie mehrere Termine unterstützen. Nächste Ausführungen in Vorschau
+    anzeigen.
+  - 'Sommer-/Winterzeit, verpasste Termine, Überschneidungen und maximal gleichzeitige
+    Produktionen verbindlich behandeln. Standard: verpasste Läufe nicht unbegrenzt
+    nachholen; denselben Termin nicht doppelt produzieren.'
+  - Produktionstermin und Veröffentlichungstermin getrennt konfigurieren. Standard
+    ist interne archivierte Produktion ohne Veröffentlichung; Automatik zur Veröffentlichung
+    separat ausdrücklich einrichten und Freigaben prüfen.
+  - Planänderungen versionieren und atomar übernehmen; pausierte Shows erzeugen keine
+    neuen automatischen Jobs. Manuellen Testlauf und Produktionsstatus anbieten.
+  acceptance:
+  - Zwei Shows laufen nach unterschiedlichen wiederkehrenden Plänen; nächste Termine
+    sind nachvollziehbar.
+  - Neustart, doppelte Scheduler-Ausführung und Zeitumstellung verursachen keine unkontrollierten
+    Doppelproduktionen.
+  - Pausieren stoppt neue Termine; laufender Job wird getrennt angezeigt und kontrolliert
+    behandelt.
+- id: T251
+  epic: E22
+  title: Avatarfreie Produktion bei fehlenden Hosts und Gästen
+  status: todo
+  depends_on:
+  - T250
+  - T151
+  - T243
+  instructions:
+  - Hosts und Gäste als optionale Avatarzuordnungen modellieren. Sind beide Listen
+    leer, gesamten Lauf ohne Avatarproduktion ausführen.
+  - Explizit leere neue Zuordnungen nicht durch Standardhost ersetzen. Bei alter Konfiguration
+    ohne neue Zuordnungsfelder vorhandene Moderatorzuordnung gezielt migrieren; danach
+    leere Listen als bewusste Auswahl behandeln.
+  - Avatarfreie Segmente mit Grafiken, Bildern, Clips, Quellen, Untertiteln und geeigneten
+    Studio-/Screenansichten rendern; keine unbesetzten Moderatorenplätze als sichtbaren
+    Pflichtaufbau verwenden.
+  - Sprecherstimme unabhängig von Avatarzuordnung konfigurieren; kein Avatar bedeutet
+    nicht automatisch kein Audio. Nur ein explizit gewähltes Format ohne Sprechertext
+    verzichtet auf TTS.
+  - Keine Avatar-Provider, Rigging- oder Lipsync-Jobs und keine entsprechenden Kosten
+    starten, wenn kein Host/Gast zugeordnet ist. Gäste ohne Host sind zulässig; nur
+    tatsächlich zugeordnete und im Segment eingeplante Avatare rendern.
+  - Ungültige oder deaktivierte referenzierte Avatare als Konfigurationsproblem melden
+    und festgelegten Fallback anwenden, nicht stillschweigend einen anderen Host einsetzen.
+  acceptance:
+  - Show ohne Host und Gast erzeugt ein vollständiges Video ohne Avatarframes oder
+    Avatar-Provideraufrufe.
+  - Nur Host, nur Gast und Host plus Gast werden jeweils gemäß Segmentplan korrekt
+    behandelt.
+  - Avatarfreies Video behält Quellen, KI-Kennzeichnung, Untertitel und konfigurierte
+    Tonspur; Social-Exporte funktionieren ebenfalls.
+- id: T252
+  epic: E22
+  title: Planung, Produktionshistorie und Abnahme
+  status: todo
+  depends_on:
+  - T251
+  - T187
+  - T206
+  - T244
+  instructions:
+  - Showdetail mit Zeitplan, nächsten Läufen, laufenden Jobs, letzter erfolgreicher
+    Ausgabe und Fehlern bereitstellen.
+  - Produktions-, Avatar- und Veröffentlichungskonfiguration konsistent pro Lauf als
+    Snapshot speichern.
+  - Wiederkehrende Produktion und avatarfreie Formate für Linux, Docker und Portainer
+    dokumentieren; Wizard und Vorlagen entsprechend ergänzen.
+  - Fixture-/Scheduler-Tests für tägliche/wöchentliche Pläne, Zeitzonen, Sommerzeit,
+    Pause, Neustart, Überschneidungen und leere Avatarlisten; Ende-zu-Ende-Test mindestens
+    einer avatarfreien Show.
+  acceptance:
+  - Abnahme zeigt wiederkehrende Produktion und gültige Veröffentlichung einer avatarfreien
+    Sendung.
+  - Historische Läufe bleiben den tatsächlich verwendeten Plan-/Studio-/Avatarversionen
+    zugeordnet.
+- id: T253
+  epic: E22
+  title: Bisheriges Ausgabeformat als initiale Newsshow übernehmen
+  status: todo
+  depends_on:
+  - T010
+  - T193
+  - T250
+  instructions:
+  - Das bisherige Ausgabeformat als initiale Show mit stabiler ID main und Anzeigename
+    Newsshow bereitstellen; vorhandene Legacy-Konfiguration ausdrücklich migrieren
+    statt ein beliebiges neues Format zu verwenden.
+  - Bestehende Quellen, Auswahlregeln, Sprache, Dauer-/Mengenlimits, Moderator-/Stimmeinstellungen,
+    Studio, Untertitel, Ausgabewege und Zeitplan soweit vorhanden übernehmen; fehlende
+    Werte aus den bestehenden Projektdefaults ableiten.
+  - Beim ersten Start Show einmalig anlegen und im Wizard vorauswählen. Bei vorhandenen
+    Shows keine zusätzliche Defaultshow erzwingen; Migration und Startinitialisierung
+    idempotent ausführen.
+  - Bereits vorhandene Moderatorzuordnung erhalten. Explizit leere Host-/Gastlisten
+    einer neuen Konfiguration nicht durch einen Standardavatar ersetzen; avatarfreie
+    Produktion nach T251 beibehalten.
+  - Vor Abschluss der Ersteinrichtung keine automatische Produktion oder externe Veröffentlichung
+    auslösen. Nach Abschluss den bestätigten Zeitplan aktivieren; bei Migration bestehender
+    Installationen bisherige Aktivierung berücksichtigen und transparent anzeigen.
+  - Bestehende öffentliche Video-/Feed-URLs kompatibel halten; Archivdaten und Produktionshistorie
+    nicht zurücksetzen. Umbenennen der Show ändert ihre stabile ID nicht.
+  - Migration protokollieren, ursprüngliche Konfiguration sichern und effektive importierte
+    Einstellungen im Wizard anzeigen.
+  acceptance:
+  - Frische Installation zeigt im ersten Wizard eine nutzbare Newsshow auf Basis der
+    bisherigen Projektdefaults.
+  - Legacy-Konfiguration wird mit ihren tatsächlichen Einstellungen übernommen; wiederholte
+    Starts erzeugen keine Duplikate.
+  - Vorhandene Shows und explizit avatarfreie Einstellungen bleiben erhalten.
+  - Fixture-Vergleich bestätigt kompatible Ausgabeplanung und bisherige Video-/Feed-Ziele;
+    keine Produktion vor Ersteinrichtungsabschluss.
+- id: T254
+  epic: E22
+  title: Nachrichtenblock als wiederverwendbarer Sendungsbaustein mit redaktionellem
+    Filter
+  status: todo
+  depends_on:
+  - T011
+  - T012
+  - T052
+  - T125
+  - T151
+  - T250
+  - T253
+  instructions:
+  - Segmenttyp news_block als konfigurierbaren Sendungsbaustein im Formatkatalog und
+    Rundown bereitstellen; wiederverwendbare Blockvorlagen mit stabiler ID und Version
+    verwalten.
+  - Show kann mehrere Nachrichtenblöcke in frei festgelegter Reihenfolge neben Intro,
+    Moderation, Interview, Kommentar und Abspann verwenden. Pro Einbindung Vorlage
+    übernehmen oder explizite lokale Überschreibung speichern.
+  - Je Block redaktionelle Filter für Rubriken/Themen, geografischen Bezug, Quellen-Allow-/Blocklisten,
+    Stichwörter ein-/ausschließen, Veröffentlichungs-/Abrufalter und zulässige Prüf-/Freigabestatus
+    definieren; Kombinationen und Ein-/Ausschlussvorrang eindeutig dokumentieren.
+  - Anzahl Beiträge, Zielzeit, Sortierung und Quellengewichtung konfigurieren. Relevanzbewertung
+    nachvollziehbar halten; Blockfilter ist eine explizite Nachrichtenauswahl, getrennt
+    vom Selbstdarstellungsprofil für Formulierungen.
+  - Zuerst Quellenverbote und Veröffentlichungsgates anwenden; Blockfilter dürfen
+    gesperrte Quellen, zurückgehaltene Beiträge oder fehlende menschliche Freigaben
+    nicht umgehen. Unbekannte Region bzw. Themenzuordnung nicht als bestätigten Treffer
+    ausgeben.
+  - Gemeinsame Meldungsbasis und Themencluster verwenden. Bereits in einem Block verwendete
+    Ereignisse innerhalb derselben Show standardmäßig nicht erneut auswählen; Wiederholung
+    nur ausdrücklich konfigurierbar.
+  - Gefilterte Vorschau mit Treffern, ausgeschlossenen Meldungen samt Gründen, Reihenfolge
+    und geschätzter Dauer im geschützten Showeditor anbieten. Filter-/Blockversion
+    und Auswahlentscheidung pro Produktion speichern.
+  - Bei fehlenden passenden Nachrichten konfigurierbar Block überspringen, gekennzeichneten
+    Leerhinweis verwenden oder Produktion abbrechen; keine automatische Lockerung
+    des Filters. Mindestmengen-/Qualitätsregeln bleiben wirksam.
+  - Bisherigen Nachrichtenabschnitt der initialen Newsshow als erste news_block-Vorlage
+    übernehmen. Host-/Gastzuordnung optional; ohne Avatare Nachrichtengrafiken und
+    konfigurierte Sprecherstimme verwenden.
+  - Tests für mehrere gefilterte Blöcke, widersprüchliche Regeln, unbekannte Metadaten,
+    Duplikate, leere Trefferlisten und unveränderte Prüf-/Freigabegates ergänzen.
+  acceptance:
+  - Eine Show enthält mindestens zwei Nachrichtenblöcke mit unterschiedlichen redaktionellen
+    Filtern und reproduzierbarer Auswahl.
+  - Gesperrte oder nicht freigegebene Meldungen gelangen auch bei passendem Blockfilter
+    nicht in die Ausgabe.
+  - Initiale Newsshow verwendet den importierten Nachrichtenblock; bestehende Ausgabe
+    bleibt kompatibel.
+  - Block funktioniert mit und ohne Avatar; keine stillschweigende Filterlockerung
+    oder Ereignisduplizierung.
+- id: T255
+  epic: E22
+  title: Studiogespräch mit Newshost und konfigurierbarer Gästezahl
+  status: todo
+  depends_on:
+  - T153
+  - T230
+  - T242
+  - T250
+  instructions:
+  - 'Wiederverwendbaren Segmenttyp studio_conversation bereitstellen: genau ein zugeordneter
+    Newshost und eine konfigurierbare Liste mit einem oder mehreren Gästen. Gästezahl
+    ergibt sich aus der Liste, keine feste Zweierbegrenzung.'
+  - Teilnehmer als bestehende Avatar-/Mitarbeiteridentitäten wählen; eigene Stimme,
+    Gesprächsrolle und Themenposition pro Teilnehmer zuordnen. Keine realen Personen
+    oder erfundenen Originalzitate nachbilden.
+  - Studio, Sitz-/Stehplatz und Kameraziele für alle Teilnehmer zuordnen. Zahl gleichzeitig
+    sichtbarer Teilnehmer gegen Studiokapazität und Renderer prüfen; fehlende Plätze
+    oder nicht unterstützte Konstellationen vor Produktion melden.
+  - Thema, Quellenbasis, Fragen-/Gesprächsleitfaden, Zieldauer, Reihenfolge, Redezeitbudgets
+    und Schlusszusammenfassung konfigurieren. Manuell vorgegebene Dialoge und optionale
+    KI-generierte Dialoge unterscheiden.
+  - Host übernimmt Einleitung, Fragen, Übergaben und Abschluss. Sprecherwechsel als
+    zeitliche Dialogsegmente mit zugeordnetem Audio und Avatar speichern; unkontrolliertes
+    gleichzeitiges Sprechen vermeiden.
+  - Kameraplan aus Totale, Hostansicht, Gastnahaufnahme und Gruppenansichten erzeugen;
+    deterministische Regeln und manuelle Überschreibung unterstützen. Nur sprechende
+    Avatare benötigen Lippenanimation; Zuhörer entsprechend unterstützter Renderfähigkeit
+    darstellen.
+  - Generierte Aussagen an Quellen binden, Rollenpositionen transparent halten und
+    Meinung/Analyse von Nachricht trennen; Gespräch ausdrücklich als synthetisch kennzeichnen.
+    Prüf-/Freigabegates vor Veröffentlichung anwenden.
+  - Falls Host oder Gäste fehlen, Gesprächsblock als unvollständig melden und konfigurierte
+    Skip-/Abbruchregel anwenden; keine Avatare automatisch erfinden. Allgemeine avatarfreie
+    Videoproduktion bleibt für andere Blocktypen erhalten.
+  - Showeditor und Wizard um Teilnehmerliste, Plätze, Leitfaden, Vorschau und geschätzte
+    Gesamtdauer ergänzen. Ressourcenlimits und maximale unterstützte Besetzung sichtbar
+    machen.
+  - Tests mit einem, zwei und mehreren Gästen anhand ausgewiesener Renderer-/Studiokapazität;
+    Sprecher-/Stimmzuordnung, Kameras, Quellen, Kennzeichnung, Laufzeit und fehlende
+    Teilnehmer prüfen.
+  acceptance:
+  - Eine Show kann einen Nachrichtenblock und danach ein Studiogespräch mit Host und
+    konfigurierten Gästen enthalten.
+  - Referenzproduktionen mit einem und zwei Gästen funktionieren; größere Besetzung
+    hat expliziten geprüften Unterstützungsstatus und nachvollziehbare Grenzen.
+  - Dialog, Audio, Avatar und Kameraziel stimmen je Sprecherwechsel überein.
+  - Ungültige Besetzung, fehlende Plätze oder unzulässige Aussagen werden vor Veröffentlichung
+    abgefangen.

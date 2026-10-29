@@ -1,0 +1,642 @@
+meta:
+  date: '2026-10-29'
+  task_count: 140
+  package_count: 44
+  note: Versionen bezeichnen vollständige Aufgabenabnahme. Paketzuordnung kann mehrere
+    Versionen umfassen. Zeitplan noch nicht geschätzt.
+  dependency_policy: Alle maschinenlesbaren depends_on erfüllt spätestens in derselben
+    Version; innerhalb der Version topologisch umsetzen. Zusätzliche Freigaberegeln
+    gelten vor öffentlichem Release.
+releases:
+- version: '0.1'
+  title: Fundament und Nachrichtenauswahl
+  status: planned
+  tasks:
+  - T001
+  - T002
+  - T010
+  - T011
+  - T012
+  - T052
+  - T072
+  - T073
+  - T100
+  - T101
+  - T103
+  - T104
+  - T130
+  - T135
+  packages:
+  - A00
+  - A01
+  - A02
+  - A03
+  exit_criteria: Schema, CI, Provider-Mocks und deterministische Nachrichtenauswahl
+    sind geprüft; keine Produktion externer Inhalte.
+- version: '0.2'
+  title: Linux/Docker, gesicherter Betrieb und Archiv
+  status: planned
+  tasks:
+  - T013
+  - T020
+  - T021
+  - T022
+  - T030
+  - T031
+  - T032
+  - T050
+  - T051
+  - T060
+  - T061
+  - T062
+  - T063
+  - T070
+  - T071
+  - T124
+  - T180
+  - T181
+  - T182
+  - T183
+  - T184
+  - T185
+  - T186
+  - T188
+  - T189
+  - T190
+  - T191
+  - T192
+  - T260
+  packages:
+  - A04
+  - A05
+  - A06
+  - A07
+  - A09
+  - A18
+  - A19
+  - A20
+  - A21
+  - A27
+  - A35
+  exit_criteria: Linux- und Docker-Basis, HTTPS 443/8444, Login und persistentes Archiv
+    sind technisch geprüft. Noch kein vollständiger neuer Produktionsbetrieb.
+- version: '0.3'
+  title: Redaktionskern, Belege und Pluginvertrag
+  status: planned
+  tasks:
+  - T102
+  - T110
+  - T111
+  - T112
+  - T113
+  - T114
+  - T120
+  - T121
+  - T122
+  - T123
+  - T125
+  - T126
+  - T127
+  - T128
+  - T129
+  - T132
+  - T150
+  - T151
+  - T270
+  packages:
+  - A10
+  - A11
+  - A12
+  - A14
+  - A36
+  exit_criteria: Redaktionsworkflow und beleggestütztes Routing laufen mit Fixtures;
+    Pluginvertrag und Rundown sind definiert.
+- version: '0.4'
+  title: Konfiguration, Selbstdarstellung, Wizard und Rechte
+  status: planned
+  tasks:
+  - T115
+  - T131
+  - T133
+  - T134
+  - T193
+  - T194
+  - T210
+  - T211
+  - T212
+  - T215
+  - T220
+  - T221
+  - T222
+  - T320
+  - T321
+  - T322
+  packages:
+  - A13
+  - A25
+  - A26
+  - A28
+  - A29
+  - A41
+  exit_criteria: Geschützte Konfiguration, Wizard, Mitarbeiterrechte und Profilkontext
+    funktionieren mit Mocks; lokale/Cloud-Dienste explizit konfigurierbar.
+- version: '0.5'
+  title: Avatare und Studiogestaltung
+  status: planned
+  tasks:
+  - T140
+  - T152
+  - T160
+  - T161
+  - T162
+  - T163
+  - T164
+  - T165
+  - T166
+  - T167
+  - T168
+  - T230
+  - T231
+  - T232
+  - T240
+  - T241
+  - T242
+  packages:
+  - A15
+  - A16
+  - A30
+  - A32
+  exit_criteria: Avatar-/Studiowizards und 3D-Upload zeigen ihre tatsächlichen Fähigkeiten;
+    Fallbacks sind nutzbar.
+- version: '0.6'
+  title: Modulare Shows und gekennzeichnete Produktion
+  status: planned
+  tasks:
+  - T153
+  - T233
+  - T234
+  - T243
+  - T250
+  - T251
+  - T253
+  - T254
+  - T255
+  - T271
+  - T272
+  packages:
+  - A14
+  - A31
+  - A33
+  - A34
+  - A36
+  exit_criteria: Initiale Newsshow, gefilterte Nachrichten- und Gesprächsplugins sowie
+    Studio-/Kameraproduktion funktionieren; alle finalen Ausgaben tragen AI und werden
+    archiviert.
+- version: '0.7'
+  title: Weitere Medien und Ausgabekanäle
+  status: planned
+  tasks:
+  - T040
+  - T041
+  - T042
+  - T043
+  - T141
+  - T142
+  - T143
+  - T144
+  - T145
+  - T200
+  - T201
+  - T202
+  - T213
+  - T214
+  - T244
+  - T280
+  - T300
+  - T310
+  packages:
+  - A08
+  - A15
+  - A22
+  - A26
+  - A33
+  - A37
+  - A39
+  - A40
+  exit_criteria: Uploadvideo, zusätzliche Feeds und Medienexporte sind geprüft; optionale
+    generative Clips erfüllen Budget-/Kennzeichnungsregeln.
+- version: '0.8'
+  title: Kurzvideos, Sequenzen und Social-Veröffentlichung
+  status: planned
+  tasks:
+  - T203
+  - T204
+  - T205
+  - T206
+  - T290
+  - T291
+  - T292
+  - T301
+  - T302
+  packages:
+  - A23
+  - A24
+  - A38
+  - A39
+  exit_criteria: Mitarbeiter-Kurzvideos aus Clustern/Uploads, wiederverwendbare Intros/Outros
+    und verfügbare Social-Publisher sind abgenommen.
+- version: '0.9'
+  title: Getrennte Veröffentlichung, Kosten und Betriebsabnahme
+  status: planned
+  tasks:
+  - T187
+  - T252
+  - T330
+  - T340
+  - T341
+  packages:
+  - A20
+  - A34
+  - A42
+  - A43
+  exit_criteria: Produktion und Veröffentlichung strikt getrennt; Zeitpläne, Kostenvorschau,
+    Rechte und Wiederaufnahme sind im Gesamtsystem geprüft.
+- version: '1.0'
+  title: Stabilisierung, Migration und Gesamtabnahme
+  status: planned
+  tasks:
+  - T080
+  - T081
+  packages:
+  - A17
+  exit_criteria: Migration und vollständiger Mock-/Fallback-Abnahmelauf bestanden;
+    reale Integrationen haben einen dokumentierten individuellen Prüfstatus.
+package_release_spans:
+- package: A00
+  title: Bestand und Schnittstellen
+  versions:
+  - '0.1'
+  tasks:
+    T001: '0.1'
+- package: A01
+  title: Schema, CI und Sicherheit
+  versions:
+  - '0.1'
+  tasks:
+    T002: '0.1'
+    T072: '0.1'
+    T073: '0.1'
+- package: A02
+  title: Provider-Grundlage ohne externe Aufrufe
+  versions:
+  - '0.1'
+  tasks:
+    T100: '0.1'
+    T101: '0.1'
+    T103: '0.1'
+    T104: '0.1'
+    T130: '0.1'
+    T135: '0.1'
+- package: A03
+  title: Shows und Nachrichtenauswahl
+  versions:
+  - '0.1'
+  tasks:
+    T010: '0.1'
+    T011: '0.1'
+    T012: '0.1'
+    T052: '0.1'
+- package: A04
+  title: Veröffentlichung und Betrieb absichern
+  versions:
+  - '0.2'
+  tasks:
+    T051: '0.2'
+    T070: '0.2'
+    T071: '0.2'
+- package: A05
+  title: Artikel und Herkunftsnachweise
+  versions:
+  - '0.2'
+  tasks:
+    T020: '0.2'
+    T050: '0.2'
+    T062: '0.2'
+    T124: '0.2'
+- package: A06
+  title: Eilmeldungen und Webnavigation
+  versions:
+  - '0.2'
+  tasks:
+    T013: '0.2'
+    T021: '0.2'
+    T022: '0.2'
+    T032: '0.2'
+- package: A07
+  title: Archiv und Suche
+  versions:
+  - '0.2'
+  tasks:
+    T030: '0.2'
+    T031: '0.2'
+- package: A08
+  title: Feeds und weitere Ausgabekanäle
+  versions:
+  - '0.7'
+  tasks:
+    T040: '0.7'
+    T041: '0.7'
+    T042: '0.7'
+    T043: '0.7'
+- package: A09
+  title: Präsentation und Untertitel
+  versions:
+  - '0.2'
+  tasks:
+    T060: '0.2'
+    T061: '0.2'
+    T063: '0.2'
+- package: A10
+  title: Virtuelle Redaktion und Planung
+  versions:
+  - '0.3'
+  tasks:
+    T110: '0.3'
+    T111: '0.3'
+    T112: '0.3'
+    T113: '0.3'
+    T114: '0.3'
+- package: A11
+  title: Anbieterprüfung und Beleggewinnung
+  versions:
+  - '0.3'
+  tasks:
+    T102: '0.3'
+    T120: '0.3'
+    T121: '0.3'
+    T122: '0.3'
+    T123: '0.3'
+- package: A12
+  title: Bewertung, Freigabe und Korrekturen
+  versions:
+  - '0.3'
+  tasks:
+    T132: '0.3'
+    T125: '0.3'
+    T126: '0.3'
+    T127: '0.3'
+    T128: '0.3'
+    T129: '0.3'
+- package: A13
+  title: Texterstellung und Analyseformate
+  versions:
+  - '0.4'
+  tasks:
+    T131: '0.4'
+    T133: '0.4'
+    T134: '0.4'
+    T115: '0.4'
+- package: A14
+  title: Formate und Segmentproduktion
+  versions:
+  - '0.3'
+  - '0.6'
+  tasks:
+    T150: '0.3'
+    T151: '0.3'
+    T153: '0.6'
+- package: A15
+  title: Optionale externe Videoclips
+  versions:
+  - '0.5'
+  - '0.7'
+  tasks:
+    T140: '0.5'
+    T141: '0.7'
+    T142: '0.7'
+    T143: '0.7'
+    T144: '0.7'
+    T145: '0.7'
+- package: A16
+  title: Avatare, Stimmen und Korrespondenten
+  versions:
+  - '0.5'
+  tasks:
+    T160: '0.5'
+    T161: '0.5'
+    T163: '0.5'
+    T164: '0.5'
+    T162: '0.5'
+    T165: '0.5'
+    T166: '0.5'
+    T167: '0.5'
+    T168: '0.5'
+    T152: '0.5'
+- package: A17
+  title: Migration und Gesamtabnahme
+  versions:
+  - '1.0'
+  tasks:
+    T080: '1.0'
+    T081: '1.0'
+- package: A18
+  title: Linux-Installation und Dienst
+  versions:
+  - '0.2'
+  tasks:
+    T180: '0.2'
+    T181: '0.2'
+    T182: '0.2'
+- package: A19
+  title: Docker, CLI und Portainer
+  versions:
+  - '0.2'
+  tasks:
+    T183: '0.2'
+    T184: '0.2'
+    T185: '0.2'
+- package: A20
+  title: Persistenz und Betriebsabnahme
+  versions:
+  - '0.2'
+  - '0.9'
+  tasks:
+    T186: '0.2'
+    T187: '0.9'
+- package: A21
+  title: Admin-Authentifizierung der Konfiguration
+  versions:
+  - '0.2'
+  tasks:
+    T188: '0.2'
+    T189: '0.2'
+    T190: '0.2'
+- package: A22
+  title: Social-Media-Profile und Export
+  versions:
+  - '0.7'
+  tasks:
+    T200: '0.7'
+    T201: '0.7'
+    T202: '0.7'
+- package: A23
+  title: Optionale Social-Media-Publisher
+  versions:
+  - '0.8'
+  tasks:
+    T203: '0.8'
+    T204: '0.8'
+- package: A24
+  title: Social-Media-Korrekturen und Abnahme
+  versions:
+  - '0.8'
+  tasks:
+    T205: '0.8'
+    T206: '0.8'
+- package: A25
+  title: 'Selbstdarstellung: Datenmodell und Konfigurationsseite'
+  versions:
+  - '0.4'
+  tasks:
+    T210: '0.4'
+    T211: '0.4'
+- package: A26
+  title: 'Selbstdarstellung: Textkontext und Abnahme'
+  versions:
+  - '0.4'
+  - '0.7'
+  tasks:
+    T212: '0.4'
+    T213: '0.7'
+    T214: '0.7'
+    T215: '0.4'
+- package: A27
+  title: HTTPS und separater Admin-Port
+  versions:
+  - '0.2'
+  tasks:
+    T191: '0.2'
+    T192: '0.2'
+- package: A28
+  title: Einrichtungswizard nach erster Anmeldung
+  versions:
+  - '0.4'
+  tasks:
+    T193: '0.4'
+    T194: '0.4'
+- package: A29
+  title: Mitarbeiterzugänge und persönliche Freigabeaufgaben
+  versions:
+  - '0.4'
+  tasks:
+    T220: '0.4'
+    T221: '0.4'
+    T222: '0.4'
+- package: A30
+  title: Avataridentität, Erstellungswizard und 3D-Upload
+  versions:
+  - '0.5'
+  tasks:
+    T230: '0.5'
+    T231: '0.5'
+    T232: '0.5'
+- package: A31
+  title: 3D-Produktion und Avatarabnahme
+  versions:
+  - '0.6'
+  tasks:
+    T233: '0.6'
+    T234: '0.6'
+- package: A32
+  title: Studiomodell, Wizard und Kameraeditor
+  versions:
+  - '0.5'
+  tasks:
+    T240: '0.5'
+    T241: '0.5'
+    T242: '0.5'
+- package: A33
+  title: Studioproduktion, Vorlagen und Abnahme
+  versions:
+  - '0.6'
+  - '0.7'
+  tasks:
+    T243: '0.6'
+    T244: '0.7'
+- package: A34
+  title: Wiederkehrende Sendungen und avatarfreie Produktion
+  versions:
+  - '0.6'
+  - '0.9'
+  tasks:
+    T250: '0.6'
+    T251: '0.6'
+    T252: '0.9'
+    T253: '0.6'
+    T254: '0.6'
+    T255: '0.6'
+- package: A35
+  title: Verpflichtendes datumsbasiertes Videoarchiv
+  versions:
+  - '0.2'
+  tasks:
+    T260: '0.2'
+- package: A36
+  title: Pluginarchitektur für Sendungsbausteine
+  versions:
+  - '0.3'
+  - '0.6'
+  tasks:
+    T270: '0.3'
+    T271: '0.6'
+    T272: '0.6'
+- package: A37
+  title: Verpflichtendes AI-Label in allen visuellen Ausgaben
+  versions:
+  - '0.7'
+  tasks:
+    T280: '0.7'
+- package: A38
+  title: Themenkurzvideos virtueller Mitarbeiter
+  versions:
+  - '0.8'
+  tasks:
+    T290: '0.8'
+    T291: '0.8'
+    T292: '0.8'
+- package: A39
+  title: Redaktionelle Sequenzbibliothek und Intro-/Outroauswahl
+  versions:
+  - '0.7'
+  - '0.8'
+  tasks:
+    T300: '0.7'
+    T301: '0.8'
+    T302: '0.8'
+- package: A40
+  title: Sendungsblock-Plugin Uploadvideo
+  versions:
+  - '0.7'
+  tasks:
+    T310: '0.7'
+- package: A41
+  title: 'Unterstützung: lokale und Cloud-KI konfigurieren'
+  versions:
+  - '0.4'
+  tasks:
+    T320: '0.4'
+    T321: '0.4'
+    T322: '0.4'
+- package: A42
+  title: Kostenvorschau je Show und Monatsprognose
+  versions:
+  - '0.9'
+  tasks:
+    T330: '0.9'
+- package: A43
+  title: Produktion und Veröffentlichung konsequent trennen
+  versions:
+  - '0.9'
+  tasks:
+    T340: '0.9'
+    T341: '0.9'

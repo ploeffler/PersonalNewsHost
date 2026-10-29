@@ -1,0 +1,205 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  scope: Selbstdarstellung als konfigurierbare Grundlage der Textformulierungen
+  status: planned
+tasks:
+- id: T210
+  epic: E18
+  title: Datenmodell für Selbstdarstellung und Themenhaltungen
+  status: todo
+  depends_on:
+  - T002
+  - T180
+  instructions:
+  - editorial_identity mit enabled, version, format_description, audience, language,
+    tone und topic_positions als versionierten Konfigurationsblock definieren.
+  - Pro Thema id, Bezeichnung, enabled, optionalen Haltungstext sowie position von
+    0 bis 100 und themenspezifische Skalenanker speichern. 0 bedeutet deaktiviert;
+    1 bis 100 beschreiben die Haltung, nicht ihre Einflussstärke. enabled=false deaktiviert
+    ebenfalls; die UI hält Aktivierung und Position konsistent.
+  - 'Standardthemen vorgeben: Demokratie und Rechtsstaat, Menschenrechte und Gleichbehandlung,
+    Klima und Umwelt, Wirtschaft und Soziales, Wissenschaft und Technik, Datenschutz
+    und Digitalisierung, Internationales und Frieden. Alle Haltungen zunächst leer
+    und Position 0.'
+  - 'Optionale vorgegebene Themen: Regionales, Gesundheit, Bildung, Migration und
+    Integration, Energie, Mobilität, Kultur und Sport. Eigene Themen anlegen, bearbeiten,
+    deaktivieren und löschen können.'
+  - Standardthemen sind voreingerichtete Kategorien, keine vorgeschriebenen Positionen;
+    Kategorien deaktivierbar halten. Ohne Profil oder bei deaktiviertem Profil bisheriges
+    Verhalten erhalten.
+  - Feldlängen, IDs, Positionsbereich und zulässige Datentypen strikt validieren;
+    config.example.json und Schema ergänzen.
+  - 'Law and Order als Standardthema hinzufügen: 1 = Gesetze sind egal; 50 = selbstverständlich;
+    100 = besonders wichtig; 0 = deaktiviert. Für weitere Standardthemen eigene verständliche
+    Skalenanker definieren, nicht die Bedeutung von Law and Order übertragen.'
+  acceptance:
+  - Alte Konfiguration bleibt gültig; deaktiviertes Profil verändert die Ausgabe nicht.
+  - Eigene Themen und frei formulierte Haltungen werden gespeichert; ungültige Positionen
+    oder doppelte IDs werden abgelehnt.
+- id: T211
+  epic: E18
+  title: Konfigurationsoberfläche für Selbstdarstellung
+  status: todo
+  depends_on:
+  - T210
+  - T189
+  instructions:
+  - Geschützten Bereich Selbstdarstellung mit Formatbeschreibung, Zielgruppe, Sprache/Ton
+    und Themenliste ergänzen.
+  - Je Thema Haltung als Text und Haltungsposition als gekoppelte Zahl/Schieberegler
+    0–100 mit sichtbaren themenspezifischen Skalenankern; Aktivierung und optionale
+    Themen sowie eigene Themen verwalten.
+  - Hilfetext erklärt Bedeutung der Haltungsskala; Position 0 deaktiviert das Thema.
+    Ein leerer Freitext deaktiviert eine aktive numerische Position nicht.
+  - Vorschau des an die Textfunktionen übergebenen Profils; Validierung, Speichern,
+    Zurücksetzen und ungespeicherte Änderungen sichtbar machen.
+  - Profil standardmäßig intern halten; öffentliche Veröffentlichung der Selbstdarstellung
+    wäre eine eigene Option.
+  acceptance:
+  - Admin kann Format und Themenhaltungen vollständig bearbeiten und erneut laden.
+  - Nicht angemeldete Zugriffe können Profil weder lesen noch ändern; Tastaturbedienung
+    und verständliche Validierungsfehler vorhanden.
+- id: T212
+  epic: E18
+  title: Gemeinsamer Profilkontext für Textfunktionen
+  status: todo
+  depends_on:
+  - T210
+  - T112
+  - T130
+  - T135
+  instructions:
+  - Zentrale Funktion für normalisierten editorial_context statt unterschiedlicher
+    Promptlogik je Generator implementieren.
+  - 'Formatbeschreibung, Ton und passende aktive Themenhaltungen samt position und
+    Skalenankern und Profilversion an alle einschlägigen Funktionen übergeben: Sprechertext,
+    Webtext, Kurzfassung, Überschrift, An-/Abmoderation und Social-Media-Begleittext.'
+  - Themenzuordnung zuerst deterministisch anhand bestehender Kategorien und expliziter
+    Zuordnungen; alle zutreffenden Themen erhalten ihre eigenen Haltungspositionen,
+    ohne automatische Normalisierung.
+  - Bei Position 0 oder deaktiviertem Thema nur allgemeinen Format-/Tonkontext verwenden;
+    aktive Positionen bleiben auch ohne Freitext wirksam; deaktivierte Themen nicht
+    übertragen. Eingabelängen und Kontextbudget begrenzen, Kürzungen nachvollziehbar
+    machen.
+  - Haltungspositionen samt themenspezifischen Ankern als Formulierungsgrundlage übertragen;
+    eine niedrige Position bedeutet nicht geringe Relevanz. Keine mathematisch garantierte
+    Wirkung eines Sprachmodells behaupten. Profil ist redaktionelle Konfiguration,
+    Feed-Inhalte bleiben getrennte unvertrauenswürdige Daten.
+  - Lokale Textbildung unterstützt Format-/Tonvorlagen im eigenen Leistungsumfang;
+    nicht unterstützte freie Haltungsformulierungen als Einschränkung dokumentieren
+    statt Scheinerfüllung.
+  acceptance:
+  - Mocktests weisen identischen Profilvertrag für alle angeschlossenen Textfunktionen
+    nach.
+  - Deaktivierte Themen gelangen nicht in den Kontext; aktive relevante Themen einschließlich
+    eigener Themen und Profilversion sind enthalten.
+- id: T213
+  epic: E18
+  title: Integration, Quellenbindung und Nachvollziehbarkeit
+  status: todo
+  depends_on:
+  - T211
+  - T212
+  - T131
+  - T133
+  - T134
+  - T202
+  instructions:
+  - Profil in Produktions- und Social-Textfunktionen integrieren; Formulierungen erst
+    nach den vorhandenen Grounding-/Originalitätsprüfungen veröffentlichen.
+  - Haltungen dürfen Schwerpunkt und Wortwahl beeinflussen, aber keine Fakten, Zitate
+    oder Belege erfinden und keine Unsicherheit verschweigen; Meinung/Kommentar bleibt
+    sichtbar getrennt.
+  - Profilversion bzw. Hash in Redaktionsprotokoll und Cache-Schlüssel aufnehmen;
+    Profilwechsel darf keine veralteten Texte aus dem Cache übernehmen.
+  - Profil erst nach explizitem Speichern verwenden; laufende Sendung verwendet einen
+    konsistenten Snapshot, spätere Läufe das aktualisierte Profil.
+  acceptance:
+  - Gleiche Fixture mit verschiedenen Profilen erlaubt geänderte Wortwahl, behält
+    belegte Zahlen, Namen, Quellen und Prüfstatus.
+  - Manipulative Formulierungsanforderungen können keine ungeprüften Behauptungen
+    durch das Veröffentlichungsgate schleusen.
+  - Profilwechsel invalidiert relevante Text-Caches; historische Beiträge bleiben
+    ihrer Profilversion zuordenbar.
+- id: T214
+  epic: E18
+  title: Dokumentation und Abnahme der Selbstdarstellung
+  status: todo
+  depends_on:
+  - T213
+  instructions:
+  - Formatbeschreibung, Standard-/optionale/eigene Themen und Bedeutung der themenspezifischen
+    Haltungsskalen mit neutralen Beispielen dokumentieren.
+  - Tests für Schema, UI, Zugriffsschutz, Kontextweitergabe, Position 0/1/50/100,
+    mehrere Themen, deaktiviertes Profil und fehlende Provider ergänzen.
+  - A/B-Stichprobe mit gleichen Quellmeldungen und unterschiedlichen Formulierungsprofilen
+    dokumentieren; Quellenbindung und getrennte Kennzeichnung von Kommentar prüfen.
+  - Linux-, Docker- und Portainer-Betrieb verwenden dasselbe Profil und dieselben
+    Zugriffsschutzregeln.
+  acceptance:
+  - Dokumentierte Abnahme zeigt Speichern bis Textausgabe und Grenzen lokaler Fallbacks.
+  - Es gibt keine voreingestellten politischen Haltungen und kein automatisches öffentliches
+    Profil.
+- id: T215
+  epic: E18
+  title: Zielbereiche und Zielgruppen der Selbstdarstellung
+  status: todo
+  depends_on:
+  - T210
+  - T211
+  - T212
+  instructions:
+  - editorial_identity um target_scope und target_groups ergänzen; Zielbereiche und
+    Zielgruppen getrennt von Haltungen und Quellenfiltern modellieren.
+  - Zielbereich mit geografischer Reichweite lokal/regional/national/international,
+    frei definierbaren Orten/Regionen und fachlichen Themenbereichen konfigurieren.
+    Mehrere Bereiche zulassen.
+  - Benannte Zielgruppen mit Beschreibung, Interessen, Vorwissen, optionaler Altersgruppe,
+    Sprache/Sprachniveau und gewünschter fachlicher Tiefe anlegen. Mehrere Gruppen
+    und eine optionale Hauptzielgruppe zulassen; allgemeines Publikum als kompatiblen
+    Standard.
+  - Gemeinsames Profil als Standard; Show kann gezielte Überschreibungen verwenden.
+    Vererbung und effektives Profil in Vorschau anzeigen; keine widersprüchlichen
+    versteckten Mischungen.
+  - Im Selbstdarstellungsbereich und Wizard bearbeiten; effektiven Zielbereich und
+    Zielgruppen an Sprecher-, Web-, Kurz-, Moderations-, Überschriften- und Social-Textfunktionen
+    übergeben.
+  - Angaben steuern Ansprache, Erklärungsbedarf, Wortwahl und Schwerpunkt. Geografische/fachliche
+    Bereiche sind hier Formulierungskontext, kein stillschweigender Quellen- oder
+    Nachrichtenauswahlfilter; echte Auswahlregeln bleiben explizite Showkonfiguration.
+  - Zielgruppen als redaktionelle Publikumsbeschreibung behandeln, keine individuellen
+    Nutzerprofile oder Trackingdaten erheben. Profilversion/Cache und gespeicherte
+    Produktionssnapshots um diese Felder erweitern.
+  - Schema, UI, Vererbung, deaktiviertes Profil, mehrere Gruppen, Kontextweitergabe
+    und Cache-Invalidierung testen; bestehende Konfiguration ohne neue Felder weiter
+    unterstützen.
+  acceptance:
+  - Admin kann mehrere Zielbereiche und Zielgruppen speichern und das effektive Profil
+    je Show vorab sehen.
+  - Textkontext enthält gewählte Bereiche und Gruppen einschließlich nachvollziehbarer
+    Showüberschreibungen.
+  - Zielgruppenwechsel verändert keine belegten Fakten und löst keine versteckte Quellenfilterung
+    aus.
+  - Alte Konfiguration bleibt gültig; kein Tracking oder personenbezogenes Zuschauerprofil
+    erforderlich.
+topic_scale_contract:
+  meaning: Themenspezifische Haltungsskala, kein allgemeines Einflussgewicht
+  value_range:
+  - 0
+  - 100
+  disabled_value: 0
+  active_range:
+  - 1
+  - 100
+  example:
+    id: law_and_order
+    label: Law and Order
+    anchors:
+      1: Gesetze sind egal
+      50: selbstverständlich
+      100: besonders wichtig
+  defaults: Bestehende Konfiguration unverändert lassen; neue Themen zunächst 0. Standardthema
+    bedeutet voreingerichtete Kategorie, keinen vorgeschriebenen Wert.
+  intermediate_values: Werte zwischen Ankern als abgestufte Position interpretieren;
+    Skala und Nachbaranker im Textkontext mitgeben, keine exakten Bedeutungen erfinden.

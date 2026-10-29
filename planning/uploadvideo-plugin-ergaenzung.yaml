@@ -1,0 +1,52 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  scope: Sendungsblock-Plugin für hochgeladene Videos
+  status: planned
+tasks:
+- id: T310
+  epic: E28
+  title: Sendungsblock-Plugin Uploadvideo
+  status: todo
+  depends_on:
+  - T270
+  - T271
+  - T260
+  - T280
+  instructions:
+  - Plugin uploaded_video nach gemeinsamem Manifest-/Schema-/Lifecyclevertrag implementieren
+    und im Showeditor anbieten.
+  - Berechtigte Benutzer laden Video hoch oder wählen ein bereits vorhandenes Uploadasset.
+    Titel, Beschreibung, Urheber/Quelle, Nutzungsnachweis und optionale Untertitel
+    erfassen.
+  - Uploadgröße, tatsächlichen Container/Codec, Dauer, Auflösung und Audiospuren prüfen;
+    unterstützte Formate ausdrücklich dokumentieren. Medienprüfung und Transkodierung
+    mit Ressourcen-/Zeitlimits ausführen; keine entfernten Referenzen oder ausführbaren
+    Inhalte auswerten.
+  - Originaldatei geschützt und unverändert versionieren. Vorschau, Start-/Endzeit
+    für optionalen Zuschnitt, Ton an/aus bzw. Lautstärke und Einpassung über Letterbox
+    oder ausdrücklich gewählten Crop konfigurieren.
+  - Ausgabe in technische Showparameter überführen; tatsächliche Dauer in Rundown
+    übernehmen. Audio normalisieren, vorhandene Untertitel erhalten bzw. zeitlich
+    an Zuschnitt anpassen, sofern unterstützt. Keine automatische Inhaltsumschreibung.
+  - Mehrere Instanzen desselben Uploadvideos oder unterschiedliche Videos an beliebiger
+    Stelle der Show einsetzen; Avatarproduktion nicht erforderlich.
+  - Uploads durchlaufen Herkunfts-/Rechte-/Qualitätsprüfung und erforderliche redaktionelle
+    Freigabe. Ein Upload gilt nicht automatisch als KI-generierte Ereignisaufnahme
+    oder unabhängiger Faktenbeleg; Herkunft korrekt ausweisen.
+  - Die erzeugte visuelle Ausgabe trägt dennoch verpflichtend rechts unten AI gemäß
+    T280. Ursprüngliche Kennzeichnungen und Quellen nicht überdecken. Finale abgeleitete
+    Blockvideos und Showausgaben nach T260 archivieren.
+  - Fehlendes, gelöschtes, inkompatibles oder noch nicht freigegebenes Asset vor Produktion
+    melden; konfigurierte Skip-/Abbruchregel beachten und Pflichtbausteine nicht stillschweigend
+    weglassen.
+  - Tests für gültige/defekte Uploads, Rechte, Zuschnitt, Audio, Untertitel, Formatkonvertierung,
+    Dauer, AI-Label, Archivierung und Wiederverwendung; Linux-/Docker-/Portainer-Persistenz
+    dokumentieren.
+  acceptance:
+  - Berechtigter Benutzer kann ein Video hochladen, vorab ansehen und als Sendungsblock
+    einordnen.
+  - Testshow enthält den gewählten Ausschnitt mit korrekter Dauer, Ton und Kennzeichnung.
+  - Ungültige oder nicht freigegebene Uploads gelangen nicht in die Veröffentlichung.
+  - Original bleibt geschützt; finale Block-/Showvideos sind archiviert; Plugin nutzt
+    zentrale Gates.

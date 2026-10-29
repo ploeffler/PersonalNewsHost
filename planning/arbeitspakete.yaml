@@ -1,0 +1,1162 @@
+meta:
+  source: ../todo-full-featured-newsoutlet-v2.yaml
+  analysis_date: '2026-10-29'
+  base_commit: 6b97cb9
+  task_count: 140
+  package_count: 44
+  note: Planung, keine Umsetzungsfreigabe externer Dienste. Originalabhängigkeiten
+    bleiben maßgeblich; Zusatzabhängigkeiten sind Vorschläge.
+  sources:
+  - ../todo-full-featured-newsoutlet-v2.yaml
+  - betriebswege-ergaenzung.yaml
+  - social-media-ergaenzung.yaml
+  - selbstdarstellung-ergaenzung.yaml
+  - mitarbeiterzugang-ergaenzung.yaml
+  - avatar-wizard-ergaenzung.yaml
+  - studio-wizard-ergaenzung.yaml
+  - sendungsverwaltung-ergaenzung.yaml
+  - videoarchiv-ergaenzung.yaml
+  - sendungsplugins-ergaenzung.yaml
+  - ai-kennzeichnung-ergaenzung.yaml
+  - mitarbeiter-kurzvideos-ergaenzung.yaml
+  - intro-outro-ergaenzung.yaml
+  - uploadvideo-plugin-ergaenzung.yaml
+  - unterstuetzung-ergaenzung.yaml
+  - kostenvorschau-ergaenzung.yaml
+  - produktion-veroeffentlichung-ergaenzung.yaml
+packages:
+- id: A00
+  title: Bestand und Schnittstellen
+  release: Basis
+  status: planned
+  tasks:
+  - T001
+  external_task_dependencies: []
+  work: Skripte, Konfiguration, Workflows und Tests inventarisieren; vorhandene Implementierungen
+    den 75 Aufgaben zuordnen; Datenmodell und Migrationsgrenzen festhalten.
+  exit_criteria: Inventar mit belegten Dateipfaden; offene PRs separat prüfen; kein
+    bestehender Prototyp gilt ohne Abnahme als fertig.
+  target_versions:
+  - '0.1'
+- id: A01
+  title: Schema, CI und Sicherheit
+  release: Basis
+  status: planned
+  tasks:
+  - T002
+  - T072
+  - T073
+  external_task_dependencies:
+  - T001
+  work: Schema und Validator entwickeln; alte Konfiguration als Fixture sichern; Validierung,
+    Tests, Linkprüfung und Geheimnisscan in CI integrieren.
+  exit_criteria: Ungültige Konfiguration stoppt vor Produktion; Regressionstests laufen
+    mit lokalen Fixtures.
+  target_versions:
+  - '0.1'
+- id: A02
+  title: Provider-Grundlage ohne externe Aufrufe
+  release: Basis
+  status: planned
+  tasks:
+  - T100
+  - T101
+  - T103
+  - T104
+  - T130
+  - T135
+  external_task_dependencies:
+  - T002
+  work: Bestehende Registry erweitern; typisierte Verträge und deterministische Mocks;
+    Budgetreservierung und dauerhafte Verbrauchsbuchung; Cache, Allowlist und strikte
+    Antwortvalidierung.
+  exit_criteria: Budget 0 verhindert bezahlte Aufrufe; Timeout, Wiederholung und Fallback
+    getestet; parallele Läufe können das Budget nicht doppelt ausgeben.
+  target_versions:
+  - '0.1'
+- id: A03
+  title: Shows und Nachrichtenauswahl
+  release: Kernprodukt
+  status: planned
+  tasks:
+  - T010
+  - T011
+  - T012
+  - T052
+  external_task_dependencies:
+  - T002
+  work: Alte Konfiguration auf Standardshow abbilden; Ausgaben nach Show trennen;
+    Kategorien, Quellenregeln und deterministisches Clustering ergänzen.
+  exit_criteria: Zwei getrennte Shows; alte Konfiguration bleibt kompatibel; Cluster
+    erhalten sämtliche Quellen und verwechseln Ähnlichkeit nicht mit Bestätigung.
+  target_versions:
+  - '0.1'
+- id: A04
+  title: Veröffentlichung und Betrieb absichern
+  release: Kernprodukt
+  status: planned
+  tasks:
+  - T051
+  - T070
+  - T071
+  external_task_dependencies:
+  - T010
+  - T012
+  work: Vorprüfung und temporäres Ausgabeziel; erst vollständig geprüfte Artefakte
+    veröffentlichen; Feed-Fallbacks, Zeitlimits und Show-Concurrency ergänzen.
+  exit_criteria: Fehler lässt letzte gute Sendung bestehen; einzelne Feed-Ausfälle
+    sind beherrscht; Laufzeitverbrauch ist gemessen und dokumentiert.
+  target_versions:
+  - '0.2'
+- id: A05
+  title: Artikel und Herkunftsnachweise
+  release: Kernprodukt
+  status: planned
+  tasks:
+  - T020
+  - T050
+  - T062
+  - T124
+  external_task_dependencies:
+  - T011
+  work: Stabile Artikel-IDs und URLs; sichere HTML-Ausgabe; Quellen, Abrufzeit, Bildnachweise
+    und KI-Kennzeichnung im gemeinsamen Datenmodell.
+  exit_criteria: Jeder Beitrag besitzt verlinkte Quellen; unbekannte Bildherkunft
+    wird markiert; Feed-HTML und URLs sind validiert.
+  target_versions:
+  - '0.2'
+- id: A06
+  title: Eilmeldungen und Webnavigation
+  release: Kernprodukt
+  status: planned
+  tasks:
+  - T013
+  - T021
+  - T022
+  - T032
+  external_task_dependencies:
+  - T010
+  - T012
+  - T020
+  work: Eilmeldungserkennung zuerst ohne Renderkosten; Kurzclip und deduplizierte
+    Veröffentlichung; Startseite, Kategorien, Shows und Metadaten generieren.
+  exit_criteria: Ohne Treffer kein Clip; Navigation und Sitemap vollständig; Barrierefreiheit
+    geprüft; alte Feed- und Video-URLs erhalten.
+  target_versions:
+  - '0.2'
+- id: A07
+  title: Archiv und Suche
+  release: Kernprodukt
+  status: planned
+  tasks:
+  - T030
+  - T031
+  external_task_dependencies:
+  - T020
+  work: Sendungs- und Artikelindizes versionieren; verpflichtendes Videoarchiv nach
+    T260 statt automatischer Archivvideo-Löschung; Suchindex mit Größenlimit und Archivseiten
+    erstellen.
+  exit_criteria: Archivvideos bleiben erhalten; ausschließlich temporäre Dateien/Caches
+    dürfen bereinigt werden; Metadaten und lokale Suche funktionieren.
+  target_versions:
+  - '0.2'
+- id: A08
+  title: Feeds und weitere Ausgabekanäle
+  release: Ausbau
+  status: planned
+  tasks:
+  - T040
+  - T041
+  - T042
+  - T043
+  external_task_dependencies:
+  - T010
+  - T011
+  - T030
+  work: Show-/Rubrikenfeeds und Artikel-Feeds; Audio plus Kapitel; Telegram-Zuordnung;
+    wöchentliche HTML-/Textausgabe ohne Standardversand.
+  exit_criteria: Bestehender Gesamtfeed kompatibel; gültige Enclosures und Links;
+    fehlende Telegram-Secrets führen zum Überspringen.
+  target_versions:
+  - '0.7'
+- id: A09
+  title: Präsentation und Untertitel
+  release: Kernprodukt
+  status: planned
+  tasks:
+  - T060
+  - T061
+  - T063
+  external_task_dependencies:
+  - T001
+  - T010
+  - T011
+  work: Host-/Studio-Zuordnung von Avatar-Technik trennen; Grafiktemplates vereinheitlichen;
+    SRT-Zeiten messen und WebVTT ergänzen.
+  exit_criteria: Shows unterscheiden sich sichtbar; Quellen stehen im Bild; definierte
+    Audiostichprobe erfüllt das Untertitelziel.
+  target_versions:
+  - '0.2'
+- id: A10
+  title: Virtuelle Redaktion und Planung
+  release: Redaktion
+  status: planned
+  tasks:
+  - T110
+  - T111
+  - T112
+  - T113
+  - T114
+  external_task_dependencies:
+  - T002
+  - T010
+  - T011
+  - T012
+  - T050
+  - T100
+  work: Rollenmodell und Rechte; persistenter Zustandsautomat mit begrenzten Korrekturschleifen;
+    versionierte Prompts; Sendeplan und öffentliches Redaktionsprotokoll.
+  exit_criteria: Fixture durchläuft alle Stufen; Wiederaufnahme erzeugt keine doppelte
+    Produktion; KI-Rollen sind klar gekennzeichnet.
+  target_versions:
+  - '0.3'
+- id: A11
+  title: Anbieterprüfung und Beleggewinnung
+  release: Redaktion
+  status: planned
+  tasks:
+  - T102
+  - T120
+  - T121
+  - T122
+  - T123
+  external_task_dependencies:
+  - T012
+  - T100
+  - T111
+  work: Anbieterrecherche und Benchmark zunächst mit Mocks vorbereiten; Claim-Schema,
+    unabhängige Quellen, Fact-Check-Hinweise und Primärquellenvergleich implementieren.
+  exit_criteria: Claims haben Fundstellen und datierte Belege; Agenturkopien zählen
+    nicht mehrfach; reale Anbieter erst nach dokumentierter Prüfung aktivieren.
+  target_versions:
+  - '0.3'
+- id: A12
+  title: Bewertung, Freigabe und Korrekturen
+  release: Redaktion
+  status: planned
+  tasks:
+  - T132
+  - T125
+  - T126
+  - T127
+  - T128
+  - T129
+  external_task_dependencies:
+  - T020
+  - T071
+  - T101
+  - T102
+  - T114
+  - T121
+  - T122
+  - T123
+  - T130
+  work: Zweitmeinung als separaten Ergebnisdienst; regelbasiertes Routing; versionierte
+    Korrekturen; Prüfstatusanzeige und menschliche Freigabe mit Frist; Testkorpus
+    aufbauen.
+  exit_criteria: Unbelegte Meldungen erhalten keine vorgetäuschte Bestätigung; Widersprüche
+    werden eskaliert; Fristablauf und Korrekturen sind reproduzierbar getestet.
+  target_versions:
+  - '0.3'
+- id: A13
+  title: Texterstellung und Analyseformate
+  release: Redaktion
+  status: planned
+  tasks:
+  - T131
+  - T133
+  - T134
+  - T115
+  external_task_dependencies:
+  - T111
+  - T112
+  - T120
+  - T130
+  - T135
+  work: Sprecher-, Web- und Kurztexte; Satz-zu-Quelle-Zuordnung; Zahlen-/Namensprüfung;
+    Übernahmegrenzen; separate Analyse- und Kommentarstrecke.
+  exit_criteria: Erfundene Testaussagen werden verworfen; lokale Textbildung bleibt
+    verfügbar; Kommentar und Nachricht sind sichtbar getrennt.
+  target_versions:
+  - '0.4'
+- id: A14
+  title: Formate und Segmentproduktion
+  release: Ausbau
+  status: planned
+  tasks:
+  - T150
+  - T151
+  - T153
+  external_task_dependencies:
+  - T010
+  - T113
+  - T131
+  - T134
+  work: Drei einfache Formate zuerst; Sendeplan in zeitlichen Rundown überführen;
+    Segmente einzeln rendern und zusammensetzen; danach Mehrstimmendialog.
+  exit_criteria: Rundown-Zeiten stimmen mit Ausgabe überein; Segmentcache wiederverwendbar;
+    jede dargestellte Position besitzt Quellenbezug.
+  target_versions:
+  - '0.3'
+  - '0.6'
+- id: A15
+  title: Optionale externe Videoclips
+  release: Optional
+  status: planned
+  tasks:
+  - T140
+  - T141
+  - T142
+  - T143
+  - T144
+  - T145
+  external_task_dependencies:
+  - T050
+  - T061
+  - T100
+  - T101
+  - T111
+  work: Job-Zustandsmodell mit Submit/Poll/Download und Wiederaufnahme; Shotliste;
+    technische Prüfung und Sichtung; Schnitt, Sekundenlimit und Kennzeichnung.
+  exit_criteria: Mockjob und Timeout-Fallback funktionieren; Kostenlimit verhindert
+    neue Jobs; jeder generierte Clip bleibt als Symbolbild gekennzeichnet.
+  target_versions:
+  - '0.5'
+  - '0.7'
+- id: A16
+  title: Avatare, Stimmen und Korrespondenten
+  release: Optional
+  status: planned
+  tasks:
+  - T160
+  - T161
+  - T163
+  - T164
+  - T162
+  - T165
+  - T166
+  - T167
+  - T168
+  - T152
+  external_task_dependencies:
+  - T100
+  - T101
+  - T102
+  - T110
+  - T140
+  - T151
+  work: Technikvergleich vor Anbieterwahl; fiktive Identitäten und Standardstimmen;
+    Mockadapter; audiogetriebenes Rendering; Synchronitätsmessung; Studiointegration
+    und Korrespondentensegment.
+  exit_criteria: Reales Rendering separat bewerten; Mock-Erfolg beweist keine fotorealistische
+    Qualität; Kennzeichnung, Budgetlimit und statischer Fallback in jeder Ausgabestrecke.
+  target_versions:
+  - '0.5'
+- id: A17
+  title: Migration und Gesamtabnahme
+  release: Abschluss
+  status: planned
+  tasks:
+  - T080
+  - T081
+  external_task_dependencies:
+  - T010
+  - T020
+  - T030
+  - T040
+  - T050
+  - T060
+  - T070
+  - T072
+  - T102
+  - T114
+  - T125
+  - T129
+  - T132
+  - T133
+  - T144
+  - T145
+  - T167
+  - T168
+  work: Begleitende Dokumentation konsolidieren; Fork-Migration; Ende-zu-Ende-Läufe
+    mit zwei Shows, Mocks und erzwungenen Fehlern; optional reale Anbieter gesondert
+    abnehmen.
+  exit_criteria: Abnahmebericht nennt für jede Aufgabe erfüllt, offen oder begründet
+    zurückgestellt; bestehende Produktionsfunktionen bleiben erhalten.
+  target_versions:
+  - '1.0'
+- id: A18
+  title: Linux-Installation und Dienst
+  release: Betriebswege
+  status: planned
+  tasks:
+  - T180
+  - T181
+  - T182
+  external_task_dependencies:
+  - T001
+  - T002
+  - T070
+  - T071
+  work: Betriebsvertrag für Linux und Container; Repository-Installation unter Linux;
+    Start-/Stop-Skripte und Linux-Dienst
+  exit_criteria: Alle Akzeptanzkriterien der zugeordneten Aufgaben in betriebswege-ergaenzung.yaml
+    erfüllt.
+  target_versions:
+  - '0.2'
+- id: A19
+  title: Docker, CLI und Portainer
+  release: Betriebswege
+  status: planned
+  tasks:
+  - T183
+  - T184
+  - T185
+  external_task_dependencies:
+  - T180
+  - T182
+  work: Docker-Image und Compose-Betrieb; Installationsanleitung für Docker CLI; Installationsanleitung
+    für Portainer
+  exit_criteria: Alle Akzeptanzkriterien der zugeordneten Aufgaben in betriebswege-ergaenzung.yaml
+    erfüllt.
+  target_versions:
+  - '0.2'
+- id: A20
+  title: Persistenz und Betriebsabnahme
+  release: Betriebswege
+  status: planned
+  tasks:
+  - T186
+  - T187
+  external_task_dependencies:
+  - T030
+  - T051
+  - T101
+  - T103
+  - T182
+  - T183
+  - T184
+  - T185
+  work: Persistenz, Updates und Betriebsdiagnose; Abnahme beider Installationswege
+  exit_criteria: Alle Akzeptanzkriterien der zugeordneten Aufgaben in betriebswege-ergaenzung.yaml
+    erfüllt.
+  target_versions:
+  - '0.2'
+  - '0.9'
+- id: A21
+  title: Admin-Authentifizierung der Konfiguration
+  release: Betriebswege
+  status: planned
+  tasks:
+  - T188
+  - T189
+  - T190
+  external_task_dependencies:
+  - T180
+  - T182
+  - T183
+  - T184
+  - T185
+  work: Admin-Zugang per ADMIN_USER/ADMIN_PASSWORD_HASH; serverseitiger Schutz der
+    Konfiguration; CLI-/Portainer-Anleitung und Zugriffstests.
+  exit_criteria: Default admin/admin und individueller Hash getestet; keine Umgehung
+    über statische Dateien oder Konfigurations-APIs; dokumentierte Hashübergabe funktioniert.
+  target_versions:
+  - '0.2'
+- id: A22
+  title: Social-Media-Profile und Export
+  release: Social Media
+  status: planned
+  tasks:
+  - T200
+  - T201
+  - T202
+  external_task_dependencies:
+  - T001
+  - T002
+  - T020
+  - T050
+  - T061
+  - T063
+  - T180
+  work: Plattformprofile und Ausgabe-Konfiguration; Plattformgerechte Videos und Bilder;
+    Texte, Links und Exportpakete
+  exit_criteria: Akzeptanzkriterien der zugeordneten Aufgaben in social-media-ergaenzung.yaml
+    erfüllt; Exporte ohne Konto möglich, Publisher explizit optional.
+  target_versions:
+  - '0.7'
+- id: A23
+  title: Optionale Social-Media-Publisher
+  release: Social Media
+  status: planned
+  tasks:
+  - T203
+  - T204
+  external_task_dependencies:
+  - T051
+  - T100
+  - T101
+  - T103
+  - T104
+  - T186
+  - T188
+  - T189
+  - T200
+  - T202
+  work: Optionale Publisher und Anbieterprüfung; Veröffentlichungswarteschlange und
+    Freigabe
+  exit_criteria: Akzeptanzkriterien der zugeordneten Aufgaben in social-media-ergaenzung.yaml
+    erfüllt; Exporte ohne Konto möglich, Publisher explizit optional.
+  target_versions:
+  - '0.8'
+- id: A24
+  title: Social-Media-Korrekturen und Abnahme
+  release: Social Media
+  status: planned
+  tasks:
+  - T205
+  - T206
+  external_task_dependencies:
+  - T126
+  - T127
+  - T190
+  - T201
+  - T202
+  - T204
+  work: Korrekturen und Kennzeichnung auf Social Media; Social-Media-Dokumentation
+    und Abnahme
+  exit_criteria: Akzeptanzkriterien der zugeordneten Aufgaben in social-media-ergaenzung.yaml
+    erfüllt; Exporte ohne Konto möglich, Publisher explizit optional.
+  target_versions:
+  - '0.8'
+- id: A25
+  title: 'Selbstdarstellung: Datenmodell und Konfigurationsseite'
+  release: Redaktion
+  status: planned
+  tasks:
+  - T210
+  - T211
+  external_task_dependencies:
+  - T002
+  - T180
+  - T189
+  work: Versioniertes Schema und geschützte Konfigurationsseite mit Formatbeschreibung,
+    themenspezifischen Haltungspositionen 0–100 und sichtbaren Skalenankern; Law and
+    Order als Standardthema.
+  exit_criteria: Akzeptanzkriterien in selbstdarstellung-ergaenzung.yaml erfüllt;
+    Profil beeinflusst Formulierung nachvollziehbar und erhält Quellenbindung.
+  target_versions:
+  - '0.4'
+- id: A26
+  title: 'Selbstdarstellung: Textkontext und Abnahme'
+  release: Redaktion
+  status: planned
+  tasks:
+  - T212
+  - T213
+  - T214
+  - T215
+  external_task_dependencies:
+  - T112
+  - T130
+  - T131
+  - T133
+  - T134
+  - T135
+  - T202
+  - T210
+  - T211
+  work: Gemeinsamer Profilkontext für Textfunktionen; Integration, Quellenbindung
+    und Nachvollziehbarkeit; Dokumentation und Abnahme der Selbstdarstellung; Zielbereiche
+    und Zielgruppen mit Showvererbung und gemeinsamem Textkontext.
+  exit_criteria: Akzeptanzkriterien in selbstdarstellung-ergaenzung.yaml erfüllt;
+    Profil beeinflusst Formulierung nachvollziehbar und erhält Quellenbindung.
+  target_versions:
+  - '0.4'
+  - '0.7'
+- id: A27
+  title: HTTPS und separater Admin-Port
+  release: Betriebswege
+  status: planned
+  tasks:
+  - T191
+  - T192
+  external_task_dependencies:
+  - T182
+  - T183
+  - T189
+  - T190
+  work: Selbstsignierte, persistente TLS-Zertifikate; getrennte öffentliche und administrative
+    HTTPS-Listener; Dokumentation und Abnahme für Linux, CLI und Portainer.
+  exit_criteria: Beide Betriebsarten über HTTPS, Admin ausschließlich am konfigurierten
+    alternativen Port; Zertifikate persistent und Zugriffstrennung geprüft.
+  target_versions:
+  - '0.2'
+- id: A28
+  title: Einrichtungswizard nach erster Anmeldung
+  release: Betriebswege
+  status: planned
+  tasks:
+  - T193
+  - T194
+  external_task_dependencies:
+  - T189
+  - T191
+  - T192
+  - T211
+  work: Geschützter Einrichtungsassistent mit persistentem Entwurf, optionalen Schritten,
+    validiertem atomarem Abschluss und erneutem Öffnen.
+  exit_criteria: Erster Login startet Wizard; Neustarts erhalten Fortschritt; abgeschlossene
+    Einrichtung wird nicht automatisch wiederholt; Linux und Docker geprüft.
+  target_versions:
+  - '0.4'
+- id: A29
+  title: Mitarbeiterzugänge und persönliche Freigabeaufgaben
+  release: Redaktion
+  status: planned
+  tasks:
+  - T220
+  - T221
+  - T222
+  external_task_dependencies:
+  - T110
+  - T111
+  - T114
+  - T125
+  - T128
+  - T186
+  - T188
+  - T189
+  - T194
+  work: Individuelle Benutzer-/Passwortkonten, Rollenrechte, persönliche Arbeitskörbe
+    und versionierte Freigabeentscheidungen mit Auditspur.
+  exit_criteria: Getrennte Konten erfüllen nur berechtigte Aufgaben; automatische
+    KI-Rollen können menschliche Freigaben nicht selbst vollziehen; Zugriffsschutz
+    und Protokoll getestet.
+  target_versions:
+  - '0.4'
+- id: A30
+  title: Avataridentität, Erstellungswizard und 3D-Upload
+  release: Avatare
+  status: planned
+  tasks:
+  - T230
+  - T231
+  - T232
+  external_task_dependencies:
+  - T110
+  - T164
+  - T191
+  - T193
+  - T220
+  work: Gemeinsames Mitarbeiter-/Avatarmodell; Avatar-Erstellungswizard und Assetverwaltung;
+    3D-Upload, Validierung und Vorschau
+  exit_criteria: Akzeptanzkriterien in avatar-wizard-ergaenzung.yaml erfüllt; Uploadfähigkeit
+    und Animationsfähigkeit getrennt nachgewiesen.
+  target_versions:
+  - '0.5'
+- id: A31
+  title: 3D-Produktion und Avatarabnahme
+  release: Avatare
+  status: planned
+  tasks:
+  - T233
+  - T234
+  external_task_dependencies:
+  - T161
+  - T162
+  - T222
+  - T232
+  work: 3D-Rendering, Rigging-Zuordnung und Lipsync-Fallback; Avatarwizard-Dokumentation
+    und Abnahme
+  exit_criteria: Akzeptanzkriterien in avatar-wizard-ergaenzung.yaml erfüllt; Uploadfähigkeit
+    und Animationsfähigkeit getrennt nachgewiesen.
+  target_versions:
+  - '0.6'
+- id: A32
+  title: Studiomodell, Wizard und Kameraeditor
+  release: Produktion
+  status: planned
+  tasks:
+  - T240
+  - T241
+  - T242
+  external_task_dependencies:
+  - T002
+  - T060
+  - T193
+  - T230
+  work: Versioniertes Studiomodell und Produktionszuordnung; Studio-Erstellungswizard
+    und Verwaltung; Kameraeditor und Schnittregeln
+  exit_criteria: Akzeptanzkriterien in studio-wizard-ergaenzung.yaml erfüllt; gespeichertes
+    Studio und Kameraplan werden tatsächlich in der Testsendung verwendet.
+  target_versions:
+  - '0.5'
+- id: A33
+  title: Studioproduktion, Vorlagen und Abnahme
+  release: Produktion
+  status: planned
+  tasks:
+  - T243
+  - T244
+  external_task_dependencies:
+  - T061
+  - T151
+  - T201
+  - T233
+  - T242
+  work: Studiointegration in Rundown und Renderer; Studiovorlagen, Dokumentation und
+    Abnahme
+  exit_criteria: Akzeptanzkriterien in studio-wizard-ergaenzung.yaml erfüllt; gespeichertes
+    Studio und Kameraplan werden tatsächlich in der Testsendung verwendet.
+  target_versions:
+  - '0.6'
+  - '0.7'
+- id: A34
+  title: Wiederkehrende Sendungen und avatarfreie Produktion
+  release: Produktion
+  status: planned
+  tasks:
+  - T250
+  - T251
+  - T252
+  - T253
+  - T254
+  - T255
+  external_task_dependencies:
+  - T010
+  - T011
+  - T012
+  - T052
+  - T070
+  - T125
+  - T151
+  - T153
+  - T180
+  - T187
+  - T206
+  - T230
+  - T240
+  - T242
+  - T243
+  - T244
+  work: Showverwaltung mit Wiederholungsplänen, optionalen Hosts/Gästen, avatarfreiem
+    Renderpfad und Produktionshistorie.; bisheriges Ausgabeformat als initiale Newsshow
+    migrieren und im ersten Wizard vorauswählen.; wiederverwendbare Nachrichtenblöcke
+    mit redaktionellen Filtern und Auswahlvorschau.; Studiogespräch mit Newshost,
+    variabler Gästezahl, Gesprächsleitfaden und Kameraplan.
+  exit_criteria: Wiederkehrender Lauf ohne Host/Gast erzeugt gültiges Video ohne Avatarjobs;
+    Zeitzone, Pause und Wiederaufnahme geprüft.
+  target_versions:
+  - '0.6'
+  - '0.9'
+- id: A35
+  title: Verpflichtendes datumsbasiertes Videoarchiv
+  release: Betriebswege
+  status: planned
+  tasks:
+  - T260
+  external_task_dependencies:
+  - T030
+  - T051
+  - T186
+  work: Alle final erzeugten Videos dauerhaft unter Jahr/Monat/Tag sichern, vor Veröffentlichung
+    Integrität prüfen und persistente Archivvolumes bereitstellen.
+  exit_criteria: Keine Veröffentlichung ohne Archivkopie; keine automatische Archivlöschung;
+    kollisionsfreie Pfade und Wiederherstellung geprüft.
+  target_versions:
+  - '0.2'
+- id: A36
+  title: Pluginarchitektur für Sendungsbausteine
+  release: Produktion
+  status: planned
+  tasks:
+  - T270
+  - T271
+  - T272
+  external_task_dependencies:
+  - T002
+  - T100
+  - T151
+  - T254
+  - T255
+  work: Versionierter Pluginvertrag, Registry, Plugin-Katalog im Showeditor und mitgelieferte
+    Nachrichten-/Gesprächsplugins samt Entwicklungsvorlage.
+  exit_criteria: Gemischte Show aus Plugins funktioniert; Pluginerweiterung ohne Änderung
+    am Orchestrator; zentrale Prüf- und Archivregeln bleiben verbindlich.
+  target_versions:
+  - '0.3'
+  - '0.6'
+- id: A37
+  title: Verpflichtendes AI-Label in allen visuellen Ausgaben
+  release: Produktion
+  status: planned
+  tasks:
+  - T280
+  external_task_dependencies:
+  - T050
+  - T061
+  - T201
+  - T260
+  - T270
+  work: Nicht abschaltbare zentrale Kennzeichnung rechts unten nach finalem Zuschnitt;
+    Prüfung vor Archivierung und Veröffentlichung.
+  exit_criteria: Jede visuelle Ausgabe einschließlich Vorschau, Social-Export und
+    Archivvideo trägt das lesbare Label AI; Videos durchgehend.
+  target_versions:
+  - '0.7'
+- id: A38
+  title: Themenkurzvideos virtueller Mitarbeiter
+  release: Redaktion und Produktion
+  status: planned
+  tasks:
+  - T290
+  - T291
+  - T292
+  external_task_dependencies:
+  - T012
+  - T111
+  - T131
+  - T133
+  - T201
+  - T204
+  - T221
+  - T230
+  - T260
+  - T271
+  - T280
+  work: Berechtigte Kurzvideoaufträge mit Thema, Quellen, Avataroption, Formulierungsprofil
+    und eigenständigem oder showbezogenem Plugin-Renderpfad.; Themengruppen-Auswahl
+    und freie Text-/Medienbeiträge als RSS-äquivalente Eingänge.
+  exit_criteria: Mitarbeiterauftrag erzeugt geprüftes Kurzvideo mit Quellen, Freigabe,
+    Pflichtarchiv und AI-Label; eigenständige Ausgabe und Showeinbindung geprüft.
+  target_versions:
+  - '0.8'
+- id: A39
+  title: Redaktionelle Sequenzbibliothek und Intro-/Outroauswahl
+  release: Produktion
+  status: planned
+  tasks:
+  - T300
+  - T301
+  - T302
+  external_task_dependencies:
+  - T110
+  - T189
+  - T250
+  - T270
+  - T280
+  - T291
+  work: Standardsequenzen in Redaktionsverwaltung erzeugen; versioniert je Show und
+    Kurzvideo als Intro/Outro auswählen und wiederverwenden.
+  exit_criteria: Vorgerenderte freigegebene Sequenzen ohne erneute KI-Generierung
+    einbindbar; unabhängige Auswahl, Dauerbudget und Varianten geprüft.
+  target_versions:
+  - '0.7'
+  - '0.8'
+- id: A40
+  title: Sendungsblock-Plugin Uploadvideo
+  release: Produktion
+  status: planned
+  tasks:
+  - T310
+  external_task_dependencies:
+  - T270
+  - T271
+  - T260
+  - T280
+  work: Geschützter Videoupload, Vorschau, Zuschnitt und Einbindung über das Plugin
+    uploaded_video mit gemeinsamen Prüfungen und Archivierung.
+  exit_criteria: Hochgeladenes Video als Showbaustein renderbar; Rechte, Format, Dauer,
+    Ton, AI-Label und Pflichtarchiv geprüft.
+  target_versions:
+  - '0.7'
+- id: A41
+  title: 'Unterstützung: lokale und Cloud-KI konfigurieren'
+  release: Providerverwaltung
+  status: planned
+  tasks:
+  - T320
+  - T321
+  - T322
+  external_task_dependencies:
+  - T100
+  - T101
+  - T102
+  - T104
+  - T189
+  - T194
+  - T212
+  work: Providerkatalog, Aktivierung, sichere Tokens, Verbindungstests, Aufgabenrouting
+    und Kostenmodi im Reiter Unterstützung.
+  exit_criteria: Lokale/Free-/kommerzielle Dienste klar getrennt; Aktivierung und
+    Routing getestet, keine Secret-Ausgabe oder ungewollten Kosten.
+  target_versions:
+  - '0.4'
+- id: A42
+  title: Kostenvorschau je Show und Monatsprognose
+  release: Providerverwaltung und Produktion
+  status: planned
+  tasks:
+  - T330
+  external_task_dependencies:
+  - T101
+  - T103
+  - T250
+  - T301
+  - T321
+  work: Vorabkosten nach Plugin/Provider schätzen; Cache und Sequenzen berücksichtigen;
+    Monatsplan hochrechnen und mit Budgets prüfen.
+  exit_criteria: Nachvollziehbare Show-/Monatsschätzung mit Unsicherheiten; unbekannte
+    Kosten nicht als kostenlos; keine kostenpflichtigen Vorschauaufrufe.
+  target_versions:
+  - '0.9'
+- id: A43
+  title: Produktion und Veröffentlichung konsequent trennen
+  release: Produktion und Distribution
+  status: planned
+  tasks:
+  - T340
+  - T341
+  external_task_dependencies:
+  - T051
+  - T204
+  - T250
+  - T252
+  - T260
+  - T280
+  - T330
+  work: Separate Aufträge, Zeitpläne, Rechte und Status; interne Produktion und versionierte
+    Freigabe vor Veröffentlichung je Zielkanal.
+  exit_criteria: Produktion allein veröffentlicht nichts; vorhandene freigegebene
+    Artefakte später ohne Neurendern veröffentlichbar; Termine, Rechte und Kanalteilfehler
+    geprüft.
+  target_versions:
+  - '0.9'
+original_dependency_layers:
+- - T001
+- - T002
+  - T063
+- - T010
+  - T072
+  - T073
+  - T100
+- - T011
+  - T060
+  - T070
+  - T101
+  - T102
+  - T103
+  - T104
+  - T130
+  - T135
+  - T140
+  - T150
+  - T163
+- - T012
+  - T020
+  - T040
+  - T052
+  - T061
+  - T110
+  - T132
+  - T142
+  - T144
+  - T160
+- - T013
+  - T030
+  - T032
+  - T041
+  - T042
+  - T050
+  - T051
+  - T062
+  - T111
+  - T112
+  - T161
+  - T164
+- - T021
+  - T031
+  - T043
+  - T071
+  - T113
+  - T114
+  - T115
+  - T120
+  - T124
+  - T131
+  - T141
+  - T145
+  - T162
+  - T166
+  - T167
+- - T022
+  - T121
+  - T122
+  - T123
+  - T133
+  - T134
+  - T143
+  - T151
+  - T165
+  - T168
+- - T125
+  - T152
+  - T153
+- - T080
+  - T126
+  - T127
+  - T128
+  - T129
+- - T081
+combined_dependency_layers:
+- - T001
+- - T002
+  - T063
+- - T010
+  - T072
+  - T073
+  - T100
+  - T180
+- - T011
+  - T060
+  - T070
+  - T101
+  - T102
+  - T103
+  - T104
+  - T130
+  - T135
+  - T140
+  - T150
+  - T163
+  - T181
+  - T200
+  - T210
+- - T012
+  - T020
+  - T040
+  - T052
+  - T061
+  - T110
+  - T132
+  - T142
+  - T144
+  - T160
+- - T013
+  - T030
+  - T032
+  - T041
+  - T042
+  - T050
+  - T051
+  - T062
+  - T111
+  - T112
+  - T161
+  - T164
+  - T201
+- - T021
+  - T031
+  - T043
+  - T071
+  - T113
+  - T114
+  - T115
+  - T120
+  - T124
+  - T131
+  - T141
+  - T145
+  - T162
+  - T166
+  - T167
+  - T202
+  - T212
+- - T022
+  - T121
+  - T122
+  - T123
+  - T133
+  - T134
+  - T143
+  - T151
+  - T165
+  - T168
+  - T182
+- - T125
+  - T152
+  - T153
+  - T183
+  - T270
+- - T080
+  - T126
+  - T127
+  - T128
+  - T129
+  - T184
+  - T185
+  - T186
+  - T188
+- - T081
+  - T187
+  - T189
+  - T203
+  - T260
+- - T190
+  - T191
+  - T204
+  - T211
+  - T220
+  - T280
+  - T320
+- - T192
+  - T193
+  - T205
+  - T213
+  - T215
+  - T221
+  - T230
+  - T300
+  - T321
+- - T194
+  - T206
+  - T214
+  - T231
+  - T240
+  - T290
+- - T222
+  - T232
+  - T241
+  - T250
+  - T292
+  - T322
+- - T233
+  - T242
+  - T253
+  - T340
+- - T234
+  - T243
+  - T254
+  - T255
+- - T244
+  - T251
+  - T271
+- - T252
+  - T272
+  - T291
+  - T310
+- - T301
+- - T302
+  - T330
+- - T341

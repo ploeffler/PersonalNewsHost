@@ -1,0 +1,1032 @@
+# TODO-Liste v2: PersonalNewsHost -> "Full featured Newsoutlet"
+# v2 = v1 (Basis: main) + Redaktion mit virtuellen Mitarbeitern, erweitertes Fact-Checking,
+#      externe Text-/Videoanbieter, News-Shows, realistische KI-Hosts mit Lipsync
+# Format: YAML (maschinenlesbar). Reihenfolge ergibt sich aus depends_on.
+# Status-Werte: todo | in_progress | done | blocked
+# Hinweis: Dateipfade sind Annahmen. Jede Aufgabe beginnt mit "inspect",
+# damit der ausfuehrende Agent zuerst den echten Code-Stand prueft.
+
+meta:
+  project: PersonalNewsHost
+  repo: https://github.com/ploeffler/PersonalNewsHost
+  target_branch: Full-featured-Newsoutlet
+  base: main
+  language_of_output: de
+  license: GPL-3.0
+  schema_version: 2
+  version: 2
+  extends: v1
+  added_scope:
+    - virtuelle Redaktion (Abteilungen, Mitarbeiter)
+    - erweitertes Fact-Checking
+    - Textanalyse und Nachrichtenformulierung durch externe Anbieter
+    - Videoerzeugung durch externe Anbieter
+    - News-Show-Formate
+    - KI-Hosts/Avatare mit echtem Lipsync
+
+execution_rules:
+  - Eine Aufgabe darf erst starten, wenn alle Eintraege in depends_on den Status done haben.
+  - Jede Aufgabe mit externem Anbieter wird zuerst gegen den Mock-Provider (T100) entwickelt und getestet.
+  - Bei jeder Unklarheit zum Ist-Code zuerst inspizieren (T001), nicht raten.
+
+suggested_phases:
+  - id: P1
+    title: Fundament, Schema, Provider-Abstraktion, Budget, Mocks
+    epics: [E0, E9]
+  - id: P2
+    title: Sendungen, Rubriken, Web, Archiv, Feeds
+    epics: [E1, E2, E3, E4]
+  - id: P3
+    title: Redaktion, Fact-Checking, Textanalyse und -formulierung
+    epics: [E10, E11, E12]
+  - id: P4
+    title: Qualitaet, Praesentation, externe Videoclips
+    epics: [E5, E6, E13]
+  - id: P5
+    title: News-Shows und KI-Hosts mit Lipsync
+    epics: [E14, E15]
+  - id: P6
+    title: Betrieb, Doku, Abnahme
+    epics: [E7, E8]
+
+open_decisions:
+  - id: D1
+    question: Welche externen Anbieter fuer Text/Analyse (Kandidaten festlegen, Kosten/Nutzungsbedingungen pruefen)?
+    blocks: [T102, T132]
+  - id: D2
+    question: Welches monatliche Budget in EUR ist fuer externe Dienste erlaubt (0 = nur Free-Tier/Fallback)?
+    blocks: [T101, T144, T166]
+  - id: D3
+    question: Avatar-Weg - gehosteter Avatar-Dienst oder Open-Source-Modell auf eigener/externer GPU?
+    blocks: [T160, T161]
+  - id: D4
+    question: Duerfen Stimmen geklont werden (nur mit eigener, dokumentierter Einwilligung)?
+    blocks: [T163]
+  - id: D5
+    question: Soll menschliche Freigabe fuer unsichere Meldungen verpflichtend sein?
+    blocks: [T125, T128]
+
+global_constraints:
+  - id: C1
+    rule: Der Kernbetrieb bleibt bei 0 EUR pro Monat. Externe Anbieter sind ausschliesslich optional (Opt-in), haben ein hartes Budgetlimit in der Konfiguration (Standard 0) und werden bei Limit, Fehler oder fehlendem Secret durch lokale/freie Fallbacks ersetzt.
+  - id: C2
+    rule: Keine Zugangsdaten, Tokens oder Secrets im Repository; ausschliesslich GitHub Secrets verwenden.
+  - id: C3
+    rule: Bestehende Funktionen (Sendung, Webseite, Video-RSS, Untertitel, Telegram) duerfen nicht regredieren.
+  - id: C4
+    rule: Jede neue Funktion ist ueber config.json abschaltbar; config.example.json wird mitgepflegt.
+  - id: C5
+    rule: Jede neue Funktion erhaelt Tests unter tests/ und einen Eintrag in docs/guide/.
+  - id: C6
+    rule: Quellenangaben bleiben fuer jede Meldung sichtbar; es wird keine Faktenpruefung vorgetäuscht.
+  - id: C7
+    rule: Workflow-Laufzeiten und Artefaktgroessen innerhalb der kostenlosen GitHub-Actions- und Pages-Grenzen halten.
+  - id: C8
+    rule: Lizenz- und Nutzungsbedingungen aller Feeds, Bilder und Dienste beachten und dokumentieren.
+  - id: C9
+    rule: Synthetische Medien (KI-Avatare, KI-Stimmen, KI-generierte Clips) werden im Bild sichtbar, in den Metadaten und auf der Webseite als KI-generiert gekennzeichnet. Transparenzpflichten (u. a. EU-KI-Verordnung) werden geprueft und dokumentiert.
+  - id: C10
+    rule: Keine Nachbildung realer Personen (Gesicht, Stimme, Name); virtuelle Mitarbeiter und Hosts sind fiktiv. Stimmklone nur aus eigener, dokumentierter Einwilligung. Keine Darstellung von KI-Material als echtes Ereignisfootage; keine falsche Behauptung von Live-Uebertragung.
+  - id: C11
+    rule: An externe Anbieter werden nur oeffentliche Feed-Inhalte und notwendige Metadaten gesendet; nie Secrets oder personenbezogene Daten. Verwendete Anbieter, Nutzungsbedingungen (Training, Weiterverwendung, kommerzielle Nutzung) und Datenfluesse werden in der Datenschutzdoku aufgefuehrt.
+  - id: C12
+    rule: Fact-Check-Ergebnisse sind Indizien mit Belegen und Konfidenz, keine Wahrheitsgarantie. Nicht ausreichend bestaetigte Meldungen werden gekennzeichnet, zurueckgehalten oder verworfen, nie stillschweigend als geprueft ausgegeben.
+  - id: C13
+    rule: Jede externe Leistung liegt hinter einem Provider-Interface mit Timeout, Wiederholung, Kostenzaehler, Fallback und Mock-Variante. Inhalte aus Feeds gelten als nicht vertrauenswuerdig (Prompt-Injection-Schutz).
+
+epics:
+  - id: E0
+    title: Bestandsaufnahme und Grundlagen
+  - id: E1
+    title: Mehrere Sendungen und Rubriken
+  - id: E2
+    title: Artikelseiten und Redaktionsoberflaeche (Web)
+  - id: E3
+    title: Archiv, Suche und Navigation
+  - id: E4
+    title: Verteilung und Feeds
+  - id: E5
+    title: Redaktionelle Qualitaet und Transparenz
+  - id: E6
+    title: Praesentation (Moderatoren, Studio, Audio)
+  - id: E7
+    title: Betrieb, Robustheit und Tests
+  - id: E8
+    title: Dokumentation und Abschluss
+  - id: E9
+    title: Provider-Abstraktion, Budget und Datenabfluss-Kontrolle
+  - id: E10
+    title: Virtuelle Redaktion (Abteilungen und Mitarbeiter)
+  - id: E11
+    title: Erweitertes Fact-Checking
+  - id: E12
+    title: Textanalyse und Nachrichtenformulierung durch externe Anbieter
+  - id: E13
+    title: Videoerzeugung durch externe Anbieter
+  - id: E14
+    title: News-Show-Formate
+  - id: E15
+    title: Realistische KI-Hosts und Avatare mit echtem Lipsync
+
+tasks:
+  # ---------------- E0 ----------------
+  - id: T001
+    epic: E0
+    title: Code- und Workflow-Inventar erstellen
+    status: todo
+    depends_on: []
+    instructions:
+      - Lies README.md, config.json, config.example.json, alle Dateien in scripts/, tests/ und .github/workflows/.
+      - Erstelle docs/guide/architektur-ist.md mit Datenfluss RSS -> Auswahl -> Skript -> Sprache -> Video -> Veroeffentlichung.
+      - Liste alle Konfigurationsschluessel, alle Workflows samt Trigger und Laufzeit sowie alle externen Dienste auf.
+    acceptance:
+      - Datei docs/guide/architektur-ist.md existiert und nennt jedes Skript in scripts/ mit Zweck.
+      - Offene Pull Requests sind mit Kurzbewertung (uebernehmen/ablehnen/zurueckstellen) gelistet.
+
+  - id: T002
+    epic: E0
+    title: Konfigurationsschema einfuehren
+    status: todo
+    depends_on: [T001]
+    instructions:
+      - Lege ein JSON-Schema fuer config.json an (z. B. config.schema.json).
+      - Fuege ein Validierungsskript hinzu, das config.json und config.example.json gegen das Schema prueft.
+      - Validierung vor jedem Produktionslauf im Workflow ausfuehren; bei Fehler mit klarer Meldung abbrechen.
+    acceptance:
+      - Fehlerhafte Konfiguration bricht den Lauf vor der Videoerzeugung ab.
+      - Tests decken gueltige und ungueltige Konfigurationen ab.
+
+  # ---------------- E1 ----------------
+  - id: T010
+    epic: E1
+    title: Mehrere Sendungsformate (Editionen) unterstuetzen
+    status: todo
+    depends_on: [T002]
+    instructions:
+      - Erweitere config.json um eine Liste "shows" mit id, title, schedule, feeds, max_items, target_duration_seconds, presenter, studio.
+      - Pipeline so umbauen, dass pro Show ein eigener Lauf und eigene Ausgabedateien entstehen (z. B. out/<show_id>/).
+      - Bestehendes Verhalten als Standard-Show "main" abbilden, damit alte Konfigurationen weiter funktionieren (Abwaertskompatibilitaet).
+    acceptance:
+      - Zwei Beispiel-Shows lassen sich getrennt erzeugen.
+      - Altes config.json ohne "shows" erzeugt weiterhin dieselbe Sendung wie zuvor.
+
+  - id: T011
+    epic: E1
+    title: Rubriken und Themenzuordnung
+    status: todo
+    depends_on: [T010]
+    instructions:
+      - Fuehre Rubriken ein (z. B. Politik, Wirtschaft, Wissenschaft, Technik, Sport, Regional).
+      - Jede Feed-Quelle erhaelt in der Konfiguration eine Standardrubrik; optional regelbasierte oder KI-gestuetzte Neuzuordnung pro Meldung.
+      - Sendungen duerfen Rubriken auswaehlen und gewichten.
+    acceptance:
+      - Jede Meldung im Ausgabe-Datenmodell hat ein Feld "category".
+      - Eine Show kann auf bestimmte Rubriken eingeschraenkt werden.
+
+  - id: T012
+    epic: E1
+    title: Duplikat- und Themenclustering
+    status: todo
+    depends_on: [T011]
+    instructions:
+      - Erkenne mehrere Meldungen zum selben Ereignis (Titel-/Textaehnlichkeit, deterministisch, ohne bezahlte API).
+      - Fasse Cluster zu einem Beitrag mit mehreren Quellenangaben zusammen.
+    acceptance:
+      - Doppelte Meldungen erscheinen nicht mehrfach in derselben Sendung.
+      - Zusammengefasste Beitraege listen alle Quellen.
+
+  - id: T013
+    epic: E1
+    title: Eilmeldungs-Modus (Breaking News)
+    status: todo
+    depends_on: [T010, T012]
+    instructions:
+      - Definiere in der Konfiguration Stichwoerter, Quellen und Schwellen fuer Eilmeldungen.
+      - Erzeuge bei Treffer einen Kurzclip (max. 60 Sekunden) mit eigenem Workflow-Trigger (geplant, kein Dauerbetrieb).
+      - Eilmeldungen erscheinen oben auf der Webseite und im Feed.
+    acceptance:
+      - Testfeed mit Stichwort erzeugt einen Kurzclip.
+      - Ohne Treffer wird kein Video erzeugt (Kontingente schonen).
+
+  # ---------------- E2 ----------------
+  - id: T020
+    epic: E2
+    title: Statische Artikelseiten pro Meldung
+    status: todo
+    depends_on: [T011]
+    instructions:
+      - Erzeuge pro Meldung eine statische HTML-Seite mit Titel, Zusammenfassung, Rubrik, Zeitstempel, Quelle(n), Link zur Originalquelle und Videosprungmarke.
+      - Generiere Seiten im Build-Schritt fuer GitHub Pages; keine Laufzeit-Server.
+      - Verwende nur kurze Zitate und Zusammenfassungen, keine Volltexte aus Quellen (Urheberrecht).
+    acceptance:
+      - Jede Meldung der letzten Sendung hat eine erreichbare Seite.
+      - Seiten sind responsiv und ohne externe Tracker.
+
+  - id: T021
+    epic: E2
+    title: Startseite im Redaktionslayout
+    status: todo
+    depends_on: [T020, T013]
+    instructions:
+      - Gestalte die Startseite mit Aufmacher (aktuelle Sendung), Eilmeldungsleiste, Rubrikenblöcken und neuesten Beitraegen.
+      - Hell- und Dunkelmodus ueber CSS-Variablen unterstuetzen.
+      - Barrierefreiheit: Semantisches HTML, Kontrast, Tastaturbedienung, Alternativtexte.
+    acceptance:
+      - Startseite zeigt mindestens aktuelle Sendung, Rubriken und neueste Beitraege.
+      - Automatische Barrierefreiheitspruefung (z. B. axe/pa11y im CI) ohne kritische Fehler.
+
+  - id: T022
+    epic: E2
+    title: Rubrikenseiten und Sendungsseiten
+    status: todo
+    depends_on: [T021, T010]
+    instructions:
+      - Erzeuge je Rubrik und je Show eine Uebersichtsseite mit Paginierung.
+      - Verlinke Seiten untereinander (Breadcrumbs, Rubrikennavigation).
+    acceptance:
+      - Jede konfigurierte Rubrik und Show besitzt eine eigene Seite.
+
+  # ---------------- E3 ----------------
+  - id: T030
+    epic: E3
+    title: Archiv mit Aufbewahrungsregeln
+    status: todo
+    depends_on: [T020]
+    instructions:
+      - Speichere Metadaten jeder Sendung (Datum, Show, Meldungen, Quellen, Videolink) als JSON-Index.
+      - Lege konfigurierbare Aufbewahrung fest (z. B. Anzahl Tage/Sendungen); Videos aelter als Grenze entfernen, Metadaten behalten.
+      - Beachte die Repository- und Pages-Groessengrenzen (C7).
+    acceptance:
+      - Archivseite listet vergangene Sendungen nach Datum.
+      - Aelteste Videos werden nach Konfiguration automatisch entfernt.
+
+  - id: T031
+    epic: E3
+    title: Clientseitige Volltextsuche
+    status: todo
+    depends_on: [T030]
+    instructions:
+      - Erzeuge beim Build einen Suchindex (JSON) aus Titeln, Zusammenfassungen, Rubriken und Quellen.
+      - Binde eine kleine, lizenzkonforme Suchbibliothek ein oder implementiere eine einfache Suche in Vanilla-JS; keine externen Dienste.
+      - Suche findet Beitraege und Sendungen.
+    acceptance:
+      - Suchbegriff liefert Treffer ohne Serveraufruf.
+      - Indexgroesse bleibt unter konfiguriertem Limit.
+
+  - id: T032
+    epic: E3
+    title: Sitemap, Metadaten und Teilen
+    status: todo
+    depends_on: [T020]
+    instructions:
+      - Erzeuge sitemap.xml und robots.txt.
+      - Ergaenze Open-Graph- und Twitter-Card-Metadaten pro Seite.
+      - Strukturierte Daten (schema.org NewsArticle/VideoObject) einbetten.
+    acceptance:
+      - Sitemap enthaelt alle Artikel-, Rubriken- und Sendungsseiten.
+
+  # ---------------- E4 ----------------
+  - id: T040
+    epic: E4
+    title: Feeds pro Show und Rubrik
+    status: todo
+    depends_on: [T010, T011]
+    instructions:
+      - Erzeuge Video-RSS pro Show und pro Rubrik zusaetzlich zum Gesamtfeed.
+      - Erzeuge einen Textfeed (RSS/Atom und JSON Feed) fuer Artikelseiten.
+    acceptance:
+      - Feeds validieren gegen gaengige Feed-Validatoren.
+      - Bestehende Feed-URL bleibt unveraendert gueltig.
+
+  - id: T041
+    epic: E4
+    title: Audio-Podcast-Feed
+    status: todo
+    depends_on: [T040]
+    instructions:
+      - Extrahiere die Tonspur jeder Sendung als MP3/AAC und erzeuge einen Podcast-RSS-Feed (iTunes-Tags).
+      - Kapitelmarken aus den Meldungsabschnitten ableiten.
+    acceptance:
+      - Podcast-Feed laesst sich in einem Podcast-Client abonnieren.
+
+  - id: T042
+    epic: E4
+    title: Telegram erweitern (optional, abschaltbar)
+    status: todo
+    depends_on: [T040]
+    instructions:
+      - Unterstuetze Telegram pro Show/Rubrik mit eigenem Kanal-Ziel in der Konfiguration.
+      - Sende Eilmeldungen als Textnachricht mit Link statt Video, um Limits zu schonen.
+    acceptance:
+      - Ohne gesetzte Secrets wird Telegram uebersprungen, ohne Fehlschlag des Laufs.
+
+  - id: T043
+    epic: E4
+    title: Woechentlicher Newsletter als statische Datei
+    status: todo
+    depends_on: [T030, T040]
+    instructions:
+      - Erzeuge woechentlich eine HTML- und Text-Zusammenfassung der wichtigsten Meldungen.
+      - Versand nur optional ueber einen konfigurierbaren, kostenlosen Weg; Standard ist reine Veroeffentlichung als Seite/Feed.
+    acceptance:
+      - Newsletter-Seite wird erzeugt; Versand ist standardmaessig aus.
+
+  # ---------------- E5 ----------------
+  - id: T050
+    epic: E5
+    title: Quellentransparenz und Kennzeichnung KI-generierter Inhalte
+    status: todo
+    depends_on: [T020]
+    instructions:
+      - Kennzeichne Sendung und Seiten deutlich als automatisch erstellt mit KI-Unterstuetzung.
+      - Zeige pro Beitrag Quelle, Abrufzeit und Link zum Original.
+      - Fuege eine Seite "Ueber diese Sendung" mit Funktionsweise, Grenzen und Korrekturkontakt hinzu.
+      - v2: Kennzeichne synthetische Stimmen, Avatare und Clips gemaess C9 (Umsetzung in T145 und T167).
+    acceptance:
+      - Jede Artikelseite und das Video enthalten Kennzeichnung und Quellenangaben.
+
+  - id: T051
+    epic: E5
+    title: Qualitaetspruefungen vor Veroeffentlichung
+    status: todo
+    depends_on: [T012]
+    instructions:
+      - Pruefe vor Veroeffentlichung: Mindestanzahl Meldungen, Videodauer in Zielbereich, Tonspur vorhanden, keine leeren Abschnitte, Quellenangabe je Meldung.
+      - Bei Verstoss: Lauf abbrechen und letzte gueltige Sendung beibehalten; Fehlerbericht im Workflow-Log.
+    acceptance:
+      - Fehlerhafte Testlaeufe ueberschreiben die letzte gute Sendung nicht.
+
+  - id: T052
+    epic: E5
+    title: Quellen-Blockliste und Gewichtung
+    status: todo
+    depends_on: [T011]
+    instructions:
+      - Ermoegliche in der Konfiguration Blocklisten (Domains, Stichwoerter) und Gewichtung je Quelle.
+      - Dokumentiere Auswahlkriterien nachvollziehbar.
+    acceptance:
+      - Gesperrte Quellen erscheinen nie in der Ausgabe.
+
+  # ---------------- E6 ----------------
+  - id: T060
+    epic: E6
+    title: Mehrere Moderatoren und Studio-Varianten
+    status: todo
+    depends_on: [T010]
+    instructions:
+      - Erlaube pro Show eigenen Moderator (Aussehen, Stimme) und eigenes Studio-Design.
+      - Optional Wechselmoderation zwischen zwei Personen/Stimmen innerhalb einer Sendung.
+      - v2: Realistische KI-Hosts mit Lipsync entstehen in Epic E15; diese Aufgabe liefert nur die Zuordnung pro Show (host_id, studio_id).
+    acceptance:
+      - Zwei Shows nutzen unterschiedliche Moderatoren und Studios.
+
+  - id: T061
+    epic: E6
+    title: Grafikbausteine (Einblendungen)
+    status: todo
+    depends_on: [T011]
+    instructions:
+      - Einheitliche Einblendungen: Lower Third mit Rubrik und Quelle, Zeit/Datum, Eilmeldungsband, Senderlogo.
+      - Templates als wiederverwendbare Dateien in assets/ ablegen.
+    acceptance:
+      - Rubrik und Quelle sind im Video je Meldung eingeblendet.
+
+  - id: T062
+    epic: E6
+    title: Bildquellen und Lizenzen
+    status: todo
+    depends_on: [T020]
+    instructions:
+      - Verwende nur Bilder mit nachweisbar passender Lizenz (z. B. Feed-Bild mit erlaubter Nutzung, freie Archive) oder generierte Grafiken.
+      - Speichere Bildnachweis pro Meldung und zeige ihn auf Artikelseite und im Abspann.
+    acceptance:
+      - Jedes verwendete Bild hat einen Nachweis im Datenmodell.
+
+  - id: T063
+    epic: E6
+    title: Untertitel verbessern
+    status: todo
+    depends_on: [T001]
+    instructions:
+      - Pruefe die vorhandene SRT-Erzeugung auf Zeitgenauigkeit innerhalb der Abschnitte.
+      - Falls moeglich, wortgenaue Zeiten aus der Sprachsynthese oder einem lokalen, kostenlosen Aligner verwenden.
+      - Untertitel als WebVTT zusaetzlich zu SRT bereitstellen.
+    acceptance:
+      - Untertitelabweichung gegenueber Audio in Stichprobe unter 0,5 Sekunden.
+
+  # ---------------- E7 ----------------
+  - id: T070
+    epic: E7
+    title: Planung und Laufzeitbudget in Workflows
+    status: todo
+    depends_on: [T010]
+    instructions:
+      - Plane Shows ueber getrennte Cron-Trigger und nutze Concurrency-Gruppen, um Parallelitaet zu begrenzen.
+      - Setze Timeouts und Caching (Modelle, Abhaengigkeiten) ein, um Minuten zu sparen.
+      - Dokumentiere geschaetzte Minuten pro Monat und pro Show.
+      - v2: Beruecksichtige asynchrone externe Jobs (Epics E12, E13, E15), Wartezeiten und Budgetgrenzen aus T101.
+    acceptance:
+      - Gesamtverbrauch pro Monat ist dokumentiert und liegt unter dem freien Kontingent.
+
+  - id: T071
+    epic: E7
+    title: Fehlerbehandlung, Wiederholung und Benachrichtigung
+    status: todo
+    depends_on: [T051]
+    instructions:
+      - Feed-Abrufe mit Timeout, Wiederholung mit Backoff und Fallback auf zuletzt gueltige Daten.
+      - Bei dauerhaftem Fehler optionalen Hinweis (Issue oder Telegram-Admin-Nachricht) erzeugen, wenn Secret gesetzt.
+    acceptance:
+      - Ausfall eines einzelnen Feeds verhindert die Sendung nicht.
+
+  - id: T072
+    epic: E7
+    title: Testabdeckung und CI
+    status: todo
+    depends_on: [T002]
+    instructions:
+      - Ergaenze Unit-Tests fuer Auswahl, Clustering, Rubriken, Konfigurationsvalidierung, Feed-Erzeugung und Seitengenerierung.
+      - Fuehre Tests, Linting und Link-Pruefung der erzeugten Seiten bei jedem Pull Request aus.
+      - Nutze lokale Testdaten (Fixture-Feeds), keine Netzwerkzugriffe in Tests.
+    acceptance:
+      - CI laeuft ohne Netzwerk gruen; neue Module haben Tests.
+
+  - id: T073
+    epic: E7
+    title: Datenschutz und Sicherheit
+    status: todo
+    depends_on: [T002]
+    instructions:
+      - Pruefe, dass keine Secrets oder personenbezogenen Daten in Artefakten, Logs oder Seiten landen.
+      - Fuege Datenschutzhinweis und Impressumsvorlage hinzu; keine Drittanbieter-Tracker.
+      - Pinne Versionen von Actions und Abhaengigkeiten.
+    acceptance:
+      - Geheimnisscan im CI findet keine Treffer.
+
+  # ---------------- E8 ----------------
+  - id: T080
+    epic: E8
+    title: Dokumentation aktualisieren
+    status: todo
+    depends_on: [T010, T020, T030, T040, T050, T060, T070, T102, T114, T125, T132, T144, T167]
+    instructions:
+      - Aktualisiere README.md, docs/guide/konfiguration.md, betrieb-und-sicherheit.md, technik.md und entwicklung.md.
+      - Fuege Migrationsanleitung fuer bestehende Forks hinzu (neue Konfigurationsschluessel, Abwaertskompatibilitaet).
+      - Dokumentiere Roadmap und offene Punkte.
+    acceptance:
+      - Eine neue Person kann anhand der Doku einen Fork mit zwei Shows einrichten.
+
+  - id: T081
+    epic: E8
+    title: Abnahmelauf Ende-zu-Ende
+    status: todo
+    depends_on: [T080, T072, T114, T129, T133, T145, T168]
+    instructions:
+      - Fuehre einen kompletten Lauf mit zwei Shows, Rubriken, Eilmeldung, Archiv, Suche und Feeds mit Testdaten aus.
+      - v2: Fuehre den Lauf einmal vollstaendig mit Mock-Providern und einmal mit aktivierten Fallbacks aus (Redaktionsablauf, Fact-Check-Verdikte, Videoclips, Avatar-Segment).
+      - Erzeuge einen Abnahmebericht (docs/guide/abnahme.md) mit Ergebnis je Akzeptanzkriterium.
+    acceptance:
+      - Alle Aufgaben mit Status done oder begruendet zurueckgestellt.
+
+  # ======================================================================
+  # v2-ERWEITERUNGEN
+  # ======================================================================
+
+  # ---------------- E9: Provider-Abstraktion ----------------
+  - id: T100
+    epic: E9
+    title: Provider-Interface, Registry und Mock-Provider
+    status: todo
+    depends_on: [T002]
+    instructions:
+      - Definiere Provider-Arten (kind) - text_generation, text_analysis, factcheck_source, video_generation, avatar_video, tts.
+      - Erweitere config.json um "providers" mit id, kind, enabled, secret_name, endpoint, model, timeout_s, retries, rate_limit, cost_model, priority, fallback_to.
+      - Implementiere ein gemeinsames Interface mit Fehlerklassen (Timeout, Quota, Auth, Inhalt abgelehnt) und eine Registry.
+      - Implementiere pro kind einen Mock-Provider mit deterministischen Fixtures fuer Tests.
+      - Aktualisiere Konfigurationsschema (T002) und config.example.json.
+    acceptance:
+      - Alle externen Aufrufe laufen ausschliesslich ueber das Interface.
+      - Tests laufen vollstaendig mit Mock-Providern ohne Netzwerk.
+
+  - id: T101
+    epic: E9
+    title: Budget- und Quota-Waechter
+    status: todo
+    depends_on: [T100]
+    instructions:
+      - Fuehre monthly_budget_eur, per_run_budget_eur und Einheiten-Limits (Tokens, Sekunden Video) in der Konfiguration ein; Standard 0.
+      - Zaehle Verbrauch pro Provider und Lauf; schreibe Zusammenfassung in den Workflow-Report.
+      - Bei Limit oder Quota-Fehler externe Aufrufe stoppen und Fallback (fallback_to) aktivieren.
+      - Persistiere den Monatsverbrauch so, dass Laeufe ihn lesen koennen, ohne Secrets oder Rohdaten zu speichern.
+    acceptance:
+      - Bei Budget 0 werden keine kostenpflichtigen Aufrufe ausgefuehrt.
+      - Test belegt Umschaltung auf Fallback bei erreichtem Limit.
+
+  - id: T102
+    epic: E9
+    title: Anbieter-Bewertung und Dokumentation
+    status: todo
+    depends_on: [T100]
+    instructions:
+      - Erstelle docs/guide/provider.md mit je Anbieter - Leistung, Preismodell/Free-Tier, Nutzungsbedingungen (Training, Weiterverwendung, kommerzielle Nutzung), Datenstandort, Datum der Pruefung.
+      - Erstelle ein Benchmark-Skript, das gleiche Testaufgaben ueber mehrere Provider laufen laesst und Qualitaet, Latenz und Kosten vergleicht.
+      - Pruefe Bedingungen jeweils aktuell auf den Anbieterseiten; keine Annahmen aus dem Gedaechtnis uebernehmen.
+    acceptance:
+      - Fuer jeden aktivierten Anbieter existiert ein datierter Eintrag in docs/guide/provider.md.
+
+  - id: T103
+    epic: E9
+    title: Ergebnis-Cache und Idempotenz
+    status: todo
+    depends_on: [T100]
+    instructions:
+      - Bilde Cache-Schluessel aus Provider, Modell, Aufgabe, normalisierter Eingabe und Prompt-Version.
+      - Speichere Ergebnisse im Actions-Cache oder als Artefakt; wiederholte Eingaben loesen keine neuen kostenpflichtigen Aufrufe aus.
+    acceptance:
+      - Zweiter Lauf mit identischen Feeds verursacht keine zusaetzlichen Providerkosten.
+
+  - id: T104
+    epic: E9
+    title: Datenabfluss-Filter und Protokoll
+    status: todo
+    depends_on: [T100]
+    instructions:
+      - Definiere pro Provider-Art eine Allowlist erlaubter Felder; entferne alles andere vor dem Versand.
+      - Protokolliere Anbieter, Aufgabe, Datenumfang und Zeit (ohne Inhalte und ohne Secrets).
+      - Fuege Secret-Scan fuer ausgehende Payloads hinzu.
+    acceptance:
+      - Test belegt, dass Felder ausserhalb der Allowlist nie gesendet werden.
+
+  # ---------------- E10: Virtuelle Redaktion ----------------
+  - id: T110
+    epic: E10
+    title: Redaktionsmodell - Abteilungen und virtuelle Mitarbeiter
+    status: todo
+    depends_on: [T002, T011, T100]
+    instructions:
+      - Erweitere config.json um "newsroom" mit "departments" (z. B. Chef vom Dienst, Politik, Wirtschaft, Wissenschaft/Technik, Sport, Regional, Fact-Check-Desk, Bildredaktion, Schlussredaktion/Lektorat, Archiv/Dokumentation).
+      - Definiere "staff" mit id, fiktivem Namen, Rolle, Abteilung, Persona/Stilprofil, Zustaendigkeiten, Rechte (darf freigeben/darf ablehnen), zugewiesenem Provider/Modell.
+      - Lege ein JSON-Schema fuer das Redaktionsmodell an und validiere es (T002).
+      - Mitarbeiter sind fiktiv und als KI-Rollen gekennzeichnet (C9, C10).
+    acceptance:
+      - Beispielkonfiguration mit mindestens 6 Abteilungen und 10 virtuellen Mitarbeitern validiert.
+      - Keine Person traegt Namen oder Aussehen realer Personen.
+
+  - id: T111
+    epic: E10
+    title: Redaktionsworkflow als Zustandsautomat
+    status: todo
+    depends_on: [T110, T012]
+    instructions:
+      - Implementiere Stufen - Themenfindung (Ressort) -> Recherche/Anreicherung -> Schreiben (Reporter) -> Fact-Check (Desk) -> Lektorat -> Freigabe (Chef vom Dienst) -> Produktion.
+      - Speichere pro Meldung Zustand, Bearbeiter, Verlauf und Versionen als JSON.
+      - Erlaube Rueckweisung mit Begruendung und maximal N Korrekturschleifen; danach Eskalation oder Verwurf.
+      - Jede Stufe nutzt Provider ueber T100, mit Fallback auf regelbasierte Variante.
+    acceptance:
+      - Testmeldung durchlaeuft alle Stufen mit Mock-Providern; Rueckweisung wird abgebildet.
+      - Ausfall eines Providers fuehrt zum Fallback, nicht zum Abbruch der Sendung.
+
+  - id: T112
+    epic: E10
+    title: Rollen-Prompts und Stilhandbuch
+    status: todo
+    depends_on: [T110]
+    instructions:
+      - Lege versionierte Prompt-Vorlagen pro Rolle ab (z. B. assets/prompts/<rolle>.md).
+      - Erstelle ein Stilhandbuch - Sprache, Tonalitaet, Neutralitaet, Trennung von Nachricht und Meinung, Umgang mit Zahlen, Zitaten und Unsicherheit.
+      - Pflege eine Prompt-Version im Ergebnis, damit Aenderungen nachvollziehbar bleiben.
+    acceptance:
+      - Jede Rolle besitzt Prompt-Vorlage mit Ausgabeschema und Version.
+
+  - id: T113
+    epic: E10
+    title: Redaktionskonferenz und Sendungsplanung
+    status: todo
+    depends_on: [T111, T010]
+    instructions:
+      - Chef vom Dienst erstellt je Show einen Sendeplan - Prioritaet, Zeitbudget je Beitrag, Rubrikenmix, Aufmacher.
+      - Plan wird als JSON gespeichert und von der Segment-Engine (T151) verwendet.
+    acceptance:
+      - Sendeplan erfuellt Zielsendedauer der Show mit Toleranz.
+
+  - id: T114
+    epic: E10
+    title: Redaktionsprotokoll und Seite "Unsere Redaktion"
+    status: todo
+    depends_on: [T111, T050]
+    instructions:
+      - Zeige pro Artikel einen "Redaktionsweg" (Stufen, beteiligte KI-Rollen, eingesetzte Anbieter-Kategorie, Zeitpunkte).
+      - Erzeuge eine Seite "Unsere Redaktion" mit Abteilungen und virtuellen Mitarbeitern, klar als KI gekennzeichnet.
+    acceptance:
+      - Jeder Artikel verlinkt seinen Redaktionsweg; Kennzeichnung ist sichtbar.
+
+  - id: T115
+    epic: E10
+    title: Getrennte Kommentar- und Analyseabteilung
+    status: todo
+    depends_on: [T111]
+    instructions:
+      - Optionales Format fuer Einordnung/Kommentar, strikt getrennt von Nachrichten und deutlich als Meinung/Analyse markiert.
+      - Kommentare duerfen nur auf geprueften Fakten (T125) aufbauen und nennen gegensaetzliche Positionen.
+    acceptance:
+      - Kommentarinhalte tragen Kennzeichnung und erscheinen nie als Nachrichtenmeldung.
+
+  # ---------------- E11: Erweitertes Fact-Checking ----------------
+  - id: T120
+    epic: E11
+    title: Claim-Extraktion
+    status: todo
+    depends_on: [T111]
+    instructions:
+      - Extrahiere pro Meldung ueberpruefbare Aussagen (Personen, Orte, Zahlen, Daten, Zitate, Kausalbehauptungen) mit id, Typ und Fundstelle im Quelltext.
+      - Ausgabe als JSON gemaess Schema; Prompt-Injection-Schutz beachten (T135).
+    acceptance:
+      - Testmeldungen liefern vollstaendige Claim-Listen mit Fundstelle.
+
+  - id: T121
+    epic: E11
+    title: Mehrquellen-Abgleich
+    status: todo
+    depends_on: [T120, T012]
+    instructions:
+      - Vergleiche Claims mit Meldungen desselben Themenclusters und weiteren konfigurierten Quellen.
+      - Zaehle unabhaengige Quellen (nicht Agenturkopien derselben Meldung) und bestimme Uebereinstimmung.
+    acceptance:
+      - Pro Claim existiert Anzahl unabhaengiger Quellen und Uebereinstimmungsgrad.
+
+  - id: T122
+    epic: E11
+    title: Externe Fact-Check-Quellen anbinden
+    status: todo
+    depends_on: [T120, T100]
+    instructions:
+      - Binde freie Fact-Check-Daten ein (z. B. ClaimReview-/Fact-Check-Datenbanken mit freiem Zugang, oeffentliche Faktencheck-Feeds); Zugangs- und Lizenzbedingungen vorher pruefen und in T102 dokumentieren.
+      - Behandle Treffer als Hinweis mit Quelle und Datum, nicht als Endurteil.
+    acceptance:
+      - Bekannte widerlegte Behauptung im Testkorpus wird mit Verweis auf den Fact-Check markiert.
+
+  - id: T123
+    epic: E11
+    title: Primaerquellen-, Zahlen- und Zitatpruefung
+    status: todo
+    depends_on: [T120]
+    instructions:
+      - Erkenne Verweise auf Primaerquellen (Behoerden, Statistikaemter, Pressemitteilungen, Urteile) und rufe frei zugaengliche Dokumente ab.
+      - Vergleiche Zahlen (Einheit, Groessenordnung, Zeitraum) und kurze Zitate mit der Primaerquelle.
+      - Pruefe Datums-, Orts- und Namenskonsistenz innerhalb der Meldung.
+    acceptance:
+      - Absichtlich verfaelschte Testzahl wird als Abweichung erkannt.
+
+  - id: T124
+    epic: E11
+    title: Bild- und Medienherkunft pruefen
+    status: todo
+    depends_on: [T062]
+    instructions:
+      - Pruefe Herkunft, Lizenz und Zeitbezug verwendeter Bilder anhand von Feed-Metadaten.
+      - Markiere Medien unklarer Herkunft; verwende sie nicht als Beleg fuer Ereignisse, ggf. als Symbolbild gekennzeichnet.
+    acceptance:
+      - Medien ohne Herkunftsnachweis werden nicht als dokumentarisch dargestellt.
+
+  - id: T125
+    epic: E11
+    title: Verdikt-Modell, Schwellen und Veroeffentlichungs-Gate
+    status: todo
+    depends_on: [T121, T122, T123]
+    instructions:
+      - Verdikt je Claim - supported, partly_supported, unsupported, contradicted, unverifiable - mit Konfidenz und Belegliste.
+      - Aggregiere zu Meldungsstatus und lege per Konfiguration Schwellen fest.
+      - Routing - publish, publish_with_label ("nicht vollstaendig bestaetigt"), hold_for_human, drop.
+      - Ergebnisse stuetzen sich nie auf ein einzelnes Modell; bei kritischen Claims zweite Meinung (T132).
+    acceptance:
+      - Testkorpus wird gemaess Schwellen korrekt geroutet.
+      - Keine Meldung erhaelt Status "geprueft" ohne mindestens einen dokumentierten Beleg.
+
+  - id: T126
+    epic: E11
+    title: Korrekturen und Updates
+    status: todo
+    depends_on: [T114, T125]
+    instructions:
+      - Erlaube Korrektur oder Aktualisierung veroeffentlichter Beitraege mit Versionshistorie und sichtbarem Korrekturhinweis.
+      - Korrekturen fliessen in Feed und Archiv; bei Videos wird ein Korrekturhinweis in der naechsten Sendung eingeplant.
+    acceptance:
+      - Korrigierter Beitrag zeigt Hinweis, Zeitpunkt und Aenderung.
+
+  - id: T127
+    epic: E11
+    title: Fact-Check-Anzeige in Web und Video
+    status: todo
+    depends_on: [T125, T020]
+    instructions:
+      - Zeige pro Beitrag den Pruefstatus, Anzahl und Art der Belege und Einschraenkungen; keine Formulierungen, die Gewissheit vortaeuschen (C12).
+      - Optionale Einblendung im Video bei Status "nicht vollstaendig bestaetigt".
+    acceptance:
+      - Statusanzeige entspricht dem Datenmodell; Unsicherheit wird sichtbar.
+
+  - id: T128
+    epic: E11
+    title: Menschliche Freigabe bei unsicheren Meldungen
+    status: todo
+    depends_on: [T125, T071]
+    instructions:
+      - Gehaltene Meldungen erzeugen ein Freigabe-Ticket (GitHub Issue oder Telegram-Admin-Nachricht, falls Secret gesetzt) mit Begruendung und Belegen.
+      - Freigabe oder Ablehnung per Label/Kommando; konfigurierbare Frist mit Standardaktion (verwerfen).
+    acceptance:
+      - Ohne Reaktion wird nach Frist gemaess Standardaktion verfahren.
+
+  - id: T129
+    epic: E11
+    title: Fact-Check-Testkorpus und Metriken
+    status: todo
+    depends_on: [T125]
+    instructions:
+      - Lege Fixtures an (wahre, falsche, irrefuehrende, Satire, veraltete Meldungen) in tests/.
+      - Messe Trefferquote und Fehlalarme und lasse Regressionen im CI fehlschlagen.
+    acceptance:
+      - CI meldet Metriken und bricht bei Unterschreiten der Mindestwerte ab.
+
+  # ---------------- E12: Textanalyse und Formulierung extern ----------------
+  - id: T130
+    epic: E12
+    title: Analyse-Aufgaben und Ausgabeschemata
+    status: todo
+    depends_on: [T100]
+    instructions:
+      - Definiere Aufgaben - Zusammenfassung, Entitaetenerkennung, Themenklassifikation, Relevanzbewertung, Tonalitaet/Bias-Hinweis, semantische Duplikaterkennung, Schlagzeilenvorschlag.
+      - Lege je Aufgabe ein JSON-Schema fuer die Ausgabe fest und validiere jede Antwort strikt.
+    acceptance:
+      - Ungueltige Provider-Antworten werden abgelehnt und lösen Wiederholung oder Fallback aus.
+
+  - id: T131
+    epic: E12
+    title: Nachrichtenformulierung (Sprechertext, Webtext, Kurzfassung)
+    status: todo
+    depends_on: [T112, T130, T135]
+    instructions:
+      - Erzeuge ueber externe Anbieter - Anmoderation, Beitragstext, Abmoderation, Webkurztext, Untertiteltext.
+      - Halte Zeit- und Zeichenbudget je Beitrag ein; verwende nur Fakten aus den Quelltexten und weise Claims-Referenzen aus.
+      - Fallback bei Ausfall oder Budgetgrenze - bestehende lokale Textbildung.
+    acceptance:
+      - Text enthaelt keine Fakten ohne Quellenbezug.
+      - Fallback liefert weiterhin eine vollstaendige Sendung.
+
+  - id: T132
+    epic: E12
+    title: Mehr-Anbieter-Strategie und zweite Meinung
+    status: todo
+    depends_on: [T130, T101, T102]
+    instructions:
+      - Konfiguriere pro Aufgabe die Strategie - cheapest_first, best_quality, majority_vote, second_opinion_on_critical.
+      - Vergleiche Ergebnisse mehrerer Anbieter auf faktische Abweichungen und markiere Widersprueche.
+    acceptance:
+      - Widerspruechliche Ergebnisse loesen Eskalation (T125) statt stiller Auswahl aus.
+
+  - id: T133
+    epic: E12
+    title: Grounding-Pruefung gegen Halluzinationen
+    status: todo
+    depends_on: [T131, T120]
+    instructions:
+      - Ordne jeden generierten Satz einer Quellenstelle zu; Saetze ohne Beleg werden entfernt oder neu erzeugt.
+      - Pruefe Zahlen, Namen und Daten im Text maschinell gegen die Quelle.
+    acceptance:
+      - Absichtlich erfundener Satz im Test wird erkannt und entfernt.
+
+  - id: T134
+    epic: E12
+    title: Urheberrechts- und Originalitaetsschutz
+    status: todo
+    depends_on: [T131]
+    instructions:
+      - Begrenze woertliche Uebernahmen auf kurze, gekennzeichnete Zitate.
+      - Messe Aehnlichkeit zwischen Ausgabe und Quelltext und formuliere bei Ueberschreitung neu.
+    acceptance:
+      - Aehnlichkeitsgrenzwert ist konfigurierbar und im CI getestet.
+
+  - id: T135
+    epic: E12
+    title: Prompt-Injection-Schutz fuer Feed-Inhalte
+    status: todo
+    depends_on: [T100]
+    instructions:
+      - Behandle Feed-Inhalte strikt als Daten; trenne Systemanweisung und Inhalt klar, entferne eingebettete Anweisungen.
+      - Erlaube Modellausgaben nur im Schema; keine Werkzeug- oder Dateizugriffe aus Modellausgaben.
+    acceptance:
+      - Testfeed mit eingebetteter Anweisung veraendert Verhalten und Ausgabe nicht.
+
+  # ---------------- E13: Videos von externen Anbietern ----------------
+  - id: T140
+    epic: E13
+    title: Video-Provider-Adapter mit asynchronen Jobs
+    status: todo
+    depends_on: [T100]
+    instructions:
+      - Definiere generate_clip(prompt/skript, dauer, format, stil) -> Datei - mit Submit, Polling, Download, Timeout und Wiederaufnahme ueber mehrere Workflow-Laeufe.
+      - Implementiere Mock-Adapter, mindestens einen externen Adapter und den lokalen Fallback (vorhandene Bild-/Grafikvideos).
+    acceptance:
+      - Mock-Job durchlaeuft Submit, Polling, Download; Timeout fuehrt zum Fallback.
+
+  - id: T141
+    epic: E13
+    title: Szenenplanung und Shot-Liste
+    status: todo
+    depends_on: [T111, T140]
+    instructions:
+      - Bildredaktion erstellt je Beitrag eine Shot-Liste - Einstellung, Dauer, Bildtext, Quelle (Archivbild, Grafik, generierter Clip).
+      - Bevorzuge Grafiken und lizenzierte Bilder; generierte Clips nur als Symbolbilder, nie als angebliche Ereignisaufnahmen.
+    acceptance:
+      - Jeder generierte Clip ist in der Shot-Liste als Symbolbild markiert.
+
+  - id: T142
+    epic: E13
+    title: Qualitaets- und Sicherheitspruefung generierter Clips
+    status: todo
+    depends_on: [T140]
+    instructions:
+      - Pruefe Dauer, Aufloesung, Bildrate, Audiospur; taste Einzelbilder auf Artefakte, erkennbare reale Personen, Logos und Gewaltdarstellungen ab.
+      - Bei Verstoss Clip verwerfen und Fallback verwenden; optional menschliche Sichtung.
+    acceptance:
+      - Fehlerhafter Testclip wird verworfen und ersetzt.
+
+  - id: T143
+    epic: E13
+    title: Schnitt und Komposition externer Clips
+    status: todo
+    depends_on: [T141, T061]
+    instructions:
+      - Integriere Clips in die bestehende ffmpeg-Pipeline - Zuschnitt, Uebergaenge, Einblendungen, Audio-Mix, Lautheitsnormalisierung.
+      - Behalte Ausgabeformat und Feed-Kompatibilitaet bei.
+    acceptance:
+      - Fertige Sendung mit eingebundenen Mock-Clips erfuellt Format- und Lautheitspruefung.
+
+  - id: T144
+    epic: E13
+    title: Kosten- und Zeitsteuerung fuer Videojobs
+    status: todo
+    depends_on: [T101, T140]
+    instructions:
+      - Begrenze Clip-Sekunden pro Beitrag, Show und Monat; nutze Cache (T103) fuer wiederverwendbare Clips.
+      - Nicht rechtzeitig fertige Jobs werden uebersprungen oder in der naechsten Sendung verwendet.
+    acceptance:
+      - Budgetgrenze verhindert zusaetzliche Videojobs.
+
+  - id: T145
+    epic: E13
+    title: Kennzeichnung von KI-Videomaterial
+    status: todo
+    depends_on: [T140, T050]
+    instructions:
+      - Blende "KI-generiert / Symbolbild" bei generiertem Material ein und schreibe die Kennzeichnung in Metadaten und Artikelseite.
+      - Pruefe Einsatz von Herkunftsnachweisen (z. B. Content Credentials/C2PA) und dokumentiere die Entscheidung.
+    acceptance:
+      - Jeder generierte Clip traegt sichtbare und maschinenlesbare Kennzeichnung.
+
+  # ---------------- E14: News-Shows ----------------
+  - id: T150
+    epic: E14
+    title: Show-Format-Katalog
+    status: todo
+    depends_on: [T010]
+    instructions:
+      - Definiere Formate als Konfiguration - Hauptnachrichten, Kurznachrichten (60 bis 90 s), Morgenbriefing, Wirtschaftsmagazin, Wochenrueckblick, Hintergrund/Erklaerstueck, Doppelmoderation, Korrespondentenschalte, Roundtable.
+      - Je Format - Segmente, Zielzeiten, Studio-Template, Moderatoren, Jingles, Einblendungen.
+    acceptance:
+      - Mindestens drei Formate sind konfiguriert und erzeugbar.
+
+  - id: T151
+    epic: E14
+    title: Segment-Engine und Rundown
+    status: todo
+    depends_on: [T150, T113]
+    instructions:
+      - Baue aus Sendeplan und Format einen Rundown aus Segmenten (Intro, Schlagzeilen, Beitraege, Rubrikenblock, Kommentar, Abspann) mit Zeiten und Uebergaengen.
+      - Rendere Segmente einzeln, damit sie cachebar und parallel erzeugbar sind.
+    acceptance:
+      - Rundown wird als JSON ausgegeben und fuehrt zu einer Sendung mit korrekter Gesamtdauer.
+
+  - id: T152
+    epic: E14
+    title: Korrespondenten-Segment (Schalte)
+    status: todo
+    depends_on: [T151, T164]
+    instructions:
+      - Split-Screen mit virtuellem Korrespondenten, der einen geprueften Bericht vorliest.
+      - Kennzeichne als KI-Korrespondent; kein Live-Anspruch, keine falschen Ortsangaben (C10).
+    acceptance:
+      - Segment enthaelt Kennzeichnung und keine Live-Behauptung.
+
+  - id: T153
+    epic: E14
+    title: Roundtable- und Diskussionsformat
+    status: todo
+    depends_on: [T151, T131, T134]
+    instructions:
+      - Erzeuge Mehrstimmen-Dialog, in dem virtuelle Teilnehmer Positionen aus den Quellen vertreten (mit Quellenverweis); Moderator sorgt fuer Ausgewogenheit.
+      - Keine erfundenen Zitate realer Personen; Positionen werden als Zusammenfassung der Quellen dargestellt.
+    acceptance:
+      - Jede dargestellte Position verweist auf mindestens eine Quelle.
+
+# ---------------- E15: KI-Hosts und Avatare mit Lipsync ----------------
+  - id: T160
+    epic: E15
+    title: Avatar-Anforderungen und Technologie-Evaluierung
+    status: todo
+    depends_on: [T100, T102]
+    instructions:
+      - Lege Qualitaetskriterien fest - fotorealistisches Gesicht, stabile Identitaet, natuerliche Mimik, Blickrichtung, Kopfbewegung, Gesten, mindestens 1080p, Lipsync-Genauigkeit.
+      - Vergleiche Wege - gehostete Avatar-Dienste, Open-Source-Modelle auf eigener oder externer GPU, Hybridloesung; beachte, dass kostenlose GitHub-Runner keine GPU bieten.
+      - Pruefe je Option Lizenz (kommerziell/nicht-kommerziell), Preis, Datenschutz, Laufzeit pro Minute Video, Qualitaet an Testsatz.
+      - Dokumentiere Entscheidung in docs/guide/avatare.md; Entscheidung D3 einholen.
+    acceptance:
+      - Entscheidungsmatrix mit Testergebnissen und datierten Quellen liegt vor.
+
+  - id: T161
+    epic: E15
+    title: Avatar-Provider-Adapter
+    status: todo
+    depends_on: [T160, T140]
+    instructions:
+      - Interface render_avatar(audio, avatar_id, hintergrund, aufloesung, format) -> Video (mit Alpha oder Greenscreen), asynchron mit Polling.
+      - Adapter fuer gewaehlten Weg, Mock-Adapter und Fallback auf aktuelles Moderator-Rendering.
+    acceptance:
+      - Mock-Rendering laeuft im Pipeline-Test; Fallback greift bei Fehler.
+
+  - id: T162
+    epic: E15
+    title: Echtes Lipsync (audiogetrieben)
+    status: todo
+    depends_on: [T161, T163]
+    instructions:
+      - Erzeuge zuerst Audio mit Zeitinformationen, dann audiogetriebenes Lipsync auf Phonem-/Visemebene.
+      - Messe die Synchronitaet automatisch (Versatz und Konfidenz, z. B. SyncNet-artige Metrik) und rendere bei Unterschreiten der Schwelle neu oder nutze Fallback.
+    acceptance:
+      - Mess-Skript meldet Versatz und Konfidenz je Segment; Schwellen sind konfigurierbar.
+
+  - id: T163
+    epic: E15
+    title: Natuerliche deutsche Stimmen
+    status: todo
+    depends_on: [T100]
+    instructions:
+      - Binde hochwertige deutsche TTS ueber das Provider-Interface ein (Prosodie, Betonung, Pausen, ggf. SSML), je Host eine eigene Stimme.
+      - Stimmklone nur mit dokumentierter Einwilligung (Entscheidung D4); sonst nur Standard- oder eigene Stimmen.
+      - Fallback auf bestehende Sprachausgabe.
+    acceptance:
+      - Pro Host eine dokumentierte Stimme; Fallback liefert vollstaendige Sendung.
+
+  - id: T164
+    epic: E15
+    title: Fiktive Host-Identitaeten
+    status: todo
+    depends_on: [T110, T160]
+    instructions:
+      - Erzeuge fiktive Hosts (Aussehen, Stimme, Name, Kurzbiografie) und halte das Erscheinungsbild ueber Sendungen konstant (Referenzbilder/Seeds).
+      - Lege assets/avatars/ mit Herkunfts- und Lizenznachweis je Asset an.
+      - Pruefe manuell, dass kein Host einer realen Person aehnelt (C10).
+    acceptance:
+      - Jeder Host hat Herkunfts- und Lizenznachweis und dokumentierte Pruefung.
+
+  - id: T165
+    epic: E15
+    title: Natuerlichkeit und Studio-Integration
+    status: todo
+    depends_on: [T162]
+    instructions:
+      - Steuere Mimik und Kopfhaltung nach Tonalitaet des Textes (ernst, neutral, freundlich), natuerliche Blinzel- und Blickbewegung, dezente Gesten.
+      - Integriere den Host in das Studio (Beleuchtung, Schatten, Kamerawinkel, Farbangleichung); vermeide uebertriebene Bewegungen.
+    acceptance:
+      - Stichprobenbewertung anhand Kriterienkatalog erreicht die festgelegte Mindestnote.
+
+  - id: T166
+    epic: E15
+    title: Render-Strategie, Cache und Kosten
+    status: todo
+    depends_on: [T101, T161]
+    instructions:
+      - Rendere nur gesprochene Segmente, cache wiederkehrende Teile (Intro, Outro, Standardformulierungen), parallelisiere Segmente.
+      - Begrenze Avatar-Sekunden pro Show und Monat; bei Limit Wechsel auf reduziertes Format (Audio plus Grafiken oder Standbild mit Teilanimation).
+    acceptance:
+      - Zweiter Lauf nutzt gecachte Segmente; Limit fuehrt zu reduziertem Format.
+
+  - id: T167
+    epic: E15
+    title: Kennzeichnung und Ethik-Richtlinie synthetischer Moderatoren
+    status: todo
+    depends_on: [T161]
+    instructions:
+      - Blende dauerhaft ein kleines Label "KI-Moderator" ein; nenne es in Metadaten, Feed-Beschreibung und auf der Webseite.
+      - Erstelle docs/guide/ethik-synthetische-medien.md - keine Nachbildung realer Personen, keine Verwechslungsgefahr, keine vorgetaeuschte Live-Uebertragung, Pruefung der Transparenzpflichten (u. a. EU-KI-Verordnung).
+    acceptance:
+      - Label ist in jedem Avatar-Segment sichtbar; Richtlinie ist verlinkt.
+
+  - id: T168
+    epic: E15
+    title: Automatische Qualitaetskontrolle von Avatar und Lipsync
+    status: todo
+    depends_on: [T162]
+    instructions:
+      - Pruefe Gesichtsstabilitaet, Flackern, Mundartefakte, Lipsync-Score und Audio-Video-Versatz mit Stichproben-Einzelbildern als Workflow-Artefakt.
+      - Bei Unterschreiten der Schwellen Neu-Rendering oder Fallback.
+    acceptance:
+      - Fehlerhaftes Testsegment wird erkannt und ersetzt.

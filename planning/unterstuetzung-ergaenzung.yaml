@@ -1,0 +1,103 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  scope: Reiter Unterstützung für lokale, kostenlose und kommerzielle KI-Provider
+  status: planned
+sources:
+- https://ai.google.dev/gemini-api/docs/billing/
+- https://console.groq.com/docs/rate-limits
+- https://help.mistral.ai/en/articles/698531-why-am-i-hitting-api-rate-limits-and-how-do-i-increase-them
+- https://developers.openai.com/api/reference/overview
+- https://platform.claude.com/docs/en/api/overview
+- https://help.bfl.ai/articles/8446125349-quickstart-guide
+- https://docs.dev.runwayml.com/api/
+tasks:
+- id: T320
+  epic: E29
+  title: Konfigurationsreiter Unterstützung und Anbieterkatalog
+  status: todo
+  depends_on:
+  - T100
+  - T102
+  - T189
+  instructions:
+  - Reiter Unterstützung im geschützten Adminbereich und gleichnamigen Schritt im
+    Einrichtungswizard bereitstellen.
+  - 'Drei Ansichten: Lokal, 0-Euro-Kontingente und Kommerziell. Fähigkeiten Text,
+    Bild, Video und Audio getrennt anzeigen; Laufzeit und Modell nicht gleichsetzen.'
+  - 'Lokale Vorauswahl aus Recherche: Ollama, llama.cpp, LocalAI, ComfyUI und stable-diffusion.cpp;
+    Docker Model Runner als gesonderte optionale Anbindung. Modellname, Endpoint,
+    optionale Authentifizierung und CPU/GPU-Fähigkeiten konfigurieren.'
+  - 'Cloud-Vorauswahl: Google Gemini, Groq und Mistral als Kandidaten für kontingentierte
+    kostenlose Zugänge; OpenAI, Anthropic, Google und Mistral für kommerziellen Textbetrieb,
+    Black Forest Labs für Bilder und Runway für Video. Pro Anbieter nur geprüfte tatsächlich
+    unterstützte Fähigkeiten anzeigen.'
+  - 'Katalogeintrag ist keine Adapterimplementierung: Status verfügbar, experimentell
+    oder noch nicht implementiert anzeigen; unimplementierte Anbindung nicht als funktionsfähig
+    aktivierbar machen.'
+  - Free-Tier-Verfügbarkeit, regionale Bedingungen, Modellrechte, Limits, Datenschutz
+    und Prüfdaten anzeigen. Keine dauerhafte oder unbegrenzte Kostenlosigkeit behaupten;
+    lokaler Betrieb verursacht Hardware-/Stromkosten.
+  acceptance:
+  - Reiter zeigt lokale und Cloud-Kandidaten mit Fähigkeiten, Integrationsstatus und
+    Kostenkategorie.
+  - Aktivierung ist je Provider und Fähigkeit explizit; neue Installation nutzt keine
+    Cloudanbieter automatisch.
+- id: T321
+  epic: E29
+  title: Zugangsdaten, Verbindungsprüfung und Aufgabenzuordnung
+  status: todo
+  depends_on:
+  - T320
+  - T101
+  - T104
+  - T212
+  instructions:
+  - Anbieter auswählen, aktivieren/deaktivieren, Endpoint und Modell festlegen, API-Key/Token
+    hinterlegen/ersetzen/löschen und Priorität/Fallback konfigurieren.
+  - Secrets ausschließlich serverseitig geschützt speichern oder aus Umgebungsvariablen/Secret-Mounts
+    referenzieren. UI zeigt nur gesetzt/nicht gesetzt, gibt gespeicherte Tokens nie
+    zurück. Bei verschlüsselter Speicherung Schlüssel getrennt halten; Secrets nicht
+    in config.json, Exporten, Protokollen oder Browserstorage speichern.
+  - Umgebungsvariablen haben dokumentierten Vorrang und erscheinen als extern verwaltet.
+    Nur Admin bzw. explizit berechtigte Secretverwalter dürfen Zugänge ändern.
+  - Verbindungstest zunächst ohne Generierung soweit unterstützt; möglicher kostenpflichtiger
+    Funktionstest separat auslösen und vorab budgetieren. Fehler für Auth, Modell,
+    Quota und Netzwerk verständlich unterscheiden.
+  - 'Provider pro Aufgabe zuordnen: Textanalyse, Formulierung, Bilder, Clips, TTS
+    und Avatar, jeweils nur bei vorhandener Fähigkeit. Selbstdarstellung/Zielgruppen
+    weiter über zentralen Textkontext verwenden.'
+  - Kostenmodus 0-Euro-only und kommerziell je Anbieter unterscheiden. Bezahlte Nutzung
+    benötigt explizite Aktivierung und positives Budget; kein automatischer Wechsel
+    vom kostenlosen auf bezahlten Tarif. Bei unklarer Abrechnung im 0-Euro-Modus keine
+    Generierung starten.
+  - Lokale Dienste anhand Healthcheck/Modellabfrage prüfen; Aktivierung installiert
+    weder automatisch Docker noch Modelle. Optionale Installation später als eigener
+    klarer Vorgang. Konfigurierbare Endpoints auf erlaubte lokale Netze/Hosts oder
+    geprüfte Anbieter begrenzen; Tokens nicht bei beliebigen Redirects weiterreichen.
+  acceptance:
+  - Tokens können geschützt gesetzt, gewechselt und gelöscht werden; Leserechte auf
+    Konfiguration offenbaren sie nicht.
+  - Budget 0 und Free-Tier-Ausfall führen zu lokalem Fallback statt bezahltem Aufruf.
+  - Verbindungsstatus und Aufgabenzuordnung sind nachvollziehbar; nicht unterstützte
+    Modalitäten werden abgewiesen.
+- id: T322
+  epic: E29
+  title: Anbieterreiter dokumentieren und abnehmen
+  status: todo
+  depends_on:
+  - T321
+  - T194
+  instructions:
+  - Aktuelle offizielle Setup-/Schlüssel-/Kostenquellen im Katalog hinterlegen und
+    vor Aktivierung erneut prüfen; keine konkreten Modelllisten oder Tarife dauerhaft
+    als unveränderlich behandeln.
+  - Lokale Services, Container-Netzwerknamen, GPU-Optionen, API-Schlüssel, Secretpersistenz
+    und Aktivierungsablauf für Linux/Docker/Portainer dokumentieren.
+  - Tests für UI/Rollen, Secretmaskierung, Umgebungsvariablenvorrang, Budget, fehlendes
+    Modell, ungültige Tokens, Quota und Fallback mit Mocks; reale Anbieterfunktionstests
+    nur bewusst und getrennt.
+  acceptance:
+  - Wizard und Konfiguration nutzen dieselbe Providerverwaltung.
+  - Abnahme funktioniert ohne reale Tokens und ohne Kosten; reale Verfügbarkeit separat
+    dokumentiert.
