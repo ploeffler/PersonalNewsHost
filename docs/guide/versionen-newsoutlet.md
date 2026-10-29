@@ -1,6 +1,6 @@
 # Versionsplan 0.1 bis 1.0
 
-Überarbeitet am 29.10.2026: **140 Aufgaben, 44 Pakete**. Kein CMS; genau zwei Zugänge. Virtuelle Redaktion, Mitarbeiterverwaltung im Ressort, Einzelbeiträge im Mitarbeiternamen und Showplugins bleiben erhalten. IDs bleiben stabil, die früheren Kontenaufgaben wurden inhaltlich ersetzt.
+Überarbeitet am 29.10.2026: **143 Aufgaben, 45 Pakete**. Kein CMS; genau zwei Zugänge. Virtuelle Redaktion, Mitarbeiterverwaltung im Ressort, Einzelbeiträge im Mitarbeiternamen und Showplugins bleiben erhalten. IDs bleiben stabil, die früheren Kontenaufgaben wurden inhaltlich ersetzt.
 
 Zielplanung, keine Behauptung fertiger Implementierung. 0.1-Abnahme/Pushstatus siehe `planning/fortschritt.yaml`. Tests und Dokumentation begleiten jede Version. Bis 0.8 Entwicklungsmeilensteine; neue öffentliche Gesamtproduktion erst mit ihren Veröffentlichungsgates.
 
@@ -9,12 +9,12 @@ Zielplanung, keine Behauptung fertiger Implementierung. 0.1-Abnahme/Pushstatus s
 | 0.1 | Fundament und Nachrichtenauswahl | 14 |
 | 0.2 | Linux/Docker, gesicherter Betrieb und Archiv | 29 |
 | 0.3 | Redaktionskern, Belege und Pluginvertrag | 19 |
-| 0.4 | Eigene Verwaltung, Selbstdarstellung und gemeinsamer Redaktionszugang | 16 |
+| 0.4 | Eigene Verwaltung, Selbstdarstellung und gemeinsamer Redaktionszugang | 17 |
 | 0.5 | Avatare und Studiogestaltung | 17 |
 | 0.6 | Modulare Shows und gekennzeichnete Produktion | 11 |
 | 0.7 | Weitere Medien und Ausgabekanäle | 18 |
-| 0.8 | Kurzvideos, Sequenzen und Social-Veröffentlichung | 9 |
-| 0.9 | Getrennte Veröffentlichung, Kosten und Betriebsabnahme | 5 |
+| 0.8 | Kurzvideos, Sequenzen und Social-Veröffentlichung | 10 |
+| 0.9 | Getrennte Veröffentlichung, Kosten und Betriebsabnahme | 6 |
 | 1.0 | Stabilisierung, Migration und Gesamtabnahme | 2 |
 
 ## 0.1 – Fundament und Nachrichtenauswahl
@@ -63,6 +63,8 @@ Abnahme: Zwei getrennte Zugänge; Wizard, Profile, Ressortverwaltung und gemeins
 - **A29 – Gemeinsamer Redaktionszugang, Ressorts und Freigaben:** T220 Gemeinsamer Redaktionszugang getrennt von Konfiguration; T221 Gemeinsamer Redaktionsarbeitsbereich und ressortbezogene Mitarbeiterverwaltung; T222 Gemeinsames Freigabeprotokoll und Abnahme.
 - **A41 – Unterstützung: lokale und Cloud-KI konfigurieren:** T320 Konfigurationsreiter Unterstützung und Anbieterkatalog; T321 Zugangsdaten, Verbindungsprüfung und Aufgabenzuordnung; T322 Anbieterreiter dokumentieren und abnehmen.
 
+- **A44 – Redaktionelle Mehrsprachigkeit:** T350 Redaktion legt Ausgabesprachen und Standardsprache fest.
+
 ## 0.5 – Avatare und Studiogestaltung
 
 Abnahme: Avatar-/Studiowizards und 3D-Upload zeigen ihre tatsächlichen Fähigkeiten; Fallbacks sind nutzbar.
@@ -104,6 +106,8 @@ Abnahme: Mitarbeiter-Kurzvideos aus Clustern/Uploads, wiederverwendbare Intros/O
 - **A38 – Themenkurzvideos virtueller Mitarbeiter:** T290 Themenbezogene Kurzvideoaufträge für virtuelle Mitarbeiter; T291 Kurzvideo-Plugin, Ausgabe und Abnahme; T292 Themenauswahl aus Gruppen und freie Beiträge als RSS-äquivalenter Eingang.
 - **A39 – Redaktionelle Sequenzbibliothek und Intro-/Outroauswahl:** T301 Intro-/Outroauswahl je Show und Kurzvideo; T302 Sequenzverwaltung und Wiederverwendung abnehmen.
 
+- **A44 – Redaktionelle Mehrsprachigkeit:** T351 Sprachkonsistente Produktion und Ausgabevarianten.
+
 ## 0.9 – Getrennte Veröffentlichung, Kosten und Betriebsabnahme
 
 Abnahme: Produktion und Veröffentlichung strikt getrennt; Zeitpläne, Kostenvorschau, Rechte und Wiederaufnahme sind im Gesamtsystem geprüft.
@@ -113,10 +117,12 @@ Abnahme: Produktion und Veröffentlichung strikt getrennt; Zeitpläne, Kostenvor
 - **A42 – Kostenvorschau je Show und Monatsprognose:** T330 Kostenvorschau und Monatsprognose je Show.
 - **A43 – Produktion und Veröffentlichung konsequent trennen:** T340 Getrennte Produktions- und Veröffentlichungsaufträge; T341 Getrennte Verwaltung, Migration und Abnahme.
 
+- **A44 – Redaktionelle Mehrsprachigkeit:** T352 Redaktionelle Mehrsprachigkeit dokumentieren und abnehmen.
+
 ## 1.0 – Stabilisierung, Migration und Gesamtabnahme
 
 Abnahme: Migration und vollständiger Mock-/Fallback-Abnahmelauf bestanden; reale Integrationen haben einen dokumentierten individuellen Prüfstatus.
 
 - **A17 – Migration und Gesamtabnahme:** T080 Dokumentation aktualisieren; T081 Abnahmelauf Ende-zu-Ende.
 
-[Verbindlicher Gesamtplan](umsetzungsplan-newsoutlet-v2.md). Vollständige Paket-/Versionszuordnung in `planning/versionen-0.1-bis-1.0.yaml`. Alle 140 IDs genau einmal; keine Abhängigkeit auf eine spätere Version.
+[Verbindlicher Gesamtplan](umsetzungsplan-newsoutlet-v2.md). Vollständige Paket-/Versionszuordnung in `planning/versionen-0.1-bis-1.0.yaml`. Alle 143 IDs genau einmal; keine Abhängigkeit auf eine spätere Version.

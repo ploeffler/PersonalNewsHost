@@ -1,7 +1,7 @@
 meta:
   date: '2026-10-29'
-  task_count: 140
-  package_count: 44
+  task_count: 143
+  package_count: 45
   note: Versionen bezeichnen vollständige Aufgabenabnahme. Paketzuordnung kann mehrere
     Versionen umfassen. Zeitplan noch nicht geschätzt.
   dependency_policy: Alle maschinenlesbaren depends_on erfüllt spätestens in derselben
@@ -134,6 +134,7 @@ releases:
   - T320
   - T321
   - T322
+  - T350
   packages:
   - A13
   - A25
@@ -141,6 +142,7 @@ releases:
   - A28
   - A29
   - A41
+  - A44
   exit_criteria: Zwei getrennte Zugänge; Wizard, Profile, Ressortverwaltung und gemeinsame
     Freigaben; keine individuellen Mitarbeiterkonten und kein CMS.
 - version: '0.5'
@@ -241,11 +243,13 @@ releases:
   - T292
   - T301
   - T302
+  - T351
   packages:
   - A23
   - A24
   - A38
   - A39
+  - A44
   exit_criteria: Mitarbeiter-Kurzvideos aus Clustern/Uploads, wiederverwendbare Intros/Outros
     und verfügbare Social-Publisher sind abgenommen.
 - version: '0.9'
@@ -257,11 +261,13 @@ releases:
   - T330
   - T340
   - T341
+  - T352
   packages:
   - A20
   - A34
   - A42
   - A43
+  - A44
   exit_criteria: Produktion und Veröffentlichung strikt getrennt; Zeitpläne, Kostenvorschau,
     Rechte und Wiederaufnahme sind im Gesamtsystem geprüft.
 - version: '1.0'
@@ -643,3 +649,13 @@ package_release_spans:
   tasks:
     T340: '0.9'
     T341: '0.9'
+- package: A44
+  title: Redaktionelle Sprachvorgaben und mehrsprachige Ausgaben
+  versions:
+  - '0.4'
+  - '0.8'
+  - '0.9'
+  tasks:
+    T350: '0.4'
+    T351: '0.8'
+    T352: '0.9'

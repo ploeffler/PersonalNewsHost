@@ -1,0 +1,89 @@
+meta:
+  date: '2026-10-29'
+  scope: Ausgabesprachen werden durch die Redaktion festgelegt
+  status: planned
+tasks:
+- id: T350
+  epic: E32
+  title: Redaktion legt Ausgabesprachen und Standardsprache fest
+  status: todo
+  depends_on:
+  - T110
+  - T211
+  - T220
+  instructions:
+  - 'Mehrsprachigkeit im gemeinsamen Redaktionsbereich unter Redaktionseinstellungen
+    konfigurieren: aktive Ausgabesprachen und eine daraus gewählte Standardsprache.
+    Keine zusätzliche Benutzer-/Mandantenverwaltung.'
+  - Initial Deutsch; vorhandene konfigurierte Sprache bei Migration erhalten. Sprachkennungen
+    eindeutig und konsistent führen; regionale Varianten ausdrücklich auswählbar machen.
+  - Shows und Einzelbeiträge/Kurzvideos erben die Redaktionssprache. Eine oder mehrere
+    Ausgabevarianten dürfen ausschließlich aus den von der Redaktion aktivierten Sprachen
+    gewählt werden; effektive Auswahl und Vererbung sichtbar anzeigen.
+  - Quellsprache und Ausgabesprache getrennt speichern. Ressort oder virtueller Mitarbeiter
+    erzeugt keine zusätzliche unabhängige Sprachpolitik.
+  - Je aktiver Sprache passende Stimme und optionale sprachabhängige Text-/Aussprachevorgaben
+    zuordnen; Providerfähigkeiten sichtbar prüfen. Sprache deaktivieren darf vorhandene
+    Archivvarianten nicht löschen.
+  acceptance:
+  - Redaktion kann Standardsprache und weitere aktive Sprachen festlegen; Shows und
+    Einzelbeiträge verwenden diese Vorgaben.
+  - Nicht aktivierte Sprache sowie fehlende gültige Standardsprache werden vor Auftragserstellung
+    abgewiesen.
+- id: T351
+  epic: E32
+  title: Sprachkonsistente Produktion und Ausgabevarianten
+  status: todo
+  depends_on:
+  - T350
+  - T131
+  - T133
+  - T163
+  - T201
+  - T254
+  - T301
+  instructions:
+  - Jede Sprachvariante als explizite Produktion mit unveränderlichem Sprachprofil
+    planen. Sprechertext, TTS-Stimme, Untertitel, Einblendungen, Datum-/Zeitformulierungen,
+    Webseiten-/Feedtexte und Social-Begleittexte sprachlich konsistent erzeugen.
+  - Fremdsprachige Quellen bei Bedarf in die Zielsprache übertragen; Originalsprache,
+    Quelle und Übersetzungsherkunft erhalten. Zahlen, Namen, Belegreferenzen und Unsicherheitsstatus
+    durch bestehende Prüfungen sichern.
+  - Virtuelle Mitarbeiter behalten ihre Identität, erhalten jedoch passende Stimmen
+    je aktiver Sprache. Keine stille Ausgabe mit deutscher Ersatzstimme bei anderssprachigem
+    Auftrag; passende lokale Alternative oder sichtbarer Halt.
+  - Intro-/Outrobibliothek nach Sprache filtern. Fehlende passende Sprach-/Formatvariante
+    vor Rendering melden; vorhandene Sequenz nicht stillschweigend falschsprachig
+    übernehmen.
+  - Variantenkennungen und Cache-Schlüssel enthalten Zielsprachprofil/-version; Archivpfade
+    bleiben Jahr/Monat/Tag, Dateivarianten kollisionsfrei nach Sprache. Sprache in
+    Metadaten und Veröffentlichungsauftrag angeben.
+  - Provider-/GPUbedarf und Kostenvorschau berücksichtigen Anzahl der Sprachvarianten.
+    Veröffentlichung je Sprache separat auswählen und freigeben, keine automatischen
+    zusätzlichen Posts. AI-Label bleibt unverändert in allen Varianten.
+  acceptance:
+  - Dieselbe Meldungsbasis kann zwei explizit gewählte Sprachvarianten mit passenden
+    Stimmen, Untertiteln und Sequenzen erzeugen.
+  - Fehlende Sprachunterstützung wird vor Veröffentlichung gemeldet; kein stiller
+    Wechsel der Zielsprache.
+  - Cache, Archiv und Veröffentlichungsaufträge unterscheiden Sprachvarianten eindeutig.
+- id: T352
+  epic: E32
+  title: Redaktionelle Mehrsprachigkeit dokumentieren und abnehmen
+  status: todo
+  depends_on:
+  - T351
+  - T341
+  instructions:
+  - Bedienweg Redaktionssprachen, Show-/Beitragserbe, Stimmen, Sequenzen und einzelne
+    Veröffentlichungsvarianten dokumentieren.
+  - Mock-/Fixturetests für Standarderbe, erlaubte Sprachauswahl, zwei Varianten, nicht
+    unterstützte Stimme, Quellübersetzung, Archiv-/Cachetrennung und Kostenvorschau.
+    Reale Sprachqualität mit dokumentierten Referenzsätzen separat prüfen.
+  - Bestehende deutschsprachige Konfiguration weiterhin verwenden; keine Behauptung
+    beliebiger Sprachunterstützung durch vorhandene monolinguale TTS.
+  acceptance:
+  - Ende-zu-Ende-Abnahme für zwei konfigurierte Sprachen und klaren Fehlerfall; vorhandene
+    deutschsprachige Shows bleiben kompatibel.
+  - Redaktionszugang kann Sprachen verwalten, ohne technische Secrets zu lesen oder
+    neue Konten anzulegen.

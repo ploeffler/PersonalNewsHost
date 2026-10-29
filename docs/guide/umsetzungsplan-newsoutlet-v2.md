@@ -1,6 +1,6 @@
 # Projektplan PersonalNewsHost – überarbeiteter Umfang
 
-Stand: 29.10.2026 · ausschließlich `Full-featured-Newsoutlet` · **140 Aufgaben in 44 Arbeitspaketen**. IDs bleiben zur Nachverfolgung erhalten; gleicher Aufgabenumfang in Zahlen bedeutet nicht gleicher Aufwand. Die frühere Original-YAML bleibt historische Quelle; bei Widersprüchen gilt `planning/umfang-vereinfacht.yaml`.
+Stand: 29.10.2026 · ausschließlich `Full-featured-Newsoutlet` · **143 Aufgaben in 45 Arbeitspaketen**. IDs bleiben zur Nachverfolgung erhalten; gleicher Aufgabenumfang in Zahlen bedeutet nicht gleicher Aufwand. Die frühere Original-YAML bleibt historische Quelle; bei Widersprüchen gilt `planning/umfang-vereinfacht.yaml`.
 
 ## Verbindliche Vereinfachung
 
@@ -406,3 +406,15 @@ Separate Aufträge, Zeitpläne, Rechte und Status; interne Produktion und versio
 
 - **T340:** Getrennte Produktions- und Veröffentlichungsaufträge
 - **T341:** Getrennte Verwaltung, Migration und Abnahme
+
+## Redaktion legt Mehrsprachigkeit fest – A44
+
+Aktive Ausgabesprachen und Standardsprache werden in den Redaktionseinstellungen festgelegt. Deutsch ist der Anfangsstandard; bestehende Sprachvorgaben bleiben bei Migration erhalten. Shows und Einzelbeiträge/Kurzvideos erben diese Auswahl und können eine oder mehrere der freigegebenen Sprachen verwenden.
+
+Sprechertext, Stimme, Untertitel, Einblendungen sowie Intro/Outro müssen je Variante zusammenpassen. Quellsprache bleibt getrennt dokumentiert. Fehlende Stimme oder Sequenz führt zu sichtbarer Rückmeldung, nie zu stillem Sprachwechsel. Kosten, Cache, Archiv und Veröffentlichung berücksichtigen jede Sprachvariante.
+
+- **T350 / 0.4:** Sprachverwaltung und Vererbung in der Redaktion.
+- **T351 / 0.8:** Durchgängige Sprachvarianten in der Produktion.
+- **T352 / 0.9:** Dokumentation und Ende-zu-Ende-Abnahme.
+
+Details: [Redaktionelle Mehrsprachigkeit](mehrsprachigkeit.md). Noch nicht implementiert; 0.1 bleibt auf die bisherigen Grundlagen begrenzt.

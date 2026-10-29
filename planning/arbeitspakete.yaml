@@ -2,8 +2,8 @@ meta:
   source: ../todo-full-featured-newsoutlet-v2.yaml
   analysis_date: '2026-10-29'
   base_commit: 6b97cb9
-  task_count: 140
-  package_count: 44
+  task_count: 143
+  package_count: 45
   note: Planung, keine Umsetzungsfreigabe externer Dienste. Originalabhängigkeiten
     bleiben maßgeblich; Zusatzabhängigkeiten sind Vorschläge.
   sources:
@@ -25,6 +25,7 @@ meta:
   - kostenvorschau-ergaenzung.yaml
   - produktion-veroeffentlichung-ergaenzung.yaml
   - umfang-vereinfacht.yaml
+  - mehrsprachigkeit-ergaenzung.yaml
   scope_revision: '2026-10-29: kein CMS, genau zwei Zugänge, Mitarbeiterverwaltung
     im Ressort.'
 packages:
@@ -944,6 +945,33 @@ packages:
     geprüft.
   target_versions:
   - '0.9'
+- id: A44
+  title: Redaktionelle Sprachvorgaben und mehrsprachige Ausgaben
+  release: Redaktion und Produktion
+  status: planned
+  tasks:
+  - T350
+  - T351
+  - T352
+  external_task_dependencies:
+  - T110
+  - T131
+  - T133
+  - T163
+  - T201
+  - T211
+  - T220
+  - T254
+  - T301
+  - T341
+  work: Sprachen und Standardsprache in der Redaktion; konsistente Show-/Beitragsvarianten
+    mit passenden Stimmen und Sequenzen.
+  exit_criteria: Zwei freigegebene Sprachvarianten einschließlich Stimmen, Untertiteln,
+    Archiv, Kosten und Veröffentlichung geprüft.
+  target_versions:
+  - '0.4'
+  - '0.8'
+  - '0.9'
 original_dependency_layers:
 - - T001
 - - T002
@@ -1133,6 +1161,7 @@ combined_dependency_layers:
   - T300
   - T321
   - T340
+  - T350
 - - T194
   - T206
   - T214
@@ -1160,4 +1189,6 @@ combined_dependency_layers:
   - T301
 - - T302
   - T330
+  - T351
 - - T341
+- - T352
