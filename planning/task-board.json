@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 9,
+  "revision": 10,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -139,7 +139,7 @@
       "id": "T012",
       "epic": "E1",
       "title": "Duplikat- und Themenclustering",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T011"
       ],
@@ -165,7 +165,17 @@
           "tests/test_news_selection.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-t012",
+        "commit": "b0fa5b48139f72a4f4f6b67e8cb948fd29077637",
+        "checks": "250 local Python tests passed; Ruff and diff checks passed. GitHub Render regression SUCCESS: https://github.com/ploeffler/PersonalNewsHost/actions/runs/40961026858",
+        "files": [
+          "scripts/editorial_pipeline.py",
+          "scripts/generate.py",
+          "tests/test_editorial_pipeline.py",
+          "tests/test_news_selection.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [
         "92b6ea35ab344c9a3c8dd9a31633e540b6f260fe"
@@ -5334,6 +5344,15 @@
       "client": "codex-t012",
       "at": 1793310492.619459,
       "note": "Final implementation PR https://github.com/ploeffler/PersonalNewsHost/pull/170; head 1eb957477df1f99ee055802f3e4fe24ca10ed8b7. All 250 Python tests including FFmpeg/source handoff and identical-feed-headline output pass; Ruff F821/F822/F823 and diff check pass. Independent review and integration pending."
+    },
+    {
+      "operation_id": "f9e24d145f2d40e88189801bd6cfe20b",
+      "revision": 10,
+      "action": "submit",
+      "task": "T012",
+      "client": "codex-t012",
+      "at": 1793310769.448977,
+      "note": "PR #170 integrated after human release in this conversation."
     }
   ]
 }
