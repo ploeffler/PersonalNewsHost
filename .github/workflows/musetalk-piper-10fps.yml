@@ -3,12 +3,15 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+env:
+  PIP_CONSTRAINT: ${{ github.workspace }}/requirements-constraints.txt
+
 jobs:
   official-preflight:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
       - name: Install tools and CPU libraries
         run: |
           sudo apt-get update -qq
@@ -153,9 +156,16 @@ jobs:
           print(json.dumps(report,indent=2),flush=True)
           if report["status"]=="error":raise SystemExit(1)
           PY
-      - name: Upload hybrid interpolation video and report
+      - name: Check artifact publication boundary
+        id: pnh_publication_1
         if: always()
-        uses: actions/upload-artifact@v6
+        env:
+          PNH_OUTPUT_PATHS: |
+            musetalk-hybrid-interpolation/
+        run: python3 scripts/security_checks.py --outputs-env PNH_OUTPUT_PATHS
+      - name: Upload hybrid interpolation video and report
+        if: ${{ (always()) && steps.pnh_publication_1.outcome == 'success' }}
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: musetalk-piper-intro-10fps
           path: musetalk-hybrid-interpolation/

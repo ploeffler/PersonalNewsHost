@@ -3,12 +3,15 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+env:
+  PIP_CONSTRAINT: ${{ github.workspace }}/requirements-constraints.txt
+
 jobs:
   analyze:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
       - name: Install configuration validation
         run: python3 -m pip install --disable-pip-version-check -r requirements.txt
       - name: Validate configuration
@@ -30,9 +33,18 @@ jobs:
             git commit -m "Update bilingual editorial review data"
             git push
           fi
-      - name: Upload topic report
+      - name: Check artifact publication boundary
+        id: pnh_publication_1
         if: always()
-        uses: actions/upload-artifact@v6
+        env:
+          PNH_OUTPUT_PATHS: |
+            topic-analysis.json
+            bilingual-review.json
+            broadcast-plan.json
+        run: python3 scripts/security_checks.py --outputs-env PNH_OUTPUT_PATHS
+      - name: Upload topic report
+        if: ${{ (always()) && steps.pnh_publication_1.outcome == 'success' }}
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: rss-topic-analysis
           path: |

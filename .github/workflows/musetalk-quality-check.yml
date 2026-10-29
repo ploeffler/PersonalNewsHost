@@ -3,12 +3,15 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+env:
+  PIP_CONSTRAINT: ${{ github.workspace }}/requirements-constraints.txt
+
 jobs:
   quality-check:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Install CPU models and audio tools
         run: |
           sudo apt-get update -qq
@@ -148,9 +151,16 @@ jobs:
           print(json.dumps(report,indent=2),flush=True)
           if report["status"]!="success":raise SystemExit(1)
           PY
-      - name: Upload experimental speaking face video and diagnostics
+      - name: Check artifact publication boundary
+        id: pnh_publication_1
         if: always()
-        uses: actions/upload-artifact@v4
+        env:
+          PNH_OUTPUT_PATHS: |
+            musetalk-quality-check/
+        run: python3 scripts/security_checks.py --outputs-env PNH_OUTPUT_PATHS
+      - name: Upload experimental speaking face video and diagnostics
+        if: ${{ (always()) && steps.pnh_publication_1.outcome == 'success' }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: musetalk-quality-comparison
           path: musetalk-quality-check/

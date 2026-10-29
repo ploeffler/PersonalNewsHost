@@ -17,6 +17,9 @@ permissions:
 concurrency:
   group: feed-research-${{ github.ref }}
   cancel-in-progress: false
+env:
+  PIP_CONSTRAINT: ${{ github.workspace }}/requirements-constraints.txt
+
 jobs:
   news:
     name: Nachrichtenquellen DE / EN
@@ -24,19 +27,26 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.12'
       - name: Test research runner and catalogue validation
         run: python3 -m unittest discover -s tests -p test_feed_research.py
       - name: Research and validate news feeds
         run: python3 -B research/run.py --group news --output-dir "${{ runner.temp }}/feed-research/news"
-      - name: Upload news research results
+      - name: Check artifact publication boundary
+        id: pnh_publication_1
         if: always()
-        uses: actions/upload-artifact@v6
+        env:
+          PNH_OUTPUT_PATHS: |
+            ${{ runner.temp }}/feed-research/news/
+        run: python3 scripts/security_checks.py --outputs-env PNH_OUTPUT_PATHS
+      - name: Upload news research results
+        if: ${{ (always()) && steps.pnh_publication_1.outcome == 'success' }}
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: feed-research-news
           path: ${{ runner.temp }}/feed-research/news/
@@ -48,19 +58,26 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.12'
       - name: Test research runner and catalogue validation
         run: python3 -m unittest discover -s tests -p test_feed_research.py
       - name: Research and validate authority and emergency feeds
         run: python3 -B research/run.py --group authorities --output-dir "${{ runner.temp }}/feed-research/authorities"
-      - name: Upload authority research results
+      - name: Check artifact publication boundary
+        id: pnh_publication_2
         if: always()
-        uses: actions/upload-artifact@v6
+        env:
+          PNH_OUTPUT_PATHS: |
+            ${{ runner.temp }}/feed-research/authorities/
+        run: python3 scripts/security_checks.py --outputs-env PNH_OUTPUT_PATHS
+      - name: Upload authority research results
+        if: ${{ (always()) && steps.pnh_publication_2.outcome == 'success' }}
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: feed-research-authorities
           path: ${{ runner.temp }}/feed-research/authorities/
@@ -73,10 +90,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.12'
       - name: Install favicon image validation
@@ -84,16 +101,23 @@ jobs:
       - name: Test favicon refresh and packaging
         run: python3 -m unittest discover -s tests -p test_source_logos.py
       - name: Download research groups from this run
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
         with:
           pattern: feed-research-*
           path: ${{ runner.temp }}/feed-research-inputs/
           merge-multiple: false
       - name: Refresh source logos and assemble a shared catalogue artifact
         run: python3 -B research/package_with_logos.py --input-dir "${{ runner.temp }}/feed-research-inputs" --output-dir "${{ runner.temp }}/feed-research-with-logos" --refresh-days 30
-      - name: Upload complete research results with source logos
+      - name: Check artifact publication boundary
+        id: pnh_publication_3
         if: always()
-        uses: actions/upload-artifact@v6
+        env:
+          PNH_OUTPUT_PATHS: |
+            ${{ runner.temp }}/feed-research-with-logos/
+        run: python3 scripts/security_checks.py --outputs-env PNH_OUTPUT_PATHS
+      - name: Upload complete research results with source logos
+        if: ${{ (always()) && steps.pnh_publication_3.outcome == 'success' }}
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: feed-research-with-logos
           path: ${{ runner.temp }}/feed-research-with-logos/
