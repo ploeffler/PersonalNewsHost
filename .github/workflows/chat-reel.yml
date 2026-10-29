@@ -1,0 +1,112 @@
+name: Produce one free chat Reel
+run-name: Reel ${{ inputs.output_name }} · ${{ inputs.request_id }}
+on:
+  workflow_dispatch:
+    inputs:
+      station_name:
+        description: Stationsname
+        type: string
+        required: true
+      show_name:
+        description: Sendungsname
+        type: string
+        required: true
+      host_description:
+        description: Beschreibung eines fiktiven erwachsenen Hosts (englische Prompts empfohlen)
+        type: string
+        required: true
+      studio_description:
+        description: Beschreibung des Studios/Hintergrunds
+        type: string
+        required: true
+      rss_feed:
+        description: Öffentlicher RSS/Atom-Feed ohne Zugangsdaten
+        type: string
+        required: true
+      news_count:
+        description: Nachrichtenanzahl (1 bis 5, höchstens 90 Sekunden)
+        type: number
+        default: 1
+        required: true
+      output_name:
+        description: Ausgabename ohne Pfad (z. B. abend-reel)
+        type: string
+        required: true
+      request_id:
+        description: Chat-Auftragskennung zur eindeutigen Zuordnung
+        type: string
+        default: manual
+      test_mode:
+        description: Ein kurzes Teststück ohne Live-Nachrichten, echte KI-Modelle
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: chat-reel-${{ github.actor }}
+  cancel-in-progress: false
+jobs:
+  reel:
+    if: github.event.repository.visibility == 'public'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      OMP_NUM_THREADS: '4'
+      MKL_NUM_THREADS: '4'
+      CUDA_VISIBLE_DEVICES: ''
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.10'
+      - name: Validate request and read bounded public feed
+        env:
+          REEL_INPUTS: ${{ toJSON(inputs) }}
+        run: |
+          mkdir -p .reel-work
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          from scripts.reel_show import prepare
+          request = json.loads(os.environ['REEL_INPUTS'])
+          count = request['news_count']
+          if isinstance(count, float) and not count.is_integer():
+              raise ValueError('News count must be an integer')
+          request['news_count'] = int(count)
+          request['test_mode'] = request.get('test_mode') in (True, 'true')
+          Path('.reel-work/request.json').write_text(json.dumps(request))
+          prepare(request, Path('.reel-work'))
+          PY
+      - name: Install CPU runtimes and fixed model code
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg libgl1 libglib2.0-0 fonts-dejavu-core
+          python3 scripts/setup_reel_runtime.py
+      - name: Generate fictional host and studio locally
+        run: |
+          .reel-image/bin/python - <<'PY'
+          import json
+          from pathlib import Path
+          from scripts.reel_models import images
+          from argparse import Namespace
+          c = json.loads(Path('.reel-work/request.json').read_text())
+          images(Namespace(work=Path('.reel-work'), host=c['host_description'], studio=c['studio_description']))
+          PY
+      - name: Synthesize German speech locally
+        run: .reel-image/bin/python scripts/reel_show.py speak
+      - name: Animate speaking host with SadTalker on CPU
+        run: python3 scripts/reel_models.py animate --work .reel-work --source .reel-models/SadTalker --python .reel-avatar/bin/python
+      - name: Compose and archive labelled vertical reel
+        run: |
+          .reel-image/bin/python scripts/reel_show.py compose
+          python3 scripts/security_checks.py --outputs out/chat-reel/
+      - name: Upload temporary video artifact, never commit to repository
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: chat-reel-${{ github.run_id }}
+          path: out/chat-reel/
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
