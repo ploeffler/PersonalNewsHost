@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 8,
+  "revision": 9,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -157,7 +157,7 @@
       "lease": {
         "client": "codex-t012",
         "token": "2153e23c93ab452c85922095deb947fc",
-        "expires_at": 1793324760.9521651,
+        "expires_at": 1793324892.619459,
         "files": [
           "scripts/editorial_pipeline.py",
           "scripts/generate.py",
@@ -5325,6 +5325,15 @@
       "client": "codex-t012",
       "at": 1793310360.9521651,
       "note": "Implementation PR https://github.com/ploeffler/PersonalNewsHost/pull/170 targets Full-featured-Newsoutlet; commit b0e0ed378e9629fcd15953ca5077e8559636d42a. 249 Python tests including FFmpeg/source handoff, Ruff F821/F822/F823 and diff check pass. Await independent review/integration before submit/complete."
+    },
+    {
+      "operation_id": "3990a749f63e4d79b67c232c5947c24f",
+      "revision": 9,
+      "action": "heartbeat",
+      "task": "T012",
+      "client": "codex-t012",
+      "at": 1793310492.619459,
+      "note": "Final implementation PR https://github.com/ploeffler/PersonalNewsHost/pull/170; head 1eb957477df1f99ee055802f3e4fe24ca10ed8b7. All 250 Python tests including FFmpeg/source handoff and identical-feed-headline output pass; Ruff F821/F822/F823 and diff check pass. Independent review and integration pending."
     }
   ]
 }
