@@ -361,6 +361,9 @@ tasks:
     als Entwurf übernehmen statt überschreiben.
   - Gemeinsamen Redaktionszugang einrichten, danach in dessen Ressort-/Showverwaltung
     wechseln; keine CMS- oder Mitarbeiterkontoeinrichtung.
+  - Die initial vorhandene Redaktion Allgemein und ihre Newsshow im Wizard anbieten
+    statt eine zusätzliche Redaktion vorauszusetzen. Vorgaben sind bearbeitbar; keine
+    Duplikate bei Wiederaufnahme.
   acceptance:
   - Erste erfolgreiche Anmeldung öffnet Wizard; fehlgeschlagene Anmeldung zeigt keine
     Setupdaten.

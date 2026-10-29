@@ -30,3 +30,10 @@ original_clarifications:
   T110: Rechte an staff sind virtuelle Workflowfähigkeiten, keine Bedienerkonten.
   T128: Menschliche Freigaben im gemeinsamen Redaktionsarbeitskorb; optionale Benachrichtigungen
     ersetzen ihn nicht.
+initial_newsroom:
+  id: allgemein
+  name: Allgemein
+  scope: Eine vorkonfigurierte Redaktion mit initialer Newsshow; keine neue Mandanten-
+    oder Kontenverwaltung.
+  initialization: Nur bei frischer Einrichtung; idempotent und ohne Überschreiben
+    bestehender Redaktionen oder Einstellungen.

@@ -643,7 +643,8 @@ packages:
   - T189
   - T194
   work: Zwei getrennte Bedienzugänge; Ressort-Mitarbeiterverwaltung; gemeinsame Aufgaben
-    und versionierte Freigaben.
+    und versionierte Freigaben. Redaktion Allgemein bei Ersteinrichtung idempotent
+    bereitstellen.
   exit_criteria: Keine individuellen Avatarlogins; Einzelbeiträge im Mitarbeiternamen
     und Pluginshows vollständig bedienbar.
   target_versions:

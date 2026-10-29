@@ -25,6 +25,8 @@ tasks:
   - Je aktiver Sprache passende Stimme und optionale sprachabhängige Text-/Aussprachevorgaben
     zuordnen; Providerfähigkeiten sichtbar prüfen. Sprache deaktivieren darf vorhandene
     Archivvarianten nicht löschen.
+  - Frische Installation verwendet die bereitgestellte Redaktion Allgemein mit anfänglich
+    Deutsch; bestehende Sprachkonfiguration bei Migration übernehmen und nicht zurücksetzen.
   acceptance:
   - Redaktion kann Standardsprache und weitere aktive Sprachen festlegen; Shows und
     Einzelbeiträge verwenden diese Vorgaben.

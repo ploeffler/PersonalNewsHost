@@ -126,3 +126,5 @@ Abnahme: Migration und vollständiger Mock-/Fallback-Abnahmelauf bestanden; real
 - **A17 – Migration und Gesamtabnahme:** T080 Dokumentation aktualisieren; T081 Abnahmelauf Ende-zu-Ende.
 
 [Verbindlicher Gesamtplan](umsetzungsplan-newsoutlet-v2.md). Vollständige Paket-/Versionszuordnung in `planning/versionen-0.1-bis-1.0.yaml`. Alle 143 IDs genau einmal; keine Abhängigkeit auf eine spätere Version.
+
+Die eigene Redaktionsoberfläche in 0.4 stellt bei Ersteinrichtung die Redaktion **Allgemein** bereit (T221); Wizard und initiale Newsshow übernehmen diese Vorgabe idempotent. Keine zusätzliche Mandanten-/Kontenverwaltung.

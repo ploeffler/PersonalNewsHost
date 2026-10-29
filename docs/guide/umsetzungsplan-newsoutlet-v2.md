@@ -418,3 +418,11 @@ Sprechertext, Stimme, Untertitel, Einblendungen sowie Intro/Outro müssen je Var
 - **T352 / 0.9:** Dokumentation und Ende-zu-Ende-Abnahme.
 
 Details: [Redaktionelle Mehrsprachigkeit](mehrsprachigkeit.md). Noch nicht implementiert; 0.1 bleibt auf die bisherigen Grundlagen begrenzt.
+
+## Initiale Redaktion Allgemein
+
+Beim ersten Start steht die Redaktion **Allgemein** (stabile ID `allgemein`) bereit. Die initiale Newsshow wird ihr zugeordnet. Ressorts/Abteilungen und deren virtuelle Mitarbeiter liegen unter dieser Redaktion; Allgemein ist nicht lediglich ein Ressort.
+
+Der Wizard bietet sie direkt zur Anpassung an. Deutsch ist anfängliche Ausgabesprache; vorhandene Einstellungen und bestehende Redaktionen werden bei Migration erhalten. Wiederholte Starts erzeugen keine Duplikate und setzen Umbenennungen, Sprachvorgaben oder Zuordnungen nicht zurück. Es entstehen keine zusätzlichen Logins oder Mandantenfunktionen. Produktion und Veröffentlichung bleiben separat zu aktivieren.
+
+In T221/A29 (0.4), T193 (Wizard), T253 (initiale Newsshow) und T350 (Sprachvorgaben) präzisiert. Keine zusätzliche Aufgabe und keine Änderung am 0.1-Umfang. Noch nicht implementiert.

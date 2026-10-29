@@ -56,11 +56,27 @@ tasks:
     KI-Entscheidungen.
   - Freigaben auf konkrete Beitragsversionen beziehen, bei Änderung erneuern; konkurrierende
     Entscheidungen atomar behandeln.
+  - Beim ersten Start die Redaktion Allgemein mit stabiler ID allgemein bereitstellen;
+    keine zusätzliche Anmeldung und kein Mandantensystem dadurch einführen.
+  - Initiale Newsshow und vorhandene redaktionelle Einstellungen einschließlich Standardsprache
+    der Redaktion Allgemein zuordnen. Allgemein ist eine Redaktion; Abteilungen/Ressorts
+    liegen darunter und werden nicht mit ihr gleichgesetzt.
+  - 'Idempotente Initialisierung: vorhandene Redaktion und Nutzeränderungen erhalten;
+    spätere Starts erzeugen kein Duplikat und setzen Namen, Sprachen oder Zuordnungen
+    nicht zurück. Bei bestehender anders benannter Redaktion keine zusätzliche Pflichtredaktion
+    erzwingen.'
+  - Ersteinrichtungswizard zeigt die vorhandene Redaktion Allgemein zur Anpassung.
+    Ein sichtbarer Standarddatensatz aktiviert weder automatische Produktion noch
+    Veröffentlichung und umgeht keine Zugangseinrichtung.
   acceptance:
   - Redaktionsabläufe und Pluginshows mit einem Redaktionslogin vollständig bedienbar.
   - Mitarbeiterverwaltung im Ressort und Einzelbeitrag im Mitarbeiternamen geprüft.
   - Menschliche Freigabe kann nicht durch Avatarlogin oder automatische KI-Stufe ersetzt
     werden.
+  - Frische Installation zeigt die Redaktion Allgemein samt initialer Newsshow; wiederholte
+    Starts erhalten genau eine unveränderte Standardredaktion.
+  - Bestehende Redaktion oder umbenannte Standardredaktion bleibt erhalten; initiale
+    Sprachvorgaben sind sichtbar.
 - id: T222
   epic: E19
   title: Gemeinsames Freigabeprotokoll und Abnahme

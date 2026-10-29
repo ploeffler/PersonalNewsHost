@@ -120,6 +120,9 @@ tasks:
     nicht zurücksetzen. Umbenennen der Show ändert ihre stabile ID nicht.
   - Migration protokollieren, ursprüngliche Konfiguration sichern und effektive importierte
     Einstellungen im Wizard anzeigen.
+  - Initiale Newsshow bei frischer Einrichtung der Redaktion Allgemein (ID allgemein)
+    zuordnen; vorhandene Zuordnungen nicht überschreiben. Keine zusätzliche Anmeldung
+    pro Redaktion.
   acceptance:
   - Frische Installation zeigt im ersten Wizard eine nutzbare Newsshow auf Basis der
     bisherigen Projektdefaults.
