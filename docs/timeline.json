@@ -4,51 +4,59 @@
     {
       "type": "intro",
       "story_index": null,
+      "section": null,
       "start": 0.0,
-      "end": 3.4621
+      "end": 3.7736
     },
     {
       "type": "intro",
       "story_index": null,
-      "start": 3.4621,
-      "end": 7.6823
+      "section": null,
+      "start": 3.7736,
+      "end": 9.6452
     },
     {
       "type": "story",
       "story_index": 0,
-      "start": 7.6823,
-      "end": 23.1553
+      "section": "general",
+      "start": 9.6452,
+      "end": 34.0779
     },
     {
       "type": "story",
       "story_index": 1,
-      "start": 23.1553,
-      "end": 51.9547
+      "section": "general",
+      "start": 34.0779,
+      "end": 51.3257
     },
     {
       "type": "story",
       "story_index": 2,
-      "start": 51.9547,
-      "end": 70.7955
+      "section": "general",
+      "start": 51.3257,
+      "end": 72.5462
     },
     {
       "type": "story",
       "story_index": 3,
-      "start": 70.7955,
-      "end": 83.0275
+      "section": "general",
+      "start": 72.5462,
+      "end": 94.3363
     },
     {
       "type": "story",
       "story_index": 4,
-      "start": 83.0275,
-      "end": 91.6592
+      "section": "local",
+      "start": 94.3363,
+      "end": 119.476
     },
     {
       "type": "outro",
       "story_index": null,
-      "start": 91.6592,
-      "end": 96.2254
+      "section": null,
+      "start": 119.476,
+      "end": 124.016
     }
   ],
-  "duration": 96.2254
+  "duration": 124.016
 }
