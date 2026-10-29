@@ -1,12 +1,15 @@
 name: Sync documentation to GitHub Wiki
 
 on:
-  workflow_dispatch:
   push:
-    branches: [main]
-    paths:
-      - 'docs/guide/**'
-      - '.github/workflows/wiki-sync.yml'
+    tags:
+      - 'v[0-9]*.[0-9]*'
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'Already completed subversion tag, for example v0.1'
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -23,6 +26,23 @@ jobs:
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           persist-credentials: false
+          fetch-depth: 0
+          ref: ${{ github.event.inputs.release_tag || github.ref }}
+
+      - name: Require confirmed completed subversion
+        env:
+          RELEASE_TAG: ${{ github.event.inputs.release_tag || github.ref_name }}
+        run: |
+          python3 scripts/check_documentation_release.py --tag "$RELEASE_TAG"
+          git merge-base --is-ancestor HEAD origin/Full-featured-Newsoutlet
+
+      - name: Render release workflow graphics
+        env:
+          RELEASE_TAG: ${{ github.event.inputs.release_tag || github.ref_name }}
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends graphviz
+          python3 scripts/render_workflow_diagrams.py --release-tag "$RELEASE_TAG"
 
       - name: Check Wiki credential
         env:
@@ -37,6 +57,7 @@ jobs:
         env:
           WIKI_TOKEN: ${{ secrets.WIKI_TOKEN }}
           GH_REPOSITORY: ${{ github.repository }}
+          DOC_RELEASE_TAG: ${{ github.event.inputs.release_tag || github.ref_name }}
         shell: bash
         run: |
           set -euo pipefail
@@ -68,7 +89,7 @@ jobs:
               for old, new in mapping.items():
                   text = text.replace(f"]({old})", f"]({new.removesuffix('.md')})")
               # Relative links to repository files resolve differently in a wiki.
-              text = re.sub(r'\]\((?:\.\./)+([^):#]+)\)', lambda m: '](' + 'https://github.com/' + 'ploeffler/PersonalNewsHost/blob/main/' + m.group(1) + ')', text)
+              text = re.sub(r'\]\((?:\.\./)+([^):#]+)\)', lambda m: '](' + 'https://github.com/' + os.environ['GH_REPOSITORY'] + '/blob/' + os.environ['DOC_RELEASE_TAG'] + '/' + m.group(1) + ')', text)
               text = text.replace(
                   "](assets/workflows/",
                   "](https://raw.githubusercontent.com/wiki/" + os.environ["GH_REPOSITORY"] + "/assets/workflows/",

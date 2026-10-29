@@ -37,3 +37,10 @@ initial_newsroom:
     oder Kontenverwaltung.
   initialization: Nur bei frischer Einrichtung; idempotent und ohne Überschreiben
     bestehender Redaktionen oder Einstellungen.
+documentation_policy:
+  when: Nur nach bestätigtem Abschluss und Tests einer Unterversion
+  pipeline: Dokumentation konsolidieren, Grafiken rendern, Wiki synchronisieren
+  trigger: Passender Versionstag; manuelle Wiederholung nur für denselben bestätigten
+    Tag
+  during_development: Keine Grafik-/Wiki-Veröffentlichung bei gewöhnlichen Commits;
+    keine automatische Wiki-Synchronisation von main.
