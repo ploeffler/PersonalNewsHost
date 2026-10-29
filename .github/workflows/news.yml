@@ -157,7 +157,7 @@ jobs:
         if: steps.schedule.outputs.due == 'true'
         run: |
           rm -f docs/latest.mp4
-          python3 scripts/generate.py
+          python3 -u scripts/generate.py
           test -s docs/latest.mp4
           ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 docs/latest.mp4 | grep -q .
       - name: Mark the approved broadcast groups in the news store
