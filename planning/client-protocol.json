@@ -104,5 +104,11 @@
   "atomicity": "Task state commits modify only planning/task-board.json. Competing pushes are rejected by Git; client refetches and revalidates up to four times. No shared unlocked JSON file and no force push.",
   "leases": "Tokens fence expired workers; explicit file paths or directory paths ending slash are required. Lease expiry does not cancel a running OS process. Clients must stop stale work themselves.",
   "conflict_recovery": "On failure do not assume ownership; refetch board. New cache clones stay under ignored .test-tmp/task-clients and do not change working checkout.",
-  "security": "No secrets in tasks/check evidence. A client ID is not verified identity. Direct Git writers can bypass protocol, so all collaborating clients must follow it."
+  "security": "No secrets in tasks/check evidence. A client ID is not verified identity. Direct Git writers can bypass protocol, so all collaborating clients must follow it.",
+  "github_issue_view": {
+    "direction": "Read GitHub issues for overview, but edit authoritative task JSON only via coordination protocol.",
+    "mapping": "planning/github-task-map.json maps Task IDs to issue numbers and versions to milestones.",
+    "manual_notes": "Use comments or text outside the managed block; status/labels/milestone inside the mirror are refreshed from JSON.",
+    "no_lease_via_issue": "Assigning yourself an issue does not claim file scopes or grant a client lease."
+  }
 }

@@ -10,3 +10,5 @@
 - Task completion is not a version release. Complete all version tasks and integration checks before confirming the matching release marker and version tag.
 - Consolidate visible documentation, generate diagrams and synchronize the wiki only after a confirmed completed/tested subversion. Do not publish wiki or regenerated graphics during ordinary task work.
 - Explicit human requests to bootstrap or revise this coordination mechanism may be handled before the new board is published. Keep unrelated implementation edits intact and commit only the requested coordination changes.
+
+- GitHub issues/milestones are a one-way view of the JSON board, synchronized by `scripts/sync_github_tasks.py`. Do not treat issue assignment or manual closure as task ownership/completion. `planning/github-task-map.json` stores IDs; keep human notes outside managed body blocks.

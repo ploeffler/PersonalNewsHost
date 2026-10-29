@@ -98,5 +98,18 @@
     "progress_source": "planning/fortschritt.yaml",
     "imported_status": "4 previously completed; 10 unfinished local 0.1 tasks require reconciliation; remaining tasks planned.",
     "no_milestone_inferred": true
+  },
+  "github_mirror": {
+    "authoritative_source": "planning/task-board.json",
+    "direction": "JSON to GitHub only",
+    "issues": "One issue per task, identified by immutable task ID marker; preserve human text outside managed body block.",
+    "versions": "One milestone per version; do not infer version completion from closed issues alone.",
+    "packages": "One package:Axx label per package, with managed status labels.",
+    "mapping": "planning/github-task-map.json",
+    "synchronizer": "scripts/sync_github_tasks.py",
+    "workflow": ".github/workflows/task-sync.yml",
+    "claims": "Client claims, leases, file scopes and reviews remain in task-board.json, not issue assignment.",
+    "project_board": "No GitHub Project required initially; issues plus milestones provide the initial view.",
+    "publication": "Ordinary task mirror updates do not generate diagrams or publish wiki; main is never changed."
   }
 }
