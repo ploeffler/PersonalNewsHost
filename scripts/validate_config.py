@@ -30,6 +30,11 @@ def validate_config(config):
         elif isinstance(value, list):
             for item in value: finite(item)
     finite(config)
+    try:
+        from .configured_providers import validate_provider_specs
+    except ImportError:
+        from configured_providers import validate_provider_specs
+    validate_provider_specs(config.get('providers', []))
     if 'shows' in config:
         try:
             from .shows import resolve_shows
