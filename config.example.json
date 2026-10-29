@@ -140,5 +140,12 @@
   },
   "production": {
     "parallel_workers": 2
+  },
+  "feed_categories": {},
+  "category_filter": [],
+  "source_policy": {
+    "blocked_domains": [],
+    "excluded_keywords": [],
+    "weights": {}
   }
 }

@@ -30,6 +30,13 @@ def validate_config(config):
         elif isinstance(value, list):
             for item in value: finite(item)
     finite(config)
+    if 'shows' in config:
+        try:
+            from .shows import resolve_shows
+        except ImportError:
+            from shows import resolve_shows
+        for show in resolve_shows(config):
+            validate_config(show['config'])
     timezone = config.get('automation', {}).get('timezone', 'UTC')
     try:
         ZoneInfo(timezone)

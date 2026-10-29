@@ -130,3 +130,8 @@ anschließenden gemeinsamen Job. Neue oder fehlende Logos werden gesucht,
 bestehende nach 30 Tagen geprüft. Die aktualisierten Dateien liegen im Artefakt
 `feed-research-with-logos`; veröffentlicht werden sie nach ihrer Übernahme ins
 Repository.
+
+
+## Mehrere Shows
+
+Die erste getrennte Showproduktion und Vererbung sind in [Shows](shows.md) beschrieben. `config.shows.example.json` enthält zwei Editionen; der alte Generator bleibt für Konfigurationen ohne explizite Shows verfügbar.

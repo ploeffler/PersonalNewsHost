@@ -54,6 +54,19 @@ class EditorialProductionTests(unittest.TestCase):
             self.assertEqual(report['production_error'],'approval_invalidated_before_speech')
             self.assertEqual(report['groups'][0]['verification']['status'],'held')
 
+    def test_blocked_member_excludes_entire_prepared_group(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);self.store(root)
+            cfg=copy.deepcopy(generate.CONFIG)
+            cfg['editorial']={'pipeline':{'enabled':True}}
+            cfg['source_policy']={'blocked_domains':['second.org']}
+            with patch.object(generate,'ROOT',root),patch.object(generate,'DOCS',root/'docs'),patch.object(generate,'CONFIG',cfg),patch.object(generate,'synthesize') as voice:
+                with self.assertRaises(RuntimeError):generate.main()
+                voice.assert_not_called()
+            report=json.loads((root/'docs/editorial-report.json').read_text())
+            self.assertEqual(report['selected_ids'],[])
+            self.assertTrue(any(g['selection_excluded'] for g in report['groups']))
+
     def test_no_approved_story_never_synthesizes_or_falls_back(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);self.store(root,empty=True)

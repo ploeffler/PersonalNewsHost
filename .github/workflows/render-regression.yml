@@ -7,6 +7,7 @@ on:
       - 'assets/**'
       - 'config.json'
       - 'config.example.json'
+      - 'config.shows.example.json'
       - 'config.schema.json'
       - 'requirements.txt'
       - '.github/workflows/render-regression.yml'

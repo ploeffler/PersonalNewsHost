@@ -394,7 +394,11 @@ def select_balanced_groups(groups, limit):
         return (urlparse(entry[2]).hostname or "").removeprefix("www.")
     def newest(group):
         return max(FEED_DATES.get(entry[2], 0.0) for entry in group)
-    ranked = sorted(groups, key=newest, reverse=True)
+    try:
+        from .news_policy import source_weight
+    except ImportError:
+        from news_policy import source_weight
+    ranked = sorted(groups, key=lambda group: (max(source_weight(entry, CONFIG) for entry in group), newest(group)), reverse=True)
     selected, represented = [], set()
     # First pass: one story per previously unrepresented publisher.
     for group in ranked:
@@ -820,6 +824,12 @@ def main():
     except ImportError:
         from validate_config import validate_config
     validate_config(CONFIG)
+    try:
+        from .news_policy import allowed, category
+    except ImportError:
+        from news_policy import allowed, category
+    if 'shows' in CONFIG:
+        raise ValueError('Use scripts/produce_show.py --show ID for explicit show configurations')
     DOCS.mkdir(exist_ok=True)
     pipeline_enabled = CONFIG.get("editorial", {}).get("pipeline", {}).get("enabled", True)
     prepared_by_group = {}
@@ -835,7 +845,8 @@ def main():
             DOCS / "news-store.json", dt.datetime.now(dt.timezone.utc).timestamp(),
             max_sentences=int(CONFIG.get("editorial", {}).get("max_sentences", 2)),
             limit=int(CONFIG.get("max_items", 5)),
-            max_store_age_minutes=max(1, min(120, int(pipeline.get("max_store_age_minutes", 30)))))
+            max_store_age_minutes=max(1, min(120, int(pipeline.get("max_store_age_minutes", 30)))),
+            selection_config=CONFIG)
         story_groups = []
         entry_feeds = {}
         for prepared in ready:
@@ -855,6 +866,10 @@ def main():
                 group.append(entry)
                 entry_feeds[(entry[0], entry[2])] = next(iter(member.get("feed_urls", [])), "")
                 FEED_DATES[entry[2]] = prepared["newest_at"]
+            # Never remove a source from a preapproved draft while keeping its wording.
+            # Reject the entire group if any member violates this show's selection policy.
+            if not all(allowed(entry, entry_feeds[(entry[0], entry[2])], CONFIG) for entry in group):
+                continue
             story_groups.append(group)
             prepared_by_group[id(group)] = prepared
     else:
@@ -865,6 +880,8 @@ def main():
                 for entry in items_from_feed(url):
                     title, desc, link = entry[:3]
                     media = entry[3] if len(entry) > 3 else []
+                    if not allowed((title, desc, link, media), url, CONFIG):
+                        continue
                     key = title.casefold()
                     if key not in seen:
                         seen.add(key)
@@ -879,6 +896,8 @@ def main():
             collected, enabled=clustering.get("enabled", True))
         max_items = max(1, min(int(CONFIG.get("max_items", 5)), 10))
         story_groups = select_balanced_groups(all_groups, max_items)
+    if not story_groups:
+        raise RuntimeError('No eligible news after show selection rules')
     section_settings = CONFIG.get("editorial", {}).get("broadcast_sections", {})
     section_plan = prepare_sections(story_groups, entry_feeds, section_settings)
     story_groups = [group for group, section in section_plan]
@@ -957,7 +976,7 @@ def main():
         source_mentions.append(source_mention)
         crosschecks.append(checked)
     (DOCS / "story-groups.json").write_text(
-        json.dumps([{"headline": group[0][0], "section": section_ids[index],
+        json.dumps([{"headline": group[0][0], "category": category(group[0], entry_feeds.get((group[0][0], group[0][2]), ""), CONFIG), "section": section_ids[index],
             "pipeline_group_id": prepared_by_group.get(id(group), {}).get("id"),
             "editorial_text": prepared_by_group.get(id(group), {}).get("draft", {}).get("text"),
             "sources": [

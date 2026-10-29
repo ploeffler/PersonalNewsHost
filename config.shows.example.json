@@ -1,0 +1,174 @@
+{
+  "title": "PersonalNewsHost",
+  "production_version": "1.0",
+  "language": "de",
+  "voice": "de",
+  "max_items": 5,
+  "max_description_chars": 180,
+  "feeds": [
+    "https://www.derstandard.at/rss/live"
+  ],
+  "background": "assets/background.jpg",
+  "presenter": "assets/presenter.png",
+  "station_logo": "assets/logo-video.png",
+  "tts_engine": "piper",
+  "piper_length_scale": 1.06,
+  "presenter_settings": {
+    "name": "NewsHost",
+    "gender": "custom",
+    "portrait": "assets/presenter.png",
+    "background": "assets/background.jpg",
+    "voice_model": "de_DE-thorsten-high",
+    "lip_sync": {
+      "enabled": true,
+      "engine": "audio_envelope",
+      "fallback": "static",
+      "mouth": {
+        "x": 0.5,
+        "y": 0.34,
+        "width": 0.13,
+        "height": 0.045
+      },
+      "note": "Offline speech-energy mouth deformation (not phoneme-accurate neural lip sync)",
+      "fps": 20
+    },
+    "scenes": {
+      "show_headlines": true,
+      "intro_mode": "avatar",
+      "intro_text": "Willkommen bei {title}. Hier sind die Nachrichten.",
+      "outro_text": "Das waren die Schlagzeilen. Quellen und Links finden Sie auf unserer Webseite.",
+      "intro_static_type": "color",
+      "intro_static_color": "#13243a",
+      "intro_static_image": "assets/background.jpg"
+    },
+    "desk_foreground": "assets/desk_foreground.png"
+  },
+  "voice_pitch_semitones": -1.5,
+  "telegram": {
+    "enabled": false,
+    "recipient_type": "channel",
+    "delivery": "auto",
+    "caption": "{title} – neue Nachrichtensendung\n{url}"
+  },
+  "automation": {
+    "enabled": false,
+    "interval_hours": 1,
+    "start_hour_local": 0,
+    "timezone": "UTC",
+    "days": "daily"
+  },
+  "advanced_services": {
+    "processing_region": "eu",
+    "processing_country": "",
+    "require_verified_region": true,
+    "news_provider": "disabled",
+    "voice_provider": "local",
+    "avatar_provider": "static",
+    "video_provider": "local",
+    "max_per_video_eur": 0,
+    "max_per_month_eur": 0,
+    "allow_paid": false
+  },
+  "editorial": {
+    "style": "classic",
+    "max_sentences": 2,
+    "crosscheck": {
+      "enabled": true,
+      "max_sources": 2,
+      "method": "independent_publisher_headline_search",
+      "note": "Finds other publisher coverage, not factual verification of individual claims"
+    },
+    "broadcast_sections": {
+      "enabled": false,
+      "default": "general",
+      "sections": [
+        {
+          "id": "general",
+          "label": "Allgemein",
+          "keywords": []
+        },
+        {
+          "id": "economy",
+          "label": "Wirtschaft",
+          "keywords": [
+            "Wirtschaft",
+            "Inflation",
+            "Börse",
+            "Zinsen",
+            "Arbeitsmarkt",
+            "Konjunktur"
+          ]
+        },
+        {
+          "id": "local",
+          "label": "Lokales",
+          "keywords": []
+        }
+      ],
+      "feed_sections": {
+        "https://www.bmi.gv.at/rss/stmk_presse.xml": "local",
+        "https://www.kleinezeitung.at/rss/steiermark": "local"
+      }
+    },
+    "pipeline": {
+      "enabled": false,
+      "method": "local_extractive_multi_source",
+      "max_store_age_minutes": 30
+    }
+  },
+  "media": {
+    "mode": "images_and_videos",
+    "max_download_mb": 12,
+    "web_image_fallback": true,
+    "enhancement": "ai",
+    "enhancement_modes": [
+      "off",
+      "balanced",
+      "ai"
+    ],
+    "prefer_article_images": true
+  },
+  "fork_config_initialized": false,
+  "short_updates": {
+    "enabled": true,
+    "freshness_minutes": 60,
+    "interval_minutes": 15
+  },
+  "article_enrichment": {
+    "enabled": true,
+    "max_fetches_per_run": 24
+  },
+  "production": {
+    "parallel_workers": 2
+  },
+  "shows": [
+    {
+      "id": "main",
+      "title": "Newsshow",
+      "schedule": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "technology",
+      "title": "Technik kompakt",
+      "max_items": 3,
+      "target_duration_seconds": 90,
+      "schedule": {
+        "enabled": false
+      },
+      "presenter_settings": {
+        "scenes": {
+          "intro_mode": "static"
+        }
+      }
+    }
+  ],
+  "feed_categories": {},
+  "category_filter": [],
+  "source_policy": {
+    "blocked_domains": [],
+    "excluded_keywords": [],
+    "weights": {}
+  }
+}
