@@ -819,7 +819,8 @@
           },
           "rate_limit": {
             "type": "integer",
-            "minimum": 0
+            "minimum": 0,
+            "description": "Calls per minute per registry process; 0 means unlimited. Not billing quota."
           },
           "cost_model": {
             "type": "object",

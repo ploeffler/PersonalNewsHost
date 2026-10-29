@@ -138,7 +138,7 @@ class Runtime:
             raise ValueError('Duplicate or invalid provider')
         self.providers[provider.id] = provider
 
-    def run(self, provider_id, request, *, schema=None, timeout_s=30, retries=0, fallback_to=None):
+    def run(self, provider_id, request, *, schema=None, timeout_s=30, retries=0, fallback_to=None, before_attempt=None):
         if type(retries) is not int or not 0 <= retries <= 3 or not 0 < timeout_s <= 300:
             raise ValueError('Invalid timeout or retry count')
         request = filtered_request(request, self.secret_values)
@@ -167,6 +167,8 @@ class Runtime:
             def compute():
                 for attempt in range(retries + 1):
                     try:
+                        if before_attempt is not None:
+                            before_attempt(ident)
                         result = provider.generate(request, timeout_s=timeout_s)
                         validate(result)
                         return result

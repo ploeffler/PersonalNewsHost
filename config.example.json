@@ -148,5 +148,102 @@
     "excluded_keywords": [],
     "weights": {}
   },
-  "providers": []
+  "providers": [
+    {
+      "id": "mock-text-generation",
+      "kind": "text_generation",
+      "adapter": "mock",
+      "enabled": true,
+      "secret_name": "",
+      "endpoint": "",
+      "model": "mock-v1",
+      "timeout_s": 30,
+      "retries": 0,
+      "rate_limit": 0,
+      "cost_model": {
+        "max_cost_eur": 0
+      },
+      "priority": 100
+    },
+    {
+      "id": "mock-text-analysis",
+      "kind": "text_analysis",
+      "adapter": "mock",
+      "enabled": true,
+      "secret_name": "",
+      "endpoint": "",
+      "model": "mock-v1",
+      "timeout_s": 30,
+      "retries": 0,
+      "rate_limit": 0,
+      "cost_model": {
+        "max_cost_eur": 0
+      },
+      "priority": 100
+    },
+    {
+      "id": "mock-factcheck-source",
+      "kind": "factcheck_source",
+      "adapter": "mock",
+      "enabled": true,
+      "secret_name": "",
+      "endpoint": "",
+      "model": "mock-v1",
+      "timeout_s": 30,
+      "retries": 0,
+      "rate_limit": 0,
+      "cost_model": {
+        "max_cost_eur": 0
+      },
+      "priority": 100
+    },
+    {
+      "id": "mock-video-generation",
+      "kind": "video_generation",
+      "adapter": "mock",
+      "enabled": true,
+      "secret_name": "",
+      "endpoint": "",
+      "model": "mock-v1",
+      "timeout_s": 30,
+      "retries": 0,
+      "rate_limit": 0,
+      "cost_model": {
+        "max_cost_eur": 0
+      },
+      "priority": 100
+    },
+    {
+      "id": "mock-avatar-video",
+      "kind": "avatar_video",
+      "adapter": "mock",
+      "enabled": true,
+      "secret_name": "",
+      "endpoint": "",
+      "model": "mock-v1",
+      "timeout_s": 30,
+      "retries": 0,
+      "rate_limit": 0,
+      "cost_model": {
+        "max_cost_eur": 0
+      },
+      "priority": 100
+    },
+    {
+      "id": "mock-tts",
+      "kind": "tts",
+      "adapter": "mock",
+      "enabled": true,
+      "secret_name": "",
+      "endpoint": "",
+      "model": "mock-v1",
+      "timeout_s": 30,
+      "retries": 0,
+      "rate_limit": 0,
+      "cost_model": {
+        "max_cost_eur": 0
+      },
+      "priority": 100
+    }
+  ]
 }
