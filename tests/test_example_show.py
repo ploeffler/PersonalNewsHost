@@ -35,9 +35,10 @@ class ExampleShowTests(unittest.TestCase):
             self.assertIn('BEISPIEL',args[1])
             self.assertNotIn('LIVE',args[1])
 
-    def test_workflow_never_publishes(self):
+    def test_workflow_only_updates_development_demo(self):
         text=(Path(__file__).resolve().parents[1]/'.github/workflows/example-newsshow.yml').read_text()
-        self.assertIn('contents: read',text)
+        self.assertIn("github.ref == 'refs/heads/Full-featured-Newsoutlet'",text)
         self.assertNotIn('schedule:',text)
-        self.assertNotIn('git push',text)
+        self.assertIn('git push origin HEAD:Full-featured-Newsoutlet',text)
+        self.assertNotIn('HEAD:main',text)
         self.assertNotIn('secrets.',text)

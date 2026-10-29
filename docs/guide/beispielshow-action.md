@@ -15,7 +15,7 @@ Im fertigen Lauf das Artefakt **newsshow-allgemein-example-<run-id>** herunterla
 - `archive/JJJJ/MM/TT/main/<produktion>/example-de.mp4`: datiertes Archiv der gekennzeichneten Ausgabe.
 - `example-manifest.json`: Beispielstatus, Sprache, Archivpfad, Dauer und SHA-256-Prüfsumme.
 
-**AI steht durchgehend rechts unten im Video**, auch im Vorschaubild. Archivkopien enthalten dieselbe gekennzeichnete Datei. Die Action hat nur Repository-Leserechte, erstellt keinen Commit, aktualisiert keine Pages-Dateien und veröffentlicht nichts auf Social Media. Keine Secrets erforderlich.
+**AI steht durchgehend rechts unten im Video**, auch im Vorschaubild. Archivkopien enthalten dieselbe gekennzeichnete Datei. Die Action aktualisiert zusätzlich die Repository-Demo unter `demos/newsshow-demo.*` ausschließlich auf `Full-featured-Newsoutlet`. Dafür hat sie Repository-Schreibrechte und nutzt den automatisch bereitgestellten Actions-Token. Sie verändert weder main noch Pages oder Social Media; zusätzliche Secrets sind nicht erforderlich.
 
 GitHub-Artefakte werden nach 30 Tagen entfernt. Sie sind ein Transportpaket, kein dauerhaft betriebener Archivspeicher. Für langfristige Aufbewahrung das enthaltene Datumsarchiv auf persistenten Speicher übernehmen. Eine automatische Einbindung als vorinstalliertes Startvideo ist noch eine separate Installationsaufgabe.
 
@@ -28,3 +28,7 @@ python3 scripts/build_example_show.py --output-root out/example-show
 ```
 
 Die Systempakete werden im Ubuntu-GitHub-Runner automatisch installiert. Es werden keine Piper-Modelle heruntergeladen. Vorhandene Produktionskonfiguration wird nicht verändert. Der Beispielbuilder nutzt den bestehenden Renderer mit einer klar begrenzten Fixture-Eingabe, prüft Audio/Video und brennt das Pflichtlabel in einer abschließenden Stufe ein.
+
+## Anzeige im Repository
+
+Die README zeigt **Newsshow-Demo** mit anklickbarem Vorschaubild und MP4-Link. `scripts/export_example_demo.py` prüft die Video-Prüfsumme und übernimmt ausschließlich die feste Beispielsendung. Folgeproduktionen aktualisieren denselben Demodateinamen. Das datierte Archiv bleibt im jeweiligen Artefakt erhalten; die README-Demo ist nur die aktuelle Vorschau.

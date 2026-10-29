@@ -8,6 +8,16 @@ PersonalNewsHost verwandelt Nachrichten aus RSS-Feeds in eine deutschsprachige V
 
 [**Nachrichtenseite ansehen**](https://ploeffler.github.io/PersonalNewsHost/) · [**Jetzt die aktuelle Sendung ansehen**](https://ploeffler.github.io/PersonalNewsHost/latest.mp4)
 
+## Newsshow-Demo
+
+Vorbereitete Beispielsendung der Redaktion **Allgemein** mit festen Testbeiträgen – keine aktuellen Nachrichten.
+
+[![Newsshow-Demo – Video öffnen](demos/newsshow-demo.png)](https://github.com/ploeffler/PersonalNewsHost/blob/Full-featured-Newsoutlet/demos/newsshow-demo.mp4)
+
+[**Newsshow-Demo ansehen / herunterladen**](https://raw.githubusercontent.com/ploeffler/PersonalNewsHost/Full-featured-Newsoutlet/demos/newsshow-demo.mp4) · [GitHub Action](https://github.com/ploeffler/PersonalNewsHost/actions/workflows/example-newsshow.yml?query=branch%3AFull-featured-Newsoutlet)
+
+Die Vorschau ist anklickbar. Das Video enthält deutsche Sprachausgabe und eine dauerhafte AI-Kennzeichnung rechts unten. Die Action aktualisiert diese Demo ausschließlich im Entwicklungsbranch.
+
 ## Die aktuelle Nachrichtensendung
 
 <video controls playsinline preload="metadata" width="100%" poster="https://ploeffler.github.io/PersonalNewsHost/assets/background.jpg">

@@ -5,10 +5,11 @@ on:
     paths:
       - '.github/workflows/example-newsshow.yml'
       - 'scripts/build_example_show.py'
+      - 'scripts/export_example_demo.py'
       - 'tests/fixtures/example-show.json'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 concurrency:
   group: example-newsshow-${{ github.ref }}
   cancel-in-progress: false
@@ -35,3 +36,15 @@ jobs:
           path: out/example-show/
           if-no-files-found: error
           retention-days: 30
+      - name: Update Newsshow-Demo in development branch
+        if: github.ref == 'refs/heads/Full-featured-Newsoutlet'
+        run: |
+          python3 scripts/export_example_demo.py --source out/example-show --destination demos
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add demos/newsshow-demo.mp4 demos/newsshow-demo.png demos/newsshow-demo.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update prepared Newsshow-Demo'
+            git pull --rebase origin Full-featured-Newsoutlet
+            git push origin HEAD:Full-featured-Newsoutlet
+          fi
