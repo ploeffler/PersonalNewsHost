@@ -1,0 +1,37 @@
+name: Build prepared example Newsshow
+on:
+  push:
+    branches: [Full-featured-Newsoutlet]
+    paths:
+      - '.github/workflows/example-newsshow.yml'
+      - 'scripts/build_example_show.py'
+      - 'tests/fixtures/example-show.json'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: example-newsshow-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  example:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Install local rendering tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg espeak-ng fonts-dejavu-core
+          python3 -m pip install -c requirements-constraints.txt -r requirements.txt Pillow
+      - name: Produce fixed German example, without live feeds or AI APIs
+        run: python3 scripts/build_example_show.py --output-root out/example-show
+      - name: Upload example video and dated archive
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: newsshow-allgemein-example-${{ github.run_id }}
+          path: out/example-show/
+          if-no-files-found: error
+          retention-days: 30

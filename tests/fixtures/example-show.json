@@ -1,0 +1,10 @@
+{
+  "fixture_id": "newsshow-allgemein-de-v1",
+  "language": "de",
+  "newsroom": {"id": "allgemein", "name": "Allgemein"},
+  "stories": [
+    {"title": "Willkommen bei der Redaktion Allgemein", "text": "Dies ist eine vorbereitete Beispielsendung. Die Beiträge erklären das Format und sind keine aktuellen Nachrichten.", "url": "https://example.invalid/beispiel/redaktion"},
+    {"title": "Ein Nachrichtenblock bündelt Beiträge", "text": "Eine Show kann aus mehreren Sendungsbausteinen bestehen. Themen, Quellen und Ausgabeformate werden redaktionell festgelegt.", "url": "https://example.invalid/beispiel/nachrichtenblock"},
+    {"title": "Produktion und Veröffentlichung bleiben getrennt", "text": "Diese Beispielsendung wird als Datei bereitgestellt. Sie wird nicht automatisch auf einer Webseite oder in sozialen Netzwerken veröffentlicht.", "url": "https://example.invalid/beispiel/produktion"}
+  ]
+}
