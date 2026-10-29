@@ -63,6 +63,18 @@ class NewsSelectionTests(unittest.TestCase):
         news.FEED_DATES[fresh[2]] = 500
         self.assertEqual(news.select_balanced_groups([[old], [fresh]], 1)[0][0], fresh)
 
+    def test_near_identical_event_keeps_both_sources(self):
+        a=story('Hochwasser an der Donau verursacht schwere Schäden', 'first.example', 1)
+        b=story('Hochwasser an Donau verursacht schwere Schäden', 'second.example', 2)
+        representatives,groups=news.group_news_items([a,b])
+        self.assertEqual(len(representatives),1)
+        self.assertEqual({entry[2] for entry in groups[0]},{a[2],b[2]})
+
+    def test_clustering_can_be_disabled(self):
+        a=story('Hochwasser an der Donau verursacht schwere Schäden', 'first.example', 1)
+        b=story('Hochwasser an Donau verursacht schwere Schäden', 'second.example', 2)
+        self.assertEqual(len(news.group_news_items([a,b],enabled=False)[1]),2)
+
     def test_unrelated_stories_stay_separate(self):
         a = story("Unwetter verursacht Schäden in Graz", "orf.at", 1)
         b = story("Regierung beschließt neue Steuerreform", "krone.at", 2)

@@ -689,7 +689,7 @@ def group_news_items(items, enabled=True):
             "sind", "wird", "werden", "heute", "neue", "neuer", "neuen",
             "auch", "mehr", "dass", "nicht", "jetzt", "schon", "noch"}
     def tokens(title):
-        return set(w for w in re.findall(r"[^\\W_]{4,}", title.casefold(), re.UNICODE)
+        return set(w for w in re.findall(r"[^\W_]{4,}", title.casefold(), re.UNICODE)
                    if w not in stop)
     def publisher(entry):
         return (urlparse(entry[2]).hostname or "").removeprefix("www.")
