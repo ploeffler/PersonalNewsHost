@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 20,
+  "revision": 21,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -753,7 +753,7 @@
       "id": "T073",
       "epic": "E7",
       "title": "Datenschutz und Sicherheit",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T002"
       ],
@@ -768,25 +768,7 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A01",
-      "lease": {
-        "client": "codex-t073",
-        "token": "eee0b7de4d684f0da7c083f515a6f7ed",
-        "expires_at": 1793327903.1023014,
-        "files": [
-          ".github/workflows/",
-          "docs/datenschutz.html",
-          "docs/guide/datenschutz.md",
-          "docs/impressum.html",
-          "docs/index.html",
-          "planning/action-pins.json",
-          "requirements-constraints.txt",
-          "requirements.txt",
-          "scripts/check_repository.py",
-          "scripts/generate.py",
-          "scripts/security_checks.py",
-          "tests/test_security_checks.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-t073",
         "commit": "9cd80fc51bb9c3d5f22800e1ffeeadf261aff6e7",
@@ -804,11 +786,14 @@
           "scripts/generate.py",
           "scripts/security_checks.py",
           "tests/test_security_checks.py"
-        ]
+        ],
+        "reviewer": "human-ploeffler",
+        "decision": "Human owner explicitly confirmed: Geprüft – integrieren und T073 abschließen. Recorded on their behalf, not independent AI review. PR #172 integrated; 265 tests and both GitHub checks pass. Public legal pages remain operator templates; documented scanner/lock limitations accepted. No version release implied."
       },
       "local_work_pending": false,
       "evidence": [
-        "c50178eb5b2ddcd6cf420ebfcb90103f6f03379c"
+        "9cd80fc51bb9c3d5f22800e1ffeeadf261aff6e7",
+        "265 offline Python tests, JS contracts, Ruff and diff checks pass; GitHub Foundation https://github.com/ploeffler/PersonalNewsHost/actions/runs/40967351687 and Render https://github.com/ploeffler/PersonalNewsHost/actions/runs/40967351448 SUCCESS."
       ],
       "implementation_note": "",
       "coordination_note": "Pending privacy draft reviewed and integrated without unverified provider/log/cache guarantees. Prepared action pin list will be verified upstream before use; unrelated local changes preserved."
@@ -5491,6 +5476,15 @@
       "client": "codex-t073",
       "at": 1793313692.886379,
       "note": "PR #172 merged after explicit human independent review and release in this conversation."
+    },
+    {
+      "operation_id": "8785f0738f2948ceaab1c50f738a2ac4",
+      "revision": 21,
+      "action": "complete",
+      "task": "T073",
+      "client": "human-ploeffler",
+      "at": 1793313695.0351694,
+      "note": "Human owner explicitly confirmed: Geprüft – integrieren und T073 abschließen. Recorded on their behalf, not independent AI review. PR #172 integrated; 265 tests and both GitHub checks pass. Public legal pages remain operator templates; documented scanner/lock limitations accepted. No version release implied."
     }
   ]
 }
