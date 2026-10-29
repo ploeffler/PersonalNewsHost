@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 26,
+  "revision": 27,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4463,6 +4463,34 @@
       "evidence": [],
       "implementation_note": "",
       "coordination_note": ""
+    },
+    {
+      "id": "T900",
+      "epic": "E32",
+      "title": "Kostenlose einzelne KI-Reel-Sendung per Chat-Action",
+      "status": "todo",
+      "depends_on": [
+        "T100"
+      ],
+      "instructions": [
+        "Manuellen Workflow mit Stationsname, Sendung, Host-/Studiobeschreibung, RSS-Feed, Nachrichtenanzahl und Ausgabename erstellen.",
+        "Offene Modelle auf Standard-CPU-Runner: Host und Studio erzeugen, sprechenden Host animieren, lokale Sprache und 9:16-Video. Keine kostenpflichtigen APIs.",
+        "Video ausschließlich als befristetes Artefakt mit datiertem Archiv; Chat-Dispatch und Abruf bereitstellen, kein Video-Commit."
+      ],
+      "acceptance": [
+        "workflow_dispatch verarbeitet alle Eingaben sicher.",
+        "Read-only Repository-Zugriff, AI-Kennzeichnung rechts unten, Quellen im Artefakt.",
+        "Offline-Tests und echter CPU-Smoke-Lauf prüfen die Produktion."
+      ],
+      "source": "user-chat-2026-10-30",
+      "version": "0.1",
+      "package": "A00",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "Separater experimenteller Action-Einstieg auf ausdrücklichen Nutzerwunsch; keine allgemeine Avatar-/Studioplattform.",
+      "coordination_note": ""
     }
   ],
   "packages": [
@@ -4470,7 +4498,8 @@
       "id": "A00",
       "title": "Bestand und Schnittstellen",
       "tasks": [
-        "T001"
+        "T001",
+        "T900"
       ]
     },
     {
@@ -4898,7 +4927,8 @@
         "T103",
         "T104",
         "T130",
-        "T135"
+        "T135",
+        "T900"
       ],
       "acceptance": "Schema, CI, Provider-Mocks und deterministische Nachrichtenauswahl sind geprüft; keine Produktion externer Inhalte."
     },
