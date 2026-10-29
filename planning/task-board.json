@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 25,
+  "revision": 26,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1007,7 +1007,7 @@
       "id": "T100",
       "epic": "E9",
       "title": "Provider-Interface, Registry und Mock-Provider",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T002"
       ],
@@ -1025,20 +1025,7 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A02",
-      "lease": {
-        "client": "codex-t100",
-        "token": "6abac36a5c784adf952021e4e4bb46ee",
-        "expires_at": 1793329852.5222042,
-        "files": [
-          "config.example.json",
-          "config.schema.json",
-          "scripts/configured_providers.py",
-          "scripts/provider_runtime.py",
-          "scripts/run_provider.py",
-          "scripts/validate_config.py",
-          "tests/test_configured_providers.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-t100",
         "commit": "fb5a7f2557f4863981131fca75ea58b602b4f626",
@@ -1051,14 +1038,14 @@
           "scripts/run_provider.py",
           "scripts/validate_config.py",
           "tests/test_configured_providers.py"
-        ]
+        ],
+        "reviewer": "t072_review",
+        "decision": "Independent AI client review by t072_review: final acb6c0b and merged fb5a7f2 have identical reviewed file contents. Rate-limit/retry finding corrected and regression verified; 11 configured-provider and 14 runtime tests independently passed. GitHub foundation 40971149183 and render 40971149194 both SUCCESS on acb6c0b; full 276 offline tests reported in CI evidence. Approve T100 completion. No human review is claimed; no version release implied."
       },
       "local_work_pending": false,
       "evidence": [
-        "scripts/provider_runtime.py",
-        "tests/test_provider_runtime.py",
-        "docs/guide/provider-runtime.md",
-        "ca25151101f3d87f2b605a36545a8c786d2f3f6c"
+        "fb5a7f2557f4863981131fca75ea58b602b4f626",
+        "276 local offline tests and lint/link/secret checks pass. GitHub foundation SUCCESS https://github.com/ploeffler/PersonalNewsHost/actions/runs/40971149183 ; render SUCCESS https://github.com/ploeffler/PersonalNewsHost/actions/runs/40971149194 . Independent t072_review approved final implementation."
       ],
       "implementation_note": "",
       "coordination_note": "Pending T100 provider schema and empty configs integrated after schema validation. Existing runtime already committed. Budget, analysis, cache enhancements and other local edits remain excluded."
@@ -5548,6 +5535,15 @@
       "client": "codex-t100",
       "at": 1793315530.09587,
       "note": "PR #173 merged into development branch after independent review and both CI checks."
+    },
+    {
+      "operation_id": "d79874b5498248b899b4372b522f689b",
+      "revision": 26,
+      "action": "complete",
+      "task": "T100",
+      "client": "t072_review",
+      "at": 1793315586.7651093,
+      "note": "Independent AI client review by t072_review: final acb6c0b and merged fb5a7f2 have identical reviewed file contents. Rate-limit/retry finding corrected and regression verified; 11 configured-provider and 14 runtime tests independently passed. GitHub foundation 40971149183 and render 40971149194 both SUCCESS on acb6c0b; full 276 offline tests reported in CI evidence. Approve T100 completion. No human review is claimed; no version release implied."
     }
   ]
 }
