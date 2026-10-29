@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 6,
+  "revision": 7,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -139,7 +139,7 @@
       "id": "T012",
       "epic": "E1",
       "title": "Duplikat- und Themenclustering",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T011"
       ],
@@ -154,7 +154,17 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A03",
-      "lease": null,
+      "lease": {
+        "client": "codex-t012",
+        "token": "2153e23c93ab452c85922095deb947fc",
+        "expires_at": 1793324561.5998971,
+        "files": [
+          "scripts/editorial_pipeline.py",
+          "scripts/generate.py",
+          "tests/test_editorial_pipeline.py",
+          "tests/test_news_selection.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [
@@ -5297,6 +5307,15 @@
       "client": "codex-t012",
       "at": 1793310158.8725803,
       "note": "Existing pending T012 Unicode regex correction and two regression tests integrated in isolated commit; eight selection tests pass with scripts import path. Unrelated provider and configuration changes retained in original checkout."
+    },
+    {
+      "operation_id": "a0ca645ff6bf426387475ce0071d2e52",
+      "revision": 7,
+      "action": "claim",
+      "task": "T012",
+      "client": "codex-t012",
+      "at": 1793310161.5998971,
+      "note": ""
     }
   ]
 }
