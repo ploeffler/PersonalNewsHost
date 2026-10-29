@@ -93,12 +93,12 @@ jobs:
           command -v espeak-ng
           ffmpeg -version | head -n 1
           espeak-ng --version
-      - name: Smoke-test FFmpeg intro modes
-        if: steps.schedule.outputs.due == 'true'
-        run: python3 -m unittest discover -s tests -p test_video_smoke.py -v
       - name: Install neural speech engine
         if: steps.schedule.outputs.due == 'true'
         run: python3 -m pip install --disable-pip-version-check --prefer-binary piper-tts Pillow
+      - name: Smoke-test FFmpeg intro modes
+        if: steps.schedule.outputs.due == 'true'
+        run: python3 -m unittest discover -s tests -p test_video_smoke.py -v
       - name: Install offline AI image upscaler
         if: steps.schedule.outputs.due == 'true'
         run: |
