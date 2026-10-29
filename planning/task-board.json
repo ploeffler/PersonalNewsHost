@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 3,
+  "revision": 4,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -8,7 +8,7 @@
       "id": "T001",
       "epic": "E0",
       "title": "Code- und Workflow-Inventar erstellen",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [],
       "instructions": [
         "Lies README.md, config.json, config.example.json, alle Dateien in scripts/, tests/ und .github/workflows/.",
@@ -30,7 +30,14 @@
           "docs/guide/architektur-ist.md"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-t001",
+        "commit": "d44f0c337d677b1a5458f5ae1b0698bc6b328c5c",
+        "checks": "PR #169 merged after explicit human approval; 40 scripts, 43 tests, 34 workflows covered; links and git diff --check verified; 22 coordination tests passed during implementation.",
+        "files": [
+          "docs/guide/architektur-ist.md"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [
         "docs/guide/architektur-ist.md",
@@ -5266,6 +5273,15 @@
       "client": "codex-t001",
       "at": 1793309366.6314604,
       "note": "Implementation published as PR https://github.com/ploeffler/PersonalNewsHost/pull/169 targeting Full-featured-Newsoutlet; commit 8c5a90af7724a8240295e62d2fdda51d5ac9f504. Coverage: 40 scripts, 43 tests, 34 workflows, 197 config paths; links/diff checks and 22 coordination tests pass. Await independent PR review/integration; do not complete task or release 0.1 yet."
+    },
+    {
+      "operation_id": "73013d2bb7a644159f7e76f715d48d64",
+      "revision": 4,
+      "action": "submit",
+      "task": "T001",
+      "client": "codex-t001",
+      "at": 1793309520.7952504,
+      "note": "User explicitly approved and requested integration of PR #169 in this conversation."
     }
   ]
 }
