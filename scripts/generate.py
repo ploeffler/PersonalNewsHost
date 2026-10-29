@@ -1297,6 +1297,14 @@ def main():
             '<enclosure url="' + BASE + 'latest.mp4" length="' + str((DOCS / "latest.mp4").stat().st_size) + '" type="video/mp4"/>'
             '</item></channel></rss>')
     (DOCS / "feed.xml").write_text(feed, encoding="utf-8")
+    try:
+        from scripts.broadcast_archive import archive_broadcast, decorate_homepage
+    except ModuleNotFoundError:
+        from broadcast_archive import archive_broadcast, decorate_homepage
+    archive_broadcast(DOCS, now.timestamp(), "Nachrichten " + timestamp,
+                      [{"title": item[0], "url": item[2]} for group in story_groups for item in group])
+    home = DOCS / "index.html"
+    home.write_text(decorate_homepage(home.read_text(encoding="utf-8")), encoding="utf-8")
     print(f"Generated {len(selected)} stories; video size {(DOCS / 'latest.mp4').stat().st_size} bytes")
 
 if __name__ == "__main__":
