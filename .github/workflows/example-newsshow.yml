@@ -13,6 +13,9 @@ permissions:
 concurrency:
   group: example-newsshow-${{ github.ref }}
   cancel-in-progress: false
+env:
+  PIP_CONSTRAINT: ${{ github.workspace }}/requirements-constraints.txt
+
 jobs:
   example:
     runs-on: ubuntu-24.04
@@ -29,7 +32,14 @@ jobs:
           python3 -m pip install -c requirements-constraints.txt -r requirements.txt Pillow
       - name: Produce fixed German example, without live feeds or AI APIs
         run: python3 scripts/build_example_show.py --output-root out/example-show
+      - name: Check artifact publication boundary
+        id: pnh_publication_1
+        env:
+          PNH_OUTPUT_PATHS: |
+            out/example-show/
+        run: python3 scripts/security_checks.py --outputs-env PNH_OUTPUT_PATHS
       - name: Upload example video and dated archive
+        if: ${{ steps.pnh_publication_1.outcome == 'success' }}
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: newsshow-allgemein-example-${{ github.run_id }}

@@ -6,6 +6,7 @@ import html
 import json
 import re
 import subprocess
+import shutil
 import tempfile
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -881,7 +882,7 @@ def main():
                         collected.append((title, desc, link, media))
                         entry_feeds[(title, link)] = url
             except Exception as exc:
-                print(f"Feed skipped: {url}: {exc}")
+                print(f"Feed skipped ({type(exc).__name__}); source details withheld")
         if not collected:
             raise RuntimeError("No RSS entries available; previous published edition remains unchanged")
         clustering = CONFIG.get("editorial", {}).get("topic_clustering", {})
@@ -1370,7 +1371,12 @@ def main():
         feed_lines = []
         for feed_url in CONFIG.get("feeds", []):
             # Break after URL separators, but never truncate the only source.
-            url_text = str(feed_url).strip()
+            try:
+                from .security_checks import public_source_url
+            except ImportError:
+                from security_checks import public_source_url
+            # Never burn credentials or signed query strings into a video.
+            url_text = public_source_url(feed_url)
             feed_lines.extend(textwrap.wrap(url_text, width=45, break_long_words=True,
                                             break_on_hyphens=False))
         if not feed_lines:
@@ -1439,6 +1445,14 @@ def main():
                 lines.append(" – <a rel='noopener noreferrer' href='" + html.escape(source[2], quote=True) + "'>" + html.escape(source[0]) + "</a>")
         lines.append("</li>")
     lines.append("</ul><p>Automatisch aus RSS erstellt; Inhalte nicht unabhängig überprüft.</p></html>")
+    legal_navigation = "<nav aria-label='Rechtliches'><a href='datenschutz.html'>Datenschutz</a> · <a href='impressum.html'>Impressum</a></nav>"
+    for legal_page in ('datenschutz.html', 'impressum.html'):
+        template = ROOT / 'docs' / legal_page
+        if not template.is_file():
+            template = Path(__file__).resolve().parents[1] / 'docs' / legal_page
+        if template.is_file() and template.resolve() != (DOCS / legal_page).resolve():
+            shutil.copyfile(template, DOCS / legal_page)
+    lines[-1] = lines[-1].replace("</html>", legal_navigation + "</html>")
     (DOCS / "index.html").write_text("\n".join(lines), encoding="utf-8")
     pubdate = email.utils.format_datetime(now)
     guid = now.isoformat()

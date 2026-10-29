@@ -21,6 +21,9 @@ permissions:
 concurrency:
   group: personalnewshost-publish
   cancel-in-progress: false
+env:
+  PIP_CONSTRAINT: ${{ github.workspace }}/requirements-constraints.txt
+
 jobs:
   updates:
     runs-on: ubuntu-24.04
@@ -29,7 +32,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
       - name: Load private configuration
         env:
           PRIVATE_CONFIG: ${{ secrets.PERSONALNEWSHOST_CONFIG }}
@@ -61,18 +64,26 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python3 scripts/security_checks.py --outputs docs/
           git add docs/news-store.json docs/short-updates.json docs/short-update-state.json docs/short-update-audio/ docs/short-update-video/
           if ! git diff --cached --quiet; then
             git commit -m 'Publish short news updates'
             git push
           fi
+      - name: Check artifact publication boundary
+        id: pnh_publication_1
+        env:
+          PNH_OUTPUT_PATHS: |
+            docs
+        run: python3 scripts/security_checks.py --outputs-env PNH_OUTPUT_PATHS
       - name: Upload public site
-        uses: actions/upload-pages-artifact@v4
+        if: ${{ steps.pnh_publication_1.outcome == 'success' }}
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
         with:
           path: docs
       - name: Deploy public site
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
       - name: Reserve new Telegram short updates
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

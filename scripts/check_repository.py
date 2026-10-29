@@ -21,7 +21,7 @@ def tracked():
 
 
 def secrets(paths):
-    patterns=[re.compile(r'\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,}|sk-(?:ant-)?[A-Za-z0-9_-]{20,})\b'),
+    patterns=[re.compile(r'\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,}|sk-(?:proj-|svcacct-|ant-)[A-Za-z0-9_-]{20,}|sk-[A-Za-z0-9]{48})\b'),
               re.compile(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')]
     errors=[]
     for path in paths:
@@ -104,7 +104,9 @@ def main():
     paths=tracked()
     for path in paths:
         if path.suffix=='.py':ast.parse(path.read_text(),filename=str(path))
-    errors=secrets(paths)+links(paths)
+    from scripts.security_checks import pinning_errors, scan_files, environment_secrets
+    errors=secrets(paths)+links(paths)+pinning_errors()
+    errors+=scan_files((ROOT/"docs").rglob("*"), values=environment_secrets(), publication=True)
     for error in errors:print(error,file=sys.stderr)
     if errors:return 1
     print('Syntax, secret scan and local Markdown links: OK',flush=True)
