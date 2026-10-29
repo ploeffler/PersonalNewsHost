@@ -26,6 +26,7 @@
   const key = item => item.kind + ':' + item.id;
   const sources = document.getElementById('bulletin-sources');
   function sourceList(entries) {
+    if (!sources) return; // The overview lists all stored news independently of playback.
     sources.replaceChildren();
     for (const source of entries || []) {
       if (!/^https?:\/\//i.test(source.url || '')) continue;

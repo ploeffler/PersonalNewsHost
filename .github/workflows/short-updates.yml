@@ -8,6 +8,7 @@ on:
       - scripts/video_branding.py
       - scripts/short_update_video.py
       - assets/logo-video.png
+      - scripts/collect_news.py
       - scripts/short_updates.py
       - scripts/publish_short_updates_telegram.py
   schedule:
@@ -49,13 +50,16 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -p "test_short_updates*.py"
           python3 -m unittest discover -s tests -p test_telegram.py
+          python3 -m unittest discover -s tests -p test_collect_news.py
       - name: Create updates and expire old entries
         run: python3 scripts/short_updates.py
+      - name: Store RSS messages from the last 24 hours
+        run: python3 scripts/collect_news.py
       - name: Publish short updates
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/short-updates.json docs/short-update-state.json docs/short-update-audio/ docs/short-update-video/
+          git add docs/news-store.json docs/short-updates.json docs/short-update-state.json docs/short-update-audio/ docs/short-update-video/
           if ! git diff --cached --quiet; then
             git commit -m 'Publish short news updates'
             git push
