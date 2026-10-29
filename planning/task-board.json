@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 27,
+  "revision": 28,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4468,7 +4468,7 @@
       "id": "T900",
       "epic": "E32",
       "title": "Kostenlose einzelne KI-Reel-Sendung per Chat-Action",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T100"
       ],
@@ -4485,7 +4485,21 @@
       "source": "user-chat-2026-10-30",
       "version": "0.1",
       "package": "A00",
-      "lease": null,
+      "lease": {
+        "client": "codex-reel",
+        "token": "1274a2746d5c4c229096868d3b8933fd",
+        "expires_at": 1793331047.4064424,
+        "files": [
+          ".github/workflows/chat-reel.yml",
+          "requirements-reel-avatar.txt",
+          "requirements-reel-image.txt",
+          "scripts/chat_reel.py",
+          "scripts/reel_models.py",
+          "scripts/reel_show.py",
+          "scripts/setup_reel_runtime.py",
+          "tests/test_reel_show.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -5574,6 +5588,15 @@
       "client": "t072_review",
       "at": 1793315586.7651093,
       "note": "Independent AI client review by t072_review: final acb6c0b and merged fb5a7f2 have identical reviewed file contents. Rate-limit/retry finding corrected and regression verified; 11 configured-provider and 14 runtime tests independently passed. GitHub foundation 40971149183 and render 40971149194 both SUCCESS on acb6c0b; full 276 offline tests reported in CI evidence. Approve T100 completion. No human review is claimed; no version release implied."
+    },
+    {
+      "operation_id": "e9bcdd48987c470f99b39949530ba51b",
+      "revision": 28,
+      "action": "claim",
+      "task": "T900",
+      "client": "codex-reel",
+      "at": 1793316647.4064424,
+      "note": ""
     }
   ]
 }
