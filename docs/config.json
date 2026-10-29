@@ -7,6 +7,7 @@
   "max_description_chars": 180,
   "feeds": [
     "https://www.derstandard.at/rss",
+    "https://www.derstandard.at/rss/live",
     "https://api.krone.at/v1/rss/rssfeed-nachrichten.html",
     "https://rss.orf.at/news.xml",
     "https://www.kleinezeitung.at/rss/steiermark",

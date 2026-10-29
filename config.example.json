@@ -5,7 +5,9 @@
   "voice": "de",
   "max_items": 5,
   "max_description_chars": 180,
-  "feeds": [],
+  "feeds": [
+    "https://www.derstandard.at/rss/live"
+  ],
   "background": "assets/background.jpg",
   "presenter": "assets/presenter.png",
   "station_logo": "assets/logo.png",
