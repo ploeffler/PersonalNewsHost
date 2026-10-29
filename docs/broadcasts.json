@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261028T130428Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 28.10.2026 um 14:04 Uhr",
-      "created_at": 1793192668.896523,
-      "sources": [
-        {
-          "title": "Züge kollidiert: Über 60 Todesopfer, Zahl steigt",
-          "url": "https://www.krone.at/4352033"
-        },
-        {
-          "title": "Streit um Bardots Erbe: Witwer aus Villa ausgeschlossen",
-          "url": "https://orf.at/stories/3446411/"
-        },
-        {
-          "title": "Zaun entlang der B64 bei Unterfladnitz soll Mensch und Tier schützen",
-          "url": "https://www.kleinezeitung.at/artikel/41385405/zaun-entlang-der-b64-bei-unterfladnitz-soll-mensch-und-tier-schuetzen"
-        },
-        {
-          "title": "Mit M6-Chip: Apple aktualisiert Macbook Pro und iMac",
-          "url": "https://www.derstandard.at/story/3000000346312/mit-m6-chip-apple-aktualisiert-macbook-pro-und-imac?ref=rss"
-        },
-        {
-          "title": "Fahrgast im Bus gestürzt",
-          "url": ""
-        }
-      ],
-      "video": "broadcasts/20261028T130428Z.mp4",
-      "transcript": "broadcasts/20261028T130428Z.txt",
-      "subtitles": "broadcasts/20261028T130428Z.vtt",
-      "subtitle_download": "broadcasts/20261028T130428Z.srt"
-    },
-    {
       "id": "20261029T093244Z",
       "kind": "broadcast",
       "title": "Nachrichten 29.10.2026 um 10:32 Uhr",
@@ -63,6 +31,42 @@
       "transcript": "broadcasts/20261029T093244Z.txt",
       "subtitles": "broadcasts/20261029T093244Z.vtt",
       "subtitle_download": "broadcasts/20261029T093244Z.srt"
+    },
+    {
+      "id": "20261029T165914Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 29.10.2026 um 17:59 Uhr",
+      "created_at": 1793293154.060763,
+      "video": "broadcasts/20261029T165914Z.mp4",
+      "sources": [
+        {
+          "title": "Hitzig und witzig: Öblarner Ensemble tourt mit Theaterstück durchs Land",
+          "url": "https://www.kleinezeitung.at/artikel/41401154/hitzig-und-witzig-oeblarner-ensemble-tourt-mit-theaterstueck-durchs"
+        },
+        {
+          "title": "Schiff nach Drohnenangriff in Bulgarien gesunken",
+          "url": "https://www.krone.at/4354439"
+        },
+        {
+          "title": "Immer mehr Menschen kaufen Einfamilienhäuser, weil Bauen zu teuer ist",
+          "url": "https://www.derstandard.at/story/3000000346294/immer-mehr-menschen-kaufen-einfamilienhaeuser-weil-bauen-zu-teuer-ist?ref=rss"
+        },
+        {
+          "title": "Netzentgelte für Strom sinken 2027 im Großteil Österreichs",
+          "url": "https://www.derstandard.at/story/3000000346662/netzentgelte-f252r-strom-sinken-2027-im-gro223teil-214sterreichs?ref=rss"
+        },
+        {
+          "title": "Netzentgelte für Strom sinken 2027 im Großteil des Landes",
+          "url": "https://orf.at/stories/3446525/"
+        },
+        {
+          "title": "Paragleiter aus Hochspannungsleitung gerettet",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261029T165914Z.txt",
+      "subtitles": "broadcasts/20261029T165914Z.vtt",
+      "subtitle_download": "broadcasts/20261029T165914Z.srt"
     }
   ]
 }
