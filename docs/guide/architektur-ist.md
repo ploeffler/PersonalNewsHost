@@ -179,3 +179,7 @@ Lokal: Python, FFmpeg/ffprobe, Piper/eSpeak; je Pfad Pillow, OpenCV, NumPy und e
 Vor Änderungen: 38 Tests erfolgreich, einschließlich vorhandener FFmpeg-Smoke-Tests. Bestehende Tests versuchen teilweise Netzwerk-Fallbacks, obwohl sie ohne Verbindung bestehen. Strikte Netzwerksperre/Fixtures für alle Tests ist noch nachzuarbeiten (T072). Neue Validator-Tests benötigen keine Netzwerkverbindung.
 
 Nächste Arbeiten für 0.1: Showisolierung, Kategorien-/Quellenregeln, Nachrichtendatenmodell, Mocks/Provider-Runtime, dauerhafte Budget-/Cache-/Datenabflusskontrolle sowie Analyse-Ausgabeschemata. 0.1 ist noch nicht erreicht.
+
+## Abgleich T001 am 29.10.2026
+
+Der lokale Ergänzungsentwurf wurde geprüft und separat gesichert. Seine pauschale Abschlussbehauptung wird nicht übernommen. Das Inventar oben ist ein historischer Zwischenstand und muss für T001 anhand des aktuellen Entwicklungsbranches vervollständigt werden. Die anderen lokalen 0.1-Arbeiten bleiben getrennt und ungeprüft; weder T001 noch Version 0.1 sind damit abgenommen.
