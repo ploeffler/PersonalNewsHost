@@ -29,4 +29,4 @@ jobs:
         env:
           PNH_RENDER_SECONDS: '155'
           PYTHONDONTWRITEBYTECODE: '1'
-        run: sudo unshare --net -- env PATH="$PATH" PNH_RENDER_SECONDS="$PNH_RENDER_SECONDS" PYTHONDONTWRITEBYTECODE=1 python3 scripts/check_repository.py
+        run: sudo unshare --net -- env PNH_RENDER_SECONDS="$PNH_RENDER_SECONDS" PYTHONDONTWRITEBYTECODE=1 "$PWD/.ci-venv/bin/python" scripts/check_repository.py

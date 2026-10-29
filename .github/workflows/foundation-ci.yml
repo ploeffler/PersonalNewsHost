@@ -20,17 +20,18 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y --no-install-recommends ffmpeg
-          python3 -m pip install -c requirements-constraints.txt -r requirements.txt Pillow ruff
+          python3 -m venv .ci-venv
+          .ci-venv/bin/python -m pip install -c requirements-constraints.txt -r requirements.txt Pillow ruff
       - name: Validate configurations and lint
         run: |
-          python3 scripts/validate_config.py config.json config.example.json config.shows.example.json
-          ruff check --select F821,F822,F823 scripts tests
+          .ci-venv/bin/python scripts/validate_config.py config.json config.example.json config.shows.example.json
+          .ci-venv/bin/ruff check --select F821,F822,F823 scripts tests
       - name: Verify OS network isolation and run offline regression
         env:
           PNH_RENDER_SECONDS: '155'
           PYTHONDONTWRITEBYTECODE: '1'
         run: |
-          sudo unshare --net -- "$(command -v python3)" - <<'PY'
+          sudo unshare --net -- "$PWD/.ci-venv/bin/python" - <<'PY'
           import socket
           with socket.socket(type=socket.SOCK_DGRAM) as client:
               try:
@@ -40,7 +41,7 @@ jobs:
               else:
                   raise SystemExit('Network isolation failed')
           PY
-          sudo unshare --net -- env PATH="$PATH" PNH_RENDER_SECONDS="$PNH_RENDER_SECONDS" PYTHONDONTWRITEBYTECODE=1 python3 scripts/check_repository.py
+          sudo unshare --net -- env PNH_RENDER_SECONDS="$PNH_RENDER_SECONDS" PYTHONDONTWRITEBYTECODE=1 "$PWD/.ci-venv/bin/python" scripts/check_repository.py
       - name: Offline JavaScript contracts and syntax
         run: |
           sudo unshare --net -- env PATH="$PATH" bash -e -c '
