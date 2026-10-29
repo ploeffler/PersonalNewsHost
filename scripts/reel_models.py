@@ -24,7 +24,8 @@ def images(args):
     import torch
     from diffusers import AutoPipelineForText2Image
     torch.set_num_threads(min(4, os.cpu_count() or 2))
-    pipe = AutoPipelineForText2Image.from_pretrained(IMAGE_MODEL, revision=IMAGE_REVISION, torch_dtype=torch.float32,
+    print('Loading pinned SD-Turbo FP16 downloads for float32 CPU inference', flush=True)
+    pipe = AutoPipelineForText2Image.from_pretrained(IMAGE_MODEL, revision=IMAGE_REVISION, variant='fp16', torch_dtype=torch.float32,
                                                    use_safetensors=True)
     pipe.to('cpu')
     pipe.enable_attention_slicing()
@@ -34,9 +35,11 @@ def images(args):
         ('studio.png', 'Professional television news studio background, no people, no text, empty presenter position, portrait composition. ' + args.studio),
     ]
     for index, (filename, prompt) in enumerate(prompts):
+        print('Generating ' + filename, flush=True)
         image = pipe(prompt=prompt[:1500], num_inference_steps=2, guidance_scale=0.0,
                      generator=torch.Generator(device='cpu').manual_seed(3407 + index)).images[0]
         image.save(args.work / filename)
+        print('Saved ' + filename, flush=True)
 
 
 def animate(args):
