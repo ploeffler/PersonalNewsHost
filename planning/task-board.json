@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 10,
+  "revision": 11,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -139,7 +139,7 @@
       "id": "T012",
       "epic": "E1",
       "title": "Duplikat- und Themenclustering",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T011"
       ],
@@ -154,17 +154,7 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A03",
-      "lease": {
-        "client": "codex-t012",
-        "token": "2153e23c93ab452c85922095deb947fc",
-        "expires_at": 1793324892.619459,
-        "files": [
-          "scripts/editorial_pipeline.py",
-          "scripts/generate.py",
-          "tests/test_editorial_pipeline.py",
-          "tests/test_news_selection.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-t012",
         "commit": "b0fa5b48139f72a4f4f6b67e8cb948fd29077637",
@@ -174,11 +164,14 @@
           "scripts/generate.py",
           "tests/test_editorial_pipeline.py",
           "tests/test_news_selection.py"
-        ]
+        ],
+        "reviewer": "human-ploeffler",
+        "decision": "Repository owner authorized release/integration with freischalten, following the established T001 procedure. Recorded on behalf of the human reviewer, not independent AI review. PR #170 merged into Full-featured-Newsoutlet; 250 tests and GitHub Render regression pass. No version release implied."
       },
       "local_work_pending": false,
       "evidence": [
-        "92b6ea35ab344c9a3c8dd9a31633e540b6f260fe"
+        "b0fa5b48139f72a4f4f6b67e8cb948fd29077637",
+        "250 local Python tests passed; Ruff and diff checks passed. GitHub Render regression SUCCESS: https://github.com/ploeffler/PersonalNewsHost/actions/runs/40961026858"
       ],
       "implementation_note": "",
       "coordination_note": "Existing pending T012 Unicode regex correction and two regression tests integrated in isolated commit; eight selection tests pass with scripts import path. Unrelated provider and configuration changes retained in original checkout."
@@ -5353,6 +5346,15 @@
       "client": "codex-t012",
       "at": 1793310769.448977,
       "note": "PR #170 integrated after human release in this conversation."
+    },
+    {
+      "operation_id": "5411b91e6be04d4c9f57f0b9097cfa1a",
+      "revision": 11,
+      "action": "complete",
+      "task": "T012",
+      "client": "human-ploeffler",
+      "at": 1793310771.5733123,
+      "note": "Repository owner authorized release/integration with freischalten, following the established T001 procedure. Recorded on behalf of the human reviewer, not independent AI review. PR #170 merged into Full-featured-Newsoutlet; 250 tests and GitHub Render regression pass. No version release implied."
     }
   ]
 }
