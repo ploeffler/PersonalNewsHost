@@ -1,0 +1,23 @@
+const {chromium}=require('playwright'),fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+(async()=>{
+const root=path.resolve(__dirname,'../docs'),browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome',headless:true,args:['--no-sandbox']});
+const page=await browser.newPage({viewport:{width:1400,height:1100}}),broadcasts=JSON.parse(fs.readFileSync(root+'/broadcasts.json')).broadcasts,latest=broadcasts.at(-1);
+await page.clock.install({time:new Date((latest.created_at+180)*1000)});
+const articles=Array.from({length:7},(_,i)=>({id:String(i),title:'Nachricht '+(i+1),text:'Nachrichtentext zur Meldung '+(i+1)+'. Dieser Text bleibt unabhängig vom abgespielten Video sichtbar.',url:'https://example.org/'+i,published_at:latest.created_at-100+i,first_seen_at:latest.created_at,feed_urls:['https://example.org/rss'],...(i<5?{broadcast_id:latest.id,broadcast_position:i+1}:{short_update_at:latest.created_at+60})}));
+articles.push({id:'expired',title:'Abgelaufen',text:'Alt',published_at:latest.created_at-86401});articles.push({id:'future',title:'Zukunft',published_at:latest.created_at+10*86400});
+articles[3].title='<img src=x onerror=alert(1)>';
+const data={articles,latest_broadcast:{id:latest.id,created_at:latest.created_at},feeds:[{url:'https://example.org/rss',name:'RSS Nachrichten'},{url:'https://example.org/live',name:'RSS Live'}]};
+const errors=[];page.on('pageerror',e=>errors.push(String(e)));
+await page.route('**/*',async route=>{const url=new URL(route.request().url());if(url.hostname==='raw.githubusercontent.com')return route.fulfill({body:fs.readFileSync(path.resolve(root,'../assets/logo.png')),contentType:'image/png'});if(url.hostname!=='news.test')return route.abort();if(url.pathname==='/news-store.json')return route.fulfill({json:data});if(/\.mp4$/.test(url.pathname))return route.fulfill({body:Buffer.from([]),contentType:'video/mp4'});const file=root+(url.pathname==='/'?'/index.html':url.pathname);if(!fs.existsSync(file))return route.fulfill({status:404,body:'Missing'});return route.fulfill({body:fs.readFileSync(file),contentType:({html:'text/html',js:'application/javascript',json:'application/json',css:'text/css'})[file.split('.').at(-1)]||'text/plain'});});
+await page.goto('https://news.test/');await page.waitForSelector('.news-card');
+assert.equal(await page.locator('.news-card').count(),7);assert.equal(await page.locator('.news-badge:not(.news-badge-update)').count(),5);assert.equal(await page.locator('.news-badge-update').count(),2);assert.equal(await page.locator('#rss-source-list li').count(),2);
+assert.equal(await page.locator('.news-card h3').first().textContent(),'Nachricht 7');
+assert.equal(await page.locator('#news-articles img').count(),0);
+assert.ok(await page.locator('.news-card').first().evaluate(el=>parseFloat(getComputedStyle(el.querySelector('h3')).fontSize)>parseFloat(getComputedStyle(el.querySelector('.news-text')).fontSize)));
+const before=await page.locator('#news-articles').textContent();await page.locator('.playlist-button').last().click();assert.equal(await page.locator('#news-articles').textContent(),before);
+assert.ok(await page.locator('#rss-source-list').evaluate(el=>el.compareDocumentPosition(document.getElementById('news-articles'))&Node.DOCUMENT_POSITION_PRECEDING));
+await page.locator('#news-overview').evaluate(el=>el.scrollIntoView({block:'start'}));await page.screenshot({path:path.join(require('node:os').tmpdir(),'pnh-news-overview.png')});
+await page.setViewportSize({width:390,height:1000});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+await page.clock.fastForward(86401000);await page.waitForFunction(()=>document.querySelectorAll('.news-card').length===0);
+assert.deepEqual(errors,[]);await browser.close();console.log('News overview browser: five broadcast/two update badges, text, RSS names, independent player, live expiry and mobile: OK');
+})().catch(e=>{console.error(e);process.exit(1)});

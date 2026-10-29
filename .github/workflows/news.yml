@@ -154,6 +154,9 @@ jobs:
           python3 scripts/generate.py
           test -s docs/latest.mp4
           ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 docs/latest.mp4 | grep -q .
+      - name: Store RSS messages from the last 24 hours
+        if: steps.schedule.outputs.due == 'true'
+        run: python3 scripts/collect_news.py
       - name: Sync public configuration for settings page
         if: steps.schedule.outputs.due == 'true'
         env:
