@@ -1,6 +1,11 @@
 name: Produce one free chat Reel
 run-name: Reel ${{ inputs.output_name }} · ${{ inputs.request_id }}
 on:
+  workflow_call:
+    inputs:
+      request:
+        type: string
+        required: true
   workflow_dispatch:
     inputs:
       station_name:
@@ -43,7 +48,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: chat-reel-${{ github.actor }}
+  group: chat-reel-worker-${{ github.actor }}
   cancel-in-progress: false
 jobs:
   reel:
@@ -63,7 +68,7 @@ jobs:
           python-version: '3.10'
       - name: Validate request and read bounded public feed
         env:
-          REEL_INPUTS: ${{ toJSON(inputs) }}
+          REEL_INPUTS: ${{ inputs.request || toJSON(inputs) }}
         run: |
           mkdir -p .reel-work
           python3 - <<'PY'

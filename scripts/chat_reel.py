@@ -19,7 +19,9 @@ except ImportError:
 
 REPOSITORY = 'ploeffler/PersonalNewsHost'
 BRANCH = 'Full-featured-Newsoutlet'
-WORKFLOW = 'chat-reel.yml'
+# This existing workflow is registered on the default branch. Dispatch its reel
+# mode at the development ref; it calls chat-reel.yml without changing main.
+WORKFLOW = 'avatar-test.yml'
 
 
 def gh(*args, body=None):
@@ -39,12 +41,10 @@ def main():
     validate_inputs(request)
     request_id = uuid.uuid4().hex
     request['request_id'] = request_id
-    request['test_mode'] = bool(request.get('test_mode', False))
-    # Explicit allowlist avoids passing arbitrary keys to GitHub workflow inputs.
-    inputs = {k: request[k] for k in ['station_name', 'show_name', 'host_description', 'studio_description', 'rss_feed', 'news_count', 'output_name', 'request_id', 'test_mode']}
-    inputs = {k: str(v).lower() if isinstance(v, bool) else str(v) for k, v in inputs.items()}
+    request.setdefault('test_mode', False)
+    request = {k: request[k] for k in ['station_name', 'show_name', 'host_description', 'studio_description', 'rss_feed', 'news_count', 'output_name', 'request_id', 'test_mode']}
     gh('api', '--method', 'POST', 'repos/' + REPOSITORY + '/actions/workflows/' + WORKFLOW + '/dispatches',
-       '--input', '-', body={'ref': BRANCH, 'inputs': inputs})
+       '--input', '-', body={'ref': BRANCH, 'inputs': {'mode': 'reel', 'request': json.dumps(request), 'request_id': request_id}})
     print('request_id=' + request_id, flush=True)
     if not args.wait:
         return

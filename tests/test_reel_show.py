@@ -57,8 +57,10 @@ class ReelTests(unittest.TestCase):
             with patch.object(sys,'argv',['chat_reel',str(path)]), patch.object(chat_reel,'gh') as gh:
                 chat_reel.main()
             body=gh.call_args.kwargs['body']
-            self.assertEqual(body['inputs']['test_mode'],'false')
-            self.assertNotIn('ignored',body['inputs'])
+            forwarded=json.loads(body['inputs']['request'])
+            self.assertIs(forwarded['test_mode'],False)
+            self.assertNotIn('ignored',forwarded)
+            self.assertEqual(body['inputs']['mode'],'reel')
             self.assertEqual(body['ref'],'Full-featured-Newsoutlet')
 
     def test_rss_atom_extractive_items_and_exact_requested_count(self):
