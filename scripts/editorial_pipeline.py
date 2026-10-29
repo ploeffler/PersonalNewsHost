@@ -39,12 +39,17 @@ def places(title):
 
 def same_event(first,second):
     a,b=words(first['title']),words(second['title'])
+    pa,pb=places(first['title']+'. '+first.get('text','')),places(second['title']+'. '+second.get('text',''))
+    if pa and pb and not pa&pb:return False
+    # Identical short headlines still need two meaningful words; generic alerts
+    # or a shared person's name alone are never sufficient event evidence.
+    short_event={'gesperrt','beschlossen','eröffnet','geschlossen','evakuiert','verletzt','abgesagt','ausgefallen'}
+    if prose(first['title']).casefold()==prose(second['title']).casefold():
+        if len(a-GENERIC)>=3 or (len(a-GENERIC)>=2 and a&short_event):return True
     overlap=len(a&b)
     if overlap<3:return False
     containment=overlap/max(1,min(len(a),len(b)));jaccard=overlap/max(1,len(a|b))
-    if containment<.78 or jaccard<.55 or SequenceMatcher(None,first['title'].casefold(),second['title'].casefold()).ratio()<.58:return False
-    pa,pb=places(first['title']+'. '+first.get('text','')),places(second['title']+'. '+second.get('text',''))
-    return not (pa and pb and not pa&pb)
+    return containment>=.78 and jaccard>=.55 and SequenceMatcher(None,first['title'].casefold(),second['title'].casefold()).ratio()>=.58
 
 
 def age(article):
