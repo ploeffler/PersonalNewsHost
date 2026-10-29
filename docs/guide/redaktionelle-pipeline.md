@@ -4,7 +4,7 @@ Der aktive Standardablauf ist: RSS erfassen → 24-Stunden-Speicher → Ereignis
 
 ## Redaktionelle Formulierung
 
-Die Standardmethode `local_extractive_multi_source` arbeitet lokal und ohne kostenpflichtige Dienste. Sie verbindet vollständige, möglichst ergänzende Sätze aus mehreren gespeicherten Quellen. Wiederholungen und Werbeteaser werden ausgelassen; Quellen werden im Text genannt. Die Zahl der Sätze richtet sich weiterhin nach `editorial.max_sentences`. Weitere Quellen einer Gruppe können berücksichtigt worden sein, ohne einen zusätzlichen Satz beizusteuern. Es handelt sich um quellengebundene, extraktive Bearbeitung, keine freie sprachmodellgestützte Umformulierung oder Übersetzung.
+Die Standardmethode `local_extractive_multi_source` arbeitet lokal und ohne kostenpflichtige Dienste. Sie verbindet vollständige, möglichst ergänzende Sätze aus mehreren gespeicherten Quellen. Wiederholungen und Werbeteaser werden ausgelassen; Die Quellenangabe steht einmal gesammelt am Ende der Meldung; jeder verwendete Herausgeber wird dort nur einmal genannt. Die Satzbelege im Prüfbericht bleiben einzeln zugeordnet. Die Zahl der Sätze richtet sich weiterhin nach `editorial.max_sentences`. Weitere Quellen einer Gruppe können berücksichtigt worden sein, ohne einen zusätzlichen Satz beizusteuern. Es handelt sich um quellengebundene, extraktive Bearbeitung, keine freie sprachmodellgestützte Umformulierung oder Übersetzung.
 
 Gruppen werden konservativ aus ähnlichen Überschriften gebildet. Alle Mitglieder müssen zueinander passen; erkennbare unterschiedliche Ortsangaben verhindern die Zusammenlegung. Die Gruppierung ist eine lexikalische Heuristik und keine vollständige semantische Ereigniserkennung.
 
