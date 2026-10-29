@@ -763,6 +763,90 @@
           }
         }
       }
+    },
+    "providers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,63}$"
+          },
+          "kind": {
+            "enum": [
+              "text_generation",
+              "text_analysis",
+              "factcheck_source",
+              "video_generation",
+              "avatar_video",
+              "tts"
+            ]
+          },
+          "adapter": {
+            "const": "mock"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "secret_name": {
+            "type": "string",
+            "pattern": "^$|^[A-Z][A-Z0-9_]*$"
+          },
+          "endpoint": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "model": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "timeout_s": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 300
+          },
+          "retries": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "rate_limit": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "cost_model": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "max_cost_eur": {
+                "type": "number",
+                "minimum": 0
+              },
+              "units": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            }
+          },
+          "priority": {
+            "type": "integer"
+          },
+          "fallback_to": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,63}$"
+          }
+        }
+      }
     }
   },
   "additionalProperties": true,
