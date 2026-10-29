@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 19,
+  "revision": 20,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -753,7 +753,7 @@
       "id": "T073",
       "epic": "E7",
       "title": "Datenschutz und Sicherheit",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T002"
       ],
@@ -787,7 +787,25 @@
           "tests/test_security_checks.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-t073",
+        "commit": "9cd80fc51bb9c3d5f22800e1ffeeadf261aff6e7",
+        "checks": "265 offline Python tests, JS contracts, Ruff and diff checks pass; GitHub Foundation https://github.com/ploeffler/PersonalNewsHost/actions/runs/40967351687 and Render https://github.com/ploeffler/PersonalNewsHost/actions/runs/40967351448 SUCCESS.",
+        "files": [
+          ".github/workflows/",
+          "docs/datenschutz.html",
+          "docs/guide/datenschutz.md",
+          "docs/impressum.html",
+          "docs/index.html",
+          "planning/action-pins.json",
+          "requirements-constraints.txt",
+          "requirements.txt",
+          "scripts/check_repository.py",
+          "scripts/generate.py",
+          "scripts/security_checks.py",
+          "tests/test_security_checks.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [
         "c50178eb5b2ddcd6cf420ebfcb90103f6f03379c"
@@ -5464,6 +5482,15 @@
       "client": "codex-t073",
       "at": 1793313503.1023014,
       "note": "Implementation PR https://github.com/ploeffler/PersonalNewsHost/pull/172 head 05daff43fb4ace56850aa0eaa4b2af82c86f8ddc. 265 offline Python tests, three JS contract suites, Ruff and diff checks pass; 36 upload gates structurally validated. GitHub CI and independent approval pending."
+    },
+    {
+      "operation_id": "177f2610920847d3abf5b0e8a4466956",
+      "revision": 20,
+      "action": "submit",
+      "task": "T073",
+      "client": "codex-t073",
+      "at": 1793313692.886379,
+      "note": "PR #172 merged after explicit human independent review and release in this conversation."
     }
   ]
 }
