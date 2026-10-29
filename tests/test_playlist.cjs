@@ -13,3 +13,6 @@ assert.equal(asset('broadcasts/../../config.json','broadcast'),false);
 assert.equal(asset('short-update-audio/'+'a'.repeat(24)+'.wav','update'),true);
 assert.equal(asset('short-update-audio/not-an-id.wav','update'),false);
 console.log('Playlist ordering, retention, media-path safety: OK');
+
+assert.equal(asset('short-update-video/'+'a'.repeat(24)+'.mp4','update-video'),true);
+assert.equal(asset('https://evil.test/short.mp4','update-video'),false);

@@ -1,7 +1,7 @@
 (function (root) {
   'use strict';
   const asset = (path, kind) => typeof path === 'string' && (kind === 'broadcast'
-    ? /^broadcasts\/\d{8}T\d{6}Z\.(mp4|vtt|srt|txt)$/ : /^short-update-audio\/[a-f0-9]{24}\.wav$/).test(path);
+    ? /^broadcasts\/\d{8}T\d{6}Z\.(mp4|vtt|srt|txt)$/ : kind === 'update-video' ? /^short-update-video\/[a-f0-9]{24}\.mp4$/ : /^short-update-audio\/[a-f0-9]{24}\.wav$/).test(path);
   function buildItems(broadcasts, updates, now) {
     const longs = broadcasts.filter(b => b && Number.isFinite(b.created_at) && b.created_at <= now && asset(b.video, 'broadcast'))
       .sort((a,b) => a.created_at-b.created_at).slice(-2);
@@ -39,25 +39,26 @@
     document.getElementById('playing-title').textContent=item.title;
     document.getElementById('bulletin-timestamp').textContent='Stand: '+date(item.created_at);
     const isLong=item.kind==='broadcast';
+    const hasVideo=!isLong && asset(item.video,'update-video');
     const hasAudio=!isLong && asset(item.audio,'update');
-    video.hidden=!isLong;audio.hidden=!hasAudio;text.hidden=isLong;
+    video.hidden=!(isLong || hasVideo);audio.hidden=!hasAudio || hasVideo;text.hidden=isLong || hasVideo;
     const transcript=document.getElementById('bulletin-transcript');
     const subtitles=document.getElementById('bulletin-subtitles');
     if (transcript) {transcript.hidden=!isLong || !asset(item.transcript,'broadcast');if(!transcript.hidden) transcript.href=item.transcript;}
     if (subtitles) {subtitles.hidden=!isLong || !asset(item.subtitle_download,'broadcast');if(!subtitles.hidden) subtitles.href=item.subtitle_download;}
-    document.getElementById('playing-kind').textContent=isLong?'Sendung · Video':hasAudio?'Kurzupdate · Audio':'Kurzupdate · Text';
-    if (isLong) {
+    document.getElementById('playing-kind').textContent=isLong?'Sendung · Video':hasVideo?'Kurzupdate · Video':hasAudio?'Kurzupdate · Audio':'Kurzupdate · Text';
+    if (isLong || hasVideo) {
       video.querySelectorAll('track').forEach(track=>track.remove());
       video.src=item.video;
-      if(asset(item.subtitles,'broadcast')) {const track=document.createElement('track');track.kind='subtitles';track.src=item.subtitles;track.srclang='de';track.label='Deutsch';track.default=true;video.append(track);}
-      sourceList(item.sources);video.load();
+      if(isLong && asset(item.subtitles,'broadcast')) {const track=document.createElement('track');track.kind='subtitles';track.src=item.subtitles;track.srclang='de';track.label='Deutsch';track.default=true;video.append(track);}
+      sourceList(isLong ? item.sources : [{url:item.url,title:item.source || item.title}]);video.load();
     } else {
       text.textContent=item.text || item.title;
       audio.removeAttribute('src');if(hasAudio){audio.src=item.audio;audio.load();}
       sourceList([{url:item.url,title:item.source || item.title}]);
     }
     for (const button of list.querySelectorAll('button'))button.setAttribute('aria-current',String(button.dataset.key===selected));
-    if(play && (isLong || hasAudio))(isLong?video:audio).play().catch(()=>{status.textContent='Zum Abspielen bitte die Wiedergabetaste drücken.';});
+    if(play && (isLong || hasVideo || hasAudio))((isLong || hasVideo)?video:audio).play().catch(()=>{status.textContent='Zum Abspielen bitte die Wiedergabetaste drücken.';});
   }
   function render() {
     const next=buildItems(broadcasts,updates,Date.now()/1000), nextSignature=JSON.stringify(next);
@@ -69,8 +70,8 @@
     for(const item of items){
       const li=document.createElement('li');li.className='playlist-row';
       const button=document.createElement('button');button.type='button';button.className='playlist-button';button.dataset.key=key(item);button.setAttribute('aria-current',String(selected===key(item)));
-      const preview=document.createElement('span');preview.className='playlist-preview';preview.setAttribute('aria-hidden','true');preview.textContent=item.kind==='broadcast'?'▶':asset(item.audio,'update')?'♪':'≡';
-      const type=document.createElement('small');type.textContent=item.kind==='broadcast'?'VIDEO':asset(item.audio,'update')?'AUDIO':'TEXT';preview.append(type);
+      const preview=document.createElement('span');preview.className='playlist-preview';preview.setAttribute('aria-hidden','true');preview.textContent=(item.kind==='broadcast' || asset(item.video,'update-video'))?'▶':asset(item.audio,'update')?'♪':'≡';
+      const type=document.createElement('small');type.textContent=(item.kind==='broadcast' || asset(item.video,'update-video'))?'VIDEO':asset(item.audio,'update')?'AUDIO':'TEXT';preview.append(type);
       const copy=document.createElement('span');copy.className='playlist-copy';
       for(const [cls,value] of [['playlist-label',item.label],['playlist-title',item.title],['playlist-time',date(item.created_at)]]){const el=document.createElement('span');el.className=cls;el.textContent=value;copy.append(el);}
       button.append(preview,copy);button.addEventListener('click',()=>{status.textContent='';select(item,true);});li.append(button);list.append(li);

@@ -180,8 +180,8 @@ code{color:#a6e8fa;background:#21354d;padding:2px 5px;overflow-wrap:anywhere}
 <p>PNG oder JPEG, maximal 4 MB je Bild. Die Dateien werden öffentlich im GitHub-Repository gespeichert. Keine privaten Fotos oder Zugangsdaten hochladen.</p>
 <label for="upload_presenter">Moderator-Porträt</label><input id="upload_presenter" type="file" accept="image/png,image/jpeg,.png,.jpg,.jpeg">
 <label for="upload_background">Studiohintergrund</label><input id="upload_background" type="file" accept="image/png,image/jpeg,.png,.jpg,.jpeg">
-<label for="station_logo">Senderlogo: Bildpfad im Repository (optional)</label><input id="station_logo" placeholder="assets/logo.png">
-<small>Standard: assets/logo.png. Zum Ausschalten des Senderlogos den Bildpfad vollständig leeren und die Konfiguration speichern.</small>
+<label for="station_logo">Senderlogo: Bildpfad im Repository (optional)</label><input id="station_logo" placeholder="assets/logo-video.png">
+<small>Standard: assets/logo-video.png (transparenter Hintergrund). Zum Ausschalten des Senderlogos den Bildpfad vollständig leeren und die Konfiguration speichern.</small>
 <label for="upload_station_logo">Senderlogo hochladen</label><input id="upload_station_logo" type="file" accept="image/png,image/jpeg,.png,.jpg,.jpeg">
 <small>Oben rechts während der gesamten Sendung, maximal 160×90 Pixel mit 30 Pixel Rand. Transparentes PNG empfohlen, mindestens 32×16 Pixel. Zum Deaktivieren den Bildpfad leeren. Nach dem Upload die Konfiguration speichern.</small>
 <label><input id="confirm_upload" type="checkbox" style="width:auto"> Ich bestätige, dass die Bilder öffentlich auf GitHub gespeichert werden dürfen.</label>
@@ -386,7 +386,7 @@ function fill(c){
  $("v2_allow_paid").checked=v.allow_paid===true;
  refreshResidency();
  for(const key of fields)$(key).value=c[key]??(key==="voice_pitch_semitones"?0:"");
- $("station_logo").value=c.station_logo??"assets/logo.png";
+ $("station_logo").value=c.station_logo??"assets/logo-video.png";
  $("feeds").value=(c.feeds||[]).join("\n");
   $("editorial_style").value=c.editorial?.style||"classic";
   $("editorial_sentences").value=c.editorial?.max_sentences??2;
