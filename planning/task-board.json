@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 11,
+  "revision": 12,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -710,7 +710,7 @@
       "id": "T072",
       "epic": "E7",
       "title": "Testabdeckung und CI",
-      "status": "in_progress",
+      "status": "todo",
       "depends_on": [
         "T002"
       ],
@@ -727,10 +727,12 @@
       "package": "A01",
       "lease": null,
       "review": null,
-      "local_work_pending": true,
-      "evidence": [],
+      "local_work_pending": false,
+      "evidence": [
+        "b9381bb8cf2012751396af875c0e85ce3f93e936"
+      ],
       "implementation_note": "",
-      "coordination_note": "Uncommitted local 0.1 work must be reconciled before another client claims this task."
+      "coordination_note": "Pending repository checker and two tests integrated as isolated baseline. Local foundation workflow remains an unpublished reference; other 0.1 changes excluded."
     },
     {
       "id": "T073",
@@ -5355,6 +5357,15 @@
       "client": "human-ploeffler",
       "at": 1793310771.5733123,
       "note": "Repository owner authorized release/integration with freischalten, following the established T001 procedure. Recorded on behalf of the human reviewer, not independent AI review. PR #170 merged into Full-featured-Newsoutlet; 250 tests and GitHub Render regression pass. No version release implied."
+    },
+    {
+      "operation_id": "df269a17d64d484c9cba250304e344bc",
+      "revision": 12,
+      "action": "reconcile",
+      "task": "T072",
+      "client": "codex-t072",
+      "at": 1793311038.9768348,
+      "note": "Pending repository checker and two tests integrated as isolated baseline. Local foundation workflow remains an unpublished reference; other 0.1 changes excluded."
     }
   ]
 }
