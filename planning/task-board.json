@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 29,
+  "revision": 30,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4468,7 +4468,7 @@
       "id": "T900",
       "epic": "E32",
       "title": "Kostenlose einzelne KI-Reel-Sendung per Chat-Action",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T100"
       ],
@@ -4485,7 +4485,22 @@
       "source": "user-chat-2026-10-30",
       "version": "0.1",
       "package": "A00",
-      "lease": null,
+      "lease": {
+        "client": "codex-reel",
+        "token": "885d860b5ac2400aada48f07762c2690",
+        "expires_at": 1793331477.7292583,
+        "files": [
+          ".github/workflows/avatar-test.yml",
+          ".github/workflows/chat-reel.yml",
+          "requirements-reel-avatar.txt",
+          "requirements-reel-image.txt",
+          "scripts/chat_reel.py",
+          "scripts/reel_models.py",
+          "scripts/reel_show.py",
+          "scripts/setup_reel_runtime.py",
+          "tests/test_reel_show.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -5592,6 +5607,15 @@
       "client": "codex-reel",
       "at": 1793317075.4628763,
       "note": "Extend declared scope for existing registered avatar entry point; preserve isolated implementation."
+    },
+    {
+      "operation_id": "72b96d07b1924fb687a995c2d713e1f9",
+      "revision": 30,
+      "action": "claim",
+      "task": "T900",
+      "client": "codex-reel",
+      "at": 1793317077.7292583,
+      "note": ""
     }
   ]
 }
