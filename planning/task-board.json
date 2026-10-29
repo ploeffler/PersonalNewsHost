@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 1,
+  "revision": 2,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -8,7 +8,7 @@
       "id": "T001",
       "epic": "E0",
       "title": "Code- und Workflow-Inventar erstellen",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [],
       "instructions": [
         "Lies README.md, config.json, config.example.json, alle Dateien in scripts/, tests/ und .github/workflows/.",
@@ -22,7 +22,14 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A00",
-      "lease": null,
+      "lease": {
+        "client": "codex-t001",
+        "token": "5d6de00d6e3a4f8ba47e85cf127becb2",
+        "expires_at": 1793323592.0477993,
+        "files": [
+          "docs/guide/architektur-ist.md"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [
@@ -5241,6 +5248,15 @@
       "client": "codex-t001",
       "at": 1793309189.8574367,
       "note": "Local T001 draft reviewed and preserved in original checkout; misleading completion appendix replaced by explicit incomplete baseline. Remaining local 0.1 work excluded. Continue inventory through task PR targeting development branch."
+    },
+    {
+      "operation_id": "46d45a4639184b138701ff36d4de33b6",
+      "revision": 2,
+      "action": "claim",
+      "task": "T001",
+      "client": "codex-t001",
+      "at": 1793309192.0477993,
+      "note": ""
     }
   ]
 }
