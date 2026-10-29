@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 0,
+  "revision": 1,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -8,7 +8,7 @@
       "id": "T001",
       "epic": "E0",
       "title": "Code- und Workflow-Inventar erstellen",
-      "status": "in_progress",
+      "status": "todo",
       "depends_on": [],
       "instructions": [
         "Lies README.md, config.json, config.example.json, alle Dateien in scripts/, tests/ und .github/workflows/.",
@@ -24,12 +24,13 @@
       "package": "A00",
       "lease": null,
       "review": null,
-      "local_work_pending": true,
+      "local_work_pending": false,
       "evidence": [
-        "docs/guide/architektur-ist.md"
+        "docs/guide/architektur-ist.md",
+        "bfd1fce13a274c4599e8570d08ed1f8092e01cf5"
       ],
       "implementation_note": "",
-      "coordination_note": "Uncommitted local 0.1 work must be reconciled before another client claims this task."
+      "coordination_note": "Local T001 draft reviewed and preserved in original checkout; misleading completion appendix replaced by explicit incomplete baseline. Remaining local 0.1 work excluded. Continue inventory through task PR targeting development branch."
     },
     {
       "id": "T002",
@@ -5231,5 +5232,15 @@
       "T081"
     ]
   ],
-  "events": []
+  "events": [
+    {
+      "operation_id": "bd9611b3de7649babbc8929c4e48e24d",
+      "revision": 1,
+      "action": "reconcile",
+      "task": "T001",
+      "client": "codex-t001",
+      "at": 1793309189.8574367,
+      "note": "Local T001 draft reviewed and preserved in original checkout; misleading completion appendix replaced by explicit incomplete baseline. Remaining local 0.1 work excluded. Continue inventory through task PR targeting development branch."
+    }
+  ]
 }
