@@ -1,14 +1,219 @@
 {
   "version": 1,
   "mode": "preview",
-  "generated_at": 1793273883.276073,
-  "source_updated_at": 1793272951.123928,
-  "source_digest": "b41cb40e78a8cd0b812976f2ea4490ecf64a41f75ed4737fe08aa0fda29c31f6",
+  "generated_at": 1793274252.260888,
+  "source_updated_at": 1793274250.361281,
+  "source_digest": "2d7e66edf677f247971c128a7c6c0a6abf78cdf15e6f4efd840bfeef4b83a8f0",
   "scope": "stored_source_support",
   "method": "local_extractive_multi_source",
   "independent_fact_check": false,
   "max_sentences": 2,
   "sources": {
+    "6347670cfbd0a6c53cfae30f": {
+      "id": "6347670cfbd0a6c53cfae30f",
+      "title": "Frauenleichen in Kühltruhen: Anklage gegen Brüder",
+      "text": "Der Leichenfund einer Frau (34) und deren Tochter (10) in Kühltruhen in Innsbruck Ende 2025 sorgte für Entsetzen in Österreich. Ein Brüderpaar saß seitdem in Untersuchungshaft. Sie werden nun wegen Mordes und anderer Delikte angeklagt.",
+      "url": "https://www.krone.at/4353867",
+      "published_at": 1793274211.0,
+      "first_seen_at": 1793274250.361281,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4310730/v496dc6/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4310730/v496dc6/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4310730/v496dc6/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4310730/v496dc6/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "publisher": "krone.at"
+    },
+    "f6a87c2889a44de9d5c86189": {
+      "id": "f6a87c2889a44de9d5c86189",
+      "title": "Ranghöchster Stratege der US-Armee überraschend entlassen",
+      "text": "",
+      "url": "https://orf.at/stories/3446497/",
+      "published_at": 1793273856.0,
+      "first_seen_at": 1793274250.361281,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "publisher": "orf.at"
+    },
+    "6924e7b177af46f8bd631362": {
+      "id": "6924e7b177af46f8bd631362",
+      "title": "Das Neujahrskonzert 2027 ehrt besonders Josef Strauß zum 200. Geburtstag",
+      "text": "Vier Stücke vom Bruder des Walzerkönigs feiern am 1. Jänner ihre Neujahrskonzert-Premiere, darunter \"Delirien. Walzer\" und \"Jocus-Polka. Polka schnell\"",
+      "url": "https://www.derstandard.at/story/3000000346519/das-neujahrskonzert-2027-ehrt-besonders-josef-strauss-zum-200-geburtstag?ref=rss",
+      "published_at": 1793273826.0,
+      "first_seen_at": 1793274250.361281,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/9XW0pQ/rs:fill:150:0/plain/lido-images/2026/10/29/75887318-565b-4324-8666-b029630c202c.png",
+          "kind": "image"
+        }
+      ],
+      "publisher": "derstandard.at"
+    },
+    "5d71e2709bb73712d65686e7": {
+      "id": "5d71e2709bb73712d65686e7",
+      "title": "Gigachat: Russland will Kampfjets von der KI entwerfen lassen",
+      "text": "Das KI-Modell stammt von der russischen Staatsbank und läuft auf Chips aus China. Der Name greift wohl nicht zufällig auf ein Meme der Netzkultur zurück",
+      "url": "https://www.derstandard.at/story/3000000346365/gigachat-russland-will-kampfjets-von-der-ki-entwerfen-lassen?ref=rss",
+      "published_at": 1793273815.0,
+      "first_seen_at": 1793274250.361281,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/jMb2wQ/rs:fill:150:0/plain/lido-images/2026/10/29/7bab6fb8-91d5-46ac-b3fb-534359bf4aff.jpg",
+          "kind": "image"
+        }
+      ],
+      "publisher": "derstandard.at"
+    },
+    "5057ad8fd6182a426d060791": {
+      "id": "5057ad8fd6182a426d060791",
+      "title": "Chinesen ziehen jetzt Ziegel statt Haustieren groß",
+      "text": "Wer sich ein Haustier anschafft, übernimmt Verantwortung. Doch junge Erwachsene in China entdecken gerade eine ungewöhnliche Alternative, die kaum Geld kostet und fast keine Arbeit macht. Sie ziehen Ziegelsteine groß – und finden darin offenbar genau das, was ihnen im stressigen Alltag fehlt.",
+      "url": "https://www.krone.at/4353732",
+      "published_at": 1793273619.0,
+      "first_seen_at": 1793274250.361281,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4353741/vaf2948/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4353741/vaf2948/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4353741/vaf2948/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4353741/vaf2948/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "publisher": "krone.at"
+    },
+    "d07ab210f399c995c2a8ea46": {
+      "id": "d07ab210f399c995c2a8ea46",
+      "title": "Wacker gegen Wattens war immer etwas Besonderes",
+      "text": "Das Duell der Tiroler Top-Klubs war stets brisant – doch 2026 knackte man nun den Besucherrekord. Der 6:5-Sieg der WSG Tirol nach Elfmeterschießen war überhaupt der erste Cupsieg der Wattener gegen den großen Bruder. Auch die letzten fünf Profi-Duell in der 2. Liga waren an Wacker gegangen.",
+      "url": "https://www.krone.at/4353749",
+      "published_at": 1793273400.0,
+      "first_seen_at": 1793274250.361281,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4353760/vbba7cd/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4353760/vbba7cd/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4353760/vbba7cd/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4353760/vbba7cd/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "publisher": "krone.at"
+    },
+    "da57a55bf6cdd152384087ba": {
+      "id": "da57a55bf6cdd152384087ba",
+      "title": "Wahl „gestohlen“? Behörden widersprechen Netanyahu",
+      "text": "Ungewöhnlich stark haben die arabischen Parteien bei der Parlamentswahl in Israel am Dienstag abgeschnitten. Ein Grund für Premier Benjamin Netanyahu und dessen Partei Likud, zu behaupten, die Wahl sei „gestohlen“ worden. Die Behörden stellen aber klar: Für Betrug gibt es keine Beweise.",
+      "url": "https://www.krone.at/4353833",
+      "published_at": 1793273215.0,
+      "first_seen_at": 1793274250.361281,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4353849/va787b9/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4353849/va787b9/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4353849/va787b9/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4353849/va787b9/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "publisher": "krone.at"
+    },
+    "e5dd93c1694d7d8e889aa2a8": {
+      "id": "e5dd93c1694d7d8e889aa2a8",
+      "title": "Das teuflische Duo Twin Temple: Raus aus der Wäsche und rein in die Orgie!",
+      "text": "Aus den Fifties und Sixties herüberwehender \"satanischer Doo-Wop\" aus den USA lässt Nostalgie aufkommen – und norwegische Kirchenverbrenner alt aussehen",
+      "url": "https://www.derstandard.at/story/3000000346415/das-teuflische-duo-twin-temple-raus-aus-der-waesche-und-rein-in-die-orgie?ref=rss",
+      "published_at": 1793273208.0,
+      "first_seen_at": 1793274250.361281,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/4EcW6g/rs:fill:150:0/plain/lido-images/2026/10/28/dbbf7198-335d-4216-b99c-acc201dbe2dc.jpg",
+          "kind": "image"
+        }
+      ],
+      "publisher": "derstandard.at"
+    },
+    "e6169bfeb2bcf4d1fc4a6ded": {
+      "id": "e6169bfeb2bcf4d1fc4a6ded",
+      "title": "Lieber Jeansrock, es ist aus mit uns. Und jetzt?",
+      "text": "Unsere Autorin will alte Kleidung loswerden. Doch wohin damit? Idealerweise sollte sie noch getragen oder zumindest recycelt werden. Wie landet sie nicht auf Landstrichen im fernen Ausland? Eine Suche nach dem besten Weg",
+      "url": "https://www.derstandard.at/story/3000000344552/lieber-jeansrock-es-ist-aus-mit-uns-und-jetzt?ref=rss",
+      "published_at": 1793273037.0,
+      "first_seen_at": 1793274250.361281,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/6FYIvw/rs:fill:150:0/plain/lido-images/2026/10/28/0776e70d-13f0-48d3-841d-d11d000abb23.jpg",
+          "kind": "image"
+        }
+      ],
+      "publisher": "derstandard.at"
+    },
     "f947f09b42aa22bbde35bc98": {
       "id": "f947f09b42aa22bbde35bc98",
       "title": "Knappe Mehrheit in Österreich kann sich assistierten Suizid vorstellen",
@@ -5202,15 +5407,15 @@
       ],
       "media": [
         {
-          "url": "https://img.kleinezeitung.at/public/incoming/vae3fz-ff-pruggern1jpg/alternates/BASE_LANDSCAPE/FF%20Pruggern1.jpg",
+          "url": "https://img.kleinezeitung.at/public/incoming/msq8b9-ff-pruggern1jpg/alternates/BASE_LANDSCAPE/FF%20Pruggern1.jpg",
           "kind": "image"
         },
         {
-          "url": "https://img.kleinezeitung.at/public/incoming/vae3fz-ff-pruggern1jpg/alternates/BASE_LANDSCAPE/FF%20Pruggern1.jpg",
+          "url": "https://img.kleinezeitung.at/public/incoming/msq8b9-ff-pruggern1jpg/alternates/BASE_LANDSCAPE/FF%20Pruggern1.jpg",
           "kind": "image"
         },
         {
-          "url": "https://img.kleinezeitung.at/public/incoming/vae3fz-ff-pruggern1jpg/alternates/BASE_LANDSCAPE/FF%20Pruggern1.jpg",
+          "url": "https://img.kleinezeitung.at/public/incoming/msq8b9-ff-pruggern1jpg/alternates/BASE_LANDSCAPE/FF%20Pruggern1.jpg",
           "kind": "image"
         }
       ],
@@ -6842,6 +7047,492 @@
   },
   "groups": [
     {
+      "id": "353dac3dc2d0cca0a138531a",
+      "member_ids": [
+        "6347670cfbd0a6c53cfae30f"
+      ],
+      "newest_at": 1793274211.0,
+      "draft": {
+        "headline": "Frauenleichen in Kühltruhen: Anklage gegen Brüder",
+        "headline_source_id": "6347670cfbd0a6c53cfae30f",
+        "claims": [
+          {
+            "text": "Der Leichenfund einer Frau (34) und deren Tochter (10) in Kühltruhen in Innsbruck Ende 2025 sorgte für Entsetzen in Österreich.",
+            "source_id": "6347670cfbd0a6c53cfae30f",
+            "field": "text",
+            "quote": "Der Leichenfund einer Frau (34) und deren Tochter (10) in Kühltruhen in Innsbruck Ende 2025 sorgte für Entsetzen in Österreich."
+          },
+          {
+            "text": "Ein Brüderpaar saß seitdem in Untersuchungshaft.",
+            "source_id": "6347670cfbd0a6c53cfae30f",
+            "field": "text",
+            "quote": "Ein Brüderpaar saß seitdem in Untersuchungshaft."
+          }
+        ],
+        "text": "Frauenleichen in Kühltruhen: Anklage gegen Brüder.\nkrone.at berichtet: Der Leichenfund einer Frau (34) und deren Tochter (10) in Kühltruhen in Innsbruck Ende 2025 sorgte für Entsetzen in Österreich.\nkrone.at berichtet: Ein Brüderpaar saß seitdem in Untersuchungshaft."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "6347670cfbd0a6c53cfae30f",
+            "supported": true,
+            "quote": "Der Leichenfund einer Frau (34) und deren Tochter (10) in Kühltruhen in Innsbruck Ende 2025 sorgte für Entsetzen in Österreich."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "6347670cfbd0a6c53cfae30f",
+            "supported": true,
+            "quote": "Ein Brüderpaar saß seitdem in Untersuchungshaft."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "6347670cfbd0a6c53cfae30f"
+      ]
+    },
+    {
+      "id": "d3d6e4b6bd417e9af72f81e7",
+      "member_ids": [
+        "f6a87c2889a44de9d5c86189"
+      ],
+      "newest_at": 1793273856.0,
+      "draft": {
+        "headline": "Ranghöchster Stratege der US-Armee überraschend entlassen",
+        "headline_source_id": "f6a87c2889a44de9d5c86189",
+        "claims": [],
+        "text": "Ranghöchster Stratege der US-Armee überraschend entlassen.\n"
+      },
+      "verification": {
+        "status": "held",
+        "scope": "stored_source_support",
+        "issues": [
+          "no_supported_prose"
+        ],
+        "claims": [],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "held",
+          "issues": [
+            "no_supported_prose"
+          ]
+        }
+      ],
+      "selected": false,
+      "used_source_ids": []
+    },
+    {
+      "id": "7aee6bb880997f64fc467592",
+      "member_ids": [
+        "6924e7b177af46f8bd631362"
+      ],
+      "newest_at": 1793273826.0,
+      "draft": {
+        "headline": "Das Neujahrskonzert 2027 ehrt besonders Josef Strauß zum 200. Geburtstag",
+        "headline_source_id": "6924e7b177af46f8bd631362",
+        "claims": [
+          {
+            "text": "Vier Stücke vom Bruder des Walzerkönigs feiern am 1. Jänner ihre Neujahrskonzert-Premiere, darunter \"Delirien.",
+            "source_id": "6924e7b177af46f8bd631362",
+            "field": "text",
+            "quote": "Vier Stücke vom Bruder des Walzerkönigs feiern am 1. Jänner ihre Neujahrskonzert-Premiere, darunter \"Delirien."
+          },
+          {
+            "text": "Walzer\" und \"Jocus-Polka.",
+            "source_id": "6924e7b177af46f8bd631362",
+            "field": "text",
+            "quote": "Walzer\" und \"Jocus-Polka."
+          }
+        ],
+        "text": "Das Neujahrskonzert 2027 ehrt besonders Josef Strauß zum 200. Geburtstag.\nderstandard.at berichtet: Vier Stücke vom Bruder des Walzerkönigs feiern am 1. Jänner ihre Neujahrskonzert-Premiere, darunter \"Delirien.\nderstandard.at berichtet: Walzer\" und \"Jocus-Polka."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "6924e7b177af46f8bd631362",
+            "supported": true,
+            "quote": "Vier Stücke vom Bruder des Walzerkönigs feiern am 1. Jänner ihre Neujahrskonzert-Premiere, darunter \"Delirien."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "6924e7b177af46f8bd631362",
+            "supported": true,
+            "quote": "Walzer\" und \"Jocus-Polka."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "6924e7b177af46f8bd631362"
+      ]
+    },
+    {
+      "id": "925092a4b95f699c925f707f",
+      "member_ids": [
+        "5d71e2709bb73712d65686e7"
+      ],
+      "newest_at": 1793273815.0,
+      "draft": {
+        "headline": "Gigachat: Russland will Kampfjets von der KI entwerfen lassen",
+        "headline_source_id": "5d71e2709bb73712d65686e7",
+        "claims": [
+          {
+            "text": "Das KI-Modell stammt von der russischen Staatsbank und läuft auf Chips aus China.",
+            "source_id": "5d71e2709bb73712d65686e7",
+            "field": "text",
+            "quote": "Das KI-Modell stammt von der russischen Staatsbank und läuft auf Chips aus China."
+          },
+          {
+            "text": "Der Name greift wohl nicht zufällig auf ein Meme der Netzkultur zurück.",
+            "source_id": "5d71e2709bb73712d65686e7",
+            "field": "text",
+            "quote": "Der Name greift wohl nicht zufällig auf ein Meme der Netzkultur zurück."
+          }
+        ],
+        "text": "Gigachat: Russland will Kampfjets von der KI entwerfen lassen.\nderstandard.at berichtet: Das KI-Modell stammt von der russischen Staatsbank und läuft auf Chips aus China.\nderstandard.at berichtet: Der Name greift wohl nicht zufällig auf ein Meme der Netzkultur zurück."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "5d71e2709bb73712d65686e7",
+            "supported": true,
+            "quote": "Das KI-Modell stammt von der russischen Staatsbank und läuft auf Chips aus China."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "5d71e2709bb73712d65686e7",
+            "supported": true,
+            "quote": "Der Name greift wohl nicht zufällig auf ein Meme der Netzkultur zurück."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "5d71e2709bb73712d65686e7"
+      ]
+    },
+    {
+      "id": "f6bf50d2a35bb37290d55e28",
+      "member_ids": [
+        "5057ad8fd6182a426d060791"
+      ],
+      "newest_at": 1793273619.0,
+      "draft": {
+        "headline": "Chinesen ziehen jetzt Ziegel statt Haustieren groß",
+        "headline_source_id": "5057ad8fd6182a426d060791",
+        "claims": [
+          {
+            "text": "Wer sich ein Haustier anschafft, übernimmt Verantwortung.",
+            "source_id": "5057ad8fd6182a426d060791",
+            "field": "text",
+            "quote": "Wer sich ein Haustier anschafft, übernimmt Verantwortung."
+          },
+          {
+            "text": "Doch junge Erwachsene in China entdecken gerade eine ungewöhnliche Alternative, die kaum Geld kostet und fast keine Arbeit macht.",
+            "source_id": "5057ad8fd6182a426d060791",
+            "field": "text",
+            "quote": "Doch junge Erwachsene in China entdecken gerade eine ungewöhnliche Alternative, die kaum Geld kostet und fast keine Arbeit macht."
+          }
+        ],
+        "text": "Chinesen ziehen jetzt Ziegel statt Haustieren groß.\nkrone.at berichtet: Wer sich ein Haustier anschafft, übernimmt Verantwortung.\nkrone.at berichtet: Doch junge Erwachsene in China entdecken gerade eine ungewöhnliche Alternative, die kaum Geld kostet und fast keine Arbeit macht."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "5057ad8fd6182a426d060791",
+            "supported": true,
+            "quote": "Wer sich ein Haustier anschafft, übernimmt Verantwortung."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "5057ad8fd6182a426d060791",
+            "supported": true,
+            "quote": "Doch junge Erwachsene in China entdecken gerade eine ungewöhnliche Alternative, die kaum Geld kostet und fast keine Arbeit macht."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "5057ad8fd6182a426d060791"
+      ]
+    },
+    {
+      "id": "2194a83a3246d76f3c9a0eac",
+      "member_ids": [
+        "d07ab210f399c995c2a8ea46"
+      ],
+      "newest_at": 1793273400.0,
+      "draft": {
+        "headline": "Wacker gegen Wattens war immer etwas Besonderes",
+        "headline_source_id": "d07ab210f399c995c2a8ea46",
+        "claims": [
+          {
+            "text": "Das Duell der Tiroler Top-Klubs war stets brisant – doch 2026 knackte man nun den Besucherrekord.",
+            "source_id": "d07ab210f399c995c2a8ea46",
+            "field": "text",
+            "quote": "Das Duell der Tiroler Top-Klubs war stets brisant – doch 2026 knackte man nun den Besucherrekord."
+          },
+          {
+            "text": "Der 6:5-Sieg der WSG Tirol nach Elfmeterschießen war überhaupt der erste Cupsieg der Wattener gegen den großen Bruder.",
+            "source_id": "d07ab210f399c995c2a8ea46",
+            "field": "text",
+            "quote": "Der 6:5-Sieg der WSG Tirol nach Elfmeterschießen war überhaupt der erste Cupsieg der Wattener gegen den großen Bruder."
+          }
+        ],
+        "text": "Wacker gegen Wattens war immer etwas Besonderes.\nkrone.at berichtet: Das Duell der Tiroler Top-Klubs war stets brisant – doch 2026 knackte man nun den Besucherrekord.\nkrone.at berichtet: Der 6:5-Sieg der WSG Tirol nach Elfmeterschießen war überhaupt der erste Cupsieg der Wattener gegen den großen Bruder."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "d07ab210f399c995c2a8ea46",
+            "supported": true,
+            "quote": "Das Duell der Tiroler Top-Klubs war stets brisant – doch 2026 knackte man nun den Besucherrekord."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "d07ab210f399c995c2a8ea46",
+            "supported": true,
+            "quote": "Der 6:5-Sieg der WSG Tirol nach Elfmeterschießen war überhaupt der erste Cupsieg der Wattener gegen den großen Bruder."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "d07ab210f399c995c2a8ea46"
+      ]
+    },
+    {
+      "id": "44ecbc61a0783a27e4d7172f",
+      "member_ids": [
+        "da57a55bf6cdd152384087ba"
+      ],
+      "newest_at": 1793273215.0,
+      "draft": {
+        "headline": "Wahl „gestohlen“? Behörden widersprechen Netanyahu",
+        "headline_source_id": "da57a55bf6cdd152384087ba",
+        "claims": [
+          {
+            "text": "Ungewöhnlich stark haben die arabischen Parteien bei der Parlamentswahl in Israel am Dienstag abgeschnitten.",
+            "source_id": "da57a55bf6cdd152384087ba",
+            "field": "text",
+            "quote": "Ungewöhnlich stark haben die arabischen Parteien bei der Parlamentswahl in Israel am Dienstag abgeschnitten."
+          },
+          {
+            "text": "Ein Grund für Premier Benjamin Netanyahu und dessen Partei Likud, zu behaupten, die Wahl sei „gestohlen“ worden.",
+            "source_id": "da57a55bf6cdd152384087ba",
+            "field": "text",
+            "quote": "Ein Grund für Premier Benjamin Netanyahu und dessen Partei Likud, zu behaupten, die Wahl sei „gestohlen“ worden."
+          }
+        ],
+        "text": "Wahl „gestohlen“? Behörden widersprechen Netanyahu.\nkrone.at berichtet: Ungewöhnlich stark haben die arabischen Parteien bei der Parlamentswahl in Israel am Dienstag abgeschnitten.\nkrone.at berichtet: Ein Grund für Premier Benjamin Netanyahu und dessen Partei Likud, zu behaupten, die Wahl sei „gestohlen“ worden."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "da57a55bf6cdd152384087ba",
+            "supported": true,
+            "quote": "Ungewöhnlich stark haben die arabischen Parteien bei der Parlamentswahl in Israel am Dienstag abgeschnitten."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "da57a55bf6cdd152384087ba",
+            "supported": true,
+            "quote": "Ein Grund für Premier Benjamin Netanyahu und dessen Partei Likud, zu behaupten, die Wahl sei „gestohlen“ worden."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "da57a55bf6cdd152384087ba"
+      ]
+    },
+    {
+      "id": "06a2f4edb56a2249b39072cc",
+      "member_ids": [
+        "e5dd93c1694d7d8e889aa2a8"
+      ],
+      "newest_at": 1793273208.0,
+      "draft": {
+        "headline": "Das teuflische Duo Twin Temple: Raus aus der Wäsche und rein in die Orgie!",
+        "headline_source_id": "e5dd93c1694d7d8e889aa2a8",
+        "claims": [
+          {
+            "text": "Aus den Fifties und Sixties herüberwehender \"satanischer Doo-Wop\" aus den USA lässt Nostalgie aufkommen – und norwegische Kirchenverbrenner alt aussehen.",
+            "source_id": "e5dd93c1694d7d8e889aa2a8",
+            "field": "text",
+            "quote": "Aus den Fifties und Sixties herüberwehender \"satanischer Doo-Wop\" aus den USA lässt Nostalgie aufkommen – und norwegische Kirchenverbrenner alt aussehen."
+          }
+        ],
+        "text": "Das teuflische Duo Twin Temple: Raus aus der Wäsche und rein in die Orgie!\nderstandard.at berichtet: Aus den Fifties und Sixties herüberwehender \"satanischer Doo-Wop\" aus den USA lässt Nostalgie aufkommen – und norwegische Kirchenverbrenner alt aussehen."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "e5dd93c1694d7d8e889aa2a8",
+            "supported": true,
+            "quote": "Aus den Fifties und Sixties herüberwehender \"satanischer Doo-Wop\" aus den USA lässt Nostalgie aufkommen – und norwegische Kirchenverbrenner alt aussehen."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "e5dd93c1694d7d8e889aa2a8"
+      ]
+    },
+    {
+      "id": "f925aff721037d7c33297405",
+      "member_ids": [
+        "e6169bfeb2bcf4d1fc4a6ded"
+      ],
+      "newest_at": 1793273037.0,
+      "draft": {
+        "headline": "Lieber Jeansrock, es ist aus mit uns. Und jetzt?",
+        "headline_source_id": "e6169bfeb2bcf4d1fc4a6ded",
+        "claims": [
+          {
+            "text": "Unsere Autorin will alte Kleidung loswerden.",
+            "source_id": "e6169bfeb2bcf4d1fc4a6ded",
+            "field": "text",
+            "quote": "Unsere Autorin will alte Kleidung loswerden."
+          },
+          {
+            "text": "Idealerweise sollte sie noch getragen oder zumindest recycelt werden.",
+            "source_id": "e6169bfeb2bcf4d1fc4a6ded",
+            "field": "text",
+            "quote": "Idealerweise sollte sie noch getragen oder zumindest recycelt werden."
+          }
+        ],
+        "text": "Lieber Jeansrock, es ist aus mit uns. Und jetzt?\nderstandard.at berichtet: Unsere Autorin will alte Kleidung loswerden.\nderstandard.at berichtet: Idealerweise sollte sie noch getragen oder zumindest recycelt werden."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "e6169bfeb2bcf4d1fc4a6ded",
+            "supported": true,
+            "quote": "Unsere Autorin will alte Kleidung loswerden."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "e6169bfeb2bcf4d1fc4a6ded",
+            "supported": true,
+            "quote": "Idealerweise sollte sie noch getragen oder zumindest recycelt werden."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "e6169bfeb2bcf4d1fc4a6ded"
+      ]
+    },
+    {
       "id": "9eb02bd4865b4a305631d0f7",
       "member_ids": [
         "f947f09b42aa22bbde35bc98"
@@ -6882,7 +7573,7 @@
           "issues": []
         }
       ],
-      "selected": true,
+      "selected": false,
       "used_source_ids": [
         "f947f09b42aa22bbde35bc98"
       ]
@@ -6974,7 +7665,7 @@
           "issues": []
         }
       ],
-      "selected": true,
+      "selected": false,
       "used_source_ids": [
         "a4b317eaf3bf88d231122e17"
       ]
@@ -23330,8 +24021,8 @@
     }
   ],
   "selected_ids": [
-    "9eb02bd4865b4a305631d0f7",
-    "413929849a7b5d0d6c4f5fb0",
+    "353dac3dc2d0cca0a138531a",
+    "7aee6bb880997f64fc467592",
     "9800dca7b1a831ffeefd8036",
     "7bd18316ff7bb481acc5ea4f",
     "bcb4e6872f6c4eb53dae5a96"

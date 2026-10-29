@@ -1,7 +1,7 @@
 'use strict';
 (()=>{
 const $=id=>document.getElementById(id);let report=null,signature='';
-const issues={unsupported_headline:'Überschrift ist nicht durch die angegebene Quelle gedeckt.',no_supported_prose:'Kein ausreichend belegter Nachrichtentext vorhanden.',unverified_rendered_text:'Der ausgegebene Text enthält ungeprüfte Änderungen.',invalid_source_reference:'Ungültiger Quellenbezug.',conflicting_source_values:'Quellen nennen abweichende Zahlen.',event_membership_not_supported:'Die gemeinsame Ereigniszuordnung ist nicht ausreichend belegt.'};
+const issues={unsupported_headline:'Überschrift ist nicht durch die angegebene Quelle gedeckt.',no_supported_prose:'Kein ausreichend belegter Nachrichtentext vorhanden.',unverified_rendered_text:'Der ausgegebene Text enthält ungeprüfte Änderungen.',invalid_source_reference:'Ungültiger Quellenbezug.',conflicting_source_values:'Quellen nennen abweichende Zahlen.',conflicting_source_wording:'Nahezu gleiche Aussagen unterscheiden sich in Verneinung oder Unsicherheit.',event_membership_not_supported:'Die gemeinsame Ereigniszuordnung ist nicht ausreichend belegt.'};
 const text=(tag,value,cls)=>{const el=document.createElement(tag);el.textContent=value;if(cls)el.className=cls;return el;};
 function render(){
 if(!report)return;const groups=report.groups||[],approved=groups.filter(g=>g.verification.status==='approved'),chosen=groups.filter(g=>g.selected);
@@ -15,7 +15,7 @@ badges.append(text('span',group.verification.status==='approved'?'Quellenabgleic
 card.append(badges,text('h2',group.draft.headline),text('p',group.draft.text,'draft'),text('p',group.member_ids.length+' gespeicherte Quelle(n) · '+(group.used_source_ids||[]).length+' Quelle(n) im gemeinsamen Text','meta'));
 if(group.attempts.length>1)card.append(text('p','Nach einer Korrektur erneut geprüft.','meta'));
 for(const issue of group.verification.issues)card.append(text('p',issue.startsWith('unsupported_claim:')?'Ein Satz ist nicht vollständig durch seine Quelle gedeckt.':issues[issue]||issue));
-for(const conflict of group.verification.conflicts||[])card.append(text('p','Abweichende Zahlen ('+(conflict.metric==='injured'?'Verletzte':'Tote')+'): '+conflict.values.map(v=>(report.sources[v.source_id]?.publisher||v.source_id)+': '+v.value).join(' / ')));
+for(const conflict of group.verification.conflicts||[]){if(conflict.metric)card.append(text('p','Abweichende Zahlen ('+(conflict.metric==='injured'?'Verletzte':'Tote')+'): '+conflict.values.map(v=>(report.sources[v.source_id]?.publisher||v.source_id)+': '+v.value).join(' / ')));else card.append(text('p',(conflict.kind==='negation'?'Abweichende Verneinung: ':'Abweichende Unsicherheit: ')+(conflict.quotes||[]).join(' / ')));}
 const evidence=document.createElement('details');evidence.append(text('summary','Satzbelege und gespeicherte Quellen anzeigen'));
 for(const claim of group.verification.claims){const source=report.sources[claim.source_id];evidence.append(text('p','Satz '+(claim.claim_index+1)+' · '+(claim.supported?'Beleg vorhanden':'Nicht belegt')+' · '+(source?.publisher||claim.source_id),'meta'),text('p',claim.quote||'','quote'));}
 for(const id of group.member_ids){const source=report.sources[id];if(!source)continue;const block=document.createElement('div');block.className='source';block.append(text('h3',source.title),text('p',source.text||'Kein Nachrichtentext gespeichert.'));

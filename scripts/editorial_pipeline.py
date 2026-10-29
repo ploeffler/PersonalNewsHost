@@ -133,6 +133,27 @@ def numeric_conflicts(members):
             if len({v['source_id'] for v in values})>1 and len({v['value'] for v in values})>1]
 
 
+def wording_conflicts(members):
+    negative={'nicht','kein','keine','keinen','keinem','keiner','keines','nie','not','no'}
+    uncertain={'möglicherweise','vermutlich','mutmaßlich','angeblich','könnte','könnten','dürfte','dürften','unbestätigt','possibly','allegedly','reportedly'}
+    def signature(text):
+        tokens=re.findall(r'[^\W_]+',text.casefold())
+        base=' '.join(t for t in tokens if t not in negative|uncertain|{'noch','bereits'})
+        return base,bool(set(tokens)&negative),bool(set(tokens)&uncertain)
+    result=[]
+    for index,first in enumerate(members):
+        for second in members[index+1:]:
+            for a in evidence_units(first):
+                sa,na,ua=signature(a)
+                for b in evidence_units(second):
+                    sb,nb,ub=signature(b)
+                    if (na,ua)==(nb,ub) or len(words(a)&words(b))<4:continue
+                    if SequenceMatcher(None,sa,sb).ratio()<.88:continue
+                    result.append({'kind':'negation' if na!=nb else 'uncertainty',
+                                   'source_ids':[first['id'],second['id']],'quotes':[a,b]})
+    return result
+
+
 def verify(draft,members,sources):
     allowed={a['id']:a for a in members};issues=[];checks=[]
     headline_source=allowed.get(draft.get('headline_source_id'))
@@ -152,6 +173,9 @@ def verify(draft,members,sources):
     if any(not same_event(a,b) for index,a in enumerate(members) for b in members[index+1:]):issues.append('event_membership_not_supported')
     conflicts=numeric_conflicts(members)
     if conflicts:issues.append('conflicting_source_values')
+    wording=wording_conflicts(members)
+    if wording:issues.append('conflicting_source_wording')
+    conflicts.extend(wording)
     return {'status':'approved' if not issues else 'held','scope':SCOPE,'issues':issues,'claims':checks,
             'conflicts':conflicts,'independent_fact_check':False,'source_independence':'not_assessed'}
 

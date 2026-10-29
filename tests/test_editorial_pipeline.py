@@ -42,6 +42,17 @@ class EditorialPipelineTests(unittest.TestCase):
         self.assertFalse(p.same_event(a,b))
         self.assertFalse(p.same_event(article('a','Trump gewinnt die Wahl',''),article('b','Trump vor Gericht wegen Betrugsvorwurf','')))
 
+    def test_opposing_negation_and_uncertainty_are_not_deduplicated_into_certainty(self):
+        for first,second,kind in [
+            ('Die Polizei bestätigt eine Sperre der gesamten Bahnstrecke.', 'Die Polizei bestätigt keine Sperre der gesamten Bahnstrecke.','negation'),
+            ('Das Feuer wurde durch einen technischen Defekt verursacht.', 'Das Feuer wurde möglicherweise durch einen technischen Defekt verursacht.','uncertainty')]:
+            title='Ermittlungen nach Zwischenfall in München dauern an'
+            report=p.prepare(stored([article('a',title,first),article('b',title,second,'second.org')]),NOW)
+            group=report['groups'][0]
+            self.assertIn('conflicting_source_wording',group['verification']['issues'])
+            self.assertEqual(group['verification']['conflicts'][0]['kind'],kind)
+            self.assertFalse(p.select(report,5))
+
     def test_counter_disagreement_is_held_before_selection(self):
         a,b=members();b['title']=b['title'].replace('Zehn','Zwölf');b['text']=b['text'].replace('zehn','zwölf')
         report=p.prepare(stored([a,b]),NOW)
