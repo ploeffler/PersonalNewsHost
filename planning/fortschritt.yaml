@@ -5,7 +5,8 @@ meta:
   publication_policy: Implementierung erst bei vollständig geprüftem Versionsschritt
     pushen.
   planning_commit: bcc6f50
-  latest_work: Shows, Feedrubriken und Quellenregeln; noch kein vollständiger Versionsschritt.
+  latest_work: Offline-Providerlaufzeit mit deterministischen Mocks, strikter Antwortprüfung,
+    Allowlist und transaktionalem SQLite-Cache.
 completed:
 - id: T002
   evidence:
@@ -44,6 +45,46 @@ in_progress:
   - Vollständige Prüfung aller experimentellen Skripte und externen Datenflüsse
   - Diff-/Integrationsprüfung der offenen PRs
   - Laufzeitmessung der Workflows
+- id: T100
+  evidence:
+  - scripts/provider_runtime.py
+  - tests/test_provider_runtime.py
+  - docs/guide/provider-runtime.md
+  remaining:
+  - Produktionsintegration und vollständige taskbezogene Abnahmekriterien; Grenzen
+    siehe Providerdokumentation.
+- id: T103
+  evidence:
+  - scripts/provider_runtime.py
+  - tests/test_provider_runtime.py
+  - docs/guide/provider-runtime.md
+  remaining:
+  - Produktionsintegration und vollständige taskbezogene Abnahmekriterien; Grenzen
+    siehe Providerdokumentation.
+- id: T104
+  evidence:
+  - scripts/provider_runtime.py
+  - tests/test_provider_runtime.py
+  - docs/guide/provider-runtime.md
+  remaining:
+  - Produktionsintegration und vollständige taskbezogene Abnahmekriterien; Grenzen
+    siehe Providerdokumentation.
+- id: T130
+  evidence:
+  - scripts/provider_runtime.py
+  - tests/test_provider_runtime.py
+  - docs/guide/provider-runtime.md
+  remaining:
+  - Produktionsintegration und vollständige taskbezogene Abnahmekriterien; Grenzen
+    siehe Providerdokumentation.
+- id: T135
+  evidence:
+  - scripts/provider_runtime.py
+  - tests/test_provider_runtime.py
+  - docs/guide/provider-runtime.md
+  remaining:
+  - Produktionsintegration und vollständige taskbezogene Abnahmekriterien; Grenzen
+    siehe Providerdokumentation.
 remaining_0_1:
 - T012
 - T072
