@@ -93,8 +93,11 @@ def evidence_units(article):
 
 def render_draft(draft,sources):
     headline=draft['headline'] if draft['headline'].endswith(('.', '!', '?')) else draft['headline']+'.'
-    return headline+'\n'+ '\n'.join(
-        sources[c['source_id']]['publisher']+' berichtet: '+c['text'] for c in draft['claims'])
+    if not draft['claims']:return headline
+    ids=[draft['headline_source_id']]+[c['source_id'] for c in draft['claims']]
+    names=list(dict.fromkeys(sources[sid]['publisher'] for sid in ids))
+    credit=('Quelle: ' if len(names)==1 else 'Quellen: ')+', '.join(names)+'.'
+    return headline+'\n'+' '.join(c['text'] for c in draft['claims'])+'\n'+credit
 
 
 def formulate(members,sources,max_sentences=2):
@@ -193,7 +196,7 @@ def prepare(store,now,max_sentences=2,writer=None):
             draft=formulate(members,sources,max_sentences);check=verify(draft,members,sources);attempts.append(check)
         results.append({'id':gid,'member_ids':[a['id'] for a in members],'newest_at':max(age(a) for a in members),
                         'draft':draft,'verification':check,'attempts':[{'status':a['status'],'issues':a['issues']} for a in attempts],'selected':False,
-                        'used_source_ids':sorted({c['source_id'] for c in draft['claims']})})
+                        'used_source_ids':sorted({draft['headline_source_id']}|{c['source_id'] for c in draft['claims']}) if draft['claims'] else []})
     digest=hashlib.sha256(json.dumps(active,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
     return {'version':1,'mode':'preview','generated_at':now,'source_updated_at':store.get('updated_at'),'source_digest':digest,
             'scope':SCOPE,'method':'local_extractive_multi_source','independent_fact_check':False,

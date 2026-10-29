@@ -32,6 +32,15 @@ class EditorialPipelineTests(unittest.TestCase):
         self.assertFalse(group['verification']['independent_fact_check'])
         self.assertEqual(group['verification']['source_independence'],'not_assessed')
 
+    def test_source_credit_occurs_once_at_end_for_single_and_multiple_sources(self):
+        for items in [members()[:1],members()]:
+            report=p.prepare(stored(items),NOW);draft=report['groups'][0]['draft'];body=draft['text']
+            self.assertNotIn(' berichtet:',body)
+            self.assertEqual(sum(body.count(prefix) for prefix in ['Quelle:','Quellen:']),1)
+            self.assertEqual(body.count('example.org'),1)
+            self.assertTrue(body.endswith('second.org.' if len(items)>1 else 'example.org.'))
+            self.assertEqual(p.verify(draft,items,report['sources'])['status'],'approved')
+
     def test_question_headline_is_not_changed_to_a_statement(self):
         item=article('q','Ist die Strecke in München wieder frei?', 'Die Bahnstrecke bleibt bis zum Abend gesperrt.')
         draft=p.prepare(stored([item]),NOW)['groups'][0]['draft']
