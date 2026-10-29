@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 17,
+  "revision": 18,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -753,7 +753,7 @@
       "id": "T073",
       "epic": "E7",
       "title": "Datenschutz und Sicherheit",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T002"
       ],
@@ -768,7 +768,25 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A01",
-      "lease": null,
+      "lease": {
+        "client": "codex-t073",
+        "token": "eee0b7de4d684f0da7c083f515a6f7ed",
+        "expires_at": 1793327296.3364565,
+        "files": [
+          ".github/workflows/",
+          "docs/datenschutz.html",
+          "docs/guide/datenschutz.md",
+          "docs/impressum.html",
+          "docs/index.html",
+          "planning/action-pins.json",
+          "requirements-constraints.txt",
+          "requirements.txt",
+          "scripts/check_repository.py",
+          "scripts/generate.py",
+          "scripts/security_checks.py",
+          "tests/test_security_checks.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [
@@ -5428,6 +5446,15 @@
       "client": "codex-t073",
       "at": 1793312893.8681767,
       "note": "Pending privacy draft reviewed and integrated without unverified provider/log/cache guarantees. Prepared action pin list will be verified upstream before use; unrelated local changes preserved."
+    },
+    {
+      "operation_id": "0051a602616c4adf9da4eda0217501ad",
+      "revision": 18,
+      "action": "claim",
+      "task": "T073",
+      "client": "codex-t073",
+      "at": 1793312896.3364565,
+      "note": ""
     }
   ]
 }
