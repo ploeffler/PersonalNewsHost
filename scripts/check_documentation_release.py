@@ -20,6 +20,13 @@ def validate_release(tag,root=ROOT):
         raise ValueError('Release marker, VERSION and tag must match')
     if marker.get('branch')!='Full-featured-Newsoutlet':
         raise ValueError('Documentation must originate from the development branch')
+    board_path=root/'planning/task-board.json'
+    if board_path.is_file():
+        board=json.loads(board_path.read_text(encoding='utf-8'))
+        release=next((item for item in board.get('releases',[]) if item['version']==version),None)
+        tasks={task['id']:task for task in board.get('tasks',[])}
+        if not release or any(ident not in tasks or tasks[ident]['status']!='done' or tasks[ident].get('local_work_pending') for ident in release['tasks']):
+            raise ValueError('Subversion task board is not complete')
     return version
 
 

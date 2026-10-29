@@ -36,6 +36,13 @@ class DocumentationReleaseTests(unittest.TestCase):
         self.marker.update(version=None,completed=False,tests_passed=False);self.save()
         with self.assertRaises(ValueError):validate_release('v0.1',self.root)
 
+    def test_incomplete_task_board_blocks_even_confirmed_marker(self):
+        board={'releases':[{'version':'0.1','tasks':['T001']}], 'tasks':[{'id':'T001','status':'in_progress','local_work_pending':False}]}
+        path=self.root/'planning/task-board.json';path.write_text(json.dumps(board))
+        with self.assertRaises(ValueError):validate_release('v0.1',self.root)
+        board['tasks'][0]['status']='done';path.write_text(json.dumps(board))
+        self.assertEqual(validate_release('v0.1',self.root),'0.1')
+
     def test_renderer_does_not_run_before_gate(self):
         from scripts import render_workflow_diagrams as renderer
         with patch('sys.argv',['render','--release-tag','v0.1']),patch.object(renderer,'validate_release',side_effect=ValueError('not complete')),patch.object(renderer.subprocess,'run') as run:

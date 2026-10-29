@@ -28,6 +28,8 @@ meta:
   - mehrsprachigkeit-ergaenzung.yaml
   scope_revision: '2026-10-29: kein CMS, genau zwei Zugänge, Mitarbeiterverwaltung
     im Ressort.'
+  live_task_state: planning/task-board.json is authoritative for client ownership/status;
+    this YAML remains a planning/import reference.
 packages:
 - id: A00
   title: Bestand und Schnittstellen
