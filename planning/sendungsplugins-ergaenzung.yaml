@@ -3,6 +3,7 @@ meta:
   date: '2026-10-29'
   scope: Sendungsbausteine als Anwendungsplugins, unabhängig von Codex-Plugins
   status: planned
+  scope_policy: umfang-vereinfacht.yaml hat Vorrang bei älteren Konten-/Rechteformulierungen.
 tasks:
 - id: T270
   epic: E24
@@ -28,9 +29,9 @@ tasks:
   - Konfiguration, Plugins und Versionen pro Produktionslauf fixieren; Cache-Schlüssel
     und Historie berücksichtigen Pluginversionen. Fehlende oder inkompatible Plugins
     vor Produktionsstart melden.
-  - Pluginverwaltung nur mit Adminrecht; lokale versionierte Installation und Deinstallation
-    dokumentieren, Neustart für Codeänderungen zulässig. Kein ungeprüftes Hochladen/Ausführen
-    beliebigen Codes über die Konfigurationsseite.
+  - Plugininstallation nur über den Konfigurationszugang; lokale versionierte Installation
+    und Deinstallation dokumentieren, Neustart für Codeänderungen zulässig. Kein ungeprüftes
+    Hochladen/Ausführen beliebigen Codes über die Konfigurationsseite.
   - 'Explizit dokumentieren: Drittanbieter-Pythonplugins sind vertrauenswürdiger Anwendungscode,
     keine automatisch isolierte Sandbox. Abhängigkeiten pinnen und Herkunft prüfen;
     spätere Prozessisolation gesondert entwickeln.'

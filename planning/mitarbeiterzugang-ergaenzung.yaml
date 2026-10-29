@@ -1,41 +1,39 @@
 meta:
   project: PersonalNewsHost
   date: '2026-10-29'
-  scope: Individuelle Mitarbeiterzugänge für interaktive Freigabeaufgaben
+  scope: Gemeinsamer Redaktionszugang, getrennte Konfiguration und Mitarbeiterverwaltung
+    im Ressort
   status: planned
 tasks:
 - id: T220
   epic: E19
-  title: Individuelle Zugänge für virtuelle Mitarbeiter
+  title: Gemeinsamer Redaktionszugang getrennt von Konfiguration
   status: todo
   depends_on:
   - T110
   - T188
   - T189
   instructions:
-  - Für jeden virtuellen Mitarbeiter ein separat aktivierbares Benutzerkonto mit eindeutigem
-    Benutzernamen und Passwort-Hash vorsehen; Konto über stabile staff_id zuordnen.
-  - Keine gemeinsamen Standardpasswörter und keine Klartextpasswörter speichern. Admin
-    aktiviert Konten und richtet individuelle Zugangsdaten ein; sichere Hashprüfung
-    wie T188 verwenden.
-  - Kontenverwaltung ausschließlich im geschützten Adminbereich; individuelle Hashes
-    und Sitzungsdaten getrennt von öffentlicher Redaktionsdarstellung und Exporten
-    speichern.
-  - 'Automatische KI-Rolle und interaktives Benutzerkonto getrennt modellieren: Konto
-    dient der Anmeldung eines berechtigten Bedieners für den Mitarbeiter; KI-/Provider-Prozesse
-    erhalten keine menschlichen Login-Sitzungen.'
-  - Konten sperren, Passwort wechseln und aktive Sitzungen widerrufen können; deaktivierter
-    Mitarbeiter oder gesperrtes Konto kann sich nicht anmelden.
-  - Benutzer-/Passwortanmeldung am HTTPS-Verwaltungsport ermöglichen; Admin aus Laufzeitvariablen
-    bleibt übergeordneter Verwalter.
+  - 'Genau zwei Bedienzugänge: gemeinsamer Redaktionszugang und getrennter Konfigurationszugang.
+    Keine Mitarbeiterlogins, Avatarpasswörter oder individuelle Benutzer-/Gruppenverwaltung.'
+  - Beide Zugänge serverseitig getrennt über vorhandenen HTTPS-Sitzungsschutz absichern.
+    Konfiguration verwaltet Betrieb, Provider, Tokens, Budgets und die Zugangsdaten;
+    Redaktion verwaltet Ressorts, Mitarbeiterressourcen, Inhalte, Medien, Shows und
+    Freigaben.
+  - Kein Zugriff auf technische Secrets mit Redaktionssitzung; keine automatische
+    Freigabeberechtigung durch Konfigurationssitzung. Endpunkte ebenso prüfen wie
+    Seiten.
+  - Gemeinsamen Redaktionszugang im Setup einrichten; ohne Einrichtung bleibt er gesperrt.
+    ADMIN_USER/ADMIN_PASSWORD_HASH und Standard admin/admin betreffen ausschließlich
+    den Konfigurationszugang.
+  - Passwortwechsel und Logout widerrufen Sitzungen des betroffenen Zugangs. Avataraktivierung
+    verändert keine Benutzerrechte.
   acceptance:
-  - Jeder Mitarbeiter kann einen eigenen aktiven Zugang erhalten; ohne Aktivierung
-    kein Zugriff.
-  - Falsches Passwort, gesperrtes Konto und deaktivierter Mitarbeiter werden abgewiesen.
-  - Passwortwechsel oder Kontosperre entziehen vorhandenen Sitzungen den Zugriff.
+  - Beide Logins getrennt geprüft; direkte API-Aufrufe können die Grenze nicht umgehen.
+  - Keine Konto-/Passwortfelder oder individuellen Sitzungen an virtuellen Mitarbeitern.
 - id: T221
   epic: E19
-  title: Rollenrechte und zugewiesene Freigabeaufgaben
+  title: Gemeinsamer Redaktionsarbeitsbereich und ressortbezogene Mitarbeiterverwaltung
   status: todo
   depends_on:
   - T220
@@ -43,31 +41,29 @@ tasks:
   - T125
   - T128
   instructions:
-  - Mitarbeiterrechte und Zuständigkeiten serverseitig aus Rollen, Ressorts, Shows
-    und Aufgabenzuweisung ableiten; standardmäßig keine Freigaberechte.
-  - 'Persönlichen Arbeitskorb mit zugewiesenen Aufgaben, Quellen, Prüfhinweisen, Version
-    und Frist bereitstellen. Aktionen: freigeben, ablehnen und zur Überarbeitung zurückgeben,
-    jeweils nur nach entsprechender Berechtigung.'
-  - Rechte für Inhaltssichtung, Freigabe, Ablehnung, Zuweisung und Administration
-    getrennt behandeln; Mitarbeiterkonten dürfen nicht automatisch globale Konfiguration
-    oder Konten anderer Mitarbeiter ändern.
-  - Menschliche Freigabe durch authentifizierten Bediener getrennt von automatischer
-    KI-Stufenentscheidung speichern. Bei hold_for_human darf eine KI-Rolle nicht selbst
-    den menschlichen Freigabeschritt erfüllen.
-  - Freigaben an konkrete Beitragsversion binden; nach relevanter Änderung erneute
-    Prüfung verlangen. Gleichzeitige Entscheidungen atomar verarbeiten, veraltete
-    Freigaben zurückweisen.
-  - Direkte API-Aufrufe mit fremder Aufgaben-ID oder manipulierten staff_id ebenfalls
-    auf Zuständigkeit und Rechte prüfen. Ablaufregeln aus T128 beibehalten.
+  - Redaktionelle Struktur mit Abteilungen/Ressorts und virtuellen Mitarbeitern vollständig
+    erhalten. Rollen und Zuständigkeiten steuern automatische Arbeitsstufen, keine
+    individuellen Bedienerkonten.
+  - Mitarbeiter direkt im jeweiligen Ressort anlegen, bearbeiten, zuordnen und deaktivieren;
+    Name, Rolle, Avatar, Stimme, Biografie und Zuständigkeiten dort pflegen. Keine
+    parallele zweite Mitarbeiterverwaltung.
+  - Gemeinsamer Arbeitskorb mit Filtern nach Ressort, Show, virtuellem Mitarbeiter
+    und Status; kein persönlicher Benutzer-Arbeitskorb.
+  - Einzelbeiträge und Kurzvideos im Namen eines virtuellen Mitarbeiters direkt aus
+    dessen Ressortansicht beauftragen. Shows weiterhin aus Plugins erstellen.
+  - Quellenprüfung, Überarbeitung, Freigabe, Ablehnung und Fristen beibehalten. Menschliche
+    Entscheidung über den gemeinsamen Redaktionszugang getrennt von automatischen
+    KI-Entscheidungen.
+  - Freigaben auf konkrete Beitragsversionen beziehen, bei Änderung erneuern; konkurrierende
+    Entscheidungen atomar behandeln.
   acceptance:
-  - Mitarbeiter sieht und entscheidet ausschließlich entsprechend seiner Rechte und
-    Zuständigkeit.
-  - Nicht berechtigte Freigabe, fremde Aufgaben und veraltete Beitragsversionen werden
-    abgewiesen.
-  - Erlaubte Entscheidung wird im Redaktionsworkflow wirksam; Fristablauf bleibt eindeutig.
+  - Redaktionsabläufe und Pluginshows mit einem Redaktionslogin vollständig bedienbar.
+  - Mitarbeiterverwaltung im Ressort und Einzelbeitrag im Mitarbeiternamen geprüft.
+  - Menschliche Freigabe kann nicht durch Avatarlogin oder automatische KI-Stufe ersetzt
+    werden.
 - id: T222
   epic: E19
-  title: Freigabeprotokoll, Dokumentation und Abnahme
+  title: Gemeinsames Freigabeprotokoll und Abnahme
   status: todo
   depends_on:
   - T221
@@ -75,22 +71,16 @@ tasks:
   - T186
   - T194
   instructions:
-  - Entscheidung, authentifiziertes Konto, zugeordnete virtuelle Rolle, Zeitpunkt,
-    Beitragsversion und Begründung nachvollziehbar protokollieren; keine Passwörter,
-    Hashes oder Sitzungstokens loggen.
-  - Automatische KI-Entscheidung und Bedienerfreigabe im internen Protokoll klar unterscheiden.
-    Öffentliche Redaktionseinträge zeigen keine privaten Kontodaten.
-  - Wizard und Kontoverwaltung um optionales Einrichten von Mitarbeiterzugängen und
-    Freigaberechten ergänzen; Betrieb mit reinem Adminzugang weiterhin ermöglichen.
-  - Konten-/Rechteänderungen, Sperrung, Passwortwechsel, Wiederherstellung und Freigabeablauf
-    für Linux und Docker dokumentieren.
-  - Tests für mehrere Mitarbeiter, Ressort-/Showgrenzen, direkte API-Aufrufe, CSRF,
-    Sitzungswiderruf, parallele Entscheidungen und erneute Prüfung geänderter Inhalte
-    ergänzen.
+  - Aktion, gemeinsamen Redaktionszugang, Zeit, Beitragsversion, Begründung und verantwortliche
+    virtuelle Rolle protokollieren; keine Secrets loggen.
+  - 'Grenze offenlegen: gemeinsamer Zugang erlaubt keinen sicheren Nachweis einer
+    einzelnen realen Person. Virtueller Mitarbeiter ist Bearbeiter-/Urheberrolle,
+    kein menschlicher Anmelder.'
+  - Wizard und Dokumentation auf zwei Zugänge reduzieren. Avatar-/Studiowizards enthalten
+    keine Kontoeinrichtung für virtuelle Mitarbeiter.
+  - Zugriffstrennung, Sitzungswiderruf, Ressortverwaltung, Einzelbeitrag, Showproduktion,
+    Freigaben und Wiederaufnahme für Linux/Docker prüfen.
   acceptance:
-  - Zwei getrennte Mitarbeiterkonten können berechtigt zugewiesene Aufgaben bearbeiten,
-    ohne gegenseitige Rechte zu übernehmen.
-  - Auditspur nennt Konto und virtuelle Rolle eindeutig; Wiederherstellung erhält
-    Rechte und Aufgaben, aber reaktiviert keine alten Sitzungen.
-  - Betriebs- und Gesamtabnahme enthalten den vollständigen Weg Anmeldung, Sichtung,
-    Entscheidung und Workflow-Fortsetzung.
+  - Vollständiger redaktioneller Ablauf mit gemeinsamem Zugang und virtuellen Rollen
+    geprüft.
+  - Backup erhält Ressourcen und Aufgaben, reaktiviert aber keine alten Sitzungen.

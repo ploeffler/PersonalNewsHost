@@ -44,9 +44,8 @@ tasks:
   - Pro Zielkanal Status und Remote-Referenzen führen; Teilfehler unabhängig wiederholen,
     Doppelposts verhindern. Rücknahme und Korrektur mit den tatsächlich verfügbaren
     Fähigkeiten je Kanal behandeln.
-  - Produzieren, Prüfen/Freigeben, Terminieren und Veröffentlichen als getrennte Rechte
-    behandeln; Adminrolle kann diese gezielt delegieren. Automatische KI-Produktion
-    erfüllt keine vorgeschriebene menschliche Freigabe.
+  - Produzieren, Freigeben, Terminieren und Veröffentlichen als getrennte Workflowaktionen
+    im gemeinsamen Redaktionszugang behandeln; keine zusätzliche Benutzer-/Gruppenrechtematrix.
   - Termine mit Zeitzone, Umgang mit verspäteter Produktion, Ablauf der Freigabe und
     manueller Stornierung konfigurieren. Produktionsfehler lässt letzte veröffentlichte
     Ausgabe unverändert.

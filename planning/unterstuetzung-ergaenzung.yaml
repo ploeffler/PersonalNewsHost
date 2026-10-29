@@ -3,6 +3,7 @@ meta:
   date: '2026-10-29'
   scope: Reiter Unterstützung für lokale, kostenlose und kommerzielle KI-Provider
   status: planned
+  scope_policy: umfang-vereinfacht.yaml hat Vorrang bei älteren Konten-/Rechteformulierungen.
 sources:
 - https://ai.google.dev/gemini-api/docs/billing/
 - https://console.groq.com/docs/rate-limits
@@ -60,7 +61,7 @@ tasks:
     zurück. Bei verschlüsselter Speicherung Schlüssel getrennt halten; Secrets nicht
     in config.json, Exporten, Protokollen oder Browserstorage speichern.
   - Umgebungsvariablen haben dokumentierten Vorrang und erscheinen als extern verwaltet.
-    Nur Admin bzw. explizit berechtigte Secretverwalter dürfen Zugänge ändern.
+    Nur der Konfigurationszugang darf Provider-Secrets ändern.
   - Verbindungstest zunächst ohne Generierung soweit unterstützt; möglicher kostenpflichtiger
     Funktionstest separat auslösen und vorab budgetieren. Fehler für Auth, Modell,
     Quota und Netzwerk verständlich unterscheiden.

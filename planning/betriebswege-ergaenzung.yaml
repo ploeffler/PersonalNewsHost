@@ -359,6 +359,8 @@ tasks:
   - Wizard und Entwurfs-/Status-APIs ausschließlich am geschützten Admin-Port; CSRF-Schutz
     und keine Secrets in Browserantworten. Laufende Installation mit bestehender Konfiguration
     als Entwurf übernehmen statt überschreiben.
+  - Gemeinsamen Redaktionszugang einrichten, danach in dessen Ressort-/Showverwaltung
+    wechseln; keine CMS- oder Mitarbeiterkontoeinrichtung.
   acceptance:
   - Erste erfolgreiche Anmeldung öffnet Wizard; fehlgeschlagene Anmeldung zeigt keine
     Setupdaten.

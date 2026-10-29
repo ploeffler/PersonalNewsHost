@@ -3,6 +3,7 @@ meta:
   date: '2026-10-29'
   scope: Wiederverwendbare Intro-/Outrosequenzen aus der Redaktionsverwaltung
   status: planned
+  scope_policy: umfang-vereinfacht.yaml hat Vorrang bei älteren Konten-/Rechteformulierungen.
 tasks:
 - id: T300
   epic: E27
@@ -23,9 +24,9 @@ tasks:
   - Vorab gerenderte Standardsequenzen als eigenständige wiederverwendbare Artefakte
     speichern; keine erneute KI-Generierung bei jeder Einbindung. Sprach-/Formatvarianten
     gezielt erzeugen und separat kennzeichnen.
-  - Sequenzverwaltung mit gesonderten Rollenrechten; generierte Sequenzen durchlaufen
-    Budget-, Qualitäts- und Freigabeprüfungen. Finale Videosequenzen unter Jahr/Monat/Tag
-    archivieren und durchgehend rechts unten AI einblenden.
+  - Sequenzverwaltung über den gemeinsamen Redaktionszugang; generierte Sequenzen
+    durchlaufen Budget-, Qualitäts- und Freigabeprüfungen. Finale Videosequenzen unter
+    Jahr/Monat/Tag archivieren und durchgehend rechts unten AI einblenden.
   - Archivierte Versionen unveränderlich halten. Deaktivieren verhindert neue Auswahl,
     zerstört aber keine historischen Produktionsreferenzen.
   acceptance:

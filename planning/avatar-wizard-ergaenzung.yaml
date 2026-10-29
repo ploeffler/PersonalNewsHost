@@ -11,21 +11,16 @@ tasks:
   depends_on:
   - T110
   - T164
-  - T220
   instructions:
-  - 'Virtuellen Mitarbeiter als Avatar-Identität modellieren: stabile staff_id/avatar_id-Zuordnung,
-    Name, Biografie, Redaktionsrolle, Ressort, Stimme, visuelle Assets und zugeordnetes
-    interaktives Konto.'
-  - Keine getrennten widersprüchlichen Personenlisten für Redaktion und Moderation
-    führen; vorhandene Referenzen migrieren und gemeinsam validieren.
-  - Avatar kann Moderator, Korrespondent oder Hintergrundrolle sein; grafische Identität
-    und Fähigkeit zur Freigabe sind getrennte Eigenschaften.
-  - Interaktiver Zugang bleibt für den berechtigten Bediener dieser Avatarrolle; ein
-    Avatar wird durch ein 3D-Modell nicht selbst zum menschlichen Freigeber.
+  - Virtuellen Mitarbeiter als Avatar-Identität mit staff_id/avatar_id, Name, Ressort,
+    Rolle, Biografie, Stimme und Assets modellieren. Kein Benutzerkonto.
+  - Identität direkt im zugeordneten Ressort verwalten; Beiträge und Shows referenzieren
+    dieselbe Ressource.
+  - Avatar kann Host, Gast, Korrespondent oder Hintergrundrolle sein. Automatische
+    Workflowfähigkeit und menschliche Freigabe bleiben getrennt.
   acceptance:
-  - Avatar, Redaktionseintrag, Show-Zuordnung und Konto verweisen auf dieselbe Identität.
-  - Änderungen an Darstellung ändern keine Freigaberechte; Rollenänderungen ändern
-    keine Assetnachweise.
+  - Avatar, Redaktionsbeitrag und Show referenzieren dieselbe Identität; keine Loginfelder
+    am Mitarbeiter.
 - id: T231
   epic: E20
   title: Avatar-Erstellungswizard und Assetverwaltung
@@ -34,20 +29,15 @@ tasks:
   - T230
   - T193
   instructions:
-  - Geschützten Wizard zum Erstellen und Bearbeiten eines virtuellen Mitarbeiters/Avatars
-    bereitstellen; aus Einrichtung und Mitarbeiterverwaltung aufrufbar.
-  - 'Schritte: Identität und fiktive Herkunft; Redaktionsrolle und Rechte; Darstellung
-    mit Bild oder 3D-Upload; Vorschau und Ausrichtung; Stimme; optionale Kontoeinrichtung;
-    Prüfung und Abschluss.'
-  - Vorhandene Bild-/Standbild-Fallbacks erhalten; Kontoeinrichtung optional, keine
-    gemeinsamen Defaultpasswörter.
-  - Entwurf und Versionen speichern; erst validierten Avatar aktivieren. Verwendete
-    Avatare nicht ersatzlos löschen; Referenzen und Archivversionen erhalten.
-  - Herkunft, Lizenz und Nutzungsnachweis erfassen; bestehende Anforderungen für fiktive
-    Identitäten und synthetische Kennzeichnung übernehmen.
+  - Avatarwizard direkt über Mitarbeiter anlegen/bearbeiten innerhalb des Ressorts
+    aufrufen; Ersteinrichtung führt dorthin.
+  - 'Schritte: fiktive Identität, Rolle/Zuständigkeit, Bild oder 3D-Upload, Vorschau/Ausrichtung,
+    Stimme, Prüfung und Aktivierung. Kein Kontoeinrichtungsschritt.'
+  - Entwürfe und Versionen speichern; verwendete Assets nicht ersatzlos löschen. Herkunft/Lizenz
+    und Standbildfallback bleiben erhalten.
   acceptance:
-  - Avatar lässt sich erstellen, pausieren, fortsetzen und später bearbeiten.
-  - Aktivierung aktualisiert konsistent Redaktion, Produktion und optionale Kontozuordnung.
+  - Avatar lässt sich im Ressort erstellen, fortsetzen und bearbeiten; Zuordnungen
+    bleiben konsistent, ohne individuelle Konten.
 - id: T232
   epic: E20
   title: 3D-Upload, Validierung und Vorschau
@@ -60,8 +50,8 @@ tasks:
     glTF mit ausdrücklich hochgeladenen lokalen Textur-/Bufferdateien in isoliertem
     Assetverzeichnis. Weitere Formate wie FBX/OBJ/VRM erst nach gesondert getesteter
     Unterstützung anbieten.'
-  - Upload nur mit Assetverwaltungsrecht am Admin-Port. Größen-, Textur-, Polygon-
-    und Ressourcenlimits konfigurieren; Inhalt und tatsächliches Format validieren
+  - Upload nur mit gemeinsamem Redaktionszugang am Verwaltungsport. Größen-, Textur-,
+    Polygon- und Ressourcenlimits konfigurieren; Inhalt und tatsächliches Format validieren
     statt nur Dateiendung.
   - Pfadtraversal, absolute Dateipfade, entfernte URLs und Referenzen außerhalb des
     Uploadsatzes ablehnen; keine ungeprüften Archive entpacken. Unbekannte/aktive
@@ -115,7 +105,7 @@ tasks:
   - T233
   - T222
   instructions:
-  - Uploadformate, Begleitdateien, Assetlimits, Rollen, Konten, Stimmen und Lizenznachweise
+  - Uploadformate, Begleitdateien, Assetlimits, Ressorts, Rollen, Stimmen und Lizenznachweise
     dokumentieren; keine automatische Konvertierung beliebiger 3D-Objekte versprechen.
   - Wizardtests und visuelle Prüfungen für Bildavatar, statisches GLB-Modell, geriggtes
     Referenzmodell, ungültige Dateien, Rechte und Wiederaufnahme durchführen.

@@ -16,12 +16,12 @@ tasks:
   - T201
   - T204
   instructions:
-  - Im persönlichen Arbeitsbereich und in der Redaktionsverwaltung Kurzvideoauftrag
-    anlegen und einem virtuellen Mitarbeiter/Avatar zuweisen. Thema, Leitfrage, Quellen,
-    Zielgruppe, Zieldauer, Sprache, Format und optionale Studio-/Showzuordnung erfassen.
-  - Berechtigungen für Auftragserstellung, automatische Bearbeitung, Renderstart,
-    Freigabe und Veröffentlichung getrennt prüfen. KI-Rolle kann beauftragte Produktionsschritte
-    ausführen; erforderliche menschliche Freigaben bleiben davon getrennt.
+  - Im gemeinsamen Redaktionsbereich direkt im Ressort einen Einzelbeitrags-/Kurzvideoauftrag
+    im Namen eines virtuellen Mitarbeiters anlegen; bestehende Themen-/Quellen-/Formatparameter
+    erhalten.
+  - Produktion, Freigabe und Veröffentlichung bleiben getrennte redaktionelle Aktionen,
+    keine individuellen Benutzerrechte. KI führt automatische Stufen aus; menschliche
+    Freigabe bleibt getrennt.
   - Vorhandene Quellenbasis verwenden und optional freigegebene Recherchequellen anbinden;
     keine beliebigen unbelegten Themenbehauptungen generieren. Selbstdarstellung und
     Zielgruppenprofil als Formulierungsgrundlage übernehmen.

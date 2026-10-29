@@ -47,8 +47,7 @@ tasks:
     Referenzen zulassen.
   - Studio als Entwurf speichern, wiederaufnehmen, duplizieren, versionieren und deaktivieren;
     verwendete Versionen nicht ersatzlos löschen.
-  - Rechte zur Studioverwaltung separat prüfen; Mitarbeiterzugang bedeutet keine automatische
-    Berechtigung zur Studioänderung.
+  - Studioverwaltung gehört zum gemeinsamen Redaktionsbereich, ohne individuelle Mitarbeiterkonten.
   acceptance:
   - Wizard erzeugt ein validiertes Studio und ordnet es einer Show zu.
   - Unberechtigte Konten können Studios weder ändern noch Assets hochladen; Neustart

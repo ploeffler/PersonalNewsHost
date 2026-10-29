@@ -24,6 +24,9 @@ meta:
   - unterstuetzung-ergaenzung.yaml
   - kostenvorschau-ergaenzung.yaml
   - produktion-veroeffentlichung-ergaenzung.yaml
+  - umfang-vereinfacht.yaml
+  scope_revision: '2026-10-29: kein CMS, genau zwei Zugänge, Mitarbeiterverwaltung
+    im Ressort.'
 packages:
 - id: A00
   title: Bestand und Schnittstellen
@@ -621,7 +624,7 @@ packages:
   target_versions:
   - '0.4'
 - id: A29
-  title: Mitarbeiterzugänge und persönliche Freigabeaufgaben
+  title: Gemeinsamer Redaktionszugang, Ressorts und Freigaben
   release: Redaktion
   status: planned
   tasks:
@@ -638,11 +641,10 @@ packages:
   - T188
   - T189
   - T194
-  work: Individuelle Benutzer-/Passwortkonten, Rollenrechte, persönliche Arbeitskörbe
-    und versionierte Freigabeentscheidungen mit Auditspur.
-  exit_criteria: Getrennte Konten erfüllen nur berechtigte Aufgaben; automatische
-    KI-Rollen können menschliche Freigaben nicht selbst vollziehen; Zugriffsschutz
-    und Protokoll getestet.
+  work: Zwei getrennte Bedienzugänge; Ressort-Mitarbeiterverwaltung; gemeinsame Aufgaben
+    und versionierte Freigaben.
+  exit_criteria: Keine individuellen Avatarlogins; Einzelbeiträge im Mitarbeiternamen
+    und Pluginshows vollständig bedienbar.
   target_versions:
   - '0.4'
 - id: A30
@@ -658,9 +660,8 @@ packages:
   - T164
   - T191
   - T193
-  - T220
-  work: Gemeinsames Mitarbeiter-/Avatarmodell; Avatar-Erstellungswizard und Assetverwaltung;
-    3D-Upload, Validierung und Vorschau
+  work: Mitarbeiter-/Avataridentität und Erstellungswizard direkt im Ressort, ohne
+    Kontoschritte; 3D-Upload und Vorschau.
   exit_criteria: Akzeptanzkriterien in avatar-wizard-ergaenzung.yaml erfüllt; Uploadfähigkeit
     und Animationsfähigkeit getrennt nachgewiesen.
   target_versions:
@@ -744,6 +745,7 @@ packages:
   - T153
   - T180
   - T187
+  - T193
   - T206
   - T230
   - T240
@@ -835,9 +837,8 @@ packages:
   - T260
   - T271
   - T280
-  work: Berechtigte Kurzvideoaufträge mit Thema, Quellen, Avataroption, Formulierungsprofil
-    und eigenständigem oder showbezogenem Plugin-Renderpfad.; Themengruppen-Auswahl
-    und freie Text-/Medienbeiträge als RSS-äquivalente Eingänge.
+  work: Einzelbeiträge/Kurzvideos im Namen virtueller Mitarbeiter über den gemeinsamen
+    Redaktionsbereich; Themencluster oder freie Text-/Medieneingänge.
   exit_criteria: Mitarbeiterauftrag erzeugt geprüftes Kurzvideo mit Quellen, Freigabe,
     Pflichtarchiv und AI-Label; eigenständige Ausgabe und Showeinbindung geprüft.
   target_versions:
@@ -871,9 +872,9 @@ packages:
   tasks:
   - T310
   external_task_dependencies:
+  - T260
   - T270
   - T271
-  - T260
   - T280
   work: Geschützter Videoupload, Vorschau, Zuschnitt und Einbindung über das Plugin
     uploaded_video mit gemeinsamen Prüfungen und Archivierung.
@@ -1083,6 +1084,7 @@ combined_dependency_layers:
   - T167
   - T202
   - T212
+  - T230
 - - T022
   - T121
   - T122
@@ -1094,10 +1096,12 @@ combined_dependency_layers:
   - T165
   - T168
   - T182
+  - T240
 - - T125
   - T152
   - T153
   - T183
+  - T250
   - T270
 - - T080
   - T126
@@ -1126,37 +1130,34 @@ combined_dependency_layers:
   - T213
   - T215
   - T221
-  - T230
   - T300
   - T321
+  - T340
 - - T194
   - T206
   - T214
   - T231
-  - T240
+  - T241
+  - T253
   - T290
 - - T222
   - T232
-  - T241
-  - T250
+  - T242
+  - T254
   - T292
   - T322
 - - T233
-  - T242
-  - T253
-  - T340
+  - T255
 - - T234
   - T243
-  - T254
-  - T255
+  - T271
 - - T244
   - T251
-  - T271
-- - T252
   - T272
   - T291
   - T310
-- - T301
+- - T252
+  - T301
 - - T302
   - T330
 - - T341

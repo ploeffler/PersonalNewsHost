@@ -7,6 +7,9 @@ meta:
   dependency_policy: Alle maschinenlesbaren depends_on erfüllt spätestens in derselben
     Version; innerhalb der Version topologisch umsetzen. Zusätzliche Freigaberegeln
     gelten vor öffentlichem Release.
+  scope_revision: '2026-10-29: kein CMS, genau zwei Zugänge, Mitarbeiterverwaltung
+    im Ressort.'
+  cms: Entfällt; keine CMS-Entscheidung erforderlich.
 releases:
 - version: '0.1'
   title: Fundament und Nachrichtenauswahl
@@ -112,7 +115,7 @@ releases:
   exit_criteria: Redaktionsworkflow und beleggestütztes Routing laufen mit Fixtures;
     Pluginvertrag und Rundown sind definiert.
 - version: '0.4'
-  title: Konfiguration, Selbstdarstellung, Wizard und Rechte
+  title: Eigene Verwaltung, Selbstdarstellung und gemeinsamer Redaktionszugang
   status: planned
   tasks:
   - T115
@@ -138,8 +141,8 @@ releases:
   - A28
   - A29
   - A41
-  exit_criteria: Geschützte Konfiguration, Wizard, Mitarbeiterrechte und Profilkontext
-    funktionieren mit Mocks; lokale/Cloud-Dienste explizit konfigurierbar.
+  exit_criteria: Zwei getrennte Zugänge; Wizard, Profile, Ressortverwaltung und gemeinsame
+    Freigaben; keine individuellen Mitarbeiterkonten und kein CMS.
 - version: '0.5'
   title: Avatare und Studiogestaltung
   status: planned
@@ -525,7 +528,7 @@ package_release_spans:
     T193: '0.4'
     T194: '0.4'
 - package: A29
-  title: Mitarbeiterzugänge und persönliche Freigabeaufgaben
+  title: Gemeinsamer Redaktionszugang, Ressorts und Freigaben
   versions:
   - '0.4'
   tasks:
