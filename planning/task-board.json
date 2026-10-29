@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 5,
+  "revision": 6,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -139,7 +139,7 @@
       "id": "T012",
       "epic": "E1",
       "title": "Duplikat- und Themenclustering",
-      "status": "in_progress",
+      "status": "todo",
       "depends_on": [
         "T011"
       ],
@@ -156,10 +156,12 @@
       "package": "A03",
       "lease": null,
       "review": null,
-      "local_work_pending": true,
-      "evidence": [],
+      "local_work_pending": false,
+      "evidence": [
+        "92b6ea35ab344c9a3c8dd9a31633e540b6f260fe"
+      ],
       "implementation_note": "",
-      "coordination_note": "Uncommitted local 0.1 work must be reconciled before another client claims this task."
+      "coordination_note": "Existing pending T012 Unicode regex correction and two regression tests integrated in isolated commit; eight selection tests pass with scripts import path. Unrelated provider and configuration changes retained in original checkout."
     },
     {
       "id": "T013",
@@ -5286,6 +5288,15 @@
       "client": "human-ploeffler",
       "at": 1793309527.1207173,
       "note": "Human approval recorded from repository owner in this conversation: PR #169 freigeben und integrieren. Executed on their behalf, not an independent AI review. PR #169 merged into Full-featured-Newsoutlet; inventory coverage and links verified. No version release implied."
+    },
+    {
+      "operation_id": "ebc1561e938b4aa9801c306154a46f9d",
+      "revision": 6,
+      "action": "reconcile",
+      "task": "T012",
+      "client": "codex-t012",
+      "at": 1793310158.8725803,
+      "note": "Existing pending T012 Unicode regex correction and two regression tests integrated in isolated commit; eight selection tests pass with scripts import path. Unrelated provider and configuration changes retained in original checkout."
     }
   ]
 }
