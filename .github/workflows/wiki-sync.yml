@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out documentation
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           persist-credentials: false
 
@@ -46,6 +46,8 @@ jobs:
           cd "$RUNNER_TEMP/wiki"
           python3 - "$GITHUB_WORKSPACE/docs/guide" <<'PY'
           import pathlib
+          import os
+          import shutil
           import re
           import sys
 
@@ -58,12 +60,19 @@ jobs:
               "technik.md": "Technik.md",
               "entwicklung.md": "Entwicklung.md",
           }
+          assets = source / "assets" / "workflows"
+          if assets.is_dir():
+              shutil.copytree(assets, pathlib.Path("assets/workflows"), dirs_exist_ok=True)
           for src, dest in mapping.items():
               text = (source / src).read_text(encoding="utf-8")
               for old, new in mapping.items():
                   text = text.replace(f"]({old})", f"]({new.removesuffix('.md')})")
               # Relative links to repository files resolve differently in a wiki.
               text = re.sub(r'\]\((?:\.\./)+([^):#]+)\)', lambda m: '](' + 'https://github.com/' + 'ploeffler/PersonalNewsHost/blob/main/' + m.group(1) + ')', text)
+              text = text.replace(
+                  "](assets/workflows/",
+                  "](https://raw.githubusercontent.com/wiki/" + os.environ["GH_REPOSITORY"] + "/assets/workflows/",
+              )
               pathlib.Path(dest).write_text(text, encoding="utf-8")
           pathlib.Path("_Sidebar.md").write_text(
               "\n".join(f"- [{label}]({filename.removesuffix('.md')})" for label, filename in [
@@ -78,6 +87,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add Home.md Installation.md Konfiguration.md Betrieb-und-Sicherheit.md Technik.md Entwicklung.md _Sidebar.md
+          if [ -d assets/workflows ]; then git add assets/workflows; fi
           if git diff --cached --quiet; then
             echo "Wiki already up to date."
             exit 0

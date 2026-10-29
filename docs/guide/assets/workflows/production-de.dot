@@ -1,0 +1,16 @@
+digraph workflow {
+  graph [rankdir=TB, bgcolor="white", pad="0.3", nodesep="0.25", ranksep="0.3", fontname="DejaVu Sans", fontsize=20, labelloc=t, label="Produktive Veröffentlichung"];
+  node [shape=box, style="rounded,filled", color="#cbd5e1", fillcolor="#f1f5f9", fontname="DejaVu Sans", fontsize=13, fontcolor="#17243b", margin="0.2,0.13", width=3.5];
+  edge [color="#64748b", arrowsize=0.7, penwidth=1.3];
+  rss [label="RSS-Feeds", fillcolor="#dbeafe"];
+  generator [label="scripts/generate.py\nMeldungen auswählen und Texte aufbereiten", fillcolor="#f1f5f9"];
+  speech [label="Piper TTS\nSprachsegmente erzeugen", fillcolor="#f1f5f9"];
+  video [label="FFmpeg\nVideo, Audio und Untertitel zusammensetzen", fillcolor="#f1f5f9"];
+  files [label="docs/latest.mp4 · docs/index.html\ndocs/transcript.txt · docs/feed.xml", fillcolor="#f1f5f9"];
+  pages [label="GitHub Pages", fillcolor="#dcfce7"];
+  rss -> generator;
+  generator -> speech;
+  speech -> video;
+  video -> files;
+  files -> pages;
+}

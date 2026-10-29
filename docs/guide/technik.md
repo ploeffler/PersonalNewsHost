@@ -4,18 +4,9 @@
 
 ### 1. Produktive Veröffentlichung
 
-```text
-RSS-Feeds
-   ↓
-scripts/generate.py
-   ↓
-Titel und Kurzbeschreibungen → Piper TTS → FFmpeg
-   ↓
-docs/latest.mp4 + docs/index.html
-docs/transcript.txt + docs/feed.xml
-   ↓
-GitHub Pages
-```
+![Produktiver Ablauf von RSS über Sprache und Video zu GitHub Pages](assets/workflows/production-de.png)
+
+[SVG öffnen](assets/workflows/production-de.svg)
 
 Workflow: [Generate news video](https://github.com/ploeffler/PersonalNewsHost/actions/workflows/news.yml)
 
@@ -37,24 +28,9 @@ Die tatsächliche Beschleunigung hängt von Netzwerk, CPU und Spracherzeugung ab
 
 ### 2. Experimentelle parallele Nachrichtensendung
 
-```text
-RSS-Feeds
-   ↓
-scripts/analyze_topics.py
-   ↓
-Themenkandidaten und Quellenhinweise
-   ↓
-scripts/build_broadcast_plan.py
-   ↓
-Intro ───────── MuseTalk + Piper
-Meldungen 1–5 ─ FFmpeg + Piper   (parallel)
-Outro ───────── MuseTalk + Piper
-   ↓
-scripts/assemble_segments.py
-   ↓
-Testvideo als GitHub-Actions-Artefakt
-(keine automatische Veröffentlichung)
-```
+![Experimentelle parallele Produktion von Intro, Nachrichten und Outro](assets/workflows/experimental-de.png)
+
+[SVG öffnen](assets/workflows/experimental-de.svg)
 
 Das Clustering verwendet eine konservative Ähnlichkeitsheuristik. Ähnliche Artikel werden **nicht** zu neuen, vermeintlich bestätigten Fakten verschmolzen: Der gesprochene Beitrag stammt jeweils aus einer führenden RSS-Meldung. Weitere ähnliche Quellen werden als Prüfkandidaten markiert.
 
