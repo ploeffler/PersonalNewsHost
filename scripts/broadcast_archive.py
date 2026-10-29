@@ -11,8 +11,8 @@ STEM = re.compile(r'^broadcasts/\d{8}T\d{6}Z\.(mp4|txt|vtt|srt)$')
 
 def decorate_news(page):
     if 'id="news-overview"' in page:
-        return page
-    section='<section id="news-overview" class="news-overview" aria-labelledby="news-heading">\n<h2 id="news-heading" class="news-section-heading">Nachrichten</h2><p id="news-count" class="news-count">Letzte 24 Stunden</p>\n<p id="news-status" role="status"></p><div id="news-articles"></div>\n<section class="rss-source-section" aria-labelledby="rss-source-heading"><h2 id="rss-source-heading">RSS-Quellen</h2><ul id="rss-source-list"></ul></section>\n</section>'
+        return page.replace('<p id="news-count"', '<p><a href="editorial-pipeline.html">Redaktion und Quellenprüfung</a></p><p id="news-count"',1) if 'href="editorial-pipeline.html"' not in page else page
+    section='<section id="news-overview" class="news-overview" aria-labelledby="news-heading">\n<h2 id="news-heading" class="news-section-heading">Nachrichten</h2><p><a href="editorial-pipeline.html">Redaktion und Quellenprüfung</a></p><p id="news-count" class="news-count">Letzte 24 Stunden</p>\n<p id="news-status" role="status"></p><div id="news-articles"></div>\n<section class="rss-source-section" aria-labelledby="rss-source-heading"><h2 id="rss-source-heading">RSS-Quellen</h2><ul id="rss-source-list"></ul></section>\n</section>'
     page=re.sub(r'<h2>Quellen</h2><ul(?: id="bulletin-sources")?>.*?</ul>',lambda _:section,page,count=1,flags=re.S)
     page=page.replace('</html>','<script src="news-list.js"></script></html>',1)
     page=page.replace('<link rel="stylesheet" href="playlist.css">','<link rel="stylesheet" href="playlist.css"><link rel="stylesheet" href="news-list.css">',1)

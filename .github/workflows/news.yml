@@ -147,16 +147,22 @@ jobs:
           node --version
           npm install --global --no-audit --no-fund rdrr@0.7.0
           rdrr --help >/dev/null
+      - name: Store RSS messages from the last 24 hours
+        if: steps.schedule.outputs.due == 'true'
+        run: |
+          rm -f docs/editorial-report.json
+          python3 scripts/collect_news.py
       - name: Generate latest bulletin
+        id: production
         if: steps.schedule.outputs.due == 'true'
         run: |
           rm -f docs/latest.mp4
           python3 scripts/generate.py
           test -s docs/latest.mp4
           ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 docs/latest.mp4 | grep -q .
-      - name: Store RSS messages from the last 24 hours
+      - name: Mark the approved broadcast groups in the news store
         if: steps.schedule.outputs.due == 'true'
-        run: python3 scripts/collect_news.py
+        run: python3 scripts/collect_news.py --annotations-only
       - name: Sync public configuration for settings page
         if: steps.schedule.outputs.due == 'true'
         env:
@@ -186,3 +192,11 @@ jobs:
           TELEGRAM_CHAT_ID_SECONDARY: ${{ secrets.TELEGRAM_CHAT_ID_SECONDARY }}
           PUBLIC_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: python3 scripts/publish_telegram.py
+      - name: Preserve editorial audit even when no story is approved
+        if: always() && (steps.production.outcome == 'success' || steps.production.outcome == 'failure')
+        uses: actions/upload-artifact@v6
+        with:
+          name: editorial-source-check
+          path: docs/editorial-report.json
+          if-no-files-found: ignore
+          retention-days: 14

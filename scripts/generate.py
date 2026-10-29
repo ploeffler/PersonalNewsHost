@@ -727,27 +727,64 @@ def write_subtitles(parts, boundaries, directory, speech_durations=None):
 
 def main():
     DOCS.mkdir(exist_ok=True)
-    collected, seen = [], set()
-    entry_feeds = {}
-    for url in CONFIG["feeds"]:
+    pipeline_enabled = CONFIG.get("editorial", {}).get("pipeline", {}).get("enabled", True)
+    prepared_by_group = {}
+    if pipeline_enabled:
         try:
-            for entry in items_from_feed(url):
-                title, desc, link = entry[:3]
-                media = entry[3] if len(entry) > 3 else []
-                key = title.casefold()
-                if key not in seen:
-                    seen.add(key)
-                    collected.append((title, desc, link, media))
-                    entry_feeds[(title, link)] = url
-        except Exception as exc:
-            print(f"Feed skipped: {url}: {exc}")
-    if not collected:
-        raise RuntimeError("No RSS entries available; previous published edition remains unchanged")
-    clustering = CONFIG.get("editorial", {}).get("topic_clustering", {})
-    representatives, all_groups = group_news_items(
-        collected, enabled=clustering.get("enabled", True))
-    max_items = max(1, min(int(CONFIG.get("max_items", 5)), 10))
-    story_groups = select_balanced_groups(all_groups, max_items)
+            from scripts.editorial_pipeline import production_plan, verify
+        except ModuleNotFoundError:
+            from editorial_pipeline import production_plan, verify
+        pipeline = CONFIG.get("editorial", {}).get("pipeline", {})
+        if pipeline.get("method", "local_extractive_multi_source") != "local_extractive_multi_source":
+            raise ValueError("Unsupported editorial pipeline method")
+        report, ready = production_plan(
+            DOCS / "news-store.json", dt.datetime.now(dt.timezone.utc).timestamp(),
+            max_sentences=int(CONFIG.get("editorial", {}).get("max_sentences", 2)),
+            limit=int(CONFIG.get("max_items", 5)),
+            max_store_age_minutes=max(1, min(120, int(pipeline.get("max_store_age_minutes", 30)))))
+        story_groups = []
+        entry_feeds = {}
+        for prepared in ready:
+            members = [report["sources"][sid] for sid in prepared["member_ids"]]
+            # Recheck the exact final wording before any voice is synthesized.
+            final_check = verify(prepared["draft"], members, report["sources"])
+            if final_check["status"] != "approved":
+                prepared["verification"] = final_check
+                prepared["selected"] = False
+                report["production_error"] = "approval_invalidated_before_speech"
+                (DOCS / "editorial-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+                raise RuntimeError("Editorial approval invalidated before speech production")
+            group = []
+            for member in members:
+                media = [(asset["url"], asset["kind"]) for asset in member.get("media", [])]
+                entry = (member["title"], member.get("text", ""), member.get("url", ""), media)
+                group.append(entry)
+                entry_feeds[(entry[0], entry[2])] = next(iter(member.get("feed_urls", [])), "")
+                FEED_DATES[entry[2]] = prepared["newest_at"]
+            story_groups.append(group)
+            prepared_by_group[id(group)] = prepared
+    else:
+        collected, seen = [], set()
+        entry_feeds = {}
+        for url in CONFIG["feeds"]:
+            try:
+                for entry in items_from_feed(url):
+                    title, desc, link = entry[:3]
+                    media = entry[3] if len(entry) > 3 else []
+                    key = title.casefold()
+                    if key not in seen:
+                        seen.add(key)
+                        collected.append((title, desc, link, media))
+                        entry_feeds[(title, link)] = url
+            except Exception as exc:
+                print(f"Feed skipped: {url}: {exc}")
+        if not collected:
+            raise RuntimeError("No RSS entries available; previous published edition remains unchanged")
+        clustering = CONFIG.get("editorial", {}).get("topic_clustering", {})
+        representatives, all_groups = group_news_items(
+            collected, enabled=clustering.get("enabled", True))
+        max_items = max(1, min(int(CONFIG.get("max_items", 5)), 10))
+        story_groups = select_balanced_groups(all_groups, max_items)
     section_settings = CONFIG.get("editorial", {}).get("broadcast_sections", {})
     section_plan = prepare_sections(story_groups, entry_feeds, section_settings)
     story_groups = [group for group, section in section_plan]
@@ -781,35 +818,50 @@ def main():
                                 "mentioned_sources": mentions,
                                 "checked_scope": "RSS title and description only",
                                 "independently_verified": False})
-        checked = (crosscheck_headline(title, link, max_results)
-                   if verify_enabled else {"status": "disabled", "matches": [],
-                                           "scope": "headline/topic", "claim_verified": False})
-        checked["original_title"] = title
-        checked["original_url"] = link
-        crosschecks.append(checked)
-        article_text = extract_article_text(link)
-        source_text = article_text or desc
-        print(f"Story {story_idx + 1}: {'rdrr full article' if article_text else 'RSS fallback'}")
-        edited = edit_news(title, source_text, style, max_sentences, limit)
+        prepared = prepared_by_group.get(id(related))
+        if pipeline_enabled:
+            if prepared is None or prepared["verification"]["status"] != "approved":
+                raise RuntimeError("Unapproved story cannot enter the broadcast")
+            edited = prepared["draft"]["text"]
+            checked = {"status": "source_support_approved", "matches": [],
+                       "scope": "stored_source_support", "claim_verified": False,
+                       "pipeline_group_id": prepared["id"], "verification": prepared["verification"]}
+            crosschecks.append(checked)
+            print(f"Story {story_idx + 1}: stored, edited and source-checked group {prepared['id']}")
+        else:
+            checked = (crosscheck_headline(title, link, max_results)
+                       if verify_enabled else {"status": "disabled", "matches": [],
+                                               "scope": "headline/topic", "claim_verified": False})
+            checked["original_title"] = title
+            checked["original_url"] = link
+            crosschecks.append(checked)
+            article_text = extract_article_text(link)
+            source_text = article_text or desc
+            print(f"Story {story_idx + 1}: {'rdrr full article' if article_text else 'RSS fallback'}")
+            edited = edit_news(title, source_text, style, max_sentences, limit)
         if section_settings.get("enabled", False) and (story_idx == 0 or section_ids[story_idx] != section_ids[story_idx - 1]):
             edited = "Nun zum Bereich " + section_labels.get(section_ids[story_idx], "Allgemein") + ".\n" + edited
-        if len(related) > 1:
-            from urllib.parse import urlparse
-            publishers = sorted({(urlparse(x[2]).hostname or "Unbekannt").removeprefix("www.")
-                                 for x in related})
-            edited += "\\n" + "Über dieses Ereignis berichten auch: " + ", ".join(publishers[1:]) + "."
-        if mentions:
-            edited += "\n" + "Im RSS-Beitrag werden als weitere Quellen genannt: " + ", ".join(mentions) + "."
-        if checked["matches"]:
-            publishers = ", ".join(match["publisher"] for match in checked["matches"])
-            edited += "\n" + "Auch " + publishers + " berichten über das Thema. Einzelne Aussagen wurden nicht unabhängig verifiziert."
-        elif checked["status"] == "no_matching_coverage":
-            edited += "\n" + "Bei der automatischen Gegenrecherche wurde keine ausreichend ähnliche Meldung einer anderen Quelle gefunden."
-        elif checked["status"] == "unavailable":
-            edited += "\n" + "Eine unabhängige Gegenrecherche war technisch nicht möglich."
+        if not pipeline_enabled:
+            if len(related) > 1:
+                from urllib.parse import urlparse
+                publishers = sorted({(urlparse(x[2]).hostname or "Unbekannt").removeprefix("www.")
+                                     for x in related})
+                edited += "\\n" + "Über dieses Ereignis berichten auch: " + ", ".join(publishers[1:]) + "."
+            if mentions:
+                edited += "\n" + "Im RSS-Beitrag werden als weitere Quellen genannt: " + ", ".join(mentions) + "."
+            if checked["matches"]:
+                publishers = ", ".join(match["publisher"] for match in checked["matches"])
+                edited += "\n" + "Auch " + publishers + " berichten über das Thema. Einzelne Aussagen wurden nicht unabhängig verifiziert."
+            elif checked["status"] == "no_matching_coverage":
+                edited += "\n" + "Bei der automatischen Gegenrecherche wurde keine ausreichend ähnliche Meldung einer anderen Quelle gefunden."
+            elif checked["status"] == "unavailable":
+                edited += "\n" + "Eine unabhängige Gegenrecherche war technisch nicht möglich."
         parts.append(edited)
     (DOCS / "story-groups.json").write_text(
-        json.dumps([{"headline": group[0][0], "section": section_ids[index], "sources": [
+        json.dumps([{"headline": group[0][0], "section": section_ids[index],
+            "pipeline_group_id": prepared_by_group.get(id(group), {}).get("id"),
+            "editorial_text": prepared_by_group.get(id(group), {}).get("draft", {}).get("text"),
+            "sources": [
             {"title": item[0], "url": item[2], "description": item[1]}
             for item in group]} for index, group in enumerate(story_groups)],
             ensure_ascii=False, indent=2), encoding="utf-8")
@@ -1209,8 +1261,8 @@ def main():
         outro_detail.write_text("\n".join(feed_lines), encoding="utf-8")
         outro_editorial = Path(tmp) / "outro_editorial.txt"
         outro_editorial.write_text(
-            "KI-gestuetzte redaktionelle Bearbeitung:\n"
-            "Quellensuche, Abgleich und Zusammenfassung",
+            "Redaktionelle Bearbeitung:\n"
+            "Quellensynthese und Quellenpruefung",
             encoding="utf-8"
         )
         outro_headline = Path(tmp) / "outro_headline.txt"

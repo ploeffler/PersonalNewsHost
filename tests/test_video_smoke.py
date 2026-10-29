@@ -21,6 +21,7 @@ class VideoSmokeTests(unittest.TestCase):
             image = root / "assets" / "intro.ppm"
             image.write_bytes(b"P6\n2 2\n255\n" + bytes([255, 0, 0] * 4))
             cfg = copy.deepcopy(generate.CONFIG)
+            cfg.setdefault("editorial", {})["pipeline"] = {"enabled": False}
             cfg.update({"title": "Test", "feeds": ["https://example.org/rss"],
                         "max_items": 1, "max_description_chars": 30,
                         "tts_engine": "espeak", "voice_pitch_semitones": 0,

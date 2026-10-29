@@ -47,6 +47,15 @@ class NewsStoreTests(unittest.TestCase):
             self.assertFalse(result['articles'])
             result=m.collect(root,lambda _:feed,now+86402);self.assertFalse(result['articles'])
 
+    def test_every_member_of_a_combined_broadcast_story_is_marked(self):
+        now=2000000
+        items=[{'id':key,'title':'Meldung '+key,'url':'https://example.org/'+key,'text':'Nachrichtentext '+key,'published_at':now-100,'first_seen_at':now-100,'feed_urls':[]} for key in ['a','b']]
+        group={'headline':items[0]['title'],'sources':[{'title':a['title'],'url':a['url']} for a in items]}
+        articles,ids,records=m.annotate(items,[group],{'id':'latest','created_at':now-10},[],now)
+        self.assertEqual(len(ids),2)
+        self.assertEqual({a['broadcast_position'] for a in articles},{1})
+        self.assertTrue(all(a['broadcast_id']=='latest' for a in articles))
+
     def test_expired_selected_message_is_not_reintroduced(self):
         now=2000000
         old={'id':'a','title':'A','url':'https://example.org/a','text':'old','published_at':now-90000,'first_seen_at':now-90000,'feed_urls':[]}

@@ -124,6 +124,11 @@
         "https://www.bmi.gv.at/rss/stmk_presse.xml": "local",
         "https://www.kleinezeitung.at/rss/steiermark": "local"
       }
+    },
+    "pipeline": {
+      "enabled": true,
+      "method": "local_extractive_multi_source",
+      "max_store_age_minutes": 30
     }
   },
   "media": {
