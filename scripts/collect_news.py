@@ -57,8 +57,14 @@ def parse_feed(data,url,now):
             if alternate is not None:link=alternate.get('href','')
         if not link.startswith(('http://','https://')):link=''
         published=timestamp(node.findtext('pubDate') or node.findtext(DC+'date') or node.findtext(ATOM+'published'))
+        media=[]
+        for tag in ('enclosure','{http://search.yahoo.com/mrss/}content','{http://search.yahoo.com/mrss/}thumbnail'):
+            for element in node.findall(tag):
+                candidate=element.get('url','');mime=element.get('type','')
+                kind='video' if mime.startswith('video/') or candidate.split('?')[0].lower().endswith(('.mp4','.webm')) else 'image'
+                if candidate.startswith(('https://','http://')):media.append({'url':candidate,'kind':kind})
         articles.append({'id':identity(link,title,url),'title':title,'text':text,'url':link,'published_at':published,
-                         'first_seen_at':now,'feed_urls':[url]})
+                         'first_seen_at':now,'feed_urls':[url],'media':media})
     return name or urllib.parse.urlsplit(url).hostname,articles
 
 
@@ -93,16 +99,17 @@ def annotate(articles,groups,broadcast,updates,now,historical=()):
         return found
     selected=[];records=[]
     for index,group in enumerate(groups):
-        title=group.get('headline','');source=next(iter(group.get('sources',[])),{})
-        found=find(title,source.get('url',''))
-        if found is None and broadcast.get('created_at'):
-            found={'id':identity(source.get('url',''),title),'title':title,'text':clean(source.get('description','')),
-                   'url':source.get('url',''),'published_at':None,'first_seen_at':broadcast['created_at'],'feed_urls':[]}
-            by_id[found['id']]=found
-        if found:
-            found['broadcast_id']=broadcast.get('id');found['broadcast_position']=index+1;selected.append(found['id'])
-            if not found.get('text'):found['text']=clean(source.get('description',''))
-            records.append({k:found.get(k) for k in ('id','title','url','published_at','first_seen_at','feed_urls')})
+        for source in group.get('sources',[]) or [{}]:
+            title=source.get('title') or group.get('headline','')
+            found=find(title,source.get('url',''))
+            if found is None and broadcast.get('created_at'):
+                found={'id':identity(source.get('url',''),title),'title':title,'text':clean(source.get('description','')),
+                       'url':source.get('url',''),'published_at':None,'first_seen_at':broadcast['created_at'],'feed_urls':[]}
+                by_id[found['id']]=found
+            if found:
+                found['broadcast_id']=broadcast.get('id');found['broadcast_position']=index+1;selected.append(found['id'])
+                if not found.get('text'):found['text']=clean(source.get('description',''))
+                records.append({k:found.get(k) for k in ('id','title','url','published_at','first_seen_at','feed_urls')})
     for update in updates:
         title=update.get('title','');url=update.get('url','');found=find(title,url)
         if found is None:
@@ -153,4 +160,20 @@ def collect(root,fetch=None,now=None):
     print(f'RSS archive: {len(articles)} messages, {len(feeds)} feeds')
     return result
 
-if __name__=='__main__':collect(ROOT)
+def refresh_annotations(root,now=None):
+    root=Path(root);docs=root/'docs';now=now if now is not None else dt.datetime.now(dt.timezone.utc).timestamp()
+    store=read(docs/'news-store.json',{'articles':[],'feeds':[]})
+    latest=max(read(docs/'broadcasts.json',{}).get('broadcasts',[]),key=lambda b:b['created_at'],default={})
+    articles,ids,records=annotate(store.get('articles',[]),read(docs/'story-groups.json',[]),latest,
+                                read(docs/'short-updates.json',{}).get('updates',[]),now,
+                                store.get('latest_broadcast',{}).get('records',[]))
+    store['articles']=articles
+    store['latest_broadcast']={'id':latest.get('id'),'created_at':latest.get('created_at'),'article_ids':ids,'records':records}
+    (docs/'news-store.json').write_text(json.dumps(store,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    return store
+
+if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--annotations-only',action='store_true')
+    args=parser.parse_args()
+    refresh_annotations(ROOT) if args.annotations_only else collect(ROOT)
