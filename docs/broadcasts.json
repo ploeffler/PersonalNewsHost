@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261029T093244Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 29.10.2026 um 10:32 Uhr",
-      "created_at": 1793266364.149245,
-      "sources": [
-        {
-          "title": "Waldheims Wahlkampfleiter gestorben",
-          "url": "https://www.kleinezeitung.at/artikel/41401302/waldheims-wahlkampfleiter-gestorben"
-        },
-        {
-          "title": "Senior nach Crash: „Lasse mir Schein nicht nehmen“",
-          "url": "https://www.krone.at/4353568"
-        },
-        {
-          "title": "Moskau: Über 1.200 ukrainische Drohnen abgewehrt",
-          "url": "https://orf.at/stories/3446481/"
-        },
-        {
-          "title": "Ist es rechtswidrig, dass Flüchtlinge auf die volle Sozialhilfe warten müssen?",
-          "url": "https://www.derstandard.at/story/3000000346295/ist-es-rechtswidrig-dass-fluechtlinge-auf-die-volle-sozialhilfe-warten-muessen?ref=rss"
-        },
-        {
-          "title": "Bei Arbeitsunfall schwer verletzt",
-          "url": ""
-        }
-      ],
-      "video": "broadcasts/20261029T093244Z.mp4",
-      "transcript": "broadcasts/20261029T093244Z.txt",
-      "subtitles": "broadcasts/20261029T093244Z.vtt",
-      "subtitle_download": "broadcasts/20261029T093244Z.srt"
-    },
-    {
       "id": "20261029T165914Z",
       "kind": "broadcast",
       "title": "Nachrichten 29.10.2026 um 17:59 Uhr",
@@ -67,6 +35,46 @@
       "transcript": "broadcasts/20261029T165914Z.txt",
       "subtitles": "broadcasts/20261029T165914Z.vtt",
       "subtitle_download": "broadcasts/20261029T165914Z.srt"
+    },
+    {
+      "id": "20261029T215149Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 29.10.2026 um 22:51 Uhr",
+      "created_at": 1793310709.032737,
+      "video": "broadcasts/20261029T215149Z.mp4",
+      "sources": [
+        {
+          "title": "Frankreich verweigert Martin Sellner die Einreise",
+          "url": "https://www.krone.at/4354651"
+        },
+        {
+          "title": "Frankreich verweigert Rechtsextremisten Sellner Einreise",
+          "url": "https://orf.at/stories/3446554/"
+        },
+        {
+          "title": "Frankreich verweigert Rechtsextremisten Martin Sellner die Einreise",
+          "url": "https://www.derstandard.at/story/3000000346684/frankreich-verweigert-rechtsextremisten-martin-sellner-die-einreise?ref=rss"
+        },
+        {
+          "title": "Sonnenzirkus in Graz: Wie ein Kinderbuch, das zum Leben erwacht",
+          "url": "https://www.kleinezeitung.at/artikel/41400127/sonnenzirkus-in-graz-wie-ein-kinderbuch-das-zum-leben-erwacht"
+        },
+        {
+          "title": "Katze gequält und getötet",
+          "url": ""
+        },
+        {
+          "title": "KI-Kosten brennen Milliardenloch in Amazon-Bilanz",
+          "url": "https://orf.at/stories/3446556/"
+        },
+        {
+          "title": "Nächster WAC-Trainer muss seinen Koffer packen",
+          "url": "https://www.krone.at/4354640"
+        }
+      ],
+      "transcript": "broadcasts/20261029T215149Z.txt",
+      "subtitles": "broadcasts/20261029T215149Z.vtt",
+      "subtitle_download": "broadcasts/20261029T215149Z.srt"
     }
   ]
 }

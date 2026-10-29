@@ -1,24 +1,12 @@
 [
   {
-    "source": "https://www.kleinezeitung.at/artikel/41401154/hitzig-und-witzig-oeblarner-ensemble-tourt-mit-theaterstueck-durchs",
+    "source": "https://www.krone.at/4354651",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
   },
   {
-    "source": "https://www.krone.at/4354439",
-    "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
-    "original_media_retained": true
-  },
-  {
-    "source": "https://www.derstandard.at/story/3000000346294/immer-mehr-menschen-kaufen-einfamilienhaeuser-weil-bauen-zu-teuer-ist?ref=rss",
-    "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
-    "original_media_retained": true
-  },
-  {
-    "source": "https://www.derstandard.at/story/3000000346662/netzentgelte-f252r-strom-sinken-2027-im-gro223teil-214sterreichs?ref=rss",
+    "source": "https://www.kleinezeitung.at/artikel/41400127/sonnenzirkus-in-graz-wie-ein-kinderbuch-das-zum-leben-erwacht",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
@@ -26,5 +14,17 @@
   {
     "source": "",
     "image_origin": "article_metadata_or_rss"
+  },
+  {
+    "source": "https://orf.at/stories/3446556/",
+    "image_origin": "article_metadata_or_rss",
+    "image_processing": "neural_fsrcnn_x2",
+    "original_media_retained": true
+  },
+  {
+    "source": "https://www.krone.at/4354640",
+    "image_origin": "article_metadata_or_rss",
+    "image_processing": "neural_fsrcnn_x2",
+    "original_media_retained": true
   }
 ]
