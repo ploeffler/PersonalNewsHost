@@ -49,3 +49,17 @@ Der GitHub-Actions-Zeitplan prüft stündlich ungefähr um Minute 17 UTC, ob ein
 Die kostenlose CPU-Version ist für ein Budget von **0 € monatlichen Zusatzkosten** ausgelegt, unterliegt aber den GitHub-Freikontingenten und den Bedingungen externer Dienste. Die spätere GPU-Version mit kostenpflichtigen Diensten ist nicht automatisch aktiviert.
 
 Verwende GitHub-Tokens nur auf einer vertrauenswürdigen Konfigurationsseite und niemals in Chats, Issues oder öffentlichen Dateien. Der Browser benötigt für das direkte Speichern einen Token; die Konfigurationsseite ist keine vollwertige Benutzerverwaltung.
+
+
+## Konfigurationsvalidierung (Newsoutlet 0.1 in Arbeit)
+
+`config.schema.json` beschreibt bekannte Felder. Zusätzliche Erweiterungsfelder bleiben während der Migration zulässig; sie sind dadurch nicht automatisch implementiert. Vor Produktion werden Konfiguration, endliche Zahlen und Zeitzone geprüft. Fehler enthalten Feldpfad und Regel, keine Konfigurationswerte.
+
+```bash
+python3 -m pip install -r requirements.txt
+python3 scripts/validate_config.py
+# Alternativ eine private Datei prüfen:
+python3 scripts/validate_config.py /pfad/config.json
+```
+
+Beide Repositorykonfigurationen werden standardmäßig geprüft. Der reguläre News-Workflow validiert nach Laden des privaten Konfigurations-Secrets und vor Produktion; `generate.main()` prüft ebenfalls vor Feed-Abrufen und Dateiausgabe.

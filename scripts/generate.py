@@ -545,6 +545,11 @@ def group_news_items(items, enabled=True):
 
 
 def main():
+    try:
+        from .validate_config import validate_config
+    except ImportError:
+        from validate_config import validate_config
+    validate_config(CONFIG)
     DOCS.mkdir(exist_ok=True)
     collected, seen = [], set()
     for url in CONFIG["feeds"]:

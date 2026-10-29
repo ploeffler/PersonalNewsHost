@@ -1,0 +1,33 @@
+meta:
+  branch: Full-featured-Newsoutlet
+  active_version: '0.1'
+  milestone_reached: false
+  publication_policy: Implementierung erst bei vollständig geprüftem Versionsschritt pushen.
+  planning_commit: bcc6f50
+completed:
+  - id: T002
+    evidence:
+      - config.schema.json
+      - scripts/validate_config.py
+      - tests/test_config_validation.py
+    note: Bekannte Felder validiert, Erweiterungsfelder während Migration zulässig; regulärer Generator und Produktionsworkflow brechen vor Verarbeitung ab.
+in_progress:
+  - id: T001
+    evidence: docs/guide/architektur-ist.md
+    remaining:
+      - Vollständige Prüfung aller experimentellen Skripte und externen Datenflüsse
+      - Diff-/Integrationsprüfung der offenen PRs
+      - Laufzeitmessung der Workflows
+remaining_0_1:
+  - T010
+  - T011
+  - T012
+  - T052
+  - T072
+  - T073
+  - T100
+  - T101
+  - T103
+  - T104
+  - T130
+  - T135

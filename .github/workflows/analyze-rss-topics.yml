@@ -9,6 +9,10 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v5
+      - name: Install configuration validation
+        run: python3 -m pip install --disable-pip-version-check -r requirements.txt
+      - name: Validate configuration
+        run: python3 scripts/validate_config.py
       - name: Run regression tests
         run: python3 -m unittest discover -s tests
       - name: Compare RSS articles across sources
