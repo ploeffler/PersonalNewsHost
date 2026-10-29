@@ -124,6 +124,32 @@ class NewsSelectionTests(unittest.TestCase):
         self.assertEqual(len(groups), 2)
         self.assertEqual(sum(map(len, groups)), 3)
 
+    def test_legacy_output_keeps_all_urls_for_identical_headlines(self):
+        import copy
+        import json
+        import tempfile
+        from unittest.mock import patch
+        class StopBeforeRendering(Exception):
+            pass
+        items = [story('Hochwasser an der Donau verursacht schwere Schäden', host, i)
+                 for i, host in enumerate(['first.example', 'second.example'])]
+        with tempfile.TemporaryDirectory() as directory:
+            root = pathlib.Path(directory)
+            (root / 'docs').mkdir()
+            cfg = copy.deepcopy(news.CONFIG)
+            cfg.pop('shows', None)
+            cfg['feeds'] = ['https://fixture.example/rss']
+            cfg['max_items'] = 5
+            cfg['editorial'] = {'pipeline': {'enabled': False}, 'crosscheck': {'enabled': False}}
+            with patch.object(news, 'ROOT', root), patch.object(news, 'DOCS', root / 'docs'), patch.object(news, 'CONFIG', cfg), patch.object(news, 'items_from_feed', return_value=items), patch.object(news, 'extract_article_text', return_value=''), patch.object(news.tempfile, 'TemporaryDirectory', side_effect=StopBeforeRendering):
+                with self.assertRaises(StopBeforeRendering):
+                    news.main()
+            groups = json.loads((root / 'docs/story-groups.json').read_text())
+            self.assertEqual(len(groups), 1)
+            self.assertEqual({source['url'] for source in groups[0]['sources']}, {item[2] for item in items})
+            transcript = (root / 'docs/transcript.txt').read_text()
+            self.assertIn('Quellen zu diesem Ereignis: first.example, second.example.', transcript)
+
     def test_person_name_alone_is_not_an_event(self):
         a = story('Donald Trump', 'first.example', 1)
         b = story('Donald Trump', 'second.example', 2)

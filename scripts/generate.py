@@ -875,7 +875,7 @@ def main():
                     media = entry[3] if len(entry) > 3 else []
                     if not allowed((title, desc, link, media), url, CONFIG):
                         continue
-                    key = title.casefold()
+                    key = link or (title.casefold(), desc)
                     if key not in seen:
                         seen.add(key)
                         collected.append((title, desc, link, media))
@@ -952,7 +952,7 @@ def main():
                 from urllib.parse import urlparse
                 publishers = sorted({(urlparse(x[2]).hostname or "Unbekannt").removeprefix("www.")
                                      for x in related})
-                edited += "\\n" + "Über dieses Ereignis berichten auch: " + ", ".join(publishers[1:]) + "."
+                edited += "\n" + "Quellen zu diesem Ereignis: " + ", ".join(publishers) + "."
             if mentions:
                 edited += "\n" + "Im RSS-Beitrag werden als weitere Quellen genannt: " + ", ".join(mentions) + "."
             if checked["matches"]:
