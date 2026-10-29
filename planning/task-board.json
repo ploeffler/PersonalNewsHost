@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 4,
+  "revision": 5,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -8,7 +8,7 @@
       "id": "T001",
       "epic": "E0",
       "title": "Code- und Workflow-Inventar erstellen",
-      "status": "review",
+      "status": "done",
       "depends_on": [],
       "instructions": [
         "Lies README.md, config.json, config.example.json, alle Dateien in scripts/, tests/ und .github/workflows/.",
@@ -22,26 +22,21 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A00",
-      "lease": {
-        "client": "codex-t001",
-        "token": "5d6de00d6e3a4f8ba47e85cf127becb2",
-        "expires_at": 1793323766.6314604,
-        "files": [
-          "docs/guide/architektur-ist.md"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-t001",
         "commit": "d44f0c337d677b1a5458f5ae1b0698bc6b328c5c",
         "checks": "PR #169 merged after explicit human approval; 40 scripts, 43 tests, 34 workflows covered; links and git diff --check verified; 22 coordination tests passed during implementation.",
         "files": [
           "docs/guide/architektur-ist.md"
-        ]
+        ],
+        "reviewer": "human-ploeffler",
+        "decision": "Human approval recorded from repository owner in this conversation: PR #169 freigeben und integrieren. Executed on their behalf, not an independent AI review. PR #169 merged into Full-featured-Newsoutlet; inventory coverage and links verified. No version release implied."
       },
       "local_work_pending": false,
       "evidence": [
-        "docs/guide/architektur-ist.md",
-        "bfd1fce13a274c4599e8570d08ed1f8092e01cf5"
+        "d44f0c337d677b1a5458f5ae1b0698bc6b328c5c",
+        "PR #169 merged after explicit human approval; 40 scripts, 43 tests, 34 workflows covered; links and git diff --check verified; 22 coordination tests passed during implementation."
       ],
       "implementation_note": "",
       "coordination_note": "Local T001 draft reviewed and preserved in original checkout; misleading completion appendix replaced by explicit incomplete baseline. Remaining local 0.1 work excluded. Continue inventory through task PR targeting development branch."
@@ -5282,6 +5277,15 @@
       "client": "codex-t001",
       "at": 1793309520.7952504,
       "note": "User explicitly approved and requested integration of PR #169 in this conversation."
+    },
+    {
+      "operation_id": "45f28b7d7d5c4607b22ea30f75bd218f",
+      "revision": 5,
+      "action": "complete",
+      "task": "T001",
+      "client": "human-ploeffler",
+      "at": 1793309527.1207173,
+      "note": "Human approval recorded from repository owner in this conversation: PR #169 freigeben und integrieren. Executed on their behalf, not an independent AI review. PR #169 merged into Full-featured-Newsoutlet; inventory coverage and links verified. No version release implied."
     }
   ]
 }
