@@ -31,6 +31,13 @@ def main():
     source.parent.mkdir(exist_ok=True)
     subprocess.run(['git', 'clone', '--no-checkout', 'https://github.com/OpenTalker/SadTalker.git', str(source)], check=True)
     subprocess.run(['git', '-C', str(source), 'checkout', SADTALKER_REVISION], check=True)
+    # Upstream's fixed revision predates Pillow 10's removal of ANTIALIAS.
+    cropper = source / 'src/utils/croper.py'
+    text = cropper.read_text()
+    if text.count('Image.ANTIALIAS') != 1:
+        raise RuntimeError('Unexpected upstream cropper; compatibility patch needs review')
+    cropper.write_text(text.replace('Image.ANTIALIAS', 'Image.Resampling.LANCZOS'))
+
 
 
 if __name__ == '__main__':
