@@ -1,10 +1,12 @@
 """Regression tests for RSS date parsing, clustering and balanced selection."""
 import importlib.util
 import pathlib
+import sys
 import unittest
 import xml.etree.ElementTree as ET
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
 spec = importlib.util.spec_from_file_location("pnh_generate", ROOT / "scripts" / "generate.py")
 news = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(news)
@@ -74,6 +76,64 @@ class NewsSelectionTests(unittest.TestCase):
         a=story('Hochwasser an der Donau verursacht schwere Schäden', 'first.example', 1)
         b=story('Hochwasser an Donau verursacht schwere Schäden', 'second.example', 2)
         self.assertEqual(len(news.group_news_items([a,b],enabled=False)[1]),2)
+
+    def test_same_publisher_duplicates_keep_distinct_source_urls(self):
+        a = story('Hochwasser an der Donau verursacht schwere Schäden', 'news.example', 1)
+        b = story('Hochwasser an Donau verursacht schwere Schäden', 'news.example', 2)
+        _, groups = news.group_news_items([a, b])
+        self.assertEqual(len(groups), 1)
+        self.assertEqual({x[2] for x in groups[0]}, {a[2], b[2]})
+
+    def test_same_url_from_multiple_feeds_is_one_source(self):
+        a = story('Bahnstrecke gesperrt', 'news.example', 1)
+        _, groups = news.group_news_items([a, a])
+        self.assertEqual(groups, [[a]])
+
+    def test_identical_short_headlines_merge_but_generic_alerts_do_not(self):
+        a = story('Bahnstrecke gesperrt', 'first.example', 1)
+        b = story('Bahnstrecke gesperrt', 'second.example', 2)
+        self.assertEqual(len(news.group_news_items([a, b])[1]), 1)
+        a = story('Eilmeldung', 'first.example', 1)
+        b = story('Eilmeldung', 'second.example', 2)
+        self.assertEqual(len(news.group_news_items([a, b])[1]), 2)
+
+    def test_similar_headlines_with_distinct_places_remain_separate(self):
+        a = story('Schwerer Unfall verursacht lange Sperre in München', 'first.example', 1)
+        b = story('Schwerer Unfall verursacht lange Sperre in Berlin', 'second.example', 2)
+        self.assertEqual(len(news.group_news_items([a, b])[1]), 2)
+
+    def test_descriptions_disambiguate_identical_headlines(self):
+        a = ('Bahnstrecke gesperrt', 'Nach einem Unfall in München.', 'https://first.example/1', [])
+        b = ('Bahnstrecke gesperrt', 'Nach einem Unfall in Berlin.', 'https://second.example/2', [])
+        self.assertEqual(len(news.group_news_items([a, b])[1]), 2)
+
+    def test_permutations_have_same_groups_and_keep_every_source(self):
+        from itertools import permutations
+        items = [story('Hochwasser an der Donau verursacht schwere Schäden', host, i)
+                 for i, host in enumerate(['third.example', 'first.example', 'second.example'])]
+        expected = news.group_news_items(items)
+        for shuffled in permutations(items):
+            self.assertEqual(news.group_news_items(shuffled), expected)
+        self.assertEqual(len(expected[1]), 1)
+        self.assertEqual(len(expected[1][0]), 3)
+
+    def test_complete_link_does_not_join_separate_places_through_bridge(self):
+        items = [story('Schwerer Unfall verursacht lange Sperre' + suffix, host, i)
+                 for i, (suffix, host) in enumerate([('', 'a.example'), (' in Berlin', 'b.example'), (' in München', 'c.example')])]
+        _, groups = news.group_news_items(items)
+        self.assertEqual(len(groups), 2)
+        self.assertEqual(sum(map(len, groups)), 3)
+
+    def test_person_name_alone_is_not_an_event(self):
+        a = story('Donald Trump', 'first.example', 1)
+        b = story('Donald Trump', 'second.example', 2)
+        self.assertEqual(len(news.group_news_items([a, b])[1]), 2)
+
+    def test_disabled_clustering_preserves_iterators_and_order(self):
+        items = [story('Bahnstrecke gesperrt', 'b.example', 1), story('Bahnstrecke gesperrt', 'a.example', 2)]
+        representatives, groups = news.group_news_items(iter(items), enabled=False)
+        self.assertEqual(representatives, items)
+        self.assertEqual(groups, [[items[0]], [items[1]]])
 
     def test_unrelated_stories_stay_separate(self):
         a = story("Unwetter verursacht Schäden in Graz", "orf.at", 1)

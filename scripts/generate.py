@@ -677,44 +677,37 @@ def edit_news(title, description, style, max_sentences, limit):
     return title.rstrip(".!?") + "." + ("\n" + " ".join(selected) if selected else "")
 
 def group_news_items(items, enabled=True):
-    """Conservatively group near-identical headlines from different publishers.
+    """Group event duplicates deterministically, retaining each original source URL.
 
-    Never merge based on a person's name or a broad topic alone.
-    Returns (representative stories, groups of original entries).
+    Complete-link matching prevents unrelated events joining via a broad bridge.
+    The editorial path owns the shared conservative headline/location matcher.
+    Disabled clustering preserves the legacy input order and individual entries.
     """
-    from urllib.parse import urlparse
-    from difflib import SequenceMatcher
-    stop = {"und", "oder", "aber", "eine", "einer", "einem", "einen",
-            "sich", "nach", "über", "wegen", "durch", "gegen", "beim",
-            "sind", "wird", "werden", "heute", "neue", "neuer", "neuen",
-            "auch", "mehr", "dass", "nicht", "jetzt", "schon", "noch"}
-    def tokens(title):
-        return set(w for w in re.findall(r"[^\W_]{4,}", title.casefold(), re.UNICODE)
-                   if w not in stop)
-    def publisher(entry):
-        return (urlparse(entry[2]).hostname or "").removeprefix("www.")
-    def same_event(a, b):
-        ta, tb = tokens(a[0]), tokens(b[0])
-        if len(ta) < 3 or len(tb) < 3:
-            return False
-        overlap = len(ta & tb)
-        containment = overlap / min(len(ta), len(tb))
-        jaccard = overlap / len(ta | tb)
-        similarity = SequenceMatcher(None, a[0].casefold(), b[0].casefold()).ratio()
-        return overlap >= 3 and ((containment >= .8 and jaccard >= .58) or
-                                 (jaccard >= .72 and similarity >= .68))
+    items = list(items)
+    if not enabled:
+        return items, [[item] for item in items]
+    try:
+        from .editorial_pipeline import same_event
+    except ImportError:
+        from editorial_pipeline import same_event
+
+    def article(entry):
+        return {'title': entry[0], 'text': entry[1]}
+
     groups = []
-    for item in items:
-        found = False
-        if enabled:
-            for group in groups:
-                if publisher(item) not in {publisher(x) for x in group} and all(
-                        same_event(item, x) for x in group):
-                    group.append(item)
-                    found = True
-                    break
-        if not found:
+    seen = set()
+    for item in sorted(items, key=lambda x: (-FEED_DATES.get(x[2], 0), x[2], x[0], x[1])):
+        # The same URL read from several feeds is one source, not corroboration.
+        if item[2] and item[2] in seen:
+            continue
+        if item[2]:
+            seen.add(item[2])
+        match = next((group for group in groups if all(
+            same_event(article(item), article(other)) for other in group)), None)
+        if match is None:
             groups.append([item])
+        else:
+            match.append(item)
     return [group[0] for group in groups], groups
 
 
