@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 21,
+  "revision": 22,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1007,7 +1007,7 @@
       "id": "T100",
       "epic": "E9",
       "title": "Provider-Interface, Registry und Mock-Provider",
-      "status": "in_progress",
+      "status": "todo",
       "depends_on": [
         "T002"
       ],
@@ -1027,14 +1027,15 @@
       "package": "A02",
       "lease": null,
       "review": null,
-      "local_work_pending": true,
+      "local_work_pending": false,
       "evidence": [
         "scripts/provider_runtime.py",
         "tests/test_provider_runtime.py",
-        "docs/guide/provider-runtime.md"
+        "docs/guide/provider-runtime.md",
+        "ca25151101f3d87f2b605a36545a8c786d2f3f6c"
       ],
       "implementation_note": "",
-      "coordination_note": "Uncommitted local 0.1 work must be reconciled before another client claims this task."
+      "coordination_note": "Pending T100 provider schema and empty configs integrated after schema validation. Existing runtime already committed. Budget, analysis, cache enhancements and other local edits remain excluded."
     },
     {
       "id": "T101",
@@ -5485,6 +5486,15 @@
       "client": "human-ploeffler",
       "at": 1793313695.0351694,
       "note": "Human owner explicitly confirmed: Geprüft – integrieren und T073 abschließen. Recorded on their behalf, not independent AI review. PR #172 integrated; 265 tests and both GitHub checks pass. Public legal pages remain operator templates; documented scanner/lock limitations accepted. No version release implied."
+    },
+    {
+      "operation_id": "f40b611724f54251b46676b5afeac548",
+      "revision": 22,
+      "action": "reconcile",
+      "task": "T100",
+      "client": "codex-t100",
+      "at": 1793315109.9315264,
+      "note": "Pending T100 provider schema and empty configs integrated after schema validation. Existing runtime already committed. Budget, analysis, cache enhancements and other local edits remain excluded."
     }
   ]
 }
