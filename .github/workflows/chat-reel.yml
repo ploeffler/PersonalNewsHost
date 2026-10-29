@@ -106,8 +106,14 @@ jobs:
       - name: Compose and archive labelled vertical reel
         run: |
           .reel-image/bin/python scripts/reel_show.py compose
-          python3 scripts/security_checks.py --outputs out/chat-reel/
+      - name: Check artifact publication boundary
+        id: pnh_publication_1
+        env:
+          PNH_OUTPUT_PATHS: |
+            out/chat-reel/
+        run: python3 scripts/security_checks.py --outputs-env PNH_OUTPUT_PATHS
       - name: Upload temporary video artifact, never commit to repository
+        if: ${{ steps.pnh_publication_1.outcome == 'success' }}
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: chat-reel-${{ github.run_id }}
