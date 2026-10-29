@@ -21,3 +21,11 @@ Optionen in `config.json` (Vorgaben gelten auch ohne diesen Block):
 ```
 
 Die Grenzen von fünf Einträgen und 24 Stunden sind fest. `enabled: false` stoppt neue Einträge; vorhandene laufen weiter aus. Der öffentliche Status `short-update-state.json` enthält für sieben Tage Artikel-Hashes, Fingerprints und Zeiten zur Wiederholungserkennung, keine archivierten Meldungstexte. Änderungen am Workflow werden erst nach Übernahme auf den Standardbranch aktiv.
+
+## Telegram
+
+Nach erfolgreicher Veröffentlichung sendet der Kurzupdate-Workflow neue Kurzupdates als Text mit Zeit, Quelle und Link zur Kurzupdate-Seite an das vorhandene Telegram-Ziel (`telegram.target`). Voraussetzung sind `telegram.enabled` und die bestehenden Actions-Secrets `TELEGRAM_BOT_TOKEN` sowie `TELEGRAM_CHAT_ID` oder `TELEGRAM_CHAT_ID_SECONDARY`. Mit `short_updates.telegram_enabled: false` lässt sich nur der Kurzupdate-Versand abschalten; der Standard ist `true`.
+
+Bereits versuchte Zustellungen werden pro Ziel und Update-ID sieben Tage in `.state/short-update-telegram.json` erkannt. Der Workflow schreibt diese Kennungen vor dem Netzwerkzugriff ins Repository; Bot-Token, Chat-ID und Meldungstexte stehen nicht im Zustellstatus. Nur Updates aus der letzten Stunde werden zugestellt. Bei Netzfehlern oder unklarer Bestätigung erfolgt kein automatischer Neuversand, um doppelte Meldungen zu verhindern. Das bedeutet: Ein Absturz nach der Reservierung kann eine Zustellung auslassen. Fehlgeschlagene Zustellungen machen den Actions-Lauf rot; die Website bleibt veröffentlicht. Zum gezielten Wiederholen muss die zugehörige Kennung bewusst aus dem Status entfernt werden.
+
+Die Begrenzung auf fünf Einträge und 24 Stunden gilt auf der Website. Telegram-Nachrichten unterliegen weiterhin den Aufbewahrungseinstellungen des Zielchats; der Bot löscht sie nicht automatisch.
