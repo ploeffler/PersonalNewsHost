@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """Local CI: syntax, secrets, document links and tests with network denied."""
 import ast
-import os
+from contextlib import contextmanager
+from html.parser import HTMLParser
 from pathlib import Path
 import re
 import socket
 import subprocess
 import sys
 import unittest
-from urllib.parse import unquote
+from urllib.parse import unquote, urlsplit
+from unittest.mock import patch
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -47,6 +49,56 @@ def no_network(*args,**kwargs):
     raise OSError('Network disabled by offline test runner')
 
 
+class PageLinks(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.targets = []
+        self.anchors = set()
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        for name in ('id', 'name'):
+            if attrs.get(name): self.anchors.add(attrs[name])
+        for name in ('href', 'src', 'poster'):
+            if attrs.get(name): self.targets.append(attrs[name])
+
+
+def site_links(root):
+    """Validate generated HTML local assets and fragment links without HTTP."""
+    root = Path(root).resolve()
+    pages = {}
+    for path in root.rglob('*.html'):
+        parser = PageLinks()
+        parser.feed(path.read_text(encoding='utf-8'))
+        pages[path.resolve()] = parser
+    errors = []
+    for path, parser in pages.items():
+        for target in parser.targets:
+            url = urlsplit(target)
+            if url.scheme or url.netloc: continue
+            target_path = unquote(url.path)
+            destination = ((root / target_path.lstrip('/')) if target_path.startswith('/')
+                           else path.parent / target_path).resolve() if target_path else path
+            if destination.is_dir(): destination = destination / 'index.html'
+            if not destination.is_relative_to(root) or not destination.is_file():
+                errors.append(f'{path.relative_to(root)}: missing or escaping local target {target}')
+            elif url.fragment and destination in pages and unquote(url.fragment) not in pages[destination].anchors:
+                errors.append(f'{path.relative_to(root)}: missing anchor {target}')
+    return errors
+
+
+@contextmanager
+def offline_network():
+    # Reversible Python guard for local runs. CI additionally uses a network
+    # namespace so subprocesses (including FFmpeg) cannot access the network.
+    with patch.object(socket.socket, 'connect', no_network), \
+         patch.object(socket.socket, 'connect_ex', no_network), \
+         patch.object(socket.socket, 'sendto', no_network), \
+         patch.object(socket, 'create_connection', no_network), \
+         patch.object(socket, 'getaddrinfo', no_network):
+        yield
+
+
 def main():
     sys.path.insert(0,str(ROOT))
     paths=tracked()
@@ -56,13 +108,9 @@ def main():
     for error in errors:print(error,file=sys.stderr)
     if errors:return 1
     print('Syntax, secret scan and local Markdown links: OK',flush=True)
-    socket.socket.connect=no_network
-    socket.socket.connect_ex=no_network
-    socket.create_connection=no_network
-    socket.getaddrinfo=no_network
-    socket.socket.sendto=no_network
-    suite=unittest.defaultTestLoader.discover(str(ROOT/'tests'))
-    result=unittest.TextTestRunner(verbosity=1).run(suite)
+    with offline_network():
+        suite=unittest.defaultTestLoader.discover(str(ROOT/'tests'))
+        result=unittest.TextTestRunner(verbosity=1).run(suite)
     return 0 if result.wasSuccessful() else 1
 
 
