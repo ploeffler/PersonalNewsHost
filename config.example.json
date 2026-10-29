@@ -133,5 +133,9 @@
     "enabled": true,
     "freshness_minutes": 60,
     "interval_minutes": 15
+  },
+  "article_enrichment": {
+    "enabled": true,
+    "max_fetches_per_run": 24
   }
 }

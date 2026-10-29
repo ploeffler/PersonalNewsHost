@@ -64,7 +64,8 @@ def parse_feed(data,url,now):
                 kind='video' if mime.startswith('video/') or candidate.split('?')[0].lower().endswith(('.mp4','.webm')) else 'image'
                 if candidate.startswith(('https://','http://')):media.append({'url':candidate,'kind':kind})
         articles.append({'id':identity(link,title,url),'title':title,'text':text,'url':link,'published_at':published,
-                         'first_seen_at':now,'feed_urls':[url],'media':media})
+                         'first_seen_at':now,'feed_urls':[url],'media':media,'rss_text':text,
+                         'rss_revision_at':timestamp(node.findtext(ATOM+'updated')) or published})
     return name or urllib.parse.urlsplit(url).hostname,articles
 
 
@@ -121,7 +122,7 @@ def annotate(articles,groups,broadcast,updates,now,historical=()):
     return merge_articles([],list(by_id.values()),now),selected,records
 
 
-def collect(root,fetch=None,now=None):
+def collect(root,fetch=None,now=None,article_fetch=None):
     root=Path(root);docs=root/'docs';docs.mkdir(exist_ok=True)
     now=now if now is not None else dt.datetime.now(dt.timezone.utc).timestamp()
     config=read(root/'config.json',{});store=read(docs/'news-store.json',{'articles':[],'feeds':[]})
@@ -154,6 +155,13 @@ def collect(root,fetch=None,now=None):
     old_latest=store.get('latest_broadcast',{})
     historical=incoming+store.get('articles',[])+(old_latest.get('records',[]) if old_latest.get('id')==latest.get('id') else [])
     articles,selected,records=annotate(articles,groups,latest,updates,now,historical)
+    try:
+        from scripts.article_enrichment import enrich_articles
+    except ModuleNotFoundError:
+        from article_enrichment import enrich_articles
+    settings=dict(config.get('article_enrichment',{}))
+    if fetch is not None and article_fetch is None:settings['enabled']=False
+    articles=enrich_articles(articles,now,settings=settings,fetch=article_fetch)
     result={'version':1,'updated_at':now,'articles':articles,'feeds':feeds,'seen':seen,
             'latest_broadcast':{'id':latest.get('id'),'created_at':latest.get('created_at'),'article_ids':selected,'records':records}}
     (docs/'news-store.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

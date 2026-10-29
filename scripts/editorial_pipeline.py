@@ -39,12 +39,12 @@ def places(title):
 
 def same_event(first,second):
     a,b=words(first['title']),words(second['title'])
-    pa,pb=places(first['title']+'. '+first.get('text','')),places(second['title']+'. '+second.get('text',''))
-    if pa and pb and not pa&pb:return False
     overlap=len(a&b)
     if overlap<3:return False
     containment=overlap/max(1,min(len(a),len(b)));jaccard=overlap/max(1,len(a|b))
-    return containment>=.78 and jaccard>=.55 and SequenceMatcher(None,first['title'].casefold(),second['title'].casefold()).ratio()>=.58
+    if containment<.78 or jaccard<.55 or SequenceMatcher(None,first['title'].casefold(),second['title'].casefold()).ratio()<.58:return False
+    pa,pb=places(first['title']+'. '+first.get('text','')),places(second['title']+'. '+second.get('text',''))
+    return not (pa and pb and not pa&pb)
 
 
 def age(article):
@@ -184,8 +184,10 @@ def verify(draft,members,sources):
 
 
 def prepare(store,now,max_sentences=2,writer=None):
-    active=[dict(a) for a in store.get('articles',[]) if a.get('id') and a.get('title')
+    eligible=[dict(a) for a in store.get('articles',[]) if a.get('id') and a.get('title')
             and (a.get('published_at') or 0)<=now and now-86400<age(a)<=now]
+    excluded=[{'id':a['id'],'title':a['title'],'url':a.get('url',''),'reason':a.get('exclusion_reason','non_news')} for a in eligible if a.get('content_kind')=='non_news']
+    active=[a for a in eligible if a.get('content_kind')!='non_news']
     sources={a['id']:{**a,'publisher':publisher(a,store.get('feeds',[]))} for a in active}
     results=[]
     for members in grouping(active):
@@ -200,7 +202,7 @@ def prepare(store,now,max_sentences=2,writer=None):
     digest=hashlib.sha256(json.dumps(active,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
     return {'version':1,'mode':'preview','generated_at':now,'source_updated_at':store.get('updated_at'),'source_digest':digest,
             'scope':SCOPE,'method':'local_extractive_multi_source','independent_fact_check':False,
-            'max_sentences':max_sentences,'sources':sources,'groups':results}
+            'max_sentences':max_sentences,'sources':sources,'groups':results,'excluded_articles':excluded}
 
 
 def select(report,limit):

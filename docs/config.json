@@ -143,5 +143,9 @@
     ],
     "prefer_article_images": true
   },
-  "station_logo": "assets/logo-video.png"
+  "station_logo": "assets/logo-video.png",
+  "article_enrichment": {
+    "enabled": true,
+    "max_fetches_per_run": 24
+  }
 }
