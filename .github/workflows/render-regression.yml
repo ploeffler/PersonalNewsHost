@@ -6,6 +6,9 @@ on:
       - 'tests/**'
       - 'assets/**'
       - 'config.json'
+      - 'config.example.json'
+      - 'config.schema.json'
+      - 'requirements.txt'
       - '.github/workflows/render-regression.yml'
   workflow_dispatch:
 permissions:
@@ -20,7 +23,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y --no-install-recommends ffmpeg
-          python3 -m pip install --disable-pip-version-check Pillow
+          python3 -m pip install --disable-pip-version-check Pillow -r requirements.txt
       - name: Test full production layout and regressions
         env:
           PNH_RENDER_SECONDS: '155'
