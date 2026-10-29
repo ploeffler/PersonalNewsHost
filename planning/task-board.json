@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 22,
+  "revision": 23,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1007,7 +1007,7 @@
       "id": "T100",
       "epic": "E9",
       "title": "Provider-Interface, Registry und Mock-Provider",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T002"
       ],
@@ -1025,7 +1025,20 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A02",
-      "lease": null,
+      "lease": {
+        "client": "codex-t100",
+        "token": "6abac36a5c784adf952021e4e4bb46ee",
+        "expires_at": 1793329512.9169931,
+        "files": [
+          "config.example.json",
+          "config.schema.json",
+          "scripts/configured_providers.py",
+          "scripts/provider_runtime.py",
+          "scripts/run_provider.py",
+          "scripts/validate_config.py",
+          "tests/test_configured_providers.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [
@@ -5495,6 +5508,15 @@
       "client": "codex-t100",
       "at": 1793315109.9315264,
       "note": "Pending T100 provider schema and empty configs integrated after schema validation. Existing runtime already committed. Budget, analysis, cache enhancements and other local edits remain excluded."
+    },
+    {
+      "operation_id": "313f075b92f141799cbd747b22b8bef6",
+      "revision": 23,
+      "action": "claim",
+      "task": "T100",
+      "client": "codex-t100",
+      "at": 1793315112.9169931,
+      "note": ""
     }
   ]
 }
