@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 47,
+  "revision": 48,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4587,8 +4587,8 @@
       },
       "review": {
         "author": "codex-promo-lips",
-        "commit": "175847c5c7e9fee82180e554e125edf9ceead53b",
-        "checks": "24 targeted tests passed; English IPA override reaches Piper only for outro; actual Piper phonemizer has no missing symbols; 28.782s comic video with updated voice rendered and audio/video verified. Archive 2026/10/30/5cb1d0c2f615. Independent review pending.",
+        "commit": "4c0fa7323cf11cf19c09c4eca32b1ae050123f7f",
+        "checks": "25 targeted tests passed; explicit host name required before fetch, interactive prompt and chosen-name reuse tested; Petra Maria intro and English brand outro rendered in 28.853s full comic MP4 with audio/video. Archive 2026/10/30/aec361e24621. Independent review pending.",
         "files": [
           "WERBEVIDEO.md",
           "scripts/promo_lips.py",
@@ -5869,6 +5869,15 @@
       "task": "T902",
       "client": "codex-promo-lips",
       "at": 1793325609.8003001,
+      "note": ""
+    },
+    {
+      "operation_id": "da2618ae604f4716a58a8e70b8b759c7",
+      "revision": 48,
+      "action": "submit",
+      "task": "T902",
+      "client": "codex-promo-lips",
+      "at": 1793325707.9990554,
       "note": ""
     }
   ]
