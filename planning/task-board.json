@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 35,
+  "revision": 36,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4511,7 +4511,7 @@
       "id": "T901",
       "epic": "E32",
       "title": "Werbevideo per Repo-Link und RSS lokal als animiertes Gesamtvideo",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T100"
       ],
@@ -4528,7 +4528,18 @@
       "source": "user-chat-2026-10-30",
       "version": "0.1",
       "package": "A00",
-      "lease": null,
+      "lease": {
+        "client": "codex-promo",
+        "token": "98686f435c2d4726ac919e624bed7e64",
+        "expires_at": 1793336748.0099077,
+        "files": [
+          "WERBEVIDEO.md",
+          "planning/project.json",
+          "scripts/promo_network.py",
+          "scripts/promo_video.py",
+          "tests/test_promo_video.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -5694,6 +5705,15 @@
       "client": "codex-promo",
       "at": 1793322345.1014311,
       "note": "Extend T901 write scope to fix inventory count introduced by registration."
+    },
+    {
+      "operation_id": "38642550157c41828d0aa1401680cd5a",
+      "revision": 36,
+      "action": "claim",
+      "task": "T901",
+      "client": "codex-promo",
+      "at": 1793322348.0099077,
+      "note": "User requested proposals for 2D local, 3D local and 3D online. Unconfigured 3D paths remain explicitly unavailable; no upload or paid execution."
     }
   ]
 }
