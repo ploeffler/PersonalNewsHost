@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 36,
+  "revision": 37,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4531,7 +4531,7 @@
       "lease": {
         "client": "codex-promo",
         "token": "98686f435c2d4726ac919e624bed7e64",
-        "expires_at": 1793336748.0099077,
+        "expires_at": 1793336991.3207932,
         "files": [
           "WERBEVIDEO.md",
           "planning/project.json",
@@ -5714,6 +5714,15 @@
       "client": "codex-promo",
       "at": 1793322348.0099077,
       "note": "User requested proposals for 2D local, 3D local and 3D online. Unconfigured 3D paths remain explicitly unavailable; no upload or paid execution."
+    },
+    {
+      "operation_id": "f818b70daf254bf29943b3d6581aaa67",
+      "revision": 37,
+      "action": "heartbeat",
+      "task": "T901",
+      "client": "codex-promo",
+      "at": 1793322591.3207932,
+      "note": "PR https://github.com/ploeffler/PersonalNewsHost/pull/177 head bf605abecc9a9fa3c9d94acc34467d4e0852d2c6. 289 offline tests and real 10.44s local 2D speech/video demo pass; independent t072_review recommends approval. 2D local ready, 3D local/online setup_required proposals only. Await CI before integration."
     }
   ]
 }
