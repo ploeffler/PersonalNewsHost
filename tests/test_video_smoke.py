@@ -21,6 +21,7 @@ class VideoSmokeTests(unittest.TestCase):
             image = root / "assets" / "intro.ppm"
             image.write_bytes(b"P6\n2 2\n255\n" + bytes([255, 0, 0] * 4))
             cfg = copy.deepcopy(generate.CONFIG)
+            cfg.setdefault("editorial", {})["pipeline"] = {"enabled": False}
             cfg.update({"title": "Test", "feeds": ["https://example.org/rss"],
                         "max_items": 1, "max_description_chars": 30,
                         "tts_engine": "espeak", "voice_pitch_semitones": 0,
@@ -30,7 +31,7 @@ class VideoSmokeTests(unittest.TestCase):
                 logo = Image.new("RGBA", (160, 90), (0, 0, 0, 0))
                 logo.paste((255, 0, 0, 255), (80, 0, 160, 90))
                 if station_logo == "default":
-                    logo.save(root / "assets/logo.png")
+                    logo.save(root / "assets/logo-video.png")
                     cfg.pop("station_logo")
                 else:
                     logo.save(root / "assets/station-logo.png")

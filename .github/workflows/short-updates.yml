@@ -1,0 +1,98 @@
+name: Create short news updates
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/short-updates.yml
+      - scripts/video_branding.py
+      - scripts/short_update_video.py
+      - assets/logo-video.png
+      - scripts/article_enrichment.py
+      - scripts/collect_news.py
+      - scripts/short_updates.py
+      - scripts/publish_short_updates_telegram.py
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: personalnewshost-publish
+  cancel-in-progress: false
+jobs:
+  updates:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+      - name: Load private configuration
+        env:
+          PRIVATE_CONFIG: ${{ secrets.PERSONALNEWSHOST_CONFIG }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          if os.environ.get('PRIVATE_CONFIG', '').strip():
+              config = json.loads(os.environ['PRIVATE_CONFIG'])
+              if not isinstance(config, dict):
+                  raise ValueError('Configuration must be an object')
+              Path('config.json').write_text(json.dumps(config))
+          PY
+      - name: Install speech and video tools
+        run: |
+          sudo apt-get update && sudo apt-get install -y espeak-ng ffmpeg
+          python3 -m pip install --disable-pip-version-check Pillow
+      - name: Test short update and Telegram rules
+        run: |
+          python3 -m unittest discover -s tests -p "test_short_updates*.py"
+          python3 -m unittest discover -s tests -p test_telegram.py
+          python3 -m unittest discover -s tests -p test_collect_news.py
+          python3 -m unittest discover -s tests -p test_article_enrichment.py
+      - name: Create updates and expire old entries
+        run: python3 scripts/short_updates.py
+      - name: Store RSS messages from the last 24 hours
+        run: python3 scripts/collect_news.py
+      - name: Publish short updates
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/news-store.json docs/short-updates.json docs/short-update-state.json docs/short-update-audio/ docs/short-update-video/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish short news updates'
+            git push
+          fi
+      - name: Upload public site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+      - name: Deploy public site
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Reserve new Telegram short updates
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_ID_SECONDARY: ${{ secrets.TELEGRAM_CHAT_ID_SECONDARY }}
+          PUBLIC_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: python3 scripts/publish_short_updates_telegram.py --prepare --queue "$RUNNER_TEMP/short-update-telegram-queue.json"
+      - name: Persist Telegram duplicate protection before sending
+        run: |
+          if [ -f .state/short-update-telegram.json ]; then
+            git add .state/short-update-telegram.json
+            if ! git diff --cached --quiet; then
+              git commit -m 'Reserve Telegram short update deliveries'
+              git push
+            fi
+          fi
+      - name: Send Telegram short updates
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_ID_SECONDARY: ${{ secrets.TELEGRAM_CHAT_ID_SECONDARY }}
+          PUBLIC_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: python3 scripts/publish_short_updates_telegram.py --send --queue "$RUNNER_TEMP/short-update-telegram-queue.json"

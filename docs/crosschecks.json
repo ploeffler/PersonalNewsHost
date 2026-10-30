@@ -1,50 +1,147 @@
 [
   {
-    "status": "insufficient_terms",
+    "status": "source_support_approved",
     "matches": [],
-    "scope": "headline/topic",
+    "scope": "stored_source_support",
     "claim_verified": false,
-    "original_title": "Züge kollidiert: Über 60 Todesopfer, Zahl steigt",
-    "original_url": "https://www.krone.at/4352033"
+    "pipeline_group_id": "9e5ec635a09fd5510491c626",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "075de0415cad642d3100f9e2",
+          "supported": true,
+          "quote": "Martin Sellner ist an der Einreise nach Frankreich gehindert worden."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "f1d4de2f1bc59f77d48826cc",
+          "supported": true,
+          "quote": "Der rechtsextreme Aktivist Martin Sellner ist nach eigenen Angaben von den französischen Behörden an der Einreise nach Frankreich gehindert worden."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
   },
   {
-    "status": "other_coverage_found",
-    "matches": [
-      {
-        "publisher": "Yahoo Nachrichten",
-        "publisher_domain": "de.nachrichten.yahoo.com",
-        "headline": "Streit um Brigitte Bardots Erbe: Witwer aus Villa ausgeschlossen - Yahoo Nachrichten",
-        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYzhNTGg3Q1NlV1poeEFjRUczN2dvSHJSNC1LODhSaUJxc01NcWd3Nl9XZnRoallhSnh0TzdiN2VHT1hSMTJHTDNiMG1CZzlwbTkzUEVid29WUVZteWw1YnNWQmJxRVp1d2I3WTZlejU4UjJteUxjMDJwUEFhUk1EblNRN0Judw?oc=5",
-        "overlap": 0.0
-      }
-    ],
-    "scope": "headline/topic",
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
     "claim_verified": false,
-    "original_title": "Streit um Bardots Erbe: Witwer aus Villa ausgeschlossen",
-    "original_url": "https://orf.at/stories/3446411/"
+    "pipeline_group_id": "8214537ddbfe7a3728d091ce",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "03cc270890549cdaab235faf",
+          "supported": true,
+          "quote": "Die Show „Ovo“ wurde vom Cirque du Soleil schon vor 17 Jahren aus der Taufe gehoben und tourt nach wie vor."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "03cc270890549cdaab235faf",
+          "supported": true,
+          "quote": "Noch bis Sonntag gastieren die Weltklasse-Artisten in Graz, wo rund 20.000 Karten für den Sonnenzirkus verkauft wurden."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
   },
   {
-    "status": "insufficient_terms",
+    "status": "source_support_approved",
     "matches": [],
-    "scope": "headline/topic",
+    "scope": "stored_source_support",
     "claim_verified": false,
-    "original_title": "Zaun entlang der B64 bei Unterfladnitz soll Mensch und Tier schützen",
-    "original_url": "https://www.kleinezeitung.at/artikel/41385405/zaun-entlang-der-b64-bei-unterfladnitz-soll-mensch-und-tier-schuetzen"
+    "pipeline_group_id": "ebe1105c68aad45c56c53a81",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "a1ba9ac19fbc1f13900f793c",
+          "supported": true,
+          "quote": "Admont im Bezirk Liezen: Bislang unbekannte Täter quälten in der Nacht zum Mittwoch, 14. Oktober 2026, eine Katze und töteten diese."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "a1ba9ac19fbc1f13900f793c",
+          "supported": true,
+          "quote": "Der Katzenkörper wurde sodann auf ein Kreuz geschraubt."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
   },
   {
-    "status": "insufficient_terms",
+    "status": "source_support_approved",
     "matches": [],
-    "scope": "headline/topic",
+    "scope": "stored_source_support",
     "claim_verified": false,
-    "original_title": "Mit M6-Chip: Apple aktualisiert Macbook Pro und iMac",
-    "original_url": "https://www.derstandard.at/story/3000000346312/mit-m6-chip-apple-aktualisiert-macbook-pro-und-imac?ref=rss"
+    "pipeline_group_id": "dbf15e674586206c2dab12ec",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "18a7bf0578c822a2e7d8957f",
+          "supported": true,
+          "quote": "Überraschend hohe Kosten für den Bau neuer KI-Rechenzentren belasten die Bilanz von Amazon."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "18a7bf0578c822a2e7d8957f",
+          "supported": true,
+          "quote": "Der Barmittelabfluss habe sich in den vergangenen drei Monaten auf 42,4 Milliarden Dollar nahezu versechsfacht, teilte der Onlinehändler heute mit."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
   },
   {
-    "status": "insufficient_terms",
+    "status": "source_support_approved",
     "matches": [],
-    "scope": "headline/topic",
+    "scope": "stored_source_support",
     "claim_verified": false,
-    "original_title": "Fahrgast im Bus gestürzt",
-    "original_url": ""
+    "pipeline_group_id": "210d46a91c68f2527481ada1",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "5ca721284a2b06213539b22a",
+          "supported": true,
+          "quote": "Nachdem Chefcoach Thomas Silberberger und drei Assistenten vorige Woche das Bundesliga-Schlusslicht WAC verlassen mussten, traf es jetzt einen weiteren Trainer, der nach über sechs Jahren gehen muss."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "5ca721284a2b06213539b22a",
+          "supported": true,
+          "quote": "Der Nachfolger soll am Freitag bereits da sein."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
   }
 ]

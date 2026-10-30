@@ -38,8 +38,9 @@ class ProductionRenderTests(unittest.TestCase):
                 image.thumbnail((530, 665))
                 image.save(portrait)
             config = copy.deepcopy(generate.CONFIG)
+            config.setdefault("editorial", {})["pipeline"] = {"enabled": False}
             config.update(max_items=5, feeds=['https://example.org/rss'])
-            config['editorial'] = {'crosscheck': {'enabled': False}, 'topic_clustering': {'enabled': False}}
+            config['editorial'] = {'crosscheck': {'enabled': False}, 'topic_clustering': {'enabled': False}, 'pipeline': {'enabled': False}}
             config['media'] = {'mode': 'images', 'web_image_fallback': False, 'enhancement': 'off'}
             config['presenter_settings']['lip_sync'] = {'enabled': True, 'fps': 20}
             entries = [(f'Meldung {i}', 'Dies ist eine lokale Testmeldung.', f'https://example.org/{i}', []) for i in range(5)]

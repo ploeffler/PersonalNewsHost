@@ -727,27 +727,64 @@ def write_subtitles(parts, boundaries, directory, speech_durations=None):
 
 def main():
     DOCS.mkdir(exist_ok=True)
-    collected, seen = [], set()
-    entry_feeds = {}
-    for url in CONFIG["feeds"]:
+    pipeline_enabled = CONFIG.get("editorial", {}).get("pipeline", {}).get("enabled", True)
+    prepared_by_group = {}
+    if pipeline_enabled:
         try:
-            for entry in items_from_feed(url):
-                title, desc, link = entry[:3]
-                media = entry[3] if len(entry) > 3 else []
-                key = title.casefold()
-                if key not in seen:
-                    seen.add(key)
-                    collected.append((title, desc, link, media))
-                    entry_feeds[(title, link)] = url
-        except Exception as exc:
-            print(f"Feed skipped: {url}: {exc}")
-    if not collected:
-        raise RuntimeError("No RSS entries available; previous published edition remains unchanged")
-    clustering = CONFIG.get("editorial", {}).get("topic_clustering", {})
-    representatives, all_groups = group_news_items(
-        collected, enabled=clustering.get("enabled", True))
-    max_items = max(1, min(int(CONFIG.get("max_items", 5)), 10))
-    story_groups = select_balanced_groups(all_groups, max_items)
+            from scripts.editorial_pipeline import production_plan, verify
+        except ModuleNotFoundError:
+            from editorial_pipeline import production_plan, verify
+        pipeline = CONFIG.get("editorial", {}).get("pipeline", {})
+        if pipeline.get("method", "local_extractive_multi_source") != "local_extractive_multi_source":
+            raise ValueError("Unsupported editorial pipeline method")
+        report, ready = production_plan(
+            DOCS / "news-store.json", dt.datetime.now(dt.timezone.utc).timestamp(),
+            max_sentences=int(CONFIG.get("editorial", {}).get("max_sentences", 2)),
+            limit=int(CONFIG.get("max_items", 5)),
+            max_store_age_minutes=max(1, min(120, int(pipeline.get("max_store_age_minutes", 30)))))
+        story_groups = []
+        entry_feeds = {}
+        for prepared in ready:
+            members = [report["sources"][sid] for sid in prepared["member_ids"]]
+            # Recheck the exact final wording before any voice is synthesized.
+            final_check = verify(prepared["draft"], members, report["sources"])
+            if final_check["status"] != "approved":
+                prepared["verification"] = final_check
+                prepared["selected"] = False
+                report["production_error"] = "approval_invalidated_before_speech"
+                (DOCS / "editorial-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+                raise RuntimeError("Editorial approval invalidated before speech production")
+            group = []
+            for member in members:
+                media = [(asset["url"], asset["kind"]) for asset in member.get("media", [])]
+                entry = (member["title"], member.get("text", ""), member.get("url", ""), media)
+                group.append(entry)
+                entry_feeds[(entry[0], entry[2])] = next(iter(member.get("feed_urls", [])), "")
+                FEED_DATES[entry[2]] = prepared["newest_at"]
+            story_groups.append(group)
+            prepared_by_group[id(group)] = prepared
+    else:
+        collected, seen = [], set()
+        entry_feeds = {}
+        for url in CONFIG["feeds"]:
+            try:
+                for entry in items_from_feed(url):
+                    title, desc, link = entry[:3]
+                    media = entry[3] if len(entry) > 3 else []
+                    key = title.casefold()
+                    if key not in seen:
+                        seen.add(key)
+                        collected.append((title, desc, link, media))
+                        entry_feeds[(title, link)] = url
+            except Exception as exc:
+                print(f"Feed skipped: {url}: {exc}")
+        if not collected:
+            raise RuntimeError("No RSS entries available; previous published edition remains unchanged")
+        clustering = CONFIG.get("editorial", {}).get("topic_clustering", {})
+        representatives, all_groups = group_news_items(
+            collected, enabled=clustering.get("enabled", True))
+        max_items = max(1, min(int(CONFIG.get("max_items", 5)), 10))
+        story_groups = select_balanced_groups(all_groups, max_items)
     section_settings = CONFIG.get("editorial", {}).get("broadcast_sections", {})
     section_plan = prepare_sections(story_groups, entry_feeds, section_settings)
     story_groups = [group for group, section in section_plan]
@@ -781,35 +818,50 @@ def main():
                                 "mentioned_sources": mentions,
                                 "checked_scope": "RSS title and description only",
                                 "independently_verified": False})
-        checked = (crosscheck_headline(title, link, max_results)
-                   if verify_enabled else {"status": "disabled", "matches": [],
-                                           "scope": "headline/topic", "claim_verified": False})
-        checked["original_title"] = title
-        checked["original_url"] = link
-        crosschecks.append(checked)
-        article_text = extract_article_text(link)
-        source_text = article_text or desc
-        print(f"Story {story_idx + 1}: {'rdrr full article' if article_text else 'RSS fallback'}")
-        edited = edit_news(title, source_text, style, max_sentences, limit)
+        prepared = prepared_by_group.get(id(related))
+        if pipeline_enabled:
+            if prepared is None or prepared["verification"]["status"] != "approved":
+                raise RuntimeError("Unapproved story cannot enter the broadcast")
+            edited = prepared["draft"]["text"]
+            checked = {"status": "source_support_approved", "matches": [],
+                       "scope": "stored_source_support", "claim_verified": False,
+                       "pipeline_group_id": prepared["id"], "verification": prepared["verification"]}
+            crosschecks.append(checked)
+            print(f"Story {story_idx + 1}: stored, edited and source-checked group {prepared['id']}")
+        else:
+            checked = (crosscheck_headline(title, link, max_results)
+                       if verify_enabled else {"status": "disabled", "matches": [],
+                                               "scope": "headline/topic", "claim_verified": False})
+            checked["original_title"] = title
+            checked["original_url"] = link
+            crosschecks.append(checked)
+            article_text = extract_article_text(link)
+            source_text = article_text or desc
+            print(f"Story {story_idx + 1}: {'rdrr full article' if article_text else 'RSS fallback'}")
+            edited = edit_news(title, source_text, style, max_sentences, limit)
         if section_settings.get("enabled", False) and (story_idx == 0 or section_ids[story_idx] != section_ids[story_idx - 1]):
             edited = "Nun zum Bereich " + section_labels.get(section_ids[story_idx], "Allgemein") + ".\n" + edited
-        if len(related) > 1:
-            from urllib.parse import urlparse
-            publishers = sorted({(urlparse(x[2]).hostname or "Unbekannt").removeprefix("www.")
-                                 for x in related})
-            edited += "\\n" + "Über dieses Ereignis berichten auch: " + ", ".join(publishers[1:]) + "."
-        if mentions:
-            edited += "\n" + "Im RSS-Beitrag werden als weitere Quellen genannt: " + ", ".join(mentions) + "."
-        if checked["matches"]:
-            publishers = ", ".join(match["publisher"] for match in checked["matches"])
-            edited += "\n" + "Auch " + publishers + " berichten über das Thema. Einzelne Aussagen wurden nicht unabhängig verifiziert."
-        elif checked["status"] == "no_matching_coverage":
-            edited += "\n" + "Bei der automatischen Gegenrecherche wurde keine ausreichend ähnliche Meldung einer anderen Quelle gefunden."
-        elif checked["status"] == "unavailable":
-            edited += "\n" + "Eine unabhängige Gegenrecherche war technisch nicht möglich."
+        if not pipeline_enabled:
+            if len(related) > 1:
+                from urllib.parse import urlparse
+                publishers = sorted({(urlparse(x[2]).hostname or "Unbekannt").removeprefix("www.")
+                                     for x in related})
+                edited += "\\n" + "Über dieses Ereignis berichten auch: " + ", ".join(publishers[1:]) + "."
+            if mentions:
+                edited += "\n" + "Im RSS-Beitrag werden als weitere Quellen genannt: " + ", ".join(mentions) + "."
+            if checked["matches"]:
+                publishers = ", ".join(match["publisher"] for match in checked["matches"])
+                edited += "\n" + "Auch " + publishers + " berichten über das Thema. Einzelne Aussagen wurden nicht unabhängig verifiziert."
+            elif checked["status"] == "no_matching_coverage":
+                edited += "\n" + "Bei der automatischen Gegenrecherche wurde keine ausreichend ähnliche Meldung einer anderen Quelle gefunden."
+            elif checked["status"] == "unavailable":
+                edited += "\n" + "Eine unabhängige Gegenrecherche war technisch nicht möglich."
         parts.append(edited)
     (DOCS / "story-groups.json").write_text(
-        json.dumps([{"headline": group[0][0], "section": section_ids[index], "sources": [
+        json.dumps([{"headline": group[0][0], "section": section_ids[index],
+            "pipeline_group_id": prepared_by_group.get(id(group), {}).get("id"),
+            "editorial_text": prepared_by_group.get(id(group), {}).get("draft", {}).get("text"),
+            "sources": [
             {"title": item[0], "url": item[2], "description": item[1]}
             for item in group]} for index, group in enumerate(story_groups)],
             ensure_ascii=False, indent=2), encoding="utf-8")
@@ -978,7 +1030,24 @@ def main():
             if kind == "image":
                 args += ["-loop", "1", "-framerate", "5", "-i", str(path)]
             else:
-                args +…227 tokens truncated… print(f"RSS {kind} used for story {idx + 1}: {path.name}")
+                args += ["-stream_loop", "-1", "-i", str(path)]
+            start_time = boundaries[idx + 2]
+            end_time = boundaries[idx + 3]
+            media_label = f"rssmedia{idx}"
+            next_label = f"rssscene{idx}"
+            filters.append(
+                f"[{input_index}:v]fps={5 if kind == 'image' else 20},scale=620:384:flags=lanczos:"
+                f"force_original_aspect_ratio=decrease:force_divisible_by=2,"
+                f"pad=620:384:(ow-iw)/2:(oh-ih)/2:color=0x07182b,"
+                f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS[{media_label}]"
+            )
+            filters.append(
+                f"[{current}][{media_label}]overlay=x=60:y=60:"
+                f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})':"
+                f"eof_action=repeat:shortest=0[{next_label}]"
+            )
+            current = next_label
+            print(f"RSS {kind} used for story {idx + 1}: {path.name}")
         # Animate the transparent host with the final narrated WAV.
         # If the optional animation fails, keep the proven static overlay.
         story_host = ROOT / "assets/host.png"
@@ -1192,8 +1261,8 @@ def main():
         outro_detail.write_text("\n".join(feed_lines), encoding="utf-8")
         outro_editorial = Path(tmp) / "outro_editorial.txt"
         outro_editorial.write_text(
-            "KI-gestuetzte redaktionelle Bearbeitung:\n"
-            "Quellensuche, Abgleich und Zusammenfassung",
+            "Redaktionelle Bearbeitung:\n"
+            "Quellensynthese und Quellenpruefung",
             encoding="utf-8"
         )
         outro_headline = Path(tmp) / "outro_headline.txt"
@@ -1228,25 +1297,11 @@ def main():
             )
             current = next_label
         # Apply station branding last so it stays above intro, stories and outro.
-        logo_path = str(CONFIG.get("station_logo", "assets/logo.png")).strip()
-        if logo_path:
-            if not re.fullmatch(r"assets/[A-Za-z0-9_./-]+", logo_path) or ".." in logo_path:
-                raise ValueError("Invalid station logo path")
-            logo = ROOT / logo_path
-            if logo.is_file():
-                logo_input = args.count("-i")
-                args += ["-loop", "1", "-framerate", "5", "-i", str(logo)]
-                filters.append(
-                    f"[{logo_input}:v]scale=160:90:force_original_aspect_ratio=decrease,"
-                    "format=rgba,setsar=1[stationlogo]"
-                )
-                filters.append(
-                    f"[{current}][stationlogo]overlay=x=W-w-30:y=30:"
-                    "eof_action=repeat:shortest=0[withstationlogo]"
-                )
-                current = "withstationlogo"
-            else:
-                print("WARNING: station logo missing; rendering without station logo")
+        try:
+            from scripts.video_branding import apply_branding
+        except ModuleNotFoundError:
+            from video_branding import apply_branding
+        current = apply_branding(args, filters, current, ROOT, CONFIG)
         filters.append(f"[{current}]null[v]")
         args += ["-filter_complex", ";".join(filters), "-map", "[v]", "-map", "1:a",
                  "-c:v", "libx264", "-preset", "ultrafast", "-tune", "stillimage",
@@ -1256,7 +1311,7 @@ def main():
     lines = ["<!doctype html><html lang='de'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>",
              "<title>PersonalNewsHost</title><style>body{font:1.1rem system-ui;background:#13243a;color:white;max-width:900px;margin:3rem auto;padding:1rem}a{color:#8ed6ff}video{width:100%}.site-logo{display:block;width:min(320px,75vw);height:auto;margin:0 auto 1.2rem}.logo-link{display:block;text-align:center}</style>",
              "<a class='logo-link' href='" + BASE + "' aria-label='Zur Nachrichtenseite'><img class='site-logo' src='https://raw.githubusercontent.com/ploeffler/PersonalNewsHost/main/assets/logo.png' alt='PersonalNewsHost Logo'></a><h1>PersonalNewsHost</h1><p>Stand: " + html.escape(timestamp) + "</p>",
-             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'><track kind='subtitles' src='subtitles.de.vtt?v=" + now.strftime("%Y%m%d%H%M%S") + "' srclang='de' label='Deutsch' default></video><p><a href='subtitles.de.srt' download>Untertitel (SRT)</a> · <a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='settings.html'>Konfiguration (Beta)</a> · <a href='browser-studio.html'>Browser-Studio (Beta)</a></p><h2>Quellen</h2><ul>"]
+             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'><track kind='subtitles' src='subtitles.de.vtt?v=" + now.strftime("%Y%m%d%H%M%S") + "' srclang='de' label='Deutsch' default></video><p><a href='subtitles.de.srt' download>Untertitel (SRT)</a> · <a href='short-updates.html'>Kurzupdates</a> · <a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='settings.html'>Konfiguration (Beta)</a> · <a href='browser-studio.html'>Browser-Studio (Beta)</a></p><h2>Quellen</h2><ul>"]
     for story_idx, (title, _, link, _) in enumerate(selected):
         safe = link if link.startswith(("https://", "http://")) else "#"
         lines.append("<li><a rel='noopener noreferrer' href='" + html.escape(safe, quote=True) + "'>" + html.escape(title) + "</a>")
@@ -1280,6 +1335,14 @@ def main():
             '<enclosure url="' + BASE + 'latest.mp4" length="' + str((DOCS / "latest.mp4").stat().st_size) + '" type="video/mp4"/>'
             '</item></channel></rss>')
     (DOCS / "feed.xml").write_text(feed, encoding="utf-8")
+    try:
+        from scripts.broadcast_archive import archive_broadcast, decorate_homepage
+    except ModuleNotFoundError:
+        from broadcast_archive import archive_broadcast, decorate_homepage
+    archive_broadcast(DOCS, now.timestamp(), "Nachrichten " + timestamp,
+                      [{"title": item[0], "url": item[2]} for group in story_groups for item in group])
+    home = DOCS / "index.html"
+    home.write_text(decorate_homepage(home.read_text(encoding="utf-8")), encoding="utf-8")
     print(f"Generated {len(selected)} stories; video size {(DOCS / 'latest.mp4').stat().st_size} bytes")
 
 if __name__ == "__main__":
