@@ -1,5 +1,6 @@
 """Local production voice profile shared with main; never uploads text."""
 import math
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -11,6 +12,15 @@ PRODUCTION_VOICE = {
     'voice_pitch_semitones': -1.5, 'voice': 'de',
     'source': 'main:config.json + scripts/generate.py',
 }
+
+# British English /fʊl ˈfiːtʃəd ˈaʊtlɛt/. Piper 1.8 accepts raw IPA in [[...]].
+# Keep the display/script text intact; override only the fixed spoken outro.
+BRAND_IPA = 'fʊl fˈiːtʃəd ˈaʊtlɛt'
+
+
+def spoken_outro(text):
+    return re.sub(r'(?im)(?<=Erstellt mit )FullFeaturedOutlet(?=\.\s*$)',
+                  '[[' + BRAND_IPA + ']]', text)
 
 
 def synthesize(text, path, root, *, profile=None, fallback=None):
@@ -36,9 +46,12 @@ def synthesize(text, path, root, *, profile=None, fallback=None):
     if engine == 'piper':
         if not binary or not model.is_file() or not model.with_suffix('.onnx.json').is_file():
             raise RuntimeError('Production voice requires Piper and models/de_DE-thorsten-high.onnx plus .onnx.json; select espeak explicitly for fallback')
+        spoken_text = spoken_outro(text)
         subprocess.run([binary, '--model', str(model), '--length-scale', str(length),
                         '--sentence-silence', str(silence), '--output-file', str(path)],
-                       input=text, text=True, check=True, timeout=180, stdout=subprocess.DEVNULL)
+                       input=spoken_text, text=True, check=True, timeout=180, stdout=subprocess.DEVNULL)
+        if spoken_text != text:
+            settings['outro_pronunciation'] = {'brand':'FullfeaturedOutlet', 'language':'en-GB', 'ipa':BRAND_IPA}
     else:
         if fallback is None:
             raise RuntimeError('No local eSpeak adapter supplied')

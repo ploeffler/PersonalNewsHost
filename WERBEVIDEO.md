@@ -107,3 +107,9 @@ Die Animation verformt vorhandene Lippen-/Kinnpixel lokal mit weichem Übergang,
 berücksichtigt bei Farberkennung die Lippenneigung und schließt bei Stille.
 Standard sind 20 fps. Sie bleibt eine Audioenergie-basierte 2D-Näherung,
 keine phonemgenaue neuronale Animation. Ein Fehler beendet die Produktion.
+
+Die Marke im festen Outro wird für Piper separat mit englischen IPA-Phonemen
+`/fʊl ˈfiːtʃəd ˈaʊtlɛt/` übergeben (Piper 1.8: `[[...]]`). Der deutsche
+Satzanfang, sichtbare Text und RSS-Texte bleiben erhalten. Das Manifest
+protokolliert `outro_pronunciation` mit `en-GB`; diese Zusage gilt für Piper,
+nicht für eine bewusst gewählte eSpeak-Ersatzstimme oder angelieferte WAV.
