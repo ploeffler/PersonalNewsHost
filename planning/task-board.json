@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 39,
+  "revision": 40,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4550,6 +4550,32 @@
       ],
       "implementation_note": "Separater 2D-Pfad neben experimenteller neuraler T900-Produktion.",
       "coordination_note": ""
+    },
+    {
+      "id": "T902",
+      "epic": "E32",
+      "title": "Produktions-Lippenkalibrierung und Voice-Profil aus main",
+      "status": "todo",
+      "depends_on": [
+        "T901"
+      ],
+      "instructions": [
+        "Kalibrierbare Lippenlokalisierung und bessere lokale 2D-Lippenbewegung, einschließlich Comic-Szene.",
+        "Piper-Sprachparameter aus funktionierender main-Produktion übernehmen, Herkunft und Fallback sichtbar halten."
+      ],
+      "acceptance": [
+        "Gezielter Mundbereich bleibt auf ausgewähltem Gesicht; Stille und Sprache unterscheiden sich ohne statischen Ersatz.",
+        "Voice-Profil, Offline-Tests und lokaler Render-Smoke dokumentiert."
+      ],
+      "source": "user-chat-2026-10-30-lips-voice",
+      "version": "0.1",
+      "package": "A00",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "",
+      "coordination_note": "Expliziter Folgeauftrag zur Produktion; kein Eingriff in T900."
     }
   ],
   "packages": [
@@ -4559,7 +4585,8 @@
       "tasks": [
         "T001",
         "T900",
-        "T901"
+        "T901",
+        "T902"
       ]
     },
     {
@@ -4989,7 +5016,8 @@
         "T130",
         "T135",
         "T900",
-        "T901"
+        "T901",
+        "T902"
       ],
       "acceptance": "Schema, CI, Provider-Mocks und deterministische Nachrichtenauswahl sind geprüft; keine Produktion externer Inhalte."
     },
@@ -5746,6 +5774,14 @@
       "client": "t072_review",
       "at": 1793322765.192752,
       "note": "Independent AI client review by t072_review; no human review claimed. Reviewed local 2D promo workflow, bounded public retrieval, operator uncertainty, speech/render/archive and mandatory AI label. Original P2 text-overflow case fixed and 13 targeted tests independently passed. Reviewed bf605abe and merge 0f78d1a have identical scoped file contents. GitHub foundation40984106476 and render40984104413 both SUCCESS on exact reviewed head; 289 offline tests and real local demo supplied as integration evidence. Approve T901 completion ONLY for implemented 2D path and explicit render-mode choices; 3D-local/3D-online remain setup_required, not working 3D engines. No version release implied."
+    },
+    {
+      "operation_id": "6d4348d78b1a4377808e1eeebcb763f0",
+      "action": "register",
+      "task": "T902",
+      "client": "codex-promo-lips",
+      "at": 1793324490.2134924,
+      "note": "User requested lips and production voice improvement."
     }
   ]
 }
