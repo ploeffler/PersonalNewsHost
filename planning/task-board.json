@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 38,
+  "revision": 39,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4511,7 +4511,7 @@
       "id": "T901",
       "epic": "E32",
       "title": "Werbevideo per Repo-Link und RSS lokal als animiertes Gesamtvideo",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T100"
       ],
@@ -4528,18 +4528,7 @@
       "source": "user-chat-2026-10-30",
       "version": "0.1",
       "package": "A00",
-      "lease": {
-        "client": "codex-promo",
-        "token": "98686f435c2d4726ac919e624bed7e64",
-        "expires_at": 1793336991.3207932,
-        "files": [
-          "WERBEVIDEO.md",
-          "planning/project.json",
-          "scripts/promo_network.py",
-          "scripts/promo_video.py",
-          "tests/test_promo_video.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-promo",
         "commit": "0f78d1a780dc22fd0cf1a22b58ef4c972f8993e8",
@@ -4550,10 +4539,15 @@
           "scripts/promo_network.py",
           "scripts/promo_video.py",
           "tests/test_promo_video.py"
-        ]
+        ],
+        "reviewer": "t072_review",
+        "decision": "Independent AI client review by t072_review; no human review claimed. Reviewed local 2D promo workflow, bounded public retrieval, operator uncertainty, speech/render/archive and mandatory AI label. Original P2 text-overflow case fixed and 13 targeted tests independently passed. Reviewed bf605abe and merge 0f78d1a have identical scoped file contents. GitHub foundation40984106476 and render40984104413 both SUCCESS on exact reviewed head; 289 offline tests and real local demo supplied as integration evidence. Approve T901 completion ONLY for implemented 2D path and explicit render-mode choices; 3D-local/3D-online remain setup_required, not working 3D engines. No version release implied."
       },
       "local_work_pending": false,
-      "evidence": [],
+      "evidence": [
+        "0f78d1a780dc22fd0cf1a22b58ef4c972f8993e8",
+        "289 offline tests, lint/link/secret checks; 13 targeted tests; actual 10.44s local eSpeak+FFmpeg demo visually inspected. GitHub foundation SUCCESS https://github.com/ploeffler/PersonalNewsHost/actions/runs/40984106476 ; render SUCCESS https://github.com/ploeffler/PersonalNewsHost/actions/runs/40984104413 . Independent t072_review approved after card-overflow fix."
+      ],
       "implementation_note": "Separater 2D-Pfad neben experimenteller neuraler T900-Produktion.",
       "coordination_note": ""
     }
@@ -5743,6 +5737,15 @@
       "client": "codex-promo",
       "at": 1793322728.5655499,
       "note": "PR #177 integrated; 2D local executable, 3D local/online offered as setup_required only. No actual 3D renderer claimed."
+    },
+    {
+      "operation_id": "d72a2b5c12624c22a180c63651904abf",
+      "revision": 39,
+      "action": "complete",
+      "task": "T901",
+      "client": "t072_review",
+      "at": 1793322765.192752,
+      "note": "Independent AI client review by t072_review; no human review claimed. Reviewed local 2D promo workflow, bounded public retrieval, operator uncertainty, speech/render/archive and mandatory AI label. Original P2 text-overflow case fixed and 13 targeted tests independently passed. Reviewed bf605abe and merge 0f78d1a have identical scoped file contents. GitHub foundation40984106476 and render40984104413 both SUCCESS on exact reviewed head; 289 offline tests and real local demo supplied as integration evidence. Approve T901 completion ONLY for implemented 2D path and explicit render-mode choices; 3D-local/3D-online remain setup_required, not working 3D engines. No version release implied."
     }
   ]
 }
