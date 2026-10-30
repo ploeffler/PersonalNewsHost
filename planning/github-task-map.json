@@ -2,7 +2,7 @@
   "schema_version": 1,
   "repository": "ploeffler/PersonalNewsHost",
   "branch": "Full-featured-Newsoutlet",
-  "source_revision": 39,
+  "source_revision": 40,
   "milestones": {
     "0.1": {
       "number": 1,
@@ -769,6 +769,11 @@
     "T901": {
       "number": 176,
       "url": "https://github.com/ploeffler/PersonalNewsHost/issues/176",
+      "milestone": 1
+    },
+    "T902": {
+      "number": 178,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/178",
       "milestone": 1
     }
   }
