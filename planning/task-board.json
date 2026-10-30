@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 33,
+  "revision": 34,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4531,7 +4531,7 @@
       "lease": {
         "client": "codex-promo",
         "token": "1c72a21ee8024ed1b4a05c9ffbf4d243",
-        "expires_at": 1793335269.3113039,
+        "expires_at": 1793336110.8413086,
         "files": [
           "WERBEVIDEO.md",
           "scripts/promo_network.py",
@@ -5686,6 +5686,15 @@
       "client": "codex-promo",
       "at": 1793320869.3113039,
       "note": ""
+    },
+    {
+      "operation_id": "d730ba11405549779946688f4701d758",
+      "revision": 34,
+      "action": "heartbeat",
+      "task": "T901",
+      "client": "codex-promo",
+      "at": 1793321710.8413086,
+      "note": "Resume user-authorized promotional video implementation after PR14 repair. Disjoint from active neural T900 production."
     }
   ]
 }
