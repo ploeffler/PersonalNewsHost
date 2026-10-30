@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 44,
+  "revision": 45,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4561,7 +4561,8 @@
       ],
       "instructions": [
         "Kalibrierbare Lippenlokalisierung und bessere lokale 2D-Lippenbewegung, einschließlich Comic-Szene.",
-        "Piper-Sprachparameter aus funktionierender main-Produktion übernehmen, Herkunft und Fallback sichtbar halten."
+        "Piper-Sprachparameter aus funktionierender main-Produktion übernehmen, Herkunft und Fallback sichtbar halten.",
+        "User follow-up: FullfeaturedOutlet im Outro mit englischen Phonemen sprechen; sichtbaren Text erhalten. T903 ohne Claim in laufenden T902-Dateiumfang konsolidiert."
       ],
       "acceptance": [
         "Gezielter Mundbereich bleibt auf ausgewähltem Gesicht; Stille und Sprache unterscheiden sich ohne statischen Ersatz.",
@@ -4602,32 +4603,6 @@
       "evidence": [],
       "implementation_note": "",
       "coordination_note": "Expliziter Folgeauftrag zur Produktion; kein Eingriff in T900."
-    },
-    {
-      "id": "T903",
-      "epic": "E32",
-      "title": "Englische Markenaussprache im Outro",
-      "status": "todo",
-      "depends_on": [
-        "T901"
-      ],
-      "instructions": [
-        "FullfeaturedOutlet im Outro mit explizit englischen Phonemen sprechen; sichtbaren Text erhalten.",
-        "Vorhandenes Piper-Profil erhalten und neue Audioversion rendern."
-      ],
-      "acceptance": [
-        "Gezielter Mundbereich bleibt auf ausgewähltem Gesicht; Stille und Sprache unterscheiden sich ohne statischen Ersatz.",
-        "Voice-Profil, Offline-Tests und lokaler Render-Smoke dokumentiert."
-      ],
-      "source": "user-chat-2026-10-30-lips-voice",
-      "version": "0.1",
-      "package": "A00",
-      "lease": null,
-      "review": null,
-      "local_work_pending": false,
-      "evidence": [],
-      "implementation_note": "",
-      "coordination_note": "Expliziter Folgeauftrag zur Produktion; kein Eingriff in T900."
     }
   ],
   "packages": [
@@ -4638,8 +4613,7 @@
         "T001",
         "T900",
         "T901",
-        "T902",
-        "T903"
+        "T902"
       ]
     },
     {
@@ -5070,8 +5044,7 @@
         "T135",
         "T900",
         "T901",
-        "T902",
-        "T903"
+        "T902"
       ],
       "acceptance": "Schema, CI, Provider-Mocks und deterministische Nachrichtenauswahl sind geprüft; keine Produktion externer Inhalte."
     },
@@ -5871,6 +5844,14 @@
       "client": "codex-promo-lips",
       "at": 1793325365.9007227,
       "note": ""
+    },
+    {
+      "operation_id": "14399e40730a438faa13532571094393",
+      "action": "consolidate",
+      "task": "T903",
+      "client": "codex-promo-lips",
+      "at": 1793325436.6006804,
+      "note": "Unclaimed duplicate follow-up consolidated into the still-leased T902 scope."
     }
   ]
 }
