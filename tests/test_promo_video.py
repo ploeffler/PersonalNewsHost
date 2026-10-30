@@ -21,10 +21,23 @@ FEED = b'''<rss><channel><title>Beispiel Technik</title><link>https://publisher.
 
 
 def fixture():
-    return promo.preview('https://publisher.example/rss',data=FEED,research=False,count=2)
+    return promo.preview('https://publisher.example/rss',host_name='NewsHost',data=FEED,research=False,count=2)
 
 
 class PromoTests(unittest.TestCase):
+    def test_host_name_must_be_chosen_before_fetching(self):
+        with patch.object(promo,'fetch_public',side_effect=AssertionError('must ask before network')):
+            with self.assertRaisesRegex(ValueError,'Hostnamen'):
+                promo.preview('https://publisher.example/rss')
+        with patch('builtins.input',return_value='Petra Maria') as ask:
+            self.assertEqual(promo.ask_host_name(None,interactive=True),'Petra Maria')
+            ask.assert_called_once()
+        with patch('builtins.input',side_effect=AssertionError('already explicitly chosen')):
+            self.assertEqual(promo.ask_host_name('Petra Maria',interactive=True),'Petra Maria')
+        p=promo.preview('https://publisher.example/rss',host_name='Petra Maria',data=FEED,research=False)
+        self.assertEqual(p['intro'],'Ich bin Petra Maria, herzlich willkommen!')
+        promo.validate_plan(p)
+
     def test_short_summaries_intro_outro_and_host_background_suggestions(self):
         p=fixture();promo.validate_plan(p)
         self.assertEqual(p['intro'],'Ich bin NewsHost, herzlich willkommen!')
@@ -70,14 +83,14 @@ class PromoTests(unittest.TestCase):
     def test_operator_research_follows_legal_page_and_records_self_declaration(self):
         pages={'https://publisher.example/':b'<a href="/impressum">Impressum</a>',
                'https://publisher.example/impressum':b'<p>Medieninhaber: Beispiel Medien GmbH.</p>'}
-        p=promo.preview('https://publisher.example/rss',data=FEED,fetch=lambda u:pages[u])
+        p=promo.preview('https://publisher.example/rss',host_name='NewsHost',data=FEED,fetch=lambda u:pages[u])
         self.assertEqual(p['operator']['status'],'self_declared')
         self.assertEqual(p['operator']['operator'],'Beispiel Medien GmbH')
         self.assertEqual(p['operator']['evidence'][-1]['url'],'https://publisher.example/impressum')
 
     def test_unavailable_operator_is_not_invented(self):
         def unavailable(url):raise OSError('offline')
-        p=promo.preview('https://publisher.example/rss',data=FEED,fetch=unavailable)
+        p=promo.preview('https://publisher.example/rss',host_name='NewsHost',data=FEED,fetch=unavailable)
         self.assertEqual(p['operator']['status'],'unverified');self.assertIsNone(p['operator']['operator'])
 
     def test_research_is_bounded(self):
@@ -85,12 +98,12 @@ class PromoTests(unittest.TestCase):
         def page(url):
             calls.append(url)
             return b'<a href="/impressum">x</a><a href="/legal">x</a><a href="/about">x</a>'
-        promo.preview('https://publisher.example/rss',data=FEED,fetch=page)
+        promo.preview('https://publisher.example/rss',host_name='NewsHost',data=FEED,fetch=page)
         self.assertLessEqual(len(calls),3)
 
     def test_entities_oversize_and_private_urls_are_rejected(self):
         for data in [b'<!DOCTYPE rss [<!ENTITY x "bad">]><rss/>',b'x'*(network.MAX_FEED_BYTES+1)]:
-            with self.assertRaises(ValueError):promo.preview('https://publisher.example/rss',data=data,research=False)
+            with self.assertRaises(ValueError):promo.preview('https://publisher.example/rss',host_name='NewsHost',data=data,research=False)
         for url in ['http://127.0.0.1/rss','http://localhost/rss','http://[::1]/rss','https://example.org/rss?token=private','https://u:p@example.org/rss']:
             with self.assertRaises(ValueError):network.validate_feed_url(url,resolve=False)
         with patch.object(network.socket,'getaddrinfo',return_value=[(2,1,6,'',('127.0.0.1',80))]):
@@ -105,7 +118,7 @@ class PromoTests(unittest.TestCase):
 
     def test_atom_summary_and_homepage(self):
         data=b'<feed xmlns="http://www.w3.org/2005/Atom"><title>Atom</title><link href="https://publisher.example/"/><entry><title>Testmeldung</title><link href="https://publisher.example/a"/><summary>Eine kurze Nachricht.</summary></entry></feed>'
-        p=promo.preview('https://publisher.example/atom',data=data,research=False)
+        p=promo.preview('https://publisher.example/atom',host_name='NewsHost',data=data,research=False)
         self.assertEqual(p['stories'][0]['summary'],'Eine kurze Nachricht.')
 
     @unittest.skipUnless(ctypes.util.find_library('espeak-ng'),'Local eSpeak-NG library required')

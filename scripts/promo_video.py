@@ -16,6 +16,7 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import uuid
 import wave
@@ -134,10 +135,21 @@ def operator_research(feed_url, homepage, feed_title, fetch):
     return result
 
 
-def preview(feed_url, *, count=3, host_name='NewsHost', render_mode='2d-local', data=None, fetch=fetch_public, research=True):
+def ask_host_name(value, *, interactive=False):
+    if value is None:
+        if not interactive:
+            raise ValueError('Bitte den Hostnamen gezielt abfragen und mit --host-name übergeben')
+        try:
+            value = input('Wie heißt der Host? (Intro: Ich bin {Name}, herzlich willkommen!) ')
+        except EOFError as error:
+            raise ValueError('Hostname fehlt; bitte ausdrücklich angeben') from error
+    return bounded(value, 60)
+
+
+def preview(feed_url, *, count=3, host_name=None, render_mode='2d-local', data=None, fetch=fetch_public, research=True):
     validate_feed_url(feed_url, resolve=False)
     if type(count) is not int or not 1 <= count <= 5: raise ValueError('Choose 1 to 5 news items')
-    host_name = bounded(host_name, 60)
+    host_name = ask_host_name(host_name)
     if render_mode not in RENDER_MODES: raise ValueError('Unknown rendering mode')
     data = fetch(feed_url) if data is None else data
     if len(data) > MAX_FEED_BYTES or b'<!DOCTYPE' in data.upper() or b'<!ENTITY' in data.upper():
@@ -300,7 +312,7 @@ def render(plan, output_root, *, style='studio', portrait=None, audio=None, fps=
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__); commands = parser.add_subparsers(dest='command',required=True)
-    prepare = commands.add_parser('preview'); prepare.add_argument('--feed',required=True); prepare.add_argument('--host-name',default='NewsHost'); prepare.add_argument('--count',type=int,default=3); prepare.add_argument('--output',type=Path,default=Path('werbevideo-plan.json')); prepare.add_argument('--feed-file',type=Path); prepare.add_argument('--no-research',action='store_true'); prepare.add_argument('--render-mode',choices=sorted(RENDER_MODES),default='2d-local')
+    prepare = commands.add_parser('preview'); prepare.add_argument('--feed',required=True); prepare.add_argument('--host-name',help='Explizit gewählter Name des Hosts; fehlt er, wird im Terminal nachgefragt'); prepare.add_argument('--count',type=int,default=3); prepare.add_argument('--output',type=Path,default=Path('werbevideo-plan.json')); prepare.add_argument('--feed-file',type=Path); prepare.add_argument('--no-research',action='store_true'); prepare.add_argument('--render-mode',choices=sorted(RENDER_MODES),default='2d-local')
     make = commands.add_parser('render'); make.add_argument('--plan',type=Path,required=True); make.add_argument('--output-root',type=Path,default=Path('out/promo')); make.add_argument('--style',choices=sorted(STYLES),default='studio'); make.add_argument('--portrait',type=Path); make.add_argument('--audio',type=Path); make.add_argument('--fps',type=int,default=20); make.add_argument('--render-mode',choices=sorted(RENDER_MODES)); make.add_argument('--mouth',type=Path,help='JSON calibration'); make.add_argument('--voice-engine',choices=['piper','espeak'])
     calibrate = commands.add_parser('calibrate'); calibrate.add_argument('--portrait',type=Path,required=True); calibrate.add_argument('--region',type=float,nargs=4,required=True,metavar=('X','Y','WIDTH','HEIGHT')); calibrate.add_argument('--manual',action='store_true'); calibrate.add_argument('--output',type=Path,required=True)
     args = parser.parse_args()
@@ -312,12 +324,15 @@ def main():
             calibration(image,mouth).save(args.output.with_suffix('.png'))
             args.output.write_text(json.dumps(mouth,indent=2)+'\n'); print(args.output)
         elif args.command == 'preview':
+            args.host_name = ask_host_name(args.host_name, interactive=sys.stdin.isatty())
             plan = preview(args.feed,count=args.count,host_name=args.host_name,render_mode=args.render_mode,data=args.feed_file.read_bytes() if args.feed_file else None,research=not args.no_research); validate_plan(plan)
             args.output.write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n'); print(args.output)
         else: print(json.dumps(render(json.loads(args.plan.read_text()),args.output_root,style=args.style,portrait=args.portrait,audio=args.audio,fps=args.fps,render_mode=args.render_mode,mouth=json.loads(args.mouth.read_text()) if args.mouth else None,voice_engine=args.voice_engine),ensure_ascii=False))
     except RenderNotConfigured as error:
         print(str(error)); return 2
-    except (OSError,ValueError,KeyError,RuntimeError,ET.ParseError,subprocess.SubprocessError):
+    except ValueError as error:
+        print(str(error)); return 1
+    except (OSError,KeyError,RuntimeError,ET.ParseError,subprocess.SubprocessError):
         print('Werbevideo fehlgeschlagen: Eingaben, Abhängigkeiten und lokalen Plan prüfen. Keine Veröffentlichung erfolgt.'); return 1
     return 0
 
