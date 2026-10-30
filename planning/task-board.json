@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 32,
+  "revision": 33,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4511,7 +4511,7 @@
       "id": "T901",
       "epic": "E32",
       "title": "Werbevideo per Repo-Link und RSS lokal als animiertes Gesamtvideo",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T100"
       ],
@@ -4528,7 +4528,17 @@
       "source": "user-chat-2026-10-30",
       "version": "0.1",
       "package": "A00",
-      "lease": null,
+      "lease": {
+        "client": "codex-promo",
+        "token": "1c72a21ee8024ed1b4a05c9ffbf4d243",
+        "expires_at": 1793335269.3113039,
+        "files": [
+          "WERBEVIDEO.md",
+          "scripts/promo_network.py",
+          "scripts/promo_video.py",
+          "tests/test_promo_video.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -5667,6 +5677,15 @@
       "client": "promo-coordinator",
       "at": 1793320866.996155,
       "note": "Explicit user request for local promotional video workflow; disjoint from active T900 lease."
+    },
+    {
+      "operation_id": "72c32cb609b340779db4a79120648d75",
+      "revision": 33,
+      "action": "claim",
+      "task": "T901",
+      "client": "codex-promo",
+      "at": 1793320869.3113039,
+      "note": ""
     }
   ]
 }
