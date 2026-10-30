@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 34,
+  "revision": 35,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4511,7 +4511,7 @@
       "id": "T901",
       "epic": "E32",
       "title": "Werbevideo per Repo-Link und RSS lokal als animiertes Gesamtvideo",
-      "status": "in_progress",
+      "status": "todo",
       "depends_on": [
         "T100"
       ],
@@ -4528,17 +4528,7 @@
       "source": "user-chat-2026-10-30",
       "version": "0.1",
       "package": "A00",
-      "lease": {
-        "client": "codex-promo",
-        "token": "1c72a21ee8024ed1b4a05c9ffbf4d243",
-        "expires_at": 1793336110.8413086,
-        "files": [
-          "WERBEVIDEO.md",
-          "scripts/promo_network.py",
-          "scripts/promo_video.py",
-          "tests/test_promo_video.py"
-        ]
-      },
+      "lease": null,
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -5695,6 +5685,15 @@
       "client": "codex-promo",
       "at": 1793321710.8413086,
       "note": "Resume user-authorized promotional video implementation after PR14 repair. Disjoint from active neural T900 production."
+    },
+    {
+      "operation_id": "5a2891839e4f4a469f706da7daea7059",
+      "revision": 35,
+      "action": "release",
+      "task": "T901",
+      "client": "codex-promo",
+      "at": 1793322345.1014311,
+      "note": "Extend T901 write scope to fix inventory count introduced by registration."
     }
   ]
 }
