@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 41,
+  "revision": 42,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4555,7 +4555,7 @@
       "id": "T902",
       "epic": "E32",
       "title": "Produktions-Lippenkalibrierung und Voice-Profil aus main",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T901"
       ],
@@ -4584,7 +4584,20 @@
           "tests/test_promo_voice.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-promo-lips",
+        "commit": "c4afd49332bbbfae90690660bd5d91de499677e2",
+        "checks": "23 targeted promo/lips/voice tests passed; git diff --check clean; actual Piper 1.8.0 Thorsten-high local speech and 29.392s comic MP4 rendered at 20 fps with audio/video; calibration and output frame visually inspected. Archive 2026/10/30/74ecf6417707. Independent review pending.",
+        "files": [
+          "WERBEVIDEO.md",
+          "scripts/promo_lips.py",
+          "scripts/promo_video.py",
+          "scripts/promo_voice.py",
+          "tests/test_promo_lips.py",
+          "tests/test_promo_video.py",
+          "tests/test_promo_voice.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -5803,6 +5816,15 @@
       "task": "T902",
       "client": "codex-promo-lips",
       "at": 1793324492.9772165,
+      "note": ""
+    },
+    {
+      "operation_id": "3735fd9e9a1d4d2897c22e70a600164a",
+      "revision": 42,
+      "action": "submit",
+      "task": "T902",
+      "client": "codex-promo-lips",
+      "at": 1793325086.6393569,
       "note": ""
     }
   ]
