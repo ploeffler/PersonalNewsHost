@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 49,
+  "revision": 50,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4587,8 +4587,8 @@
       },
       "review": {
         "author": "codex-promo-lips",
-        "commit": "4c0fa7323cf11cf19c09c4eca32b1ae050123f7f",
-        "checks": "25 targeted tests passed; explicit host name required before fetch, interactive prompt and chosen-name reuse tested; Petra Maria intro and English brand outro rendered in 28.853s full comic MP4 with audio/video. Archive 2026/10/30/aec361e24621. Independent review pending.",
+        "commit": "0291fd3fbc64a8480766ac262523aff9e386307e",
+        "checks": "Fresh choices for host/design/render and preview approval required for each new run. Reuse only on explicit current-run instruction. WERBEVIDEO.md reviewed; git diff --check passed. Prior production: 25 targeted tests and actual full MP4. Independent review pending.",
         "files": [
           "WERBEVIDEO.md",
           "scripts/promo_lips.py",
@@ -5887,6 +5887,15 @@
       "task": "T902",
       "client": "codex-promo-lips",
       "at": 1793325996.871503,
+      "note": ""
+    },
+    {
+      "operation_id": "909c56f6e07f4d36b9021cdd4834ba2a",
+      "revision": 50,
+      "action": "submit",
+      "task": "T902",
+      "client": "codex-promo-lips",
+      "at": 1793326050.0296535,
       "note": ""
     }
   ]
