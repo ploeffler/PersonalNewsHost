@@ -28,12 +28,14 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 try:
     from .collect_news import parse_feed, clean
     from .editorial_pipeline import sentence_units
-    from .lipsync import generate_frames
+    from .promo_lips import generate_frames, locate_lips, calibration
+    from .promo_voice import synthesize, PRODUCTION_VOICE
     from .promo_network import fetch_public, validate_feed_url, MAX_FEED_BYTES
 except ImportError:
     from collect_news import parse_feed, clean
     from editorial_pipeline import sentence_units
-    from lipsync import generate_frames
+    from promo_lips import generate_frames, locate_lips, calibration
+    from promo_voice import synthesize, PRODUCTION_VOICE
     from promo_network import fetch_public, validate_feed_url, MAX_FEED_BYTES
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -166,7 +168,7 @@ def preview(feed_url, *, count=3, host_name='NewsHost', render_mode='2d-local', 
     if not stories: raise ValueError('No usable public news entries')
     return {'schema_version': 1, 'profile': 'werbevideo', 'feed': feed_url, 'title': title,
             'host_name': host_name, 'operator': operator, 'stories': stories,
-            'render_mode': render_mode,
+            'render_mode': render_mode, 'voice_profile': dict(PRODUCTION_VOICE),
             'render_options': [dict(id=key, **value) for key, value in RENDER_MODES.items()],
             'intro': f'Ich bin {host_name}, herzlich willkommen!', 'outro': 'Erstellt mit FullFeaturedOutlet.',
             'background_suggestions': [
@@ -223,7 +225,7 @@ def speak(text, path):
     finally: lib.espeak_Terminate()
 
 
-def render(plan, output_root, *, style='studio', portrait=None, audio=None, fps=12, render_mode=None):
+def render(plan, output_root, *, style='studio', portrait=None, audio=None, fps=20, render_mode=None, mouth=None, voice_engine=None):
     validate_plan(plan)
     selected = render_mode or plan.get('render_mode', '2d-local')
     if selected not in RENDER_MODES: raise ValueError('Unknown rendering mode')
@@ -237,8 +239,13 @@ def render(plan, output_root, *, style='studio', portrait=None, audio=None, fps=
     created = datetime.now(ZoneInfo('Europe/Vienna'))
     with tempfile.TemporaryDirectory(prefix='promo-', dir=output_root) as directory:
         work = Path(directory); wav = work / 'speech.wav'
-        if audio: shutil.copyfile(audio, wav)
-        else: speak('\n\n'.join(segments), wav)
+        if audio:
+            shutil.copyfile(audio, wav)
+            voice_profile = {'actual_engine': 'provided_audio'}
+        else:
+            profile = dict(plan.get('voice_profile', {}))
+            if voice_engine: profile['tts_engine'] = voice_engine
+            voice_profile = synthesize('\n\n'.join(segments), wav, ROOT, profile=profile, fallback=speak)
         with wave.open(str(wav), 'rb') as voice:
             if voice.getsampwidth() != 2 or voice.getnchannels() != 1: raise ValueError('Use mono 16-bit PCM WAV')
             rate = voice.getframerate(); duration = voice.getnframes() / rate
@@ -247,7 +254,8 @@ def render(plan, output_root, *, style='studio', portrait=None, audio=None, fps=
         weights = [len(s) for s in segments]; total = sum(weights); boundaries = []; elapsed = 0
         for weight in weights:
             elapsed += duration * weight / total; boundaries.append(elapsed)
-        frames = work / 'mouth'; count = generate_frames(portrait, wav, frames, fps=fps)
+        selected_mouth = mouth or plan.get('mouth')
+        frames = work / 'mouth'; count = generate_frames(portrait, wav, frames, fps=fps, mouth=selected_mouth)
         background = Image.new('RGB', (960, 540), STYLES[style])
         if style == 'studio' and (ROOT / 'assets/background.jpg').is_file():
             background = ImageOps.fit(Image.open(ROOT / 'assets/background.jpg').convert('RGB'), (960, 540))
@@ -283,7 +291,8 @@ def render(plan, output_root, *, style='studio', portrait=None, audio=None, fps=
         manifest = {'created_at':created.isoformat(),'archive_timezone':'Europe/Vienna','video':str(final.resolve()),
                     'duration_seconds':float(info['format']['duration']),'sha256':hashlib.sha256(final.read_bytes()).hexdigest(),
                     'ai_label':'AI bottom right, every frame','animation':'audio-driven 2D mouth and whole-host motion; not neural/phoneme-accurate',
-                    'published':False,'render_mode':selected,'caption_timing':'proportional estimate','plan':plan}
+                    'published':False,'render_mode':selected,'caption_timing':'proportional estimate','plan':plan,
+                    'voice_profile':voice_profile,'mouth':selected_mouth or {'x':.5,'y':.34,'width':.13,'height':.09}}
         (archive/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
         (archive/'sources.json').write_text(json.dumps([{'title':s['title'],'url':s['url']} for s in plan['stories']],ensure_ascii=False,indent=2)+'\n')
         return manifest
@@ -292,13 +301,20 @@ def render(plan, output_root, *, style='studio', portrait=None, audio=None, fps=
 def main():
     parser = argparse.ArgumentParser(description=__doc__); commands = parser.add_subparsers(dest='command',required=True)
     prepare = commands.add_parser('preview'); prepare.add_argument('--feed',required=True); prepare.add_argument('--host-name',default='NewsHost'); prepare.add_argument('--count',type=int,default=3); prepare.add_argument('--output',type=Path,default=Path('werbevideo-plan.json')); prepare.add_argument('--feed-file',type=Path); prepare.add_argument('--no-research',action='store_true'); prepare.add_argument('--render-mode',choices=sorted(RENDER_MODES),default='2d-local')
-    make = commands.add_parser('render'); make.add_argument('--plan',type=Path,required=True); make.add_argument('--output-root',type=Path,default=Path('out/promo')); make.add_argument('--style',choices=sorted(STYLES),default='studio'); make.add_argument('--portrait',type=Path); make.add_argument('--audio',type=Path); make.add_argument('--fps',type=int,default=12); make.add_argument('--render-mode',choices=sorted(RENDER_MODES))
+    make = commands.add_parser('render'); make.add_argument('--plan',type=Path,required=True); make.add_argument('--output-root',type=Path,default=Path('out/promo')); make.add_argument('--style',choices=sorted(STYLES),default='studio'); make.add_argument('--portrait',type=Path); make.add_argument('--audio',type=Path); make.add_argument('--fps',type=int,default=20); make.add_argument('--render-mode',choices=sorted(RENDER_MODES)); make.add_argument('--mouth',type=Path,help='JSON calibration'); make.add_argument('--voice-engine',choices=['piper','espeak'])
+    calibrate = commands.add_parser('calibrate'); calibrate.add_argument('--portrait',type=Path,required=True); calibrate.add_argument('--region',type=float,nargs=4,required=True,metavar=('X','Y','WIDTH','HEIGHT')); calibrate.add_argument('--manual',action='store_true'); calibrate.add_argument('--output',type=Path,required=True)
     args = parser.parse_args()
     try:
-        if args.command == 'preview':
+        if args.command == 'calibrate':
+            image = Image.open(args.portrait).convert('RGBA')
+            region = dict(zip(('x','y','width','height'),args.region))
+            mouth = region if args.manual else locate_lips(image,region)
+            calibration(image,mouth).save(args.output.with_suffix('.png'))
+            args.output.write_text(json.dumps(mouth,indent=2)+'\n'); print(args.output)
+        elif args.command == 'preview':
             plan = preview(args.feed,count=args.count,host_name=args.host_name,render_mode=args.render_mode,data=args.feed_file.read_bytes() if args.feed_file else None,research=not args.no_research); validate_plan(plan)
             args.output.write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n'); print(args.output)
-        else: print(json.dumps(render(json.loads(args.plan.read_text()),args.output_root,style=args.style,portrait=args.portrait,audio=args.audio,fps=args.fps,render_mode=args.render_mode),ensure_ascii=False))
+        else: print(json.dumps(render(json.loads(args.plan.read_text()),args.output_root,style=args.style,portrait=args.portrait,audio=args.audio,fps=args.fps,render_mode=args.render_mode,mouth=json.loads(args.mouth.read_text()) if args.mouth else None,voice_engine=args.voice_engine),ensure_ascii=False))
     except RenderNotConfigured as error:
         print(str(error)); return 2
     except (OSError,ValueError,KeyError,RuntimeError,ET.ParseError,subprocess.SubprocessError):

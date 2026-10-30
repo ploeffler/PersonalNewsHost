@@ -144,5 +144,18 @@ class PromoTests(unittest.TestCase):
                 with self.assertRaises(ValueError):promo.render(fixture(),root/'out',audio=audio)
             self.assertFalse(list((root/'out').rglob('*.mp4')))
 
+    def test_production_voice_and_calibration_reach_render_adapters(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d); mouth={'x':.5,'y':.3,'width':.1,'height':.08}
+            def speech(text,path,*args,**kwargs):
+                with wave.open(str(path),'wb') as wav:
+                    wav.setparams((1,2,16000,0,'NONE','not compressed'));wav.writeframes(b'\x10\x08'*16000)
+                return {'actual_engine':'piper'}
+            with patch.object(promo,'synthesize',side_effect=speech) as voice, patch.object(promo,'generate_frames',side_effect=ValueError('stop after adapters')) as frames:
+                with self.assertRaises(ValueError):promo.render(fixture(),root/'out',mouth=mouth)
+                self.assertEqual(voice.call_args.kwargs['profile']['tts_engine'],'piper')
+                self.assertEqual(frames.call_args.kwargs['mouth'],mouth)
+                self.assertEqual(frames.call_args.kwargs['fps'],20)
+
 
 if __name__=='__main__':unittest.main()

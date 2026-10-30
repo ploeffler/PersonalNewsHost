@@ -52,7 +52,7 @@ python3 scripts/promo_video.py render \
   --plan werbevideo-plan.json --style studio --output-root out/promo
 ```
 
-`--style` erlaubt `studio`, `technik` und `neutral`. `--portrait /pfad/host.png` verwendet ein eigenes transparentes Porträt mit passender Mundposition (Standard: x=0,5 / y=0,34). `--audio /pfad/sprache.wav` übernimmt eine selbst erzeugte vollständige Sprachspur als Mono-PCM-WAV mit 16 Bit; sie muss Intro, Nachrichten und Outro in dieser Reihenfolge enthalten. Ohne diese Option erfolgt die Sprache lokal mit eSpeak-NG. Untertitel-/Textkartenzeiten werden proportional geschätzt; der Host folgt der gesamten echten Tonspur.
+`--style` erlaubt `studio`, `technik` und `neutral`. `--portrait /pfad/host.png` verwendet ein eigenes transparentes Porträt mit passender Mundposition (Standard: x=0,5 / y=0,34). `--audio /pfad/sprache.wav` übernimmt eine selbst erzeugte vollständige Sprachspur als Mono-PCM-WAV mit 16 Bit; sie muss Intro, Nachrichten und Outro in dieser Reihenfolge enthalten. Ohne diese Option erfolgt die Sprache lokal mit Piper und dem Produktionsprofil aus `main` (Thorsten high, Länge 1,06, Satzpause 0,38 s, Pitch −1,5 Halbtöne). Untertitel-/Textkartenzeiten werden proportional geschätzt; der Host folgt der gesamten echten Tonspur.
 
 Offline mit einer gespeicherten RSS-Datei: `preview --feed ... --feed-file feed.xml --no-research`. Dann sind weder Feedabruf noch Betreiberrecherche erforderlich. Ohne `--no-research` kann auch bei einer lokalen Feeddatei die öffentliche Website recherchiert werden.
 
@@ -71,3 +71,39 @@ Die Vorschau enthält `render_options` und `render_mode`:
 Beispiel: `preview --feed ... --render-mode 3d-online --output werbevideo-plan.json` legt die gewünschte Variante im Plan fest. `render --plan werbevideo-plan.json` startet für eine nicht eingerichtete Variante **keinen** Auftrag und fällt **nicht automatisch auf 2D zurück**. Der gezielte Wechsel auf 2D ist mit `render --plan ... --render-mode 2d-local` möglich.
 
 Vor einem künftigen Online-3D-Auftrag muss der Chat Anbieter, Preisgrundlage, Kostenschätzung, Uploads und Aufbewahrung nennen. Zu übertragende Daten wären die freigegebenen Texte/Sprachspur, Avatar-/Studiomedien und Renderparameter. Ohne eingerichteten Anbieter ist die Schätzung ausdrücklich unbekannt, nicht 0 €. Zugangsdaten gehören nicht in den Plan. Erst nach ausdrücklicher Freigabe darf ein Online-Auftrag gestartet werden. Dieser Stand implementiert die Auswahl und Vorbereitung, noch keinen Blender- oder Cloud-Renderadapter.
+
+
+## Produktionsstimme und Lippenkalibrierung
+
+Die lokale Standardstimme entspricht `main:config.json` und `scripts/generate.py`:
+Piper, `de_DE-thorsten-high`, `piper_length_scale=1.06`, Satzpause `0.38`,
+`voice_pitch_semitones=-1.5` bei erhaltener Sprechdauer. Benötigt werden `piper`
+im PATH oder `.venv-promo/bin/piper` sowie `models/de_DE-thorsten-high.onnx`
+und die zugehörige `.onnx.json`. Für diese Produktion wurde Piper 1.8.0 getestet.
+Es gibt keinen stillen Wechsel zu eSpeak; `render --voice-engine espeak` wählt
+bewusst die Ersatzstimme. Externe WAVs bleiben mit `--audio` möglich.
+Das Manifest enthält die tatsächliche Engine und die verwendeten Parameter.
+
+Für andere Gesichter zuerst den Mund kalibrieren. Alle vier Werte sind auf das
+Originalbild normiert (Mittelpunkt x/y, Breite, Höhe). Die Suchregion muss den
+Mund der ausgewählten sprechenden Person umschließen:
+
+```bash
+python3 scripts/promo_video.py calibrate --portrait host.png \
+  --region 0.50 0.34 0.18 0.10 --output mouth.json
+python3 scripts/promo_video.py render --plan werbevideo-plan.json \
+  --portrait host.png --mouth mouth.json --fps 20
+```
+
+`calibrate` sucht eine zusammenhängende Lippenfarbe nur innerhalb dieser Region
+und speichert eine PNG mit Kontrollrahmen neben der JSON. Diese Farbsuche eignet
+sich insbesondere für deutlichen Lippenstift, ist keine allgemeine Gesichts-
+oder Landmarkenerkennung. Bei unsicherer Farbe die Region enger wählen oder
+mit `--manual` die vermessene Mundbox direkt speichern. Die Kontrollgrafik vor
+Produktion prüfen. Mehrere Personen erfordern eine gezielte Region je Sprecher;
+Mitarbeiter oder der zweite Host werden nicht automatisch mitanimiert.
+
+Die Animation verformt vorhandene Lippen-/Kinnpixel lokal mit weichem Übergang,
+berücksichtigt bei Farberkennung die Lippenneigung und schließt bei Stille.
+Standard sind 20 fps. Sie bleibt eine Audioenergie-basierte 2D-Näherung,
+keine phonemgenaue neuronale Animation. Ein Fehler beendet die Produktion.
