@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 42,
+  "revision": 43,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4602,6 +4602,32 @@
       "evidence": [],
       "implementation_note": "",
       "coordination_note": "Expliziter Folgeauftrag zur Produktion; kein Eingriff in T900."
+    },
+    {
+      "id": "T903",
+      "epic": "E32",
+      "title": "Englische Markenaussprache im Outro",
+      "status": "todo",
+      "depends_on": [
+        "T901"
+      ],
+      "instructions": [
+        "FullfeaturedOutlet im Outro mit explizit englischen Phonemen sprechen; sichtbaren Text erhalten.",
+        "Vorhandenes Piper-Profil erhalten und neue Audioversion rendern."
+      ],
+      "acceptance": [
+        "Gezielter Mundbereich bleibt auf ausgewähltem Gesicht; Stille und Sprache unterscheiden sich ohne statischen Ersatz.",
+        "Voice-Profil, Offline-Tests und lokaler Render-Smoke dokumentiert."
+      ],
+      "source": "user-chat-2026-10-30-lips-voice",
+      "version": "0.1",
+      "package": "A00",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "",
+      "coordination_note": "Expliziter Folgeauftrag zur Produktion; kein Eingriff in T900."
     }
   ],
   "packages": [
@@ -4612,7 +4638,8 @@
         "T001",
         "T900",
         "T901",
-        "T902"
+        "T902",
+        "T903"
       ]
     },
     {
@@ -5043,7 +5070,8 @@
         "T135",
         "T900",
         "T901",
-        "T902"
+        "T902",
+        "T903"
       ],
       "acceptance": "Schema, CI, Provider-Mocks und deterministische Nachrichtenauswahl sind geprüft; keine Produktion externer Inhalte."
     },
@@ -5826,6 +5854,14 @@
       "client": "codex-promo-lips",
       "at": 1793325086.6393569,
       "note": ""
+    },
+    {
+      "operation_id": "85e6f7ed93f3442899cfc7ce15522d17",
+      "action": "register",
+      "task": "T903",
+      "client": "codex-promo-lips",
+      "at": 1793325335.2635734,
+      "note": "User requested lips and production voice improvement."
     }
   ]
 }
