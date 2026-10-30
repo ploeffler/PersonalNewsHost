@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 45,
+  "revision": 46,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4587,8 +4587,8 @@
       },
       "review": {
         "author": "codex-promo-lips",
-        "commit": "c4afd49332bbbfae90690660bd5d91de499677e2",
-        "checks": "23 targeted promo/lips/voice tests passed; git diff --check clean; actual Piper 1.8.0 Thorsten-high local speech and 29.392s comic MP4 rendered at 20 fps with audio/video; calibration and output frame visually inspected. Archive 2026/10/30/74ecf6417707. Independent review pending.",
+        "commit": "175847c5c7e9fee82180e554e125edf9ceead53b",
+        "checks": "24 targeted tests passed; English IPA override reaches Piper only for outro; actual Piper phonemizer has no missing symbols; 28.782s comic video with updated voice rendered and audio/video verified. Archive 2026/10/30/5cb1d0c2f615. Independent review pending.",
         "files": [
           "WERBEVIDEO.md",
           "scripts/promo_lips.py",
@@ -5852,6 +5852,15 @@
       "client": "codex-promo-lips",
       "at": 1793325436.6006804,
       "note": "Unclaimed duplicate follow-up consolidated into the still-leased T902 scope."
+    },
+    {
+      "operation_id": "2d99275631674512af34c99ee4e783bd",
+      "revision": 46,
+      "action": "submit",
+      "task": "T902",
+      "client": "codex-promo-lips",
+      "at": 1793325452.0131688,
+      "note": ""
     }
   ]
 }
