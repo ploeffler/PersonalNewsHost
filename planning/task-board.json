@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 40,
+  "revision": 41,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4555,7 +4555,7 @@
       "id": "T902",
       "epic": "E32",
       "title": "Produktions-Lippenkalibrierung und Voice-Profil aus main",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T901"
       ],
@@ -4570,7 +4570,20 @@
       "source": "user-chat-2026-10-30-lips-voice",
       "version": "0.1",
       "package": "A00",
-      "lease": null,
+      "lease": {
+        "client": "codex-promo-lips",
+        "token": "700a60fedc9d4b78a83acecdda67a596",
+        "expires_at": 1793328092.9772165,
+        "files": [
+          "WERBEVIDEO.md",
+          "scripts/promo_lips.py",
+          "scripts/promo_video.py",
+          "scripts/promo_voice.py",
+          "tests/test_promo_lips.py",
+          "tests/test_promo_video.py",
+          "tests/test_promo_voice.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -5782,6 +5795,15 @@
       "client": "codex-promo-lips",
       "at": 1793324490.2134924,
       "note": "User requested lips and production voice improvement."
+    },
+    {
+      "operation_id": "8e735087934641bb9ee1ac49a889af11",
+      "revision": 41,
+      "action": "claim",
+      "task": "T902",
+      "client": "codex-promo-lips",
+      "at": 1793324492.9772165,
+      "note": ""
     }
   ]
 }
