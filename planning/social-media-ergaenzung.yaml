@@ -1,0 +1,215 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  status: planned
+  scope: Social-Media-Exporte und optionale Veröffentlichung
+  selection_source: https://datareportal.com/reports/digital-2026-mid-year-global-update-report
+  selection_note: Reichweite als Orientierung für Facebook, YouTube, Instagram, TikTok
+    und WhatsApp; weitere Plattformen sind ergänzende redaktionelle Ziele, keine Rangliste.
+platform_profiles:
+- id: youtube
+  title: YouTube und Shorts
+  output: Sendung und Hochkant-Kurzclip
+  priority: prioritaet_1
+- id: instagram
+  title: Instagram Reels, Stories und Feed
+  output: Hochkantvideo, Bildbeitrag und Begleittext
+  priority: prioritaet_1
+- id: facebook
+  title: Facebook und Reels
+  output: Video, Kurzclip, Bild-/Linkbeitrag
+  priority: prioritaet_1
+- id: tiktok
+  title: TikTok
+  output: Hochkant-Kurzclip und Begleittext
+  priority: prioritaet_1
+- id: whatsapp
+  title: WhatsApp
+  output: Teilbares Video/Bild und Kurztext; Kanalversand gesondert prüfen
+  priority: prioritaet_2
+- id: linkedin
+  title: LinkedIn
+  output: Video-/Bild-/Linkbeitrag und sachlicher Kurztext
+  priority: prioritaet_2
+- id: x
+  title: X
+  output: Kurztext, Link und Medien
+  priority: prioritaet_2
+- id: threads
+  title: Threads
+  output: Kurztext, Link und Medien
+  priority: prioritaet_2
+- id: bluesky
+  title: Bluesky
+  output: Kurztext, Link und Medien
+  priority: prioritaet_2
+- id: mastodon
+  title: Mastodon
+  output: Kurztext, Link und Medien; instanzabhängige Grenzen
+  priority: prioritaet_2
+- id: snapchat
+  title: Snapchat
+  output: Hochkant-Export; automatische Veröffentlichung gesondert prüfen
+  priority: prioritaet_3
+- id: pinterest
+  title: Pinterest
+  output: Bild-/Video-Pin-Export mit Link und Beschreibung
+  priority: prioritaet_3
+- id: reddit
+  title: Reddit
+  output: Text-/Link-/Medienexport; Community-Regeln vor Veröffentlichung prüfen
+  priority: prioritaet_3
+tasks:
+- id: T200
+  epic: E17
+  title: Plattformprofile und Ausgabe-Konfiguration
+  status: todo
+  depends_on:
+  - T001
+  - T002
+  - T180
+  instructions:
+  - social_outputs pro Plattform, Show und Rubrik mit enabled, export_only, Formatprofil,
+    Ziel und Veröffentlichungsmodus modellieren; Standard deaktiviert und Exportmodus
+    vorsehen.
+  - YouTube/Shorts, Instagram, Facebook/Reels und TikTok zuerst; weitere Profile nach
+    Priorität ergänzen. Telegram über T042 wiederverwenden.
+  - Aktuelle technische Anforderungen und Kennzeichnungsvorgaben je Format anhand
+    offizieller Plattformdokumentation prüfen und mit Datum dokumentieren; keine unbestätigten
+    Dauer-, Größen- oder API-Limits fest einbauen.
+  acceptance:
+  - Alle aufgeführten Plattformen besitzen ein konfigurierbares Exportprofil oder
+    eine ausdrücklich dokumentierte Einschränkung.
+  - Abgeschaltete Profile erzeugen keine Arbeit und keinen Versand.
+- id: T201
+  epic: E17
+  title: Plattformgerechte Videos und Bilder
+  status: todo
+  depends_on:
+  - T200
+  - T061
+  - T063
+  instructions:
+  - Gemeinsame Renderer für 16:9, 9:16 und 1:1; Auflösung, Zielzeit, Bildrate und
+    Kodierung je geprüftem Profil konfigurierbar.
+  - Kurze Ausschnitte anhand abgeschlossener Beiträge und Claims erstellen; keine
+    irreführenden Schnitte oder ausgelassenen Unsicherheitshinweise.
+  - Sichere Textbereiche und plattformspezifische UI-Überlagerungen berücksichtigen;
+    Reframing statt blindem Zuschnitt.
+  - Untertitel eingebrannt und, wo unterstützt, als Datei; Titelbilder, Quellen und
+    KI-Kennzeichnung in Exportvarianten erhalten.
+  acceptance:
+  - Referenzsendung liefert Querformat-, Hochkant- und Quadratvarianten ohne abgeschnittene
+    Quellen oder Texte.
+  - Technische Validierung prüft jeden Export gegen das versionierte Profil.
+- id: T202
+  epic: E17
+  title: Texte, Links und Exportpakete
+  status: todo
+  depends_on:
+  - T200
+  - T020
+  - T050
+  instructions:
+  - Titel, Kurztext, Beschreibung, optionale Hashtags, Alternativtexte und kanonische
+    Artikel-URL erzeugen.
+  - Zunächst vorhandene lokale Textbildung nutzen; KI-generierte Varianten erst mit
+    T133/T134 freigeben.
+  - Medien, Untertitel, Vorschaubilder, Textdateien und Manifest pro Plattform als
+    herunterladbares Paket erzeugen; Hashes, Quellen, Versionen und Kennzeichnungen
+    im Manifest.
+  - Exportübersicht im geschützten Verwaltungsbereich anbieten; keine Tokens oder
+    internen Konfigurationsdateien exportieren.
+  acceptance:
+  - Jede Exportvariante verweist auf denselben Artikel und erhält Unsicherheit/Korrekturstatus.
+  - Manueller Upload ist ohne API-Zugang möglich.
+- id: T203
+  epic: E17
+  title: Optionale Publisher und Anbieterprüfung
+  status: todo
+  depends_on:
+  - T200
+  - T100
+  - T101
+  - T104
+  - T188
+  instructions:
+  - Je Plattform vor Adapterbau offizielle Upload-/Posting-Schnittstellen, Kontotypen,
+    App-Freigaben, OAuth-Rechte, Kosten, Quoten und Zugänglichkeit prüfen.
+  - Adapter zunächst als deterministischen Mock implementieren; reale Schnittstellen
+    nur dort anbinden, wo der dokumentierte Zugang verfügbar ist.
+  - Keine Browserautomatisierung als Ersatz für fehlende API-Unterstützung. Export
+    bleibt vollständiger Fallback; insbesondere WhatsApp-Kanäle nicht mit Business-Messaging
+    gleichsetzen.
+  - Zugangsdaten ausschließlich serverseitig; Kontoverbindung und Ziele im geschützten
+    Adminbereich verwalten.
+  acceptance:
+  - Fähigkeitsmatrix unterscheidet Export, getesteten Publisher und nicht verfügbare
+    Automatisierung.
+  - Standardmäßig findet keine Veröffentlichung statt; reale Aktivierung erfordert
+    explizite Konfiguration des Anwenders.
+- id: T204
+  epic: E17
+  title: Veröffentlichungswarteschlange und Freigabe
+  status: todo
+  depends_on:
+  - T203
+  - T202
+  - T051
+  - T103
+  - T186
+  - T189
+  instructions:
+  - Persistente Jobs mit Show, Plattform, Konto, Beitragsversion, Freigabe, Termin
+    und Zustandsverlauf.
+  - Deduplizierung, Quoten, Backoff und Wiederaufnahme; bei unklarem Upload-Ausgang
+    vor erneutem Upload vorhandenen Remote-Beitrag abgleichen.
+  - Vorschau und explizite Veröffentlichungsfreigabe; zeitgesteuerte Automatik nur
+    nach aktiver Einrichtung. Fehler eines Kanals blockiert keine lokale Sendung.
+  - Remote-IDs und URLs speichern; Ablauf von Tokens und fehlende Rechte nachvollziehbar
+    anzeigen.
+  acceptance:
+  - Neustarts erzeugen keine unkontrollierten Doppelposts; Mocktests decken Quota,
+    Timeout und unklaren Upload-Ausgang ab.
+  - Ohne Zugang, Budget oder Freigabe bleibt der Export erhalten und es erfolgt kein
+    Post.
+- id: T205
+  epic: E17
+  title: Korrekturen und Kennzeichnung auf Social Media
+  status: todo
+  depends_on:
+  - T204
+  - T126
+  - T127
+  instructions:
+  - Beitragsversionen den Remote-Posts zuordnen; Korrektur- oder Löschaktionen pro
+    unterstützter Plattform modellieren.
+  - Wenn Editieren/Ersetzen nicht unterstützt wird, Admin auf notwendigen manuellen
+    Eingriff hinweisen und korrigierten Export bereitstellen.
+  - Unsicherheitshinweise, Quellen, Medienrechte und KI-Kennzeichnung auch in Kurzformaten
+    erhalten; keine automatische Behauptung plattformübergreifender Löschung.
+  acceptance:
+  - Korrekturfixture erzeugt passende Folgeaktion oder ausdrücklich manuelle Aufgabe.
+  - Keine korrigierte Sendung lässt bereits verteilte Originalposts stillschweigend
+    als aktuell erscheinen.
+- id: T206
+  epic: E17
+  title: Social-Media-Dokumentation und Abnahme
+  status: todo
+  depends_on:
+  - T201
+  - T202
+  - T204
+  - T205
+  - T190
+  instructions:
+  - Profile, Exportordner, manuellen Upload, optionale Kontoverbindung und Aktivierung
+    für Linux, Docker CLI und Portainer dokumentieren.
+  - Plattformmatrix mit geprüften Formaten, Zugangsvoraussetzungen und Einschränkungen
+    pflegen; keine Garantie kostenloser APIs.
+  - Automatisierte Mock-/Exporttests plus visuelle Stichprobe aller Formatfamilien;
+    reale Uploads nur in explizit eingerichtete Testziele und getrennt protokollieren.
+  acceptance:
+  - Alle geplanten Profile besitzen dokumentierte Exporte und Teststatus.
+  - Abnahme funktioniert ohne Konten und ohne kostenpflichtige Aufrufe; reale Publisher
+    separat ausgewiesen.

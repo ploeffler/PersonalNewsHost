@@ -1,0 +1,102 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  scope: Gemeinsamer Redaktionszugang, getrennte Konfiguration und Mitarbeiterverwaltung
+    im Ressort
+  status: planned
+tasks:
+- id: T220
+  epic: E19
+  title: Gemeinsamer Redaktionszugang getrennt von Konfiguration
+  status: todo
+  depends_on:
+  - T110
+  - T188
+  - T189
+  instructions:
+  - 'Genau zwei Bedienzugänge: gemeinsamer Redaktionszugang und getrennter Konfigurationszugang.
+    Keine Mitarbeiterlogins, Avatarpasswörter oder individuelle Benutzer-/Gruppenverwaltung.'
+  - Beide Zugänge serverseitig getrennt über vorhandenen HTTPS-Sitzungsschutz absichern.
+    Konfiguration verwaltet Betrieb, Provider, Tokens, Budgets und die Zugangsdaten;
+    Redaktion verwaltet Ressorts, Mitarbeiterressourcen, Inhalte, Medien, Shows und
+    Freigaben.
+  - Kein Zugriff auf technische Secrets mit Redaktionssitzung; keine automatische
+    Freigabeberechtigung durch Konfigurationssitzung. Endpunkte ebenso prüfen wie
+    Seiten.
+  - Gemeinsamen Redaktionszugang im Setup einrichten; ohne Einrichtung bleibt er gesperrt.
+    ADMIN_USER/ADMIN_PASSWORD_HASH und Standard admin/admin betreffen ausschließlich
+    den Konfigurationszugang.
+  - Passwortwechsel und Logout widerrufen Sitzungen des betroffenen Zugangs. Avataraktivierung
+    verändert keine Benutzerrechte.
+  acceptance:
+  - Beide Logins getrennt geprüft; direkte API-Aufrufe können die Grenze nicht umgehen.
+  - Keine Konto-/Passwortfelder oder individuellen Sitzungen an virtuellen Mitarbeitern.
+- id: T221
+  epic: E19
+  title: Gemeinsamer Redaktionsarbeitsbereich und ressortbezogene Mitarbeiterverwaltung
+  status: todo
+  depends_on:
+  - T220
+  - T111
+  - T125
+  - T128
+  instructions:
+  - Redaktionelle Struktur mit Abteilungen/Ressorts und virtuellen Mitarbeitern vollständig
+    erhalten. Rollen und Zuständigkeiten steuern automatische Arbeitsstufen, keine
+    individuellen Bedienerkonten.
+  - Mitarbeiter direkt im jeweiligen Ressort anlegen, bearbeiten, zuordnen und deaktivieren;
+    Name, Rolle, Avatar, Stimme, Biografie und Zuständigkeiten dort pflegen. Keine
+    parallele zweite Mitarbeiterverwaltung.
+  - Gemeinsamer Arbeitskorb mit Filtern nach Ressort, Show, virtuellem Mitarbeiter
+    und Status; kein persönlicher Benutzer-Arbeitskorb.
+  - Einzelbeiträge und Kurzvideos im Namen eines virtuellen Mitarbeiters direkt aus
+    dessen Ressortansicht beauftragen. Shows weiterhin aus Plugins erstellen.
+  - Quellenprüfung, Überarbeitung, Freigabe, Ablehnung und Fristen beibehalten. Menschliche
+    Entscheidung über den gemeinsamen Redaktionszugang getrennt von automatischen
+    KI-Entscheidungen.
+  - Freigaben auf konkrete Beitragsversionen beziehen, bei Änderung erneuern; konkurrierende
+    Entscheidungen atomar behandeln.
+  - Beim ersten Start die Redaktion Allgemein mit stabiler ID allgemein bereitstellen;
+    keine zusätzliche Anmeldung und kein Mandantensystem dadurch einführen.
+  - Initiale Newsshow und vorhandene redaktionelle Einstellungen einschließlich Standardsprache
+    der Redaktion Allgemein zuordnen. Allgemein ist eine Redaktion; Abteilungen/Ressorts
+    liegen darunter und werden nicht mit ihr gleichgesetzt.
+  - 'Idempotente Initialisierung: vorhandene Redaktion und Nutzeränderungen erhalten;
+    spätere Starts erzeugen kein Duplikat und setzen Namen, Sprachen oder Zuordnungen
+    nicht zurück. Bei bestehender anders benannter Redaktion keine zusätzliche Pflichtredaktion
+    erzwingen.'
+  - Ersteinrichtungswizard zeigt die vorhandene Redaktion Allgemein zur Anpassung.
+    Ein sichtbarer Standarddatensatz aktiviert weder automatische Produktion noch
+    Veröffentlichung und umgeht keine Zugangseinrichtung.
+  acceptance:
+  - Redaktionsabläufe und Pluginshows mit einem Redaktionslogin vollständig bedienbar.
+  - Mitarbeiterverwaltung im Ressort und Einzelbeitrag im Mitarbeiternamen geprüft.
+  - Menschliche Freigabe kann nicht durch Avatarlogin oder automatische KI-Stufe ersetzt
+    werden.
+  - Frische Installation zeigt die Redaktion Allgemein samt initialer Newsshow; wiederholte
+    Starts erhalten genau eine unveränderte Standardredaktion.
+  - Bestehende Redaktion oder umbenannte Standardredaktion bleibt erhalten; initiale
+    Sprachvorgaben sind sichtbar.
+- id: T222
+  epic: E19
+  title: Gemeinsames Freigabeprotokoll und Abnahme
+  status: todo
+  depends_on:
+  - T221
+  - T114
+  - T186
+  - T194
+  instructions:
+  - Aktion, gemeinsamen Redaktionszugang, Zeit, Beitragsversion, Begründung und verantwortliche
+    virtuelle Rolle protokollieren; keine Secrets loggen.
+  - 'Grenze offenlegen: gemeinsamer Zugang erlaubt keinen sicheren Nachweis einer
+    einzelnen realen Person. Virtueller Mitarbeiter ist Bearbeiter-/Urheberrolle,
+    kein menschlicher Anmelder.'
+  - Wizard und Dokumentation auf zwei Zugänge reduzieren. Avatar-/Studiowizards enthalten
+    keine Kontoeinrichtung für virtuelle Mitarbeiter.
+  - Zugriffstrennung, Sitzungswiderruf, Ressortverwaltung, Einzelbeitrag, Showproduktion,
+    Freigaben und Wiederaufnahme für Linux/Docker prüfen.
+  acceptance:
+  - Vollständiger redaktioneller Ablauf mit gemeinsamem Zugang und virtuellen Rollen
+    geprüft.
+  - Backup erhält Ressourcen und Aufgaben, reaktiviert aber keine alten Sitzungen.

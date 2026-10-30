@@ -1,0 +1,57 @@
+name: Newsoutlet foundation checks
+on:
+  pull_request:
+  push:
+    branches: [Full-featured-Newsoutlet]
+    paths: ['scripts/**', 'tests/**', 'config*.json', 'requirements*.txt', '.github/workflows/foundation-ci.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  PIP_CONSTRAINT: ${{ github.workspace }}/requirements-constraints.txt
+
+jobs:
+  foundation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Enforce dependency and publication policy before installation
+        run: python3 scripts/security_checks.py --pinning --outputs docs/
+      - name: Install test dependencies (network allowed)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python3 -m venv .ci-venv
+          .ci-venv/bin/python -m pip install -c requirements-constraints.txt -r requirements.txt Pillow ruff
+      - name: Validate configurations and lint
+        run: |
+          .ci-venv/bin/python scripts/validate_config.py config.json config.example.json config.shows.example.json
+          .ci-venv/bin/ruff check --select F821,F822,F823 scripts tests
+      - name: Verify OS network isolation and run offline regression
+        env:
+          PNH_RENDER_SECONDS: '155'
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: |
+          sudo unshare --net -- "$PWD/.ci-venv/bin/python" - <<'PY'
+          import socket
+          with socket.socket(type=socket.SOCK_DGRAM) as client:
+              try:
+                  client.sendto(b'offline-probe', ('192.0.2.1', 9))
+              except OSError:
+                  print('Network namespace blocks outbound traffic')
+              else:
+                  raise SystemExit('Network isolation failed')
+          PY
+          sudo unshare --net -- env PNH_RENDER_SECONDS="$PNH_RENDER_SECONDS" PYTHONDONTWRITEBYTECODE=1 "$PWD/.ci-venv/bin/python" scripts/check_repository.py
+      - name: Offline JavaScript contracts and syntax
+        run: |
+          sudo unshare --net -- env PATH="$PATH" bash -e -c '
+            node tests/test_feed_picker.cjs
+            node tests/test_news_list.cjs
+            node tests/test_playlist.cjs
+            for file in docs/*.js tests/*.cjs; do node --check "$file"; done
+          '

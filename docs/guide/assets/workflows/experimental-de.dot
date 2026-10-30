@@ -1,0 +1,23 @@
+digraph workflow {
+  graph [rankdir=TB, bgcolor="white", pad="0.3", nodesep="0.25", ranksep="0.3", fontname="DejaVu Sans", fontsize=20, labelloc=t, label="Experimentelle parallele Sendung"];
+  node [shape=box, style="rounded,filled", color="#cbd5e1", fillcolor="#f1f5f9", fontname="DejaVu Sans", fontsize=13, fontcolor="#17243b", margin="0.2,0.13", width=3.5];
+  edge [color="#64748b", arrowsize=0.7, penwidth=1.3];
+  rss [label="RSS-Feeds", fillcolor="#dbeafe"];
+  analysis [label="scripts/analyze_topics.py\nThemenkandidaten und Quellenhinweise", fillcolor="#f1f5f9"];
+  plan [label="scripts/build_broadcast_plan.py\nSegmente und Sprechertexte planen", fillcolor="#f1f5f9"];
+  intro [width=1.6, label="Intro\nMuseTalk + Piper", fillcolor="#ffedd5"];
+  stories [width=1.6, label="Meldungen 1–5\nFFmpeg + Piper", fillcolor="#ffedd5"];
+  outro [width=1.6, label="Outro\nMuseTalk + Piper", fillcolor="#ffedd5"];
+  assembly [label="scripts/assemble_segments.py\nParallel erzeugte Segmente zusammenfügen", fillcolor="#f1f5f9"];
+  artifact [label="GitHub-Actions-Testartefakt\nKeine automatische Veröffentlichung", fillcolor="#dcfce7"];
+  {rank=same; intro; stories; outro;}
+  rss -> analysis;
+  analysis -> plan;
+  plan -> intro;
+  plan -> stories;
+  plan -> outro;
+  intro -> assembly;
+  stories -> assembly;
+  outro -> assembly;
+  assembly -> artifact;
+}

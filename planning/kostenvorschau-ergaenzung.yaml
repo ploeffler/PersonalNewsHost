@@ -1,0 +1,60 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  scope: Kostenvorschau je Show vor Produktion
+  status: planned
+tasks:
+- id: T330
+  epic: E30
+  title: Kostenvorschau und Monatsprognose je Show
+  status: todo
+  depends_on:
+  - T101
+  - T103
+  - T250
+  - T301
+  - T321
+  instructions:
+  - In der Showverwaltung Kostenvorschau für einen geplanten Lauf und den konfigurierten
+    Wiederholungsplan bereitstellen; verwendete Provider, Modelle, Formate und Plugininstanzen
+    auflösen.
+  - Nach Textanalyse/-erzeugung, Bildern, TTS, generativen Clips, Avataren und weiteren
+    tatsächlich berechneten Leistungen aufschlüsseln. Tokenmengen, Zeichen, Bildanzahl,
+    Auflösung, Video-/Audiosekunden und anbieterabhängige Mindestabrechnung berücksichtigen.
+  - Erwartungswert und konservativen Kostenrahmen anhand dokumentierter Annahmen berechnen.
+    Datenabhängige Nachrichtenmengen und nicht verlässlich begrenzte Wiederholungen
+    als Unsicherheit ausweisen; keine garantierte Anbieter-Endrechnung behaupten.
+  - Preisdaten mit Quelle, Modellversion, Währung und Prüfdatum führen; Steuern und
+    Wechselkursannahmen sichtbar machen. Fehlende/veraltete Preise oder unbekannte
+    Abrechnung als unbekannt markieren, nicht als 0 Euro.
+  - Vorhandene freigegebene Intro-/Outrosequenzen, Uploadvideos und gültige Cachetreffer
+    von erneuter Generierung unterscheiden. Cachezustand als momentane Annahme kennzeichnen;
+    günstiger Wiederholungslauf und Lauf ohne Cache getrennt schätzbar machen.
+  - Lokale Verarbeitung als 0 Euro externe API-Kosten ausweisen; Strom/Hardware separat
+    und nur mit ausdrücklich hinterlegten Mess-/Tarifdaten schätzen. Free-Tier nur
+    bei nachweislich passendem Kontingent berücksichtigen; unbekanntes Restkontingent
+    nicht als sicher kostenlos voraussetzen.
+  - Monatliche Anzahl geplanter Läufe aus tatsächlichem Kalender und Show-Zeitzone
+    ableiten; Restmonat und nächsten vollen Monat mit Anzahl Läufen und Annahmen anzeigen.
+    Gemeinsame Providerquoten und Cachevorteile zwischen Shows nicht mehrfach als
+    sicher anrechnen.
+  - Budgetprüfung und Vorabreservierung vor Produktionsstart mit Vorschau verbinden;
+    innerhalb des Laufs Limits weiter prüfen. Bei nicht begrenzbarer Abrechnung oder
+    unbekannten Preisen bezahlte automatische Produktion blockieren bzw. konfigurierten
+    lokalen Fallback verwenden.
+  - Nach Änderungen an Show, Plan, Providern, Preisen oder Sequenzen Vorschau als
+    veraltet markieren und neu berechnen. Nach Lauf geschätzte und erfasste tatsächliche
+    Nutzung/Kosten vergleichen; fehlende Abrechnungsdaten nicht als exakt ausgeben.
+  - Berechnung erzeugt selbst keine generierten Inhalte oder kostenpflichtigen Testaufrufe.
+    Tests für Preisberechnung, Token-/Sekundenannahmen, Cache, Sequenzwiederverwendung,
+    mehrere Plugins, Quota, unbekannte Preise, Währungsannahmen und Kalendergrenzen
+    ergänzen.
+  acceptance:
+  - Showdetail zeigt Kosten je Produktionsschritt, Gesamtschätzung, Kostenrahmen,
+    Datenstand und Monatsprognose.
+  - Avatarfreie Show berechnet keine Avatarjobs; wiederverwendete Sequenzen keine
+    neuen Generierungskosten.
+  - Unbekannte Kosten sind sichtbar; Budgetüberschreitung verhindert kostenpflichtigen
+    Start oder wählt den expliziten Fallback.
+  - Vorschau funktioniert mit Mocks ohne Kosten; Schätzung und erfasster Verbrauch
+    bleiben pro Lauf nachvollziehbar.

@@ -1,0 +1,775 @@
+{
+  "schema_version": 1,
+  "repository": "ploeffler/PersonalNewsHost",
+  "branch": "Full-featured-Newsoutlet",
+  "source_revision": 32,
+  "milestones": {
+    "0.1": {
+      "number": 1,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/milestone/1"
+    },
+    "0.2": {
+      "number": 2,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/milestone/2"
+    },
+    "0.3": {
+      "number": 3,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/milestone/3"
+    },
+    "0.4": {
+      "number": 4,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/milestone/4"
+    },
+    "0.5": {
+      "number": 5,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/milestone/5"
+    },
+    "0.6": {
+      "number": 6,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/milestone/6"
+    },
+    "0.7": {
+      "number": 7,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/milestone/7"
+    },
+    "0.8": {
+      "number": 8,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/milestone/8"
+    },
+    "0.9": {
+      "number": 9,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/milestone/9"
+    },
+    "1.0": {
+      "number": 10,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/milestone/10"
+    }
+  },
+  "tasks": {
+    "T001": {
+      "number": 26,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/26",
+      "milestone": 1
+    },
+    "T002": {
+      "number": 27,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/27",
+      "milestone": 1
+    },
+    "T010": {
+      "number": 28,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/28",
+      "milestone": 1
+    },
+    "T011": {
+      "number": 29,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/29",
+      "milestone": 1
+    },
+    "T012": {
+      "number": 30,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/30",
+      "milestone": 1
+    },
+    "T013": {
+      "number": 31,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/31",
+      "milestone": 2
+    },
+    "T020": {
+      "number": 32,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/32",
+      "milestone": 2
+    },
+    "T021": {
+      "number": 33,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/33",
+      "milestone": 2
+    },
+    "T022": {
+      "number": 34,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/34",
+      "milestone": 2
+    },
+    "T030": {
+      "number": 35,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/35",
+      "milestone": 2
+    },
+    "T031": {
+      "number": 36,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/36",
+      "milestone": 2
+    },
+    "T032": {
+      "number": 37,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/37",
+      "milestone": 2
+    },
+    "T040": {
+      "number": 38,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/38",
+      "milestone": 7
+    },
+    "T041": {
+      "number": 39,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/39",
+      "milestone": 7
+    },
+    "T042": {
+      "number": 40,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/40",
+      "milestone": 7
+    },
+    "T043": {
+      "number": 41,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/41",
+      "milestone": 7
+    },
+    "T050": {
+      "number": 42,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/42",
+      "milestone": 2
+    },
+    "T051": {
+      "number": 43,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/43",
+      "milestone": 2
+    },
+    "T052": {
+      "number": 44,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/44",
+      "milestone": 1
+    },
+    "T060": {
+      "number": 45,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/45",
+      "milestone": 2
+    },
+    "T061": {
+      "number": 46,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/46",
+      "milestone": 2
+    },
+    "T062": {
+      "number": 47,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/47",
+      "milestone": 2
+    },
+    "T063": {
+      "number": 48,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/48",
+      "milestone": 2
+    },
+    "T070": {
+      "number": 49,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/49",
+      "milestone": 2
+    },
+    "T071": {
+      "number": 50,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/50",
+      "milestone": 2
+    },
+    "T072": {
+      "number": 51,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/51",
+      "milestone": 1
+    },
+    "T073": {
+      "number": 52,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/52",
+      "milestone": 1
+    },
+    "T080": {
+      "number": 53,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/53",
+      "milestone": 10
+    },
+    "T081": {
+      "number": 54,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/54",
+      "milestone": 10
+    },
+    "T100": {
+      "number": 55,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/55",
+      "milestone": 1
+    },
+    "T101": {
+      "number": 56,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/56",
+      "milestone": 1
+    },
+    "T102": {
+      "number": 57,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/57",
+      "milestone": 3
+    },
+    "T103": {
+      "number": 58,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/58",
+      "milestone": 1
+    },
+    "T104": {
+      "number": 59,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/59",
+      "milestone": 1
+    },
+    "T110": {
+      "number": 60,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/60",
+      "milestone": 3
+    },
+    "T111": {
+      "number": 61,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/61",
+      "milestone": 3
+    },
+    "T112": {
+      "number": 62,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/62",
+      "milestone": 3
+    },
+    "T113": {
+      "number": 63,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/63",
+      "milestone": 3
+    },
+    "T114": {
+      "number": 64,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/64",
+      "milestone": 3
+    },
+    "T115": {
+      "number": 65,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/65",
+      "milestone": 4
+    },
+    "T120": {
+      "number": 66,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/66",
+      "milestone": 3
+    },
+    "T121": {
+      "number": 67,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/67",
+      "milestone": 3
+    },
+    "T122": {
+      "number": 68,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/68",
+      "milestone": 3
+    },
+    "T123": {
+      "number": 69,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/69",
+      "milestone": 3
+    },
+    "T124": {
+      "number": 70,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/70",
+      "milestone": 2
+    },
+    "T125": {
+      "number": 71,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/71",
+      "milestone": 3
+    },
+    "T126": {
+      "number": 72,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/72",
+      "milestone": 3
+    },
+    "T127": {
+      "number": 73,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/73",
+      "milestone": 3
+    },
+    "T128": {
+      "number": 74,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/74",
+      "milestone": 3
+    },
+    "T129": {
+      "number": 75,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/75",
+      "milestone": 3
+    },
+    "T130": {
+      "number": 76,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/76",
+      "milestone": 1
+    },
+    "T131": {
+      "number": 77,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/77",
+      "milestone": 4
+    },
+    "T132": {
+      "number": 78,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/78",
+      "milestone": 3
+    },
+    "T133": {
+      "number": 79,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/79",
+      "milestone": 4
+    },
+    "T134": {
+      "number": 80,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/80",
+      "milestone": 4
+    },
+    "T135": {
+      "number": 81,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/81",
+      "milestone": 1
+    },
+    "T140": {
+      "number": 82,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/82",
+      "milestone": 5
+    },
+    "T141": {
+      "number": 83,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/83",
+      "milestone": 7
+    },
+    "T142": {
+      "number": 84,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/84",
+      "milestone": 7
+    },
+    "T143": {
+      "number": 85,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/85",
+      "milestone": 7
+    },
+    "T144": {
+      "number": 86,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/86",
+      "milestone": 7
+    },
+    "T145": {
+      "number": 87,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/87",
+      "milestone": 7
+    },
+    "T150": {
+      "number": 88,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/88",
+      "milestone": 3
+    },
+    "T151": {
+      "number": 89,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/89",
+      "milestone": 3
+    },
+    "T152": {
+      "number": 90,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/90",
+      "milestone": 5
+    },
+    "T153": {
+      "number": 91,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/91",
+      "milestone": 6
+    },
+    "T160": {
+      "number": 92,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/92",
+      "milestone": 5
+    },
+    "T161": {
+      "number": 93,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/93",
+      "milestone": 5
+    },
+    "T162": {
+      "number": 94,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/94",
+      "milestone": 5
+    },
+    "T163": {
+      "number": 95,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/95",
+      "milestone": 5
+    },
+    "T164": {
+      "number": 96,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/96",
+      "milestone": 5
+    },
+    "T165": {
+      "number": 97,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/97",
+      "milestone": 5
+    },
+    "T166": {
+      "number": 98,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/98",
+      "milestone": 5
+    },
+    "T167": {
+      "number": 99,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/99",
+      "milestone": 5
+    },
+    "T168": {
+      "number": 100,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/100",
+      "milestone": 5
+    },
+    "T180": {
+      "number": 101,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/101",
+      "milestone": 2
+    },
+    "T181": {
+      "number": 102,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/102",
+      "milestone": 2
+    },
+    "T182": {
+      "number": 103,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/103",
+      "milestone": 2
+    },
+    "T183": {
+      "number": 104,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/104",
+      "milestone": 2
+    },
+    "T184": {
+      "number": 105,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/105",
+      "milestone": 2
+    },
+    "T185": {
+      "number": 106,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/106",
+      "milestone": 2
+    },
+    "T186": {
+      "number": 107,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/107",
+      "milestone": 2
+    },
+    "T187": {
+      "number": 108,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/108",
+      "milestone": 9
+    },
+    "T188": {
+      "number": 109,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/109",
+      "milestone": 2
+    },
+    "T189": {
+      "number": 110,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/110",
+      "milestone": 2
+    },
+    "T190": {
+      "number": 111,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/111",
+      "milestone": 2
+    },
+    "T191": {
+      "number": 112,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/112",
+      "milestone": 2
+    },
+    "T192": {
+      "number": 113,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/113",
+      "milestone": 2
+    },
+    "T193": {
+      "number": 114,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/114",
+      "milestone": 4
+    },
+    "T194": {
+      "number": 115,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/115",
+      "milestone": 4
+    },
+    "T200": {
+      "number": 116,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/116",
+      "milestone": 7
+    },
+    "T201": {
+      "number": 117,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/117",
+      "milestone": 7
+    },
+    "T202": {
+      "number": 118,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/118",
+      "milestone": 7
+    },
+    "T203": {
+      "number": 119,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/119",
+      "milestone": 8
+    },
+    "T204": {
+      "number": 120,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/120",
+      "milestone": 8
+    },
+    "T205": {
+      "number": 121,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/121",
+      "milestone": 8
+    },
+    "T206": {
+      "number": 122,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/122",
+      "milestone": 8
+    },
+    "T210": {
+      "number": 123,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/123",
+      "milestone": 4
+    },
+    "T211": {
+      "number": 124,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/124",
+      "milestone": 4
+    },
+    "T212": {
+      "number": 125,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/125",
+      "milestone": 4
+    },
+    "T213": {
+      "number": 126,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/126",
+      "milestone": 7
+    },
+    "T214": {
+      "number": 127,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/127",
+      "milestone": 7
+    },
+    "T215": {
+      "number": 128,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/128",
+      "milestone": 4
+    },
+    "T220": {
+      "number": 129,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/129",
+      "milestone": 4
+    },
+    "T221": {
+      "number": 130,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/130",
+      "milestone": 4
+    },
+    "T222": {
+      "number": 131,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/131",
+      "milestone": 4
+    },
+    "T230": {
+      "number": 132,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/132",
+      "milestone": 5
+    },
+    "T231": {
+      "number": 133,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/133",
+      "milestone": 5
+    },
+    "T232": {
+      "number": 134,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/134",
+      "milestone": 5
+    },
+    "T233": {
+      "number": 135,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/135",
+      "milestone": 6
+    },
+    "T234": {
+      "number": 136,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/136",
+      "milestone": 6
+    },
+    "T240": {
+      "number": 137,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/137",
+      "milestone": 5
+    },
+    "T241": {
+      "number": 138,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/138",
+      "milestone": 5
+    },
+    "T242": {
+      "number": 139,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/139",
+      "milestone": 5
+    },
+    "T243": {
+      "number": 140,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/140",
+      "milestone": 6
+    },
+    "T244": {
+      "number": 141,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/141",
+      "milestone": 7
+    },
+    "T250": {
+      "number": 142,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/142",
+      "milestone": 6
+    },
+    "T251": {
+      "number": 143,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/143",
+      "milestone": 6
+    },
+    "T252": {
+      "number": 144,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/144",
+      "milestone": 9
+    },
+    "T253": {
+      "number": 145,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/145",
+      "milestone": 6
+    },
+    "T254": {
+      "number": 146,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/146",
+      "milestone": 6
+    },
+    "T255": {
+      "number": 147,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/147",
+      "milestone": 6
+    },
+    "T260": {
+      "number": 148,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/148",
+      "milestone": 2
+    },
+    "T270": {
+      "number": 149,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/149",
+      "milestone": 3
+    },
+    "T271": {
+      "number": 150,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/150",
+      "milestone": 6
+    },
+    "T272": {
+      "number": 151,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/151",
+      "milestone": 6
+    },
+    "T280": {
+      "number": 152,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/152",
+      "milestone": 7
+    },
+    "T290": {
+      "number": 153,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/153",
+      "milestone": 8
+    },
+    "T291": {
+      "number": 154,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/154",
+      "milestone": 8
+    },
+    "T292": {
+      "number": 155,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/155",
+      "milestone": 8
+    },
+    "T300": {
+      "number": 156,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/156",
+      "milestone": 7
+    },
+    "T301": {
+      "number": 157,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/157",
+      "milestone": 8
+    },
+    "T302": {
+      "number": 158,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/158",
+      "milestone": 8
+    },
+    "T310": {
+      "number": 159,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/159",
+      "milestone": 7
+    },
+    "T320": {
+      "number": 160,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/160",
+      "milestone": 4
+    },
+    "T321": {
+      "number": 161,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/161",
+      "milestone": 4
+    },
+    "T322": {
+      "number": 162,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/162",
+      "milestone": 4
+    },
+    "T330": {
+      "number": 163,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/163",
+      "milestone": 9
+    },
+    "T340": {
+      "number": 164,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/164",
+      "milestone": 9
+    },
+    "T341": {
+      "number": 165,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/165",
+      "milestone": 9
+    },
+    "T350": {
+      "number": 166,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/166",
+      "milestone": 4
+    },
+    "T351": {
+      "number": 167,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/167",
+      "milestone": 8
+    },
+    "T352": {
+      "number": 168,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/168",
+      "milestone": 9
+    },
+    "T900": {
+      "number": 174,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/174",
+      "milestone": 1
+    },
+    "T901": {
+      "number": 176,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/176",
+      "milestone": 1
+    }
+  }
+}

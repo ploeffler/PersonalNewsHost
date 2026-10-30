@@ -4,15 +4,9 @@
 
 ## Production pipeline
 
-```text
-RSS feeds → scripts/generate.py
-          → article extraction (local rdrr; RSS fallback)
-          → rule-based news editing
-          → Piper TTS (eSpeak fallback) + FFmpeg
-          → docs/latest.mp4, docs/index.html,
-             docs/transcript.txt, docs/feed.xml
-          → GitHub Pages
-```
+![Production workflow from RSS to speech, video and GitHub Pages](../assets/workflows/production-en.png)
+
+[SVG version](../assets/workflows/production-en.svg)
 
 The main workflow is [Generate news video](https://github.com/ploeffler/PersonalNewsHost/actions/workflows/news.yml). Production runs on GitHub Actions without a dedicated server. The spoken broadcast remains German; the DE/EN website selector does not change narration.
 
@@ -24,14 +18,9 @@ The main workflow is [Generate news video](https://github.com/ploeffler/Personal
 
 ## Experimental video pipeline
 
-```text
-RSS feeds → scripts/analyze_topics.py
-          → scripts/build_broadcast_plan.py
-          → parallel Piper/FFmpeg segments
-          → optional experimental MuseTalk segments
-          → scripts/assemble_segments.py
-          → test artifact (not automatically published)
-```
+![Experimental parallel segment production and assembly](../assets/workflows/experimental-en.png)
+
+[SVG version](../assets/workflows/experimental-en.svg)
 
 Experimental MuseTalk and lip-sync workflows are separate from the standard published broadcast. Their presence does not imply production readiness.
 

@@ -6,6 +6,7 @@ import html
 import json
 import re
 import subprocess
+import shutil
 import tempfile
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -394,7 +395,11 @@ def select_balanced_groups(groups, limit):
         return (urlparse(entry[2]).hostname or "").removeprefix("www.")
     def newest(group):
         return max(FEED_DATES.get(entry[2], 0.0) for entry in group)
-    ranked = sorted(groups, key=newest, reverse=True)
+    try:
+        from .news_policy import source_weight
+    except ImportError:
+        from news_policy import source_weight
+    ranked = sorted(groups, key=lambda group: (max(source_weight(entry, CONFIG) for entry in group), newest(group)), reverse=True)
     selected, represented = [], set()
     # First pass: one story per previously unrepresented publisher.
     for group in ranked:
@@ -446,6 +451,70 @@ def items_from_feed(url):
 
 def run(args):
     subprocess.run(args, check=True, stdout=subprocess.DEVNULL, timeout=480)
+
+def render_stage(seconds, titles, boundaries):
+    """Name the scene at FFmpeg's current output timestamp, not input loading."""
+    if seconds < boundaries[2]:
+        return 'Intro'
+    for index, title in enumerate(titles):
+        if seconds < boundaries[index + 3]:
+            return f'Beitrag {index + 1}/{len(titles)}: {" ".join(title.split())}'
+    return 'Outro'
+
+
+def render_time(progress):
+    """Read the latest complete FFmpeg progress timestamp (in microseconds)."""
+    try:
+        lines = progress.read_text(encoding='utf-8').splitlines()
+    except OSError:
+        return None
+    for line in reversed(lines):
+        if line.startswith('out_time_us='):
+            try:
+                return max(0, int(line.split('=', 1)[1]) / 1_000_000)
+            except ValueError:
+                continue
+    return None
+
+
+def run_render(args, titles, boundaries):
+    """Keep existing timeout/error handling while reporting live render scenes."""
+    import threading
+    import time
+    duration = boundaries[-1]
+    with tempfile.TemporaryDirectory() as tmp:
+        progress = Path(tmp) / 'ffmpeg-progress.txt'
+        stopped = threading.Event()
+        last_stage = None
+        last_log = 0.0
+        position = 0.0
+
+        def report():
+            nonlocal last_stage, last_log, position
+            current = render_time(progress)
+            if current is not None:
+                position = max(position, min(current, duration))
+            stage = render_stage(position, titles, boundaries)
+            now = time.monotonic()
+            if stage != last_stage or now - last_log >= 15:
+                print(f'[Render] {stage} | Videozeit {position:.1f}/{duration:.1f} s', flush=True)
+                last_stage, last_log = stage, now
+
+        def monitor():
+            while not stopped.wait(1):
+                report()
+
+        report()
+        watcher = threading.Thread(target=monitor, name='render-progress', daemon=True)
+        watcher.start()
+        try:
+            run([args[0], '-progress', str(progress), '-stats_period', '1', '-nostats', *args[1:]])
+        finally:
+            stopped.set()
+            watcher.join()
+            report()
+        print('[Render] Rendering abgeschlossen.', flush=True)
+
 
 def adjust_voice_pitch(wav):
     """Lower or raise voice pitch with FFmpeg while preserving speech duration."""
@@ -609,44 +678,37 @@ def edit_news(title, description, style, max_sentences, limit):
     return title.rstrip(".!?") + "." + ("\n" + " ".join(selected) if selected else "")
 
 def group_news_items(items, enabled=True):
-    """Conservatively group near-identical headlines from different publishers.
+    """Group event duplicates deterministically, retaining each original source URL.
 
-    Never merge based on a person's name or a broad topic alone.
-    Returns (representative stories, groups of original entries).
+    Complete-link matching prevents unrelated events joining via a broad bridge.
+    The editorial path owns the shared conservative headline/location matcher.
+    Disabled clustering preserves the legacy input order and individual entries.
     """
-    from urllib.parse import urlparse
-    from difflib import SequenceMatcher
-    stop = {"und", "oder", "aber", "eine", "einer", "einem", "einen",
-            "sich", "nach", "über", "wegen", "durch", "gegen", "beim",
-            "sind", "wird", "werden", "heute", "neue", "neuer", "neuen",
-            "auch", "mehr", "dass", "nicht", "jetzt", "schon", "noch"}
-    def tokens(title):
-        return set(w for w in re.findall(r"[^\\W_]{4,}", title.casefold(), re.UNICODE)
-                   if w not in stop)
-    def publisher(entry):
-        return (urlparse(entry[2]).hostname or "").removeprefix("www.")
-    def same_event(a, b):
-        ta, tb = tokens(a[0]), tokens(b[0])
-        if len(ta) < 3 or len(tb) < 3:
-            return False
-        overlap = len(ta & tb)
-        containment = overlap / min(len(ta), len(tb))
-        jaccard = overlap / len(ta | tb)
-        similarity = SequenceMatcher(None, a[0].casefold(), b[0].casefold()).ratio()
-        return overlap >= 3 and ((containment >= .8 and jaccard >= .58) or
-                                 (jaccard >= .72 and similarity >= .68))
+    items = list(items)
+    if not enabled:
+        return items, [[item] for item in items]
+    try:
+        from .editorial_pipeline import same_event
+    except ImportError:
+        from editorial_pipeline import same_event
+
+    def article(entry):
+        return {'title': entry[0], 'text': entry[1]}
+
     groups = []
-    for item in items:
-        found = False
-        if enabled:
-            for group in groups:
-                if publisher(item) not in {publisher(x) for x in group} and all(
-                        same_event(item, x) for x in group):
-                    group.append(item)
-                    found = True
-                    break
-        if not found:
+    seen = set()
+    for item in sorted(items, key=lambda x: (-FEED_DATES.get(x[2], 0), x[2], x[0], x[1])):
+        # The same URL read from several feeds is one source, not corroboration.
+        if item[2] and item[2] in seen:
+            continue
+        if item[2]:
+            seen.add(item[2])
+        match = next((group for group in groups if all(
+            same_event(article(item), article(other)) for other in group)), None)
+        if match is None:
             groups.append([item])
+        else:
+            match.append(item)
     return [group[0] for group in groups], groups
 
 
@@ -680,6 +742,31 @@ def subtitle_timestamp(milliseconds, separator="."):
     minutes, remainder = divmod(remainder, 60000)
     seconds, millis = divmod(remainder, 1000)
     return f"{hours:02d}:{minutes:02d}:{seconds:02d}{separator}{millis:03d}"
+
+
+def parallel_map(function, values, stage):
+    """Bound concurrent work while returning results in bulletin order.
+
+    Workers own their outputs; only the caller assembles shared metadata.
+    A failed task aborts the stage, so incomplete audio cannot be assembled.
+    """
+    from concurrent.futures import ThreadPoolExecutor
+    values = list(values)
+    workers = max(1, min(4, int(CONFIG.get("production", {}).get("parallel_workers", 2))))
+    workers = min(workers, len(values))
+    if not values:
+        return []
+    print(f"[Production] {stage}: {len(values)} tasks, {workers} workers", flush=True)
+    if workers == 1:
+        return [function(value) for value in values]
+    with ThreadPoolExecutor(max_workers=workers, thread_name_prefix="bulletin") as pool:
+        futures = [pool.submit(function, value) for value in values]
+        try:
+            return [future.result() for future in futures]
+        except BaseException:
+            for future in futures:
+                future.cancel()
+            raise
 
 
 def append_silence(output, seconds, channels, sample_width, sample_rate):
@@ -726,6 +813,17 @@ def write_subtitles(parts, boundaries, directory, speech_durations=None):
 
 
 def main():
+    try:
+        from .validate_config import validate_config
+    except ImportError:
+        from validate_config import validate_config
+    validate_config(CONFIG)
+    try:
+        from .news_policy import allowed, category
+    except ImportError:
+        from news_policy import allowed, category
+    if 'shows' in CONFIG:
+        raise ValueError('Use scripts/produce_show.py --show ID for explicit show configurations')
     DOCS.mkdir(exist_ok=True)
     pipeline_enabled = CONFIG.get("editorial", {}).get("pipeline", {}).get("enabled", True)
     prepared_by_group = {}
@@ -741,7 +839,8 @@ def main():
             DOCS / "news-store.json", dt.datetime.now(dt.timezone.utc).timestamp(),
             max_sentences=int(CONFIG.get("editorial", {}).get("max_sentences", 2)),
             limit=int(CONFIG.get("max_items", 5)),
-            max_store_age_minutes=max(1, min(120, int(pipeline.get("max_store_age_minutes", 30)))))
+            max_store_age_minutes=max(1, min(120, int(pipeline.get("max_store_age_minutes", 30)))),
+            selection_config=CONFIG)
         story_groups = []
         entry_feeds = {}
         for prepared in ready:
@@ -761,6 +860,10 @@ def main():
                 group.append(entry)
                 entry_feeds[(entry[0], entry[2])] = next(iter(member.get("feed_urls", [])), "")
                 FEED_DATES[entry[2]] = prepared["newest_at"]
+            # Never remove a source from a preapproved draft while keeping its wording.
+            # Reject the entire group if any member violates this show's selection policy.
+            if not all(allowed(entry, entry_feeds[(entry[0], entry[2])], CONFIG) for entry in group):
+                continue
             story_groups.append(group)
             prepared_by_group[id(group)] = prepared
     else:
@@ -771,13 +874,15 @@ def main():
                 for entry in items_from_feed(url):
                     title, desc, link = entry[:3]
                     media = entry[3] if len(entry) > 3 else []
-                    key = title.casefold()
+                    if not allowed((title, desc, link, media), url, CONFIG):
+                        continue
+                    key = link or (title.casefold(), desc)
                     if key not in seen:
                         seen.add(key)
                         collected.append((title, desc, link, media))
                         entry_feeds[(title, link)] = url
             except Exception as exc:
-                print(f"Feed skipped: {url}: {exc}")
+                print(f"Feed skipped ({type(exc).__name__}); source details withheld")
         if not collected:
             raise RuntimeError("No RSS entries available; previous published edition remains unchanged")
         clustering = CONFIG.get("editorial", {}).get("topic_clustering", {})
@@ -785,6 +890,8 @@ def main():
             collected, enabled=clustering.get("enabled", True))
         max_items = max(1, min(int(CONFIG.get("max_items", 5)), 10))
         story_groups = select_balanced_groups(all_groups, max_items)
+    if not story_groups:
+        raise RuntimeError('No eligible news after show selection rules')
     section_settings = CONFIG.get("editorial", {}).get("broadcast_sections", {})
     section_plan = prepare_sections(story_groups, entry_feeds, section_settings)
     story_groups = [group for group, section in section_plan]
@@ -811,13 +918,15 @@ def main():
     verification = editorial.get("crosscheck", {})
     verify_enabled = verification.get("enabled", True)
     max_results = max(1, min(3, int(verification.get("max_sources", 2))))
-    for story_idx, (title, desc, link, _) in enumerate(selected):
+
+    def prepare_story(indexed_entry):
+        story_idx, (title, desc, link, _) = indexed_entry
         related = story_groups[story_idx]
         mentions = referenced_sources(title + ". " + desc)
-        source_mentions.append({"title": title, "article_url": link,
+        source_mention = {"title": title, "article_url": link,
                                 "mentioned_sources": mentions,
                                 "checked_scope": "RSS title and description only",
-                                "independently_verified": False})
+                                "independently_verified": False}
         prepared = prepared_by_group.get(id(related))
         if pipeline_enabled:
             if prepared is None or prepared["verification"]["status"] != "approved":
@@ -826,7 +935,6 @@ def main():
             checked = {"status": "source_support_approved", "matches": [],
                        "scope": "stored_source_support", "claim_verified": False,
                        "pipeline_group_id": prepared["id"], "verification": prepared["verification"]}
-            crosschecks.append(checked)
             print(f"Story {story_idx + 1}: stored, edited and source-checked group {prepared['id']}")
         else:
             checked = (crosscheck_headline(title, link, max_results)
@@ -834,7 +942,6 @@ def main():
                                                "scope": "headline/topic", "claim_verified": False})
             checked["original_title"] = title
             checked["original_url"] = link
-            crosschecks.append(checked)
             article_text = extract_article_text(link)
             source_text = article_text or desc
             print(f"Story {story_idx + 1}: {'rdrr full article' if article_text else 'RSS fallback'}")
@@ -846,7 +953,7 @@ def main():
                 from urllib.parse import urlparse
                 publishers = sorted({(urlparse(x[2]).hostname or "Unbekannt").removeprefix("www.")
                                      for x in related})
-                edited += "\\n" + "Über dieses Ereignis berichten auch: " + ", ".join(publishers[1:]) + "."
+                edited += "\n" + "Quellen zu diesem Ereignis: " + ", ".join(publishers) + "."
             if mentions:
                 edited += "\n" + "Im RSS-Beitrag werden als weitere Quellen genannt: " + ", ".join(mentions) + "."
             if checked["matches"]:
@@ -856,9 +963,14 @@ def main():
                 edited += "\n" + "Bei der automatischen Gegenrecherche wurde keine ausreichend ähnliche Meldung einer anderen Quelle gefunden."
             elif checked["status"] == "unavailable":
                 edited += "\n" + "Eine unabhängige Gegenrecherche war technisch nicht möglich."
+        return edited, source_mention, checked
+
+    for edited, source_mention, checked in parallel_map(prepare_story, enumerate(selected), "Articles and research"):
         parts.append(edited)
+        source_mentions.append(source_mention)
+        crosschecks.append(checked)
     (DOCS / "story-groups.json").write_text(
-        json.dumps([{"headline": group[0][0], "section": section_ids[index],
+        json.dumps([{"headline": group[0][0], "category": category(group[0], entry_feeds.get((group[0][0], group[0][2]), ""), CONFIG), "section": section_ids[index],
             "pipeline_group_id": prepared_by_group.get(id(group), {}).get("id"),
             "editorial_text": prepared_by_group.get(id(group), {}).get("draft", {}).get("text"),
             "sources": [
@@ -879,15 +991,18 @@ def main():
         # The measured WAV sample counts become authoritative scene boundaries.
         import wave
         wav = Path(tmp) / "speech.wav"
-        segment_paths = []
         segment_durations = []
         speech_durations = []
         sample_params = None
+        def synthesize_segment(indexed_part):
+            idx, part = indexed_part
+            segment = Path(tmp) / f"segment_{idx:02d}.wav"
+            synthesize(part, segment)
+            return segment
+
+        segment_paths = parallel_map(synthesize_segment, enumerate(parts), "Speech")
         with wave.open(str(wav), "wb") as combined:
-            for idx, part in enumerate(parts):
-                segment = Path(tmp) / f"segment_{idx:02d}.wav"
-                synthesize(part, segment)
-                segment_paths.append(segment)
+            for idx, segment in enumerate(segment_paths):
                 with wave.open(str(segment), "rb") as source:
                     params = (source.getnchannels(), source.getsampwidth(), source.getframerate(), source.getcomptype())
                     if sample_params is None:
@@ -935,22 +1050,24 @@ def main():
         if media_mode not in ("off", "images", "images_and_videos"):
             raise ValueError("Unsupported RSS media mode")
         max_media_bytes = max(1, min(25, int(media_settings.get("max_download_mb", 12)))) * 1024 * 1024
-        story_media = []
-        media_credits = []
-        for i, entry in enumerate(selected):
+        def prepare_media(indexed_entry):
+            i, entry = indexed_entry
+            # Each worker owns a separate directory, including enhancement files.
+            media_directory = Path(tmp) / f"media_{i:02d}"
+            media_directory.mkdir()
             article_images = (article_image_candidates(entry[2])
                               if media_mode != "off" and media_settings.get("prefer_article_images", True)
                               else [])
             # Prefer original article image metadata to small RSS thumbnails.
             videos = [candidate for candidate in entry[3] if candidate[1] == "video"]
             candidates = (videos if media_mode == "images_and_videos" else []) + article_images + entry[3]
-            asset = download_media(candidates, media_mode, Path(tmp), i, max_media_bytes)
+            asset = download_media(candidates, media_mode, media_directory, i, max_media_bytes)
             credit = {"source": entry[2], "image_origin": "article_metadata_or_rss"}
             if asset is None and media_mode != "off" and media_settings.get("web_image_fallback", True):
                 result = search_commons_image(entry[0])
                 if result:
                     url, image_title, source_url = result
-                    asset = download_media([(url, "image")], "images", Path(tmp), i, max_media_bytes)
+                    asset = download_media([(url, "image")], "images", media_directory, i, max_media_bytes)
                     if asset:
                         credit = {"title": image_title, "source": source_url, "note": "Illustrationsbild, nicht zwingend Aufnahme des Ereignisses"}
                         print(f"Commons fallback for story {i + 1}: {image_title}")
@@ -961,8 +1078,11 @@ def main():
                     credit = {}
                 credit["image_processing"] = method
                 credit["original_media_retained"] = True
-            story_media.append(asset)
-            media_credits.append(credit)
+            return asset, credit
+
+        media_results = parallel_map(prepare_media, enumerate(selected), "Media")
+        story_media = [asset for asset, credit in media_results]
+        media_credits = [credit for asset, credit in media_results]
         (DOCS / "media-credits.json").write_text(json.dumps(media_credits, ensure_ascii=False, indent=2), encoding="utf-8")
         # Studio stays as background; story media appears on a tilted virtual screen.
         duration_text = subprocess.check_output(
@@ -1251,7 +1371,12 @@ def main():
         feed_lines = []
         for feed_url in CONFIG.get("feeds", []):
             # Break after URL separators, but never truncate the only source.
-            url_text = str(feed_url).strip()
+            try:
+                from .security_checks import public_source_url
+            except ImportError:
+                from security_checks import public_source_url
+            # Never burn credentials or signed query strings into a video.
+            url_text = public_source_url(feed_url)
             feed_lines.extend(textwrap.wrap(url_text, width=45, break_long_words=True,
                                             break_on_hyphens=False))
         if not feed_lines:
@@ -1307,7 +1432,7 @@ def main():
                  "-c:v", "libx264", "-preset", "ultrafast", "-tune", "stillimage",
                  "-r", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k",
                  "-t", f"{duration:.3f}", "-shortest", "-movflags", "+faststart", str(DOCS / "latest.mp4")]
-        run(args)
+        run_render(args, [item[0] for item in selected], boundaries)
     lines = ["<!doctype html><html lang='de'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>",
              "<title>PersonalNewsHost</title><style>body{font:1.1rem system-ui;background:#13243a;color:white;max-width:900px;margin:3rem auto;padding:1rem}a{color:#8ed6ff}video{width:100%}.site-logo{display:block;width:min(320px,75vw);height:auto;margin:0 auto 1.2rem}.logo-link{display:block;text-align:center}</style>",
              "<a class='logo-link' href='" + BASE + "' aria-label='Zur Nachrichtenseite'><img class='site-logo' src='https://raw.githubusercontent.com/ploeffler/PersonalNewsHost/main/assets/logo.png' alt='PersonalNewsHost Logo'></a><h1>PersonalNewsHost</h1><p>Stand: " + html.escape(timestamp) + "</p>",
@@ -1320,6 +1445,14 @@ def main():
                 lines.append(" – <a rel='noopener noreferrer' href='" + html.escape(source[2], quote=True) + "'>" + html.escape(source[0]) + "</a>")
         lines.append("</li>")
     lines.append("</ul><p>Automatisch aus RSS erstellt; Inhalte nicht unabhängig überprüft.</p></html>")
+    legal_navigation = "<nav aria-label='Rechtliches'><a href='datenschutz.html'>Datenschutz</a> · <a href='impressum.html'>Impressum</a></nav>"
+    for legal_page in ('datenschutz.html', 'impressum.html'):
+        template = ROOT / 'docs' / legal_page
+        if not template.is_file():
+            template = Path(__file__).resolve().parents[1] / 'docs' / legal_page
+        if template.is_file() and template.resolve() != (DOCS / legal_page).resolve():
+            shutil.copyfile(template, DOCS / legal_page)
+    lines[-1] = lines[-1].replace("</html>", legal_navigation + "</html>")
     (DOCS / "index.html").write_text("\n".join(lines), encoding="utf-8")
     pubdate = email.utils.format_datetime(now)
     guid = now.isoformat()

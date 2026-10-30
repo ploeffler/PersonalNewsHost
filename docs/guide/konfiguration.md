@@ -50,6 +50,19 @@ Die kostenlose CPU-Version ist für ein Budget von **0 € monatlichen Zusatzkos
 
 Verwende GitHub-Tokens nur auf einer vertrauenswürdigen Konfigurationsseite und niemals in Chats, Issues oder öffentlichen Dateien. Der Browser benötigt für das direkte Speichern einen Token; die Konfigurationsseite ist keine vollwertige Benutzerverwaltung.
 
+
+## Konfigurationsvalidierung (Newsoutlet 0.1 in Arbeit)
+
+`config.schema.json` beschreibt bekannte Felder. Zusätzliche Erweiterungsfelder bleiben während der Migration zulässig; sie sind dadurch nicht automatisch implementiert. Vor Produktion werden Konfiguration, endliche Zahlen und Zeitzone geprüft. Fehler enthalten Feldpfad und Regel, keine Konfigurationswerte.
+
+```bash
+python3 -m pip install -r requirements.txt
+python3 scripts/validate_config.py
+# Alternativ eine private Datei prüfen:
+python3 scripts/validate_config.py /pfad/config.json
+```
+
+Beide Repositorykonfigurationen werden standardmäßig geprüft. Der reguläre News-Workflow validiert nach Laden des privaten Konfigurations-Secrets und vor Produktion; `generate.main()` prüft ebenfalls vor Feed-Abrufen und Dateiausgabe.
 ## Senderlogo in der Sendung
 
 Unter **Bilder → Senderlogo hochladen** lässt sich ein PNG- oder JPEG-Bild
@@ -82,3 +95,43 @@ werden ohne Beachtung der Großschreibung als ganze Wörter im Titel gesucht.
 Ohne Treffer greift `default` (Allgemein). Polizei Steiermark und der
 Steiermark-Feed der Kleinen Zeitung sind Lokales zugeordnet. Dies ist eine
 regelbasierte Vorbereitung; die Zuordnung sollte redaktionell geprüft werden.
+
+## RSS-Quellen auswählen
+
+Im Tab **Sendung** zeigt der RSS-Bereich die veröffentlichten Recherche-Kataloge
+als Checkbox-Liste. Die Einträge sind nach Nachrichten beziehungsweise Behörden
+und Blaulicht, Land, Bundesland/Region und Thema gegliedert. Bei deutschen und
+österreichischen Bundesländern erscheinen lokal gespeicherte Wappen-Icons.
+
+Suche und Filter für Land, Bundesland, Sprache und Quellengruppe grenzen die
+Liste ein. „Nur ausgewählte Quellen“ zeigt die aktuelle Auswahl. Bis zu 30
+Quellen sind auswählbar. Feeds mit Prüfhinweis können zusätzlich eingeblendet
+werden; bereits ausgewählte Einträge bleiben erhalten. Im aufklappbaren Bereich
+für eigene Feed-Adressen lassen sich URLs ergänzen oder direkt bearbeiten.
+Checkboxen und Adressliste sind synchron; gespeichert wird weiterhin `feeds`.
+
+„Liste neu laden“ lädt die im Repository veröffentlichten Katalogdateien erneut.
+Es startet keine neue Recherche. Eigene und bisherige Quellen bleiben auch
+bei fehlenden Katalogdateien erhalten. Warnquellen ohne Sendungsadapter sowie
+Web-/API-Angebote ohne RSS werden mit ihrem Status angezeigt und sind noch
+nicht neu auswählbar. Bereits bestehende Konfigurationen werden nicht still
+umgeschrieben; entsprechende Quellen können abgewählt werden.
+
+Die Wappen dienen der geografischen Zuordnung. [Bildnachweise](../assets/regions/README.md).
+
+Jeder Feed zeigt nach Möglichkeit das lokal gespeicherte Favicon seiner Quelle.
+Fehlt es oder kann es nicht geladen werden, erscheinen Initialen. Bei gemeinsam
+gehosteten Quellen kann es sich um das Plattformlogo handeln. Eigene neue
+Domains verursachen keine automatischen externen Favicon-Anfragen im Browser.
+[Bildnachweise der Quellenlogos](../assets/source-logos/README.md).
+
+Der Recherche-Workflow aktualisiert die Quellenlogos automatisch in einem
+anschließenden gemeinsamen Job. Neue oder fehlende Logos werden gesucht,
+bestehende nach 30 Tagen geprüft. Die aktualisierten Dateien liegen im Artefakt
+`feed-research-with-logos`; veröffentlicht werden sie nach ihrer Übernahme ins
+Repository.
+
+
+## Mehrere Shows
+
+Die erste getrennte Showproduktion und Vererbung sind in [Shows](shows.md) beschrieben. `config.shows.example.json` enthält zwei Editionen; der alte Generator bleibt für Konfigurationen ohne explizite Shows verfügbar.

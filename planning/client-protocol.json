@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "branch": "Full-featured-Newsoutlet",
+  "scope": "Development clients, not virtual newsroom employees. No CMS or product-user accounts.",
+  "prerequisites": [
+    "Separate clone/checkout per client; preserve any existing local edits.",
+    "Git read/write credentials for the shared branch and a configured Git author identity.",
+    "Fetch machine board before selecting work. Never start until claim push is confirmed."
+  ],
+  "workflow": [
+    "Read project.json and task-board.json. Filter active release and dependencies.",
+    "Claim explicit task and write scope; save returned lease token.",
+    "Fetch latest shared branch into client code checkout before starting; never force reset local changes.",
+    "Heartbeat before lease expires; stop publishing work when lease no longer valid.",
+    "Commit and integrate tested code into shared branch with ordinary fast-forward pushes; resolve concurrent changes deliberately.",
+    "Submit already-published commit SHA and check evidence while holding valid lease.",
+    "Independent reviewer verifies actual evidence and unchanged file scope, then completes or rejects.",
+    "Release advancement and docs publication remain separate coordinator decisions after all tasks and integration checks."
+  ],
+  "commands": [
+    [
+      "python3",
+      "scripts/task_client.py",
+      "list",
+      "--client",
+      "client-a"
+    ],
+    [
+      "python3",
+      "scripts/task_client.py",
+      "show",
+      "--client",
+      "client-a",
+      "--task",
+      "T100"
+    ],
+    [
+      "python3",
+      "scripts/task_client.py",
+      "claim",
+      "--client",
+      "client-a",
+      "--task",
+      "T100",
+      "--file",
+      "scripts/provider_runtime.py",
+      "--file",
+      "tests/test_provider_runtime.py",
+      "--expected-revision",
+      "0"
+    ],
+    [
+      "python3",
+      "scripts/task_client.py",
+      "heartbeat",
+      "--client",
+      "client-a",
+      "--task",
+      "T100",
+      "--token",
+      "RETURNED_LEASE_TOKEN"
+    ],
+    [
+      "python3",
+      "scripts/task_client.py",
+      "submit",
+      "--client",
+      "client-a",
+      "--task",
+      "T100",
+      "--token",
+      "RETURNED_LEASE_TOKEN",
+      "--commit",
+      "FULL_COMMIT_SHA",
+      "--checks",
+      "Test run URL or recorded check result"
+    ],
+    [
+      "python3",
+      "scripts/task_client.py",
+      "complete",
+      "--client",
+      "reviewer-b",
+      "--task",
+      "T100",
+      "--note",
+      "Independent review result"
+    ],
+    [
+      "python3",
+      "scripts/task_client.py",
+      "reconcile",
+      "--client",
+      "coordinator",
+      "--task",
+      "T100",
+      "--commit",
+      "INTEGRATED_COMMIT_SHA",
+      "--note",
+      "Local-only implementation reconciled and verified"
+    ]
+  ],
+  "current_warning": "T100 and other unfinished 0.1 tasks contain local pending work. Example claim is a template and will be blocked until reconciliation.",
+  "atomicity": "Task state commits modify only planning/task-board.json. Competing pushes are rejected by Git; client refetches and revalidates up to four times. No shared unlocked JSON file and no force push.",
+  "leases": "Tokens fence expired workers; explicit file paths or directory paths ending slash are required. Lease expiry does not cancel a running OS process. Clients must stop stale work themselves.",
+  "conflict_recovery": "On failure do not assume ownership; refetch board. New cache clones stay under ignored .test-tmp/task-clients and do not change working checkout.",
+  "security": "No secrets in tasks/check evidence. A client ID is not verified identity. Direct Git writers can bypass protocol, so all collaborating clients must follow it.",
+  "github_issue_view": {
+    "direction": "Read GitHub issues for overview, but edit authoritative task JSON only via coordination protocol.",
+    "mapping": "planning/github-task-map.json maps Task IDs to issue numbers and versions to milestones.",
+    "manual_notes": "Use comments or text outside the managed block; status/labels/milestone inside the mirror are refreshed from JSON.",
+    "no_lease_via_issue": "Assigning yourself an issue does not claim file scopes or grant a client lease."
+  }
+}

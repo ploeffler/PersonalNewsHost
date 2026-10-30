@@ -1,0 +1,120 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  scope: Virtuelle Mitarbeiter sind Avatare; Avatar-Erstellungswizard mit 3D-Upload
+  status: planned
+tasks:
+- id: T230
+  epic: E20
+  title: Gemeinsames Mitarbeiter-/Avatarmodell
+  status: todo
+  depends_on:
+  - T110
+  - T164
+  instructions:
+  - Virtuellen Mitarbeiter als Avatar-Identität mit staff_id/avatar_id, Name, Ressort,
+    Rolle, Biografie, Stimme und Assets modellieren. Kein Benutzerkonto.
+  - Identität direkt im zugeordneten Ressort verwalten; Beiträge und Shows referenzieren
+    dieselbe Ressource.
+  - Avatar kann Host, Gast, Korrespondent oder Hintergrundrolle sein. Automatische
+    Workflowfähigkeit und menschliche Freigabe bleiben getrennt.
+  acceptance:
+  - Avatar, Redaktionsbeitrag und Show referenzieren dieselbe Identität; keine Loginfelder
+    am Mitarbeiter.
+- id: T231
+  epic: E20
+  title: Avatar-Erstellungswizard und Assetverwaltung
+  status: todo
+  depends_on:
+  - T230
+  - T193
+  instructions:
+  - Avatarwizard direkt über Mitarbeiter anlegen/bearbeiten innerhalb des Ressorts
+    aufrufen; Ersteinrichtung führt dorthin.
+  - 'Schritte: fiktive Identität, Rolle/Zuständigkeit, Bild oder 3D-Upload, Vorschau/Ausrichtung,
+    Stimme, Prüfung und Aktivierung. Kein Kontoeinrichtungsschritt.'
+  - Entwürfe und Versionen speichern; verwendete Assets nicht ersatzlos löschen. Herkunft/Lizenz
+    und Standbildfallback bleiben erhalten.
+  acceptance:
+  - Avatar lässt sich im Ressort erstellen, fortsetzen und bearbeiten; Zuordnungen
+    bleiben konsistent, ohne individuelle Konten.
+- id: T232
+  epic: E20
+  title: 3D-Upload, Validierung und Vorschau
+  status: todo
+  depends_on:
+  - T231
+  - T191
+  instructions:
+  - 'Erste verbindliche Uploadformate: GLB und glTF 2.0. GLB als bevorzugtes Einzeldateiformat;
+    glTF mit ausdrücklich hochgeladenen lokalen Textur-/Bufferdateien in isoliertem
+    Assetverzeichnis. Weitere Formate wie FBX/OBJ/VRM erst nach gesondert getesteter
+    Unterstützung anbieten.'
+  - Upload nur mit gemeinsamem Redaktionszugang am Verwaltungsport. Größen-, Textur-,
+    Polygon- und Ressourcenlimits konfigurieren; Inhalt und tatsächliches Format validieren
+    statt nur Dateiendung.
+  - Pfadtraversal, absolute Dateipfade, entfernte URLs und Referenzen außerhalb des
+    Uploadsatzes ablehnen; keine ungeprüften Archive entpacken. Unbekannte/aktive
+    Erweiterungen und ressourcenintensive Assets kontrolliert ablehnen.
+  - Validierung/Konvertierung begrenzt und isoliert ausführen; fehlerhafte Modelle
+    dürfen Dienst und bestehende Avatare nicht beschädigen.
+  - Interaktive 3D-Vorschau mit Rotation, Zoom, Maßstab und Orientierung; lokale Assetauslieferung
+    ohne Netzwerkzugriffe des Modells. Kompatibilitätsbericht für Geometrie, Texturen,
+    Skelett, Animationen und Gesichtsmorphs.
+  - 3D-Dateien nicht automatisch öffentlich veröffentlichen; Vorschau und Originaldownload
+    gemäß Benutzerrechten schützen.
+  acceptance:
+  - Gültiger GLB-Avatar lässt sich hochladen und ansehen; glTF-Begleitdateien werden
+    korrekt lokal aufgelöst.
+  - Externe Referenzen, übergroße oder defekte Assets und manipulierte Pfade werden
+    abgewiesen.
+  - Ein gültiges ungeriggtes Modell wird als statisch nutzbar ausgewiesen, nicht als
+    lipsync-fähig.
+- id: T233
+  epic: E20
+  title: 3D-Rendering, Rigging-Zuordnung und Lipsync-Fallback
+  status: todo
+  depends_on:
+  - T232
+  - T161
+  - T162
+  instructions:
+  - 3D-Renderpfad an Provider-/Segmentverträge anbinden; statisches Rendern von rigabhängiger
+    Körper-/Gesichtsanimation trennen.
+  - Unterstütztes Skelett-/Morphzielprofil definieren; Zuordnung vorhandener Blendshapes/Viseme
+    im Wizard anzeigen und bei Bedarf konfigurieren.
+  - Fehlendes Rig oder fehlende Gesichtsmorphs nicht automatisch als erzeugbar voraussetzen;
+    optionales Retargeting erst mit geprüftem Verfahren aktivieren.
+  - Kameraposition, Beleuchtung, Hintergrund und Maßstab reproduzierbar speichern;
+    Avatarversion in Rendercache einbeziehen.
+  - Kompatibles Testmodell audiogetrieben animieren und gegen bestehende Synchronitätskriterien
+    prüfen; bei unzureichender Eignung Standbild-/bestehenden Moderator-Fallback verwenden.
+  - CPU-Standardbetrieb darf ohne GPU und ohne 3D-Lipsync abschließbar sein; optionale
+    GPU-Anforderungen gesondert ausweisen.
+  acceptance:
+  - Gültiges statisches Modell liefert ein nutzbares Avatarbild; kompatibles geriggtes
+    Referenzmodell wird separat animiert geprüft.
+  - Fehlende Rig-/Visemefähigkeit führt zu verständlichem Bericht und funktionsfähigem
+    Fallback.
+  - Avataränderung invalidiert Rendercache, ohne historische Assetversionen zu überschreiben.
+- id: T234
+  epic: E20
+  title: Avatarwizard-Dokumentation und Abnahme
+  status: todo
+  depends_on:
+  - T233
+  - T222
+  instructions:
+  - Uploadformate, Begleitdateien, Assetlimits, Ressorts, Rollen, Stimmen und Lizenznachweise
+    dokumentieren; keine automatische Konvertierung beliebiger 3D-Objekte versprechen.
+  - Wizardtests und visuelle Prüfungen für Bildavatar, statisches GLB-Modell, geriggtes
+    Referenzmodell, ungültige Dateien, Rechte und Wiederaufnahme durchführen.
+  - Persistente Assetvolumes, Dateirechte, Backup/Restore und optionale GPU-Profile
+    für Linux, Docker CLI und Portainer dokumentieren.
+  - Bediener-Freigabe unter Avatarrolle und automatische Avatarproduktion getrennt
+    in Gesamtabnahme prüfen.
+  acceptance:
+  - Abnahmebericht unterscheidet Upload, Vorschau, statisches Rendering, Körperanimation
+    und Lipsync nach tatsächlichem Unterstützungsstand.
+  - Assets und Mitarbeiterzuordnung bleiben über Neustart, Container-Neuerstellung
+    und Wiederherstellung konsistent.

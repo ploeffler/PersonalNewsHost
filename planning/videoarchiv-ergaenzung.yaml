@@ -1,0 +1,59 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  scope: Verpflichtende dauerhafte Videoarchivierung
+  status: planned
+overrides:
+- task: T030
+  rule: Automatisches Löschen archivierter Videos entfällt. Aufbewahrungsvorgaben
+    gelten nur für temporäre Dateien und Caches; Speicherknappheit darf keine Archivlöschung
+    auslösen.
+- constraint: C7
+  rule: Das vollständige Videoarchiv liegt auf persistentem Linux-/Container-Speicher.
+    GitHub Pages ist optionales Veröffentlichungsziel und nicht der alleinige Archivspeicher.
+tasks:
+- id: T260
+  epic: E23
+  title: Verpflichtendes Videoarchiv Jahr/Monat/Tag
+  status: todo
+  depends_on:
+  - T030
+  - T051
+  - T186
+  instructions:
+  - Jedes erfolgreich erzeugte finale Video vor Veröffentlichungsfreigabe verbindlich
+    im persistenten Archiv sichern, einschließlich Shows, Eilmeldungen, Wiederholungsproduktionen
+    und finaler Social-Media-Videoexporte. Temporäre Rendersegmente sind keine finalen
+    Videos.
+  - Pfadschema archive/YYYY/MM/DD/<show_id>/<production_id>/<variant_id>.mp4; Erweiterung
+    entspricht dem tatsächlichen Ausgabeformat. Stabile Produktions-/Varianten-IDs
+    verhindern Überschreiben am gleichen Tag.
+  - Archivdatum aus dem erfolgreichen Produktionsabschluss in der konfigurierten Show-Zeitzone
+    bestimmen; UTC-Zeit und verwendete Zeitzone im Manifest speichern. Wiederholung
+    eines Archivierungsschritts verwendet dasselbe Datum und dieselbe Produktions-ID.
+  - Archivdatei zunächst temporär auf dem Archivspeicher schreiben, Integrität und
+    Dateigröße prüfen, anschließend atomar abschließen. Manifest mit Prüfsumme, Erzeugungszeit,
+    Show, Variante, Quellenreferenzen und Produktionsversionen speichern.
+  - Videoarchiv ist obligatorisch und nicht abschaltbar. Bei Archivierungsfehler oder
+    vollem Speicher Produktion als nicht vollständig archiviert melden, Veröffentlichung
+    verhindern und letzte gültige Ausgabe erhalten. Wiederaufnahme ohne Überschreiben
+    vorhandener Videos ermöglichen.
+  - Keine automatische Archivlöschung oder Altersbereinigung. Temporäre Dateien und
+    Caches separat verwalten. Speicherverbrauch und freien Platz anzeigen; Sicherung/Wiederherstellung
+    dokumentieren.
+  - Für Linux konfigurierbaren persistenten Archivpfad, für Docker/Portainer verpflichtendes
+    Archivvolume vorsehen. Archiv muss Container-Neuerstellung und Updates überstehen.
+  - 'Videoarchivierung ist unabhängig von Publish-/Freigabestatus: auch final erzeugte,
+    später nicht veröffentlichte Videos intern archivieren. Öffentliche Sichtbarkeit
+    separat steuern; unveröffentlichte Videos und interne Manifeste nicht automatisch
+    ausliefern.'
+  acceptance:
+  - Zwei Produktionen derselben Show am gleichen Tag und mehrere Varianten liegen
+    ohne Überschreiben unter YYYY/MM/DD.
+  - Erfolgreich erzeugte finale Videos werden auch ohne Veröffentlichung archiviert.
+  - Archivierungsfehler verhindert Veröffentlichung; erneuter Versuch funktioniert
+    idempotent.
+  - Neustart, Update, Container-Neuerstellung und Backup/Restore erhalten Videos,
+    Manifeste und Prüfsummen.
+  - Tests prüfen Monats-/Jahreswechsel und Show-Zeitzone; kein Aufbewahrungsjob löscht
+    Archivvideos.

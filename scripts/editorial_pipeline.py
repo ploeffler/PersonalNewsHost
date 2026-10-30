@@ -39,12 +39,17 @@ def places(title):
 
 def same_event(first,second):
     a,b=words(first['title']),words(second['title'])
+    pa,pb=places(first['title']+'. '+first.get('text','')),places(second['title']+'. '+second.get('text',''))
+    if pa and pb and not pa&pb:return False
+    # Identical short headlines still need two meaningful words; generic alerts
+    # or a shared person's name alone are never sufficient event evidence.
+    short_event={'gesperrt','beschlossen','eröffnet','geschlossen','evakuiert','verletzt','abgesagt','ausgefallen'}
+    if prose(first['title']).casefold()==prose(second['title']).casefold():
+        if len(a-GENERIC)>=3 or (len(a-GENERIC)>=2 and a&short_event):return True
     overlap=len(a&b)
     if overlap<3:return False
     containment=overlap/max(1,min(len(a),len(b)));jaccard=overlap/max(1,len(a|b))
-    if containment<.78 or jaccard<.55 or SequenceMatcher(None,first['title'].casefold(),second['title'].casefold()).ratio()<.58:return False
-    pa,pb=places(first['title']+'. '+first.get('text','')),places(second['title']+'. '+second.get('text',''))
-    return not (pa and pb and not pa&pb)
+    return containment>=.78 and jaccard>=.55 and SequenceMatcher(None,first['title'].casefold(),second['title'].casefold()).ratio()>=.58
 
 
 def age(article):
@@ -205,9 +210,20 @@ def prepare(store,now,max_sentences=2,writer=None):
             'max_sentences':max_sentences,'sources':sources,'groups':results,'excluded_articles':excluded}
 
 
-def select(report,limit):
-    ready=sorted((g for g in report['groups'] if g['verification']['status']=='approved'),
-                 key=lambda g:(-g['newest_at'],g['id']))
+def select(report,limit,selection_config=None):
+    try:
+        from .news_policy import allowed, source_weight
+    except ImportError:
+        from news_policy import allowed, source_weight
+    config=selection_config or {}
+    def entries(group):
+        for sid in group['member_ids']:
+            member=report['sources'][sid]
+            yield (member['title'], member.get('text',''), member.get('url',''), []), next(iter(member.get('feed_urls',[])), '')
+    for group in report['groups']:
+        group['selection_excluded']=not all(allowed(entry,feed,config) for entry,feed in entries(group))
+    ready=sorted((g for g in report['groups'] if g['verification']['status']=='approved' and not g['selection_excluded']),
+                 key=lambda g:(-max(source_weight(entry,config) for entry,feed in entries(g)), -g['newest_at'],g['id']))
     selected=[];represented=set()
     for group in ready:
         publishers={report['sources'][sid]['publisher'] for sid in group['member_ids']}
@@ -222,7 +238,7 @@ def select(report,limit):
     return selected
 
 
-def production_plan(path,now,max_sentences=2,limit=5,max_store_age_minutes=30):
+def production_plan(path,now,max_sentences=2,limit=5,max_store_age_minutes=30,selection_config=None):
     path=Path(path)
     if not path.is_file():raise RuntimeError('News store missing; run collect_news.py before production')
     store=json.loads(path.read_text(encoding='utf-8'))
@@ -230,7 +246,7 @@ def production_plan(path,now,max_sentences=2,limit=5,max_store_age_minutes=30):
     if not isinstance(updated,(int,float)) or not 0<=now-updated<=max_store_age_minutes*60:
         raise RuntimeError('News store stale; refresh stored messages before production')
     report=prepare(store,now,max_sentences=max(1,min(4,max_sentences)))
-    selected=select(report,max(1,min(10,limit)))
+    selected=select(report,max(1,min(10,limit)),selection_config)
     report['mode']='production'
     report['selected_ids']=[g['id'] for g in selected]
     output=path.parent/'editorial-report.json'

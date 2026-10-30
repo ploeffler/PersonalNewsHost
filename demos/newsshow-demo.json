@@ -1,0 +1,24 @@
+{
+  "title": "Newsshow-Demo",
+  "publication_kind": "repository-demo",
+  "video": "newsshow-demo.mp4",
+  "preview": "newsshow-demo.png",
+  "source": {
+    "fixture_id": "newsshow-allgemein-de-v1",
+    "newsroom": {
+      "id": "allgemein",
+      "name": "Allgemein"
+    },
+    "show_id": "main",
+    "language": "de",
+    "is_example": true,
+    "live_sources": false,
+    "published": false,
+    "ai_label": "AI, bottom right, all frames",
+    "created_at": "2026-10-29T22:42:05.575500+00:00",
+    "archive_timezone": "Europe/Vienna",
+    "archive": "archive/2026/10/29/main/224205-438c2967/example-de.mp4",
+    "sha256": "66ff27e34275f5058a36eddcf6cc1fac814be44ddfd67a640971b128dbd06168",
+    "duration_seconds": 62.0
+  }
+}

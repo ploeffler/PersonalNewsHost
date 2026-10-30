@@ -1,0 +1,90 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  scope: Verbindliche Trennung von Produktion und Veröffentlichung
+  status: planned
+overrides:
+- task: T250
+  rule: Veröffentlichung nach erfolgreicher Produktion ist nicht mehr der Standard.
+    Produktion bleibt intern; automatische Veröffentlichung ist separat und ausdrücklich
+    einzurichten.
+tasks:
+- id: T340
+  epic: E31
+  title: Getrennte Produktions- und Veröffentlichungsaufträge
+  status: todo
+  depends_on:
+  - T051
+  - T204
+  - T250
+  - T260
+  - T280
+  instructions:
+  - Produktion und Veröffentlichung als separate persistente Aufträge mit eigenen
+    IDs, Statusübergängen, Berechtigungen und Wiederholungsregeln modellieren. Erfolgreiche
+    Produktion darf selbst keine öffentliche Freischaltung oder externe Posts auslösen.
+  - Produktionszustände z.B. geplant, laufend, fehlgeschlagen, produziert, archiviert;
+    Veröffentlichungszustände separat z.B. Entwurf, wartet auf Freigabe, freigegeben,
+    terminiert, veröffentlichend, teilweise veröffentlicht, veröffentlicht, fehlgeschlagen,
+    zurückgezogen. Fachlich gültige Übergänge verbindlich definieren.
+  - 'Produktionsplan steuert Erzeugung und Pflichtarchivierung. Veröffentlichung je
+    Show unabhängig konfigurieren: manuell, terminiert oder explizit aktivierte Automatik
+    nach erfolgreicher Produktion und erforderlichen Freigaben. Standard ist intern
+    ohne Veröffentlichung.'
+  - Veröffentlichungsauftrag referenziert konkrete unveränderliche Produktions-/Artefaktversionen
+    und Zielkanäle; bereits produzierte Ausgabe wiederverwenden statt neu rendern.
+    Bei geänderter Produktion zugehörige Freigabe neu prüfen.
+  - Vor Veröffentlichung Archivintegrität, AI-Kennzeichnung, Quellen, Qualitätsstatus
+    und erforderliche redaktionelle Freigabe erneut anhand der referenzierten Version
+    prüfen. Fehlende oder verspätete Produktion darf keine ältere Ausgabe stillschweigend
+    ersetzen.
+  - Webseite, Feeds, öffentliche Downloads und Social-Posts ausschließlich über Veröffentlichung
+    steuern. Internes Archiv und Vorschau durch Zugriffsschutz von öffentlichen Assets
+    trennen; keine vorzeitig erreichbaren erratbaren URLs.
+  - Pro Zielkanal Status und Remote-Referenzen führen; Teilfehler unabhängig wiederholen,
+    Doppelposts verhindern. Rücknahme und Korrektur mit den tatsächlich verfügbaren
+    Fähigkeiten je Kanal behandeln.
+  - Produzieren, Freigeben, Terminieren und Veröffentlichen als getrennte Workflowaktionen
+    im gemeinsamen Redaktionszugang behandeln; keine zusätzliche Benutzer-/Gruppenrechtematrix.
+  - Termine mit Zeitzone, Umgang mit verspäteter Produktion, Ablauf der Freigabe und
+    manueller Stornierung konfigurieren. Produktionsfehler lässt letzte veröffentlichte
+    Ausgabe unverändert.
+  acceptance:
+  - Manueller oder geplanter Produktionslauf erzeugt ausschließlich intern archivierte
+    Artefakte.
+  - Dieselbe produzierte Version lässt sich später ohne Renderaufruf gezielt veröffentlichen.
+  - Ohne Veröffentlichungsrecht/Freigabe sind öffentliche Freischaltung und Social-Posting
+    gesperrt.
+  - Teilweise Veröffentlichung ist sichtbar und wiederholbar, ohne erfolgreiche Kanäle
+    zu duplizieren.
+- id: T341
+  epic: E31
+  title: Getrennte Verwaltung, Migration und Abnahme
+  status: todo
+  depends_on:
+  - T340
+  - T252
+  - T330
+  instructions:
+  - Showverwaltung um getrennte Bereiche Produktion und Veröffentlichung mit eigenen
+    Terminen, Arbeitskörben und Historien ergänzen. Deutliche Aktionen Produzieren,
+    Vorschau, Freigeben und Veröffentlichen.
+  - Kostenvorschau getrennt nach Erzeugung und gegebenenfalls anfallenden Veröffentlichungskosten
+    ausweisen; Publizieren eines vorhandenen Videos darf keine erneuten Generierungskosten
+    vortäuschen.
+  - Ersteinrichtungswizard und initiale Newsshow ohne automatische Veröffentlichung
+    vorkonfigurieren; bestehende tatsächlich aktivierte Veröffentlichungsregeln bei
+    Migration ausdrücklich anzeigen und übernehmen, nicht stillschweigend neue Ziele
+    aktivieren.
+  - Übrige Anforderungen zu Shows, Kurzvideos, Uploadvideo und Sequenzen an dieselbe
+    Trennung anbinden. Pflichtarchiv bleibt unabhängig von Veröffentlichungsstatus
+    bestehen.
+  - Tests für Produktion ohne Veröffentlichung, geplante Freigabe, verspätete/fehlende
+    Ausgabe, fehlende Rechte, Versionswechsel, Teilfehler, Wiederaufnahme und Archivzugriffsschutz;
+    Betriebsanleitungen aktualisieren.
+  acceptance:
+  - UI zeigt eindeutig produziert ist nicht veröffentlicht; verschiedene Zeitpläne
+    und Zustände sind nachvollziehbar.
+  - Neue Installation veröffentlicht nichts vor separater Einrichtung und Freigabe.
+  - Tests weisen nach, dass vor Veröffentlichung weder öffentliche Dateien/Feeds noch
+    externe Posts aktualisiert werden.

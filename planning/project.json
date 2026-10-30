@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "project": "PersonalNewsHost",
+  "branch": "Full-featured-Newsoutlet",
+  "main_policy": "Never merge or push main without an explicit new user request.",
+  "authority": {
+    "project_scope": "planning/project.json",
+    "task_state_and_releases": "planning/task-board.json",
+    "schema": "planning/task-board.schema.json",
+    "client_protocol": "planning/client-protocol.json",
+    "legacy_sources": "planning/*.yaml and imported original YAML remain traceable inputs; do not overwrite live task state with a new import.",
+    "development_instructions": "AGENTS.md"
+  },
+  "architecture": {
+    "cms": false,
+    "cms_external_database": false,
+    "tenancy_platform": false,
+    "access": [
+      "configuration",
+      "editorial_shared"
+    ],
+    "virtual_employees_have_logins": false,
+    "employee_management": "Within department/ressort; avatars remain production identities and workflow roles.",
+    "initial_newsroom": {
+      "id": "allgemein",
+      "name": "Allgemein"
+    },
+    "initial_show": {
+      "id": "main",
+      "name": "Newsshow"
+    },
+    "languages": "Editorial defines active output languages and default; shows and individual items inherit or select approved variants."
+  },
+  "features_to_preserve": [
+    "Editorial departments, virtual staff, source checking, editing, revision and human approval",
+    "Shows composed of reusable plugins: news blocks, studio conversations, uploaded video, topical short video, intro/outro",
+    "Standalone contributions in virtual employee name from existing clusters or manual text/media inputs",
+    "Recurring shows, avatar/studio wizards, optional GPU/local and opt-in external providers",
+    "Independent production and publication queues with versioned config snapshots",
+    "Mandatory final-video YYYY/MM/DD archive and always-visible bottom-right AI label",
+    "Cost preview, budget control, social export and opt-in publishing"
+  ],
+  "deployment": {
+    "modes": [
+      "linux_repository_service",
+      "docker_compose_portainer"
+    ],
+    "public_https_port": 443,
+    "management_https_port": 8444,
+    "self_signed_certificates": true,
+    "persistent_state": true
+  },
+  "release_policy": {
+    "versions": [
+      "0.1",
+      "0.2",
+      "0.3",
+      "0.4",
+      "0.5",
+      "0.6",
+      "0.7",
+      "0.8",
+      "0.9",
+      "1.0"
+    ],
+    "active": "0.1",
+    "completed": [],
+    "all_tasks_reviewed_before_completion": true,
+    "integration_tests_required": true,
+    "code_publish": "Push tested version milestones; explicitly requested independent changes may be pushed separately. Never call an unfinished version complete.",
+    "documentation": "Consolidate docs, render diagrams and sync wiki only after confirmed completed/tested subversion, matching marker and version tag.",
+    "marker": "planning/documentation-release.json",
+    "procedure": [
+      "Finish/review every task assigned to the current version; preserve evidence and run integration checks.",
+      "Commit/push the tested version only to Full-featured-Newsoutlet. A task completion is not automatically a version release.",
+      "Confirm matching documentation-release marker and VERSION; create version tag to consolidate diagrams/docs/wiki.",
+      "When moving to next version, change active_version in the board and project metadata deliberately and reset release confirmation flags."
+    ]
+  },
+  "coordination": {
+    "implementation": "scripts/task_client.py",
+    "shared_authority": "Git remote branch Full-featured-Newsoutlet",
+    "isolated_client_checkouts_required": true,
+    "no_force_push": true,
+    "lease_seconds_default": 3600,
+    "lease_seconds_max": 14400,
+    "file_scope_conflicts_block_claims": true,
+    "reviewer_must_differ_from_worker": true,
+    "identity_model": "Trusted Git writers self-declare client IDs; this is coordination, not cryptographic user authentication.",
+    "uncommitted_local_0_1_work": "Marked local_work_pending; reconcile deliberately after integration before another client claims it."
+  },
+  "inventory": {
+    "task_count": 144,
+    "package_count": 45,
+    "release_count": 10
+  },
+  "task_state_import": {
+    "progress_source": "planning/fortschritt.yaml",
+    "imported_status": "4 previously completed; 10 unfinished local 0.1 tasks require reconciliation; remaining tasks planned.",
+    "no_milestone_inferred": true
+  },
+  "github_mirror": {
+    "authoritative_source": "planning/task-board.json",
+    "direction": "JSON to GitHub only",
+    "issues": "One issue per task, identified by immutable task ID marker; preserve human text outside managed body block.",
+    "versions": "One milestone per version; do not infer version completion from closed issues alone.",
+    "packages": "One package:Axx label per package, with managed status labels.",
+    "mapping": "planning/github-task-map.json",
+    "synchronizer": "scripts/sync_github_tasks.py",
+    "workflow": ".github/workflows/task-sync.yml",
+    "claims": "Client claims, leases, file scopes and reviews remain in task-board.json, not issue assignment.",
+    "project_board": "No GitHub Project required initially; issues plus milestones provide the initial view.",
+    "publication": "Ordinary task mirror updates do not generate diagrams or publish wiki; main is never changed."
+  }
+}

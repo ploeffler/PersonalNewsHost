@@ -1,0 +1,46 @@
+meta:
+  date: '2026-10-29'
+  scope: 'Verbindliche Nutzerpräzisierung: eigene Anwendung, kein CMS, zwei Zugänge'
+  status: accepted_scope
+tasks: []
+precedence: Ersetzt widersprechende Konten-/CMSanforderungen der historischen Originalvorlage
+  und älterer Ergänzungen.
+removed:
+- WordPress/TYPO3 und andere CMS; Auswahlentscheidung, Adapter, Container und CMS-spezifische
+  externe Datenbankanbindung
+- Individuelle Mitarbeiterlogins, Passwortverwaltung, persönliche Arbeitskörbe und
+  zusätzliche Benutzer-/Gruppenverwaltung
+- CMS-bedingte Mandantenplattform; keine zusätzliche Mehrmandantenfunktion ohne neue
+  Anforderung
+retained:
+- Abteilungen/Ressorts, virtuelle Mitarbeiter, Rollen und Zuständigkeiten
+- Redaktionsworkflow einschließlich Quellenprüfung, Überarbeitung und menschlicher
+  Freigaben
+- Shows aus Plugins und Einzelbeiträge/Kurzvideos im Namen virtueller Mitarbeiter
+- Alle anderen bestehenden Show-, Medien-, Provider-, Kosten-, Archiv- und Kennzeichnungsfunktionen
+employee_management: Direkt innerhalb des jeweiligen Ressorts; Ressource ohne Loginidentität.
+access:
+  configuration: Betrieb, Provider, Secrets, Budgets und die zwei Zugänge
+  editorial: Ressorts/Mitarbeiter, Inhalte/Medien, Shows/Plugins, Produktionsaufträge,
+    Freigaben und Veröffentlichung
+runtime: Eigene Verwaltung mit interner versionierter Konfiguration und Produktionsauftragsliste.
+  Lokale Persistenz nach technischem Bedarf; kein CMS und keine obligatorische externe
+  Datenbank.
+original_clarifications:
+  T110: Rechte an staff sind virtuelle Workflowfähigkeiten, keine Bedienerkonten.
+  T128: Menschliche Freigaben im gemeinsamen Redaktionsarbeitskorb; optionale Benachrichtigungen
+    ersetzen ihn nicht.
+initial_newsroom:
+  id: allgemein
+  name: Allgemein
+  scope: Eine vorkonfigurierte Redaktion mit initialer Newsshow; keine neue Mandanten-
+    oder Kontenverwaltung.
+  initialization: Nur bei frischer Einrichtung; idempotent und ohne Überschreiben
+    bestehender Redaktionen oder Einstellungen.
+documentation_policy:
+  when: Nur nach bestätigtem Abschluss und Tests einer Unterversion
+  pipeline: Dokumentation konsolidieren, Grafiken rendern, Wiki synchronisieren
+  trigger: Passender Versionstag; manuelle Wiederholung nur für denselben bestätigten
+    Tag
+  during_development: Keine Grafik-/Wiki-Veröffentlichung bei gewöhnlichen Commits;
+    keine automatische Wiki-Synchronisation von main.

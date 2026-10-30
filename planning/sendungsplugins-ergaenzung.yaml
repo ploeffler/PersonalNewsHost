@@ -1,0 +1,93 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  scope: Sendungsbausteine als Anwendungsplugins, unabhängig von Codex-Plugins
+  status: planned
+  scope_policy: umfang-vereinfacht.yaml hat Vorrang bei älteren Konten-/Rechteformulierungen.
+tasks:
+- id: T270
+  epic: E24
+  title: Pluginvertrag und Registry für Sendungsbausteine
+  status: todo
+  depends_on:
+  - T002
+  - T100
+  - T151
+  instructions:
+  - 'Versionierte Plugin-Schnittstelle für Sendungsbausteine definieren: Manifest
+    mit stabiler plugin_id, Version, unterstützter API-Version, Fähigkeiten und Konfigurationsschema;
+    Lifecycle für Validierung, Planung, Renderauftrag und Ergebnisprüfung.'
+  - Zentrale Registry für installierte, aktivierte und kompatible Plugins; Showsegmente
+    referenzieren plugin_id, Konfiguration und Instanz-ID. Mehrere Instanzen desselben
+    Plugins pro Show zulassen.
+  - 'Provider und Segmentplugins getrennt halten: Plugins nutzen bestehende Provider-,
+    Avatar-, Studio-, Quellen- und Archivdienste über dokumentierte Schnittstellen
+    statt eigene parallele Infrastruktur.'
+  - Plugins liefern geplante Segmente und Artefaktmetadaten, veröffentlichen aber
+    nicht eigenständig. Zentrale Freigabe, Quellen-/KI-Kennzeichnung, Budgetprüfung
+    und Pflichtarchivierung bleiben verbindlich.
+  - Konfiguration, Plugins und Versionen pro Produktionslauf fixieren; Cache-Schlüssel
+    und Historie berücksichtigen Pluginversionen. Fehlende oder inkompatible Plugins
+    vor Produktionsstart melden.
+  - Plugininstallation nur über den Konfigurationszugang; lokale versionierte Installation
+    und Deinstallation dokumentieren, Neustart für Codeänderungen zulässig. Kein ungeprüftes
+    Hochladen/Ausführen beliebigen Codes über die Konfigurationsseite.
+  - 'Explizit dokumentieren: Drittanbieter-Pythonplugins sind vertrauenswürdiger Anwendungscode,
+    keine automatisch isolierte Sandbox. Abhängigkeiten pinnen und Herkunft prüfen;
+    spätere Prozessisolation gesondert entwickeln.'
+  acceptance:
+  - Testplugin lässt sich über die Registry laden und als zwei unterschiedlich konfigurierte
+    Instanzen in einer Show planen.
+  - Ungültige Konfiguration und inkompatible API-Version brechen vor Produktion mit
+    verständlicher Meldung ab.
+  - Plugin kann zentrale Veröffentlichungs-/Archiv-/Freigaberegeln über die vorgesehene
+    Schnittstelle nicht umgehen.
+- id: T271
+  epic: E24
+  title: Nachrichtenblock und Studiogespräch als mitgelieferte Plugins
+  status: todo
+  depends_on:
+  - T270
+  - T254
+  - T255
+  instructions:
+  - news_block und studio_conversation in das neue Pluginmodell überführen; bestehende
+    Konfigurationen migrieren und bisherige Auswahl-/Dialog-/Renderfunktionalität
+    erhalten.
+  - Intro, Outro und weitere geeignete vorhandene Segmenttypen als eingebaute Plugins
+    registrieren; gemeinsame Logik in Anwendungsschnittstellen belassen.
+  - Showeditor zeigt Plugin-Katalog mit Beschreibung, Fähigkeiten, Voraussetzungen
+    und schema-validierter Konfiguration; Instanzen hinzufügen, sortieren, duplizieren
+    und deaktivieren.
+  - Pluginparameter umfassen bestehende redaktionelle Filter bzw. Teilnehmerlisten,
+    Studio, Kamera und Zieldauer; avatarfreie Fähigkeiten pro Plugin ausweisen.
+  - Pluginfehler mit klarer konfigurierter Skip-/Abbruchstrategie behandeln; Pflichtsegmente
+    und zentrale Qualitätsregeln dürfen nicht stillschweigend entfallen.
+  acceptance:
+  - Initiale Newsshow verwendet Nachrichtenplugin; gemischte Show kombiniert Nachrichten-
+    und Gesprächsplugin.
+  - Bestehende Showdefinition wird ohne Verlust von Filtern oder Teilnehmerzuordnung
+    migriert.
+  - Deaktivierte Plugininstanzen erzeugen keine Jobs; fehlende Pflichtplugins verhindern
+    Produktion.
+- id: T272
+  epic: E24
+  title: Plugin-Entwicklungsvorlage, Dokumentation und Abnahme
+  status: todo
+  depends_on:
+  - T271
+  instructions:
+  - Dokumentierten Plugin-Skeleton mit Manifest, Schema, Planungslogik, Renderanbindung
+    und Fixtures bereitstellen.
+  - 'Installation und Update unter Linux sowie im Docker-/Portainer-Betrieb dokumentieren:
+    reproduzierbarer eigener Image-Build oder vorab installierte Pakete; Konfigurationsvolumes
+    enthalten nicht automatisch ausführbare Plugins.'
+  - Vertragstests für Schema, Lifecycle, Versionierung, Artefakte, Budget-/Freigabeintegration
+    und Fehlerverhalten; Ende-zu-Ende-Test einer Show aus mehreren Plugins.
+  - Pluginverwaltung, Rechte, Abhängigkeitskonflikte und Rückkehr zur vorherigen Version
+    dokumentieren.
+  acceptance:
+  - Ein Beispielplugin lässt sich anhand der Dokumentation hinzufügen, ohne den zentralen
+    Show-Orchestrator zu ändern.
+  - Linux und Container verwenden denselben Pluginvertrag; Versionen und Fähigkeiten
+    sind nachvollziehbar.

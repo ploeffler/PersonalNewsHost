@@ -1,62 +1,17 @@
-<p align="center"><a href="https://ploeffler.github.io/PersonalNewsHost/"><img src="assets/logo.png" alt="PersonalNewsHost Logo" width="320"></a></p>
+<p align="center"><img src="assets/logo.png" alt="PersonalNewsHost" width="200"></p>
 
 # PersonalNewsHost
 
-**Deine persönliche, automatisch produzierte Nachrichtensendung – aus frei wählbaren RSS-Quellen.**
+Automatisch erzeugte Nachrichtensendungen aus RSS-Quellen – mit Sprachausgabe, Quellenangaben und optionalen Moderatoren.
 
-PersonalNewsHost verwandelt Nachrichten aus RSS-Feeds in eine deutschsprachige Videosendung mit Moderator, Studio, Bildern und Quellenangaben. Die Sendung wird automatisch in der Cloud erstellt und auf einer Webseite mit Video-RSS-Feed veröffentlicht – ohne eigenen Server oder dauerhaft geöffneten Browser.
+**[Zum Wiki: Installation, Konfiguration, Betrieb und Entwicklung](https://github.com/ploeffler/PersonalNewsHost/wiki)**
 
-[**Nachrichtenseite ansehen**](https://ploeffler.github.io/PersonalNewsHost/) · [**Jetzt die aktuelle Sendung ansehen**](https://ploeffler.github.io/PersonalNewsHost/latest.mp4)
+[Nachrichtenseite](https://ploeffler.github.io/PersonalNewsHost/) · [Aktuelle Sendung](https://ploeffler.github.io/PersonalNewsHost/latest.mp4)
 
-## Die aktuelle Nachrichtensendung
+## Newsshow-Demo
 
-<video controls playsinline preload="metadata" width="100%" poster="https://ploeffler.github.io/PersonalNewsHost/assets/background.jpg">
-  <source src="https://ploeffler.github.io/PersonalNewsHost/latest.mp4" type="video/mp4">
-  Dein Browser kann das Video hier möglicherweise nicht direkt wiedergeben. <a href="https://ploeffler.github.io/PersonalNewsHost/latest.mp4">Video öffnen</a>.
-</video>
+[![Newsshow-Demo ansehen](demos/newsshow-demo.png)](https://raw.githubusercontent.com/ploeffler/PersonalNewsHost/Full-featured-Newsoutlet/demos/newsshow-demo.mp4)
 
-**Hinweis:** GitHub rendert eingebettete HTML-Videos in README-Dateien nicht zuverlässig als Player. Über den Link oben lässt sich die Sendung direkt öffnen; auf der [Nachrichtenseite](https://ploeffler.github.io/PersonalNewsHost/) ist der Videoplayer vorgesehen.
+Vorbereitete Beispielsendung der Redaktion **Allgemein**, keine aktuellen Nachrichten. Zum Abspielen auf die Vorschau klicken.
 
-## Warum PersonalNewsHost?
-
-Die Idee begann mit einer einfachen Frage: Lässt sich aus einem einzigen Prompt Schritt für Schritt ein funktionierendes, automatisches Nachrichtenstudio entwickeln – ohne laufende Zusatzkosten?
-
-PersonalNewsHost dokumentiert genau diesen Weg. Das Projekt verbindet klassische Software, offene Werkzeuge und KI-Technologien. Es soll zeigen, dass KI kein magischer Einzelbaustein ist, sondern aus verschiedenen Verfahren und Programmen besteht, die sinnvoll zusammenarbeiten.
-
-**Das Zielbudget beträgt 0 € pro Monat.** Der Betrieb nutzt kostenlose Kontingente und frei verfügbare Werkzeuge. Deren Grenzen und Nutzungsbedingungen bleiben zu beachten.
-
-## Was kann das Projekt?
-
-- Nachrichten aus selbst gewählten RSS-Quellen zu einer Sendung zusammenstellen.
-- Einen anpassbaren Moderator und ein virtuelles Studio verwenden.
-- Deutschsprachige Sprache, Nachrichtengrafiken und Bildmaterial kombinieren.
-- Die aktuelle Sendung als Video, Webseite und Video-RSS bereitstellen.
-- Deutsche Untertitel im Webplayer zuschalten und als SRT herunterladen (ab der nächsten erfolgreich erzeugten Sendung). Die Abschnittsgrenzen folgen der Sprache; die Zeitverteilung innerhalb eines Abschnitts ist angenähert.
-- Optional über einen eigenen Telegram-Bot veröffentlichen; Aufbewahrung und Löschung werden direkt im Telegram-Ziel eingestellt.
-- In einem eigenen GitHub-Fork unabhängig betrieben werden.
-
-PersonalNewsHost ist ein **laufend weiterentwickelter Prototyp**. Nicht jede geplante oder experimentelle Funktion ist bereits vollständig produktiv erprobt. Es ersetzt keine unabhängige journalistische Faktenprüfung.
-
-## Selbst ausprobieren
-
-Du kannst das Projekt forken und deine eigene Nachrichtensendung einrichten. Die Anleitung führt vom GitHub-Fork bis zur ersten veröffentlichten Sendung:
-
-**[Schritt-für-Schritt-Installation](docs/guide/installation.md)**
-
-## Dokumentation
-
-Die technischen Einzelheiten stehen bewusst nicht mehr in dieser Projektvorstellung:
-
-- [Dokumentationsübersicht / Wiki-Inhalte](docs/guide/index.md)
-- [Konfiguration und Datenschutz](docs/guide/konfiguration.md)
-- [Betrieb, Telegram und Sicherheit](docs/guide/betrieb-und-sicherheit.md)
-- [Technik und Workflows](docs/guide/technik.md)
-- [Entwicklungsgeschichte und Roadmap](docs/guide/entwicklung.md)
-
-## Mitmachen
-
-Fehlerberichte, Ideen und Verbesserungen sind willkommen. Wer das Projekt forkt, verwendet seine **eigenen** GitHub Secrets; Zugangsdaten des ursprünglichen Projekts werden nicht übertragen.
-
----
-
-*PersonalNewsHost – ein Experiment zur automatisierten Nachrichtenproduktion, offenen Technologie und Entwicklung mit KI-Unterstützung.*
+**Entwicklungsstand:** Prototyp; der Ausbau erfolgt auf `Full-featured-Newsoutlet`.

@@ -1,0 +1,410 @@
+meta:
+  project: PersonalNewsHost
+  extends: todo-full-featured-newsoutlet-v2.yaml
+  date: '2026-10-29'
+  scope: 'Ergänzung aus Nutzeranforderung: Linux-Dienst und Docker, CLI und Portainer'
+  status: planned
+requirements:
+- Direkte Installation aus dem Repository auf einem Linux-Rechner.
+- Start-/Stop-Skripte für den Dienst.
+- Alternativer Betrieb als Docker-Container.
+- Installationsdokumentation für Docker CLI und Portainer.
+- Docker akzeptiert ADMIN_USER und ADMIN_PASSWORD_HASH als Umgebungsvariablen.
+- Ohne gesetzte Variablen gilt Benutzer admin mit Passwort admin.
+- Konfigurationsseite und zugehörige Konfigurationsschnittstellen sind serverseitig
+  authentifiziert.
+- Beide Betriebsarten verwenden HTTPS mit selbstsignierten Zertifikaten.
+- Die Admin-Konfiguration wird auf einem separaten, konfigurierbaren HTTPS-Port bereitgestellt.
+- Nach der ersten erfolgreichen Admin-Anmeldung automatisch einen Konfigurationswizard
+  starten; Abschluss installationsbezogen persistent speichern.
+constraint_clarifications:
+- original: C2
+  clarification: GitHub Secrets gilt für GitHub Actions. Linux und Docker erhalten
+    Secrets über lokale, zugriffsgeschützte Laufzeitkonfiguration oder Secret-Mounts;
+    niemals im Repository, Image oder Log.
+- original: C7
+  clarification: Actions-/Pages-Grenzen gelten für den GitHub-Betrieb; Linux und Docker
+    erhalten zusätzlich konfigurierbare lokale Ressourcen- und Speichergrenzen.
+tasks:
+- id: T180
+  epic: E16
+  title: Betriebsvertrag für Linux und Container
+  status: todo
+  depends_on:
+  - T001
+  - T002
+  instructions:
+  - Gemeinsamen Prozesseinstieg für Scheduler, Produktionsläufe und lokale Webausgabe
+    definieren; GitHub Actions bleibt ein optionaler Ausführungsweg.
+  - Konfiguration, Secrets, Modelle, Cache, Ausgabedaten, Zustandsdaten, Zeitzone
+    und HTTP-Port eindeutig festlegen.
+  - Standardprofil mit lokalen/freien Fallbacks; optionale GPU- und externe Provider
+    getrennt halten.
+  acceptance:
+  - Repo-Betrieb und Container verwenden denselben Konfigurations- und Zustandsvertrag.
+  - Lokaler Betrieb benötigt für den Kernbetrieb weder GitHub Actions noch GitHub
+    Secrets.
+- id: T181
+  epic: E16
+  title: Repository-Installation unter Linux
+  status: todo
+  depends_on:
+  - T180
+  instructions:
+  - Unterstützte Linux-Distributionen und Architekturen nach Prüfung festlegen.
+  - Repository klonen, isolierte Python-Umgebung und Systemabhängigkeiten installieren;
+    Modelle und Assets reproduzierbar vorbereiten.
+  - Installationsskript mit Vorprüfung, verständlichen Fehlern und wiederholbarer
+    Ausführung bereitstellen; Systemänderungen und notwendige Rechte dokumentieren.
+  acceptance:
+  - Frische unterstützte Linux-Installation erzeugt mit Testfeeds eine lokal erreichbare
+    Sendung.
+  - Wiederholte Installation überschreibt weder Konfiguration noch Benutzerdaten.
+- id: T182
+  epic: E16
+  title: Start-/Stop-Skripte und Linux-Dienst
+  status: todo
+  depends_on:
+  - T181
+  - T070
+  - T071
+  instructions:
+  - start.sh, stop.sh und status.sh als dokumentierte Einstiegspunkte bereitstellen.
+  - systemd-Unit und Installation für automatischen Start nach Neustart ergänzen;
+    manuelle Skriptausführung und systemd eindeutig koordinieren.
+  - Doppelte Starts verhindern; nur eigene Prozesse stoppen; laufende Jobs geordnet
+    beenden und Zustände für Wiederaufnahme speichern.
+  - Scheduler und lokale HTTP-Auslieferung überwachen; Protokollierung und Fehlerstatus
+    dokumentieren.
+  acceptance:
+  - Start, Status, Stop und erneuter Start funktionieren; wiederholte Aufrufe sind
+    sicher.
+  - Stop beendet Scheduler und eigene Kindprozesse; Neustart erzeugt keine doppelte
+    Sendung.
+  - Optionaler Autostart über systemd wird auf dem unterstützten Linux-System geprüft.
+- id: T183
+  epic: E16
+  title: Docker-Image und Compose-Betrieb
+  status: todo
+  depends_on:
+  - T180
+  - T182
+  instructions:
+  - Dockerfile, .dockerignore und compose.yaml bereitstellen; denselben Anwendungseinstieg
+    wie Linux verwenden.
+  - Persistente Mounts für Konfiguration, Modelle und Daten; Secrets zur Laufzeit,
+    nicht im Image.
+  - Unprivilegierter Benutzer, konfigurierbarer Port, Healthcheck, Signalweitergabe,
+    geordnetes Stoppen und Restart-Verhalten.
+  - CPU-Basisimage funktionsfähig halten; GPU-Variante erst nach technischem Nachweis
+    separat anbieten.
+  acceptance:
+  - Image baut reproduzierbar; Compose erzeugt und liefert eine lokale Testsendung
+    aus.
+  - Container-Neuerstellung erhält Konfiguration, Archiv und Budget-/Jobzustände.
+  - docker stop beendet eigene Prozesse geordnet; Healthcheck erkennt Anwendungsausfall.
+- id: T184
+  epic: E16
+  title: Installationsanleitung für Docker CLI
+  status: todo
+  depends_on:
+  - T183
+  instructions:
+  - CLI-Anleitung für Repository-Checkout und lokalen Image-Build sowie docker compose
+    up/down/logs und Status schreiben.
+  - Ports, Zeitzone, Volumes, Dateirechte, Secrets, Start nach Host-Neustart, Update,
+    Backup, Restore und Deinstallation erklären.
+  - Standardmäßig lokalen Build dokumentieren; Registry-Image nur nach tatsächlich
+    eingerichteter Veröffentlichung angeben.
+  acceptance:
+  - Anleitung wird auf frischem Docker-Host Schritt für Schritt nachvollzogen.
+  - Deinstallation unterscheidet ausdrücklich Containerentfernung und optionale Datenlöschung.
+- id: T185
+  epic: E16
+  title: Installationsanleitung für Portainer
+  status: todo
+  depends_on:
+  - T183
+  instructions:
+  - Compose-kompatiblen Stack für Portainer vorbereiten; konkreten getesteten Weg
+    für Imagebereitstellung und Stack-Deployment dokumentieren.
+  - 'Standardweg: Image auf dem Docker-Zielhost bauen, dann Stack mit passendem Image-Tag
+    installieren; keine implizite Build-Unterstützung voraussetzen.'
+  - Volumes/Hostpfade, Port, Umgebungsvariablen, Secrets, Healthcheck, Logs, Start/Stop,
+    Update und Datensicherung anhand der geprüften Portainer-Version erklären.
+  - Alternativen über Registry erst dokumentieren, wenn Image und Zugriff tatsächlich
+    bereitstehen.
+  acceptance:
+  - Stack lässt sich mit der dokumentierten Portainer-Version ohne Änderungen an Anwendungscode
+    installieren.
+  - Neues Deployment erhält Daten und Konfiguration; Status und Logs sind nachvollziehbar.
+- id: T186
+  epic: E16
+  title: Persistenz, Updates und Betriebsdiagnose
+  status: todo
+  depends_on:
+  - T182
+  - T183
+  - T101
+  - T103
+  - T030
+  instructions:
+  - Datenmigration, Sicherung und Wiederherstellung für beide Betriebswege definieren.
+  - Budget- und Jobzustände auch ohne Actions-Artefakte persistent speichern; konkurrierende
+    Worker absichern.
+  - Logrotation, Speichergrenzen, Fehlerdiagnose und Update-/Rollback-Verfahren ergänzen.
+  acceptance:
+  - Backup und Wiederherstellung erhalten Archiv, Konfiguration und Verbrauchszähler.
+  - Update überschreibt keine Benutzerdaten; fehlgeschlagene Migration verhindert
+    beschädigten Betrieb.
+- id: T187
+  epic: E16
+  title: Abnahme beider Installationswege
+  status: todo
+  depends_on:
+  - T184
+  - T185
+  - T186
+  - T051
+  instructions:
+  - Testmatrix für Linux-Repo, Docker CLI und Portainer durchführen; mindestens zwei
+    Shows mit lokalen Testfeeds.
+  - Start/Stop, Host-/Container-Neustart, Zeitplanung, lokale Webausgabe, fehlende
+    Secrets, Offline-Fallback, Update und Wiederherstellung prüfen.
+  - Dokumentierte manuelle Portainer-Abnahme und automatisierbare Linux-/Container-Smoke-Tests
+    klar unterscheiden.
+  acceptance:
+  - Abnahmebericht mit Befehlen, getesteten Versionen und Ergebnissen für alle drei
+    Installationsvarianten liegt vor.
+  - Keine kostenpflichtigen Aufrufe; letzte gute Sendung und persistente Daten bleiben
+    bei Fehler erhalten.
+- id: T188
+  epic: E16
+  title: Admin-Zugang über Laufzeitvariablen
+  status: todo
+  depends_on:
+  - T180
+  - T183
+  instructions:
+  - ADMIN_USER als Benutzername und ADMIN_PASSWORD_HASH als Passwort-Hash aus der
+    Laufzeitumgebung lesen; für Linux dieselben Variablen unterstützen.
+  - ADMIN_USER standardmäßig admin. Bei nicht gesetztem ADMIN_PASSWORD_HASH einen
+    mitgelieferten Hash des Passworts admin verwenden; keinen Klartextvergleich einführen.
+  - 'Hashformat verbindlich festlegen: Argon2id im PHC-Format; geprüftes Bibliotheksverfahren
+    zur Verifikation verwenden. Ein CLI-Hilfsprogramm zur Hash-Erzeugung mit verdeckter
+    Passworteingabe bereitstellen.'
+  - Leere explizit gesetzte Werte und ungültige Hashes als Konfigurationsfehler ablehnen;
+    niemals auf admin/admin zurückfallen, wenn ein übergebener Hash ungültig ist.
+  - Hash und Passwort nicht an Browser, öffentliche Konfiguration, Logs oder Images
+    mit individuellen Secrets weiterreichen. Standardzugang ist eine bewusste Produktvorgabe;
+    im Setup als solcher kenntlich machen, ohne erzwungenen Passwortwechsel.
+  acceptance:
+  - Ohne Variablen funktioniert admin/admin.
+  - Mit ADMIN_USER und gültigem ADMIN_PASSWORD_HASH funktioniert ausschließlich der
+    konfigurierte Zugang; Standardpasswort ist dann ungültig.
+  - Fehlerhafte oder leere explizite Variablen öffnen keinen ungeschützten Zugriff.
+  - CLI erzeugt einen verifizierbaren Hash ohne Passwort in Kommandozeilenargumenten.
+- id: T189
+  epic: E16
+  title: Konfigurationsseite und API serverseitig schützen
+  status: todo
+  depends_on:
+  - T188
+  - T182
+  instructions:
+  - Authentifizierung im lokalen HTTP-Dienst implementieren; Konfigurationsseite inklusive
+    sämtlicher Alias-URLs, Konfigurationsabrufe und Änderungen schützen. Öffentliche
+    Nachrichten bleiben erreichbar.
+  - 'Bestehende statische settings.html und öffentlich abgelegte config.json prüfen:
+    keine Umgehung durch direkte Datei-URLs, alternative Pfade oder Webserver-Static-Routen
+    zulassen. Eine öffentliche Ausgabe darf nur ausdrücklich freigegebene, nicht sensible
+    Felder enthalten.'
+  - Login und Logout mit serverseitiger Sitzung umsetzen; Session-ID nach Anmeldung
+    erneuern, Laufzeit begrenzen, HttpOnly/SameSite-Cookies und Secure bei HTTPS.
+    Zustandsänderungen gegen CSRF schützen; Anmeldeversuche begrenzen.
+  - Session-Schlüssel zur Laufzeit erzeugen bzw. separat geschützt konfigurieren;
+    nicht aus admin/admin ableiten. Zugangsdatenänderungen spätestens nach Dienst-/Containerneustart
+    anwenden und bestehende Sessions dabei ungültig machen.
+  - 'Für reine GitHub-Pages-Ausgaben keine funktionierende serverseitig geschützte
+    Konfigurationsoberfläche behaupten: Verwaltungsseite dort nicht ausliefern; Verwaltung
+    über authentifizierten Linux-/Containerdienst.'
+  acceptance:
+  - Ohne Anmeldung sind Seite und Konfigurationsendpunkte nicht zugänglich, auch nicht
+    über direkte Datei-URLs.
+  - Gültiger Login erlaubt Lesen und Speichern; falsche Zugangsdaten erlauben beides
+    nicht.
+  - Logout, Sitzungsablauf und Neustart entziehen bestehender Sitzung den Zugriff.
+  - Änderungsaufrufe ohne gültigen CSRF-Nachweis werden abgelehnt; öffentliche Nachrichten
+    bleiben erreichbar.
+- id: T190
+  epic: E16
+  title: Admin-Konfiguration in CLI-/Portainer-Dokumentation und Abnahme
+  status: todo
+  depends_on:
+  - T184
+  - T185
+  - T189
+  instructions:
+  - Docker-CLI, Compose und Portainer mit ADMIN_USER und ADMIN_PASSWORD_HASH dokumentieren;
+    Default admin/admin ausdrücklich nennen.
+  - 'Sichere Hash-Erzeugung zeigen; bei PHC-Hashes Dollarzeichen korrekt behandeln:
+    Shell-Quoting, Compose-Interpolation und den tatsächlich getesteten Portainer-Übergabeweg
+    getrennt erklären. Keine Annahme, dass jeder Weg identisch escaped wird.'
+  - Login, Logout, Hashwechsel und Neustart beschreiben; individuelle Hashes in lokalen
+    Laufzeitdateien mit passenden Dateirechten halten.
+  - Automatisierte Tests für Defaultzugang, benutzerdefinierten Zugang, ungültige
+    Hashes, direkte Konfigurations-URLs, Sitzungsende und CSRF; ergänzende manuelle
+    Portainer-Abnahme.
+  acceptance:
+  - Container erhält über alle dokumentierten Übergabewege den unveränderten Hash
+    und verifiziert das zugehörige Passwort.
+  - Abnahme für Linux, Docker CLI und Portainer enthält erfolgreichen sowie abgewiesenen
+    Zugriff.
+  - Dokumentation und Beispielkonfiguration enthalten keine individuellen Secrets.
+- id: T191
+  epic: E16
+  title: HTTPS mit selbstsignierten Zertifikaten und getrennten Listenern
+  status: todo
+  depends_on:
+  - T182
+  - T183
+  - T189
+  instructions:
+  - 'Gemeinsamen Webdienst für Linux und Docker mit getrennten HTTPS-Listenern für
+    öffentliche Ausgabe und Administration implementieren. Vorgeschlagene Standardports:
+    öffentlich 443, Administration 8444; Ports und Bind-Adressen konfigurierbar machen,
+    Portkollisionen ablehnen.'
+  - Login, Logout, Konfiguration, Profilverwaltung und sämtliche Admin-APIs ausschließlich
+    auf dem Admin-Listener registrieren. Öffentlicher Listener liefert keine administrativen
+    Dateien oder API-Routen aus, auch nicht über Alias- oder statische Dateipfade.
+  - Selbstsigniertes Zertifikat samt privatem Schlüssel beim ersten Start erzeugen
+    oder vorhandene lokale Dateien verwenden. DNS-Namen und IP-Adressen als konfigurierbare
+    Subject Alternative Names übernehmen; Gültigkeitszeit und Ablaufhinweise vorsehen.
+  - Zertifikat und privaten Schlüssel persistent außerhalb des Quellcodes/Images speichern;
+    Schlüssel nur für den Dienst lesbar halten. Neustart und Container-Neuerstellung
+    verwenden vorhandene Zertifikate weiter.
+  - Zertifikatserneuerung und kontrollierten Austausch dokumentieren; bei unlesbarem
+    Schlüssel oder ungültigem Zertifikat nicht auf unverschlüsseltes HTTP zurückfallen.
+    HTTP ist standardmäßig deaktiviert.
+  - 'TLS für beide Listener aktivieren; Admin-Sitzungscookies Secure, HttpOnly und
+    SameSite setzen. Origin-/CSRF-Prüfung berücksichtigt den Admin-Port. Cookies sind
+    nicht nach Ports isoliert: Admin-Sessions ausschließlich am Admin-Listener akzeptieren,
+    öffentliche Seiten ohne zugreifbare Admin-Daten und keine freigegebenen Cross-Origin-Admin-Endpunkte.'
+  - Öffentlicher Host-Port ist standardmäßig 443. Container darf intern einen unprivilegierten
+    Port verwenden, der auf Host-Port 443 abgebildet wird. Für direkten Linux-Betrieb
+    die minimal nötige Port-Bind-Berechtigung gezielt einrichten; den gesamten Dienst
+    nicht dauerhaft als root betreiben.
+  acceptance:
+  - Linux und Container liefern öffentliche Ausgabe und Administration über getrennte
+    HTTPS-Ports aus.
+  - Admin-Routen sind auf dem öffentlichen Port auch mit gültiger Sitzung nicht verfügbar.
+  - Neustart erhält Zertifikatsfingerabdruck; private Schlüssel werden weder ausgeliefert
+    noch geloggt.
+  - Fehlerhafte TLS-Dateien oder Portkollisionen führen zu klarem Fehler und keinem
+    HTTP-Fallback.
+- id: T192
+  epic: E16
+  title: HTTPS-Installation, Portainer und Zugriffstests
+  status: todo
+  depends_on:
+  - T191
+  - T190
+  instructions:
+  - Linux-, Docker-CLI-, Compose- und Portainer-Anleitung um beide Portzuordnungen,
+    Zertifikatsvolume, SAN-Konfiguration, Dateirechte und die Admin-URL ergänzen.
+  - Beispiele verwenden https://HOST für Nachrichten und https://HOST:8444 für Administration;
+    abweichende Host-/Container-Ports ausdrücklich erklären.
+  - Browserwarnung bei selbstsignierten Zertifikaten erklären und optionales lokales
+    Vertrauen anhand des überprüften Zertifikatsfingerabdrucks dokumentieren. Keine
+    globale Abschaltung der Zertifikatsprüfung empfehlen.
+  - HTTPS-Healthchecks, Testclient-Vertrauen, Zertifikatserneuerung, Backup und Wiederherstellung
+    ergänzen. Private Schlüssel weder in Exportpakete noch in öffentliche Backups
+    aufnehmen.
+  - Tests für beide Listener, SANs, Persistenz, TLS-Fehler, Admin-Routentrennung und
+    sichere Sitzungen; manuelle Browser- und Portainer-Abnahme dokumentieren.
+  acceptance:
+  - Dokumentierte Installation funktioniert für Linux, CLI und Portainer mit beiden
+    HTTPS-Ports.
+  - Testclient prüft das explizit vertraute Zertifikat und einen passenden Hostnamen
+    statt Zertifikatsvalidierung zu deaktivieren.
+  - T187 und Gesamtabnahme berücksichtigen HTTPS und getrennten Admin-Port.
+- id: T193
+  epic: E16
+  title: Konfigurationswizard bei erster Admin-Anmeldung
+  status: todo
+  depends_on:
+  - T189
+  - T191
+  - T211
+  instructions:
+  - Nach erfolgreichem Login bei noch nicht abgeschlossenem Setup auf den Wizard leiten;
+    Setupzustand pro Installation persistent speichern, nicht nur im Browser oder
+    pro Sitzung.
+  - 'Schritte: Willkommen und Betriebs-/HTTPS-Adressen; Formatname, Sprache, Zeitzone
+    und Sendeplan; Quellen und Rubriken; Selbstdarstellung inklusive Haltungspositionen;
+    Host/Stimme und Ausgaben; optionale Provider und Social-Ziele; Zusammenfassung,
+    Validierung und Abschluss.'
+  - Erforderliche Grundkonfiguration von optionalen Integrationen trennen; optionale
+    Schritte überspringbar halten. Ohne API-Konten und bei Budget 0 muss der Assistent
+    abschließbar sein.
+  - Entwurf getrennt von aktiver Konfiguration speichern; Vor/Zurück und Wiederaufnahme
+    unterstützen. Abschluss validiert die gesamte Konfiguration und aktiviert sie
+    atomar; erst dann Setup als abgeschlossen markieren.
+  - Nach Abschluss normale Konfigurationsseite öffnen; Wizard dort erneut startbar
+    machen, ohne aktive Konfiguration oder Archive zurückzusetzen.
+  - Admin-Zugang und Hash bleiben aus Laufzeitvariablen gemäß T188; Wizard darf Zugang
+    nicht scheinbar ändern, wenn Umgebungsvariablen maßgeblich sind. Hinweise zum
+    aktuellen Standardzugang und zur Änderung per Laufzeitkonfiguration vorsehen,
+    aber keinen erzwungenen Passwortwechsel.
+  - Wizard und Entwurfs-/Status-APIs ausschließlich am geschützten Admin-Port; CSRF-Schutz
+    und keine Secrets in Browserantworten. Laufende Installation mit bestehender Konfiguration
+    als Entwurf übernehmen statt überschreiben.
+  - Gemeinsamen Redaktionszugang einrichten, danach in dessen Ressort-/Showverwaltung
+    wechseln; keine CMS- oder Mitarbeiterkontoeinrichtung.
+  - Die initial vorhandene Redaktion Allgemein und ihre Newsshow im Wizard anbieten
+    statt eine zusätzliche Redaktion vorauszusetzen. Vorgaben sind bearbeitbar; keine
+    Duplikate bei Wiederaufnahme.
+  acceptance:
+  - Erste erfolgreiche Anmeldung öffnet Wizard; fehlgeschlagene Anmeldung zeigt keine
+    Setupdaten.
+  - Abbruch, Browserwechsel und Dienst-/Containerneustart setzen den gespeicherten
+    Entwurf fort.
+  - Ungültiger oder unvollständiger Abschluss verändert weder aktive Konfiguration
+    noch Abschlussstatus.
+  - Nach gültigem Abschluss erscheint Wizard bei weiteren Logins nicht automatisch;
+    manuelles erneutes Öffnen bleibt möglich.
+  - Minimalsetup funktioniert ohne kostenpflichtige Dienste; Quellen-/Providerfehler
+    haben verständliche Rückmeldungen.
+- id: T194
+  epic: E16
+  title: Wizard-Dokumentation und Abnahme
+  status: todo
+  depends_on:
+  - T193
+  - T192
+  instructions:
+  - Erstanmeldung und Wizard für Linux, Docker CLI und Portainer dokumentieren; Admin-URL
+    https://HOST:8444 und öffentliche URL https://HOST beibehalten.
+  - Tests für neue Installation, vorhandene Konfiguration, Fortsetzen, optionale Schritte,
+    fehlerhafte Validierung, atomaren Abschluss und erneutes Öffnen ergänzen.
+  - Zwei gleichzeitige Admin-Sitzungen gegen versehentliches Überschreiben des Entwurfs
+    absichern; Versionskonflikt nachvollziehbar anzeigen.
+  - Barrierefreie Schrittanzeige, Tastaturbedienung und verständliche Fehler prüfen;
+    Zugang ohne Admin-Authentifizierung und über öffentlichen Port ablehnen.
+  acceptance:
+  - Dokumentierter Weg vom ersten Login bis zu gültiger Grundkonfiguration ist auf
+    beiden Betriebsarten geprüft.
+  - Persistente Setupdaten werden bei Backup/Restore und Container-Neuerstellung erhalten.
+  - Betriebs- und Gesamtabnahme umfassen Wizard, Zugriffsschutz und erneuten Login.
+https_contract:
+  public_https_port: 443
+  admin_https_port: 8444
+  ports_configurable: true
+  certificate_mode: self_signed
+  http_enabled_by_default: false
+  administration: Login, Konfigurationsseite und Admin-APIs ausschließlich auf dem
+    Admin-Listener.
+  certificate_storage: Persistente Laufzeitdateien; privater Schlüssel nicht im Repository
+    oder Image.
+  browser_note: Selbstsignierte Zertifikate verschlüsseln die Verbindung; Browser
+    vertrauen ihnen erst nach bewusster lokaler Vertrauenseinrichtung.

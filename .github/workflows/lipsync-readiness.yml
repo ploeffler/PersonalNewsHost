@@ -3,12 +3,15 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+env:
+  PIP_CONSTRAINT: ${{ github.workspace }}/requirements-constraints.txt
+
 jobs:
   cpu-readiness:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Install CPU benchmark dependency
         run: python3 -m pip install --disable-pip-version-check numpy
       - name: Inspect free runner and benchmark CPU
@@ -39,8 +42,15 @@ jobs:
           Path("lip-sync-test/readiness.json").write_text(json.dumps(report,indent=2)+"\n")
           print(json.dumps(report,indent=2))
           PY
+      - name: Check artifact publication boundary
+        id: pnh_publication_1
+        env:
+          PNH_OUTPUT_PATHS: |
+            lip-sync-test/readiness.json
+        run: python3 scripts/security_checks.py --outputs-env PNH_OUTPUT_PATHS
       - name: Save CPU readiness report
-        uses: actions/upload-artifact@v4
+        if: ${{ steps.pnh_publication_1.outcome == 'success' }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: lip-sync-cpu-readiness
           path: lip-sync-test/readiness.json

@@ -1,0 +1,48 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  scope: Verbindliche AI-Kennzeichnung rechts unten
+  status: planned
+tasks:
+- id: T280
+  epic: E25
+  title: AI-Kennzeichnung in jeder visuellen Ausgabe rechts unten
+  status: todo
+  depends_on:
+  - T050
+  - T061
+  - T201
+  - T260
+  - T270
+  instructions:
+  - 'Alle erzeugten visuellen Ausgaben verpflichtend rechts unten mit sichtbarem Text
+    AI kennzeichnen: komplette Videos, finale Segmente, Kurzclips, Social-Varianten,
+    Vorschaubilder, Thumbnails und separat ausgegebene generierte Bilder.'
+  - Für Videos Kennzeichnung ab erstem bis einschließlich letztem Frame durchgehend
+    einbrennen, auch in Intro, Abspann, Übergängen, avatarfreien Szenen und Ausgaben
+    mit importiertem Material.
+  - Zentrale Finalisierung nach Zuschnitt, Skalierung und Komposition; jedes nachträglich
+    abgeleitete Ausgabeformat erneut korrekt kennzeichnen. Keine bloße Player-/Browserüberlagerung.
+  - Kontrastreiche Hintergrundfläche, auflösungsabhängige lesbare Schrift und sicherer
+    Randabstand; rechts unten innerhalb des sichtbaren Bildes und der geprüften Social-Sicherheitsbereiche.
+    Quellen, Untertitel und Plattformbedienelemente dürfen Label nicht verdecken.
+  - Label ist nicht abschaltbar und kann weder durch Pluginparameter noch Studio-/Showeinstellungen
+    entfernt werden. Export-, Archiv- und Veröffentlichungspfad müssen ausschließlich
+    gekennzeichnete finale Artefakte übernehmen.
+  - Bei bereits gekennzeichnetem Material doppelte Labels durch Pipeline-Metadaten
+    verhindern; trotzdem Sichtbarkeit in jeder finalen Variante prüfen. Unmarkierte
+    Originalassets intern getrennt von gekennzeichneten Ausgaben speichern.
+  - Bestehende speziellere Labels wie KI-Moderator oder KI-generiert / Symbolbild
+    und maschinenlesbare Hinweise bleiben zusätzlich erhalten. Audio- oder reine Textdateien
+    haben keine rechte untere Bildecke; dort entsprechende Metadaten-/Texthinweise
+    verwenden.
+  - Tests für verschiedene Auflösungen, Hochkant/Quadrat/Querformat, helle/dunkle
+    Inhalte, Übergänge und finales Archivartefakt; visuelle Prüfung und Overlay-Nachweis
+    als Veröffentlichungsgate.
+  acceptance:
+  - Alle visuellen Referenzausgaben tragen rechts unten ein lesbares AI-Label.
+  - Videostichproben für Anfang, Mitte, Ende und Übergänge sowie Pipelineprüfungen
+    weisen durchgehende Kennzeichnung nach.
+  - Kein Plugin, Zuschnitt oder Social-Export umgeht die Kennzeichnung; archivierte
+    und veröffentlichte finale Dateien sind gekennzeichnet.
+  - Fehlgeschlagene Kennzeichnungsprüfung verhindert Veröffentlichung.

@@ -3,12 +3,15 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+env:
+  PIP_CONSTRAINT: ${{ github.workspace }}/requirements-constraints.txt
+
 jobs:
   real-model-load:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Install CPU-only PyTorch and model loader
         run: |
           python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
@@ -48,9 +51,16 @@ jobs:
               raise SystemExit(1)
           PY
           test ${PIPESTATUS[0]} -eq 0
-      - name: Upload report and diagnostic log
+      - name: Check artifact publication boundary
+        id: pnh_publication_1
         if: always()
-        uses: actions/upload-artifact@v4
+        env:
+          PNH_OUTPUT_PATHS: |
+            musetalk-real-test/
+        run: python3 scripts/security_checks.py --outputs-env PNH_OUTPUT_PATHS
+      - name: Upload report and diagnostic log
+        if: ${{ (always()) && steps.pnh_publication_1.outcome == 'success' }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: musetalk-real-model-load
           path: musetalk-real-test/

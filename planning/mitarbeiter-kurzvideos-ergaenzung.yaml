@@ -1,0 +1,111 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  scope: Themenbezogene Kurzvideos durch virtuelle Mitarbeiter
+  status: planned
+tasks:
+- id: T290
+  epic: E26
+  title: Themenbezogene Kurzvideoaufträge für virtuelle Mitarbeiter
+  status: todo
+  depends_on:
+  - T221
+  - T230
+  - T131
+  - T133
+  - T201
+  - T204
+  instructions:
+  - Im gemeinsamen Redaktionsbereich direkt im Ressort einen Einzelbeitrags-/Kurzvideoauftrag
+    im Namen eines virtuellen Mitarbeiters anlegen; bestehende Themen-/Quellen-/Formatparameter
+    erhalten.
+  - Produktion, Freigabe und Veröffentlichung bleiben getrennte redaktionelle Aktionen,
+    keine individuellen Benutzerrechte. KI führt automatische Stufen aus; menschliche
+    Freigabe bleibt getrennt.
+  - Vorhandene Quellenbasis verwenden und optional freigegebene Recherchequellen anbinden;
+    keine beliebigen unbelegten Themenbehauptungen generieren. Selbstdarstellung und
+    Zielgruppenprofil als Formulierungsgrundlage übernehmen.
+  - 'Ablauf: Recherche/Belege, Kurzskript, Quellen-/Groundingprüfung, Vorschau bzw.
+    Freigabe, Rendering und finale Veröffentlichungsgates. Begrenzte Überarbeitungsschleifen
+    und persistenten Auftragsstatus vorsehen.'
+  - Avatar des Mitarbeiters optional als Präsentator verwenden; bei explizit avatarfreier
+    Einstellung Grafiken, Bilder, Clips und konfigurierte Stimme verwenden. Keine
+    automatische Verwechslung von verantwortlichem Mitarbeiter und sichtbar auftretendem
+    Host.
+  - Kurzvideo eigenständig ohne regelmäßige Show erzeugen können; als fertigen Beitrag
+    oder geplantes Segment in eine Show übernehmen. Zielzeit und Format konfigurierbar
+    statt feste Plattformdauer vorauszusetzen.
+  acceptance:
+  - Berechtigter Bediener beauftragt einen Mitarbeiter mit einem Thema und erhält
+    nachvollziehbar Skript, Quellen und Produktionsstatus.
+  - Auftrag ist ohne wiederkehrende Show möglich und kann einer Show zugeordnet werden.
+  - Fehlende Quellen oder Freigaben führen zu gehaltenem Auftrag statt automatischer
+    Veröffentlichung.
+- id: T291
+  epic: E26
+  title: Kurzvideo-Plugin, Ausgabe und Abnahme
+  status: todo
+  depends_on:
+  - T290
+  - T271
+  - T280
+  - T260
+  instructions:
+  - Plugin topic_short für den gemeinsamen Produktionsvertrag bereitstellen; eigenständiger
+    Kurzvideoauftrag und Showeinbindung verwenden denselben Baustein.
+  - Avatar-/Stimm-/Studioversionen, Quellen und Formulierungsprofil konsistent speichern;
+    Quer-/Hochkant-/Quadratausgaben entsprechend gewähltem Profil erzeugen.
+  - Budget- und Ressourcenwarteschlange, Wiederaufnahme und Fallbacks wiederverwenden.
+    Unfertige oder veraltete Skriptversionen nicht versehentlich veröffentlichen.
+  - Jedes finale Video vor Veröffentlichung unter Jahr/Monat/Tag archivieren und durchgehend
+    rechts unten AI einblenden. Social-Posting nur nach entsprechend aktivierter Verbindung
+    und Freigabe.
+  - Dokumentation und Tests für Avatarvideo, avatarfreie Variante, Thema ohne Belege,
+    Korrektur, Timeout, Wiederaufnahme und fehlende Veröffentlichungsrechte ergänzen.
+  acceptance:
+  - Ein Auftrag erzeugt ein geprüftes Kurzvideo mit passendem Quellenbezug, Pflichtarchiv
+    und AI-Label.
+  - Dasselbe Plugin ist als Showbaustein verwendbar; vorhandene zentrale Gates werden
+    nicht umgangen.
+  - Avatarfreie und Avatarvariante sind separat getestet; automatische KI-Bearbeitung
+    ersetzt keine menschliche Freigabe.
+- id: T292
+  epic: E26
+  title: Themenauswahl aus Gruppen und freie Beiträge als RSS-äquivalenter Eingang
+  status: todo
+  depends_on:
+  - T012
+  - T111
+  - T290
+  instructions:
+  - 'Kurzvideoaufträge aus vorhandenen Themengruppen/Clustern anlegen: Gruppe auswählen,
+    enthaltene Meldungen und Quellen prüfen, relevante Beiträge übernehmen. Keine
+    zweite unabhängige Gruppierung nur für Kurzvideos aufbauen.'
+  - Alternativ freien Beitrag mit Titel, Text und optionalen Bildern, Audio oder Video
+    hochladen; Urheber/Quelle, Erstellungs-/Ereignisdatum und Medienrechte erfassen.
+    Fehlende Angaben explizit als unbekannt markieren.
+  - 'Freien Beitrag in dasselbe kanonische Eingangsmodell wie RSS-Meldungen normalisieren:
+    stabile ID, source_type=manual, interne Quellenreferenz, Titel, Text, Zeitstempel
+    und Mediennachweise. Keine erfundene RSS-URL oder externe Quellenbestätigung erzeugen.'
+  - Gleichen Redaktionspfad für Auswahl, Kategorisierung/Gruppierung, Claim-Extraktion,
+    Quellenprüfung, Formulierung und Freigabe nutzen. Manueller Upload hat keinen
+    höheren Vertrauensstatus und umgeht weder Quellenverbote noch Grounding-/Freigabegates.
+  - Text und Medien als unvertrauenswürdige Eingaben behandeln; Uploadrechte, Größen-/Formatlimits,
+    sichere Speicherung und bestehende Inhalts-/Medienvalidierung anwenden. Notwendige
+    Transkription oder Bildbeschreibung als abgeleitete Analyse kennzeichnen, nicht
+    als unabhängige Quelle zählen.
+  - Freien Beitrag gezielt einem Kurzvideoauftrag zuweisen und optional zur allgemeinen
+    Themenbasis hinzufügen. Sichtbarkeit für öffentliche Veröffentlichung gesondert
+    bestimmen; Rohuploads nicht automatisch öffentlich ausliefern.
+  - UI bietet explizite Auswahl Themengruppe oder Freier Beitrag mit Vorschau von
+    Eingaben, Quellen und zugeordneten Medien. Originaleingang unverändert versionieren
+    und Ableitungen nachvollziehbar speichern.
+  - Tests für bestehende Cluster, Textbeitrag, Text mit Medien, fehlende Quellenangaben,
+    ungültige Uploads, Prompt-Injection und identische Prüfregeln beider Eingangswege
+    ergänzen.
+  acceptance:
+  - Kurzvideo lässt sich aus einer vorhandenen Themengruppe oder einem freien Text-/Medienbeitrag
+    beauftragen.
+  - Beide Wege führen in denselben Redaktionsworkflow und erhalten Herkunfts-/Quellenangaben.
+  - Manueller Beitrag ohne unabhängige Belege erhält keine vorgetäuschte Bestätigung.
+  - Rohuploads bleiben geschützt und Prüf-/Freigaberegeln werden nicht umgangen.

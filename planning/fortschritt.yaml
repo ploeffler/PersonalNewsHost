@@ -1,0 +1,97 @@
+meta:
+  branch: Full-featured-Newsoutlet
+  active_version: '0.1'
+  milestone_reached: false
+  publication_policy: Implementierung erst bei vollständig geprüftem Versionsschritt
+    pushen.
+  planning_commit: bcc6f50
+  latest_work: Offline-Providerlaufzeit mit deterministischen Mocks, strikter Antwortprüfung,
+    Allowlist und transaktionalem SQLite-Cache.
+completed:
+- id: T002
+  evidence:
+  - config.schema.json
+  - scripts/validate_config.py
+  - tests/test_config_validation.py
+  note: Bekannte Felder validiert, Erweiterungsfelder während Migration zulässig;
+    regulärer Generator und Produktionsworkflow brechen vor Verarbeitung ab.
+- id: T010
+  evidence:
+  - scripts/shows.py
+  - scripts/produce_show.py
+  - tests/test_shows.py
+  - docs/guide/shows.md
+  note: Mehrere Shows mit explizitem CLI-Aufruf und getrennten Ausgabeordnern; wiederkehrende
+    Mehrshowplanung folgt später.
+- id: T011
+  evidence:
+  - scripts/news_policy.py
+  - tests/test_news_policy.py
+  - docs/guide/shows.md
+  note: Feedrubriken und Showfilter; category im Beitragsmodell. Optionale KI-Zuordnung
+    nicht aktiviert.
+- id: T052
+  evidence:
+  - scripts/news_policy.py
+  - scripts/editorial_pipeline.py
+  - tests/test_news_policy.py
+  - tests/test_editorial_production.py
+  note: Domänen-/Stichwortsperren und Gewichtung in beiden Produktionspfaden; vorbereitete
+    Gruppen werden vollständig ausgeschlossen.
+in_progress:
+- id: T001
+  evidence: docs/guide/architektur-ist.md
+  remaining:
+  - Vollständige Prüfung aller experimentellen Skripte und externen Datenflüsse
+  - Diff-/Integrationsprüfung der offenen PRs
+  - Laufzeitmessung der Workflows
+- id: T100
+  evidence:
+  - scripts/provider_runtime.py
+  - tests/test_provider_runtime.py
+  - docs/guide/provider-runtime.md
+  remaining:
+  - Produktionsintegration und vollständige taskbezogene Abnahmekriterien; Grenzen
+    siehe Providerdokumentation.
+- id: T103
+  evidence:
+  - scripts/provider_runtime.py
+  - tests/test_provider_runtime.py
+  - docs/guide/provider-runtime.md
+  remaining:
+  - Produktionsintegration und vollständige taskbezogene Abnahmekriterien; Grenzen
+    siehe Providerdokumentation.
+- id: T104
+  evidence:
+  - scripts/provider_runtime.py
+  - tests/test_provider_runtime.py
+  - docs/guide/provider-runtime.md
+  remaining:
+  - Produktionsintegration und vollständige taskbezogene Abnahmekriterien; Grenzen
+    siehe Providerdokumentation.
+- id: T130
+  evidence:
+  - scripts/provider_runtime.py
+  - tests/test_provider_runtime.py
+  - docs/guide/provider-runtime.md
+  remaining:
+  - Produktionsintegration und vollständige taskbezogene Abnahmekriterien; Grenzen
+    siehe Providerdokumentation.
+- id: T135
+  evidence:
+  - scripts/provider_runtime.py
+  - tests/test_provider_runtime.py
+  - docs/guide/provider-runtime.md
+  remaining:
+  - Produktionsintegration und vollständige taskbezogene Abnahmekriterien; Grenzen
+    siehe Providerdokumentation.
+remaining_0_1:
+- T012
+- T072
+- T073
+- T100
+- T101
+- T103
+- T104
+- T130
+- T135

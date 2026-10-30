@@ -8,12 +8,15 @@ permissions:
 concurrency:
   group: personalnewshost-publish
   cancel-in-progress: false
+env:
+  PIP_CONSTRAINT: ${{ github.workspace }}/requirements-constraints.txt
+
 jobs:
   generate:
     runs-on: ubuntu-24.04
     timeout-minutes: 40
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           # The concurrency lock is acquired before checkout. Read the newest
           # publication even if this scheduled event waited in the queue.
@@ -37,6 +40,12 @@ jobs:
           else:
               print("No private configuration secret; using public defaults.")
           PY
+      - name: Mask private configuration fields before further processing
+        run: python3 scripts/security_checks.py --mask-config config.json
+      - name: Validate production configuration
+        run: |
+          python3 -m pip install --disable-pip-version-check -r requirements.txt
+          python3 scripts/validate_config.py
       - name: Test provider configuration contracts
         run: python3 -m unittest discover -s tests
       - name: Check configured production schedule
@@ -44,19 +53,19 @@ jobs:
         run: python3 scripts/check_schedule.py
       - name: Restore cached Ubuntu packages
         if: steps.schedule.outputs.due == 'true'
-        uses: actions/cache@v4
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: /tmp/pnh-debs
           key: pnh-ubuntu2404-amd64-debs-v1
       - name: Restore Python download cache
         if: steps.schedule.outputs.due == 'true'
-        uses: actions/cache@v4
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: ~/.cache/pip
           key: pnh-pip-ubuntu2404-py3-v1
       - name: Restore Piper voice model
         if: steps.schedule.outputs.due == 'true'
-        uses: actions/cache@v4
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: models/
           key: pnh-piper-de-thorsten-high-v1
@@ -137,7 +146,7 @@ jobs:
             rm -f models/de_DE-thorsten-high.onnx models/de_DE-thorsten-high.onnx.json
             echo "Piper model unavailable; using eSpeak fallback"
           fi
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         if: steps.schedule.outputs.due == 'true'
         with:
           node-version: '22'
@@ -157,7 +166,7 @@ jobs:
         if: steps.schedule.outputs.due == 'true'
         run: |
           rm -f docs/latest.mp4
-          python3 scripts/generate.py
+          python3 -u scripts/generate.py
           test -s docs/latest.mp4
           ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 docs/latest.mp4 | grep -q .
       - name: Mark the approved broadcast groups in the news store
@@ -178,6 +187,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python3 scripts/security_checks.py --outputs docs/
           git add docs/
           if ! git diff --cached --quiet; then
             git commit -m "Publish latest news bulletin"
@@ -192,9 +202,16 @@ jobs:
           TELEGRAM_CHAT_ID_SECONDARY: ${{ secrets.TELEGRAM_CHAT_ID_SECONDARY }}
           PUBLIC_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: python3 scripts/publish_telegram.py
-      - name: Preserve editorial audit even when no story is approved
+      - name: Check artifact publication boundary
+        id: pnh_publication_1
         if: always() && (steps.production.outcome == 'success' || steps.production.outcome == 'failure')
-        uses: actions/upload-artifact@v6
+        env:
+          PNH_OUTPUT_PATHS: |
+            docs/editorial-report.json
+        run: python3 scripts/security_checks.py --outputs-env PNH_OUTPUT_PATHS
+      - name: Preserve editorial audit even when no story is approved
+        if: ${{ (always() && (steps.production.outcome == 'success' || steps.production.outcome == 'failure')) && steps.pnh_publication_1.outcome == 'success' }}
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: editorial-source-check
           path: docs/editorial-report.json

@@ -1,0 +1,124 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  scope: Studiowizard, virtuelle Kameras und Verwendung in der Sendungsproduktion
+  status: planned
+tasks:
+- id: T240
+  epic: E21
+  title: Versioniertes Studiomodell und Produktionszuordnung
+  status: todo
+  depends_on:
+  - T002
+  - T060
+  - T230
+  instructions:
+  - Studio mit stabiler studio_id, Version, Name, Beschreibung, enabled, Darstellungsmodus,
+    Bühnenaufbau, Avatarplätzen, Beleuchtung, Branding und Kameraliste modellieren.
+  - 2D-/2.5D-Templates als CPU-taugliche Basis unterstützen; echte räumliche 3D-Szenen
+    als getrennte Fähigkeit mit geprüftem Renderer vorsehen.
+  - Pro Show Standardstudio und optionale Segmentüberschreibungen; Fallbackstudio
+    für fehlende oder deaktivierte Studios definieren.
+  - Kamerazahl aus tatsächlicher Kameraliste ableiten; mindestens eine Kamera und
+    konfigurierbares Ressourcenlimit. Kamera ist eine virtuelle Ansicht, kein physisches
+    Aufnahmegerät.
+  - Studio- und Avatarversionen als konsistenten Snapshot je Produktion speichern;
+    bestehende Konfiguration auf vorhandenes Standardstudio abbilden.
+  acceptance:
+  - Zwei Shows können unterschiedliche Studios verwenden; Segmente können gezielt
+    überschreiben.
+  - Ungültige Kamerareferenzen oder Avatarplätze werden vor Rendering abgelehnt; alte
+    Konfiguration bleibt verwendbar.
+- id: T241
+  epic: E21
+  title: Studio-Erstellungswizard und Verwaltung
+  status: todo
+  depends_on:
+  - T240
+  - T193
+  instructions:
+  - Geschützten Studio-Erstellungs-/Bearbeitungswizard aus Einrichtung und Verwaltung
+    aufrufbar machen.
+  - 'Schritte: Name und Vorlage; Aussehen mit Hintergrund, Farben, Materialien, Logo,
+    Tisch/Podest und Screens; Anzahl und Aufbau der Avatarplätze; Kamerazahl und Einstellungen;
+    Licht; Vorschau; Show-Zuordnung und Abschluss.'
+  - Hintergründe/Logos als lokale Assets mit Herkunft und Lizenz erfassen; Uploadprüfung
+    und Ressourcenlimits wiederverwenden. Keine aktiven Inhalte oder ungeprüften externen
+    Referenzen zulassen.
+  - Studio als Entwurf speichern, wiederaufnehmen, duplizieren, versionieren und deaktivieren;
+    verwendete Versionen nicht ersatzlos löschen.
+  - Studioverwaltung gehört zum gemeinsamen Redaktionsbereich, ohne individuelle Mitarbeiterkonten.
+  acceptance:
+  - Wizard erzeugt ein validiertes Studio und ordnet es einer Show zu.
+  - Unberechtigte Konten können Studios weder ändern noch Assets hochladen; Neustart
+    erhält Entwürfe und aktive Versionen.
+- id: T242
+  epic: E21
+  title: Kameraeditor und Schnittregeln
+  status: todo
+  depends_on:
+  - T241
+  instructions:
+  - Kameras mit eindeutiger ID, Name und Einstellungsart wie Totale, Halbtotal, Nahaufnahme,
+    Zweierbild oder Screenansicht verwalten.
+  - Für 2D/2.5D Crop, Bildausschnitt, Zoom und Ebenenposition konfigurieren; für echte
+    3D-Kameras Position, Blickziel, Brennweite/Sichtfeld nur bei entsprechendem Renderpfad
+    anbieten.
+  - Kameravorschau pro Ansicht, zugeordneten Avatarplatz und sichtbaren Screen zeigen.
+    Sichere Textbereiche, Quellen und KI-Labels erhalten.
+  - Schnittregeln pro Segmenttyp und Sprecherwechsel definieren; Mindesthaltedauer,
+    erlaubte Übergänge und manuelle Kamerazuweisung. Ohne Regel deterministische Standardkamera
+    verwenden.
+  - Keine automatische echte Perspektivänderung aus einem einzelnen 2D-Hintergrund
+    behaupten; verfügbare Kamerafähigkeiten im Wizard kennzeichnen.
+  acceptance:
+  - Studio mit mindestens drei virtuellen Ansichten kann gespeichert und einzeln vorab
+    betrachtet werden.
+  - Ungültige Sichtfelder, leere Kameraliste oder fehlende Ziele werden abgewiesen;
+    Schnittfolge ist reproduzierbar.
+- id: T243
+  epic: E21
+  title: Studiointegration in Rundown und Renderer
+  status: todo
+  depends_on:
+  - T242
+  - T151
+  - T233
+  - T061
+  instructions:
+  - Rundown um studio_id/version, camera_id, Avatarplatz und Übergänge erweitern;
+    Kameraentscheidungen vor Renderbeginn als Shotplan speichern.
+  - Renderer verwenden gespeicherte Studioassets, Layout, Beleuchtung und Kameraparameter;
+    2D-/3D-Fähigkeiten explizit prüfen und passenden Fallback nutzen.
+  - Sprecherwechsel, Doppelmoderation und Korrespondentensegment berücksichtigen,
+    ohne den Studiovertrag an einen einzelnen Anbieter zu binden.
+  - Studio-, Kamera-, Licht- und Assetversionen in Cache-Schlüssel aufnehmen; nur
+    betroffene Segmente neu rendern.
+  - Quellen, Untertitel, Senderlogo und KI-Kennzeichnung in allen Kameras und unterstützten
+    Ausgabeformaten erhalten; Social-Reframing übernimmt definierte sichere Bereiche.
+  acceptance:
+  - Testsendung verwendet zugeordnetes Studio und mindestens drei geplante Ansichten
+    mit nachvollziehbarer Schnittfolge.
+  - Nicht unterstützte 3D-Funktion führt zu erklärtem Fallback; bestehende Sendungen
+    bleiben renderbar.
+  - Studioänderungen erzeugen keine veralteten Rendercache-Treffer.
+- id: T244
+  epic: E21
+  title: Studiovorlagen, Dokumentation und Abnahme
+  status: todo
+  depends_on:
+  - T243
+  - T201
+  instructions:
+  - Mindestens Vorlagen für Einzelmoderation, Doppelmoderation und Korrespondenten-/Screenansicht
+    bereitstellen; Lizenznachweise mitliefern.
+  - Bedienung, Kamerabegriffe, 2D-/3D-Grenzen, Renderingkosten und optionale GPU-Anforderungen
+    dokumentieren.
+  - Visuelle Abnahme für mehrere Avatargrößen, Kameras, Untertitel und Hochkant-/Querformatausgabe;
+    Wizard, Rechte, Persistenz, Backup und Restore testen.
+  - Studioinstallation und Assets für Linux und Docker identisch verwalten; CPU-Grundbetrieb
+    mit einfacher Vorlage testen.
+  acceptance:
+  - Wizard bis fertige Testsendung mit Show-/Segmentzuordnung dokumentiert.
+  - Vorlagen funktionieren in unterstützten Renderpfaden; kein Clip verliert Quellen
+    oder synthetische Kennzeichnung beim Kamerawechsel.

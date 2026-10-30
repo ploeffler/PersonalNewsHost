@@ -3,6 +3,8 @@ import importlib.util
 import json
 from pathlib import Path
 import tempfile
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
 import unittest
 
 spec=importlib.util.spec_from_file_location('editorial_pipeline',Path(__file__).resolve().parents[1]/'scripts/editorial_pipeline.py')
@@ -21,6 +23,18 @@ def members():return [article('a','Zugunglück in München: Zehn Menschen verlet
     'Bei dem Zugunglück wurden zehn Menschen verletzt. Die Bahnstrecke bleibt bis zum Abend gesperrt.','second.org')]
 
 class EditorialPipelineTests(unittest.TestCase):
+    def test_identical_short_event_retains_all_editorial_sources(self):
+        items=[article('a','Bahnstrecke gesperrt','Die Bahnstrecke bleibt bis zum Abend gesperrt.'),
+               article('b','Bahnstrecke gesperrt','Die Bahnstrecke bleibt bis zum Abend gesperrt.','second.org')]
+        report=p.prepare(stored(items),NOW)
+        self.assertEqual(len(report['groups']),1)
+        self.assertEqual(set(report['groups'][0]['member_ids']),{'a','b'})
+
+    def test_short_event_description_locations_prevent_false_merge(self):
+        a=article('a','Bahnstrecke gesperrt','Ein Unfall in München blockiert den Verkehr.')
+        b=article('b','Bahnstrecke gesperrt','Ein Unfall in Berlin blockiert den Verkehr.')
+        self.assertFalse(p.same_event(a,b))
+
     def test_combines_complementary_sentences_from_different_sources(self):
         report=p.prepare(stored(members()),NOW)
         self.assertEqual(len(report['groups']),1)

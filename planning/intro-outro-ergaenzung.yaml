@@ -1,0 +1,88 @@
+meta:
+  project: PersonalNewsHost
+  date: '2026-10-29'
+  scope: Wiederverwendbare Intro-/Outrosequenzen aus der Redaktionsverwaltung
+  status: planned
+  scope_policy: umfang-vereinfacht.yaml hat Vorrang bei älteren Konten-/Rechteformulierungen.
+tasks:
+- id: T300
+  epic: E27
+  title: Sequenzbibliothek für Standard-Intros und -Outros
+  status: todo
+  depends_on:
+  - T110
+  - T189
+  - T270
+  - T280
+  instructions:
+  - In der Redaktionsverwaltung eine Bibliothek wiederverwendbarer Intro-/Outrosequenzen
+    bereitstellen; Erzeugen, Vorschau, Versionieren, Freigeben, Deaktivieren und Zuordnung
+    zu einer Redaktion unterstützen.
+  - Generierungsauftrag mit Titel, Sequenztyp, Text, Stimme, optionalem Avatar/Studio,
+    Logo/Grafiken, Audio/Musik, Dauer und Zielformaten konfigurieren. Rechte und Herkunftsnachweise
+    für verwendete Medien erfassen.
+  - Vorab gerenderte Standardsequenzen als eigenständige wiederverwendbare Artefakte
+    speichern; keine erneute KI-Generierung bei jeder Einbindung. Sprach-/Formatvarianten
+    gezielt erzeugen und separat kennzeichnen.
+  - Sequenzverwaltung über den gemeinsamen Redaktionszugang; generierte Sequenzen
+    durchlaufen Budget-, Qualitäts- und Freigabeprüfungen. Finale Videosequenzen unter
+    Jahr/Monat/Tag archivieren und durchgehend rechts unten AI einblenden.
+  - Archivierte Versionen unveränderlich halten. Deaktivieren verhindert neue Auswahl,
+    zerstört aber keine historischen Produktionsreferenzen.
+  acceptance:
+  - Berechtigter Redaktionsmitarbeiter kann Standardintro und Standardoutro erzeugen,
+    vorab betrachten und freigeben.
+  - Freigegebene Sequenzen sind mit Dauer, Format und Version auswählbar; unberechtigte
+    Nutzer können sie nicht verändern.
+- id: T301
+  epic: E27
+  title: Intro-/Outroauswahl je Show und Kurzvideo
+  status: todo
+  depends_on:
+  - T300
+  - T250
+  - T291
+  instructions:
+  - Showverwaltung und Kurzvideoauftrag erhalten getrennte Intro- und Outroauswahl
+    aus der freigegebenen Sequenzbibliothek. Beide unabhängig deaktivierbar.
+  - Showvorlagen können Standardauswahl setzen; Kurzvideo kann ausdrückliche Showvorgabe
+    übernehmen oder eigenständig auswählen. Effektive Auswahl einschließlich Keine
+    und Vererbung sichtbar anzeigen.
+  - Auswahl an konkrete Sequenzversion binden. Neue Bibliotheksversionen verändern
+    gespeicherte Zuordnungen nicht stillschweigend; bewusste Aktualisierung mit Vorschau
+    anbieten.
+  - Rundown setzt Intro vor Inhaltsblöcke und Outro danach. Dauer von Intro/Outro
+    in Gesamtlänge und Zeitbudget berücksichtigen; zu lange Kombinationen vor Rendering
+    melden.
+  - Auflösung, Seitenverhältnis, Sprache, Audioniveau und Übergänge prüfen. Passende
+    vorgerenderte Variante wiederverwenden; fehlende Variante explizit erzeugen oder
+    verständlich ablehnen statt unkontrolliert zuschneiden.
+  - Bei erneutem Compositing doppelte AI-Labels vermeiden und durchgehende Kennzeichnung
+    der Gesamtausgabe sicherstellen. Intro-/Outroauswahl löst keine unnötigen Avatar-/KI-Jobs
+    aus.
+  - Bestehendes Intro/Outro der initialen Newsshow als kompatible Standardsequenzen
+    übernehmen; Auswahl und Versionen im Produktionssnapshot speichern.
+  acceptance:
+  - Zwei Shows und ein unabhängiges Kurzvideo können unterschiedliche Intros/Outros
+    verwenden.
+  - Intro allein, Outro allein und keine Sequenz funktionieren.
+  - Wiederverwendung erzeugt keine neuen KI-Kosten; Gesamtdauer, Quellen-/AI-Kennzeichnung
+    und Archivierung bleiben korrekt.
+- id: T302
+  epic: E27
+  title: Sequenzverwaltung und Wiederverwendung abnehmen
+  status: todo
+  depends_on:
+  - T301
+  instructions:
+  - Erzeugung in der Redaktionsverwaltung und Auswahl in Show-/Kurzvideoeditor samt
+    Rechten dokumentieren.
+  - Tests für Versionierung, Deaktivierung, fehlende Varianten, Dauerbudget, unveränderte
+    Altproduktionen und Wiederverwendung ohne Generierungsaufrufe ergänzen.
+  - Persistenz und Backup/Restore der Bibliothek sowie finale Produktionen mit unterschiedlichen
+    Intro-/Outrokombinationen für Linux/Docker prüfen.
+  acceptance:
+  - Dokumentierter Weg von Standardsequenz-Erstellung bis zur fertigen Show und zum
+    Kurzvideo ist geprüft.
+  - Bibliotheksänderungen überschreiben weder historische Sequenzen noch bestehende
+    Produktionssnapshots.
