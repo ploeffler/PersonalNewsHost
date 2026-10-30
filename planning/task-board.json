@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 37,
+  "revision": 38,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4511,7 +4511,7 @@
       "id": "T901",
       "epic": "E32",
       "title": "Werbevideo per Repo-Link und RSS lokal als animiertes Gesamtvideo",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T100"
       ],
@@ -4540,7 +4540,18 @@
           "tests/test_promo_video.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-promo",
+        "commit": "0f78d1a780dc22fd0cf1a22b58ef4c972f8993e8",
+        "checks": "289 offline tests, lint/link/secret checks; 13 targeted tests; actual 10.44s local eSpeak+FFmpeg demo visually inspected. GitHub foundation SUCCESS https://github.com/ploeffler/PersonalNewsHost/actions/runs/40984106476 ; render SUCCESS https://github.com/ploeffler/PersonalNewsHost/actions/runs/40984104413 . Independent t072_review approved after card-overflow fix.",
+        "files": [
+          "WERBEVIDEO.md",
+          "planning/project.json",
+          "scripts/promo_network.py",
+          "scripts/promo_video.py",
+          "tests/test_promo_video.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "Separater 2D-Pfad neben experimenteller neuraler T900-Produktion.",
@@ -5723,6 +5734,15 @@
       "client": "codex-promo",
       "at": 1793322591.3207932,
       "note": "PR https://github.com/ploeffler/PersonalNewsHost/pull/177 head bf605abecc9a9fa3c9d94acc34467d4e0852d2c6. 289 offline tests and real 10.44s local 2D speech/video demo pass; independent t072_review recommends approval. 2D local ready, 3D local/online setup_required proposals only. Await CI before integration."
+    },
+    {
+      "operation_id": "ea3a7b75d95a4e81acefc03444ee52d8",
+      "revision": 38,
+      "action": "submit",
+      "task": "T901",
+      "client": "codex-promo",
+      "at": 1793322728.5655499,
+      "note": "PR #177 integrated; 2D local executable, 3D local/online offered as setup_required only. No actual 3D renderer claimed."
     }
   ]
 }
