@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 68,
+  "revision": 69,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1054,7 +1054,7 @@
       "id": "T101",
       "epic": "E9",
       "title": "Budget- und Quota-Waechter",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T100"
       ],
@@ -1071,7 +1071,17 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A02",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "1c0371144c19485bbd9a87cc995148f5",
+        "expires_at": 1793492761.7859638,
+        "files": [
+          "planning/reviews/T101-budget-integration.md",
+          "scripts/configured_providers.py",
+          "tests/test_configured_providers.py",
+          "tests/test_task_client.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [
@@ -6057,6 +6067,15 @@
       "task": "T101",
       "client": "codex-local-coordinator",
       "at": 1793489159.3853593,
+      "note": ""
+    },
+    {
+      "operation_id": "62f99e1229cf4d07af9285b1bef79ff1",
+      "revision": 69,
+      "action": "claim",
+      "task": "T101",
+      "client": "codex-local-coordinator",
+      "at": 1793489161.7859638,
       "note": ""
     }
   ]
