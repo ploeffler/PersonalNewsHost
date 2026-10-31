@@ -95,6 +95,22 @@ class ReelTests(unittest.TestCase):
         atom=b'<feed xmlns="http://www.w3.org/2005/Atom"><entry><title>Atom</title><summary>Hello</summary><link href="https://source.example/c"/></entry></feed>'
         self.assertEqual(reel.parse_feed(atom,1)[0]['title'],'Atom')
 
+    def test_rss1_rdf_default_and_explicit_namespaces(self):
+        data = b'''<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/">
+          <channel rdf:about="https://rss.orf.at/news.xml"><title>News</title></channel>
+          <item rdf:about="https://news.example/a"><title>One</title><description>Source text</description><link>https://news.example/a?tracking=x</link></item>
+          <item rdf:about="https://news.example/b"><title>Two</title><description>Second text</description><link>https://news.example/b</link></item>
+        </rdf:RDF>'''
+        items = reel.parse_feed(data, 2)
+        self.assertEqual(items[0], {'title': 'One', 'text': 'Source text', 'url': 'https://news.example/a'})
+        self.assertEqual(items[1]['title'], 'Two')
+        prefixed = b'''<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rss="http://purl.org/rss/1.0/">
+          <rss:item><rss:title>One</rss:title><rss:description>Source text</rss:description><rss:link>https://news.example/a</rss:link></rss:item>
+        </rdf:RDF>'''
+        self.assertEqual(reel.parse_feed(prefixed, 1), items[:1])
+        with self.assertRaisesRegex(ValueError, 'fewer usable'):
+            reel.parse_feed(data, 3)
+
     def test_prepare_fixture_never_fetches_live_news(self):
         with tempfile.TemporaryDirectory() as directory, patch.object(reel,'read_feed',side_effect=AssertionError('network')):
             config=request();config['test_mode']=True

@@ -144,13 +144,14 @@ def parse_feed(data, count):
         raise ValueError('Oversized feed or unsupported XML declarations')
     root = ET.fromstring(data)
     atom = '{http://www.w3.org/2005/Atom}'
-    nodes = root.findall('.//item') or root.findall('.//' + atom + 'entry')
+    rss1 = '{http://purl.org/rss/1.0/}'
+    nodes = root.findall('.//item') or root.findall('.//' + rss1 + 'item') or root.findall('.//' + atom + 'entry')
     selected = []
     seen = set()
     for node in nodes[:100]:
-        title = clean(node.findtext('title') or node.findtext(atom + 'title'))
-        text = clean(node.findtext('description') or node.findtext(atom + 'summary') or node.findtext(atom + 'content'))
-        url = clean(node.findtext('link'))
+        title = clean(node.findtext('title') or node.findtext(rss1 + 'title') or node.findtext(atom + 'title'))
+        text = clean(node.findtext('description') or node.findtext(rss1 + 'description') or node.findtext(atom + 'summary') or node.findtext(atom + 'content'))
+        url = clean(node.findtext('link') or node.findtext(rss1 + 'link'))
         if not url:
             link = node.find(atom + 'link')
             url = link.get('href', '') if link is not None else ''
