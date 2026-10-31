@@ -5,7 +5,6 @@ Reports locations/categories only, never the matching secret or environment valu
 Public news content is intentional; this is not an automatic personal-data classifier.
 """
 import argparse
-import glob
 import json
 import os
 from pathlib import Path
@@ -147,8 +146,11 @@ def output_files(patterns, root=ROOT):
     for pattern in patterns:
         if not pattern.strip() or pattern.startswith('!'):
             continue  # Scan the superset of upload paths, including excluded files.
-        for name in glob.glob(str(root / pattern.strip()), recursive=True, include_hidden=True):
-            path = Path(name)
+        # pathlib includes dotfiles on Python 3.10, unlike glob's newer
+        # include_hidden option (introduced in Python 3.11).
+        absolute_pattern = root / pattern.strip()
+        anchor = Path(absolute_pattern.anchor)
+        for path in anchor.glob(str(absolute_pattern.relative_to(anchor))):
             paths.extend(path.rglob('*') if path.is_dir() else [path])
     return paths
 

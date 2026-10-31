@@ -95,3 +95,16 @@ class SecurityChecksTests(unittest.TestCase):
             files=check.output_files(['out/','!out/.env'],root)
             self.assertIn(p,files)
             self.assertTrue(check.scan_files(files,root=root,publication=True))
+
+    def test_recursive_wildcards_include_hidden_files_and_directories(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            (root / 'out/.hidden/nested').mkdir(parents=True)
+            expected = [root / 'out/.env', root / 'out/.hidden/nested/report.txt',
+                        root / 'out/video.mp4']
+            for path in expected:
+                path.write_text('public')
+            for pattern in ['out/**', 'out/**/*', 'out/*', str(root / 'out/**')]:
+                with self.subTest(pattern=pattern):
+                    self.assertTrue(set(expected) <= set(check.output_files([pattern], root)))
+            self.assertEqual(check.output_files(['missing/**'], root), [])
