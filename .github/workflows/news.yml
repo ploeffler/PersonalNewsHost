@@ -37,6 +37,8 @@ jobs:
           else:
               print("No private configuration secret; using public defaults.")
           PY
+      - name: Install test dependencies
+        run: python3 -m pip install --disable-pip-version-check --prefer-binary Pillow
       - name: Test provider configuration contracts
         run: python3 -m unittest discover -s tests
       - name: Check configured production schedule
