@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 71,
+  "revision": 72,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1168,7 +1168,7 @@
       "id": "T104",
       "epic": "E9",
       "title": "Datenabfluss-Filter und Protokoll",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T100"
       ],
@@ -1183,7 +1183,16 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A02",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "744ad0992acf4f1095d186e975065825",
+        "expires_at": 1793492914.184218,
+        "files": [
+          "planning/reviews/T104-filter-audit.md",
+          "scripts/provider_runtime.py",
+          "tests/test_payload_audit.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [
@@ -6112,6 +6121,15 @@
       "task": "T103",
       "client": "codex-local-coordinator",
       "at": 1793489311.8340664,
+      "note": ""
+    },
+    {
+      "operation_id": "0e8f9fb800944090bf84c03df88ef1f8",
+      "revision": 72,
+      "action": "claim",
+      "task": "T104",
+      "client": "codex-local-coordinator",
+      "at": 1793489314.184218,
       "note": ""
     }
   ]
