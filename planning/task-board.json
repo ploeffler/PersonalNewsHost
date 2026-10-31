@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 53,
+  "revision": 54,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4468,7 +4468,7 @@
       "id": "T900",
       "epic": "E32",
       "title": "Kostenlose einzelne KI-Reel-Sendung per Chat-Action",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T100"
       ],
@@ -4495,7 +4495,16 @@
           "tests/test_reel_show.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-reel-fix",
+        "commit": "8fd9bb8e891e7eddda9d7a4dfd2fc74f29c2ae83",
+        "checks": "10 tests in test_reel_show.py pass including actual FFmpeg composition. Empty/partial JSON validation fixed; full neural model production not verified.",
+        "files": [
+          ".github/workflows/chat-reel.yml",
+          "scripts/reel_show.py",
+          "tests/test_reel_show.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "Separater experimenteller Action-Einstieg auf ausdrücklichen Nutzerwunsch; keine allgemeine Avatar-/Studioplattform.",
@@ -5910,6 +5919,15 @@
       "client": "codex-reel-fix",
       "at": 1793480629.1875947,
       "note": "Human authorized takeover from claude-t900 to codex-reel-fix to correct empty workflow request handling."
+    },
+    {
+      "operation_id": "20507ef103af4774ace23b8b9044cdaf",
+      "revision": 54,
+      "action": "submit",
+      "task": "T900",
+      "client": "codex-reel-fix",
+      "at": 1793480685.8032498,
+      "note": "Input-validation correction only; independent review and full production acceptance still required."
     }
   ]
 }
