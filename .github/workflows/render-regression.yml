@@ -7,6 +7,8 @@ on:
       - 'assets/**'
       - 'config.json'
       - '.github/workflows/render-regression.yml'
+      - '.github/workflows/news.yml'
+      - '.github/workflows/analyze-rss-topics.yml'
   workflow_dispatch:
 permissions:
   contents: read
