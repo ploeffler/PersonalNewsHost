@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 60,
+  "revision": 61,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4468,7 +4468,7 @@
       "id": "T900",
       "epic": "E32",
       "title": "Kostenlose einzelne KI-Reel-Sendung per Chat-Action",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T100"
       ],
@@ -4494,7 +4494,15 @@
           "tests/test_security_checks.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-reel-fix",
+        "commit": "d51b80b64e05cd14662142c47c5f473a817b8408",
+        "checks": "9 targeted security tests pass on local Python 3.12; pathlib glob supports Python 3.10 and includes hidden files. Actual Python 3.10 CI and full Reel production pending.",
+        "files": [
+          "scripts/security_checks.py",
+          "tests/test_security_checks.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "Separater experimenteller Action-Einstieg auf ausdrücklichen Nutzerwunsch; keine allgemeine Avatar-/Studioplattform.",
@@ -5972,6 +5980,15 @@
       "client": "codex-reel-fix",
       "at": 1793484341.2219737,
       "note": ""
+    },
+    {
+      "operation_id": "2d797ddda5e74076a1b35e1dac398bb2",
+      "revision": 61,
+      "action": "submit",
+      "task": "T900",
+      "client": "codex-reel-fix",
+      "at": 1793484385.0149267,
+      "note": "Publication scanner compatibility fix; independent review and production acceptance remain pending."
     }
   ]
 }
