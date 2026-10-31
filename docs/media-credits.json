@@ -1,12 +1,24 @@
 [
   {
-    "source": "https://www.krone.at/4354651",
+    "source": "https://www.krone.at/4357140",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
   },
   {
-    "source": "https://www.kleinezeitung.at/artikel/41400127/sonnenzirkus-in-graz-wie-ein-kinderbuch-das-zum-leben-erwacht",
+    "source": "https://www.kleinezeitung.at/artikel/41408094/tretertruppe-gak-tino-wawra-finde-das-respektlos",
+    "image_origin": "article_metadata_or_rss",
+    "image_processing": "neural_fsrcnn_x2",
+    "original_media_retained": true
+  },
+  {
+    "source": "https://orf.at/stories/3446709/",
+    "image_origin": "article_metadata_or_rss",
+    "image_processing": "neural_fsrcnn_x2",
+    "original_media_retained": true
+  },
+  {
+    "source": "https://www.derstandard.at/story/3000000346865/stuttgart-leipzig-und-bremen-gewinnen-gregoritsch-tor-fuer-augsburg-zu-wenig?ref=rss",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
@@ -14,17 +26,5 @@
   {
     "source": "",
     "image_origin": "article_metadata_or_rss"
-  },
-  {
-    "source": "https://orf.at/stories/3446556/",
-    "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
-    "original_media_retained": true
-  },
-  {
-    "source": "https://www.krone.at/4354640",
-    "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
-    "original_media_retained": true
   }
 ]

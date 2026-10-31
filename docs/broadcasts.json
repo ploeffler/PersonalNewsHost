@@ -1,42 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261029T165914Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 29.10.2026 um 17:59 Uhr",
-      "created_at": 1793293154.060763,
-      "video": "broadcasts/20261029T165914Z.mp4",
-      "sources": [
-        {
-          "title": "Hitzig und witzig: Öblarner Ensemble tourt mit Theaterstück durchs Land",
-          "url": "https://www.kleinezeitung.at/artikel/41401154/hitzig-und-witzig-oeblarner-ensemble-tourt-mit-theaterstueck-durchs"
-        },
-        {
-          "title": "Schiff nach Drohnenangriff in Bulgarien gesunken",
-          "url": "https://www.krone.at/4354439"
-        },
-        {
-          "title": "Immer mehr Menschen kaufen Einfamilienhäuser, weil Bauen zu teuer ist",
-          "url": "https://www.derstandard.at/story/3000000346294/immer-mehr-menschen-kaufen-einfamilienhaeuser-weil-bauen-zu-teuer-ist?ref=rss"
-        },
-        {
-          "title": "Netzentgelte für Strom sinken 2027 im Großteil Österreichs",
-          "url": "https://www.derstandard.at/story/3000000346662/netzentgelte-f252r-strom-sinken-2027-im-gro223teil-214sterreichs?ref=rss"
-        },
-        {
-          "title": "Netzentgelte für Strom sinken 2027 im Großteil des Landes",
-          "url": "https://orf.at/stories/3446525/"
-        },
-        {
-          "title": "Paragleiter aus Hochspannungsleitung gerettet",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261029T165914Z.txt",
-      "subtitles": "broadcasts/20261029T165914Z.vtt",
-      "subtitle_download": "broadcasts/20261029T165914Z.srt"
-    },
-    {
       "id": "20261029T215149Z",
       "kind": "broadcast",
       "title": "Nachrichten 29.10.2026 um 22:51 Uhr",
@@ -75,6 +39,38 @@
       "transcript": "broadcasts/20261029T215149Z.txt",
       "subtitles": "broadcasts/20261029T215149Z.vtt",
       "subtitle_download": "broadcasts/20261029T215149Z.srt"
+    },
+    {
+      "id": "20261031T175423Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 31.10.2026 um 18:54 Uhr",
+      "created_at": 1793469263.494315,
+      "video": "broadcasts/20261031T175423Z.mp4",
+      "sources": [
+        {
+          "title": "Eskalationen in Köln, Flammen in Paris",
+          "url": "https://www.krone.at/4357140"
+        },
+        {
+          "title": "„Tretertruppe“ GAK? Tino Wawra: „Finde das respektlos“",
+          "url": "https://www.kleinezeitung.at/artikel/41408094/tretertruppe-gak-tino-wawra-finde-das-respektlos"
+        },
+        {
+          "title": "Berliner Linke bereit für Koalitionsgespräche",
+          "url": "https://orf.at/stories/3446709/"
+        },
+        {
+          "title": "Stuttgart, Leipzig und Bremen gewinnen, Gregoritsch-Tor für Augsburg zu wenig",
+          "url": "https://www.derstandard.at/story/3000000346865/stuttgart-leipzig-und-bremen-gewinnen-gregoritsch-tor-fuer-augsburg-zu-wenig?ref=rss"
+        },
+        {
+          "title": "Explosion in Pkw nach Gasaustritt",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261031T175423Z.txt",
+      "subtitles": "broadcasts/20261031T175423Z.vtt",
+      "subtitle_download": "broadcasts/20261031T175423Z.srt"
     }
   ]
 }
