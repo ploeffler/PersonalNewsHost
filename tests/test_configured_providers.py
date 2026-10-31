@@ -114,6 +114,55 @@ class ConfiguredProvidersTests(unittest.TestCase):
         self.assertTrue(r.run('text_generation',{'text':'cached'})['cached'])
         self.assertEqual(len(r.calls[a['id']]),1)
 
+    def test_unit_quota_survives_registry_restart_and_uses_fallback(self):
+        primary = self.config['providers'][0]
+        backup = copy.deepcopy(primary)
+        backup.update(id='quota-backup', priority=200)
+        primary['fallback_to'] = backup['id']
+        primary['cost_model']['units'] = {'tokens': 2}
+        self.config['providers'].append(backup)
+        self.config['provider_budgets']['unit_limits'] = {'tokens': 2}
+        first = self.registry()
+        self.assertEqual(first.run('text_generation', {'text': 'one'})['provider_id'], primary['id'])
+        second = self.registry()
+        self.assertEqual(second.run('text_generation', {'text': 'two'})['provider_id'], backup['id'])
+        self.assertEqual(second.runtime.providers[primary['id']].calls, 0)
+
+    def test_cache_hit_does_not_reserve_units_again(self):
+        primary = self.config['providers'][0]
+        primary['cost_model']['units'] = {'tokens': 2}
+        self.config['provider_budgets']['unit_limits'] = {'tokens': 2}
+        first = self.registry()
+        first.run('text_generation', {'text': 'same'})
+        second = self.registry()
+        self.assertTrue(second.run('text_generation', {'text': 'same'})['cached'])
+        usage = second.runtime.budget.summary(second.runtime.namespace, second.runtime.run_id)
+        self.assertEqual(usage['providers'], {})
+        with self.assertRaises(ProviderQuota):
+            second.run('text_generation', {'text': 'different'})
+
+    def test_retry_reserves_units_before_each_attempt(self):
+        primary = self.config['providers'][0]
+        primary.update(retries=1)
+        primary['cost_model']['units'] = {'tokens': 2}
+        self.config['provider_budgets']['unit_limits'] = {'tokens': 2}
+        registry = self.registry()
+        with patch.object(registry.runtime.providers[primary['id']], 'generate',
+                          side_effect=ProviderTimeout('simulated')) as generate:
+            with self.assertRaises(ProviderQuota):
+                registry.run('text_generation', {'text': 'retry-unit-quota'})
+        self.assertEqual(generate.call_count, 1)
+
+    def test_registry_writes_usage_without_payload_to_workflow_summary(self):
+        summary = Path(self.temp.name) / 'summary.md'
+        with patch.dict('os.environ', {'GITHUB_STEP_SUMMARY': str(summary)}):
+            registry = self.registry()
+            registry.run('text_generation', {'text': 'private-fixture-content'})
+        report = summary.read_text()
+        self.assertIn('mock-text-generation', report)
+        self.assertIn('reserved_eur', report)
+        self.assertNotIn('private-fixture-content', report)
+
     def test_mocks_never_resolve_environment_secrets(self):
         self.config['providers'][0]['secret_name']='SOME_API_KEY'
         with patch('os.getenv',side_effect=AssertionError('must not resolve secret')):

@@ -5,14 +5,20 @@ AI SDK or endpoint is executed here; future adapters must implement Provider and
 be admitted explicitly. Budget/accounting and analysis tasks have separate tasks.
 """
 from collections import deque
+import json
+import os
 import re
 import threading
 import time
 from pathlib import Path
 
 try:
+    from .analysis_tasks import SCHEMAS
+    from .provider_budget import Budget, money
     from .provider_runtime import Cache, KINDS, MockProvider, ProviderError, ProviderQuota, Request, Runtime
 except ImportError:
+    from analysis_tasks import SCHEMAS
+    from provider_budget import Budget, money
     from provider_runtime import Cache, KINDS, MockProvider, ProviderError, ProviderQuota, Request, Runtime
 
 IDENT = re.compile(r'^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$')
@@ -61,13 +67,16 @@ class ProviderRegistry:
             from validate_config import validate_config
         validate_config(config)
         self.specs = validate_provider_specs(config.get('providers', []))
-        self.runtime = Runtime(Cache(Path(state) / 'provider-cache.sqlite'), namespace=namespace)
+        self.runtime = Runtime(Cache(Path(state) / 'provider-cache.sqlite'),
+                               namespace=namespace, budget=_configured_budget(config, Path(state)))
         self.clock = clock
         self.calls = {}
         self.lock = threading.Lock()
         for spec in self.specs.values():
             if spec.get('enabled', False):
-                self.runtime.register(MockProvider(spec['id'], spec['kind']))
+                provider = MockProvider(spec['id'], spec['kind'])
+                provider.units = spec.get('cost_model', {}).get('units', {})
+                self.runtime.register(provider)
 
     def run(self, kind, payload, *, task='generate', prompt_version='v1', provider_id=None, schema=None):
         if kind not in KINDS:
@@ -96,9 +105,11 @@ class ProviderRegistry:
                             raise ProviderQuota('Provider rate limit reached')
                         calls.append(now)
                 request = Request(kind, task, spec.get('model', 'mock-v1'), prompt_version, payload)
-                return self.runtime.run(provider_id, request, schema=schema,
+                result = self.runtime.run(provider_id, request, schema=schema,
                                         timeout_s=spec.get('timeout_s', 30), retries=spec.get('retries', 0),
                                         before_attempt=before_attempt)
+                _write_usage_summary(self.runtime)
+                return result
             except ProviderError:
                 fallback = spec.get('fallback_to')
                 if not fallback:
@@ -110,35 +121,33 @@ def configured_runtime(config, state, namespace='default'):
     return ProviderRegistry(config, state, namespace=namespace)
 
 
-"""Build explicit mock providers from configuration and run optional analyses."""
-import json
-import os
-from pathlib import Path
-import re
+def _configured_budget(config, state):
+    budgets = config.get('provider_budgets', {})
+    allow_paid = budgets.get('allow_paid', False)
+    return Budget(state / 'usage.sqlite',
+                  monthly_budget_eur=budgets.get('monthly_budget_eur', 0) if allow_paid else 0,
+                  per_run_budget_eur=budgets.get('per_run_budget_eur', 0) if allow_paid else 0,
+                  unit_limits=budgets.get('unit_limits', {}))
 
-try:
-    from .analysis_tasks import SCHEMAS
-    from .provider_budget import Budget, money
-    from .provider_runtime import Cache, MockProvider, Request, Runtime
-except ImportError:
-    from analysis_tasks import SCHEMAS
-    from provider_budget import Budget, money
-    from provider_runtime import Cache, MockProvider, Request, Runtime
 
-ID = re.compile(r'^[a-zA-Z0-9][a-zA-Z0-9_-]{0,63}$')
+def _write_usage_summary(runtime):
+    usage = runtime.budget.summary(runtime.namespace, runtime.run_id)
+    summary = os.environ.get('GITHUB_STEP_SUMMARY')
+    if summary:
+        with open(summary, 'a', encoding='utf-8') as handle:
+            handle.write('\n### Provider usage (conservative mock reservations)\n')
+            handle.write('```json\n' + json.dumps(usage, ensure_ascii=False, indent=2) + '\n```\n')
+    return usage
 
 
 def configured_analysis_runtime(config, state, namespace='default', run_id=None):
     state = Path(state)
-    budgets = config.get('provider_budgets', {})
-    budget = Budget(state/'usage.sqlite', monthly_budget_eur=budgets.get('monthly_budget_eur',0) if budgets.get('allow_paid',False) else 0,
-                    per_run_budget_eur=budgets.get('per_run_budget_eur',0) if budgets.get('allow_paid',False) else 0,
-                    unit_limits=budgets.get('unit_limits',{}))
+    budget = _configured_budget(config, state)
     specs = {p['id']:p for p in config.get('providers',[]) if p.get('enabled',False)}
     secrets = [os.environ[p['secret_name']] for p in specs.values() if p.get('secret_name') and os.environ.get(p['secret_name'])]
     runtime = Runtime(Cache(state/'cache.sqlite'),budget=budget,namespace=namespace,run_id=run_id,audit_path=state/'audit.jsonl',secret_values=secrets)
     for ident,p in specs.items():
-        if not ID.fullmatch(ident) or p.get('adapter','mock')!='mock': raise ValueError('Unsupported provider adapter')
+        if not IDENT.fullmatch(ident) or p.get('adapter','mock')!='mock': raise ValueError('Unsupported provider adapter')
         provider = MockProvider(ident,p['kind'])
         provider.max_cost_eur = money(p.get('cost_model',{}).get('max_cost_eur',0))
         provider.paid = provider.max_cost_eur>0
@@ -167,8 +176,4 @@ def analyze_entries(config, entries, state, output, namespace='default'):
             results.append({'task':task,'source_id':url,**result})
     usage=runtime.budget.summary(runtime.namespace,runtime.run_id)
     Path(output).write_text(json.dumps({'results':results,'usage':usage},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    summary=os.environ.get('GITHUB_STEP_SUMMARY')
-    if summary:
-        with open(summary,'a',encoding='utf-8') as handle:
-            handle.write('\n### Provider usage (conservative mock reservations)\n')
-            handle.write('```json\n'+json.dumps(usage,ensure_ascii=False,indent=2)+'\n```\n')
+    _write_usage_summary(runtime)

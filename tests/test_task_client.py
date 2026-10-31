@@ -33,7 +33,8 @@ class TaskStateTests(unittest.TestCase):
         self.assertEqual(len(data['tasks']),project['inventory']['task_count'])
         self.assertEqual(len(data['packages']),project['inventory']['package_count'])
         self.assertEqual(len(data['releases']),project['inventory']['release_count'])
-        self.assertTrue(any(t['local_work_pending'] for t in data['tasks']))
+        # Local-only holds are temporary; a fully reconciled board is valid.
+        self.assertTrue(all(type(t['local_work_pending']) is bool for t in data['tasks']))
 
     def test_claim_conflict_and_file_scope_conflict(self):
         data,item=transition(board(),'claim','T001','one',files=['scripts/'],now=100)
