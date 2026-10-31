@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 73,
+  "revision": 74,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1176,7 +1176,7 @@
       "id": "T104",
       "epic": "E9",
       "title": "Datenabfluss-Filter und Protokoll",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T100"
       ],
@@ -1201,7 +1201,16 @@
           "tests/test_payload_audit.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-local-coordinator",
+        "commit": "628ac09a28e2aca98ee860bc6fb3df3484706ca4",
+        "checks": "336 offline tests passed including video rendering; 46 provider tests, 3 cross-process/cache acceptance tests and 5 payload/audit tests pass. Tracked secret scan, local links and diff checks pass. See planning/reviews/T104-filter-audit.md. Independent review pending; no release.",
+        "files": [
+          "planning/reviews/T104-filter-audit.md",
+          "scripts/provider_runtime.py",
+          "tests/test_payload_audit.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [
         "scripts/provider_runtime.py",
@@ -6147,6 +6156,15 @@
       "task": "T103",
       "client": "codex-local-coordinator",
       "at": 1793489454.3669095,
+      "note": ""
+    },
+    {
+      "operation_id": "bc5f4321af124cc2945c9ecc1d553a01",
+      "revision": 74,
+      "action": "submit",
+      "task": "T104",
+      "client": "codex-local-coordinator",
+      "at": 1793489456.8354654,
       "note": ""
     }
   ]
