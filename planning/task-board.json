@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 57,
+  "revision": 58,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4468,7 +4468,7 @@
       "id": "T900",
       "epic": "E32",
       "title": "Kostenlose einzelne KI-Reel-Sendung per Chat-Action",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T100"
       ],
@@ -4496,7 +4496,17 @@
           "tests/test_reel_show.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-reel-fix",
+        "commit": "c3d5ccdcaa65722c8c71ec260f4b8ae8b1f5d227",
+        "checks": "12 Reel tests pass. New actual virtualenv subprocess test fails before fix and passes after fix. Full SadTalker model inference pending.",
+        "files": [
+          ".github/workflows/chat-reel.yml",
+          "scripts/reel_models.py",
+          "scripts/reel_show.py",
+          "tests/test_reel_show.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "Separater experimenteller Action-Einstieg auf ausdrücklichen Nutzerwunsch; keine allgemeine Avatar-/Studioplattform.",
@@ -5947,6 +5957,15 @@
       "client": "codex-reel-fix",
       "at": 1793481866.901575,
       "note": ""
+    },
+    {
+      "operation_id": "f9ac18333a984e05a12c3190f6912a71",
+      "revision": 58,
+      "action": "submit",
+      "task": "T900",
+      "client": "codex-reel-fix",
+      "at": 1793481905.8413281,
+      "note": "Independent review required; preserve venv Python symlink instead of resolving to base interpreter."
     }
   ]
 }
