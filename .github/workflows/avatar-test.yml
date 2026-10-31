@@ -1,13 +1,32 @@
 name: Avatar CPU feasibility test
+run-name: ${{ inputs.mode == 'reel' && format('Reel {0} · {1}', fromJSON(inputs.request).output_name, inputs.request_id) || 'Avatar CPU feasibility test' }}
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [avatar, reel]
+        default: avatar
+      request:
+        description: Reel JSON request (only in reel mode)
+        type: string
+        default: '{}'
+      request_id:
+        type: string
+        default: manual
 permissions:
   contents: read
 env:
   PIP_CONSTRAINT: ${{ github.workspace }}/requirements-constraints.txt
 
 jobs:
+  reel:
+    if: inputs.mode == 'reel'
+    uses: ./.github/workflows/chat-reel.yml
+    with:
+      request: ${{ inputs.request }}
   probe:
+    if: inputs.mode != 'reel'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
