@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 50,
+  "revision": 51,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4555,7 +4555,7 @@
       "id": "T902",
       "epic": "E32",
       "title": "Produktions-Lippenkalibrierung und Voice-Profil aus main",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T901"
       ],
@@ -4571,20 +4571,7 @@
       "source": "user-chat-2026-10-30-lips-voice",
       "version": "0.1",
       "package": "A00",
-      "lease": {
-        "client": "codex-promo-lips",
-        "token": "700a60fedc9d4b78a83acecdda67a596",
-        "expires_at": 1793329596.871503,
-        "files": [
-          "WERBEVIDEO.md",
-          "scripts/promo_lips.py",
-          "scripts/promo_video.py",
-          "scripts/promo_voice.py",
-          "tests/test_promo_lips.py",
-          "tests/test_promo_video.py",
-          "tests/test_promo_voice.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-promo-lips",
         "commit": "0291fd3fbc64a8480766ac262523aff9e386307e",
@@ -4597,10 +4584,15 @@
           "tests/test_promo_lips.py",
           "tests/test_promo_video.py",
           "tests/test_promo_voice.py"
-        ]
+        ],
+        "reviewer": "claude-review",
+        "decision": "Independent review of 0291fd3 (scope files unchanged since). 25 promo tests OK (1 skip: no espeak-ng). Voice profile matches origin/main config.json + generate.py (thorsten-high, 1.06, 0.38s, -1.5 st, pitch filter identical). Piper source verified: hyphen flags and [[IPA]] supported in pinned 1.3.0 and 1.8.0. CLI smoke: comic scene with two figures, calibrate on left ROI found only left mouth; 80 frames from WAV, right figure byte-identical in all frames, silence frames byte-identical to original, speech opens mouth. Minor: WERBEVIDEO.md names Piper 1.8.0 while constraints pin 1.3.0 (compatible, non-blocking)."
       },
       "local_work_pending": false,
-      "evidence": [],
+      "evidence": [
+        "0291fd3fbc64a8480766ac262523aff9e386307e",
+        "Fresh choices for host/design/render and preview approval required for each new run. Reuse only on explicit current-run instruction. WERBEVIDEO.md reviewed; git diff --check passed. Prior production: 25 targeted tests and actual full MP4. Independent review pending."
+      ],
       "implementation_note": "",
       "coordination_note": "Expliziter Folgeauftrag zur Produktion; kein Eingriff in T900."
     }
@@ -5897,6 +5889,15 @@
       "client": "codex-promo-lips",
       "at": 1793326050.0296535,
       "note": ""
+    },
+    {
+      "operation_id": "5de4ffc7c7da4c38934ee8b3dc66dd49",
+      "revision": 51,
+      "action": "complete",
+      "task": "T902",
+      "client": "claude-review",
+      "at": 1793477906.9946506,
+      "note": "Independent review of 0291fd3 (scope files unchanged since). 25 promo tests OK (1 skip: no espeak-ng). Voice profile matches origin/main config.json + generate.py (thorsten-high, 1.06, 0.38s, -1.5 st, pitch filter identical). Piper source verified: hyphen flags and [[IPA]] supported in pinned 1.3.0 and 1.8.0. CLI smoke: comic scene with two figures, calibrate on left ROI found only left mouth; 80 frames from WAV, right figure byte-identical in all frames, silence frames byte-identical to original, speech opens mouth. Minor: WERBEVIDEO.md names Piper 1.8.0 while constraints pin 1.3.0 (compatible, non-blocking)."
     }
   ]
 }
