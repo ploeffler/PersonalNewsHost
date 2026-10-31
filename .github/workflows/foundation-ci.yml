@@ -3,7 +3,7 @@ on:
   pull_request:
   push:
     branches: [Full-featured-Newsoutlet]
-    paths: ['scripts/**', 'tests/**', 'config*.json', 'requirements*.txt', '.github/workflows/foundation-ci.yml']
+    paths: ['scripts/**', 'tests/**', 'planning/**', 'config*.json', 'requirements*.txt', '.github/workflows/foundation-ci.yml']
   workflow_dispatch:
 permissions:
   contents: read
