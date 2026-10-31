@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 61,
+  "revision": 62,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1054,7 +1054,7 @@
       "id": "T101",
       "epic": "E9",
       "title": "Budget- und Quota-Waechter",
-      "status": "in_progress",
+      "status": "todo",
       "depends_on": [
         "T100"
       ],
@@ -1073,10 +1073,12 @@
       "package": "A02",
       "lease": null,
       "review": null,
-      "local_work_pending": true,
-      "evidence": [],
+      "local_work_pending": false,
+      "evidence": [
+        "f658a1710efcfb77cdb6eb0bff33e7f2b2e73247"
+      ],
       "implementation_note": "",
-      "coordination_note": "Uncommitted local 0.1 work must be reconciled before another client claims this task."
+      "coordination_note": "Previously local work integrated in f658a17 by explicit owner request; 324 offline tests passed. Clear obsolete local-only hold; acceptance audit and independent review remain pending."
     },
     {
       "id": "T102",
@@ -5989,6 +5991,15 @@
       "client": "codex-reel-fix",
       "at": 1793484385.0149267,
       "note": "Publication scanner compatibility fix; independent review and production acceptance remain pending."
+    },
+    {
+      "operation_id": "9957b218986f473493d20a4bf2ccd55a",
+      "revision": 62,
+      "action": "reconcile",
+      "task": "T101",
+      "client": "codex-local-coordinator",
+      "at": 1793489034.7032783,
+      "note": "Previously local work integrated in f658a17 by explicit owner request; 324 offline tests passed. Clear obsolete local-only hold; acceptance audit and independent review remain pending."
     }
   ]
 }
