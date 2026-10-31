@@ -18,6 +18,30 @@ def request():
 
 
 class ReelTests(unittest.TestCase):
+    def test_workflow_request_reports_missing_fields_before_network(self):
+        with patch.object(reel, 'read_feed', side_effect=AssertionError('network')):
+            for config in [{}, {'station_name': 'Station'}]:
+                with self.subTest(config=config), self.assertRaisesRegex(ValueError, 'missing: .*news_count'):
+                    reel.normalize_request(config)
+            for config in [None, [], 'text', 1]:
+                with self.subTest(config=config), self.assertRaisesRegex(ValueError, 'JSON object'):
+                    reel.normalize_request(config)
+
+    def test_workflow_request_preserves_booleans_and_validates_numeric_counts(self):
+        config = request();config['news_count'] = 1.0
+        normalized = reel.normalize_request(config)
+        self.assertIs(type(normalized['news_count']), int)
+        self.assertIs(normalized['test_mode'], False)
+        self.assertIs(type(config['news_count']), float)
+        for count in [True, False, 1.5, '1', 0, 6]:
+            config = request();config['news_count'] = count
+            with self.subTest(count=count), self.assertRaises(ValueError):
+                reel.normalize_request(config)
+        for value in ['false', 'true', 1, None]:
+            config = request();config['test_mode'] = value
+            with self.subTest(value=value), self.assertRaisesRegex(ValueError, 'JSON boolean'):
+                reel.normalize_request(config)
+
     def test_input_validation_rejects_paths_controls_and_counts(self):
         reel.validate_inputs(request())
         for key, value in [('output_name','../escape'),('output_name','name;echo-bad'),('news_count',0),('news_count',6),('news_count',True),('station_name','x\ny')]:

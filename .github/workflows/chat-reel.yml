@@ -74,13 +74,8 @@ jobs:
           python3 - <<'PY'
           import json, os
           from pathlib import Path
-          from scripts.reel_show import prepare
-          request = json.loads(os.environ['REEL_INPUTS'])
-          count = request['news_count']
-          if isinstance(count, float) and not count.is_integer():
-              raise ValueError('News count must be an integer')
-          request['news_count'] = int(count)
-          request['test_mode'] = request.get('test_mode') in (True, 'true')
+          from scripts.reel_show import normalize_request, prepare
+          request = normalize_request(json.loads(os.environ['REEL_INPUTS']))
           Path('.reel-work/request.json').write_text(json.dumps(request))
           prepare(request, Path('.reel-work'))
           PY

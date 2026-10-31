@@ -32,6 +32,24 @@ def clean(value):
     return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]*>', ' ', value))).strip()
 
 
+def normalize_request(config):
+    """Normalize Actions number inputs and reject incomplete requests before I/O."""
+    if not isinstance(config, dict):
+        raise ValueError('Reel request must be a JSON object')
+    required = ('station_name', 'show_name', 'host_description',
+                'studio_description', 'news_count', 'output_name')
+    missing = [key for key in required if key not in config or config[key] in (None, '')]
+    if missing:
+        raise ValueError('Reel request is incomplete; missing: ' + ', '.join(missing)
+                         + '. Supply these fields in the Reel JSON request or use the chat-reel workflow form.')
+    result = dict(config)
+    count = result['news_count']
+    if type(count) is float and count.is_integer():
+        result['news_count'] = int(count)
+    validate_inputs(result)
+    return result
+
+
 def validate_inputs(config):
     if 'test_mode' in config and type(config['test_mode']) is not bool:
         raise ValueError('test_mode must be a JSON boolean')
