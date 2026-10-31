@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 66,
+  "revision": 67,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1054,7 +1054,7 @@
       "id": "T101",
       "epic": "E9",
       "title": "Budget- und Quota-Waechter",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T100"
       ],
@@ -1071,7 +1071,16 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A02",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "679fa9c083fe48bda46cdb5e244120ad",
+        "expires_at": 1793492659.2846992,
+        "files": [
+          "planning/reviews/T101-budget-integration.md",
+          "scripts/configured_providers.py",
+          "tests/test_configured_providers.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [
@@ -6040,6 +6049,15 @@
       "client": "codex-local-coordinator",
       "at": 1793489044.6984115,
       "note": "Previously local work integrated in f658a17 by explicit owner request; 324 offline tests passed. Clear obsolete local-only hold; acceptance audit and independent review remain pending."
+    },
+    {
+      "operation_id": "74042d6ff10c4c9f81cf4f3651a203ec",
+      "revision": 67,
+      "action": "claim",
+      "task": "T101",
+      "client": "codex-local-coordinator",
+      "at": 1793489059.2846992,
+      "note": ""
     }
   ]
 }
