@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 52,
+  "revision": 53,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4486,18 +4486,12 @@
       "version": "0.1",
       "package": "A00",
       "lease": {
-        "client": "claude-t900",
-        "token": "9f5bfdd78fef4dbbbd614fb135773fdd",
-        "expires_at": 1793492976.6812248,
+        "client": "codex-reel-fix",
+        "token": "e961ef94004549dabaab9eb02533f123",
+        "expires_at": 1793484229.1875947,
         "files": [
-          ".github/workflows/avatar-test.yml",
           ".github/workflows/chat-reel.yml",
-          "requirements-reel-avatar.txt",
-          "requirements-reel-image.txt",
-          "scripts/chat_reel.py",
-          "scripts/reel_models.py",
           "scripts/reel_show.py",
-          "scripts/setup_reel_runtime.py",
           "tests/test_reel_show.py"
         ]
       },
@@ -4505,7 +4499,7 @@
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "Separater experimenteller Action-Einstieg auf ausdrücklichen Nutzerwunsch; keine allgemeine Avatar-/Studioplattform.",
-      "coordination_note": ""
+      "coordination_note": "Human authorized takeover from claude-t900 to codex-reel-fix to correct empty workflow request handling."
     },
     {
       "id": "T901",
@@ -5907,6 +5901,15 @@
       "client": "claude-t900",
       "at": 1793478576.6812248,
       "note": ""
+    },
+    {
+      "operation_id": "22594cab37b6401f91251f2ddce7349d",
+      "revision": 53,
+      "action": "claim",
+      "task": "T900",
+      "client": "codex-reel-fix",
+      "at": 1793480629.1875947,
+      "note": "Human authorized takeover from claude-t900 to codex-reel-fix to correct empty workflow request handling."
     }
   ]
 }
