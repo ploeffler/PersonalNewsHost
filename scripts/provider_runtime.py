@@ -6,11 +6,11 @@ from contextlib import closing
 from dataclasses import dataclass
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import sqlite3
 import time
-import unicodedata
 import uuid
 from typing import Protocol
 
@@ -37,7 +37,8 @@ TEXT_SCHEMA = {'type': 'object', 'required': ['text', 'source_ids'], 'additional
                               'source_ids': {'type': 'array', 'items': {'type': 'string'}}}}
 ARTIFACT_SCHEMA = {'type': 'object', 'required': ['status', 'fixture_id'], 'additionalProperties': False,
                    'properties': {'status': {'const': 'mock'}, 'fixture_id': {'type': 'string'}}}
-SECRET_PATTERN = re.compile(r'(?:\bsk-(?:ant-)?[A-Za-z0-9_-]{12,}|\bBearer\s+\S+|-----BEGIN .*PRIVATE KEY-----)')
+SECRET_PATTERN = re.compile(r'(?:\bsk-(?:proj-|svcacct-|ant-)?[A-Za-z0-9_-]{12,}|\bgh[pousr]_[A-Za-z0-9]{30,}|\bgithub_pat_[A-Za-z0-9_]{40,}|\bBearer\s+\S+|-----BEGIN .*PRIVATE KEY-----)')
+IDENT = re.compile(r'^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$')
 
 
 class ProviderError(RuntimeError): pass
@@ -75,6 +76,8 @@ def filtered_request(request, secret_values=()):
     for value in (request.task, request.model, request.prompt_version):
         if not isinstance(value, str) or not value or len(value) > 200:
             raise ValueError('Invalid request metadata')
+    if not IDENT.fullmatch(request.task):
+        raise ValueError('Task must be a bounded identifier')
     if not isinstance(request.payload, dict):
         raise ValueError('Provider payload must be an object')
     payload = {key: value for key, value in request.payload.items() if key in FIELDS[request.kind]}
@@ -143,13 +146,13 @@ class Runtime:
         if not isinstance(namespace, str) or not namespace or len(namespace) > 200:
             raise ValueError('Invalid cache namespace')
         self.budget, self.run_id = budget, run_id or uuid.uuid4().hex
-        self.audit_path = Path(audit_path) if audit_path else None
+        self.audit_path = Path(audit_path) if audit_path is not None else cache.path.parent / 'audit.jsonl'
         self.namespace = namespace
         self.cache, self.secret_values = cache, tuple(secret_values)
         self.providers = {}
 
     def register(self, provider):
-        if not isinstance(provider.id,str) or not provider.id or provider.id in self.providers or provider.kind not in KINDS:
+        if not isinstance(provider.id,str) or not IDENT.fullmatch(provider.id) or provider.id in self.providers or provider.kind not in KINDS:
             raise ValueError('Duplicate or invalid provider')
         if SECRET_PATTERN.search(provider.id) or any(secret and secret in provider.id for secret in self.secret_values):
             raise ValueError('Secret-like provider identifier')
@@ -195,10 +198,12 @@ class Runtime:
                                 raise ProviderQuota('Budget or quota reached') from None
                         if self.audit_path:
                             self.audit_path.parent.mkdir(parents=True, exist_ok=True)
-                            with self.audit_path.open('a', encoding='utf-8') as log:
+                            flags = os.O_WRONLY | os.O_CREAT | os.O_APPEND | os.O_NOFOLLOW
+                            descriptor = os.open(self.audit_path, flags, 0o600)
+                            with os.fdopen(descriptor, 'a', encoding='utf-8') as log:
+                                os.fchmod(log.fileno(), 0o600)
                                 log.write(canonical({'provider':ident,'kind':request.kind,'task':request.task,
                                     'bytes':len(canonical(request.payload).encode()),'at':time.time()})+'\n')
-                            self.audit_path.chmod(0o600)
                         result = provider.generate(request, timeout_s=timeout_s)
                         validate(result)
                         return result
