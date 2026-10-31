@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 63,
+  "revision": 64,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1140,7 +1140,7 @@
       "id": "T104",
       "epic": "E9",
       "title": "Datenabfluss-Filter und Protokoll",
-      "status": "in_progress",
+      "status": "todo",
       "depends_on": [
         "T100"
       ],
@@ -1157,14 +1157,15 @@
       "package": "A02",
       "lease": null,
       "review": null,
-      "local_work_pending": true,
+      "local_work_pending": false,
       "evidence": [
         "scripts/provider_runtime.py",
         "tests/test_provider_runtime.py",
-        "docs/guide/provider-runtime.md"
+        "docs/guide/provider-runtime.md",
+        "f658a1710efcfb77cdb6eb0bff33e7f2b2e73247"
       ],
       "implementation_note": "",
-      "coordination_note": "Uncommitted local 0.1 work must be reconciled before another client claims this task."
+      "coordination_note": "Previously local work integrated in f658a17 by explicit owner request; 324 offline tests passed. Clear obsolete local-only hold; acceptance audit and independent review remain pending."
     },
     {
       "id": "T110",
@@ -6009,6 +6010,15 @@
       "task": "T103",
       "client": "codex-local-coordinator",
       "at": 1793489037.3390155,
+      "note": "Previously local work integrated in f658a17 by explicit owner request; 324 offline tests passed. Clear obsolete local-only hold; acceptance audit and independent review remain pending."
+    },
+    {
+      "operation_id": "62a76f745aef44d18e97ba96a476129b",
+      "revision": 64,
+      "action": "reconcile",
+      "task": "T104",
+      "client": "codex-local-coordinator",
+      "at": 1793489039.5862677,
       "note": "Previously local work integrated in f658a17 by explicit owner request; 324 offline tests passed. Clear obsolete local-only hold; acceptance audit and independent review remain pending."
     }
   ]
