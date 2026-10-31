@@ -16,8 +16,8 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y espeak-ng ffmpeg
-          python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
-          python3 -m pip install --disable-pip-version-check 'diffusers>=0.30,<0.37' 'transformers>=4.40,<5' accelerate safetensors huggingface_hub pillow numpy librosa soundfile
+          python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
+          python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check 'diffusers>=0.30,<0.37' 'transformers>=4.40,<5' accelerate safetensors huggingface_hub pillow numpy librosa soundfile
       - name: Generate corrected face and composite quality preview
         shell: bash
         run: |

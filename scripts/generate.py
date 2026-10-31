@@ -328,7 +328,7 @@ def improve_news_image(path, settings):
 def search_commons_image(title):
     """Find a conservatively matched, public-domain/CC0 illustrative photo."""
     from urllib.parse import urlencode
-    words = re.findall(r"[^\\W_]{4,}", title, flags=re.UNICODE)
+    words = re.findall(r"[^\W_]{4,}", title, flags=re.UNICODE)
     stop = {"diese", "einer", "einem", "einen", "wegen", "heute", "nach", "über", "gegen", "mehr", "beim", "durch", "sowie", "neuen", "neuer", "nicht", "wird", "sind"}
     terms = [w for w in words if w.casefold() not in stop][:5]
     if len(terms) < 2:
@@ -605,7 +605,7 @@ def crosscheck_headline(title, original_url, max_results=2):
             "über", "nach", "beim", "sich", "dass", "wird", "sind",
             "auch", "mehr", "gegen", "wegen", "durch", "heute", "neue"}
     def terms(value):
-        return {w.casefold() for w in re.findall(r"[^\\W_]{4,}", value, re.UNICODE)
+        return {w.casefold() for w in re.findall(r"[^\W_]{4,}", value, re.UNICODE)
                 if w.casefold() not in stop}
     original_terms = terms(title)
     result = {"status": "unavailable", "matches": [], "scope": "headline/topic",
@@ -613,7 +613,7 @@ def crosscheck_headline(title, original_url, max_results=2):
     if len(original_terms) < 2:
         result["status"] = "insufficient_terms"
         return result
-    query = " ".join(list(dict.fromkeys(re.findall(r"[^\\W_]{4,}", title, re.UNICODE)))[:7])
+    query = " ".join(list(dict.fromkeys(re.findall(r"[^\W_]{4,}", title, re.UNICODE)))[:7])
     url = "https://news.google.com/rss/search?" + urlencode(
         {"q": query, "hl": "de", "gl": "AT", "ceid": "AT:de"})
     original_host = (urlparse(original_url).hostname or "").removeprefix("www.")
@@ -898,6 +898,12 @@ def main():
     section_ids = [section for group, section in section_plan]
     section_labels = {section["id"]: section["label"] for section in section_settings.get("sections", [])}
     selected = [group[0] for group in story_groups]
+    try:
+        from .configured_providers import analyze_entries
+    except ImportError:
+        from configured_providers import analyze_entries
+    analyze_entries(CONFIG, selected, ROOT / 'state' / 'providers', DOCS / 'provider-analysis.json',
+                    namespace='installation')
     now = dt.datetime.now(dt.timezone.utc)
     local_now = now.astimezone(ZoneInfo("Europe/Vienna"))
     timestamp = local_now.strftime("%d.%m.%Y um %H:%M Uhr")

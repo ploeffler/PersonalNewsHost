@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Install CPU benchmark dependency
-        run: python3 -m pip install --disable-pip-version-check numpy
+        run: python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check numpy
       - name: Inspect free runner and benchmark CPU
         run: |
           mkdir -p lip-sync-test

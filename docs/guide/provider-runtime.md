@@ -37,3 +37,27 @@ Feedtext bleibt Datenmaterial, auch wenn er wie eine Anweisung aussieht. Die Lau
 Timeouts werden als Deadline-Budget an den Adapter übergeben. Ein Adapter muss seine tatsächlichen I/O-Zugriffe begrenzen; die Laufzeit kann beliebigen blockierenden Python-Code nicht sicher abbrechen. Derzeit simulieren Mocks Timeoutfehler. Auch Rate-Limits, Backoff, dauerhafte Kostenreservierung, Providerkonfiguration aus config.json und Actions-Cachepersistenz sind noch nicht integriert. Kostenpflichtige Provider werden deshalb **vor jedem Aufruf und auch vor Cachezugriff abgewiesen**; es gibt keine stillschweigende Freischaltung durch Konfiguration.
 
 Diese Grundlage ist noch keine vollständige Abnahme von T100/T101/T103/T104/T130/T135.
+
+## Konfiguration und Produktionsanbindung in 0.1
+
+Die oben beschriebene anfängliche Offline-Grundlage wurde für den 0.1-Meilenstein erweitert. Maßgeblich sind diese Ergänzungen:
+
+- `providers`: Liste mit `id`, `kind`, `adapter: "mock"`, `enabled`, `secret_name`, `endpoint`, `model`, `timeout_s`, `retries`, `rate_limit` (Anfragen/Minute), `cost_model`, `priority` und `fallback_to`. `priority` ist gespeicherte Auswahlmetadaten; in 0.1 wird die Zuordnung explizit vorgenommen. `endpoint` wird von Mocks nicht aufgerufen.
+- `provider_tasks`: explizite Zuordnung der sieben Analyseaufgaben zu aktivierten Textanalyse-Mocks. Ohne Zuordnung verändert sich die bisherige Produktion nicht. Ergebnisse landen in `provider-analysis.json`, nie ungeprüft im freigegebenen Sprechertext.
+- `provider_budgets`: `allow_paid`, `monthly_budget_eur`, `per_run_budget_eur`, `unit_limits`. Kostenstandard 0. `cost_model.max_cost_eur` und `cost_model.units` simulieren konservative Kosten/Einheiten je Mockversuch. Das ist keine Behauptung echter Tokenmessung.
+- `state/providers/`: Cache, dauerhafte Kostenreservierungen und Auditlog. Die gemeinsame Produktionsnamespace `installation` verhindert getrennte Monatsbudgets je Show. Dateizugriff auf SQLite ist auf den Dienstbenutzer begrenzt.
+- Kosten werden vor jedem Versuch atomar reserviert. Fehlgeschlagene oder unklare Versuche bleiben angerechnet; gleiche erfolgreiche Cachetreffer erzeugen keine neue Reservierung. Quota/Budgetfehler aktivieren den expliziten Fallback.
+- Nur verifizierbare **Mockkosten** können nach ausdrücklichem Opt-in simuliert werden. Reale kostenpflichtige Adapter sind weiterhin nicht enthalten. Direkte Runtime-Erweiterungen sind vertrauenswürdiger Anwendungscode, keine Sandbox.
+- Der News-Workflow erhält konservative Nutzungsdaten im Jobreport und stellt den optionalen Providerzustand über Actions-Cache wieder her. Abgebrochene Runner können Cache-Sicherungen verlieren; deshalb keine Garantie einer externen Kostengrenze über Actions, solange echte Adapter nicht separat abgesichert sind.
+
+Beispiel (in eine vollständige Konfiguration einfügen):
+
+```json
+{
+  "providers": [{"id": "local-analysis", "kind": "text_analysis", "adapter": "mock", "enabled": true, "model": "deterministic"}],
+  "provider_tasks": {"summary": "local-analysis", "classification": "local-analysis"},
+  "provider_budgets": {"allow_paid": false, "monthly_budget_eur": 0, "per_run_budget_eur": 0, "unit_limits": {}}
+}
+```
+
+Unbekannte Provider, doppelte IDs, inkompatible oder zyklische Fallbacks und deaktivierte Analyserouten werden vor Produktion abgewiesen. Die Analyse-Schemata stehen in `scripts/analysis_tasks.py`. Leere Entitäten, `general`, Score 0 und `assessed: false` sind konservative Baselines, keine scheinbar gemessenen Modellurteile.

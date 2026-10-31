@@ -14,8 +14,8 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Install CPU-only PyTorch and model loader
         run: |
-          python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
-          python3 -m pip install --disable-pip-version-check huggingface_hub safetensors
+          python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
+          python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check huggingface_hub safetensors
       - name: Download actual MuseTalk 1.5 UNet weights and inspect on CPU
         id: load
         continue-on-error: true

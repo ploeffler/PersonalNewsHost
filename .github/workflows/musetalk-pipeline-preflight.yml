@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Install lightweight inspection tools
-        run: python3 -m pip install --disable-pip-version-check huggingface_hub pillow
+        run: python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check huggingface_hub pillow
       - name: Inspect presenter and official model dependencies
         shell: bash
         run: |

@@ -16,7 +16,7 @@ jobs:
         run: mkdir -p musetalk-test
       - name: Install CPU-only PyTorch
         run: |
-          python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch torchvision
+          python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch torchvision
       - name: Check real CPU tensor inference
         run: |
           python3 - <<'PY'

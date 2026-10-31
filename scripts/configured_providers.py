@@ -108,3 +108,67 @@ class ProviderRegistry:
 
 def configured_runtime(config, state, namespace='default'):
     return ProviderRegistry(config, state, namespace=namespace)
+
+
+"""Build explicit mock providers from configuration and run optional analyses."""
+import json
+import os
+from pathlib import Path
+import re
+
+try:
+    from .analysis_tasks import SCHEMAS
+    from .provider_budget import Budget, money
+    from .provider_runtime import Cache, MockProvider, Request, Runtime
+except ImportError:
+    from analysis_tasks import SCHEMAS
+    from provider_budget import Budget, money
+    from provider_runtime import Cache, MockProvider, Request, Runtime
+
+ID = re.compile(r'^[a-zA-Z0-9][a-zA-Z0-9_-]{0,63}$')
+
+
+def configured_analysis_runtime(config, state, namespace='default', run_id=None):
+    state = Path(state)
+    budgets = config.get('provider_budgets', {})
+    budget = Budget(state/'usage.sqlite', monthly_budget_eur=budgets.get('monthly_budget_eur',0) if budgets.get('allow_paid',False) else 0,
+                    per_run_budget_eur=budgets.get('per_run_budget_eur',0) if budgets.get('allow_paid',False) else 0,
+                    unit_limits=budgets.get('unit_limits',{}))
+    specs = {p['id']:p for p in config.get('providers',[]) if p.get('enabled',False)}
+    secrets = [os.environ[p['secret_name']] for p in specs.values() if p.get('secret_name') and os.environ.get(p['secret_name'])]
+    runtime = Runtime(Cache(state/'cache.sqlite'),budget=budget,namespace=namespace,run_id=run_id,audit_path=state/'audit.jsonl',secret_values=secrets)
+    for ident,p in specs.items():
+        if not ID.fullmatch(ident) or p.get('adapter','mock')!='mock': raise ValueError('Unsupported provider adapter')
+        provider = MockProvider(ident,p['kind'])
+        provider.max_cost_eur = money(p.get('cost_model',{}).get('max_cost_eur',0))
+        provider.paid = provider.max_cost_eur>0
+        # Only deterministic mock billing is verifiable in this release.
+        provider.billing_verified = True
+        provider.units = p.get('cost_model',{}).get('units',{})
+        provider.rate_limit = p.get('rate_limit',0)
+        runtime.register(provider)
+    return runtime, specs
+
+
+def analyze_entries(config, entries, state, output, namespace='default'):
+    tasks = config.get('provider_tasks',{})
+    if not tasks: return
+    runtime,specs = configured_analysis_runtime(config,state,namespace)
+    results = []
+    for entry in entries:
+        # Input consists only of public article data, not complete configuration.
+        title,text,url = entry[:3]
+        for task,ident in tasks.items():
+            spec = specs[ident]
+            if spec['kind']!='text_analysis' or task not in SCHEMAS: raise ValueError('Invalid analysis routing')
+            request = Request('text_analysis',task,spec.get('model','mock'),'analysis-v1',
+                              {'title':title,'text':text,'source_id':url,'language':config.get('language','de')})
+            result = runtime.run(ident,request,timeout_s=spec.get('timeout_s',30),retries=spec.get('retries',0),fallback_to=spec.get('fallback_to'))
+            results.append({'task':task,'source_id':url,**result})
+    usage=runtime.budget.summary(runtime.namespace,runtime.run_id)
+    Path(output).write_text(json.dumps({'results':results,'usage':usage},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    summary=os.environ.get('GITHUB_STEP_SUMMARY')
+    if summary:
+        with open(summary,'a',encoding='utf-8') as handle:
+            handle.write('\n### Provider usage (conservative mock reservations)\n')
+            handle.write('```json\n'+json.dumps(usage,ensure_ascii=False,indent=2)+'\n```\n')

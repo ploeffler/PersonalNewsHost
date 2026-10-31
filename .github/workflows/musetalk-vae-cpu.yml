@@ -14,8 +14,8 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Install CPU dependencies
         run: |
-          python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
-          python3 -m pip install --disable-pip-version-check 'diffusers>=0.30,<0.37' 'transformers>=4.40,<5' accelerate safetensors huggingface_hub pillow numpy
+          python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
+          python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check 'diffusers>=0.30,<0.37' 'transformers>=4.40,<5' accelerate safetensors huggingface_hub pillow numpy
       - name: Encode and decode real presenter face on CPU
         shell: bash
         run: |

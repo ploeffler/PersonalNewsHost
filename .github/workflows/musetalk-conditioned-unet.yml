@@ -16,8 +16,8 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y espeak-ng
-          python3 -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
-          python3 -m pip install --disable-pip-version-check 'transformers>=4.40,<5' diffusers huggingface_hub accelerate safetensors librosa soundfile numpy
+          python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
+          python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check 'transformers>=4.40,<5' diffusers huggingface_hub accelerate safetensors librosa soundfile numpy
       - name: Run real speech through Whisper and MuseTalk UNet
         shell: bash
         run: |

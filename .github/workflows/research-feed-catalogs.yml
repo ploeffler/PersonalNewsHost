@@ -97,7 +97,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install favicon image validation
-        run: python3 -m pip install --disable-pip-version-check pillow
+        run: python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check pillow
       - name: Test favicon refresh and packaging
         run: python3 -m unittest discover -s tests -p test_source_logos.py
       - name: Download research groups from this run

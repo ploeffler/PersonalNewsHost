@@ -99,6 +99,8 @@ class ShowTests(unittest.TestCase):
         config['article_enrichment'] = {'enabled': False}
         config['presenter_settings'] = {'scenes': {'intro_mode': 'static', 'show_headlines': False},
                                         'portrait': 'assets/missing.png', 'background': 'assets/missing.jpg'}
+        config['providers'] = [{'id':'analysis','kind':'text_analysis','enabled':True}]
+        config['provider_tasks'] = {'summary':'analysis','classification':'analysis'}
         config['shows'] = [{'id': 'one', 'title': 'First Show'}, {'id': 'two', 'title': 'Second Show'}]
         def audio(_text, destination):
             with wave.open(str(destination), 'wb') as wav:
@@ -115,6 +117,9 @@ class ShowTests(unittest.TestCase):
                     output = produce(config, ident, root / 'out')
                     self.assertGreater((output / 'latest.mp4').stat().st_size, 1000)
                     self.assertTrue((output / 'feed.xml').is_file())
+                    analysis=json.loads((output / 'provider-analysis.json').read_text())
+                    self.assertEqual(len(analysis['results']),2)
+                    if ident=='two':self.assertTrue(all(r['cached'] for r in analysis['results']))
             self.assertIn('First Show', (root / 'out/one/transcript.txt').read_text())
             self.assertIn('Second Show', (root / 'out/two/transcript.txt').read_text())
             self.assertFalse((root / 'docs').exists())

@@ -245,5 +245,12 @@
       },
       "priority": 100
     }
-  ]
+  ],
+  "provider_tasks": {},
+  "provider_budgets": {
+    "allow_paid": false,
+    "monthly_budget_eur": 0,
+    "per_run_budget_eur": 0,
+    "unit_limits": {}
+  }
 }

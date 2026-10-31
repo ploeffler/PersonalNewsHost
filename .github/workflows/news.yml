@@ -42,9 +42,15 @@ jobs:
           PY
       - name: Mask private configuration fields before further processing
         run: python3 scripts/security_checks.py --mask-config config.json
+      - name: Restore local provider state
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: state/providers/
+          key: pnh-provider-${{ github.ref_name }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: pnh-provider-${{ github.ref_name }}-
       - name: Validate production configuration
         run: |
-          python3 -m pip install --disable-pip-version-check -r requirements.txt
+          python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check -r requirements.txt
           python3 scripts/validate_config.py
       - name: Test provider configuration contracts
         run: python3 -m unittest discover -s tests
@@ -104,14 +110,14 @@ jobs:
           espeak-ng --version
       - name: Install neural speech engine
         if: steps.schedule.outputs.due == 'true'
-        run: python3 -m pip install --disable-pip-version-check --prefer-binary piper-tts Pillow
+        run: python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check --prefer-binary piper-tts Pillow
       - name: Smoke-test FFmpeg intro modes
         if: steps.schedule.outputs.due == 'true'
         run: python3 -m unittest discover -s tests -p test_video_smoke.py -v
       - name: Install offline AI image upscaler
         if: steps.schedule.outputs.due == 'true'
         run: |
-          python3 -m pip install --disable-pip-version-check --prefer-binary opencv-contrib-python-headless numpy
+          python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check --prefer-binary opencv-contrib-python-headless numpy
           mkdir -p models
           if [ ! -s models/FSRCNN_x2.pb ]; then
             curl -fL --retry 3 --connect-timeout 15 --max-time 90 \
@@ -217,3 +223,9 @@ jobs:
           path: docs/editorial-report.json
           if-no-files-found: ignore
           retention-days: 14
+      - name: Preserve provider cache and conservative mock ledger
+        if: always() && hashFiles('state/providers/**') != ''
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: state/providers/
+          key: pnh-provider-${{ github.ref_name }}-${{ github.run_id }}-${{ github.run_attempt }}

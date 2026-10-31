@@ -35,6 +35,11 @@ def validate_config(config):
     except ImportError:
         from configured_providers import validate_provider_specs
     validate_provider_specs(config.get('providers', []))
+    specs = config.get('providers', [])
+    by_id = {item['id']: item for item in specs}
+    for ident in config.get('provider_tasks',{}).values():
+        if ident not in by_id or not by_id[ident].get('enabled',False) or by_id[ident]['kind']!='text_analysis':
+            raise ValueError('Invalid or disabled analysis provider')
     if 'shows' in config:
         try:
             from .shows import resolve_shows

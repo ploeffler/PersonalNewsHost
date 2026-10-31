@@ -7,7 +7,8 @@ SHOW_FIELDS = {'title', 'feeds', 'max_items', 'max_description_chars', 'language
                'voice', 'presenter_settings', 'background', 'presenter', 'station_logo',
                'tts_engine', 'piper_length_scale', 'voice_pitch_semitones', 'editorial',
                'media', 'production', 'automation', 'target_duration_seconds',
-               'feed_categories', 'category_filter', 'source_policy'}
+               'feed_categories', 'category_filter', 'source_policy',
+               'providers', 'provider_tasks', 'provider_budgets'}
 
 
 def merge_objects(base, overrides):
