@@ -1,46 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261029T215149Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 29.10.2026 um 22:51 Uhr",
-      "created_at": 1793310709.032737,
-      "video": "broadcasts/20261029T215149Z.mp4",
-      "sources": [
-        {
-          "title": "Frankreich verweigert Martin Sellner die Einreise",
-          "url": "https://www.krone.at/4354651"
-        },
-        {
-          "title": "Frankreich verweigert Rechtsextremisten Sellner Einreise",
-          "url": "https://orf.at/stories/3446554/"
-        },
-        {
-          "title": "Frankreich verweigert Rechtsextremisten Martin Sellner die Einreise",
-          "url": "https://www.derstandard.at/story/3000000346684/frankreich-verweigert-rechtsextremisten-martin-sellner-die-einreise?ref=rss"
-        },
-        {
-          "title": "Sonnenzirkus in Graz: Wie ein Kinderbuch, das zum Leben erwacht",
-          "url": "https://www.kleinezeitung.at/artikel/41400127/sonnenzirkus-in-graz-wie-ein-kinderbuch-das-zum-leben-erwacht"
-        },
-        {
-          "title": "Katze gequält und getötet",
-          "url": ""
-        },
-        {
-          "title": "KI-Kosten brennen Milliardenloch in Amazon-Bilanz",
-          "url": "https://orf.at/stories/3446556/"
-        },
-        {
-          "title": "Nächster WAC-Trainer muss seinen Koffer packen",
-          "url": "https://www.krone.at/4354640"
-        }
-      ],
-      "transcript": "broadcasts/20261029T215149Z.txt",
-      "subtitles": "broadcasts/20261029T215149Z.vtt",
-      "subtitle_download": "broadcasts/20261029T215149Z.srt"
-    },
-    {
       "id": "20261031T175423Z",
       "kind": "broadcast",
       "title": "Nachrichten 31.10.2026 um 18:54 Uhr",
@@ -71,6 +31,38 @@
       "transcript": "broadcasts/20261031T175423Z.txt",
       "subtitles": "broadcasts/20261031T175423Z.vtt",
       "subtitle_download": "broadcasts/20261031T175423Z.srt"
+    },
+    {
+      "id": "20261031T223305Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 31.10.2026 um 23:33 Uhr",
+      "created_at": 1793485985.610361,
+      "video": "broadcasts/20261031T223305Z.mp4",
+      "sources": [
+        {
+          "title": "FBI sieht Nordkorea hinter Angriff auf Cryptobörse",
+          "url": "https://orf.at/stories/3446733/"
+        },
+        {
+          "title": "„Ich gehe in Salzburg von einer Topleistung aus“",
+          "url": "https://www.krone.at/4356760"
+        },
+        {
+          "title": "Lewis Hamilton holt vor Russell und Leclerc Pole Position in Mexiko",
+          "url": "https://www.derstandard.at/story/3000000346878/lewis-hamilton-holt-vor-russell-und-leclerc-pole-position-in-mexiko?ref=rss"
+        },
+        {
+          "title": "Zwei steirische Teams sind weiter im Höhenflug",
+          "url": "https://www.kleinezeitung.at/artikel/41408072/zwei-steirische-teams-sind-weiter-im-hoehenflug"
+        },
+        {
+          "title": "Schwerer Verkehrsunfall",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261031T223305Z.txt",
+      "subtitles": "broadcasts/20261031T223305Z.vtt",
+      "subtitle_download": "broadcasts/20261031T223305Z.srt"
     }
   ]
 }
