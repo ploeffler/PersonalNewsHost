@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 58,
+  "revision": 60,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4468,7 +4468,7 @@
       "id": "T900",
       "epic": "E32",
       "title": "Kostenlose einzelne KI-Reel-Sendung per Chat-Action",
-      "status": "review",
+      "status": "in_progress",
       "depends_on": [
         "T100"
       ],
@@ -4487,26 +4487,14 @@
       "package": "A00",
       "lease": {
         "client": "codex-reel-fix",
-        "token": "19eaa84e87604a6c9359d5ca7322a6e0",
-        "expires_at": 1793485466.901575,
+        "token": "0e6cbb8763ee4da699fadc487b63ffae",
+        "expires_at": 1793487941.2219737,
         "files": [
-          ".github/workflows/chat-reel.yml",
-          "scripts/reel_models.py",
-          "scripts/reel_show.py",
-          "tests/test_reel_show.py"
+          "scripts/security_checks.py",
+          "tests/test_security_checks.py"
         ]
       },
-      "review": {
-        "author": "codex-reel-fix",
-        "commit": "c3d5ccdcaa65722c8c71ec260f4b8ae8b1f5d227",
-        "checks": "12 Reel tests pass. New actual virtualenv subprocess test fails before fix and passes after fix. Full SadTalker model inference pending.",
-        "files": [
-          ".github/workflows/chat-reel.yml",
-          "scripts/reel_models.py",
-          "scripts/reel_show.py",
-          "tests/test_reel_show.py"
-        ]
-      },
+      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "Separater experimenteller Action-Einstieg auf ausdrücklichen Nutzerwunsch; keine allgemeine Avatar-/Studioplattform.",
@@ -5966,6 +5954,24 @@
       "client": "codex-reel-fix",
       "at": 1793481905.8413281,
       "note": "Independent review required; preserve venv Python symlink instead of resolving to base interpreter."
+    },
+    {
+      "operation_id": "990ad0287ba34e808ce9162ee77ecaa9",
+      "revision": 59,
+      "action": "release",
+      "task": "T900",
+      "client": "codex-reel-fix",
+      "at": 1793484341.219603,
+      "note": "Extend scope for Python 3.10 publication scanner fix"
+    },
+    {
+      "operation_id": "de6a112883a64c388d83b796c7546c55",
+      "revision": 60,
+      "action": "claim",
+      "task": "T900",
+      "client": "codex-reel-fix",
+      "at": 1793484341.2219737,
+      "note": ""
     }
   ]
 }
