@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 69,
+  "revision": 70,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1054,7 +1054,7 @@
       "id": "T101",
       "epic": "E9",
       "title": "Budget- und Quota-Waechter",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T100"
       ],
@@ -1082,7 +1082,17 @@
           "tests/test_task_client.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-local-coordinator",
+        "commit": "4cc4e6d21e1b6db173af5cb3685802e7894ced16",
+        "checks": "46 provider tests passed. Full offline run: 328 tests, sole failure obsolete local-work assertion; corrected and 10 coordination tests rerun OK. 6 release-gate tests OK; syntax, secrets, links and diff checks OK. See planning/reviews/T101-budget-integration.md. Independent review pending.",
+        "files": [
+          "planning/reviews/T101-budget-integration.md",
+          "scripts/configured_providers.py",
+          "tests/test_configured_providers.py",
+          "tests/test_task_client.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [
         "f658a1710efcfb77cdb6eb0bff33e7f2b2e73247"
@@ -6076,6 +6086,15 @@
       "task": "T101",
       "client": "codex-local-coordinator",
       "at": 1793489161.7859638,
+      "note": ""
+    },
+    {
+      "operation_id": "eb8cb276277b4ca0b24517c10eb54f33",
+      "revision": 70,
+      "action": "submit",
+      "task": "T101",
+      "client": "codex-local-coordinator",
+      "at": 1793489190.7974951,
       "note": ""
     }
   ]
