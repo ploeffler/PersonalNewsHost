@@ -18,6 +18,22 @@ def request():
 
 
 class ReelTests(unittest.TestCase):
+    def test_avatar_process_keeps_virtual_environment_interpreter(self):
+        import sys
+        from argparse import Namespace
+        from scripts import reel_models
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory);venv = root/'venv';source = root/'source';work = root/'work'
+            source.mkdir();work.mkdir()
+            subprocess.run([sys.executable, '-m', 'venv', '--without-pip', str(venv)], check=True)
+            (source/'inference.py').write_text(
+                "import sys\nfrom pathlib import Path\n"
+                "folder = Path(sys.argv[sys.argv.index('--result_dir')+1])\n"
+                "(folder/'result.mp4').write_text(sys.prefix)\n")
+            with patch.object(reel_models, 'download'):
+                reel_models.animate(Namespace(source=source, work=work, python=venv/'bin/python'))
+            self.assertEqual((work/'talking-host.mp4').read_text(), str(venv))
+
     def test_workflow_request_reports_missing_fields_before_network(self):
         with patch.object(reel, 'read_feed', side_effect=AssertionError('network')):
             for config in [{}, {'station_name': 'Station'}]:

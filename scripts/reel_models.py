@@ -52,7 +52,9 @@ def animate(args):
     result = args.work.resolve() / 'avatar'
     result.mkdir(exist_ok=True)
     env = dict(os.environ, OMP_NUM_THREADS='4', MKL_NUM_THREADS='4', CUDA_VISIBLE_DEVICES='')
-    subprocess.run([str(args.python.resolve()), str(source / 'inference.py'), '--cpu', '--still', '--size', '256',
+    # Resolving the venv's Python symlink selects the base interpreter and loses
+    # its installed packages. Make the path absolute without following symlinks.
+    subprocess.run([str(args.python.absolute()), str(source / 'inference.py'), '--cpu', '--still', '--size', '256',
                     '--batch_size', '1', '--preprocess', 'crop', '--source_image', str((args.work / 'host.png').resolve()),
                     '--driven_audio', str((args.work / 'speech.wav').resolve()), '--result_dir', str(result)],
                    cwd=source, env=env, check=True, timeout=2400)
