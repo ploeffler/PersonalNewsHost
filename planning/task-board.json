@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 94,
+  "revision": 95,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -2533,7 +2533,8 @@
       "instructions": [
         "Datenmigration, Sicherung und Wiederherstellung für beide Betriebswege definieren.",
         "Budget- und Jobzustände auch ohne Actions-Artefakte persistent speichern; konkurrierende Worker absichern.",
-        "Logrotation, Speichergrenzen, Fehlerdiagnose und Update-/Rollback-Verfahren ergänzen."
+        "Logrotation, Speichergrenzen, Fehlerdiagnose und Update-/Rollback-Verfahren ergänzen.",
+        "Gemeinsame Backup-/Migrationsschnittstelle für den automatischen Updater T196 bereitstellen; Code-, Daten- und Rollbackstände konsistent zuordnen."
       ],
       "acceptance": [
         "Backup und Wiederherstellung erhalten Archiv, Konfiguration und Verbrauchszähler.",
@@ -2558,12 +2559,14 @@
         "T051",
         "T184",
         "T185",
-        "T186"
+        "T186",
+        "T196"
       ],
       "instructions": [
         "Testmatrix für Linux-Repo, Docker CLI und Portainer durchführen; mindestens zwei Shows mit lokalen Testfeeds.",
         "Start/Stop, Host-/Container-Neustart, Zeitplanung, lokale Webausgabe, fehlende Secrets, Offline-Fallback, Update und Wiederherstellung prüfen.",
-        "Dokumentierte manuelle Portainer-Abnahme und automatisierbare Linux-/Container-Smoke-Tests klar unterscheiden."
+        "Dokumentierte manuelle Portainer-Abnahme und automatisierbare Linux-/Container-Smoke-Tests klar unterscheiden.",
+        "Automatische Originalversionsprüfung T195 und Installation T196 einschließlich Konfliktfällen und Rollback in die Betriebsabnahme aufnehmen."
       ],
       "acceptance": [
         "Abnahmebericht mit Befehlen, getesteten Versionen und Ergebnissen für alle drei Installationsvarianten liegt vor.",
@@ -4719,6 +4722,72 @@
       ],
       "implementation_note": "Dokumentationsanteil von T322 ausdrücklich vorgezogen. T102 und T320–T322 bleiben mit ihren vollständigen Umfängen offen.",
       "coordination_note": "Explicit owner request: die einrichtungsabläufe sind jetzt dran."
+    },
+    {
+      "id": "T195",
+      "epic": "E16",
+      "title": "Automatischer Versionscheck gegen das Originalrepository",
+      "status": "todo",
+      "depends_on": [
+        "T180"
+      ],
+      "instructions": [
+        "Originalrepository standardmäßig https://github.com/ploeffler/PersonalNewsHost festlegen; installierten Versions-Tag, Commit und gegebenenfalls Image-Digest persistent erfassen. Bei Forks Originalquelle und eigenen origin unterscheiden.",
+        "Beim Start und in einem konfigurierbaren Intervall nach neuen freigegebenen Release-Tags prüfen. Standardkanal stabile Versionen; Entwürfe, Vorabversionen, reine Branchbewegungen und Downgrades ausschließen. Entwicklungskanal nur ausdrücklich auswählen.",
+        "Versionen semantisch vergleichen, nicht lexikografisch; installierten Commit und Ziel-Commit unterscheiden. Umbenannte oder verschobene Tags erkennen und nicht stillschweigend als identischen Release übernehmen.",
+        "Aktuelle Version, verfügbare Zielversion, Änderungsnotizen, Kompatibilität, Prüfergebnis und Zeitpunkt der letzten erfolgreichen Prüfung über CLI bereitstellen; später dieselben Daten im geschützten Adminbereich verwenden.",
+        "Netzwerkfehler, Offlinebetrieb und API-Limits mit begrenztem Timeout/Backoff behandeln. Ein fehlgeschlagener Check verändert weder Installation noch Produktionsstatus; keine Tokens oder private Konfiguration übertragen."
+      ],
+      "acceptance": [
+        "Lokales Testrepository bzw. API-Fixtures prüfen gleiche, ältere, neuere, Vorab- und verschobene Tags einschließlich semantischer Sortierung.",
+        "Automatische wiederholte Prüfung funktioniert ohne Nutzeraktion; Offline-/Limitfehler erhalten den laufenden Betrieb und sind verständlich sichtbar.",
+        "Fork-Installationen vergleichen ausdrücklich mit dem Originalrepository; bloße Branchänderungen lösen im stabilen Kanal kein Update aus."
+      ],
+      "source": "user-chat-2026-11-01-upstream-updates",
+      "version": "0.2",
+      "package": "A20",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "Expliziter Nutzerauftrag: automatischer Versionscheck gegen das Originalrepository und Einspielen. Planung, noch keine Implementierung.",
+      "coordination_note": "Originalquelle ploeffler/PersonalNewsHost; Fork-origin nicht automatisch als Original behandeln."
+    },
+    {
+      "id": "T196",
+      "epic": "E16",
+      "title": "Automatisches Einspielen geprüfter Originalversionen mit Rollback",
+      "status": "todo",
+      "depends_on": [
+        "T195",
+        "T186",
+        "T183"
+      ],
+      "instructions": [
+        "Konfigurierbaren automatischen Updatebetrieb sowie manuelles Prüfen/Einspielen anbieten. Im automatischen Modus freigegebene kompatible Zielversionen ohne Freigabedialog pro Update installieren; Modus und Wartungsfenster bei Einrichtung festlegen.",
+        "Updates gegen gleichzeitige Produktion, Veröffentlichung und weitere Updater sperren; laufende Jobs geordnet beenden oder Update verschieben. Vorprüfung umfasst freien Speicher, Abhängigkeiten, Datenformat und Updateberechtigungen.",
+        "Linux-Repo: Zielversion in isolierter Umgebung vorbereiten und an ihren Release-Commit binden. Lokale Codeänderungen und eigene Fork-Commits erkennen, niemals durch reset/force überschreiben; Konflikt sichtbar melden und bestehende Installation weiterbetreiben.",
+        "Docker/Portainer: anhand der tatsächlich vorhandenen Distribution aktualisieren. Nur verifizierbare Version/Revision bzw. Image-Digest einsetzen; vorhandene Veröffentlichung in einer Registry nicht voraussetzen. Wenn nötig Image aus fixierter Originalrevision auf dem Zielhost bauen. Deployments dürfen keine Volumes löschen.",
+        "Konfiguration, Secrets, Zertifikate, Modelle, Archive, redaktionelle Daten und Verbrauchszähler vor Codewechsel sichern und erhalten. Migrationen vorab prüfen; bei inkompatiblen oder irreversiblen Schritten automatische Installation zurückstellen und Handlungsbedarf melden.",
+        "Erst nach erfolgreicher Migration und Gesundheits-/Produktionsprüfung auf die neue Version umschalten. Bei Fehlern die vorherige lauffähige Version und den dazu passenden Datenstand wiederherstellen; keine erfolgreiche Updateversion vorzeitig speichern.",
+        "Updater im passenden Host-/Deploymentkontext mit begrenzten Rechten betreiben; öffentliche Nachrichtenoberfläche erhält keine Updatefunktion. Verlauf mit Versionen, Ergebnis und Fehlerklasse ohne Secrets protokollieren.",
+        "Linux-, Compose- und Portainer-Abläufe einschließlich automatischem Modus, Wartungsfenster, Backup, Rollback und Verhalten bei eigenen Änderungen dokumentieren. Provider-/Modellupdates getrennt von Anwendungsupdates behandeln."
+      ],
+      "acceptance": [
+        "Automatischer End-to-End-Test installiert eine neuere freigegebene Version aus einem Test-Originalrepository ohne Nutzereingabe und erhält Konfiguration, Secrets, Zertifikate, Archive und Budgets.",
+        "Fehlgeschlagene Vorprüfung, Migration oder Gesundheitsprüfung lässt eine nutzbare vorherige Installation und einen konsistenten Datenstand zurück.",
+        "Lokale Änderungen, aktive Produktion, konkurrierende Updates, fehlender Speicher und offline verfügbares Repository werden ohne Datenverlust behandelt.",
+        "Linux- und Container-Smoke nachgewiesen; tatsächliche Portainer-Abnahme separat dokumentiert. Keine erfundene Registryverfügbarkeit oder pauschale Kompatibilitätsgarantie."
+      ],
+      "source": "user-chat-2026-11-01-upstream-updates",
+      "version": "0.2",
+      "package": "A20",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "Expliziter Nutzerauftrag: automatischer Versionscheck gegen das Originalrepository und Einspielen. Planung, noch keine Implementierung.",
+      "coordination_note": "Originalquelle ploeffler/PersonalNewsHost; Fork-origin nicht automatisch als Original behandeln."
     }
   ],
   "packages": [
@@ -4931,7 +5000,9 @@
       "title": "Persistenz und Betriebsabnahme",
       "tasks": [
         "T186",
-        "T187"
+        "T187",
+        "T195",
+        "T196"
       ]
     },
     {
@@ -5198,7 +5269,9 @@
         "T191",
         "T192",
         "T260",
-        "T323"
+        "T323",
+        "T195",
+        "T196"
       ],
       "acceptance": "Linux- und Docker-Basis, HTTPS 443/8444, Login und persistentes Archiv sind technisch geprüft. Noch kein vollständiger neuer Produktionsbetrieb."
     },
@@ -5412,6 +5485,7 @@
       "T150",
       "T163",
       "T181",
+      "T195",
       "T200",
       "T210",
       "T323",
@@ -5500,12 +5574,13 @@
       "T188"
     ],
     [
-      "T187",
       "T189",
+      "T196",
       "T203",
       "T260"
     ],
     [
+      "T187",
       "T190",
       "T191",
       "T204",
@@ -6412,6 +6487,15 @@
       "client": "human-ploeffler",
       "at": 1793520381.7872412,
       "note": "Repository owner explicitly approved all pending changes with alle änderungen freigeben in this conversation. Recorded on behalf of human-ploeffler, not an independent AI review. Submitted files unchanged since eb63524. 358 local offline tests passed; exact implementation Foundation CI 41287276375 succeeded including lint, OS-isolated regression, video rendering and JavaScript contracts. Staged render, story/source/timeline/duration/audio validation, old edition preservation and rename rollback accepted. Single-producer, temporary double-storage and hard-crash recovery limitations remain as documented in planning/reviews/T051-production-quality.md. No version release implied."
+    },
+    {
+      "operation_id": "1bedea4a7fc7449e8c4dfb431244a021",
+      "revision": 95,
+      "action": "plan-upstream-updates",
+      "task": "T195,T196",
+      "client": "codex-local-coordinator",
+      "at": 1793521489.1538506,
+      "note": "Explicit owner request: automatic version check against original repository and update installation. Added to 0.2, linked persistence and deployment acceptance. No updater executed."
     }
   ]
 }

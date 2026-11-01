@@ -92,7 +92,7 @@
     "uncommitted_local_0_1_work": "Marked local_work_pending; reconcile deliberately after integration before another client claims it."
   },
   "inventory": {
-    "task_count": 147,
+    "task_count": 149,
     "package_count": 45,
     "release_count": 10
   },
@@ -113,5 +113,28 @@
     "claims": "Client claims, leases, file scopes and reviews remain in task-board.json, not issue assignment.",
     "project_board": "No GitHub Project required initially; issues plus milestones provide the initial view.",
     "publication": "Ordinary task mirror updates do not generate diagrams or publish wiki; main is never changed."
+  },
+  "updates": {
+    "original_repository": "https://github.com/ploeffler/PersonalNewsHost",
+    "version": "0.2",
+    "tasks": [
+      "T195",
+      "T196"
+    ],
+    "stable_source": "released_version_tags",
+    "automatic_check": true,
+    "automatic_installation": "configurable_mode_with_maintenance_window",
+    "preserve": [
+      "configuration",
+      "secrets",
+      "certificates",
+      "models",
+      "archives",
+      "editorial_state",
+      "provider_usage"
+    ],
+    "local_code_changes": "detect_and_keep; no forced overwrite",
+    "rollback_required": true,
+    "implementation_status": "planned"
   }
 }
