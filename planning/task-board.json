@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 99,
+  "revision": 100,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4727,7 +4727,7 @@
       "id": "T195",
       "epic": "E16",
       "title": "Alle Fork-Branches automatisch mit dem Originalrepository vergleichen",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T180"
       ],
@@ -4746,7 +4746,17 @@
       "source": "user-chat-2026-11-01-upstream-updates",
       "version": "0.2",
       "package": "A20",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "d079a661d5d746dd9b8fc8e0e21817bc",
+        "expires_at": 1793526434.6273794,
+        "files": [
+          "docs/guide/fork-sync.md",
+          "planning/reviews/T195-fork-check.md",
+          "scripts/fork_check.py",
+          "tests/test_fork_check.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [
@@ -6542,6 +6552,15 @@
       "client": "codex-local-coordinator",
       "at": 1793522831.8615458,
       "note": "Owner explicitly requests implementation of checker and synchronization as a paired feature. Both depend on the established runtime contract; T196 consumes the committed checker API and is integration-tested with it. Both require separate review; no T195 approval inferred."
+    },
+    {
+      "operation_id": "9ba509415be84793a911c8fb49467f45",
+      "revision": 100,
+      "action": "claim",
+      "task": "T195",
+      "client": "codex-local-coordinator",
+      "at": 1793522834.6273794,
+      "note": ""
     }
   ]
 }
