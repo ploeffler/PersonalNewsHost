@@ -151,7 +151,8 @@
     "activation": "editable_draft_then_explicit_adoption",
     "preview_generation": "automatic_on_adoption_with_configured_provider_and_budget",
     "scope": "shared_sender_default_for_shows_reels_short_updates",
-    "status": "planned",
-    "implementation_task": "T326"
+    "status": "local_editor_implemented_pending_review",
+    "implementation_task": "T326",
+    "integration_status": "shared_admin_and_production_integration_remain_in_T216_T217_T218"
   }
 }
