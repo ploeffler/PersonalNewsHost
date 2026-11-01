@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 100,
+  "revision": 101,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4769,7 +4769,7 @@
       "id": "T196",
       "epic": "E16",
       "title": "Zurückliegende Fork-Branches mit Originalbranches synchronisieren",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T180"
       ],
@@ -4790,7 +4790,17 @@
       "source": "user-chat-2026-11-01-upstream-updates",
       "version": "0.2",
       "package": "A20",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "12b9ce853c3a4bacb43825ff6584d116",
+        "expires_at": 1793526437.0549374,
+        "files": [
+          ".github/workflows/fork-sync.yml",
+          "planning/reviews/T196-fork-sync.md",
+          "scripts/fork_sync.py",
+          "tests/test_fork_sync.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -6560,6 +6570,15 @@
       "task": "T195",
       "client": "codex-local-coordinator",
       "at": 1793522834.6273794,
+      "note": ""
+    },
+    {
+      "operation_id": "4d7ead7cdda64c9e8eb06cfb79a301b5",
+      "revision": 101,
+      "action": "claim",
+      "task": "T196",
+      "client": "codex-local-coordinator",
+      "at": 1793522837.0549374,
       "note": ""
     }
   ]
