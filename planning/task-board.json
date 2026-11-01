@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 110,
+  "revision": 111,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4746,7 +4746,7 @@
       "id": "T195",
       "epic": "E16",
       "title": "Alle Fork-Branches automatisch mit dem Originalrepository vergleichen",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T180"
       ],
@@ -4765,19 +4765,7 @@
       "source": "user-chat-2026-11-01-upstream-updates",
       "version": "0.2",
       "package": "A20",
-      "lease": {
-        "client": "codex-local-coordinator",
-        "token": "d8305100716a44a0b939d02a4b49f260",
-        "expires_at": 1793527930.5255728,
-        "files": [
-          "docs/guide/fork-sync.md",
-          "docs/guide/index.md",
-          "docs/guide/updates.md",
-          "planning/reviews/T195-fork-check.md",
-          "scripts/fork_check.py",
-          "tests/test_fork_check.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-local-coordinator",
         "commit": "cced3e339fc61517907f0fcf229f0fe17178d836",
@@ -4789,11 +4777,14 @@
           "planning/reviews/T195-fork-check.md",
           "scripts/fork_check.py",
           "tests/test_fork_check.py"
-        ]
+        ],
+        "reviewer": "human-ploeffler",
+        "decision": "Explizite menschliche Freigabe durch ploeffler im Chat: «freigabe», bezogen auf T181, T195 und T196. Durch Codex im Auftrag des Owners eingetragen; kein unabhängiger KI-Review. Vorhandene Test- und CI-Nachweise akzeptiert. Kein Versionsrelease und keine Freigabe für main oder Aktivierung in fremden Forks."
       },
       "local_work_pending": false,
       "evidence": [
-        "13d022dd0ccdc5423cf024da16fa150cd75366c9: release-only checker; not the requested all-branch fork comparison"
+        "cced3e339fc61517907f0fcf229f0fe17178d836",
+        "Final 396 offline tests including 24 fork tests and rendering passed. Exact head Foundation CI SUCCESS https://github.com/ploeffler/PersonalNewsHost/actions/runs/41291933887 including Ruff, network-isolated suite and JS. Read-only QSSTV graph and slash-branch API smoke passed. Branch writes and issue notifications simulated, not executed against real repositories. All branches, source/parent detection, explicit work-branch mapping, pagination, notice deduplication and safe transport verified. Daily workflow requires default-branch Actions/Issues setup."
       ],
       "implementation_note": "Nutzer präzisiert Fork-/Branch-Abgleich wie GitHub ahead/behind. Bestehender Release-Checker 13d022d bleibt erhalten, erfüllt diesen korrigierten Auftrag jedoch nicht.",
       "coordination_note": "Vorheriger Review wegen konkretisierter Anforderung zurückgenommen; ursprünglicher Prüfnachweis bleibt im Planungsereignis erhalten. Kein unabhängiger Review oder Abschluss behauptet."
@@ -6703,6 +6694,15 @@
       "task": "T181",
       "client": "human-ploeffler",
       "at": 1793532879.9081345,
+      "note": "Explizite menschliche Freigabe durch ploeffler im Chat: «freigabe», bezogen auf T181, T195 und T196. Durch Codex im Auftrag des Owners eingetragen; kein unabhängiger KI-Review. Vorhandene Test- und CI-Nachweise akzeptiert. Kein Versionsrelease und keine Freigabe für main oder Aktivierung in fremden Forks."
+    },
+    {
+      "operation_id": "66025e1ed85b4d9f8988c16b3bd91ef3",
+      "revision": 111,
+      "action": "complete",
+      "task": "T195",
+      "client": "human-ploeffler",
+      "at": 1793532890.2802458,
       "note": "Explizite menschliche Freigabe durch ploeffler im Chat: «freigabe», bezogen auf T181, T195 und T196. Durch Codex im Auftrag des Owners eingetragen; kein unabhängiger KI-Review. Vorhandene Test- und CI-Nachweise akzeptiert. Kein Versionsrelease und keine Freigabe für main oder Aktivierung in fremden Forks."
     }
   ]
