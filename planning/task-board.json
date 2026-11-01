@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 96,
+  "revision": 97,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4727,7 +4727,7 @@
       "id": "T195",
       "epic": "E16",
       "title": "Automatischer Versionscheck gegen das Originalrepository",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T180"
       ],
@@ -4758,7 +4758,18 @@
           "tests/test_update_check.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-local-coordinator",
+        "commit": "13d022dd0ccdc5423cf024da16fa150cd75366c9",
+        "checks": "372 offline tests pass including videos; 14 checker tests and 8 runtime tests pass; syntax/secret/link/diff checks pass. Public live metadata check found confirmed v0.1 and offered no downgrade from 0.2 development. Initial FFmpeg error passed 10-show targeted rerun and entire rerun. Watch mode checks on startup/interval; service installation deferred to T182 and automatic installation to T196. See planning/reviews/T195-update-check.md.",
+        "files": [
+          "docs/guide/updates.md",
+          "planning/reviews/T195-update-check.md",
+          "scripts/local_runtime.py",
+          "scripts/update_check.py",
+          "tests/test_update_check.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "Expliziter Nutzerauftrag: automatischer Versionscheck gegen das Originalrepository und Einspielen. Planung, noch keine Implementierung.",
@@ -6515,6 +6526,15 @@
       "task": "T195",
       "client": "codex-local-coordinator",
       "at": 1793521609.4394906,
+      "note": ""
+    },
+    {
+      "operation_id": "cd133dee853b4b07ac504e8fc1a51e2c",
+      "revision": 97,
+      "action": "submit",
+      "task": "T195",
+      "client": "codex-local-coordinator",
+      "at": 1793522023.0239434,
       "note": ""
     }
   ]
