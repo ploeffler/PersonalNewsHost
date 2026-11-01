@@ -1,7 +1,7 @@
 {
-  "version": null,
-  "completed": false,
-  "tests_passed": false,
+  "version": "0.1",
+  "completed": true,
+  "tests_passed": true,
   "branch": "Full-featured-Newsoutlet",
-  "note": "Documentation consolidation, diagram rendering and wiki publication only after confirmed completion and tests of a subversion. Set version to VERSION and create the matching v-version tag; reset flags when starting the next subversion."
+  "note": "All 17 version 0.1 tasks completed and reviewed. 344 offline tests passed; Foundation CI 41284412285 on 2fe1041 passed Ruff, configuration, OS-isolated regression and JavaScript contracts. Release scope and limitations: docs/guide/abnahme-0.1.md. No real paid adapters, general LLM protection or audiovisual quality certification claimed."
 }

@@ -64,7 +64,9 @@
       "1.0"
     ],
     "active": "0.1",
-    "completed": [],
+    "completed": [
+      "0.1"
+    ],
     "all_tasks_reviewed_before_completion": true,
     "integration_tests_required": true,
     "code_publish": "Push tested version milestones; explicitly requested independent changes may be pushed separately. Never call an unfinished version complete.",
