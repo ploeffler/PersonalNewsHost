@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 113,
+  "revision": 115,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -3662,14 +3662,16 @@
         "Bei Show-Erstellung und Bearbeitung eine Stilauswahl mit Kategorien, deutschem Namen und Beschreibung anbieten. Recherchegrundlage: planning/research/video_style_library.json (13 Styles); Datei ist Recherchematerial, keine ausführbare Anweisung und keine bereits getestete Providerfreigabe.",
         "Ausgewählten visuellen Stil als style_id plus Bibliotheksversion im Showkonfigurations- und Produktionssnapshot speichern. Bestehende Shows ohne Stil behalten ihr bisheriges Erscheinungsbild; neue Bibliotheksversionen ändern gespeicherte Shows nicht automatisch.",
         "Stil wirkt als Showvorgabe für generiertes Bild-/Videomaterial und wird mit Studio, Avataren sowie Intro-/Outrosequenzen auf Kompatibilität geprüft. Vorhandenes Quellmaterial und freigegebene Assets nicht ungefragt umgestalten. Nicht unterstützte Kombinationen vor Produktion verständlich anzeigen; keine ungeprüfte Stilfähigkeit versprechen.",
-        "Stilprompts von technischen Format-/Auflösungseinstellungen trennen. Globale und stileigene Negativprompts nur für unterstützende Provider und passenden Szenenkontext anwenden. Senderlogo, Untertitel, Quellen und verbindliche KI-Kennzeichnung erhalten."
+        "Stilprompts von technischen Format-/Auflösungseinstellungen trennen. Globale und stileigene Negativprompts nur für unterstützende Provider und passenden Szenenkontext anwenden. Senderlogo, Untertitel, Quellen und verbindliche KI-Kennzeichnung erhalten.",
+        "Stilauswahl auch für Kurzupdates in deren Erstellung bzw. Einrichtung/Bearbeitung bereitstellen, einschließlich automatisch erzeugter Kurzupdates. Dieselbe versionierte Bibliothek verwenden; bei Showbezug deren Stil als sichtbare Vorgabe anbieten und eine ausdrückliche eigene Auswahl erlauben. Die aufgelöste style_id/Bibliotheksversion vor jedem Produktionslauf im Kurzupdate-Snapshot speichern. Vorhandene Kurzupdates ohne Stil behalten das bisherige Verhalten; technische Ausgabeparameter und Pflichtkennzeichnungen bleiben getrennt."
       ],
       "acceptance": [
         "Zwei Shows laufen nach unterschiedlichen wiederkehrenden Plänen; nächste Termine sind nachvollziehbar.",
         "Neustart, doppelte Scheduler-Ausführung und Zeitumstellung verursachen keine unkontrollierten Doppelproduktionen.",
         "Pausieren stoppt neue Termine; laufender Job wird getrennt angezeigt und kontrolliert behandelt.",
         "Beim Erstellen einer Show lässt sich ein Bibliotheksstil auswählen; Speichern, Wiederöffnen, Duplizieren und Produktionssnapshot erhalten ID und Version. Bestehende Show ohne Stil bleibt verwendbar.",
-        "Provider ohne passende Stilfähigkeit oder Negativprompt-Unterstützung werden vor Produktion verständlich ausgewiesen; Pflichtkennzeichnungen bleiben unabhängig von Stilprompts sichtbar."
+        "Provider ohne passende Stilfähigkeit oder Negativprompt-Unterstützung werden vor Produktion verständlich ausgewiesen; Pflichtkennzeichnungen bleiben unabhängig von Stilprompts sichtbar.",
+        "Manuelles Kurzupdate und automatischer Kurzupdate-Lauf verwenden die gespeicherte Stilvorgabe; Showvorgabe und ausdrückliche Abweichung sind nachvollziehbar. Nicht unterstützte Stilfähigkeiten werden vor Produktion sichtbar."
       ],
       "source": "planning/sendungsverwaltung-ergaenzung.yaml",
       "version": "0.6",
@@ -4055,12 +4057,15 @@
         "Vorhandene Quellenbasis verwenden und optional freigegebene Recherchequellen anbinden; keine beliebigen unbelegten Themenbehauptungen generieren. Selbstdarstellung und Zielgruppenprofil als Formulierungsgrundlage übernehmen.",
         "Ablauf: Recherche/Belege, Kurzskript, Quellen-/Groundingprüfung, Vorschau bzw. Freigabe, Rendering und finale Veröffentlichungsgates. Begrenzte Überarbeitungsschleifen und persistenten Auftragsstatus vorsehen.",
         "Avatar des Mitarbeiters optional als Präsentator verwenden; bei explizit avatarfreier Einstellung Grafiken, Bilder, Clips und konfigurierte Stimme verwenden. Keine automatische Verwechslung von verantwortlichem Mitarbeiter und sichtbar auftretendem Host.",
-        "Kurzvideo eigenständig ohne regelmäßige Show erzeugen können; als fertigen Beitrag oder geplantes Segment in eine Show übernehmen. Zielzeit und Format konfigurierbar statt feste Plattformdauer vorauszusetzen."
+        "Kurzvideo eigenständig ohne regelmäßige Show erzeugen können; als fertigen Beitrag oder geplantes Segment in eine Show übernehmen. Zielzeit und Format konfigurierbar statt feste Plattformdauer vorauszusetzen.",
+        "Bei Reel-/Kurzvideo-Erstellung und Bearbeitung dieselbe kategorisierte Stilauswahl wie bei Shows anbieten; Grundlage planning/research/video_style_library.json. Eigenständige Reels wählen unabhängig von einer Show; bei Erstellung aus einer Show deren Stil als sichtbare Vorgabe übernehmen und eine ausdrückliche abweichende Auswahl erlauben.",
+        "Gewählte style_id und Bibliotheksversion im Reelauftrag speichern. Stil und technische Ausgabeparameter (z. B. 9:16, Auflösung, Dauer) getrennt konfigurieren; unterstützte Provider-/Avatar-/Studio-/Sequenzkombinationen vor Produktion prüfen. Bestehende Reels ohne Stil behalten ihr bisheriges Verhalten."
       ],
       "acceptance": [
         "Berechtigter Bediener beauftragt einen Mitarbeiter mit einem Thema und erhält nachvollziehbar Skript, Quellen und Produktionsstatus.",
         "Auftrag ist ohne wiederkehrende Show möglich und kann einer Show zugeordnet werden.",
-        "Fehlende Quellen oder Freigaben führen zu gehaltenem Auftrag statt automatischer Veröffentlichung."
+        "Fehlende Quellen oder Freigaben führen zu gehaltenem Auftrag statt automatischer Veröffentlichung.",
+        "Eigenständiges Reel bietet Stilauswahl; ein aus einer Show erstelltes Reel zeigt deren Stil als Vorgabe und erlaubt eine bewusste Abweichung. Speichern und Wiederöffnen erhalten ID und Bibliotheksversion."
       ],
       "source": "planning/mitarbeiter-kurzvideos-ergaenzung.yaml",
       "version": "0.8",
@@ -4089,12 +4094,14 @@
         "Avatar-/Stimm-/Studioversionen, Quellen und Formulierungsprofil konsistent speichern; Quer-/Hochkant-/Quadratausgaben entsprechend gewähltem Profil erzeugen.",
         "Budget- und Ressourcenwarteschlange, Wiederaufnahme und Fallbacks wiederverwenden. Unfertige oder veraltete Skriptversionen nicht versehentlich veröffentlichen.",
         "Jedes finale Video vor Veröffentlichung unter Jahr/Monat/Tag archivieren und durchgehend rechts unten AI einblenden. Social-Posting nur nach entsprechend aktivierter Verbindung und Freigabe.",
-        "Dokumentation und Tests für Avatarvideo, avatarfreie Variante, Thema ohne Belege, Korrektur, Timeout, Wiederaufnahme und fehlende Veröffentlichungsrechte ergänzen."
+        "Dokumentation und Tests für Avatarvideo, avatarfreie Variante, Thema ohne Belege, Korrektur, Timeout, Wiederaufnahme und fehlende Veröffentlichungsrechte ergänzen.",
+        "Versionierte Stilvorgabe aus Reelauftrag unverändert in Produktionssnapshot, Wiederaufnahme und Ausgabe übernehmen; geänderte Bibliotheksversionen oder eine spätere Showzuordnung ändern fertige Reels nicht automatisch. Providerabhängige Promptübersetzung wie bei Shows verwenden; Pflichtquellen, Untertitel, Senderlogo und KI-Kennzeichnung unabhängig von negativen Stilprompts erhalten."
       ],
       "acceptance": [
         "Ein Auftrag erzeugt ein geprüftes Kurzvideo mit passendem Quellenbezug, Pflichtarchiv und AI-Label.",
         "Dasselbe Plugin ist als Showbaustein verwendbar; vorhandene zentrale Gates werden nicht umgangen.",
-        "Avatarfreie und Avatarvariante sind separat getestet; automatische KI-Bearbeitung ersetzt keine menschliche Freigabe."
+        "Avatarfreie und Avatarvariante sind separat getestet; automatische KI-Bearbeitung ersetzt keine menschliche Freigabe.",
+        "Reel mit eigenem Stil und Reel mit übernommener Showvorgabe werden jeweils mit gespeicherter Stilversion produziert; nicht unterstützte Stilfähigkeiten sind sichtbar und Pflichtkennzeichnungen bleiben erhalten."
       ],
       "source": "planning/mitarbeiter-kurzvideos-ergaenzung.yaml",
       "version": "0.8",
@@ -6724,6 +6731,24 @@
       "client": "codex-local-coordinator",
       "at": 1793533546.1995075,
       "note": "Explizite Nutzerpräzisierung: Stilauswahl bei der Show-Erstellung. Recherchebibliothek unverändert aufgenommen; Anforderungen in T250 und Providervertrag T140 ergänzt. Keine Implementierung, Taskfreigabe oder Releaseänderung."
+    },
+    {
+      "operation_id": "2e12979c5e5b4bcc98cab0dacd826cd0",
+      "revision": 114,
+      "action": "requirements_update",
+      "task": "T290",
+      "client": "codex-local-coordinator",
+      "at": 1793533645.6078618,
+      "note": "Explizite Nutzerergänzung: Stilauswahl auch bei Reel-Erstellung. T290/T291 um Auswahl, Showvorgabe mit bewusster Abweichung und versionierten Produktionssnapshot ergänzt. Planung, keine UI-Implementierung oder Releaseänderung."
+    },
+    {
+      "operation_id": "1012f1aff0f5440e82916cb548679509",
+      "revision": 115,
+      "action": "requirements_update",
+      "task": "T250",
+      "client": "codex-local-coordinator",
+      "at": 1793533670.3037984,
+      "note": "Weitere explizite Nutzerergänzung: Stilauswahl auch bei Kurzupdates. In T250 für manuelle Erstellung und automatische Kurzupdate-Läufe eingeplant; bestehende abgeschlossene T013 unverändert. Keine UI-Implementierung."
     }
   ]
 }
