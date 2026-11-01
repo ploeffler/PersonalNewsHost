@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 78,
+  "revision": 79,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1639,7 +1639,7 @@
       "id": "T130",
       "epic": "E12",
       "title": "Analyse-Aufgaben und Ausgabeschemata",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T100"
       ],
@@ -1662,7 +1662,15 @@
           "tests/test_analysis_contracts.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-local-coordinator",
+        "commit": "92236316278ed0090aa2afd730e59c8577fc900f",
+        "checks": "344 offline tests passed including video rendering, syntax, secret scan and local links; 5 analysis-contract and 3 hostile-feed tests pass. All seven task schemas reject invalid outputs and support retries/fallback. See planning/reviews/T130-analysis-contracts.md.",
+        "files": [
+          "planning/reviews/T130-analysis-contracts.md",
+          "tests/test_analysis_contracts.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [
         "scripts/provider_runtime.py",
@@ -6201,6 +6209,15 @@
       "task": "T135",
       "client": "codex-local-coordinator",
       "at": 1793515321.4839187,
+      "note": ""
+    },
+    {
+      "operation_id": "cf90c18117d14aa3a121ba05ea537090",
+      "revision": 79,
+      "action": "submit",
+      "task": "T130",
+      "client": "codex-local-coordinator",
+      "at": 1793515456.8686817,
       "note": ""
     }
   ]
