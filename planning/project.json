@@ -92,7 +92,7 @@
     "uncommitted_local_0_1_work": "Marked local_work_pending; reconcile deliberately after integration before another client claims it."
   },
   "inventory": {
-    "task_count": 150,
+    "task_count": 153,
     "package_count": 45,
     "release_count": 10
   },
@@ -132,5 +132,25 @@
     "local_checkout": "separate from remote fork synchronization; preserve uncommitted files and user data",
     "release_checker": "13d022d remains implemented separately; not fulfillment of this branch-sync request",
     "implementation_status": "requirements corrected; branch checker and synchronization not implemented"
+  },
+  "sender_corporate_identity": {
+    "tasks": [
+      "T216",
+      "T217",
+      "T218"
+    ],
+    "entry_points": [
+      "first_run_setup",
+      "sender_page_style_button"
+    ],
+    "sources": [
+      "outlet_setup_information",
+      "manual_definition",
+      "optional_public_website_url"
+    ],
+    "activation": "editable_draft_then_explicit_adoption",
+    "preview_generation": "automatic_on_adoption_with_configured_provider_and_budget",
+    "scope": "shared_sender_default_for_shows_reels_short_updates",
+    "status": "planned"
   }
 }

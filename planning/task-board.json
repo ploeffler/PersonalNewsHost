@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 125,
+  "revision": 126,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -2782,7 +2782,8 @@
         "Admin-Zugang und Hash bleiben aus Laufzeitvariablen gemäß T188; Wizard darf Zugang nicht scheinbar ändern, wenn Umgebungsvariablen maßgeblich sind. Hinweise zum aktuellen Standardzugang und zur Änderung per Laufzeitkonfiguration vorsehen, aber keinen erzwungenen Passwortwechsel.",
         "Wizard und Entwurfs-/Status-APIs ausschließlich am geschützten Admin-Port; CSRF-Schutz und keine Secrets in Browserantworten. Laufende Installation mit bestehender Konfiguration als Entwurf übernehmen statt überschreiben.",
         "Gemeinsamen Redaktionszugang einrichten, danach in dessen Ressort-/Showverwaltung wechseln; keine CMS- oder Mitarbeiterkontoeinrichtung.",
-        "Die initial vorhandene Redaktion Allgemein und ihre Newsshow im Wizard anbieten statt eine zusätzliche Redaktion vorauszusetzen. Vorgaben sind bearbeitbar; keine Duplikate bei Wiederaufnahme."
+        "Die initial vorhandene Redaktion Allgemein und ihre Newsshow im Wizard anbieten statt eine zusätzliche Redaktion vorauszusetzen. Vorgaben sind bearbeitbar; keine Duplikate bei Wiederaufnahme.",
+        "Ersteinrichtung um Senderstil/Corporate Identity aus T216 ergänzen: aus Outletangaben editierbaren Basisstil ableiten, optional URL-Recherche T217, Zusammenfassung vor Übernahme. Nach Übernahme Vorschauauftrag gemäß T218; wartende Medienjobs verhindern keinen gültigen Setupabschluss."
       ],
       "acceptance": [
         "Erste erfolgreiche Anmeldung öffnet Wizard; fehlgeschlagene Anmeldung zeigt keine Setupdaten.",
@@ -3091,7 +3092,8 @@
         "Je Thema Haltung als Text und Haltungsposition als gekoppelte Zahl/Schieberegler 0–100 mit sichtbaren themenspezifischen Skalenankern; Aktivierung und optionale Themen sowie eigene Themen verwalten.",
         "Hilfetext erklärt Bedeutung der Haltungsskala; Position 0 deaktiviert das Thema. Ein leerer Freitext deaktiviert eine aktive numerische Position nicht.",
         "Vorschau des an die Textfunktionen übergebenen Profils; Validierung, Speichern, Zurücksetzen und ungespeicherte Änderungen sichtbar machen.",
-        "Profil standardmäßig intern halten; öffentliche Veröffentlichung der Selbstdarstellung wäre eine eigene Option."
+        "Profil standardmäßig intern halten; öffentliche Veröffentlichung der Selbstdarstellung wäre eine eigene Option.",
+        "Auf der Senderseite dauerhaften Button „Senderstil erstellen/bearbeiten“ anbieten. Derselbe CI-Dialog wie in der Ersteinrichtung mit manuellen Vorgaben, optionaler URL-Recherche, Entwurfsvorschau, Übernehmen, aktiver Version und Fortschritt der daraus erzeugten Stilvorschauen (T216–T218)."
       ],
       "acceptance": [
         "Admin kann Format und Themenhaltungen vollständig bearbeiten und erneut laden.",
@@ -3664,7 +3666,8 @@
         "Stil wirkt als Showvorgabe für generiertes Bild-/Videomaterial und wird mit Studio, Avataren sowie Intro-/Outrosequenzen auf Kompatibilität geprüft. Vorhandenes Quellmaterial und freigegebene Assets nicht ungefragt umgestalten. Nicht unterstützte Kombinationen vor Produktion verständlich anzeigen; keine ungeprüfte Stilfähigkeit versprechen.",
         "Stilprompts von technischen Format-/Auflösungseinstellungen trennen. Globale und stileigene Negativprompts nur für unterstützende Provider und passenden Szenenkontext anwenden. Senderlogo, Untertitel, Quellen und verbindliche KI-Kennzeichnung erhalten.",
         "Stilauswahl auch für Kurzupdates in deren Erstellung bzw. Einrichtung/Bearbeitung bereitstellen, einschließlich automatisch erzeugter Kurzupdates. Dieselbe versionierte Bibliothek verwenden; bei Showbezug deren Stil als sichtbare Vorgabe anbieten und eine ausdrückliche eigene Auswahl erlauben. Die aufgelöste style_id/Bibliotheksversion vor jedem Produktionslauf im Kurzupdate-Snapshot speichern. Vorhandene Kurzupdates ohne Stil behalten das bisherige Verhalten; technische Ausgabeparameter und Pflichtkennzeichnungen bleiben getrennt.",
-        "Eigene Stilvorschauen im Fork ausdrücklich starten lassen und gewählten Stil, Senderprofil/redaktionelle Ausrichtung, Zielgruppe, Sprache/Tonalität, Branding, Studio-/Avatarvorgaben, Ausgabeformat und eingerichtete Provider-/Modellfähigkeiten einbeziehen. Aufgelösten Kontext und Versionsreferenzen ohne Zugangsdaten speichern; Budgetregeln anwenden und Ergebnisse standardmäßig lokal behalten. Redaktionelle Ausrichtung verändert keine Tatsachen. Gemeinsamer Vertrag und statische Beispiele: assets/style-examples/README.md und manifest.json."
+        "Eigene Stilvorschauen im Fork ausdrücklich starten lassen und gewählten Stil, Senderprofil/redaktionelle Ausrichtung, Zielgruppe, Sprache/Tonalität, Branding, Studio-/Avatarvorgaben, Ausgabeformat und eingerichtete Provider-/Modellfähigkeiten einbeziehen. Aufgelösten Kontext und Versionsreferenzen ohne Zugangsdaten speichern; Budgetregeln anwenden und Ergebnisse standardmäßig lokal behalten. Redaktionelle Ausrichtung verändert keine Tatsachen. Gemeinsamer Vertrag und statische Beispiele: assets/style-examples/README.md und manifest.json.",
+        "Stilauswahl verwendet den gemeinsamen versionierten Sender-Basisstil/Corporate Identity aus T216. Kontextbezogene Vorschauserie T218 auf der Senderseite anzeigen und von der Stilwahl aus erreichbar machen; Senderstandard und explizite lokale Überschreibung klar kennzeichnen."
       ],
       "acceptance": [
         "Zwei Shows laufen nach unterschiedlichen wiederkehrenden Plänen; nächste Termine sind nachvollziehbar.",
@@ -4062,7 +4065,8 @@
         "Kurzvideo eigenständig ohne regelmäßige Show erzeugen können; als fertigen Beitrag oder geplantes Segment in eine Show übernehmen. Zielzeit und Format konfigurierbar statt feste Plattformdauer vorauszusetzen.",
         "Bei Reel-/Kurzvideo-Erstellung und Bearbeitung dieselbe kategorisierte Stilauswahl wie bei Shows anbieten; Grundlage planning/research/video_style_library.json. Eigenständige Reels wählen unabhängig von einer Show; bei Erstellung aus einer Show deren Stil als sichtbare Vorgabe übernehmen und eine ausdrückliche abweichende Auswahl erlauben.",
         "Gewählte style_id und Bibliotheksversion im Reelauftrag speichern. Stil und technische Ausgabeparameter (z. B. 9:16, Auflösung, Dauer) getrennt konfigurieren; unterstützte Provider-/Avatar-/Studio-/Sequenzkombinationen vor Produktion prüfen. Bestehende Reels ohne Stil behalten ihr bisheriges Verhalten.",
-        "Eigene Stilvorschauen im Fork ausdrücklich starten lassen und gewählten Stil, Senderprofil/redaktionelle Ausrichtung, Zielgruppe, Sprache/Tonalität, Branding, Studio-/Avatarvorgaben, Ausgabeformat und eingerichtete Provider-/Modellfähigkeiten einbeziehen. Aufgelösten Kontext und Versionsreferenzen ohne Zugangsdaten speichern; Budgetregeln anwenden und Ergebnisse standardmäßig lokal behalten. Redaktionelle Ausrichtung verändert keine Tatsachen. Gemeinsamer Vertrag und statische Beispiele: assets/style-examples/README.md und manifest.json."
+        "Eigene Stilvorschauen im Fork ausdrücklich starten lassen und gewählten Stil, Senderprofil/redaktionelle Ausrichtung, Zielgruppe, Sprache/Tonalität, Branding, Studio-/Avatarvorgaben, Ausgabeformat und eingerichtete Provider-/Modellfähigkeiten einbeziehen. Aufgelösten Kontext und Versionsreferenzen ohne Zugangsdaten speichern; Budgetregeln anwenden und Ergebnisse standardmäßig lokal behalten. Redaktionelle Ausrichtung verändert keine Tatsachen. Gemeinsamer Vertrag und statische Beispiele: assets/style-examples/README.md und manifest.json.",
+        "Stilauswahl verwendet den gemeinsamen versionierten Sender-Basisstil/Corporate Identity aus T216. Kontextbezogene Vorschauserie T218 auf der Senderseite anzeigen und von der Stilwahl aus erreichbar machen; Senderstandard und explizite lokale Überschreibung klar kennzeichnen."
       ],
       "acceptance": [
         "Berechtigter Bediener beauftragt einen Mitarbeiter mit einem Thema und erhält nachvollziehbar Skript, Quellen und Produktionsstatus.",
@@ -4893,6 +4897,98 @@
       ],
       "implementation_note": "",
       "coordination_note": "Expliziter Nutzerauftrag: bilder jetzt erzeugen und alles ins repo stellen."
+    },
+    {
+      "id": "T216",
+      "epic": "E18",
+      "title": "Versionierter Sender-Basisstil als Corporate Identity",
+      "status": "todo",
+      "depends_on": [
+        "T210"
+      ],
+      "instructions": [
+        "Gemeinsame sender_style-Vorlage mit stabiler ID/Version, Name, Farben, Typografie mit verfügbaren Schrift-/Lizenzreferenzen, Logo-/Brandingreferenzen, Bildsprache, visuellen Grundregeln, Tonalität und optionalen Studio-/Avatarvorgaben definieren. Redaktionelle Identität und visuelle CI getrennt speichern, aber ihren effektiven Kontext gemeinsam auflösen.",
+        "Aus Angaben der Ersteinrichtung (Outletbeschreibung, Ausrichtung, Zielgruppen, Sprache, Ton) einen editierbaren CI-Entwurf ableiten; manueller Einstieg und Abschließen ohne URL, API-Konto oder kostenpflichtige Generierung bleiben möglich.",
+        "Entwurf, aktive Stilversion und historische Snapshots getrennt halten. Übernehmen validiert und aktiviert atomar eine unveränderliche neue Version; Wiederaufnahme, bewusstes Zurücksetzen auf vorhandene Version und deaktivierter/fehlender Senderstil bleiben möglich.",
+        "Sender-Basisstil als Standard für Show-, Reel- und Kurzupdate-Stile verwenden. Gewählte Bibliotheksstile werden im Kontext der Sender-CI interpretiert; explizite lokale Überschreibungen und effektive Werte sichtbar machen. Änderungen an der Sender-CI verändern keine bereits gespeicherten Produktionssnapshots oder fertigen Medien.",
+        "UI-Vorschau der CI mit Farben, Schrift, Branding und Bildsprache vor Übernahme bereitstellen. URL-Recherche ist ein optionaler Vorschlagseingang aus T217, keine automatische Aktivierung."
+      ],
+      "acceptance": [
+        "CI-Entwurf entsteht aus Setupangaben, lässt sich bearbeiten, übernehmen und versioniert erneut laden.",
+        "Show, Reel und Kurzupdate verwenden nachvollziehbaren Senderstandard samt expliziten Überschreibungen; bestehende Konfiguration bleibt gültig."
+      ],
+      "source": "user-chat-2026-11-01-outlet-corporate-identity",
+      "version": "0.4",
+      "package": "A25",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "",
+      "coordination_note": "Expliziter Nutzerauftrag: allgemeinen Senderstil bei Ersteinrichtung oder später per Button definieren, URL-Stilrecherche anbieten und nach Übernahme automatisch Vorschauen erzeugen."
+    },
+    {
+      "id": "T217",
+      "epic": "E18",
+      "title": "Senderstil aus URL recherchieren und als Entwurf übernehmen",
+      "status": "todo",
+      "depends_on": [
+        "T216",
+        "T135"
+      ],
+      "instructions": [
+        "Optionales URL-Feld im CI-Dialog: öffentlich erreichbare Website analysieren, Farbpalette, Schriftverwendung, Logo-/Bildsprache, Ansprache und erkennbare Sender-/Markenmerkmale als begründete Vorschläge mit Quell-URL und Abrufdatum darstellen. Fehlende oder unsichere Merkmale als unbekannt kennzeichnen; keine Eignung oder Nutzungsrechte erfinden.",
+        "Nur begrenzte passive HTTP(S)-Abrufe verwenden. Private/Loopback/Link-local-/Metadatenziele, URL-Zugangsdaten und nicht unterstützte Schemes ablehnen; DNS-Ziele bei jedem Redirect erneut prüfen. Timeouts, Redirect-/Seiten-/Byte-Limits, Inhaltstypen und Fehlerfälle verbindlich testen. Kein Login, kein Skript- oder HTML-Ausführen und keine Weitergabe von Fork-Secrets.",
+        "Websiteinhalte als unvertrauenswürdiges Recherchematerial behandeln; enthaltene Anweisungen dürfen weder Systemvorgaben noch Benutzerauftrag ändern. Provideraufrufe verwenden den geprüften Kontextvertrag; lokale/manuelle Alternative bei fehlendem Provider anbieten.",
+        "Rechercheergebnis zunächst als bearbeitbaren Entwurf mit nachvollziehbaren Quellen anzeigen. Farben und beschreibende Stilregeln vorschlagen; fremde Logos, Bilder oder Schriften nicht automatisch als lizenzierte Assets übernehmen. Bewusste Assetauswahl und vorhandene Upload-/Lizenzprüfung verwenden.",
+        "Fehler, gesperrte Seiten oder nur teilweise auswertbare Inhalte lassen aktive CI unverändert; manuelle Definition bleibt verfügbar."
+      ],
+      "acceptance": [
+        "Testwebsite liefert überprüfbare CI-Vorschläge mit Quellen; Übernahme erfolgt erst nach Bearbeitung/Bestätigung.",
+        "Redirects zu internen Zielen, feindliche Seiteninhalte, Übergröße, Offline- und Timeoutfälle verändern weder aktive Konfiguration noch Zugangsdaten."
+      ],
+      "source": "user-chat-2026-11-01-outlet-corporate-identity",
+      "version": "0.4",
+      "package": "A25",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "",
+      "coordination_note": "Expliziter Nutzerauftrag: allgemeinen Senderstil bei Ersteinrichtung oder später per Button definieren, URL-Stilrecherche anbieten und nach Übernahme automatisch Vorschauen erzeugen."
+    },
+    {
+      "id": "T218",
+      "epic": "E18",
+      "title": "Kontextbezogene Stilvorschauen nach CI-Übernahme automatisch erzeugen",
+      "status": "todo",
+      "depends_on": [
+        "T216",
+        "T217",
+        "T140",
+        "T144"
+      ],
+      "instructions": [
+        "Nach erfolgreichem Übernehmen einer Sender-CI automatisch einen persistenten Vorschauauftrag für die verfügbare Stilbibliothek anlegen; aktuell 14 Styles einschließlich Stop-Motion-Holzgliederfigur. Basisstil und jeweilige Stilvariante kombinieren, gemeinsames Vergleichsmotiv und gleiche technische Vorgaben innerhalb einer Serie verwenden.",
+        "Standardmäßig Vergleichsbilder erzeugen; kurze Beispielvideos nur als ausdrücklich eingerichteten Vorschautyp bei passendem Provider anbieten. Einzelbilder nicht als Nachweis für Animation, Lipsync oder zeitliche Konsistenz ausgeben.",
+        "CI-Version, Stilbibliotheksversion, Sender-/Zielgruppen-/Sprach-/Tonkontext, Branding, Studio-/Avatarreferenzen, Format, Provider/Modell und Promptversion ohne Secrets im Auftrag speichern. Deterministischen Cache-/Idempotenzschlüssel verwenden, keine doppelten Jobs bei Wiederaufnahme oder erneutem Übernehmen unveränderter Einstellungen.",
+        "Automatischer Start gehört zur Aktion Übernehmen; Umfang, Vorschautyp, Kostenschätzung und verfügbare Budgets vorab sichtbar machen. Innerhalb eingerichteter Provider-/Budgetfreigabe automatisch starten, bei fehlenden Fähigkeiten/Zugangsdaten oder Budget sichtbar wartend halten. Kostenfreies Minimalsetup nicht blockieren; mitgelieferte generische Beispiele bleiben als solche erkennbar verfügbar.",
+        "Fortschritt, Teilergebnisse, unabhängige Stiljobs, Wiederholen fehlgeschlagener Jobs und bewusste Neugenerierung anbieten. Neue CI-Version macht alte Vorschauen sichtbar veraltet; späte Ergebnisse bleiben ihrer alten Version zugeordnet und überschreiben keine neuere Serie.",
+        "Eigene Vorschauen standardmäßig privat im Fork-Laufzeitdatenbereich speichern; kein automatischer Git-Commit, Push oder öffentliche Veröffentlichung. Geschützte Vorschauzugriffe und vorhandene Qualitäts-/Kennzeichnungsregeln anwenden."
+      ],
+      "acceptance": [
+        "CI-Übernahme erzeugt genau eine nachvollziehbare Serie mit Senderkontext; Wiederholung und Neustart erzeugen keine Doppelabrechnung oder falsche Versionszuordnung.",
+        "Fehlende Provider, Budgetgrenzen und Teilfehler bleiben sichtbar; verfügbare Ergebnisse können geprüft und fehlgeschlagene Varianten gezielt erneut erzeugt werden."
+      ],
+      "source": "user-chat-2026-11-01-outlet-corporate-identity",
+      "version": "0.5",
+      "package": "A26",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "",
+      "coordination_note": "Expliziter Nutzerauftrag: allgemeinen Senderstil bei Ersteinrichtung oder später per Button definieren, URL-Stilrecherche anbieten und nach Übernahme automatisch Vorschauen erzeugen."
     }
   ],
   "packages": [
@@ -5149,7 +5245,9 @@
       "title": "Selbstdarstellung: Datenmodell und Konfigurationsseite",
       "tasks": [
         "T210",
-        "T211"
+        "T211",
+        "T216",
+        "T217"
       ]
     },
     {
@@ -5159,7 +5257,8 @@
         "T212",
         "T213",
         "T214",
-        "T215"
+        "T215",
+        "T218"
       ]
     },
     {
@@ -5428,7 +5527,9 @@
         "T320",
         "T321",
         "T322",
-        "T350"
+        "T350",
+        "T216",
+        "T217"
       ],
       "acceptance": "Zwei getrennte Zugänge; Wizard, Profile, Ressortverwaltung und gemeinsame Freigaben; keine individuellen Mitarbeiterkonten und kein CMS."
     },
@@ -5452,7 +5553,8 @@
         "T232",
         "T240",
         "T241",
-        "T242"
+        "T242",
+        "T218"
       ],
       "acceptance": "Avatar-/Studiowizards und 3D-Upload zeigen ihre tatsächlichen Fähigkeiten; Fallbacks sind nutzbar."
     },
@@ -6885,6 +6987,15 @@
       "client": "human-ploeffler",
       "at": 1793535287.5232515,
       "note": "Explizite menschliche Merge-Freigabe im Chat: «mergen», anschließend Ziel klargestellt: ausschließlich Full-featured-Newsoutlet, nicht main. Codex trägt die Freigabe im Auftrag von ploeffler ein; kein unabhängiger KI-Review. Aktualisierte 14-Stil-Lieferung einschließlich Stop-Motion-Holzgliederfigur und hinterlegter Prüfungen akzeptiert. Kein Versionsrelease oder Merge nach main."
+    },
+    {
+      "operation_id": "d8a385e0c5b5462e978d44b9c8dbc686",
+      "revision": 126,
+      "action": "requirements_update",
+      "task": "T216",
+      "client": "codex-local-coordinator",
+      "at": 1793536203.5257206,
+      "note": "Explizite Ablaufergänzung: CI-Basisstil aus Ersteinrichtung, späterer Senderseiten-Button, optionale URL-Recherche, automatische kontextbezogene Vorschauen nach Übernahme. T216–T218 und Integration in bestehende Aufgaben aufgenommen; keine fertige UI oder Providerfunktion behauptet."
     }
   ]
 }
