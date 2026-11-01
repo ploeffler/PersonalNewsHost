@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 85,
+  "revision": 86,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4651,7 +4651,7 @@
       "id": "T323",
       "epic": "E31",
       "title": "Vorgezogene Einrichtungsabläufe je Provider dokumentieren",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T100"
       ],
@@ -4667,7 +4667,17 @@
       "source": "user-chat-2026-11-01-provider-setup",
       "version": "0.2",
       "package": "A41",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "37e4f9d6fdf641018d9b499dea652769",
+        "expires_at": 1793523058.7040806,
+        "files": [
+          "docs/guide/index.md",
+          "docs/guide/provider-einrichtung.md",
+          "docs/guide/provider-runtime.md",
+          "planning/reviews/T323-provider-setup.md"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -6285,6 +6295,15 @@
       "client": "codex-local-coordinator",
       "at": 1793519440.5497642,
       "note": "Owner explicitly prioritizes provider setup documentation; begin 0.2, preserve v0.1 tag."
+    },
+    {
+      "operation_id": "15bd6c4a63ef47bc9db8d9627161ebbb",
+      "revision": 86,
+      "action": "claim",
+      "task": "T323",
+      "client": "codex-local-coordinator",
+      "at": 1793519458.7040806,
+      "note": ""
     }
   ]
 }
