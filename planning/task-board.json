@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 77,
+  "revision": 78,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1785,7 +1785,7 @@
       "id": "T135",
       "epic": "E12",
       "title": "Prompt-Injection-Schutz fuer Feed-Inhalte",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T100"
       ],
@@ -1799,7 +1799,16 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A02",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "dcc3d5989cd5447da7b778b498b3225c",
+        "expires_at": 1793518921.4839187,
+        "files": [
+          "planning/reviews/T135-feed-injection.md",
+          "tests/fixtures/provider-injection.json",
+          "tests/test_feed_injection.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [
@@ -6183,6 +6192,15 @@
       "task": "T130",
       "client": "codex-local-coordinator",
       "at": 1793515318.8754895,
+      "note": ""
+    },
+    {
+      "operation_id": "027e5b7692d349ffae85f911c18aa7db",
+      "revision": 78,
+      "action": "claim",
+      "task": "T135",
+      "client": "codex-local-coordinator",
+      "at": 1793515321.4839187,
       "note": ""
     }
   ]
