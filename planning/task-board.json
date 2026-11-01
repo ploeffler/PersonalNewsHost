@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 79,
+  "revision": 80,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1793,7 +1793,7 @@
       "id": "T135",
       "epic": "E12",
       "title": "Prompt-Injection-Schutz fuer Feed-Inhalte",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T100"
       ],
@@ -1817,7 +1817,16 @@
           "tests/test_feed_injection.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-local-coordinator",
+        "commit": "b22e3ad738f364604c3546ab419db0393d2812d0",
+        "checks": "344 offline tests passed including video rendering, syntax, secret scan and local links; 5 analysis-contract and 3 hostile-feed tests pass. Mock-only task/schema/tool isolation verified. Remaining requirement: instruction-like prose is preserved as inert data, not generally sanitized; future LLM protection not proven. See planning/reviews/T135-feed-injection.md. Scope decision required before completion.",
+        "files": [
+          "planning/reviews/T135-feed-injection.md",
+          "tests/fixtures/provider-injection.json",
+          "tests/test_feed_injection.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [
         "scripts/provider_runtime.py",
@@ -6218,6 +6227,15 @@
       "task": "T130",
       "client": "codex-local-coordinator",
       "at": 1793515456.8686817,
+      "note": ""
+    },
+    {
+      "operation_id": "b8a2fcbc4b8d4f688791d9ad5b9946b5",
+      "revision": 80,
+      "action": "submit",
+      "task": "T135",
+      "client": "codex-local-coordinator",
+      "at": 1793515459.3076117,
       "note": ""
     }
   ]
