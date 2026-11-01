@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 131,
+  "revision": 132,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -674,7 +674,7 @@
       "id": "T070",
       "epic": "E7",
       "title": "Planung und Laufzeitbudget in Workflows",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T010"
       ],
@@ -690,7 +690,17 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A04",
-      "lease": null,
+      "lease": {
+        "client": "codex-scheduling",
+        "token": "048fdfbeda90400c95b1d05db924fe2f",
+        "expires_at": 1793551534.4454868,
+        "files": [
+          ".github/workflows/show-planning.yml",
+          "docs/guide/show-planung.md",
+          "scripts/show_schedule.py",
+          "tests/test_show_schedule.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -7254,6 +7264,15 @@
       "client": "codex-webapp-plan",
       "at": 1793547637.728,
       "note": "Explicit user request: automatic web app updates in 1.1."
+    },
+    {
+      "operation_id": "9726a2fa16bd4af395fe5c50193ad66d",
+      "revision": 132,
+      "action": "claim",
+      "task": "T070",
+      "client": "codex-scheduling",
+      "at": 1793547934.4454868,
+      "note": ""
     }
   ]
 }
