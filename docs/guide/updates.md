@@ -1,6 +1,8 @@
-# Automatischer Versionscheck gegen das Originalrepository
+# Zusätzlicher Release-Versionscheck
 
-Stand: 01.11.2026, T195 / Entwicklung 0.2. **Prüfung implementiert, Installation
+Stand: 01.11.2026, frühere Release-Interpretation / Entwicklung 0.2.
+Für den konkretisierten T195/T196-Auftrag siehe [täglicher Fork-/Branch-Abgleich](fork-sync.md).
+Dieses Hilfsprogramm bleibt separat erhalten und ersetzt keine Ahead-/Behind-Prüfung aller Branches. **Prüfung implementiert, Installation
 noch nicht implementiert.** Kein automatisches git pull, kein Imagewechsel und
 keine Migration werden durch diese Befehle ausgeführt.
 
