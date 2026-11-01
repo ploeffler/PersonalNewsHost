@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 89,
+  "revision": 90,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -501,7 +501,7 @@
       "id": "T051",
       "epic": "E5",
       "title": "Qualitaetspruefungen vor Veroeffentlichung",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T012"
       ],
@@ -515,7 +515,18 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A04",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "bb8c8939d26c41c588e74d7890ff99b8",
+        "expires_at": 1793523633.1302178,
+        "files": [
+          "planning/reviews/T051-production-quality.md",
+          "scripts/generate.py",
+          "scripts/production_quality.py",
+          "tests/test_news_selection.py",
+          "tests/test_production_quality.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -6360,6 +6371,15 @@
       "task": "T180",
       "client": "codex-local-coordinator",
       "at": 1793519956.8506045,
+      "note": ""
+    },
+    {
+      "operation_id": "7662eb4d936048259cc495d5fc96b052",
+      "revision": 90,
+      "action": "claim",
+      "task": "T051",
+      "client": "codex-local-coordinator",
+      "at": 1793520033.1302178,
       "note": ""
     }
   ]
