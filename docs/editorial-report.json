@@ -1,18 +1,103 @@
 {
   "version": 1,
   "mode": "production",
-  "generated_at": 1793485983.833394,
-  "source_updated_at": 1793485964.956292,
-  "source_digest": "a4bae6248a4127e612a6a5d7280975ca4ae18347e731455ac3d51b7fdd01352f",
+  "generated_at": 1793499496.962549,
+  "source_updated_at": 1793499470.552618,
+  "source_digest": "d5f25b41a076f513bb572165fbd7206bf4c020c65726bd2021a2566a4710b083",
   "scope": "stored_source_support",
   "method": "local_extractive_multi_source",
   "independent_fact_check": false,
   "max_sentences": 2,
   "sources": {
+    "f1cee8baa7519d4dbba7bf99": {
+      "id": "f1cee8baa7519d4dbba7bf99",
+      "title": "Höchste Präzision beim Guss",
+      "text": "Schon bei seinem Schnuppertag in der voestalpine Giesserei Traisen war für Christian klar: Diesen Berufsweg möchte er einschlagen. Heute ist der 20-Jährige im vierten Lehrjahr seiner Ausbildung zum Gießereitechniker und bereitet sich auf die Lehrabschlussprüfung vor.",
+      "url": "https://www.krone.at/4343695",
+      "published_at": 1793487818.0,
+      "first_seen_at": 1793499470.552618,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4343698/v430c69/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4343698/v430c69/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4343698/v430c69/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4343698/v430c69/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Schon bei seinem Schnuppertag in der voestalpine Giesserei Traisen war für Christian klar: Diesen Berufsweg möchte er einschlagen. Heute ist der 20-Jährige im vierten Lehrjahr seiner Ausbildung zum Gießereitechniker und bereitet sich auf die Lehrabschlussprüfung vor.",
+      "rss_revision_at": 1793487818.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "krone.at"
+    },
+    "b40fa8842f1b0f17b8c0bcd7": {
+      "id": "b40fa8842f1b0f17b8c0bcd7",
+      "title": "Ihre Welt ist digital",
+      "text": "Als Lehrling im dritten Jahr zur IT-Systemtechnikerin bei der voestalpine group-IT in Linz ist Alexandra (20) verantwortlich für die Konfiguration von Geräten, die Erstellung virtueller Maschinen und die Betreuung von Software.",
+      "url": "https://www.krone.at/4344979",
+      "published_at": 1793487689.0,
+      "first_seen_at": 1793499470.552618,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4344981/va776ba/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4344981/va776ba/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4344981/va776ba/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4344981/va776ba/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Als Lehrling im dritten Jahr zur IT-Systemtechnikerin bei der voestalpine group-IT in Linz ist Alexandra (20) verantwortlich für die Konfiguration von Geräten, die Erstellung virtueller Maschinen und die Betreuung von Software.",
+      "rss_revision_at": 1793487689.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "krone.at"
+    },
+    "f4415d4f541d91297ff94d2e": {
+      "id": "f4415d4f541d91297ff94d2e",
+      "title": "Erste Risse in Vucics System",
+      "text": "Mehr als ein Jahrzehnt hat die rechtsnationalistische Serbische Fortschrittspartei (SNS) unter Aleksandar Vucic umfassende Kontrolle über Serbien ausgeübt. Nach dem herausragenden Sieg der Studentenliste (SL) am vergangenen Sonntag erhöhen nun die Studierenden den Druck auf Medien, Justiz und Politik, sich dem Machtwechsel zu beugen. In einigen Bereichen zeigen sich bereits Risse im alten System. Zugleich müsse die Studierendenbewegung tragfähige Strukturen aufbauen, sagte Serbien-Experte Jakov Devcic im ORF.at-Interview.",
+      "url": "https://orf.at/stories/3446586/",
+      "published_at": 1793487062.0,
+      "first_seen_at": 1793499470.552618,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "Mehr als ein Jahrzehnt hat die rechtsnationalistische Serbische Fortschrittspartei (SNS) unter Aleksandar Vucic umfassende Kontrolle über Serbien ausgeübt. Nach dem herausragenden Sieg der Studentenliste (SL) am vergangenen Sonntag erhöhen nun die Studierenden den Druck auf Medien, Justiz und Politik, sich dem Machtwechsel zu beugen. In einigen Bereichen zeigen sich bereits Risse im alten System. Zugleich müsse die Studierendenbewegung tragfähige Strukturen aufbauen, sagte Serbien-Experte Jakov Devcic im ORF.at-Interview.",
+      "rss_revision_at": 1793487062.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "orf.at"
+    },
     "522eefcb88188b2afc77e41b": {
       "id": "522eefcb88188b2afc77e41b",
-      "title": "FBI sieht Nordkorea hinter Angriff auf Cryptobörse",
-      "text": "Nordkorea steckt nach FBI-Angaben hinter dem milliardenschweren Hackerangriff auf die größte Digitalwährungsbörse Binance. Die US-Bundespolizei veröffentlichte Informationen, wonach die Attacke durch die nordkoreanischen Hacker der Gruppe TraderTraitor durchgeführt wurde. Bereits zuvor hatte die Analysefirma TRM Labs der Gruppe die Tat zugeschrieben.\n\nDas FBI rief Unternehmen auf, Ein- und Auszahlungen von bestimmten Adressen zu blockieren. Dadurch solle verhindert werden, dass die Gruppe die entwendeten Vermögenswerte waschen kann. Nach Angaben des FBI geht es um mehr als sechs Milliarden Dollar (gut 5,37 Mrd. Euro). Bereits zuvor hatte Binance mitgeteilt, dass alle Ein- und Auszahlungen temporär ausgesetzt wurden.\n\nBinance teilte mit, dass inzwischen 90 Prozent der insgesamt gestohlenen Summe durch den Anbieter selbst gedeckt würde. Dies geschieht zum Beispiel durch Rückkäufe. „Binance wird die finanziellen Auswirkungen dieses gestohlenen Vermögens tragen, nicht unsere Nutzer“, hieß es in einer Mitteilung des Unternehmens. Noch am Wochenende sollen voraussichtlich Auszahlungen an Nutzer und Nutzerinnen möglich sein.\n\nNach Erkenntnissen von TRM bewegten die Angreifer einen Großteil des Betrages von 6,36 Milliarden Dollar binnen 20 Minuten. Es sei der Angriff auf eine Digitalwährungsbörse mit dem größten Ausmaß gewesen.\n\nAnfang 2025 waren rund 1,5 Milliarden Dollar in Digitalwährungen auf der Börse Bybit erbeutet worden. Auch dieser Angriff wurde der nordkoreanischen Hackergruppe zugeschrieben.",
+      "title": "FBI sieht Nordkorea hinter Angriff auf Kryptobörse",
+      "text": "Nordkorea steckt nach FBI-Angaben hinter dem milliardenschweren Hackerangriff auf die größte Digitalwährungsbörse Binance. Die US-Bundespolizei veröffentlichte Informationen, wonach die Attacke durch die nordkoreanischen Hacker der Gruppe TraderTraitor durchgeführt wurde. Bereits zuvor hatte die Analysefirma TRM Labs der Gruppe die Tat zugeschrieben.\n\nDas FBI rief Unternehmen auf, Ein- und Auszahlungen von bestimmten Adressen zu blockieren. Dadurch solle verhindert werden, dass die Gruppe die entwendeten Vermögenswerte waschen kann. Nach Angaben des FBI geht es um mehr als sechs Milliarden Dollar (gut 5,37 Mrd. Euro). Bereits zuvor hatte Binance mitgeteilt, dass alle Ein- und Auszahlungen temporär ausgesetzt wurden.\n\nBinance teilte mit, dass inzwischen 90 Prozent der insgesamt gestohlenen Summe durch den Anbieter selbst gedeckt würde. Das geschieht zum Beispiel durch Rückkäufe. „Binance wird die finanziellen Auswirkungen dieses gestohlenen Vermögens tragen, nicht unsere Nutzer“, hieß es in einer Mitteilung des Unternehmens. Noch am Wochenende sollen voraussichtlich Auszahlungen an Nutzer und Nutzerinnen möglich sein.\n\nNach Erkenntnissen von TRM bewegten die Angreifer einen Großteil des Betrages von 6,36 Milliarden Dollar binnen 20 Minuten. Es sei der Angriff auf eine Digitalwährungsbörse mit dem größten Ausmaß gewesen.\n\nAnfang 2025 waren rund 1,5 Milliarden Dollar in Digitalwährungen auf der Börse Bybit erbeutet worden. Auch dieser Angriff wurde der nordkoreanischen Hackergruppe zugeschrieben.",
       "url": "https://orf.at/stories/3446733/",
       "published_at": 1793485855.0,
       "first_seen_at": 1793485964.956292,
@@ -24,7 +109,6 @@
       "rss_revision_at": 1793485855.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Nordkorea steckt nach FBI-Angaben hinter dem milliardenschweren Hackerangriff auf die größte Digitalwährungsbörse Binance. Die US-Bundespolizei veröffentlichte Informationen, wonach die Attacke durch die nordkoreanischen Hacker der Gruppe TraderTraitor durchgeführt wurde. Bereits zuvor hatte die Analysefirma TRM Labs der Gruppe die Tat zugeschrieben.\n\nDas FBI rief Unternehmen auf, Ein- und Auszahlungen von bestimmten Adressen zu blockieren. Dadurch solle verhindert werden, dass die Gruppe die entwendeten Vermögenswerte waschen kann. Nach Angaben des FBI geht es um mehr als sechs Milliarden Dollar (gut 5,37 Mrd. Euro). Bereits zuvor hatte Binance mitgeteilt, dass alle Ein- und Auszahlungen temporär ausgesetzt wurden.\n\nBinance teilte mit, dass inzwischen 90 Prozent der insgesamt gestohlenen Summe durch den Anbieter selbst gedeckt würde. Dies geschieht zum Beispiel durch Rückkäufe. „Binance wird die finanziellen Auswirkungen dieses gestohlenen Vermögens tragen, nicht unsere Nutzer“, hieß es in einer Mitteilung des Unternehmens. Noch am Wochenende sollen voraussichtlich Auszahlungen an Nutzer und Nutzerinnen möglich sein.\n\nNach Erkenntnissen von TRM bewegten die Angreifer einen Großteil des Betrages von 6,36 Milliarden Dollar binnen 20 Minuten. Es sei der Angriff auf eine Digitalwährungsbörse mit dem größten Ausmaß gewesen.\n\nAnfang 2025 waren rund 1,5 Milliarden Dollar in Digitalwährungen auf der Börse Bybit erbeutet worden. Auch dieser Angriff wurde der nordkoreanischen Hackergruppe zugeschrieben.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -32,11 +116,14 @@
         "canonical_url": "https://orf.at/stories/3446733/",
         "resolved_url": "https://orf.at/stories/3446733/",
         "requested_url": "https://orf.at/stories/3446733/",
-        "last_attempt_at": 1793485964.956292,
-        "rss_fingerprint": "131365a36223794a2090f1868c2c5dbb7cbea167ef2a512ca183cb6d252a31d0",
-        "fetched_at": 1793485964.956292,
-        "text_sha256": "5288589bf9debd3aba8972c81d74ca7432feb581378dd57f95cc3dad1717d8cb"
+        "last_attempt_at": 1793499470.552618,
+        "rss_fingerprint": "059201ade4792a010586d29325d307ea02c6cae481e3da467e1dbea4a27a3b47",
+        "fetched_at": 1793499470.552618,
+        "text_sha256": "10bb5fd48eaf59fa5e8b6affb9a52cd135a5d92fe6baf33c678c96f52675e4e7"
       },
+      "broadcast_id": "20261031T223305Z",
+      "broadcast_position": 1,
+      "article_text": "Nordkorea steckt nach FBI-Angaben hinter dem milliardenschweren Hackerangriff auf die größte Digitalwährungsbörse Binance. Die US-Bundespolizei veröffentlichte Informationen, wonach die Attacke durch die nordkoreanischen Hacker der Gruppe TraderTraitor durchgeführt wurde. Bereits zuvor hatte die Analysefirma TRM Labs der Gruppe die Tat zugeschrieben.\n\nDas FBI rief Unternehmen auf, Ein- und Auszahlungen von bestimmten Adressen zu blockieren. Dadurch solle verhindert werden, dass die Gruppe die entwendeten Vermögenswerte waschen kann. Nach Angaben des FBI geht es um mehr als sechs Milliarden Dollar (gut 5,37 Mrd. Euro). Bereits zuvor hatte Binance mitgeteilt, dass alle Ein- und Auszahlungen temporär ausgesetzt wurden.\n\nBinance teilte mit, dass inzwischen 90 Prozent der insgesamt gestohlenen Summe durch den Anbieter selbst gedeckt würde. Das geschieht zum Beispiel durch Rückkäufe. „Binance wird die finanziellen Auswirkungen dieses gestohlenen Vermögens tragen, nicht unsere Nutzer“, hieß es in einer Mitteilung des Unternehmens. Noch am Wochenende sollen voraussichtlich Auszahlungen an Nutzer und Nutzerinnen möglich sein.\n\nNach Erkenntnissen von TRM bewegten die Angreifer einen Großteil des Betrages von 6,36 Milliarden Dollar binnen 20 Minuten. Es sei der Angriff auf eine Digitalwährungsbörse mit dem größten Ausmaß gewesen.\n\nAnfang 2025 waren rund 1,5 Milliarden Dollar in Digitalwährungen auf der Börse Bybit erbeutet worden. Auch dieser Angriff wurde der nordkoreanischen Hackergruppe zugeschrieben.",
       "publisher": "orf.at"
     },
     "27534d129f8c065cbf9e2b8e": {
@@ -68,15 +155,17 @@
         }
       ],
       "rss_text": "Sieben Spiele gegen Red Bull Salzburg, 33 Gegentore – diese Bilanz macht Austria Lustenaus Tormann Domenik Schierl aber nichts aus. Der 32-Jährige hofft mit seiner Mannschaft am Sonntag auf die nächste Überraschung nach dem Cup-Aufstieg unter der Woche gegen Sturm Graz.",
-      "rss_revision_at": 1793485852.0,
+      "rss_revision_at": 1793487087.0,
       "content_kind": "news",
       "text_origin": "rss",
+      "broadcast_id": "20261031T223305Z",
+      "broadcast_position": 2,
       "publisher": "krone.at"
     },
     "465b2ebd8c40e19c226b74d0": {
       "id": "465b2ebd8c40e19c226b74d0",
       "title": "Lewis Hamilton holt vor Russell und Leclerc Pole Position in Mexiko",
-      "text": "Der Brite fährt zu seiner 105. Pole und zu seiner ersten für Ferrari. Verstappen wurde Vierter vor Antonelli, der am Sonntag Weltmeister werden kann",
+      "text": "Der Brite fuhr zu seiner 105. Pole und zu seiner ersten für Ferrari. Antonelli, der am Sonntag Weltmeister werden kann, startet von Rang vier",
       "url": "https://www.derstandard.at/story/3000000346878/lewis-hamilton-holt-vor-russell-und-leclerc-pole-position-in-mexiko?ref=rss",
       "published_at": 1793485039.0,
       "first_seen_at": 1793485964.956292,
@@ -89,7 +178,7 @@
           "kind": "image"
         }
       ],
-      "rss_text": "Der Brite fährt zu seiner 105. Pole und zu seiner ersten für Ferrari. Verstappen wurde Vierter vor Antonelli, der am Sonntag Weltmeister werden kann",
+      "rss_text": "Der Brite fuhr zu seiner 105. Pole und zu seiner ersten für Ferrari. Antonelli, der am Sonntag Weltmeister werden kann, startet von Rang vier",
       "rss_revision_at": 1793485039.0,
       "content_kind": "news",
       "text_origin": "rss",
@@ -97,9 +186,11 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346878/lewis-hamilton-holt-vor-russell-und-leclerc-pole-position-in-mexiko?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346878/lewis-hamilton-holt-vor-russell-und-leclerc-pole-position-in-mexiko?ref=rss",
-        "last_attempt_at": 1793485964.956292,
-        "rss_fingerprint": "87d961dea0ce03a4e4216dac9fec230fa3b4d249ddf2a1b37e106a86976a68c6"
+        "last_attempt_at": 1793499470.552618,
+        "rss_fingerprint": "e147974608988edae8ecbbca911d87e435c5cfe2c81c3130a422b53436cae627"
       },
+      "broadcast_id": "20261031T223305Z",
+      "broadcast_position": 3,
       "publisher": "derstandard.at"
     },
     "0115da36adc3dcc0ef8e7768": {
@@ -220,7 +311,7 @@
         }
       ],
       "rss_text": "Während in Europas Großstädten Demonstrationen ausarteten, waren in Salzburg untertags nur „Jesus“-Parolen beim Hauptbahnhof und abends Knaller in der Altstadt zu hören: ein Lokalaugenschein der „Krone“ in der Mozartstadt zum Gruseltag.",
-      "rss_revision_at": 1793485885.0,
+      "rss_revision_at": 1793489622.0,
       "content_kind": "news",
       "text_origin": "rss",
       "publisher": "krone.at"
@@ -518,9 +609,11 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41408072/zwei-steirische-teams-sind-weiter-im-hoehenflug",
-        "last_attempt_at": 1793485964.956292,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "376e29c247960be015cfb827725954e07909731ebc4f0ceacdc6ce4ace9cee4c"
       },
+      "broadcast_id": "20261031T223305Z",
+      "broadcast_position": 4,
       "publisher": "kleinezeitung.at"
     },
     "b7482f13922a0e3d13067106": {
@@ -815,7 +908,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41402693/bekanntes-hotel-investiert-auf-der-turrach-1-5-millionen-euro",
-        "last_attempt_at": 1793485964.956292,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "1a8263f2976424500da7fb8a57c5538e87a9d4a1815976b0c6e867b3f1ae5e8d"
       },
       "publisher": "kleinezeitung.at"
@@ -955,7 +1048,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41408424/so-schaurig-wurde-es-im-horrorhaus-und-beim-halloween-run-in-graz",
-        "last_attempt_at": 1793485964.956292,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "969c949f48e6260cefb1ac36e4d891b0c123b42c25777caad0cbf625dcf33c0e"
       },
       "publisher": "kleinezeitung.at"
@@ -984,7 +1077,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346870/jemen-von-houthi-entf252hrter-uno-mitarbeiter-tot?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346870/jemen-von-houthi-entf252hrter-uno-mitarbeiter-tot?ref=rss",
-        "last_attempt_at": 1793472761.633703,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "2ec542746cffda0d301d9edc07cc81b0ed8014d0f9e97b61b20f9d65098759aa"
       },
       "publisher": "derstandard.at"
@@ -1013,7 +1106,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346868/joker-treffen-altach-mit-spaetem-ausgleich-gegen-ried?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346868/joker-treffen-altach-mit-spaetem-ausgleich-gegen-ried?ref=rss",
-        "last_attempt_at": 1793472761.633703,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "705791d011882bb987bcd4d84c13244bcbdd06ee07aa97b16b35224b3cbeb784"
       },
       "publisher": "derstandard.at"
@@ -1106,7 +1199,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346869/binance-ersetzt-nach-hackerangriff-90-prozent-der-gestohlenen-werte?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346869/binance-ersetzt-nach-hackerangriff-90-prozent-der-gestohlenen-werte?ref=rss",
-        "last_attempt_at": 1793472761.633703,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "3f08f448eb08467d2eb8764851490acf4e289c4810ddade180182968d09df815"
       },
       "publisher": "derstandard.at"
@@ -1233,7 +1326,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346370/monster-teufel-vampire-halloween-tipps-aus-der-filmredaktion?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346370/monster-teufel-vampire-halloween-tipps-aus-der-filmredaktion?ref=rss",
-        "last_attempt_at": 1793472761.633703,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "0cb5fa14ee1f9ea04ff1a0e27b7905cf04f32cc27960d5b342f1f51d85ce3558"
       },
       "publisher": "derstandard.at"
@@ -1335,15 +1428,15 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41405956/von-texas-nach-kaernten-eine-familie-faengt-neu-an",
-        "last_attempt_at": 1793485964.956292,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "1ec36dd582526805de88c16c0ffed9a2ebb298a871fd6f4e4a3b370765d25ccb"
       },
       "publisher": "kleinezeitung.at"
     },
     "3c2e441ec9d99f52169c4213": {
       "id": "3c2e441ec9d99f52169c4213",
-      "title": "Plünderungen und Randale in Europas Großstädten",
-      "text": "Zu Halloween ist in mehreren europäischen Großstädten die Lage äußerst angespannt: In Deutschland zündeten Demonstranten Barrikaden an und warfen Sprengkörper auf Polizisten – Wasserwerfer kamen zum Einsatz. Unter anderem wurde ein Waffengeschäft geplündert. Auch in Frankreich kam es zu Zusammenstößen: Nach der Attacke mit einem Molotowcocktail auf Polizisten sprach der Innenminister dort von „versuchtem Mord“. In Wien berichtete die Polizei von einer „sehr hohen Einsatzdichte“.",
+      "title": "Plünderungen und Krawalle in Europas Großstädten",
+      "text": "Zu Halloween war in mehreren europäischen Großstädten die Lage äußerst angespannt: In Deutschland zündeten Demonstranten Barrikaden an und warfen Sprengkörper auf Polizisten – Wasserwerfer kamen zum Einsatz. Unter anderem wurde ein Waffengeschäft geplündert. Auch in Frankreich kam es zu Zusammenstößen: Nach der Attacke mit einem Molotowcocktail auf Polizisten sprach der Innenminister dort von „versuchtem Mord“. In Wien berichtete die Polizei von einer „sehr hohen Einsatzdichte“.",
       "url": "https://www.krone.at/4357140",
       "published_at": 1793468953.0,
       "first_seen_at": 1793469237.94067,
@@ -1352,24 +1445,24 @@
       ],
       "media": [
         {
-          "url": "https://imgl.krone.at/scaled/4357487/vf6b786/630x356",
+          "url": "https://imgl.krone.at/scaled/4357189/v0cb43a/630x356.jpg",
           "kind": "image"
         },
         {
-          "url": "https://imgl.krone.at/scaled/4357487/vf6b786/630x356",
+          "url": "https://imgl.krone.at/scaled/4357189/v0cb43a/630x356.jpg",
           "kind": "image"
         },
         {
-          "url": "https://imgl.krone.at/scaled/4357487/vf6b786/630x356",
+          "url": "https://imgl.krone.at/scaled/4357189/v0cb43a/630x356.jpg",
           "kind": "image"
         },
         {
-          "url": "https://imgl.krone.at/scaled/4357487/vf6b786/630x356",
+          "url": "https://imgl.krone.at/scaled/4357189/v0cb43a/630x356.jpg",
           "kind": "image"
         }
       ],
-      "rss_text": "Zu Halloween ist in mehreren europäischen Großstädten die Lage äußerst angespannt: In Deutschland zündeten Demonstranten Barrikaden an und warfen Sprengkörper auf Polizisten – Wasserwerfer kamen zum Einsatz. Unter anderem wurde ein Waffengeschäft geplündert. Auch in Frankreich kam es zu Zusammenstößen: Nach der Attacke mit einem Molotowcocktail auf Polizisten sprach der Innenminister dort von „versuchtem Mord“. In Wien berichtete die Polizei von einer „sehr hohen Einsatzdichte“.",
-      "rss_revision_at": 1793485953.0,
+      "rss_text": "Zu Halloween war in mehreren europäischen Großstädten die Lage äußerst angespannt: In Deutschland zündeten Demonstranten Barrikaden an und warfen Sprengkörper auf Polizisten – Wasserwerfer kamen zum Einsatz. Unter anderem wurde ein Waffengeschäft geplündert. Auch in Frankreich kam es zu Zusammenstößen: Nach der Attacke mit einem Molotowcocktail auf Polizisten sprach der Innenminister dort von „versuchtem Mord“. In Wien berichtete die Polizei von einer „sehr hohen Einsatzdichte“.",
+      "rss_revision_at": 1793492701.0,
       "content_kind": "news",
       "text_origin": "rss",
       "broadcast_id": "20261031T175423Z",
@@ -1550,9 +1643,9 @@
         "canonical_url": "https://orf.at/stories/3446716/",
         "resolved_url": "https://orf.at/stories/3446716/",
         "requested_url": "https://orf.at/stories/3446716/",
-        "last_attempt_at": 1793469237.94067,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "4b0466643eac00ac1a01aee195c1c1252b78917aabdaaba4e4bd1dc243be638e",
-        "fetched_at": 1793469237.94067,
+        "fetched_at": 1793499470.552618,
         "text_sha256": "9ca266c90f5f62e3c0597d27b0645a5eb7daa89943f11941bafaa0234474461b"
       },
       "publisher": "orf.at"
@@ -1624,7 +1717,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41398981/wetten-dass-uebermorgen-die-welt-untergeht",
-        "last_attempt_at": 1793485964.956292,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "3ce0883bc550b0f5241838e8836f64d850fa488271121d3c4e863011cc81cedc"
       },
       "publisher": "kleinezeitung.at"
@@ -1661,7 +1754,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41408198/kaerntnerin-arbeitet-als-bestatterin-ich-mache-meinen-beruf-gerne",
-        "last_attempt_at": 1793485964.956292,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "dddd155e0dd2168bd78c3e87ecfc63803dcdad672363e3eba0bf126a37b8a6d8"
       },
       "publisher": "kleinezeitung.at"
@@ -1749,6 +1842,8 @@
       "rss_revision_at": 1793467500.0,
       "content_kind": "news",
       "text_origin": "rss",
+      "broadcast_id": "20261031T223305Z",
+      "broadcast_position": 5,
       "publisher": "bmi.gv.at"
     },
     "5b1dfeab664431e7fe5c9377": {
@@ -1988,7 +2083,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346778/bisons-am-smart-trainer-zwift-erweitert-fiktive-radwelt-watopia-um-drei-wild-isles?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346778/bisons-am-smart-trainer-zwift-erweitert-fiktive-radwelt-watopia-um-drei-wild-isles?ref=rss",
-        "last_attempt_at": 1793469237.94067,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "66074cc1d64896e5729d0c62a4ab3c56f88ead02e2a4b1e14ceab79d00e67683"
       },
       "publisher": "derstandard.at"
@@ -2182,7 +2277,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41405922/silber-fuer-die-hlw-bad-aussee-beim-kaesekenner-bundesfinale",
-        "last_attempt_at": 1793485964.956292,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "9adee4938707d96571aade1a74d50dc6e3f1a215dc400e6b556128443ae0b34e"
       },
       "publisher": "kleinezeitung.at"
@@ -2253,7 +2348,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41408257/carlos-alcaraz-besiegt-daniil-medwedew-und-steht-erstmals-im-wien",
-        "last_attempt_at": 1793485964.956292,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "58163a5fa3a134270054363d158c4610ec0e4a72750c54784cf7d81aa4c035b9"
       },
       "publisher": "kleinezeitung.at"
@@ -2295,7 +2390,7 @@
     "94e54ddd5f1dcbbc279c418a": {
       "id": "94e54ddd5f1dcbbc279c418a",
       "title": "Neuerliche Großdemos in Frankreich",
-      "text": "Nach einem insgesamt ruhigen Start des landesweiten Protesttags in Frankreich ist es heute am späten Nachmittag zu ersten Spannungen zwischen Sicherheitskräften und Menschen bei den Demonstrationen gekommen.\n\nUnter anderem in Paris und Lyon setzten Ordnungskräfte Tränengas ein, wie französische Medien berichteten und in Livestreams zu sehen war. In Marseille zeigten Bilder brennende Gegenstände auf der Straße und den Einsatz von Feuerwehrkräften. Laut Innenministerium nahmen 320.000 Menschen an Demonstrationszügen im Land teil, davon 70.000 in Paris.\n\nDie Situation in der Hauptstadt spitzte sich zu, nachdem der dortige Demonstrationszug am Endpunkt seiner Route an der Porte de Chanteron am Stadtrand angekommen war. Spezialeinheiten der Polizei forderten die Demonstrierenden Berichten zufolge auf, den Ort zu verlassen. Die Auflösung kam nur langsam voran. Zuvor hatte der Pariser Polizeipräfekt Patrice Faure noch im Sender BFMTV gesagt, dass die Demonstration reibungslos zu verlaufen scheine.",
+      "text": "Nach einem insgesamt ruhigen Start des landesweiten Protesttags in Frankreich ist es heute am späten Nachmittag zu ersten Spannungen zwischen Sicherheitskräften und Menschen bei den Demonstrationen gekommen.\n\nUnter anderem in Paris und Lyon setzten Ordnungskräfte Tränengas ein, wie französische Medien berichteten und in Livestreams zu sehen war. In Marseille zeigten Bilder brennende Gegenstände auf der Straße und den Einsatz von Feuerwehrkräften.\n\nIn mehreren Städten versuchten dem Ministerium zufolge radikale Kräfte am Ende der Demonstrationen, in die Innenstädte vorzudringen und Plünderungen zu begehen. 296 Menschen wurden demnach landesweit bis 18.00 Uhr festgenommen, fast 500 weniger als zum gleichen Zeitpunkt am vergangenen Samstag.\n\nLaut Innenministerium nahmen 320.000 Menschen an Demonstrationszügen im ganzen Land teil, davon 70.000 in Paris. Ein Bündnis von Schüler- und Studierendenorganisationen zählte Medien zufolge seinerseits fast eine halbe Million Protestierende, mit 200.000 Menschen auf den Straßen in Paris.\n\nDie Situation in der Hauptstadt spitzte sich zu, nachdem der dortige Demonstrationszug am Endpunkt seiner Route an der Porte de Chanteron am Stadtrand angekommen war. Spezialeinheiten der Polizei forderten die Demonstrierenden Berichten zufolge auf, den Ort zu verlassen. Die Auflösung kam nur langsam voran.\n\nZuvor hatte der Pariser Polizeipräfekt Patrice Faure noch im Sender BFMTV gesagt, dass die Demonstration reibungslos zu verlaufen scheine.",
       "url": "https://orf.at/stories/3446712/",
       "published_at": 1793464619.0,
       "first_seen_at": 1793469237.94067,
@@ -2307,7 +2402,7 @@
       "rss_revision_at": 1793464619.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Nach einem insgesamt ruhigen Start des landesweiten Protesttags in Frankreich ist es heute am späten Nachmittag zu ersten Spannungen zwischen Sicherheitskräften und Menschen bei den Demonstrationen gekommen.\n\nUnter anderem in Paris und Lyon setzten Ordnungskräfte Tränengas ein, wie französische Medien berichteten und in Livestreams zu sehen war. In Marseille zeigten Bilder brennende Gegenstände auf der Straße und den Einsatz von Feuerwehrkräften. Laut Innenministerium nahmen 320.000 Menschen an Demonstrationszügen im Land teil, davon 70.000 in Paris.\n\nDie Situation in der Hauptstadt spitzte sich zu, nachdem der dortige Demonstrationszug am Endpunkt seiner Route an der Porte de Chanteron am Stadtrand angekommen war. Spezialeinheiten der Polizei forderten die Demonstrierenden Berichten zufolge auf, den Ort zu verlassen. Die Auflösung kam nur langsam voran. Zuvor hatte der Pariser Polizeipräfekt Patrice Faure noch im Sender BFMTV gesagt, dass die Demonstration reibungslos zu verlaufen scheine.",
+      "article_text": "Nach einem insgesamt ruhigen Start des landesweiten Protesttags in Frankreich ist es heute am späten Nachmittag zu ersten Spannungen zwischen Sicherheitskräften und Menschen bei den Demonstrationen gekommen.\n\nUnter anderem in Paris und Lyon setzten Ordnungskräfte Tränengas ein, wie französische Medien berichteten und in Livestreams zu sehen war. In Marseille zeigten Bilder brennende Gegenstände auf der Straße und den Einsatz von Feuerwehrkräften.\n\nIn mehreren Städten versuchten dem Ministerium zufolge radikale Kräfte am Ende der Demonstrationen, in die Innenstädte vorzudringen und Plünderungen zu begehen. 296 Menschen wurden demnach landesweit bis 18.00 Uhr festgenommen, fast 500 weniger als zum gleichen Zeitpunkt am vergangenen Samstag.\n\nLaut Innenministerium nahmen 320.000 Menschen an Demonstrationszügen im ganzen Land teil, davon 70.000 in Paris. Ein Bündnis von Schüler- und Studierendenorganisationen zählte Medien zufolge seinerseits fast eine halbe Million Protestierende, mit 200.000 Menschen auf den Straßen in Paris.\n\nDie Situation in der Hauptstadt spitzte sich zu, nachdem der dortige Demonstrationszug am Endpunkt seiner Route an der Porte de Chanteron am Stadtrand angekommen war. Spezialeinheiten der Polizei forderten die Demonstrierenden Berichten zufolge auf, den Ort zu verlassen. Die Auflösung kam nur langsam voran.\n\nZuvor hatte der Pariser Polizeipräfekt Patrice Faure noch im Sender BFMTV gesagt, dass die Demonstration reibungslos zu verlaufen scheine.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -2315,10 +2410,10 @@
         "canonical_url": "https://orf.at/stories/3446712/",
         "resolved_url": "https://orf.at/stories/3446712/",
         "requested_url": "https://orf.at/stories/3446712/",
-        "last_attempt_at": 1793469237.94067,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "28c382bda823db8ced10b7712c0632b291b79faac12545da1868f64acf1ed6a5",
-        "fetched_at": 1793469237.94067,
-        "text_sha256": "aedb1535a5c8c5ff21173f3e4ca48b5c5691f5ebd166eab2fd8c3b5866c4ced6"
+        "fetched_at": 1793499470.552618,
+        "text_sha256": "45210492d88a6806bb7b25fa03b4a66c281da2972340557cd0d3bbd62933c15b"
       },
       "publisher": "orf.at"
     },
@@ -2380,7 +2475,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346304/staub-auf-staub?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346304/staub-auf-staub?ref=rss",
-        "last_attempt_at": 1793469237.94067,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "4cc75e49cdd6b8462d70627ff1215b74c883ee18d8689186013ee62a25a51046"
       },
       "publisher": "derstandard.at"
@@ -2449,7 +2544,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41408046/trauer-um-die-grosse-stadtfuehrerin-kaum-jemand-kannte-graz-wie-sie",
-        "last_attempt_at": 1793485964.956292,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "9e993b4581d6e4678a5f2acc13bd0aef43cb46b13bf12bb58dbedce9815b7456"
       },
       "publisher": "kleinezeitung.at"
@@ -2500,7 +2595,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346861/genz-regelt-demo-in-wien-von-krawallen-wie-in-paris-fehlte-jede-spur?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346861/genz-regelt-demo-in-wien-von-krawallen-wie-in-paris-fehlte-jede-spur?ref=rss",
-        "last_attempt_at": 1793469237.94067,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "8f4b9e42752cab46bafb5fb95e422fe840d9e493cc0407e07e65639aaacd53e8"
       },
       "publisher": "derstandard.at"
@@ -2526,7 +2621,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346735/im-rostocker-polizeiruf-110-haben-viele-schwere-buerden-zu-tragen?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346735/im-rostocker-polizeiruf-110-haben-viele-schwere-buerden-zu-tragen?ref=rss",
         "last_attempt_at": 1793469237.94067,
@@ -2555,7 +2650,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346863/fu223ball-sturms-frauen-siegten-in-salzburg-notarzt-musste-ausr252cken?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346863/fu223ball-sturms-frauen-siegten-in-salzburg-notarzt-musste-ausr252cken?ref=rss",
         "last_attempt_at": 1793469237.94067,
@@ -2652,7 +2747,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346862/berliner-linke-macht-weg-fuer-koalitionsverhandlungen-frei?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346862/berliner-linke-macht-weg-fuer-koalitionsverhandlungen-frei?ref=rss",
         "last_attempt_at": 1793469237.94067,
@@ -2717,9 +2812,9 @@
         "canonical_url": "https://orf.at/stories/3446708/",
         "resolved_url": "https://orf.at/stories/3446708/",
         "requested_url": "https://orf.at/stories/3446708/",
-        "last_attempt_at": 1793469237.94067,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "6ee728165685ed2d0ce0afa98e10e3b569b43552c9bbd076f5ae3e310c91fd2e",
-        "fetched_at": 1793469237.94067,
+        "fetched_at": 1793499470.552618,
         "text_sha256": "1cd9be317fda2c2c89d3631e5f9735fc7ba61e9a774d4d35a726d05855d2a863"
       },
       "publisher": "orf.at"
@@ -2823,7 +2918,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346301/der-schriftsteller-tex-rubinowitz-ueber-den-tod-reliquien-und-die-kunst?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346301/der-schriftsteller-tex-rubinowitz-ueber-den-tod-reliquien-und-die-kunst?ref=rss",
         "last_attempt_at": 1793469237.94067,
@@ -2921,7 +3016,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "fetch_error",
+        "status": "deferred",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/39568090/babys-aus-der-region-villach",
         "last_attempt_at": 1793485964.956292,
@@ -2958,7 +3053,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "fetch_error",
+        "status": "deferred",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41407895/nicht-wegzudenken-der-zebrastreifen-feiert-75-geburtstag",
         "last_attempt_at": 1793485964.956292,
@@ -2995,7 +3090,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "fetch_error",
+        "status": "deferred",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41408090/die-samstagsspiele-der-fussball-bundesliga-jetzt-im-liveticker",
         "last_attempt_at": 1793485964.956292,
@@ -3060,9 +3155,9 @@
         "canonical_url": "https://orf.at/stories/3446705/",
         "resolved_url": "https://orf.at/stories/3446705/",
         "requested_url": "https://orf.at/stories/3446705/",
-        "last_attempt_at": 1793469237.94067,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "13e221ad1fe71479f0b628d31f3750e244caf55232720ec9b86afe0b26647e84",
-        "fetched_at": 1793469237.94067,
+        "fetched_at": 1793499470.552618,
         "text_sha256": "c667739affb8ba9f5513441321451d69fac96d01a13c0aa1aa23e980dea5b19e"
       },
       "publisher": "orf.at"
@@ -3090,9 +3185,9 @@
         "canonical_url": "https://orf.at/stories/3446704/",
         "resolved_url": "https://orf.at/stories/3446704/",
         "requested_url": "https://orf.at/stories/3446704/",
-        "last_attempt_at": 1793469237.94067,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "24a398681b9f3c0fcf5050fe4a3a024c20de8eded8dd0d62e9fd59dbfbaee2af",
-        "fetched_at": 1793469237.94067,
+        "fetched_at": 1793499470.552618,
         "text_sha256": "ab5c81ac7eedcb42373a62cffd0064363772477eea80634eceaee3456664c9a5"
       },
       "publisher": "orf.at"
@@ -3127,7 +3222,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "fetch_error",
+        "status": "deferred",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41386872/wir-wollen-nicht-nur-kritisieren-sondern-auch-handeln",
         "last_attempt_at": 1793485964.956292,
@@ -3164,7 +3259,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "fetch_error",
+        "status": "deferred",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41407576/kaelte-und-schnee-zu-allerheiligen-so-wird-das-wetter-in-kaernten",
         "last_attempt_at": 1793485964.956292,
@@ -3195,9 +3290,9 @@
         "canonical_url": "https://orf.at/stories/3446703/",
         "resolved_url": "https://orf.at/stories/3446703/",
         "requested_url": "https://orf.at/stories/3446703/",
-        "last_attempt_at": 1793469237.94067,
+        "last_attempt_at": 1793499470.552618,
         "rss_fingerprint": "9e11fb14f4cd5b81eb825f2e5d380e72848b5e97298c4d6b3ccf71ff2be5b6f6",
-        "fetched_at": 1793469237.94067,
+        "fetched_at": 1793499470.552618,
         "text_sha256": "44f31b403e1fee33ce1a3232338320adaa295a6e38149d6dbe36edeee704ba7b"
       },
       "publisher": "orf.at"
@@ -3249,7 +3344,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "fetch_error",
+        "status": "deferred",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41407825/markus-schopp-redet-sich-in-rage-warten-auf-diagnose-bei-paul-komposch",
         "last_attempt_at": 1793485964.956292,
@@ -3278,7 +3373,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346860/haas-tauscht-esteban-ocon-aus-ryo-hirakawa-gibt-in-mexiko-sein-debuet-in-der-formel-1?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346860/haas-tauscht-esteban-ocon-aus-ryo-hirakawa-gibt-in-mexiko-sein-debuet-in-der-formel-1?ref=rss",
         "last_attempt_at": 1793472761.633703,
@@ -3307,7 +3402,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346786/gen-z-protest-in-berlin-ich-will-studieren-nicht-salutieren?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346786/gen-z-protest-in-berlin-ich-will-studieren-nicht-salutieren?ref=rss",
         "last_attempt_at": 1793472761.633703,
@@ -3450,7 +3545,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "fetch_error",
+        "status": "deferred",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41406845/preis-fuer-griffen-4500-quadratmeter-entsiegelt",
         "last_attempt_at": 1793485964.956292,
@@ -3487,7 +3582,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "fetch_error",
+        "status": "deferred",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41400030/seit-zehn-jahren-ist-diese-kaerntner-gemeinde-postpartner",
         "last_attempt_at": 1793485964.956292,
@@ -3525,7 +3620,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "fetch_error",
+        "status": "deferred",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41404996/glasfaser-21-3-millionen-euro-fuer-vier-weststeirische-gemeinden",
         "last_attempt_at": 1793485964.956292,
@@ -3554,7 +3649,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346858/manchester-united-kassiert-mit-zehn-mann-niederlage-gegen-chelsea?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346858/manchester-united-kassiert-mit-zehn-mann-niederlage-gegen-chelsea?ref=rss",
         "last_attempt_at": 1793472761.633703,
@@ -10064,178 +10159,171 @@
       "content_kind": "news",
       "text_origin": "rss",
       "publisher": "kleinezeitung.at"
-    },
-    "80a0a61751b8a4c4cd091b3d": {
-      "id": "80a0a61751b8a4c4cd091b3d",
-      "title": "Verstappen und Lawson kollidieren im Mexiko-Training und kassieren Grid-Strafe",
-      "text": "Beide Piloten werden um einen Platz nach hinten gereiht, weil sie sich am Freitag ein unnötiges Duell lieferten. Leclerc erzielte die Bestzeit",
-      "url": "https://www.derstandard.at/story/3000000346824/formel-1-antonelli-im-mexiko-training-auf-rang-vier-leclerc-voran?ref=rss",
-      "published_at": 1793405103.0,
-      "first_seen_at": 1793413030.959047,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/Xty68Q/rs:fill:150:0/plain/lido-images/2026/10/31/7e4cd941-8483-4bdc-a138-7c7c877d7016.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Beide Piloten werden um einen Platz nach hinten gereiht, weil sie sich am Freitag ein unnötiges Duell lieferten. Leclerc erzielte die Bestzeit",
-      "rss_revision_at": 1793405103.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "article_fetch": {
-        "status": "deferred",
-        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346824/formel-1-antonelli-im-mexiko-training-auf-rang-vier-leclerc-voran?ref=rss",
-        "requested_url": "https://www.derstandard.at/story/3000000346824/formel-1-antonelli-im-mexiko-training-auf-rang-vier-leclerc-voran?ref=rss",
-        "last_attempt_at": 1793413030.959047,
-        "rss_fingerprint": "12c6726f423ae112778846b131a071d555d066a76da338d7a0f2ef425ae1ca3b"
-      },
-      "publisher": "derstandard.at"
-    },
-    "802d91c42658038605a786a5": {
-      "id": "802d91c42658038605a786a5",
-      "title": "Erneut landesweite Proteste in Frankreich erwartet",
-      "text": "In Paris und anderen französischen Großstädten formieren sich erneut große Demonstrationszüge gegen hohe Lebenshaltungskosten und für eine bessere Bildung. Wegen befürchteter Ausschreitungen sprachen die Behörden in Paris für Demonstrationsrouten im Stadtzentrum ein Verbot aus und genehmigten sie nur weiter außerhalb.\n\nDie gerichtliche Verlegung der Streckenführung sei eine „schwerwiegende Infragestellung unserer Rechte“, erklärte der Studierendenverband FAGE. Die Interessenvertretung der Studierenden werde sich nun beraten, um über das weitere Vorgehen zu entscheiden.\n\nAußerdem gibt es in der Nacht erneut örtlich begrenzte Ausgangssperren an zentralen Orten der Hauptstadt. Innenminister Laurent Nunez kündigte ein großes Polizeiaufgebot an.\n\nDie Behörden rechnen nach seinen Angaben wieder mit Hunderttausenden Teilnehmern. Am vergangenen Wochenende waren 70.000 Beamte gegen Randalierer und Plünderer im Einsatz. Den seit Wochen für eine bessere Ausstattung von Schulen demonstrierenden jungen Leuten haben sich mittlerweile weitere Gruppen angeschlossen, unter anderem um gegen hohe Lebenshaltungskosten zu demonstrieren.",
-      "url": "https://orf.at/stories/3446658/",
-      "published_at": 1793402243.0,
-      "first_seen_at": 1793413030.959047,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1793402243.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_text": "In Paris und anderen französischen Großstädten formieren sich erneut große Demonstrationszüge gegen hohe Lebenshaltungskosten und für eine bessere Bildung. Wegen befürchteter Ausschreitungen sprachen die Behörden in Paris für Demonstrationsrouten im Stadtzentrum ein Verbot aus und genehmigten sie nur weiter außerhalb.\n\nDie gerichtliche Verlegung der Streckenführung sei eine „schwerwiegende Infragestellung unserer Rechte“, erklärte der Studierendenverband FAGE. Die Interessenvertretung der Studierenden werde sich nun beraten, um über das weitere Vorgehen zu entscheiden.\n\nAußerdem gibt es in der Nacht erneut örtlich begrenzte Ausgangssperren an zentralen Orten der Hauptstadt. Innenminister Laurent Nunez kündigte ein großes Polizeiaufgebot an.\n\nDie Behörden rechnen nach seinen Angaben wieder mit Hunderttausenden Teilnehmern. Am vergangenen Wochenende waren 70.000 Beamte gegen Randalierer und Plünderer im Einsatz. Den seit Wochen für eine bessere Ausstattung von Schulen demonstrierenden jungen Leuten haben sich mittlerweile weitere Gruppen angeschlossen, unter anderem um gegen hohe Lebenshaltungskosten zu demonstrieren.",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "Erneut landesweite Proteste in Frankreich erwartet",
-        "canonical_url": "https://orf.at/stories/3446658/",
-        "resolved_url": "https://orf.at/stories/3446658/",
-        "requested_url": "https://orf.at/stories/3446658/",
-        "last_attempt_at": 1793484430.595493,
-        "rss_fingerprint": "1329f7297c8d38b08ca17b2b92784b751866112938c022dd316642c311290490",
-        "fetched_at": 1793484430.595493,
-        "text_sha256": "bee7f4cc324e797ecbe645e01d58ccf5b8578682e74ea875b748848875bac388"
-      },
-      "publisher": "orf.at"
-    },
-    "cc68018be0f9531e050c7262": {
-      "id": "cc68018be0f9531e050c7262",
-      "title": "Standardrätsel K 11431",
-      "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Phoenixen-Rätsel des STANDARD",
-      "url": "https://www.derstandard.at/story/3000000345117/standardraetsel-k-11431?ref=rss",
-      "published_at": 1793401260.0,
-      "first_seen_at": 1793413030.959047,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/eqM6Eg/rs:fill:150:0/plain/lido-images/2023/05/19/17b073a2-2297-406c-a459-faf4e5a469ef.png",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Phoenixen-Rätsel des STANDARD",
-      "rss_revision_at": 1793401260.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "article_fetch": {
-        "status": "deferred",
-        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000345117/standardraetsel-k-11431?ref=rss",
-        "requested_url": "https://www.derstandard.at/story/3000000345117/standardraetsel-k-11431?ref=rss",
-        "last_attempt_at": 1793413030.959047,
-        "rss_fingerprint": "a2493a83a2489516568ef1deb77b53450b33b625afe9613c92e16e89b07202df"
-      },
-      "publisher": "derstandard.at"
-    },
-    "4b84e913b60da6860289e782": {
-      "id": "4b84e913b60da6860289e782",
-      "title": "US-Justiz: Strafrechtliche Ermittlungen zu Alaska-Wahl",
-      "text": "Das US-Justizministerium hat strafrechtliche Ermittlungen wegen des Versuchs der Wählertäuschung bei der Senatswahl in Alaska bestätigt. „Wenn glaubwürdige Informationen ans Licht kommen, sind wir entschlossen, diesen Hinweisen nachzugehen“, sagte der für Alaska zuständige Bundesanwalt Michael Heyman gestern bei einer Pressekonferenz.\n\nEs gehe um den Verdacht der Täuschung von Wählerinnen und Wählern. Zu welchen Straftatbeständen genau ermittelt wird, wollte Heyman auch auf Nachfrage nicht erläutern.\n\nBei dem Fall geht es um zwei Kandidaten, die mit dem nahezu identischen Namen für den US-Senat kandidieren: Amtsinhaber Dan S. Sullivan und der politische Neuling Dan J. Sullivan. Die Republikaner werfen den oppositionellen Demokraten vor, mit der Verwechslungsgefahr den Amtsinhaber schwächen zu wollen – auch wenn der Herausforderer Dan J. Sullivan gar nicht für die Demokraten antritt. Beweise lieferten sie bisher nicht.\n\nDie „New York Times“ hatte jüngst allerdings berichtet, Verbündete der demokratischen Kandidatin Mary Peltola hätten gezielt nach einem Namensvetter des Amtsinhabers gesucht, um dessen Erfolgschancen zu schmälern. Laut der Zeitung bestreitet Peltolas Wahlkampfteam jegliche Beteiligung an dessen Kandidatur.\n\nBereits zuvor hatte US-Präsident Donald Trump das Bundesjustizministerium damit beauftragt, Klage gegen den Bundesstaat einzureichen. Damit soll eine Bestätigung der Wahlergebnisse verhindert werden, falls dem republikanischen Amtsinhaber wegen einer Namensverwechslung Stimmen fehlen. An dem Schritt gab es viel Kritik, weil er als Eingriff seitens der US-Regierung in die Wahlen in dem Bundesstaat gewertet wurde.",
-      "url": "https://orf.at/stories/3446657/",
-      "published_at": 1793400467.0,
-      "first_seen_at": 1793401001.995931,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1793400467.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_text": "Das US-Justizministerium hat strafrechtliche Ermittlungen wegen des Versuchs der Wählertäuschung bei der Senatswahl in Alaska bestätigt. „Wenn glaubwürdige Informationen ans Licht kommen, sind wir entschlossen, diesen Hinweisen nachzugehen“, sagte der für Alaska zuständige Bundesanwalt Michael Heyman gestern bei einer Pressekonferenz.\n\nEs gehe um den Verdacht der Täuschung von Wählerinnen und Wählern. Zu welchen Straftatbeständen genau ermittelt wird, wollte Heyman auch auf Nachfrage nicht erläutern.\n\nBei dem Fall geht es um zwei Kandidaten, die mit dem nahezu identischen Namen für den US-Senat kandidieren: Amtsinhaber Dan S. Sullivan und der politische Neuling Dan J. Sullivan. Die Republikaner werfen den oppositionellen Demokraten vor, mit der Verwechslungsgefahr den Amtsinhaber schwächen zu wollen – auch wenn der Herausforderer Dan J. Sullivan gar nicht für die Demokraten antritt. Beweise lieferten sie bisher nicht.\n\nDie „New York Times“ hatte jüngst allerdings berichtet, Verbündete der demokratischen Kandidatin Mary Peltola hätten gezielt nach einem Namensvetter des Amtsinhabers gesucht, um dessen Erfolgschancen zu schmälern. Laut der Zeitung bestreitet Peltolas Wahlkampfteam jegliche Beteiligung an dessen Kandidatur.\n\nBereits zuvor hatte US-Präsident Donald Trump das Bundesjustizministerium damit beauftragt, Klage gegen den Bundesstaat einzureichen. Damit soll eine Bestätigung der Wahlergebnisse verhindert werden, falls dem republikanischen Amtsinhaber wegen einer Namensverwechslung Stimmen fehlen. An dem Schritt gab es viel Kritik, weil er als Eingriff seitens der US-Regierung in die Wahlen in dem Bundesstaat gewertet wurde.",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "US-Justiz: Strafrechtliche Ermittlungen zu Alaska-Wahl",
-        "canonical_url": "https://orf.at/stories/3446657/",
-        "resolved_url": "https://orf.at/stories/3446657/",
-        "requested_url": "https://orf.at/stories/3446657/",
-        "last_attempt_at": 1793484430.595493,
-        "rss_fingerprint": "d9649101e740782458a4b3d41da87fbfd9420d52d0b8c468a83b8f4c384333ed",
-        "fetched_at": 1793484430.595493,
-        "text_sha256": "5a8e9dd1ec7a45ad60a7469a1bc3ffa7a71008a4c6bcb8f76007c7fb2cbd4421"
-      },
-      "publisher": "orf.at"
-    },
-    "9baacf0b11063005fb6a23e7": {
-      "id": "9baacf0b11063005fb6a23e7",
-      "title": "Viel Unzufriedenheit mit Klimagesetz",
-      "text": "Die Begutachtungsfrist für das Klimagesetz hat am Freitag geendet. Kritik gibt es vor allem bezüglich des Ziels der Klimaneutralität bis zum Jahr 2040. Die Wirtschaftskammer (WKO) etwa und einige Unternehmen zeigten sich nicht damit einverstanden, dass Österreich zehn Jahre vor der EU klimaneutral sein will. Diverse Organisationen vermissten hingegen die Verbindlichkeit, auch beim 2040-Ziel. Bis Donnerstag gab es über 330 Stellungnahmen.",
-      "url": "https://orf.at/stories/3446567/",
-      "published_at": 1793399864.0,
-      "first_seen_at": 1793401001.995931,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "Die Begutachtungsfrist für das Klimagesetz hat am Freitag geendet. Kritik gibt es vor allem bezüglich des Ziels der Klimaneutralität bis zum Jahr 2040. Die Wirtschaftskammer (WKO) etwa und einige Unternehmen zeigten sich nicht damit einverstanden, dass Österreich zehn Jahre vor der EU klimaneutral sein will. Diverse Organisationen vermissten hingegen die Verbindlichkeit, auch beim 2040-Ziel. Bis Donnerstag gab es über 330 Stellungnahmen.",
-      "rss_revision_at": 1793399864.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "orf.at"
-    },
-    "28d1bbee51b7ea160a05a6cd": {
-      "id": "28d1bbee51b7ea160a05a6cd",
-      "title": "Ein Probst-Goldtor stürzte Leader im Schlager",
-      "text": "Ein einziger Treffer entschied den Schlager in der Salzburger Liga in Straßwalchen, wo der Andrang so hoch wie selten zuvor war. Neo-Leader Bürmoos ist weiter seit Mai in der Liga unbesiegt.",
-      "url": "https://www.krone.at/4356101",
-      "published_at": 1793399849.0,
-      "first_seen_at": 1793413030.959047,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4356110/v0b68fc/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4356110/v0b68fc/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4356110/v0b68fc/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4356110/v0b68fc/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Ein einziger Treffer entschied den Schlager in der Salzburger Liga in Straßwalchen, wo der Andrang so hoch wie selten zuvor war. Neo-Leader Bürmoos ist weiter seit Mai in der Liga unbesiegt.",
-      "rss_revision_at": 1793399849.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "krone.at"
     }
   },
   "groups": [
+    {
+      "id": "0b12c840fe9232a28a486ef2",
+      "member_ids": [
+        "f1cee8baa7519d4dbba7bf99"
+      ],
+      "newest_at": 1793487818.0,
+      "draft": {
+        "headline": "Höchste Präzision beim Guss",
+        "headline_source_id": "f1cee8baa7519d4dbba7bf99",
+        "claims": [
+          {
+            "text": "Schon bei seinem Schnuppertag in der voestalpine Giesserei Traisen war für Christian klar: Diesen Berufsweg möchte er einschlagen.",
+            "source_id": "f1cee8baa7519d4dbba7bf99",
+            "field": "text",
+            "quote": "Schon bei seinem Schnuppertag in der voestalpine Giesserei Traisen war für Christian klar: Diesen Berufsweg möchte er einschlagen."
+          },
+          {
+            "text": "Heute ist der 20-Jährige im vierten Lehrjahr seiner Ausbildung zum Gießereitechniker und bereitet sich auf die Lehrabschlussprüfung vor.",
+            "source_id": "f1cee8baa7519d4dbba7bf99",
+            "field": "text",
+            "quote": "Heute ist der 20-Jährige im vierten Lehrjahr seiner Ausbildung zum Gießereitechniker und bereitet sich auf die Lehrabschlussprüfung vor."
+          }
+        ],
+        "text": "Höchste Präzision beim Guss.\nSchon bei seinem Schnuppertag in der voestalpine Giesserei Traisen war für Christian klar: Diesen Berufsweg möchte er einschlagen. Heute ist der 20-Jährige im vierten Lehrjahr seiner Ausbildung zum Gießereitechniker und bereitet sich auf die Lehrabschlussprüfung vor.\nQuelle: krone.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "f1cee8baa7519d4dbba7bf99",
+            "supported": true,
+            "quote": "Schon bei seinem Schnuppertag in der voestalpine Giesserei Traisen war für Christian klar: Diesen Berufsweg möchte er einschlagen."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "f1cee8baa7519d4dbba7bf99",
+            "supported": true,
+            "quote": "Heute ist der 20-Jährige im vierten Lehrjahr seiner Ausbildung zum Gießereitechniker und bereitet sich auf die Lehrabschlussprüfung vor."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "f1cee8baa7519d4dbba7bf99"
+      ]
+    },
+    {
+      "id": "1da0bd03ccfba9879e70cd2a",
+      "member_ids": [
+        "b40fa8842f1b0f17b8c0bcd7"
+      ],
+      "newest_at": 1793487689.0,
+      "draft": {
+        "headline": "Ihre Welt ist digital",
+        "headline_source_id": "b40fa8842f1b0f17b8c0bcd7",
+        "claims": [
+          {
+            "text": "Als Lehrling im dritten Jahr zur IT-Systemtechnikerin bei der voestalpine group-IT in Linz ist Alexandra (20) verantwortlich für die Konfiguration von Geräten, die Erstellung virtueller Maschinen und die Betreuung von Software.",
+            "source_id": "b40fa8842f1b0f17b8c0bcd7",
+            "field": "text",
+            "quote": "Als Lehrling im dritten Jahr zur IT-Systemtechnikerin bei der voestalpine group-IT in Linz ist Alexandra (20) verantwortlich für die Konfiguration von Geräten, die Erstellung virtueller Maschinen und die Betreuung von Software."
+          }
+        ],
+        "text": "Ihre Welt ist digital.\nAls Lehrling im dritten Jahr zur IT-Systemtechnikerin bei der voestalpine group-IT in Linz ist Alexandra (20) verantwortlich für die Konfiguration von Geräten, die Erstellung virtueller Maschinen und die Betreuung von Software.\nQuelle: krone.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "b40fa8842f1b0f17b8c0bcd7",
+            "supported": true,
+            "quote": "Als Lehrling im dritten Jahr zur IT-Systemtechnikerin bei der voestalpine group-IT in Linz ist Alexandra (20) verantwortlich für die Konfiguration von Geräten, die Erstellung virtueller Maschinen und die Betreuung von Software."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "b40fa8842f1b0f17b8c0bcd7"
+      ]
+    },
+    {
+      "id": "7a119984c8084cc4fc9a5c10",
+      "member_ids": [
+        "f4415d4f541d91297ff94d2e"
+      ],
+      "newest_at": 1793487062.0,
+      "draft": {
+        "headline": "Erste Risse in Vucics System",
+        "headline_source_id": "f4415d4f541d91297ff94d2e",
+        "claims": [
+          {
+            "text": "Mehr als ein Jahrzehnt hat die rechtsnationalistische Serbische Fortschrittspartei (SNS) unter Aleksandar Vucic umfassende Kontrolle über Serbien ausgeübt.",
+            "source_id": "f4415d4f541d91297ff94d2e",
+            "field": "text",
+            "quote": "Mehr als ein Jahrzehnt hat die rechtsnationalistische Serbische Fortschrittspartei (SNS) unter Aleksandar Vucic umfassende Kontrolle über Serbien ausgeübt."
+          },
+          {
+            "text": "Nach dem herausragenden Sieg der Studentenliste (SL) am vergangenen Sonntag erhöhen nun die Studierenden den Druck auf Medien, Justiz und Politik, sich dem Machtwechsel zu beugen.",
+            "source_id": "f4415d4f541d91297ff94d2e",
+            "field": "text",
+            "quote": "Nach dem herausragenden Sieg der Studentenliste (SL) am vergangenen Sonntag erhöhen nun die Studierenden den Druck auf Medien, Justiz und Politik, sich dem Machtwechsel zu beugen."
+          }
+        ],
+        "text": "Erste Risse in Vucics System.\nMehr als ein Jahrzehnt hat die rechtsnationalistische Serbische Fortschrittspartei (SNS) unter Aleksandar Vucic umfassende Kontrolle über Serbien ausgeübt. Nach dem herausragenden Sieg der Studentenliste (SL) am vergangenen Sonntag erhöhen nun die Studierenden den Druck auf Medien, Justiz und Politik, sich dem Machtwechsel zu beugen.\nQuelle: orf.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "f4415d4f541d91297ff94d2e",
+            "supported": true,
+            "quote": "Mehr als ein Jahrzehnt hat die rechtsnationalistische Serbische Fortschrittspartei (SNS) unter Aleksandar Vucic umfassende Kontrolle über Serbien ausgeübt."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "f4415d4f541d91297ff94d2e",
+            "supported": true,
+            "quote": "Nach dem herausragenden Sieg der Studentenliste (SL) am vergangenen Sonntag erhöhen nun die Studierenden den Druck auf Medien, Justiz und Politik, sich dem Machtwechsel zu beugen."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "f4415d4f541d91297ff94d2e"
+      ]
+    },
     {
       "id": "2ab98e96138cf42b12c7b399",
       "member_ids": [
@@ -10243,7 +10331,7 @@
       ],
       "newest_at": 1793485855.0,
       "draft": {
-        "headline": "FBI sieht Nordkorea hinter Angriff auf Cryptobörse",
+        "headline": "FBI sieht Nordkorea hinter Angriff auf Kryptobörse",
         "headline_source_id": "522eefcb88188b2afc77e41b",
         "claims": [
           {
@@ -10259,7 +10347,7 @@
             "quote": "Die US-Bundespolizei veröffentlichte Informationen, wonach die Attacke durch die nordkoreanischen Hacker der Gruppe TraderTraitor durchgeführt wurde."
           }
         ],
-        "text": "FBI sieht Nordkorea hinter Angriff auf Cryptobörse.\nNordkorea steckt nach FBI-Angaben hinter dem milliardenschweren Hackerangriff auf die größte Digitalwährungsbörse Binance. Die US-Bundespolizei veröffentlichte Informationen, wonach die Attacke durch die nordkoreanischen Hacker der Gruppe TraderTraitor durchgeführt wurde.\nQuelle: orf.at."
+        "text": "FBI sieht Nordkorea hinter Angriff auf Kryptobörse.\nNordkorea steckt nach FBI-Angaben hinter dem milliardenschweren Hackerangriff auf die größte Digitalwährungsbörse Binance. Die US-Bundespolizei veröffentlichte Informationen, wonach die Attacke durch die nordkoreanischen Hacker der Gruppe TraderTraitor durchgeführt wurde.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -10289,7 +10377,7 @@
           "issues": []
         }
       ],
-      "selected": true,
+      "selected": false,
       "used_source_ids": [
         "522eefcb88188b2afc77e41b"
       ]
@@ -10347,7 +10435,7 @@
           "issues": []
         }
       ],
-      "selected": true,
+      "selected": false,
       "used_source_ids": [
         "27534d129f8c065cbf9e2b8e"
       ]
@@ -10363,10 +10451,10 @@
         "headline_source_id": "465b2ebd8c40e19c226b74d0",
         "claims": [
           {
-            "text": "Der Brite fährt zu seiner 105.",
+            "text": "Der Brite fuhr zu seiner 105.",
             "source_id": "465b2ebd8c40e19c226b74d0",
             "field": "text",
-            "quote": "Der Brite fährt zu seiner 105."
+            "quote": "Der Brite fuhr zu seiner 105."
           },
           {
             "text": "Pole und zu seiner ersten für Ferrari.",
@@ -10375,7 +10463,7 @@
             "quote": "Pole und zu seiner ersten für Ferrari."
           }
         ],
-        "text": "Lewis Hamilton holt vor Russell und Leclerc Pole Position in Mexiko.\nDer Brite fährt zu seiner 105. Pole und zu seiner ersten für Ferrari.\nQuelle: derstandard.at."
+        "text": "Lewis Hamilton holt vor Russell und Leclerc Pole Position in Mexiko.\nDer Brite fuhr zu seiner 105. Pole und zu seiner ersten für Ferrari.\nQuelle: derstandard.at."
       },
       "verification": {
         "status": "approved",
@@ -10386,7 +10474,7 @@
             "claim_index": 0,
             "source_id": "465b2ebd8c40e19c226b74d0",
             "supported": true,
-            "quote": "Der Brite fährt zu seiner 105."
+            "quote": "Der Brite fuhr zu seiner 105."
           },
           {
             "claim_index": 1,
@@ -12567,14 +12655,14 @@
       ],
       "newest_at": 1793468953.0,
       "draft": {
-        "headline": "Plünderungen und Randale in Europas Großstädten",
+        "headline": "Plünderungen und Krawalle in Europas Großstädten",
         "headline_source_id": "3c2e441ec9d99f52169c4213",
         "claims": [
           {
-            "text": "Zu Halloween ist in mehreren europäischen Großstädten die Lage äußerst angespannt: In Deutschland zündeten Demonstranten Barrikaden an und warfen Sprengkörper auf Polizisten – Wasserwerfer kamen zum Einsatz.",
+            "text": "Zu Halloween war in mehreren europäischen Großstädten die Lage äußerst angespannt: In Deutschland zündeten Demonstranten Barrikaden an und warfen Sprengkörper auf Polizisten – Wasserwerfer kamen zum Einsatz.",
             "source_id": "3c2e441ec9d99f52169c4213",
             "field": "text",
-            "quote": "Zu Halloween ist in mehreren europäischen Großstädten die Lage äußerst angespannt: In Deutschland zündeten Demonstranten Barrikaden an und warfen Sprengkörper auf Polizisten – Wasserwerfer kamen zum Einsatz."
+            "quote": "Zu Halloween war in mehreren europäischen Großstädten die Lage äußerst angespannt: In Deutschland zündeten Demonstranten Barrikaden an und warfen Sprengkörper auf Polizisten – Wasserwerfer kamen zum Einsatz."
           },
           {
             "text": "Unter anderem wurde ein Waffengeschäft geplündert.",
@@ -12583,7 +12671,7 @@
             "quote": "Unter anderem wurde ein Waffengeschäft geplündert."
           }
         ],
-        "text": "Plünderungen und Randale in Europas Großstädten.\nZu Halloween ist in mehreren europäischen Großstädten die Lage äußerst angespannt: In Deutschland zündeten Demonstranten Barrikaden an und warfen Sprengkörper auf Polizisten – Wasserwerfer kamen zum Einsatz. Unter anderem wurde ein Waffengeschäft geplündert.\nQuelle: krone.at."
+        "text": "Plünderungen und Krawalle in Europas Großstädten.\nZu Halloween war in mehreren europäischen Großstädten die Lage äußerst angespannt: In Deutschland zündeten Demonstranten Barrikaden an und warfen Sprengkörper auf Polizisten – Wasserwerfer kamen zum Einsatz. Unter anderem wurde ein Waffengeschäft geplündert.\nQuelle: krone.at."
       },
       "verification": {
         "status": "approved",
@@ -12594,7 +12682,7 @@
             "claim_index": 0,
             "source_id": "3c2e441ec9d99f52169c4213",
             "supported": true,
-            "quote": "Zu Halloween ist in mehreren europäischen Großstädten die Lage äußerst angespannt: In Deutschland zündeten Demonstranten Barrikaden an und warfen Sprengkörper auf Polizisten – Wasserwerfer kamen zum Einsatz."
+            "quote": "Zu Halloween war in mehreren europäischen Großstädten die Lage äußerst angespannt: In Deutschland zündeten Demonstranten Barrikaden an und warfen Sprengkörper auf Polizisten – Wasserwerfer kamen zum Einsatz."
           },
           {
             "claim_index": 1,
@@ -27970,342 +28058,6 @@
       "used_source_ids": [
         "a31c7469a431fa41aeaf29b3"
       ]
-    },
-    {
-      "id": "134936acc86a0d930b626f58",
-      "member_ids": [
-        "80a0a61751b8a4c4cd091b3d"
-      ],
-      "newest_at": 1793405103.0,
-      "draft": {
-        "headline": "Verstappen und Lawson kollidieren im Mexiko-Training und kassieren Grid-Strafe",
-        "headline_source_id": "80a0a61751b8a4c4cd091b3d",
-        "claims": [
-          {
-            "text": "Beide Piloten werden um einen Platz nach hinten gereiht, weil sie sich am Freitag ein unnötiges Duell lieferten.",
-            "source_id": "80a0a61751b8a4c4cd091b3d",
-            "field": "text",
-            "quote": "Beide Piloten werden um einen Platz nach hinten gereiht, weil sie sich am Freitag ein unnötiges Duell lieferten."
-          },
-          {
-            "text": "Leclerc erzielte die Bestzeit.",
-            "source_id": "80a0a61751b8a4c4cd091b3d",
-            "field": "text",
-            "quote": "Leclerc erzielte die Bestzeit."
-          }
-        ],
-        "text": "Verstappen und Lawson kollidieren im Mexiko-Training und kassieren Grid-Strafe.\nBeide Piloten werden um einen Platz nach hinten gereiht, weil sie sich am Freitag ein unnötiges Duell lieferten. Leclerc erzielte die Bestzeit.\nQuelle: derstandard.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "80a0a61751b8a4c4cd091b3d",
-            "supported": true,
-            "quote": "Beide Piloten werden um einen Platz nach hinten gereiht, weil sie sich am Freitag ein unnötiges Duell lieferten."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "80a0a61751b8a4c4cd091b3d",
-            "supported": true,
-            "quote": "Leclerc erzielte die Bestzeit."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "80a0a61751b8a4c4cd091b3d"
-      ]
-    },
-    {
-      "id": "ac8cf0ba299c0a84bf802b4b",
-      "member_ids": [
-        "802d91c42658038605a786a5"
-      ],
-      "newest_at": 1793402243.0,
-      "draft": {
-        "headline": "Erneut landesweite Proteste in Frankreich erwartet",
-        "headline_source_id": "802d91c42658038605a786a5",
-        "claims": [
-          {
-            "text": "In Paris und anderen französischen Großstädten formieren sich erneut große Demonstrationszüge gegen hohe Lebenshaltungskosten und für eine bessere Bildung.",
-            "source_id": "802d91c42658038605a786a5",
-            "field": "text",
-            "quote": "In Paris und anderen französischen Großstädten formieren sich erneut große Demonstrationszüge gegen hohe Lebenshaltungskosten und für eine bessere Bildung."
-          },
-          {
-            "text": "Wegen befürchteter Ausschreitungen sprachen die Behörden in Paris für Demonstrationsrouten im Stadtzentrum ein Verbot aus und genehmigten sie nur weiter außerhalb.",
-            "source_id": "802d91c42658038605a786a5",
-            "field": "text",
-            "quote": "Wegen befürchteter Ausschreitungen sprachen die Behörden in Paris für Demonstrationsrouten im Stadtzentrum ein Verbot aus und genehmigten sie nur weiter außerhalb."
-          }
-        ],
-        "text": "Erneut landesweite Proteste in Frankreich erwartet.\nIn Paris und anderen französischen Großstädten formieren sich erneut große Demonstrationszüge gegen hohe Lebenshaltungskosten und für eine bessere Bildung. Wegen befürchteter Ausschreitungen sprachen die Behörden in Paris für Demonstrationsrouten im Stadtzentrum ein Verbot aus und genehmigten sie nur weiter außerhalb.\nQuelle: orf.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "802d91c42658038605a786a5",
-            "supported": true,
-            "quote": "In Paris und anderen französischen Großstädten formieren sich erneut große Demonstrationszüge gegen hohe Lebenshaltungskosten und für eine bessere Bildung."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "802d91c42658038605a786a5",
-            "supported": true,
-            "quote": "Wegen befürchteter Ausschreitungen sprachen die Behörden in Paris für Demonstrationsrouten im Stadtzentrum ein Verbot aus und genehmigten sie nur weiter außerhalb."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "802d91c42658038605a786a5"
-      ]
-    },
-    {
-      "id": "b00517cd51e02e5f15a2168a",
-      "member_ids": [
-        "cc68018be0f9531e050c7262"
-      ],
-      "newest_at": 1793401260.0,
-      "draft": {
-        "headline": "Standardrätsel K 11431",
-        "headline_source_id": "cc68018be0f9531e050c7262",
-        "claims": [
-          {
-            "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Phoenixen-Rätsel des STANDARD.",
-            "source_id": "cc68018be0f9531e050c7262",
-            "field": "text",
-            "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Phoenixen-Rätsel des STANDARD."
-          }
-        ],
-        "text": "Standardrätsel K 11431.\nTäglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Phoenixen-Rätsel des STANDARD.\nQuelle: derstandard.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "cc68018be0f9531e050c7262",
-            "supported": true,
-            "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Phoenixen-Rätsel des STANDARD."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "cc68018be0f9531e050c7262"
-      ]
-    },
-    {
-      "id": "2208ddf225aabe9a88f14215",
-      "member_ids": [
-        "4b84e913b60da6860289e782"
-      ],
-      "newest_at": 1793400467.0,
-      "draft": {
-        "headline": "US-Justiz: Strafrechtliche Ermittlungen zu Alaska-Wahl",
-        "headline_source_id": "4b84e913b60da6860289e782",
-        "claims": [
-          {
-            "text": "Das US-Justizministerium hat strafrechtliche Ermittlungen wegen des Versuchs der Wählertäuschung bei der Senatswahl in Alaska bestätigt.",
-            "source_id": "4b84e913b60da6860289e782",
-            "field": "text",
-            "quote": "Das US-Justizministerium hat strafrechtliche Ermittlungen wegen des Versuchs der Wählertäuschung bei der Senatswahl in Alaska bestätigt."
-          },
-          {
-            "text": "„Wenn glaubwürdige Informationen ans Licht kommen, sind wir entschlossen, diesen Hinweisen nachzugehen“, sagte der für Alaska zuständige Bundesanwalt Michael Heyman gestern bei einer Pressekonferenz.",
-            "source_id": "4b84e913b60da6860289e782",
-            "field": "text",
-            "quote": "„Wenn glaubwürdige Informationen ans Licht kommen, sind wir entschlossen, diesen Hinweisen nachzugehen“, sagte der für Alaska zuständige Bundesanwalt Michael Heyman gestern bei einer Pressekonferenz."
-          }
-        ],
-        "text": "US-Justiz: Strafrechtliche Ermittlungen zu Alaska-Wahl.\nDas US-Justizministerium hat strafrechtliche Ermittlungen wegen des Versuchs der Wählertäuschung bei der Senatswahl in Alaska bestätigt. „Wenn glaubwürdige Informationen ans Licht kommen, sind wir entschlossen, diesen Hinweisen nachzugehen“, sagte der für Alaska zuständige Bundesanwalt Michael Heyman gestern bei einer Pressekonferenz.\nQuelle: orf.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "4b84e913b60da6860289e782",
-            "supported": true,
-            "quote": "Das US-Justizministerium hat strafrechtliche Ermittlungen wegen des Versuchs der Wählertäuschung bei der Senatswahl in Alaska bestätigt."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "4b84e913b60da6860289e782",
-            "supported": true,
-            "quote": "„Wenn glaubwürdige Informationen ans Licht kommen, sind wir entschlossen, diesen Hinweisen nachzugehen“, sagte der für Alaska zuständige Bundesanwalt Michael Heyman gestern bei einer Pressekonferenz."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "4b84e913b60da6860289e782"
-      ]
-    },
-    {
-      "id": "b884ee47816f3c29a0bdeb03",
-      "member_ids": [
-        "9baacf0b11063005fb6a23e7"
-      ],
-      "newest_at": 1793399864.0,
-      "draft": {
-        "headline": "Viel Unzufriedenheit mit Klimagesetz",
-        "headline_source_id": "9baacf0b11063005fb6a23e7",
-        "claims": [
-          {
-            "text": "Die Begutachtungsfrist für das Klimagesetz hat am Freitag geendet.",
-            "source_id": "9baacf0b11063005fb6a23e7",
-            "field": "text",
-            "quote": "Die Begutachtungsfrist für das Klimagesetz hat am Freitag geendet."
-          },
-          {
-            "text": "Kritik gibt es vor allem bezüglich des Ziels der Klimaneutralität bis zum Jahr 2040.",
-            "source_id": "9baacf0b11063005fb6a23e7",
-            "field": "text",
-            "quote": "Kritik gibt es vor allem bezüglich des Ziels der Klimaneutralität bis zum Jahr 2040."
-          }
-        ],
-        "text": "Viel Unzufriedenheit mit Klimagesetz.\nDie Begutachtungsfrist für das Klimagesetz hat am Freitag geendet. Kritik gibt es vor allem bezüglich des Ziels der Klimaneutralität bis zum Jahr 2040.\nQuelle: orf.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "9baacf0b11063005fb6a23e7",
-            "supported": true,
-            "quote": "Die Begutachtungsfrist für das Klimagesetz hat am Freitag geendet."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "9baacf0b11063005fb6a23e7",
-            "supported": true,
-            "quote": "Kritik gibt es vor allem bezüglich des Ziels der Klimaneutralität bis zum Jahr 2040."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "9baacf0b11063005fb6a23e7"
-      ]
-    },
-    {
-      "id": "3b91fc0ba08bba01d88dcade",
-      "member_ids": [
-        "28d1bbee51b7ea160a05a6cd"
-      ],
-      "newest_at": 1793399849.0,
-      "draft": {
-        "headline": "Ein Probst-Goldtor stürzte Leader im Schlager",
-        "headline_source_id": "28d1bbee51b7ea160a05a6cd",
-        "claims": [
-          {
-            "text": "Ein einziger Treffer entschied den Schlager in der Salzburger Liga in Straßwalchen, wo der Andrang so hoch wie selten zuvor war.",
-            "source_id": "28d1bbee51b7ea160a05a6cd",
-            "field": "text",
-            "quote": "Ein einziger Treffer entschied den Schlager in der Salzburger Liga in Straßwalchen, wo der Andrang so hoch wie selten zuvor war."
-          },
-          {
-            "text": "Neo-Leader Bürmoos ist weiter seit Mai in der Liga unbesiegt.",
-            "source_id": "28d1bbee51b7ea160a05a6cd",
-            "field": "text",
-            "quote": "Neo-Leader Bürmoos ist weiter seit Mai in der Liga unbesiegt."
-          }
-        ],
-        "text": "Ein Probst-Goldtor stürzte Leader im Schlager.\nEin einziger Treffer entschied den Schlager in der Salzburger Liga in Straßwalchen, wo der Andrang so hoch wie selten zuvor war. Neo-Leader Bürmoos ist weiter seit Mai in der Liga unbesiegt.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "28d1bbee51b7ea160a05a6cd",
-            "supported": true,
-            "quote": "Ein einziger Treffer entschied den Schlager in der Salzburger Liga in Straßwalchen, wo der Andrang so hoch wie selten zuvor war."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "28d1bbee51b7ea160a05a6cd",
-            "supported": true,
-            "quote": "Neo-Leader Bürmoos ist weiter seit Mai in der Liga unbesiegt."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "28d1bbee51b7ea160a05a6cd"
-      ]
     }
   ],
   "excluded_articles": [
@@ -28323,8 +28075,8 @@
     }
   ],
   "selected_ids": [
-    "2ab98e96138cf42b12c7b399",
-    "3ce1be85e9f2146c45f947cf",
+    "0b12c840fe9232a28a486ef2",
+    "7a119984c8084cc4fc9a5c10",
     "9b86e14a9c282fcde94c0b65",
     "f195506a878631facdd41c3e",
     "f48a2959a20870c98bbfb5f4"
