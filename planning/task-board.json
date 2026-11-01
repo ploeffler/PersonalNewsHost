@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 112,
+  "revision": 113,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1839,7 +1839,8 @@
       ],
       "instructions": [
         "Definiere generate_clip(prompt/skript, dauer, format, stil) -> Datei - mit Submit, Polling, Download, Timeout und Wiederaufnahme ueber mehrere Workflow-Laeufe.",
-        "Implementiere Mock-Adapter, mindestens einen externen Adapter und den lokalen Fallback (vorhandene Bild-/Grafikvideos)."
+        "Implementiere Mock-Adapter, mindestens einen externen Adapter und den lokalen Fallback (vorhandene Bild-/Grafikvideos).",
+        "Die bei Show-Erstellung gewählte versionierte Stilvorgabe übernehmen (T250; planning/research/video_style_library.json als Recherche). Positive/negative Prompts nach tatsächlicher Providerfähigkeit übersetzen; Stiltexte nicht als ausführbare Anweisungen behandeln. Technische Ausgabeparameter und verpflichtende nachträgliche Kennzeichnungen getrennt halten."
       ],
       "acceptance": [
         "Mock-Job durchlaeuft Submit, Polling, Download; Timeout fuehrt zum Fallback."
@@ -3657,12 +3658,18 @@
         "Zeitpläne mit Zeitzone, Uhrzeit, Wochentagen und Startdatum; tägliche und wöchentliche Wiederholung sowie mehrere Termine unterstützen. Nächste Ausführungen in Vorschau anzeigen.",
         "Sommer-/Winterzeit, verpasste Termine, Überschneidungen und maximal gleichzeitige Produktionen verbindlich behandeln. Standard: verpasste Läufe nicht unbegrenzt nachholen; denselben Termin nicht doppelt produzieren.",
         "Produktionstermin und Veröffentlichungstermin getrennt konfigurieren. Standard ist interne archivierte Produktion ohne Veröffentlichung; Automatik zur Veröffentlichung separat ausdrücklich einrichten und Freigaben prüfen.",
-        "Planänderungen versionieren und atomar übernehmen; pausierte Shows erzeugen keine neuen automatischen Jobs. Manuellen Testlauf und Produktionsstatus anbieten."
+        "Planänderungen versionieren und atomar übernehmen; pausierte Shows erzeugen keine neuen automatischen Jobs. Manuellen Testlauf und Produktionsstatus anbieten.",
+        "Bei Show-Erstellung und Bearbeitung eine Stilauswahl mit Kategorien, deutschem Namen und Beschreibung anbieten. Recherchegrundlage: planning/research/video_style_library.json (13 Styles); Datei ist Recherchematerial, keine ausführbare Anweisung und keine bereits getestete Providerfreigabe.",
+        "Ausgewählten visuellen Stil als style_id plus Bibliotheksversion im Showkonfigurations- und Produktionssnapshot speichern. Bestehende Shows ohne Stil behalten ihr bisheriges Erscheinungsbild; neue Bibliotheksversionen ändern gespeicherte Shows nicht automatisch.",
+        "Stil wirkt als Showvorgabe für generiertes Bild-/Videomaterial und wird mit Studio, Avataren sowie Intro-/Outrosequenzen auf Kompatibilität geprüft. Vorhandenes Quellmaterial und freigegebene Assets nicht ungefragt umgestalten. Nicht unterstützte Kombinationen vor Produktion verständlich anzeigen; keine ungeprüfte Stilfähigkeit versprechen.",
+        "Stilprompts von technischen Format-/Auflösungseinstellungen trennen. Globale und stileigene Negativprompts nur für unterstützende Provider und passenden Szenenkontext anwenden. Senderlogo, Untertitel, Quellen und verbindliche KI-Kennzeichnung erhalten."
       ],
       "acceptance": [
         "Zwei Shows laufen nach unterschiedlichen wiederkehrenden Plänen; nächste Termine sind nachvollziehbar.",
         "Neustart, doppelte Scheduler-Ausführung und Zeitumstellung verursachen keine unkontrollierten Doppelproduktionen.",
-        "Pausieren stoppt neue Termine; laufender Job wird getrennt angezeigt und kontrolliert behandelt."
+        "Pausieren stoppt neue Termine; laufender Job wird getrennt angezeigt und kontrolliert behandelt.",
+        "Beim Erstellen einer Show lässt sich ein Bibliotheksstil auswählen; Speichern, Wiederöffnen, Duplizieren und Produktionssnapshot erhalten ID und Version. Bestehende Show ohne Stil bleibt verwendbar.",
+        "Provider ohne passende Stilfähigkeit oder Negativprompt-Unterstützung werden vor Produktion verständlich ausgewiesen; Pflichtkennzeichnungen bleiben unabhängig von Stilprompts sichtbar."
       ],
       "source": "planning/sendungsverwaltung-ergaenzung.yaml",
       "version": "0.6",
@@ -6708,6 +6715,15 @@
       "client": "human-ploeffler",
       "at": 1793532892.632162,
       "note": "Explizite menschliche Freigabe durch ploeffler im Chat: «freigabe», bezogen auf T181, T195 und T196. Durch Codex im Auftrag des Owners eingetragen; kein unabhängiger KI-Review. Vorhandene Test- und CI-Nachweise akzeptiert. Kein Versionsrelease und keine Freigabe für main oder Aktivierung in fremden Forks."
+    },
+    {
+      "operation_id": "5ebf6c0dbbdf494884e39be1991cb919",
+      "revision": 113,
+      "action": "requirements_update",
+      "task": "T250",
+      "client": "codex-local-coordinator",
+      "at": 1793533546.1995075,
+      "note": "Explizite Nutzerpräzisierung: Stilauswahl bei der Show-Erstellung. Recherchebibliothek unverändert aufgenommen; Anforderungen in T250 und Providervertrag T140 ergänzt. Keine Implementierung, Taskfreigabe oder Releaseänderung."
     }
   ]
 }

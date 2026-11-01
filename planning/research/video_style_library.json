@@ -1,0 +1,124 @@
+{
+  "project": "AI-Video-Style-Selector",
+  "version": "1.1.0",
+  "global_config": {
+    "global_negative_prompt": "deformed, bad anatomy, disfigured, poorly drawn face, mutated, extra limbs, ugly, blurry, low quality, artifacts, watermark, text, signature, logos, static background, twitching"
+  },
+  "categories": [
+    {
+      "category_id": "realism_cinema",
+      "category_name_de": "Realistisch & Filmisch",
+      "styles": [
+        {
+          "style_id": "modern_blockbuster",
+          "name_de": "Moderner Blockbuster",
+          "ui_moodboard_description": "Tiefer Kontrast, bläuliche Schatten und orangefarbenes Licht (Teal & Orange).",
+          "positive_prompt": "Cinematic film style, high-budget Hollywood production, anamorphic lens flare, sharp focus, dramatic lighting, color graded in teal and orange, 8k, photorealistic.",
+          "negative_prompt": "illustration, 3d render, cartoon, anime, drawing, sketch, flat colors, low contrast, vintage look, black and white"
+        },
+        {
+          "style_id": "nature_documentary",
+          "name_de": "Natur-Dokumentation",
+          "ui_moodboard_description": "Gestochen scharfes, helles Bild mit natürlichem Tageslicht und weichem Bokeh-Hintergrund.",
+          "positive_prompt": "National Geographic documentary style, photorealistic, natural daylight, soft bokeh background, shot on RED camera, ultra-detailed textures, 8k resolution.",
+          "negative_prompt": "studio lighting, cinematic drama, color grading, stylized colors, 3d render, graphic design, illustration, darkness"
+        },
+        {
+          "style_id": "vintage_retro_film",
+          "name_de": "Körniger Retro-Film",
+          "ui_moodboard_description": "4:3-Format mit leicht verwaschenen Farben und sichtbarem Filmkorn.",
+          "positive_prompt": "Vintage 35mm film style, grainy texture, muted retro colors, nostalgic aesthetic, cinematic, subtle chromatic aberration, 1970s cinema look.",
+          "negative_prompt": "modern digital look, highly polished, neon colors, 4k, 8k, ultra-sharp, cgi, 3d animation, futuristic"
+        },
+        {
+          "style_id": "pumuckl_hybrid",
+          "name_de": "80s Nostalgie-Mix (Pumuckl-Stil)",
+          "ui_moodboard_description": "Gemütliche, reale Werkstatt mit Holztexturen, kombiniert mit einer handgezeichneten 2D-Figur.",
+          "positive_prompt": "1980s hybrid live-action and animation style, Meister Eder TV show aesthetic, cozy old carpenter workshop with wooden textures, nostalgic 35mm analog film grain, warm dusty sunbeams, composite shot featuring a hand-drawn 2D cartoon character integrated into a realistic environment, vintage color grading.",
+          "negative_prompt": "modern cgi, 3d character, pixar style, disney style, highly detailed digital rendering, neon lighting, clean hd digital look"
+        }
+      ]
+    },
+    {
+      "category_id": "3d_animation_cgi",
+      "category_name_de": "3D-Animation & CGI",
+      "styles": [
+        {
+          "style_id": "pixar_disney",
+          "name_de": "Pixar / Disney Charme",
+          "ui_moodboard_description": "Große, ausdrucksstarke Augen, weiche Hautstrukturen und warme, leuchtende Farben.",
+          "positive_prompt": "3D Pixar style, cute character design, soft digital claymation, vibrant and warm lighting, smooth textures, Disney animation aesthetic, cheerful mood.",
+          "negative_prompt": "photorealistic, live action, real humans, dark gritty style, sketchy, hand-drawn look, 2d vector, sharp ink outlines"
+        },
+        {
+          "style_id": "gaming_cinematic",
+          "name_de": "Gaming Cinematic (Sci-Fi/Fantasy)",
+          "ui_moodboard_description": "Extrem detaillierte Charaktere in einer düsteren, technisch perfekten Spielewelt.",
+          "positive_prompt": "Hyper-detailed 3D render, Unreal Engine 5 aesthetic, Octane Render, cyberpunk/dark fantasy style, metallic reflections, volumetric fog, intricate armor/clothing details.",
+          "negative_prompt": "2d cartoon, watercolor, anime, low-poly, simple shapes, hand-drawn look, bright friendly kids style"
+        },
+        {
+          "style_id": "biene_maja_3d",
+          "name_de": "Modernes 3D-Insektenabenteuer",
+          "ui_moodboard_description": "Plastische 3D-Insekten, extrem leuchtende Blumenfarben, Makro-Perspektive im Gras.",
+          "positive_prompt": "Modern 3D CGI animation style, Studio 100 aesthetic, vibrant and colorful Pixar-like rendering for children, bright sunny daylight, volumetric lighting through grass blades, highly detailed smooth textures, cute stylized 3D character design, macro photography perspective.",
+          "negative_prompt": "gritty realism, dark photography, hand-drawn 2d animation, vintage cartoon, desaturated colors"
+        }
+      ]
+    },
+    {
+      "category_id": "2d_illustration",
+      "category_name_de": "Illustriert & Gezeichnet (2D)",
+      "styles": [
+        {
+          "style_id": "modern_anime",
+          "name_de": "Moderner Anime",
+          "ui_moodboard_description": "Detailreicher japanischer Zeichentrickstil mit dramatischem Himmel und Lichteffekten.",
+          "positive_prompt": "Modern anime aesthetic, high-quality Japanese animation, beautiful cinematic background, hand-drawn look, vibrant cell-shaded colors, Makoto Shinkai style.",
+          "negative_prompt": "3d render, live action, photorealistic, realistic skin textures, oil painting, western cartoon style, claymation"
+        },
+        {
+          "style_id": "graphic_novel_noir",
+          "name_de": "Graphic Novel / Comic Noir",
+          "ui_moodboard_description": "Harte, schwarze Tuschelinien, hoher Chiaroscuro-Kontrast und düstere Schatten.",
+          "positive_prompt": "Graphic novel illustration, dark comic book art style, heavy ink outlines, high contrast black and white, dramatic shadows, gritty noir aesthetic.",
+          "negative_prompt": "vibrant colors, colorful, photorealistic, smooth 3d render, soft shading, kid friendly, cute style"
+        },
+        {
+          "style_id": "la_linea",
+          "name_de": "La Linea (Die Linie)",
+          "ui_moodboard_description": "Eine einzige, durchgehende dicke weiße Linie auf knalligem, einfarbigem Hintergrund.",
+          "positive_prompt": "La Linea animation style, inspired by Osvaldo Cavandoli, single continuous thick white line art, minimalist 2D cartoon vector, solid vibrant flat color background, smooth line, extremely simple silhouette, retro Italian animation aesthetic, fluid motion.",
+          "negative_prompt": "3d elements, shading, shadows, gradients, realistic textures, complex environment, multiple colors, background details, depth of field"
+        },
+        {
+          "style_id": "biene_maja_70s",
+          "name_de": "70s Nostalgie-Zeichentrick",
+          "ui_moodboard_description": "Weiche, warme Farben und handgemalte Aquarell-Naturhintergründe der Ur-Maja.",
+          "positive_prompt": "1970s classic European-Japanese anime style, cell-shaded hand-drawn animation, vintage cartoon aesthetic, lush watercolor summer meadow background, warm nostalgic lighting, soft lines, inspired by Nippon Animation classics, simple and charming character design.",
+          "negative_prompt": "modern 3d cgi, pixar render, digital glow, high-tech, laser sharp lines, neon colors, computer graphics"
+        },
+        {
+          "style_id": "pumuckl_2d",
+          "name_de": "Pumuckl Welt (Reiner Zeichentrick)",
+          "ui_moodboard_description": "Komplett gezeichnete Welt mit sanften Aquarell-Hintergründen und klaren Tuschekonturen.",
+          "positive_prompt": "Full 2D cell animation style, classic European cartoon look, hand-drawn vector art, soft watercolor painted background of a nostalgic room, clean black ink outlines, flat vibrant colors, whimsical and cozy children's book aesthetic, smooth traditional animation.",
+          "negative_prompt": "live action footage, realistic human faces, real wood photography, 3d digital rendering, sharp metallic textures"
+        }
+      ]
+    },
+    {
+      "category_id": "abstract_motion",
+      "category_name_de": "Abstrakt & Business",
+      "styles": [
+        {
+          "style_id": "flat_design",
+          "name_de": "Flat Design / Vector Motion",
+          "ui_moodboard_description": "Minimalistisch, zweidimensional, klare geometrische Formen ohne Verläufe.",
+          "positive_prompt": "Flat design vector illustration, 2D motion graphics, minimalist infographic style, clean corporate colors, Adobe Illustrator aesthetic.",
+          "negative_prompt": "3d space, realistic lighting, depth, complex shaders, photographic textures, hand-drawn sketch, shadows"
+        }
+      ]
+    }
+  ]
+}
