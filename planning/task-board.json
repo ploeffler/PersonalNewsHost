@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 95,
+  "revision": 96,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4727,7 +4727,7 @@
       "id": "T195",
       "epic": "E16",
       "title": "Automatischer Versionscheck gegen das Originalrepository",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T180"
       ],
@@ -4746,7 +4746,18 @@
       "source": "user-chat-2026-11-01-upstream-updates",
       "version": "0.2",
       "package": "A20",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "9b4f98217d7d42419aa1d49d1bbdc325",
+        "expires_at": 1793525209.4394906,
+        "files": [
+          "docs/guide/updates.md",
+          "planning/reviews/T195-update-check.md",
+          "scripts/local_runtime.py",
+          "scripts/update_check.py",
+          "tests/test_update_check.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -6496,6 +6507,15 @@
       "client": "codex-local-coordinator",
       "at": 1793521489.1538506,
       "note": "Explicit owner request: automatic version check against original repository and update installation. Added to 0.2, linked persistence and deployment acceptance. No updater executed."
+    },
+    {
+      "operation_id": "5315f6a2e35a4d9b824a75e2ddb77721",
+      "revision": 96,
+      "action": "claim",
+      "task": "T195",
+      "client": "codex-local-coordinator",
+      "at": 1793521609.4394906,
+      "note": ""
     }
   ]
 }
