@@ -2,7 +2,7 @@
   "schema_version": 1,
   "repository": "ploeffler/PersonalNewsHost",
   "branch": "Full-featured-Newsoutlet",
-  "source_revision": 84,
+  "source_revision": 86,
   "milestones": {
     "0.1": {
       "number": 1,
@@ -775,6 +775,11 @@
       "number": 178,
       "url": "https://github.com/ploeffler/PersonalNewsHost/issues/178",
       "milestone": 1
+    },
+    "T323": {
+      "number": 181,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/181",
+      "milestone": 2
     }
   }
 }
