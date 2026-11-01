@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 101,
+  "revision": 102,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4727,7 +4727,7 @@
       "id": "T195",
       "epic": "E16",
       "title": "Alle Fork-Branches automatisch mit dem Originalrepository vergleichen",
-      "status": "in_progress",
+      "status": "todo",
       "depends_on": [
         "T180"
       ],
@@ -4746,17 +4746,7 @@
       "source": "user-chat-2026-11-01-upstream-updates",
       "version": "0.2",
       "package": "A20",
-      "lease": {
-        "client": "codex-local-coordinator",
-        "token": "d079a661d5d746dd9b8fc8e0e21817bc",
-        "expires_at": 1793526434.6273794,
-        "files": [
-          "docs/guide/fork-sync.md",
-          "planning/reviews/T195-fork-check.md",
-          "scripts/fork_check.py",
-          "tests/test_fork_check.py"
-        ]
-      },
+      "lease": null,
       "review": null,
       "local_work_pending": false,
       "evidence": [
@@ -6579,6 +6569,15 @@
       "task": "T196",
       "client": "codex-local-coordinator",
       "at": 1793522837.0549374,
+      "note": ""
+    },
+    {
+      "operation_id": "df351ee5c3c349a6a3d08918b7380f15",
+      "revision": 102,
+      "action": "release",
+      "task": "T195",
+      "client": "codex-local-coordinator",
+      "at": 1793523528.3175337,
       "note": ""
     }
   ]
