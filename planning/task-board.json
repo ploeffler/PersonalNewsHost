@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 108,
+  "revision": 109,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -2379,7 +2379,7 @@
       "id": "T181",
       "epic": "E16",
       "title": "Repository-Installation unter Linux",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T180"
       ],
@@ -2410,7 +2410,21 @@
           "tests/test_install_linux.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-local-coordinator",
+        "commit": "a3d1e6b00ef344d4647de1ea18c6a403aec92a00",
+        "checks": "402 local offline regression tests passed; 6 installer tests passed. Fresh Ubuntu24.04/Python3.12 install, repeat data preservation, real espeak production and loopback video passed: https://github.com/ploeffler/PersonalNewsHost/actions/runs/41302108934 ; Foundation lint/offline regression/JS passed: https://github.com/ploeffler/PersonalNewsHost/actions/runs/41302108885 . Host Ubuntu26.04/Python3.14 left unchanged.",
+        "files": [
+          ".github/workflows/linux-install-smoke.yml",
+          ".gitignore",
+          "docs/guide/installation.md",
+          "docs/guide/linux-installation.md",
+          "planning/reviews/T181-linux-installation.md",
+          "scripts/install_linux.py",
+          "tests/linux_install_smoke.py",
+          "tests/test_install_linux.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -6680,6 +6694,15 @@
       "task": "T181",
       "client": "codex-local-coordinator",
       "at": 1793532083.1876936,
+      "note": ""
+    },
+    {
+      "operation_id": "5586458a44ef4120bd3cac75b93e3140",
+      "revision": 109,
+      "action": "submit",
+      "task": "T181",
+      "client": "codex-local-coordinator",
+      "at": 1793532716.779608,
       "note": ""
     }
   ]
