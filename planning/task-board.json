@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 98,
+  "revision": 99,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4761,7 +4761,7 @@
       "title": "Zurückliegende Fork-Branches mit Originalbranches synchronisieren",
       "status": "todo",
       "depends_on": [
-        "T195"
+        "T180"
       ],
       "instructions": [
         "Für jeden zurückliegenden Forkbranch eine Übernahme der fehlenden Originalcommits anbieten, einzeln oder gesammelt für ausgewählte Branches. Explizit konfigurierter Automatikmodus darf konfliktfreie Synchronisierungen ohne Freigabedialog pro Lauf ausführen; Prüf- und Schreibrechte getrennt halten.",
@@ -4785,7 +4785,7 @@
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "Korrigierter Nutzerumfang: Repository-Forksynchronisierung, keine automatische Software-/Containerinstallation.",
-      "coordination_note": "Ursprünglich zu weit als Release-Deployment interpretiert; durch Nutzerbeispiel auf GitHub-Fork-/Branch-Synchronisierung konkretisiert."
+      "coordination_note": "Owner explicitly requests implementation of checker and synchronization as a paired feature. Both depend on the established runtime contract; T196 consumes the committed checker API and is integration-tested with it. Both require separate review; no T195 approval inferred."
     }
   ],
   "packages": [
@@ -5484,6 +5484,7 @@
       "T163",
       "T181",
       "T195",
+      "T196",
       "T200",
       "T210",
       "T323",
@@ -5500,7 +5501,6 @@
       "T142",
       "T144",
       "T160",
-      "T196",
       "T902"
     ],
     [
@@ -6533,6 +6533,15 @@
           "tests/test_update_check.py"
         ]
       }
+    },
+    {
+      "operation_id": "95176ddcd1e844f9a16c8d7c02bb6e0c",
+      "revision": 99,
+      "action": "pair-fork-implementation",
+      "task": "T195,T196",
+      "client": "codex-local-coordinator",
+      "at": 1793522831.8615458,
+      "note": "Owner explicitly requests implementation of checker and synchronization as a paired feature. Both depend on the established runtime contract; T196 consumes the committed checker API and is integration-tested with it. Both require separate review; no T195 approval inferred."
     }
   ]
 }
