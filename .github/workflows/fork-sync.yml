@@ -1,0 +1,70 @@
+name: Check and synchronize all fork branches
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+    inputs:
+      synchronize:
+        description: 'Ausgewählte Branches synchronisieren (ohne Auswahl: alle nur zurückliegenden)'
+        type: boolean
+        default: false
+      branches:
+        description: 'Branchname je Zeile; leer bedeutet alle nur zurückliegenden Branches'
+        type: string
+        default: ''
+      allow_merge:
+        description: 'Eigene Commits durch Merge erhalten (nur explizit ausgewählte Branches)'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: personalnewshost-fork-sync
+  cancel-in-progress: false
+jobs:
+  check:
+    if: github.event.repository.fork
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - name: Compare every branch and notify on changed backlog
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/fork_check.py --fork "$GITHUB_REPOSITORY" --notify
+  synchronize:
+    needs: check
+    if: github.event.repository.fork && (vars.FORK_SYNC_AUTOMATIC == 'true' || inputs.synchronize)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - name: Synchronize eligible branches without force
+        env:
+          GITHUB_TOKEN: ${{ secrets.FORK_SYNC_TOKEN || github.token }}
+          SELECTED_BRANCHES: ${{ inputs.branches }}
+          ALLOW_MERGE: ${{ inputs.allow_merge }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from scripts.fork_sync import main
+          args = ['--fork', os.environ['GITHUB_REPOSITORY'], '--notify']
+          selected = [line.strip() for line in os.environ.get('SELECTED_BRANCHES', '').splitlines() if line.strip()]
+          for branch in selected:
+              args.extend(['--branch', branch])
+          if selected and os.environ.get('ALLOW_MERGE') == 'true':
+              args.append('--merge')
+          if not selected:
+              args.append('--all-behind')
+          raise SystemExit(main(args))
+          PY
