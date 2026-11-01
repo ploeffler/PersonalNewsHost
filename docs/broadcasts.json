@@ -1,42 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261101T092602Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 01.11.2026 um 10:26 Uhr",
-      "created_at": 1793525162.094236,
-      "video": "broadcasts/20261101T092602Z.mp4",
-      "sources": [
-        {
-          "title": "Kinder fanden Nadeln in Halloween-Süßigkeiten",
-          "url": "https://www.krone.at/4357651"
-        },
-        {
-          "title": "Beliebtes Tanzlokal am Wörthersee lud zur großen Gruselparty",
-          "url": "https://www.kleinezeitung.at/artikel/41406372/beliebtes-tanzlokal-am-woerthersee-lud-zur-grossen-gruselparty"
-        },
-        {
-          "title": "Lämmer bis Luftballons: Diese neuen Ausstellungen sollten Sie nicht verpassen",
-          "url": "https://www.derstandard.at/story/3000000346284/laemmer-bis-luftballons-diese-neuen-ausstellungen-sollten-sie-nicht-verpassen?ref=rss"
-        },
-        {
-          "title": "Heidi Klum verkleidete sich zu Halloween als ihre eigene Hand",
-          "url": "https://www.derstandard.at/story/3000000346898/heidi-klum-verkleidete-sich-zu-halloween-als-ihre-eigene-hand?ref=rss"
-        },
-        {
-          "title": "Heidi Klum ging zu Halloween als ihre eigene Hand",
-          "url": "https://orf.at/stories/3446753/"
-        },
-        {
-          "title": "Umfangreicher Verkehrsschwerpunkt an Halloween",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261101T092602Z.txt",
-      "subtitles": "broadcasts/20261101T092602Z.vtt",
-      "subtitle_download": "broadcasts/20261101T092602Z.srt"
-    },
-    {
       "id": "20261101T165100Z",
       "kind": "broadcast",
       "title": "Nachrichten 01.11.2026 um 17:51 Uhr",
@@ -67,6 +31,38 @@
       "transcript": "broadcasts/20261101T165100Z.txt",
       "subtitles": "broadcasts/20261101T165100Z.vtt",
       "subtitle_download": "broadcasts/20261101T165100Z.srt"
+    },
+    {
+      "id": "20261101T211404Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 01.11.2026 um 22:14 Uhr",
+      "created_at": 1793567644.946285,
+      "video": "broadcasts/20261101T211404Z.mp4",
+      "sources": [
+        {
+          "title": "Radler nahm Kindern zu Halloween Süßigkeiten weg",
+          "url": "https://www.krone.at/4358363"
+        },
+        {
+          "title": "Demokratenstreit in Michigan eskaliert",
+          "url": "https://orf.at/stories/3446799/"
+        },
+        {
+          "title": "Bundeskanzler Stocker mit Wirtschaftsdelegation in China",
+          "url": "https://www.kleinezeitung.at/artikel/41410130/bundeskanzler-stocker-mit-wirtschaftsdelegation-in-china"
+        },
+        {
+          "title": "Schönheit des Unvollkommenen: Neue Musik der Queens of the Stone Age",
+          "url": "https://www.derstandard.at/story/3000000346743/schoenheit-des-unvollkommenen-neue-musik-der-queens-of-the-stone-age?ref=rss"
+        },
+        {
+          "title": "Umfangreicher Verkehrsschwerpunkt an Halloween",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261101T211404Z.txt",
+      "subtitles": "broadcasts/20261101T211404Z.vtt",
+      "subtitle_download": "broadcasts/20261101T211404Z.srt"
     }
   ]
 }
