@@ -11,6 +11,20 @@ from scripts.style_preview import policy
 
 
 class ServerTests(unittest.TestCase):
+    def test_reissue_requires_auth_csrf_credentials_and_explicit_paid_consent(self):
+        old=self.store.adopt(0,policy({}))['batches'][0]['id']
+        body={'batch':old,'allow_paid':True,'allow_uncertain':False}
+        self.assertEqual(self.request('/api/reissue',body,cookie=False)[0],401)
+        self.assertEqual(self.request('/api/reissue',body,csrf=False)[0],403)
+        env={'PNH_STYLE_IMAGE_PROVIDER':'openai','PNH_STYLE_ALLOW_PAID':'true','PNH_STYLE_IMAGE_API_KEY':'fixture'}
+        with patch.dict('os.environ',env):
+            self.assertEqual(self.request('/api/reissue',{'batch':old,'allow_paid':False})[0],400)
+            result=self.request('/api/reissue',body)
+            self.assertEqual(result[0],200)
+            self.assertEqual(len(result[1]['batches']),2)
+            self.assertEqual(self.request('/api/reissue',body)[0],200)
+            self.assertEqual(len(self.store.state()['batches']),2)
+
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
         self.store=Store(Path(self.temp.name)/'state');self.app=App(self.store,'unit-fixture-password-123',Path(self.temp.name)/'absent.json')
@@ -74,3 +88,4 @@ class ServerTests(unittest.TestCase):
     def test_logout_invalidates_server_session(self):
         self.assertEqual(self.request('/api/logout',{})[0],200)
         self.assertEqual(self.request('/api/state')[0],401)
+

@@ -101,6 +101,7 @@ class Store:
             CREATE TABLE IF NOT EXISTS versions (id TEXT PRIMARY KEY, style TEXT NOT NULL, created REAL NOT NULL);
             CREATE TABLE IF NOT EXISTS batches (id TEXT PRIMARY KEY, version TEXT NOT NULL, snapshot TEXT NOT NULL, created REAL NOT NULL);
             CREATE TABLE IF NOT EXISTS jobs (id TEXT PRIMARY KEY, batch TEXT NOT NULL, style_id TEXT NOT NULL, status TEXT NOT NULL, error TEXT NOT NULL DEFAULT '', attempts INTEGER NOT NULL DEFAULT 0);
+            CREATE TABLE IF NOT EXISTS reissues (source TEXT PRIMARY KEY, target TEXT NOT NULL);
             ''')
             db.execute('INSERT OR IGNORE INTO editor VALUES (1,0,?,NULL)',(canonical(DEFAULT),))
         os.chmod(self.path,0o600)
@@ -129,6 +130,10 @@ class Store:
             batches=[]
             for batch in db.execute('SELECT id,version,created FROM batches ORDER BY created DESC'):
                 item=dict(batch);item['stale']=item['version']!=editor['active']
+                link=db.execute('SELECT target FROM reissues WHERE source=?',(item['id'],)).fetchone()
+                item['replacement']=link['target'] if link else None
+                link=db.execute('SELECT source FROM reissues WHERE target=?',(item['id'],)).fetchone()
+                item['reissued_from']=link['source'] if link else None
                 item['jobs']=[dict(j) for j in db.execute('SELECT * FROM jobs WHERE batch=? ORDER BY style_id',(item['id'],))]
                 batches.append(item)
             return {'revision':editor['revision'],'draft':json.loads(editor['draft']),'active_version':editor['active'],
@@ -143,6 +148,36 @@ class Store:
             db.execute('BEGIN IMMEDIATE')
             if db.execute('UPDATE editor SET draft=?,revision=revision+1 WHERE id=1 AND revision=?',(canonical(value),revision)).rowcount!=1:
                 raise Conflict('Entwurf wurde anderweitig geändert. Neu laden.')
+        return self.state()
+
+    def reissue(self,batch,provider,allow_uncertain=False):
+        """Explicit new consent; retain old context, reservations and attempt history."""
+        allowed={'backend','model','quality','format','allow_paid','reservation_eur','monthly_eur','batch_eur'}
+        if not isinstance(provider,dict) or set(provider)!=allowed or provider['backend']!='openai' or provider['allow_paid'] is not True:
+            raise ValueError('Aktuellen Bildprovider und Kostenfreigabe einrichten')
+        if type(allow_uncertain) is not bool:raise ValueError('Ungültige Kostenbestätigung')
+        with self.db() as db:
+            db.execute('BEGIN IMMEDIATE')
+            source=db.execute('SELECT * FROM batches WHERE id=?',(batch,)).fetchone()
+            if source is None:raise ValueError('Unbekannte Vorschauserie')
+            link=db.execute('SELECT target FROM reissues WHERE source=?',(batch,)).fetchone()
+            if link is None:
+                statuses={r['status'] for r in db.execute('SELECT status FROM jobs WHERE batch=?',(batch,))}
+                if 'processing' in statuses:raise Conflict('Laufende Serie zuerst abschließen lassen')
+                if not statuses-{'complete'}:raise ValueError('Serie ist bereits vollständig')
+                if statuses & {'uncertain','failed'} and not allow_uncertain:
+                    raise ValueError('Vor Neubeauftragung Abrechnung bestätigen')
+                snapshot=json.loads(source['snapshot'])
+                snapshot['provider']=deepcopy(provider)
+                snapshot['reissued_from']=batch
+                target=digest(snapshot)
+                db.execute('INSERT INTO batches VALUES (?,?,?,?)',(target,source['version'],canonical(snapshot),time.time()))
+                for category in snapshot['library']['categories']:
+                    for entry in category['styles']:
+                        job=digest({'batch':target,'style_id':entry['style_id']})
+                        db.execute('INSERT INTO jobs(id,batch,style_id,status) VALUES (?,?,?,?)',(job,target,entry['style_id'],'queued'))
+                db.execute('INSERT INTO reissues VALUES (?,?)',(batch,target))
+                db.execute("UPDATE jobs SET status='superseded',error='Durch ausdrücklich freigegebene Ersatzserie abgelöst' WHERE batch=? AND status='queued'",(batch,))
         return self.state()
 
     def restore(self,version,revision):
@@ -193,7 +228,9 @@ class Store:
 
     def retry(self,job,allow_uncertain=False):
         with self.db() as db:
-            db.execute('BEGIN IMMEDIATE');row=db.execute('SELECT status FROM jobs WHERE id=?',(job,)).fetchone()
+            db.execute('BEGIN IMMEDIATE');row=db.execute('SELECT status,batch FROM jobs WHERE id=?',(job,)).fetchone()
+            if row and db.execute('SELECT 1 FROM reissues WHERE source=?',(row['batch'],)).fetchone():
+                raise ValueError('Serie wurde durch eine neue Beauftragung abgelöst')
             allowed={'failed','waiting_provider','waiting_budget'}
             if allow_uncertain:allowed.add('uncertain')
             if row is None or row['status'] not in allowed:raise ValueError('Job ist nicht wiederholbar oder Kostenbestätigung fehlt')
@@ -205,3 +242,4 @@ class Store:
             row=db.execute('SELECT j.*,b.snapshot FROM jobs j JOIN batches b ON b.id=j.batch WHERE j.id=?',(job,)).fetchone()
         if row is None:raise ValueError('Unbekannter Vorschauauftrag')
         return dict(row)
+

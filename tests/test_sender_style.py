@@ -8,6 +8,47 @@ from scripts.style_preview import policy
 
 
 class SenderStyleTests(unittest.TestCase):
+    def test_reissue_waiting_series_preserves_context_and_survives_restart(self):
+        old=self.store.adopt(0,policy({}))['batches'][0]['id']
+        with self.store.db() as db:
+            db.execute("UPDATE jobs SET status='waiting_provider' WHERE batch=?",(old,))
+        original=self.store.state()
+        env={'PNH_STYLE_IMAGE_PROVIDER':'openai','PNH_STYLE_ALLOW_PAID':'true',
+             'PNH_STYLE_RESERVE_EUR':'0.25','PNH_STYLE_BATCH_EUR':'3.50','PNH_STYLE_MONTHLY_EUR':'3.50'}
+        # Later draft changes must not enter the saved series context.
+        self.store.save_draft({**DEFAULT,'name':'Later draft'},0)
+        state=self.store.reissue(old,policy(env))
+        replacement=next(b for b in state['batches'] if b['reissued_from']==old)
+        self.assertEqual(len(replacement['jobs']),14)
+        context=json.loads(self.store.job_context(replacement['jobs'][0]['id'])['snapshot'])
+        self.assertEqual(context['style'],original['active'])
+        self.assertEqual(context['provider'],policy(env))
+        self.assertEqual(state['draft']['name'],'Later draft')
+        self.assertEqual(state['active_version'],original['active_version'])
+        # Repeating the command, even concurrently or after restart, reuses one series.
+        errors=[]
+        def again():
+            try:Store(self.root/'private').reissue(old,policy(env))
+            except Exception as error:errors.append(error)
+        threads=[threading.Thread(target=again) for _ in range(2)]
+        for t in threads:t.start()
+        for t in threads:t.join()
+        self.assertEqual(errors,[])
+        self.assertEqual(len(self.store.state()['batches']),2)
+        with self.assertRaises(ValueError):self.store.retry(original['batches'][0]['jobs'][0]['id'])
+
+    def test_reissue_requires_new_consent_and_handles_inflight_and_uncertain(self):
+        old=self.store.adopt(0,policy({}))['batches'][0]['id']
+        with self.assertRaises(ValueError):self.store.reissue(old,policy({}))
+        provider=policy({'PNH_STYLE_IMAGE_PROVIDER':'openai','PNH_STYLE_ALLOW_PAID':'true'})
+        with self.store.db() as db:db.execute("UPDATE jobs SET status='processing'")
+        with self.assertRaises(Conflict):self.store.reissue(old,provider,True)
+        with self.store.db() as db:db.execute("UPDATE jobs SET status='uncertain',attempts=1")
+        with self.assertRaises(ValueError):self.store.reissue(old,provider)
+        state=self.store.reissue(old,provider,True)
+        original=next(b for b in state['batches'] if b['id']==old)
+        self.assertTrue(all(j['status']=='uncertain' and j['attempts']==1 for j in original['jobs']))
+
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
         self.root=Path(self.temp.name);self.store=Store(self.root/'private')
@@ -73,3 +114,4 @@ class SenderStyleTests(unittest.TestCase):
         with self.store.db() as db:db.execute("UPDATE jobs SET status='processing',attempts=1 WHERE id=?",(job,))
         self.store.recover();result=self.store.job_context(job)
         self.assertEqual(result['status'],'complete');self.assertEqual(result['attempts'],1)
+

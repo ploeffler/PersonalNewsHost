@@ -131,3 +131,20 @@ Veröffentlichung werden automatisch ausgelöst. Die Anmeldung verwendet eine ku
 lokale Sitzung mit HttpOnly/SameSite-Cookie, CSRF- und Origin-/Host-Prüfung. Die HTTP-
 Sitzung ist ausschließlich für Loopback bestimmt; ein öffentlicher Produktionsbetrieb
 benötigt die spätere gemeinsame HTTPS-/Admin-Integration.
+
+
+## Wartende Vorschauen mit neuem Provider beauftragen
+
+Ein normaler Wiederholungsversuch verwendet weiterhin den gespeicherten
+Provider- und Budgetstand. Nach einer Provider-Einrichtung oder einer neuen
+Kostenfreigabe stattdessen **Mit aktueller Providerkonfiguration neu beauftragen**
+verwenden. Die Aktion benötigt einen eingerichteten Bildprovider und eine
+explizite neue Kostenbestätigung; ohne Freigabe erfolgen keine Aufrufe.
+
+Es entsteht eine verknüpfte vollständige Ersatzserie mit allen Bibliotheksstilen.
+Senderstil und Bibliothek stammen aus der ursprünglichen Serie, nicht aus einem
+zwischenzeitlich bearbeiteten Entwurf. Alte Bilder, Versuche und Reservierungen
+bleiben erhalten; bereits angefallene Kosten werden nicht erstattet oder
+zurückgesetzt. Unklare und fehlgeschlagene Versuche vorab in der Abrechnung prüfen.
+Laufende Serien können erst nach Abschluss des aktuellen Aufrufs ersetzt werden.
+Mehrfaches Bestätigen derselben Neubeauftragung erzeugt keine weiteren Serien.

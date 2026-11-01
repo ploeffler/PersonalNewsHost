@@ -149,6 +149,13 @@ class Handler(BaseHTTPRequestHandler):
             elif path=='/api/retry':
                 if type(body.get('allow_uncertain',False)) is not bool:raise ValueError('Ungültige Kostenbestätigung')
                 data=app.store.retry(body.get('job'),body.get('allow_uncertain',False))
+            elif path=='/api/reissue':
+                if body.get('allow_paid') is not True or type(body.get('allow_uncertain',False)) is not bool:
+                    raise ValueError('Neue Kostenfreigabe erforderlich')
+                provider=policy()
+                if not os.environ.get('PNH_STYLE_IMAGE_API_KEY'):
+                    raise ValueError('Bildprovider-Zugang fehlt')
+                data=app.store.reissue(body.get('batch'),provider,body.get('allow_uncertain',False))
             else:self.reply(404,{'error':'Nicht gefunden'});return
             self.reply(200,data)
         except Conflict as error:self.reply(409,{'error':str(error)})
@@ -178,3 +185,4 @@ def main():
 
 
 if __name__=='__main__':main()
+
