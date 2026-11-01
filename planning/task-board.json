@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 130,
+  "revision": 131,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -5115,12 +5115,14 @@
       "title": "Redaktions-Web-App abnehmen und dokumentieren",
       "status": "todo",
       "depends_on": [
-        "T361"
+        "T361",
+        "T363"
       ],
       "instructions": [
         "Ende-zu-Ende-Tests mit Fixtures für Bearbeitung, Quellenprüfung, Freigabe, parallele Änderungen und getrennte Produktion/Veröffentlichung ergänzen.",
         "Zugriffsschutz, CSRF, Secretfreiheit, Neustart/Persistenz und Budget-0-Fallbacks prüfen; Nutzeranleitung und Upgrade von 1.0 vorbereiten.",
-        "Dokumentation und Release erst nach bestätigter Abnahme von 1.1 veröffentlichen."
+        "Dokumentation und Release erst nach bestätigter Abnahme von 1.1 veröffentlichen.",
+        "Automatische Updates einschließlich Migration, Schutz laufender Redaktionsarbeit und Rückkehr zur vorherigen Version in die Endabnahme aufnehmen."
       ],
       "acceptance": [
         "Browser-Abnahme und Regressionstests bestanden; vorhandene Daten und Redaktionsfunktionen bleiben bei Upgrade erhalten."
@@ -5133,6 +5135,36 @@
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "Expliziter Planungsauftrag für Version 1.1; keine Vorverlegung der Implementierung.",
+      "coordination_note": ""
+    },
+    {
+      "id": "T363",
+      "epic": "E33",
+      "title": "Automatische Updates der Redaktions-Web-App",
+      "status": "todo",
+      "depends_on": [
+        "T361"
+      ],
+      "instructions": [
+        "Automatische Suche und Installation freigegebener kompatibler stabiler Versionen für Linux-Dienst und Docker/Compose vorsehen; Updatekanal, Prüfintervall und Wartungsfenster konfigurierbar machen. Automatik bei Einrichtung explizit aktivieren; manuellen Start und Pause anbieten.",
+        "Nur authentische versionierte Release-Artefakte bzw. festgelegte Container-Digests verwenden und Integrität prüfen. Keine automatischen Merges nach main oder ungeprüfte git-pull-Updates; Fork-Anpassungen und lokale Änderungen erhalten oder Update mit verständlichem Konflikthinweis zurückhalten.",
+        "Vor Installation Datenbank, Konfiguration und erforderlichen persistenten Zustand sichern, Kompatibilität und freien Speicher prüfen; Migrationen versionieren. Nach Installation Healthcheck durchführen; bei Fehler zur vorherigen Version und konsistentem Datenstand zurückkehren. Nicht rückwärtskompatible Migrationen benötigen einen expliziten Freigabeschritt.",
+        "Laufende Produktionen, Freigaben und ungespeicherte Browserentwürfe schützen: Update koordiniert verschieben bzw. Arbeitsstände sichern; Browser über neue Version informieren und keinen erzwungenen Reload mit Datenverlust auslösen. Frontend-/API-Versionen und Cache-Aktualisierung konsistent behandeln.",
+        "Updateaktionen ausschließlich über geschützte Verwaltung/Hostprozess ausführen; Status, installierte/verfügbare Version, Fortschritt, Fehler und Rollback in der Verwaltung zeigen. Zugangsdaten bleiben serverseitig; keine unbeschränkte Docker-Socket-Freigabe an den Browser.",
+        "Fixturetests für Update, Neustart, Migration, unterbrochenen Download, Integritätsfehler, fehlgeschlagenen Healthcheck, Rollback, Offlinebetrieb und parallele Redaktion ergänzen; keine kostenpflichtigen Dienste voraussetzen."
+      ],
+      "acceptance": [
+        "Eine freigegebene kompatible Version wird bei aktivierter Automatik im Wartungsfenster ohne manuelles Herunterladen installiert; Daten und Einstellungen bleiben erhalten.",
+        "Fehlerhaftes Update wird zurückgenommen; ungespeicherte Entwürfe und laufende Arbeiten gehen nicht verloren. Update und Rollback sind für Linux und Container nachvollziehbar geprüft."
+      ],
+      "source": "user-chat-2026-11-01-webapp-auto-updates",
+      "version": "1.1",
+      "package": "A45",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "Planungsanforderung; keine bestehende Installation oder Automatik aktiviert.",
       "coordination_note": ""
     }
   ],
@@ -5567,7 +5599,8 @@
       "tasks": [
         "T360",
         "T361",
-        "T362"
+        "T362",
+        "T363"
       ]
     }
   ],
@@ -5802,9 +5835,10 @@
       "tasks": [
         "T360",
         "T361",
-        "T362"
+        "T362",
+        "T363"
       ],
-      "acceptance": "Geschützte responsive Redaktions-Web-App integriert bestehende redaktionelle Abläufe; Browser-Abnahme, Migration und Regressionstests bestanden."
+      "acceptance": "Geschützte responsive Redaktions-Web-App integriert bestehende redaktionelle Abläufe; Browser-Abnahme, Migration und Regressionstests bestanden. Automatische Updates einschließlich Sicherung, Integritätsprüfung und Rollback sind abgenommen."
     }
   ],
   "source_sha256": {
@@ -6037,6 +6071,9 @@
     ],
     [
       "T361"
+    ],
+    [
+      "T363"
     ],
     [
       "T362"
@@ -7210,6 +7247,13 @@
       "client": "codex-webapp-plan",
       "at": 1793547539.749,
       "note": "Explicit user request: plan editorial web app for version 1.1; active release unchanged."
+    },
+    {
+      "revision": 131,
+      "action": "plan",
+      "client": "codex-webapp-plan",
+      "at": 1793547637.728,
+      "note": "Explicit user request: automatic web app updates in 1.1."
     }
   ]
 }

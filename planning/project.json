@@ -93,7 +93,7 @@
     "uncommitted_local_0_1_work": "Marked local_work_pending; reconcile deliberately after integration before another client claims it."
   },
   "inventory": {
-    "task_count": 157,
+    "task_count": 158,
     "package_count": 46,
     "release_count": 11
   },
@@ -162,10 +162,26 @@
     "tasks": [
       "T360",
       "T361",
-      "T362"
+      "T362",
+      "T363"
     ],
     "scope": "Responsive browser workspace for the shared editorial access, preserving departments, virtual employees, source checking, review, shows and separate production/publication.",
     "cms": false,
-    "virtual_employee_logins": false
+    "virtual_employee_logins": false,
+    "automatic_updates": {
+      "status": "planned",
+      "task": "T363",
+      "version": "1.1",
+      "channels": "verified compatible stable releases",
+      "activation": "explicit setup opt-in",
+      "features": [
+        "configurable check interval and maintenance window",
+        "backup and migration",
+        "health check and consistent rollback",
+        "preserve drafts and running productions",
+        "Linux service and Docker/Compose",
+        "protected update status and controls"
+      ]
+    }
   }
 }
