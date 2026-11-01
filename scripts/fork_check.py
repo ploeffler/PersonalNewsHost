@@ -109,24 +109,34 @@ def branches(api, repo):
     return result
 
 
-def scan(api, fork, upstream=None):
+def scan(api, fork, upstream=None, mapping=None):
     fork = repository(fork)
     info = api.call('GET', '/repos/' + fork)
     if not info.get('fork'):
         raise APIError('not_a_fork')
     related = {info.get(key, {}).get('full_name') for key in ('parent', 'source')}
     upstream = repository(upstream or info.get('source', {}).get('full_name') or info.get('parent', {}).get('full_name'))
-    if upstream.lower() == fork.lower() or upstream not in related:
+    if upstream.lower() == fork.lower() or upstream.lower() not in {name.lower() for name in related if isinstance(name, str)}:
         raise APIError('upstream_not_parent_or_source')
     theirs, ours = branches(api, upstream), branches(api, fork)
+    mapping = {} if mapping is None else mapping
+    if not isinstance(mapping, dict) or any(not isinstance(k, str) or not isinstance(v, str) or not k or not v or len(k) > 1024 or len(v) > 1024 or any(c in k + v for c in '\r\n\x00') for k, v in mapping.items()):
+        raise APIError('invalid_branch_mapping')
+    if not set(mapping) <= set(ours):
+        raise APIError('mapped_fork_branch_missing')
     report = {'fork': fork, 'upstream': upstream, 'checked_at': time.time(), 'branches': [], 'error': None}
     owner = fork.split('/')[0]
-    for name in sorted(set(ours) | set(theirs)):
-        local, remote = ours.get(name), theirs.get(name)
-        row = {'branch': name, 'fork_sha': local['sha'] if local else None,
+    pairs = [(name, mapping.get(name, name), ours[name]) for name in sorted(ours)]
+    used = {target for _, target, _ in pairs if target in theirs}
+    pairs += [(None, name, None) for name in sorted(set(theirs) - used)]
+    for name, target, local in pairs:
+        remote = theirs.get(target)
+        row = {'branch': name, 'upstream_branch': target, 'fork_sha': local['sha'] if local else None,
                'upstream_sha': remote['sha'] if remote else None,
                'protected': local['protected'] if local else False,
                'ahead': None, 'behind': None, 'status': 'fork_only' if not remote else 'upstream_only'}
+        if local and name in mapping and not remote:
+            row.update(status='unknown', error='mapped_upstream_branch_missing')
         if local and remote:
             row['compare_url'] = 'https://github.com/' + upstream + '/compare/' + remote['sha'] + '...' + owner + ':' + local['sha']
             if local['sha'] == remote['sha']:
@@ -146,7 +156,7 @@ def scan(api, fork, upstream=None):
 
 
 def fingerprint(report):
-    changed = [{key: row.get(key) for key in ('branch', 'fork_sha', 'upstream_sha', 'ahead', 'behind', 'status', 'error')}
+    changed = [{key: row.get(key) for key in ('branch', 'upstream_branch', 'fork_sha', 'upstream_sha', 'ahead', 'behind', 'status', 'error')}
                for row in report['branches'] if row.get('behind') or row['status'] == 'unknown']
     return hashlib.sha256(json.dumps([report['fork'], report['upstream'], changed], sort_keys=True).encode()).hexdigest()
 
@@ -157,11 +167,11 @@ def markdown(report):
         ticks = '`' * (max((len(run) for run in re.findall(r'`+', text)), default=0) + 1)
         return ticks + ' ' + text + ' ' + ticks
     lines = ['## Fork-/Upstream-Abgleich', '', f"Fork: {report['fork']} · Original: {report['upstream']}", '',
-             '| Branch | Status | Ahead | Behind | Vergleich |', '|---|---|---:|---:|---|']
+             '| Fork-Branch | Originalbranch | Status | Ahead | Behind | Vergleich |', '|---|---|---|---:|---:|---|']
     for row in report['branches']:
         link = '[Vergleich](' + row['compare_url'] + ')' if row.get('compare_url') else '–'
         lines.append('| ' + ' | '.join(escape(row.get(key) if row.get(key) is not None else '–')
-                                      for key in ('branch', 'status', 'ahead', 'behind')) + ' | ' + link + ' |')
+                                      for key in ('branch', 'upstream_branch', 'status', 'ahead', 'behind')) + ' | ' + link + ' |')
     if report.get('synchronization'):
         lines += ['', '### Übernahmeergebnis', '', '| Branch | Ergebnis | Konflikt/Schutz |', '|---|---|---|']
         for result in report['synchronization']:
@@ -217,13 +227,14 @@ def output(report, path=None):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--fork', required=True, help='OWNER/REPO')
-    parser.add_argument('--upstream', help='Defaults to the verified fork parent')
+    parser.add_argument('--upstream', help='Defaults to the verified original source')
+    parser.add_argument('--branch-map-json', default=os.environ.get('FORK_SYNC_BRANCH_MAP') or '{}')
     parser.add_argument('--notify', action='store_true', help='Create/update managed issue in fork')
     parser.add_argument('--report', type=Path)
     args = parser.parse_args(argv)
     try:
         api = GitHub()
-        report = scan(api, args.fork, args.upstream)
+        report = scan(api, args.fork, args.upstream, json.loads(args.branch_map_json))
         output(report, args.report)
         if args.notify:
             report['notification'] = notify(api, report)

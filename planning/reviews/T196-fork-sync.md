@@ -6,7 +6,9 @@ aktualisiert. Fast-forward ausschließlich force=false; eigene Commits bleiben
 fehlende Rechte und unklare Netzwerkergebnisse werden einzeln ausgewiesen. Kein
 blindes Wiederholen schreibender API-Aufrufe. Vergleich danach neu eingelesen.
 PR-Link ist ein Angebot, kein ungefragt erzeugter PR. Eigene/fehlende Branches
-werden weder gelöscht noch automatisch angelegt. Lokale Checkouts bleiben unberührt.
+werden weder gelöscht noch automatisch angelegt. Lokale Checkouts bleiben unberührt. Explizit anders zugeordnete Arbeitsbranches
+behalten ihren Namen; Kopfprüfung und PR-Link verwenden den konfigurierten
+Originalbranch.
 
 Workflow täglich 03:17 UTC, nur in Forks und mit Concurrency-Sperre. Prüfjob hat
 keine Contents-Schreibrechte; gesonderter Schreibjob nur bei manuellem Start oder
@@ -15,6 +17,6 @@ bewusst eingerichtetes Fork-Secret; Workflowänderungen können zusätzliche Rec
 benötigen. Keine echten Branchupdates oder Issue-Nachrichten bei Entwicklung.
 
 Automatische Tests decken Requests, Fehlerfälle und Nichtüberschreiben eigener
-History ab; tatsächliche GitHub-Schreiboperationen werden simuliert. Gesamtergebnis
-im Review. Tag v0.1 und main des Originalrepositorys bleiben unverändert. Aktiver
+History ab; tatsächliche GitHub-Schreiboperationen werden simuliert. 396 Offline-Tests einschließlich der 24 Forktests und Videotests bestanden.
+Weitere CI-Nachweise im Review. Tag v0.1 und main des Originalrepositorys bleiben unverändert. Aktiver
 Tagesbetrieb erfordert einmalige Einrichtung im Fork-Defaultbranch. Kein Release.

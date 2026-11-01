@@ -10,8 +10,10 @@ per Kommentar dokumentiert. Nur explizites --notify schreibt in Issues.
 Echter lesender QSSTV-Test: main 4 voraus/36 zurück; blackhole-trial aktuell;
 drei fork-eigene Branches und rx-sensitivity nur im Original erkannt. Kein
 Live-Schreibzugriff durchgeführt. APIs ohne Redirects, Tokenfehler redigiert.
-392 Tests im vollständigen Offline-/Videolauf bestanden. Danach ergänzter
-Source-Fork-Randfall separat abgesichert; alle 21 aktuellen Forktests bestehen.
+396 Tests im vollständigen Offline-/Videolauf bestanden, einschließlich
+Source-Fork-Randfall, sicherer Namensdarstellung und expliziter Arbeitsbranch-Zuordnung.
+Alle 24 Forktests bestehen. Fehlerhafte Zuordnungen
+werden nicht als aktuell gemeldet.
 Weitere CI-Ergebnisse im Aufgabenreview. Release-Checker bleibt getrennt.
 
 Tagesworkflow Teil des gemeinsam integrierten T196-Umfangs. Er muss im Default-

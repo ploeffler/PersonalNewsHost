@@ -38,13 +38,25 @@ class ForkCheckTests(unittest.TestCase):
     def test_every_branch_including_nondefault_slash_and_missing_counterparts(self):
         api = FakeAPI();report = scan(api, FORK)
         rows = {row['branch']: row for row in report['branches']}
-        self.assertEqual(set(rows), set(api.ours) | set(api.theirs))
+        self.assertEqual({r['branch'] for r in report['branches'] if r['fork_sha']}, set(api.ours))
+        self.assertEqual({r['upstream_branch'] for r in report['branches'] if r['upstream_sha']}, set(api.theirs))
         self.assertEqual(rows['main']['status'], 'current')
         self.assertEqual(rows['feature/topic']['behind'], 3)
         self.assertEqual(rows['my-only']['status'], 'fork_only')
-        self.assertEqual(rows['new-upstream']['status'], 'upstream_only')
+        self.assertEqual(next(r for r in report['branches'] if r['upstream_branch'] == 'new-upstream')['status'], 'upstream_only')
         self.assertIn('/compare/' + A + '...user:' + B, api.gets[-1])
         self.assertEqual(api.writes, [])
+
+    def test_explicit_work_branch_mapping_uses_original_branch_and_keeps_inventory(self):
+        api = FakeAPI();api.ours['my-only'] = B
+        report = scan(api, FORK, mapping={'my-only': 'main'})
+        row = next(r for r in report['branches'] if r['branch'] == 'my-only')
+        self.assertEqual((row['upstream_branch'], row['behind'], row['status']), ('main', 3, 'behind'))
+        self.assertEqual({r['upstream_branch'] for r in report['branches'] if r['upstream_sha']}, set(api.theirs))
+        missing = scan(api, FORK, mapping={'my-only': 'missing-original'})
+        self.assertEqual(next(r for r in missing['branches'] if r['branch'] == 'my-only')['status'], 'unknown')
+        with self.assertRaises(APIError):scan(api, FORK, mapping={'missing': 'main'})
+        with self.assertRaises(APIError):scan(api, FORK, mapping=['main'])
 
     def test_ahead_diverged_unknown_and_no_false_current(self):
         api = FakeAPI()

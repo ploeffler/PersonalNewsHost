@@ -2,6 +2,7 @@
 """Explicit, non-forcing remote fork synchronization; never changes local files."""
 import argparse
 import json
+import os
 from urllib.parse import quote
 
 try:
@@ -15,7 +16,7 @@ def synchronize(api, report, selected=(), all_behind=False, merge=False):
         raise ValueError('Automatic batch only supports fast-forward branches')
     if not all_behind and not selected:
         raise ValueError('Select branches explicitly')
-    rows = {row['branch']: row for row in report['branches']}
+    rows = {row['branch']: row for row in report['branches'] if row.get('fork_sha')}
     names = sorted(name for name, row in rows.items() if row['status'] == 'behind') if all_behind else sorted(set(selected))
     results = []
     for name in names:
@@ -25,7 +26,7 @@ def synchronize(api, report, selected=(), all_behind=False, merge=False):
             result['result'] = 'already_' + row['status']
         if row and row['status'] in ('behind', 'diverged'):
             result['pull_request_url'] = ('https://github.com/' + report['fork'] + '/compare/' + quote(name, safe='')
-                                          + '...' + report['upstream'].split('/')[0] + ':' + quote(name, safe='') + '?expand=1')
+                                          + '...' + report['upstream'].split('/')[0] + ':' + quote(row.get('upstream_branch', name), safe='') + '?expand=1')
             if row['protected']:
                 result['result'] = 'protected_use_pull_request'
             elif row['status'] == 'diverged' and not merge:
@@ -34,7 +35,7 @@ def synchronize(api, report, selected=(), all_behind=False, merge=False):
                 try:
                     ours_data = api.call('GET', branch_path(report['fork'], name))
                     ours = ours_data['commit']['sha']
-                    theirs = api.call('GET', branch_path(report['upstream'], name))['commit']['sha']
+                    theirs = api.call('GET', branch_path(report['upstream'], row.get('upstream_branch', name)))['commit']['sha']
                     if ours_data.get('protected'):
                         result['result'] = 'protected_use_pull_request'
                     elif ours != row['fork_sha'] or theirs != row['upstream_sha']:
@@ -59,6 +60,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--fork', required=True)
     parser.add_argument('--upstream')
+    parser.add_argument('--branch-map-json', default=os.environ.get('FORK_SYNC_BRANCH_MAP') or '{}')
     parser.add_argument('--branch', action='append', default=[])
     parser.add_argument('--all-behind', action='store_true')
     parser.add_argument('--merge', action='store_true', help='Allow preserving merge of explicitly selected divergent branch')
@@ -67,10 +69,11 @@ def main(argv=None):
     args = parser.parse_args(argv)
     try:
         api = GitHub()
-        report = scan(api, args.fork, args.upstream)
+        mapping = json.loads(args.branch_map_json)
+        report = scan(api, args.fork, args.upstream, mapping)
         results = synchronize(api, report, args.branch, args.all_behind, args.merge)
         # Refresh rather than reporting a timed-out or protected write as success.
-        fresh = scan(api, args.fork, report['upstream'])
+        fresh = scan(api, args.fork, report['upstream'], mapping)
         fresh['synchronization'] = results
         output(fresh, args.report)
         if args.notify:

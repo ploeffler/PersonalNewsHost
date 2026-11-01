@@ -10,11 +10,14 @@ A, B, C = 'a' * 40, 'b' * 40, 'c' * 40
 class SyncAPI:
     def __init__(self):
         self.writes = []
+        self.gets = []
         self.fork_sha, self.upstream_sha = A, B
         self.protected = False
         self.fail = None
     def call(self, method, path, body=None):
-        if method == 'GET':return {'commit': {'sha': self.fork_sha if '/user/' in path else self.upstream_sha}, 'protected': self.protected}
+        if method == 'GET':
+            self.gets.append(path)
+            return {'commit': {'sha': self.fork_sha if '/user/' in path else self.upstream_sha}, 'protected': self.protected}
         self.writes.append((method, path, body))
         if self.fail:raise APIError(self.fail)
         self.fork_sha = B if method == 'PATCH' else C
@@ -32,6 +35,13 @@ class ForkSyncTests(unittest.TestCase):
         api = SyncAPI()
         self.assertEqual(synchronize(api, report(), ['feature/topic'])[0]['result'], 'fast_forwarded')
         self.assertEqual(api.writes[0], ('PATCH', '/repos/user/project/git/refs/heads/feature%2Ftopic', {'sha': B, 'force': False}))
+
+    def test_mapped_work_branch_rechecks_right_upstream_and_retains_its_name(self):
+        api = SyncAPI();data = report();data['branches'][0]['upstream_branch'] = 'original/topic'
+        result = synchronize(api, data, ['feature/topic'])[0]
+        self.assertIn('/repos/original/project/branches/original%2Ftopic', api.gets)
+        self.assertEqual(api.writes[0][1], '/repos/user/project/git/refs/heads/feature%2Ftopic')
+        self.assertIn('original%2Ftopic', result['pull_request_url'])
 
     def test_divergence_requires_explicit_merge_and_preserves_own_history(self):
         api = SyncAPI()

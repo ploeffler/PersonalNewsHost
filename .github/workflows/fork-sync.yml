@@ -36,6 +36,7 @@ jobs:
       - name: Compare every branch and notify on changed backlog
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          FORK_SYNC_BRANCH_MAP: ${{ vars.FORK_SYNC_BRANCH_MAP || '{}' }}
         run: python3 scripts/fork_check.py --fork "$GITHUB_REPOSITORY" --notify
   synchronize:
     needs: check
@@ -52,6 +53,7 @@ jobs:
       - name: Synchronize eligible branches without force
         env:
           GITHUB_TOKEN: ${{ secrets.FORK_SYNC_TOKEN || github.token }}
+          FORK_SYNC_BRANCH_MAP: ${{ vars.FORK_SYNC_BRANCH_MAP || '{}' }}
           SELECTED_BRANCHES: ${{ inputs.branches }}
           ALLOW_MERGE: ${{ inputs.allow_merge }}
         run: |

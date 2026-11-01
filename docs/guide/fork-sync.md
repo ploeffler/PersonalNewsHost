@@ -52,7 +52,28 @@ beider Repositorys während anderer Benutzer neue Branches anlegen.
 | upstream_only | Originalbranch fehlt im Fork; sichtbar und manuell anlegbar |
 | unknown | Vergleich fehlgeschlagen, z. B. wegen Zugriffs-/API-Limitfehler |
 
-Für jeden gemeinsamen Branch gibt es Ahead-/Behind-Zahlen und einen Vergleichslink.
+### Selbst angelegte Arbeitsbranches mit anderem Namen
+
+Wenn du im Fork z. B. `meine-sendung` angelegt hast und dieser dem Originalbranch
+`Full-featured-Newsoutlet` folgen soll, lege im Fork eine Repository-Variable
+`FORK_SYNC_BRANCH_MAP` mit diesem JSON-Wert an:
+
+```json
+{"meine-sendung": "Full-featured-Newsoutlet"}
+```
+
+Beide Workflowjobs verwenden dieselbe Zuordnung. Nicht aufgeführte Forkbranches
+werden weiterhin mit ihrem gleichnamigen Originalbranch verglichen. Es wird
+nicht geraten, auf welchem Originalbranch ein beliebiger Arbeitsbranch basiert.
+Ein konfigurierter, aber fehlender Originalbranch ergibt `unknown`; ein fehlender
+konfigurierter Forkbranch ergibt einen Konfigurationsfehler. Die Übernahme ändert
+nur den Forkbranch und behält dessen Namen. Bei eigenen Commits gilt weiterhin
+die ausdrückliche Mergeauswahl. Die Tabelle zeigt beide Branchnamen.
+
+CLI-Alternative: `--branch-map-json '{"meine-sendung":"Full-featured-Newsoutlet"}'`
+an `fork_check.py` oder `fork_sync.py` übergeben.
+
+Für jeden gemeinsamen bzw. zugeordneten Branch gibt es Ahead-/Behind-Zahlen und einen Vergleichslink.
 Der Issue enthält einen Snapshot des letzten geänderten Rückstands. Der verwaltete Issue ist zusätzlich mit `personalnewshost-fork-sync` markiert;
 ein beliebiger fremder Issue-Text wird nicht als sein Status übernommen. Identische
 Rückstände erzeugen weder neue Issues noch tägliche Kommentare. Bei einem neuen
