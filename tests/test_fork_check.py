@@ -115,7 +115,13 @@ class ForkCheckTests(unittest.TestCase):
 
     def test_notice_escapes_branch_markdown(self):
         api = FakeAPI();api.ours['odd|`branch'] = A
-        self.assertIn('odd\\|\\`branch', markdown(scan(api, FORK)))
+        self.assertIn('`` odd\\|`branch ``', markdown(scan(api, FORK)))
+
+
+class ForkNoticeSafetyTests(unittest.TestCase):
+    def test_branch_names_render_as_code_not_mentions_or_markdown(self):
+        api = FakeAPI();api.ours['feature/@someone'] = A
+        self.assertIn('` feature/@someone `', markdown(scan(api, FORK)))
 
 
 class ForkTransportTests(unittest.TestCase):

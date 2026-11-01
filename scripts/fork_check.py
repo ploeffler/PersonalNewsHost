@@ -2,7 +2,6 @@
 """Compare every fork branch with upstream; optional managed GitHub issue notice."""
 import argparse
 import hashlib
-import html
 import json
 import os
 from pathlib import Path
@@ -154,7 +153,9 @@ def fingerprint(report):
 
 def markdown(report):
     def escape(value):
-        return html.escape(str(value)).replace('|', '\\|').replace('`', '\\`')
+        text = str(value).replace('|', '\\|')
+        ticks = '`' * (max((len(run) for run in re.findall(r'`+', text)), default=0) + 1)
+        return ticks + ' ' + text + ' ' + ticks
     lines = ['## Fork-/Upstream-Abgleich', '', f"Fork: {report['fork']} · Original: {report['upstream']}", '',
              '| Branch | Status | Ahead | Behind | Vergleich |', '|---|---|---:|---:|---|']
     for row in report['branches']:
