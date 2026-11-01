@@ -92,7 +92,7 @@
     "uncommitted_local_0_1_work": "Marked local_work_pending; reconcile deliberately after integration before another client claims it."
   },
   "inventory": {
-    "task_count": 153,
+    "task_count": 154,
     "package_count": 45,
     "release_count": 10
   },
@@ -151,6 +151,7 @@
     "activation": "editable_draft_then_explicit_adoption",
     "preview_generation": "automatic_on_adoption_with_configured_provider_and_budget",
     "scope": "shared_sender_default_for_shows_reels_short_updates",
-    "status": "planned"
+    "status": "planned",
+    "implementation_task": "T326"
   }
 }

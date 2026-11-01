@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 126,
+  "revision": 127,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4989,6 +4989,35 @@
       "evidence": [],
       "implementation_note": "",
       "coordination_note": "Expliziter Nutzerauftrag: allgemeinen Senderstil bei Ersteinrichtung oder später per Button definieren, URL-Stilrecherche anbieten und nach Übernahme automatisch Vorschauen erzeugen."
+    },
+    {
+      "id": "T326",
+      "epic": "E18",
+      "title": "Vorgezogener lokaler Senderstil-Editor mit URL-Recherche und Vorschaujobs",
+      "status": "todo",
+      "depends_on": [
+        "T180",
+        "T135",
+        "T101"
+      ],
+      "instructions": [
+        "Expliziten Implementierungsauftrag als eigenständig nutzbaren lokalen Editor vorziehen, ohne offene globale Admin-/Show-/Videoaufgaben als erledigt auszugeben.",
+        "Persistente CI-Entwürfe, Übernahme/Versionen, geschützte Senderseite, passive URL-Stilrecherche und automatische versionierte Bildvorschaujobs implementieren.",
+        "Optionalen echten Bildadapter mit serverseitigen Zugangsdaten und konservativen Budgetreservierungen bereitstellen; ohne Provider/Budget sichtbar warten. Mocktests, Neustart/Parallelität und Offline-Sicherheit prüfen."
+      ],
+      "acceptance": [
+        "Lokaler Benutzer kann CI aus Outletkonfiguration ableiten, recherchieren, bearbeiten, übernehmen und spätere Bearbeitung per Button starten.",
+        "Übernahme erzeugt genau eine Serie für alle Bibliotheksstile mit gespeichertem Kontext; Jobs sind bei Fehlern/Neustart nachvollziehbar und private Daten werden nicht öffentlich publiziert."
+      ],
+      "source": "user-chat-2026-11-01-implement-sender-ci",
+      "version": "0.2",
+      "package": "A25",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "T216–T218 bleiben für vollständige Integration in künftige gemeinsame Verwaltung/Produktionsadapter offen. Dieser vorgezogene Auftrag implementiert einen lokalen nutzbaren Einstieg und wiederverwendbaren Vertrag.",
+      "coordination_note": "User explicitly requests implementation now; active release unchanged."
     }
   ],
   "packages": [
@@ -5247,7 +5276,8 @@
         "T210",
         "T211",
         "T216",
-        "T217"
+        "T217",
+        "T326"
       ]
     },
     {
@@ -5477,7 +5507,8 @@
         "T323",
         "T195",
         "T196",
-        "T324"
+        "T324",
+        "T326"
       ],
       "acceptance": "Linux- und Docker-Basis, HTTPS 443/8444, Login und persistentes Archiv sind technisch geprüft. Noch kein vollständiger neuer Produktionsbetrieb."
     },
@@ -6996,6 +7027,15 @@
       "client": "codex-local-coordinator",
       "at": 1793536203.5257206,
       "note": "Explizite Ablaufergänzung: CI-Basisstil aus Ersteinrichtung, späterer Senderseiten-Button, optionale URL-Recherche, automatische kontextbezogene Vorschauen nach Übernahme. T216–T218 und Integration in bestehende Aufgaben aufgenommen; keine fertige UI oder Providerfunktion behauptet."
+    },
+    {
+      "operation_id": "3325abdf2b504f2e858778fdc6ac352b",
+      "revision": 127,
+      "action": "requirements_update",
+      "task": "T326",
+      "client": "codex-local-coordinator",
+      "at": 1793536568.7489593,
+      "note": "Expliziten aktuellen Implementierungsauftrag in aktiver Version vorziehen, ohne fehlende gemeinsame Verwaltung oder allgemeine Videoadapter vorweg als abgeschlossen zu deklarieren."
     }
   ]
 }
