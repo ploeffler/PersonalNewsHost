@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 107,
+  "revision": 108,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -2379,7 +2379,7 @@
       "id": "T181",
       "epic": "E16",
       "title": "Repository-Installation unter Linux",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T180"
       ],
@@ -2395,7 +2395,21 @@
       "source": "planning/betriebswege-ergaenzung.yaml",
       "version": "0.2",
       "package": "A18",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "1d03e38f6be445c5a48bf451a9266337",
+        "expires_at": 1793535683.1876936,
+        "files": [
+          ".github/workflows/linux-install-smoke.yml",
+          ".gitignore",
+          "docs/guide/installation.md",
+          "docs/guide/linux-installation.md",
+          "planning/reviews/T181-linux-installation.md",
+          "scripts/install_linux.py",
+          "tests/linux_install_smoke.py",
+          "tests/test_install_linux.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -6657,6 +6671,15 @@
       "task": "T196",
       "client": "codex-local-coordinator",
       "at": 1793524387.7781062,
+      "note": ""
+    },
+    {
+      "operation_id": "2c28d36070174ff0844a4d59c8b185f4",
+      "revision": 108,
+      "action": "claim",
+      "task": "T181",
+      "client": "codex-local-coordinator",
+      "at": 1793532083.1876936,
       "note": ""
     }
   ]
