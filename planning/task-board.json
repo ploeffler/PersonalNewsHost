@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 119,
+  "revision": 120,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4894,6 +4894,30 @@
       "evidence": [],
       "implementation_note": "",
       "coordination_note": "Expliziter Nutzerauftrag: bilder jetzt erzeugen und alles ins repo stellen."
+    },
+    {
+      "id": "T325",
+      "epic": "E31",
+      "title": "Stop-Motion mit Holzgliederfigur vor realistischem Hintergrund",
+      "status": "todo",
+      "depends_on": [],
+      "instructions": [
+        "Explizit gewünschten Stil mit neutraler Holzgliederfigur wie einem Künstler-/IKEA-Gliedermodell vor realistischem Hintergrund ergänzen.",
+        "Neues KI-generiertes Flussmotivbeispiel erstellen; Bibliothek versionieren, vorhandene Stil-IDs erhalten, Manifest/Galerie und Planungsbezüge aktualisieren."
+      ],
+      "acceptance": [
+        "Eigenständige Style-ID und Bild zeigen deutlich eine hölzerne Gliederfigur vor fotorealistischem Hintergrund.",
+        "14 Stil-IDs sind vollständig abgebildet; Prompts, Hashes und Einzelbildgrenzen sind dokumentiert."
+      ],
+      "source": "user-chat-2026-11-01-stop-motion",
+      "version": "0.2",
+      "package": "A41",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "",
+      "coordination_note": "Expliziter Nutzerauftrag: stop motion im Stil der IKEA-Figur vor realistischem Hintergrund hinzufügen."
     }
   ],
   "packages": [
@@ -5290,7 +5314,8 @@
         "T321",
         "T322",
         "T323",
-        "T324"
+        "T324",
+        "T325"
       ]
     },
     {
@@ -5379,7 +5404,8 @@
         "T323",
         "T195",
         "T196",
-        "T324"
+        "T324",
+        "T325"
       ],
       "acceptance": "Linux- und Docker-Basis, HTTPS 443/8444, Login und persistentes Archiv sind technisch geprüft. Noch kein vollständiger neuer Produktionsbetrieb."
     },
@@ -6832,6 +6858,15 @@
       "client": "codex-local-coordinator",
       "at": 1793534684.7549846,
       "note": ""
+    },
+    {
+      "operation_id": "797ca85b6a3c48d7b9de5c5cd7ade1c4",
+      "revision": 120,
+      "action": "requirements_update",
+      "task": "T325",
+      "client": "codex-local-coordinator",
+      "at": 1793534787.241824,
+      "note": "Expliziter Nutzerauftrag: stop motion im Stil der IKEA-Figur vor realistischem Hintergrund hinzufügen."
     }
   ]
 }
