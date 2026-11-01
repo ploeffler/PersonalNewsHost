@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 83,
+  "revision": 84,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1054,7 +1054,7 @@
       "id": "T101",
       "epic": "E9",
       "title": "Budget- und Quota-Waechter",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T100"
       ],
@@ -1071,17 +1071,7 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A02",
-      "lease": {
-        "client": "codex-local-coordinator",
-        "token": "1c0371144c19485bbd9a87cc995148f5",
-        "expires_at": 1793492761.7859638,
-        "files": [
-          "planning/reviews/T101-budget-integration.md",
-          "scripts/configured_providers.py",
-          "tests/test_configured_providers.py",
-          "tests/test_task_client.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-local-coordinator",
         "commit": "4cc4e6d21e1b6db173af5cb3685802e7894ced16",
@@ -1091,11 +1081,14 @@
           "scripts/configured_providers.py",
           "tests/test_configured_providers.py",
           "tests/test_task_client.py"
-        ]
+        ],
+        "reviewer": "human-ploeffler",
+        "decision": "Repository owner explicitly approved T101 with freigeben after the remaining 0.1 review status was explained in this conversation. Recorded on behalf of human-ploeffler, not an independent AI review. Submitted files unchanged since 4cc4e6d. Fresh checks: 46 provider/budget tests, 10 coordination tests and 6 documentation release-gate tests passed. Persistent mock usage ledger, registry unit quotas, retry reservations, fallback and cache behavior accepted. Public registry remains zero-cost mocks only; Actions cache is best-effort state reuse and is not a reliable shared billing store for future paid adapters. No version release, release tag or wiki publication authorized by this task approval."
       },
       "local_work_pending": false,
       "evidence": [
-        "f658a1710efcfb77cdb6eb0bff33e7f2b2e73247"
+        "4cc4e6d21e1b6db173af5cb3685802e7894ced16",
+        "46 provider tests passed. Full offline run: 328 tests, sole failure obsolete local-work assertion; corrected and 10 coordination tests rerun OK. 6 release-gate tests OK; syntax, secrets, links and diff checks OK. See planning/reviews/T101-budget-integration.md. Independent review pending."
       ],
       "implementation_note": "",
       "coordination_note": "Previously local work integrated in f658a17 by explicit owner request; 324 offline tests passed. Clear obsolete local-only hold; acceptance audit and independent review remain pending."
@@ -6244,6 +6237,15 @@
       "client": "codex-local-coordinator",
       "at": 1793515655.2631135,
       "note": "Independent technical review by codex-local-coordinator, distinct from implementation author codex-reel-fix. Submitted security files and reel production files unchanged since successful bfb74ef CPU run https://github.com/ploeffler/PersonalNewsHost/actions/runs/41246785905 . Python 3.10 workflow completed image generation, local speech, SadTalker CPU, composition, publication scan and artifact upload. Independently downloaded existing artifact and scanned without findings; ffprobe verifies 720x1280, 25 fps, 3.280s video and 3.286s AAC audio. Frame at 1s inspected: fictional portrait, studio, AI-GENERIERT bottom right. Manifest, sources, transcript and model notices present; read-only job token, one-day artifact, no video commit. 12 reel tests and 11 security tests independently pass. Foundation 41282010282 on b22e3ad succeeds including Ruff, OS-isolated regression and JS. Approve experimental technical smoke scope only: no audiovisual quality certification, no arbitrary RSS or long-show guarantee, no version release."
+    },
+    {
+      "operation_id": "f4be0fb1f0934179ab8c11949684d32e",
+      "revision": 84,
+      "action": "complete",
+      "task": "T101",
+      "client": "human-ploeffler",
+      "at": 1793517640.3008206,
+      "note": "Repository owner explicitly approved T101 with freigeben after the remaining 0.1 review status was explained in this conversation. Recorded on behalf of human-ploeffler, not an independent AI review. Submitted files unchanged since 4cc4e6d. Fresh checks: 46 provider/budget tests, 10 coordination tests and 6 documentation release-gate tests passed. Persistent mock usage ledger, registry unit quotas, retry reservations, fallback and cache behavior accepted. Public registry remains zero-cost mocks only; Actions cache is best-effort state reuse and is not a reliable shared billing store for future paid adapters. No version release, release tag or wiki publication authorized by this task approval."
     }
   ]
 }
