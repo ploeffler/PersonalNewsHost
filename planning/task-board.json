@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 76,
+  "revision": 77,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1639,7 +1639,7 @@
       "id": "T130",
       "epic": "E12",
       "title": "Analyse-Aufgaben und Ausgabeschemata",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T100"
       ],
@@ -1653,7 +1653,15 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A02",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "fb53bd50ee46478599dc7b9cf723c0a5",
+        "expires_at": 1793518918.8754895,
+        "files": [
+          "planning/reviews/T130-analysis-contracts.md",
+          "tests/test_analysis_contracts.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [
@@ -6167,6 +6175,15 @@
       "client": "human-ploeffler",
       "at": 1793515270.799144,
       "note": "Repository owner explicitly approved T103 and T104 with freigeben in this conversation after receiving the implementation and 336-test evidence. Recorded on behalf of human-ploeffler, not an independent AI review. T104 submitted files unchanged since 628ac09; six allowlists, private content-free audit, symlink refusal and secret checks verified. Documented scanner and Linux-runtime limitations remain. No version release implied."
+    },
+    {
+      "operation_id": "b11fc0c677304ba497df8ba369ca9077",
+      "revision": 77,
+      "action": "claim",
+      "task": "T130",
+      "client": "codex-local-coordinator",
+      "at": 1793515318.8754895,
+      "note": ""
     }
   ]
 }
