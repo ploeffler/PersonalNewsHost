@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 75,
+  "revision": 76,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1168,7 +1168,7 @@
       "id": "T104",
       "epic": "E9",
       "title": "Datenabfluss-Filter und Protokoll",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T100"
       ],
@@ -1183,16 +1183,7 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A02",
-      "lease": {
-        "client": "codex-local-coordinator",
-        "token": "744ad0992acf4f1095d186e975065825",
-        "expires_at": 1793492914.184218,
-        "files": [
-          "planning/reviews/T104-filter-audit.md",
-          "scripts/provider_runtime.py",
-          "tests/test_payload_audit.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-local-coordinator",
         "commit": "628ac09a28e2aca98ee860bc6fb3df3484706ca4",
@@ -1201,14 +1192,14 @@
           "planning/reviews/T104-filter-audit.md",
           "scripts/provider_runtime.py",
           "tests/test_payload_audit.py"
-        ]
+        ],
+        "reviewer": "human-ploeffler",
+        "decision": "Repository owner explicitly approved T103 and T104 with freigeben in this conversation after receiving the implementation and 336-test evidence. Recorded on behalf of human-ploeffler, not an independent AI review. T104 submitted files unchanged since 628ac09; six allowlists, private content-free audit, symlink refusal and secret checks verified. Documented scanner and Linux-runtime limitations remain. No version release implied."
       },
       "local_work_pending": false,
       "evidence": [
-        "scripts/provider_runtime.py",
-        "tests/test_provider_runtime.py",
-        "docs/guide/provider-runtime.md",
-        "f658a1710efcfb77cdb6eb0bff33e7f2b2e73247"
+        "628ac09a28e2aca98ee860bc6fb3df3484706ca4",
+        "336 offline tests passed including video rendering; 46 provider tests, 3 cross-process/cache acceptance tests and 5 payload/audit tests pass. Tracked secret scan, local links and diff checks pass. See planning/reviews/T104-filter-audit.md. Independent review pending; no release."
       ],
       "implementation_note": "",
       "coordination_note": "Previously local work integrated in f658a17 by explicit owner request; 324 offline tests passed. Clear obsolete local-only hold; acceptance audit and independent review remain pending."
@@ -6167,6 +6158,15 @@
       "client": "human-ploeffler",
       "at": 1793515268.1763391,
       "note": "Repository owner explicitly approved T103 and T104 with freigeben in this conversation after receiving the implementation and 336-test evidence. Recorded on behalf of human-ploeffler, not an independent AI review. T103 submitted files unchanged since 9f45f43; cross-process cache reuse and one mock cost reservation verified. Actions-cache persistence limits accepted as documented. No version release implied."
+    },
+    {
+      "operation_id": "6560308b60934234bff70896ef0a80df",
+      "revision": 76,
+      "action": "complete",
+      "task": "T104",
+      "client": "human-ploeffler",
+      "at": 1793515270.799144,
+      "note": "Repository owner explicitly approved T103 and T104 with freigeben in this conversation after receiving the implementation and 336-test evidence. Recorded on behalf of human-ploeffler, not an independent AI review. T104 submitted files unchanged since 628ac09; six allowlists, private content-free audit, symlink refusal and secret checks verified. Documented scanner and Linux-runtime limitations remain. No version release implied."
     }
   ]
 }
