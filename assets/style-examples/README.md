@@ -1,6 +1,6 @@
 # KI-generierte Stilbeispiele
 
-13 Beispielbilder mit gemeinsamem Motiv: fiktive Reporterin, Fluss, Brücke und Blumenwiese.
+14 Beispielbilder mit gemeinsamem Motiv: fiktive Reporterin, Fluss, Brücke und Blumenwiese.
 Erzeugt am 1. November 2026 mit dem eingebauten Imagegen-Werkzeug von Codex.
 Keine echten Nachrichtenaufnahmen. Keine modell- oder providerübergreifende Ergebnisgarantie.
 Die ursprünglichen Recherche-IDs und Namen dienen der Zuordnung; Figuren und Bilder wurden neu generiert.
@@ -32,3 +32,10 @@ Untertitel und Senderlogo werden unabhängig von negativen Stilprompts erhalten.
 
 Die Bilder sind jetzt vorhanden; Auswahloberfläche, Providerintegration und die eigene
 Kontextvorschau sind weiterhin Entwicklungsaufgaben. Diese Dateien aktivieren sie nicht.
+
+## Ergänzung Bibliothek 1.2.0
+
+`stop_motion_wooden_mannequin` zeigt eine neutrale hölzerne Künstler-Gliederfigur
+vor realistischem Hintergrund, entsprechend der gewünschten IKEA-Figuren-Anmutung.
+Keine Produktfotografie oder Markenkooperation. Das Einzelbild beweist keine Animation.
+Die bisherigen 13 Bilder bleiben unverändert; Bibliothek 1.1.0 bleibt im Gitverlauf erhalten.

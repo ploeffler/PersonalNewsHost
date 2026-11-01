@@ -1,6 +1,6 @@
 # T324 — Stilbeispiele
 
-13 Bilder mit gemeinsamem Motiv über das eingebaute Imagegen erzeugt und visuell gesichtet.
+14 Bilder mit gemeinsamem Motiv über das eingebaute Imagegen erzeugt und visuell gesichtet.
 Alle Recherche-IDs abgedeckt, unveränderte PNG-Dateien, lokale Galerie und vollständige
 Prompts/Hashes/Abmessungen im Manifest. Bekannte stilistische Näherungen explizit vermerkt.
 
@@ -10,3 +10,7 @@ Auswahloberfläche und Provider-Vorschau bleiben geplant. Kein Versionsrelease/W
 
 Prüfung: vollständige ID-Abdeckung, Bilddekodierung, Hashes, lokale Galerielinks und
 Planungsschema; Testergebnisse und Commit werden im Aufgabenreview eingereicht.
+
+Erweiterter Nutzerauftrag: Stop-Motion-Holzgliederfigur als 14. Stil ergänzt;
+Bibliothek 1.2.0. Frühere Lieferung 52e25a2 bleibt historisch erhalten. Review für
+die gesamte aktualisierte Lieferung erneut einreichen; keine Eigenfreigabe.

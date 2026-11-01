@@ -1,6 +1,6 @@
 {
   "project": "AI-Video-Style-Selector",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "global_config": {
     "global_negative_prompt": "deformed, bad anatomy, disfigured, poorly drawn face, mutated, extra limbs, ugly, blurry, low quality, artifacts, watermark, text, signature, logos, static background, twitching"
   },
@@ -36,6 +36,14 @@
           "ui_moodboard_description": "Gemütliche, reale Werkstatt mit Holztexturen, kombiniert mit einer handgezeichneten 2D-Figur.",
           "positive_prompt": "1980s hybrid live-action and animation style, Meister Eder TV show aesthetic, cozy old carpenter workshop with wooden textures, nostalgic 35mm analog film grain, warm dusty sunbeams, composite shot featuring a hand-drawn 2D cartoon character integrated into a realistic environment, vintage color grading.",
           "negative_prompt": "modern cgi, 3d character, pixar style, disney style, highly detailed digital rendering, neon lighting, clean hd digital look"
+        },
+        {
+          "style_id": "stop_motion_wooden_mannequin",
+          "name_de": "Stop-Motion · Holzgliederfigur",
+          "ui_moodboard_description": "Hölzerne Künstler-Gliederfigur mit sichtbaren Gelenken und taktilen Materialien vor realistischem Hintergrund.",
+          "positive_prompt": "Stop-motion puppet aesthetic, articulated unpainted wooden artist mannequin with visible joints and natural wood grain, miniature fabric clothing, carefully posed expressive limbs, composited into a photorealistic environment with coherent lighting and contact shadows.",
+          "negative_prompt": "real human skin, realistic human face, hair, cartoon background, plastic toy, glossy CGI human, hidden joints, logos, text",
+          "motion_guidance": "Geplante Videoästhetik: bewusst gesetzte Einzelbildposen und diskrete Bewegung bei stabilem Hintergrund; Providerfähigkeiten und zeitliche Konsistenz separat prüfen."
         }
       ]
     },

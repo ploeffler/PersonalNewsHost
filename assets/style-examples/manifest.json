@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "library_version": "1.1.0",
+  "library_version": "1.2.0",
   "generated_on": "2026-11-01",
   "generator": "Codex built-in image_gen",
   "provider_model_id": null,
@@ -178,6 +178,18 @@
       "prompt": "Use case: stylized-concept. Asset type: one standalone style-library example image for a news video creator. Landscape composition. Common motif: a fictional adult female local news reporter with short dark hair and a plain ochre jacket holding an unbranded microphone, standing beside a calm river; a small arched pedestrian bridge behind her, leafy tree and wildflowers in foreground. Medium-wide framing, reporter on left third, bridge on right, peaceful informative mood. No written words, captions, logos, watermarks, grids, collage, frames, or recognizable real people. Original character design. The image must strongly demonstrate the specified visual medium rather than a generic mixed style. Style/medium: Minimal flat vector-like illustration, original reporter built from clean geometric shapes, reduced corporate blue/green/orange palette, simple river bridge and plants, no gradients, shadows or 3D depth.",
       "alt_de": "KI-Stilbeispiel Flat Design / Vector Motion: fiktive Reporterin am Fluss mit Brücke und Blumen.",
       "review_note": "Flächige Illustration mit leichten Verläufen; kein strikt verlaufsfreier Vektornachweis."
+    },
+    {
+      "style_id": "stop_motion_wooden_mannequin",
+      "name_de": "Stop-Motion · Holzgliederfigur",
+      "category_id": "realism_cinema",
+      "image": "stop_motion_wooden_mannequin.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "af45b3fb50000243f0a1b844e515545c693331fec22f1eb887e009e786edb2ec",
+      "prompt": "Use case: stylized-concept. Asset type: standalone landscape style-library example for a news-video creation application. Primary request: stop-motion puppet aesthetic with a wooden articulated artist mannequin, like the plain natural-wood IKEA artist's figure, physically placed against a realistic photographic background. Common comparison motif: calm river, arched pedestrian bridge in right background, leafy tree and wildflowers foreground. Left third: a clearly NON-HUMAN tabletop-sized unpainted beechwood artist's mannequin, oval featureless wooden head without hair, visible spherical shoulder/elbow/knee joints, segmented wooden hands, smooth sanded grain, carrying a tiny plain black microphone in one hand, other hand in an expressive reporting gesture. A small removable ochre fabric vest adds news-reporter context, but leaves wooden limbs and joints fully visible. Realistic miniature puppet material, handcrafted stop-motion film production still, tactile wood and cloth, carefully posed slightly angular limbs. The riverside backdrop must remain photorealistic with natural soft daylight, subtle contact shadows and coherent compositing, shallow depth of field; NOT cartoon scenery, NOT an animated CGI human, NOT plastic, NOT a LEGO figure. Framing includes the whole puppet, seated or standing on a real riverbank stone among flowers, river and bridge visible. No captions, lettering, logos, watermark, multiple panels or recognizable real people. One frame, landscape.",
+      "alt_de": "KI-Stilbeispiel Stop-Motion: Holzgliederfigur mit Mikrofon vor realistischem Fluss und Brücke.",
+      "review_note": "Einzelbild zeigt Puppen-/Materialästhetik; diskrete Stop-Motion-Bewegung und zeitliche Konsistenz sind damit nicht geprüft."
     }
   ]
 }
