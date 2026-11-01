@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 127,
+  "revision": 128,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4994,7 +4994,7 @@
       "id": "T326",
       "epic": "E18",
       "title": "Vorgezogener lokaler Senderstil-Editor mit URL-Recherche und Vorschaujobs",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T180",
         "T135",
@@ -5012,7 +5012,25 @@
       "source": "user-chat-2026-11-01-implement-sender-ci",
       "version": "0.2",
       "package": "A25",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "37dd2e09fa9640e1a6c9ee04619d3661",
+        "expires_at": 1793550998.2118852,
+        "files": [
+          "assets/sender-style/",
+          "docs/guide/senderstil.md",
+          "planning/reviews/T326-sender-style.md",
+          "scripts/sender_style.py",
+          "scripts/sender_style_server.py",
+          "scripts/style_preview.py",
+          "scripts/style_research.py",
+          "tests/test_sender_style.py",
+          "tests/test_sender_style_browser.cjs",
+          "tests/test_sender_style_server.py",
+          "tests/test_style_preview.py",
+          "tests/test_style_research.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -7036,6 +7054,15 @@
       "client": "codex-local-coordinator",
       "at": 1793536568.7489593,
       "note": "Expliziten aktuellen Implementierungsauftrag in aktiver Version vorziehen, ohne fehlende gemeinsame Verwaltung oder allgemeine Videoadapter vorweg als abgeschlossen zu deklarieren."
+    },
+    {
+      "operation_id": "f2c2e8d621d44450b5afcd308d3b5f3a",
+      "revision": 128,
+      "action": "claim",
+      "task": "T326",
+      "client": "codex-local-coordinator",
+      "at": 1793536598.2118852,
+      "note": ""
     }
   ]
 }
