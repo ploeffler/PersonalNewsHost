@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "revision": 84,
-  "active_version": "0.1",
+  "revision": 85,
+  "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
     {
@@ -4646,6 +4646,33 @@
       ],
       "implementation_note": "",
       "coordination_note": "Expliziter Folgeauftrag zur Produktion; kein Eingriff in T900."
+    },
+    {
+      "id": "T323",
+      "epic": "E31",
+      "title": "Vorgezogene Einrichtungsabläufe je Provider dokumentieren",
+      "status": "todo",
+      "depends_on": [
+        "T100"
+      ],
+      "instructions": [
+        "Benutzerabläufe für lokale Dienste, Cloudanbieter und vorhandene Medienpfade mit aktuellen offiziellen Quellen dokumentieren.",
+        "Installation, Modell, Endpoint, Secrets, Verbindungstest, Kostenfreigabe, Fallback und Fehlerfälle erklären; externe Dienste nur vorbereiten, keine Adapter implementieren.",
+        "Widersprüche in provider-runtime.md korrigieren; vorhandene und geplante Funktionen klar unterscheiden."
+      ],
+      "acceptance": [
+        "Jede angebotene Provider-Auswahl hat einen datierten Ablauf und erkennbare Integrationsgrenzen.",
+        "Dokumentation und Mockbeispiele lassen sich ohne Tokens und ohne Kosten prüfen."
+      ],
+      "source": "user-chat-2026-11-01-provider-setup",
+      "version": "0.2",
+      "package": "A41",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "Dokumentationsanteil von T322 ausdrücklich vorgezogen. T102 und T320–T322 bleiben mit ihren vollständigen Umfängen offen.",
+      "coordination_note": "Explicit owner request: die einrichtungsabläufe sind jetzt dran."
     }
   ],
   "packages": [
@@ -5038,7 +5065,8 @@
       "tasks": [
         "T320",
         "T321",
-        "T322"
+        "T322",
+        "T323"
       ]
     },
     {
@@ -5123,7 +5151,8 @@
         "T190",
         "T191",
         "T192",
-        "T260"
+        "T260",
+        "T323"
       ],
       "acceptance": "Linux- und Docker-Basis, HTTPS 443/8444, Login und persistentes Archiv sind technisch geprüft. Noch kein vollständiger neuer Produktionsbetrieb."
     },
@@ -5338,7 +5367,10 @@
       "T163",
       "T181",
       "T200",
-      "T210"
+      "T210",
+      "T323",
+      "T900",
+      "T901"
     ],
     [
       "T012",
@@ -5349,7 +5381,8 @@
       "T132",
       "T142",
       "T144",
-      "T160"
+      "T160",
+      "T902"
     ],
     [
       "T013",
@@ -5497,9 +5530,6 @@
     ],
     [
       "T081"
-    ],
-    [
-      "T901"
     ]
   ],
   "events": [
@@ -6246,6 +6276,15 @@
       "client": "human-ploeffler",
       "at": 1793517640.3008206,
       "note": "Repository owner explicitly approved T101 with freigeben after the remaining 0.1 review status was explained in this conversation. Recorded on behalf of human-ploeffler, not an independent AI review. Submitted files unchanged since 4cc4e6d. Fresh checks: 46 provider/budget tests, 10 coordination tests and 6 documentation release-gate tests passed. Persistent mock usage ledger, registry unit quotas, retry reservations, fallback and cache behavior accepted. Public registry remains zero-cost mocks only; Actions cache is best-effort state reuse and is not a reliable shared billing store for future paid adapters. No version release, release tag or wiki publication authorized by this task approval."
+    },
+    {
+      "operation_id": "1e0ec9dacdd5433f885a11ad5a15efb0",
+      "revision": 85,
+      "action": "prioritize-provider-documentation",
+      "task": "T323",
+      "client": "codex-local-coordinator",
+      "at": 1793519440.5497642,
+      "note": "Owner explicitly prioritizes provider setup documentation; begin 0.2, preserve v0.1 tag."
     }
   ]
 }
