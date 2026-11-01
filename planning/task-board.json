@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 92,
+  "revision": 93,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4688,7 +4688,7 @@
       "id": "T323",
       "epic": "E31",
       "title": "Vorgezogene Einrichtungsabläufe je Provider dokumentieren",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T100"
       ],
@@ -4704,17 +4704,7 @@
       "source": "user-chat-2026-11-01-provider-setup",
       "version": "0.2",
       "package": "A41",
-      "lease": {
-        "client": "codex-local-coordinator",
-        "token": "37e4f9d6fdf641018d9b499dea652769",
-        "expires_at": 1793523058.7040806,
-        "files": [
-          "docs/guide/index.md",
-          "docs/guide/provider-einrichtung.md",
-          "docs/guide/provider-runtime.md",
-          "planning/reviews/T323-provider-setup.md"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-local-coordinator",
         "commit": "e616eceba8ea5ebb8dd2fec8877a3b611c4a5980",
@@ -4724,10 +4714,15 @@
           "docs/guide/provider-einrichtung.md",
           "docs/guide/provider-runtime.md",
           "planning/reviews/T323-provider-setup.md"
-        ]
+        ],
+        "reviewer": "human-ploeffler",
+        "decision": "Repository owner explicitly approved all pending changes with alle änderungen freigeben in this conversation. Recorded on behalf of human-ploeffler, not an independent AI review. Submitted files unchanged since e616ece. Foundation CI 41286648306 succeeded; official sources checked 2026-11-01, mock example/cache and config/link/secret checks pass. Documentation acceptance only: external installations and cloud accounts not exercised; provider adapters and protected UI remain unimplemented. No wiki or version release implied."
       },
       "local_work_pending": false,
-      "evidence": [],
+      "evidence": [
+        "e616eceba8ea5ebb8dd2fec8877a3b611c4a5980",
+        "Official setup sources opened 2026-11-01. Mock CLI validated twice (second cached), 3 config examples valid, 10 coordination and 6 documentation gate tests pass; tracked secret scan, Markdown links and diff check pass. External installation and cloud calls deliberately not performed. See planning/reviews/T323-provider-setup.md."
+      ],
       "implementation_note": "Dokumentationsanteil von T322 ausdrücklich vorgezogen. T102 und T320–T322 bleiben mit ihren vollständigen Umfängen offen.",
       "coordination_note": "Explicit owner request: die einrichtungsabläufe sind jetzt dran."
     }
@@ -6405,6 +6400,15 @@
       "client": "human-ploeffler",
       "at": 1793520328.2703388,
       "note": "Repository owner explicitly approved all pending changes with alle änderungen freigeben in this conversation. Recorded on behalf of human-ploeffler, not an independent AI review. Submitted files unchanged since 85959b7. 352 offline tests passed; Foundation CI 41286933587 succeeded. Shared path contract and inspect/due/produce/loopback-preview accepted. Real Linux/container installation, service daemon, HTTPS and mandatory archive remain separate follow-up work. No version release implied."
+    },
+    {
+      "operation_id": "44c246012eaf4963bbaa2469709c2b89",
+      "revision": 93,
+      "action": "complete",
+      "task": "T323",
+      "client": "human-ploeffler",
+      "at": 1793520330.5621374,
+      "note": "Repository owner explicitly approved all pending changes with alle änderungen freigeben in this conversation. Recorded on behalf of human-ploeffler, not an independent AI review. Submitted files unchanged since e616ece. Foundation CI 41286648306 succeeded; official sources checked 2026-11-01, mock example/cache and config/link/secret checks pass. Documentation acceptance only: external installations and cloud accounts not exercised; provider adapters and protected UI remain unimplemented. No wiki or version release implied."
     }
   ]
 }
