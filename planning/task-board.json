@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 116,
+  "revision": 117,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4854,7 +4854,7 @@
       "id": "T324",
       "epic": "E31",
       "title": "Stilbeispielbilder und Kontextvorgaben für Fork-Vorschauen",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [],
       "instructions": [
         "13 KI-generierte Stilbeispiele mit gemeinsamem Motiv aus der Recherchebibliothek erzeugen, visuell prüfen und mit eindeutiger style_id im Repository speichern.",
@@ -4868,7 +4868,15 @@
       "source": "user-chat-2026-11-01-style-examples",
       "version": "0.2",
       "package": "A41",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "c418a30eeefe46bd84266b606c91ebdf",
+        "expires_at": 1793548461.639952,
+        "files": [
+          "assets/style-examples/",
+          "planning/reviews/T324-style-examples.md"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -6785,6 +6793,15 @@
       "client": "codex-local-coordinator",
       "at": 1793534052.0496707,
       "note": "Explizit beauftragte Stilbilder und bestätigte Fork-Vorschauanforderungen als vorgezogenen Auftrag aufnehmen."
+    },
+    {
+      "operation_id": "da9b79a80e574e499afc7897233c2a24",
+      "revision": 117,
+      "action": "claim",
+      "task": "T324",
+      "client": "codex-local-coordinator",
+      "at": 1793534061.639952,
+      "note": ""
     }
   ]
 }
