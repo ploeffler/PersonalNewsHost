@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "library_version": "1.1.0",
+  "generated_on": "2026-11-01",
+  "generator": "Codex built-in image_gen",
+  "provider_model_id": null,
+  "kind": "AI-generated style examples; not provider capability validation",
+  "fork_previews": {
+    "status": "planned",
+    "inputs": [
+      "style_id and library version",
+      "sender profile and editorial orientation",
+      "target audience",
+      "language and tone",
+      "branding",
+      "studio and avatar settings",
+      "output format",
+      "configured provider and model capabilities"
+    ],
+    "snapshot_required": true,
+    "explicit_generation_required": true,
+    "automatic_repository_upload": false,
+    "secrets_in_snapshot": false
+  },
+  "examples": [
+    {
+      "style_id": "modern_blockbuster",
+      "name_de": "Moderner Blockbuster",
+      "category_id": "realism_cinema",
+      "image": "modern_blockbuster.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "5e596d18cf39e12f6403f8056a9edd7d0ce95a4eb2b70324521739ce9d7dba37",
+      "prompt": "Use case: stylized-concept. Asset type: one standalone style-library example image for a news video creator. Landscape composition. Common motif: a fictional adult female local news reporter with short dark hair and a plain ochre jacket holding an unbranded microphone, standing beside a calm river; a small arched pedestrian bridge behind her, leafy tree and wildflowers in foreground. Medium-wide framing, reporter on left third, bridge on right, peaceful informative mood. No written words, captions, logos, watermarks, grids, collage, frames, or recognizable real people. Original character design. The image must strongly demonstrate the specified visual medium rather than a generic mixed style. Style/medium: Photorealistic modern blockbuster film still, cinematic anamorphic composition, strong teal shadows and orange sunlight, dramatic high contrast.",
+      "alt_de": "KI-Stilbeispiel Moderner Blockbuster: fiktive Reporterin am Fluss mit Brücke und Blumen.",
+      "review_note": ""
+    },
+    {
+      "style_id": "nature_documentary",
+      "name_de": "Natur-Dokumentation",
+      "category_id": "realism_cinema",
+      "image": "nature_documentary.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "e8a78ed7f814c28e3fed50a9af3aaa2b73e36ef2101b833c2b6caa8ab45af6b9",
+      "prompt": "Use case: stylized-concept. Asset type: one standalone style-library example image for a news video creator. Landscape composition. Common motif: a fictional adult female local news reporter with short dark hair and a plain ochre jacket holding an unbranded microphone, standing beside a calm river; a small arched pedestrian bridge behind her, leafy tree and wildflowers in foreground. Medium-wide framing, reporter on left third, bridge on right, peaceful informative mood. No written words, captions, logos, watermarks, grids, collage, frames, or recognizable real people. Original character design. The image must strongly demonstrate the specified visual medium rather than a generic mixed style. Style/medium: Natural documentary photograph, ungraded soft daylight, detailed vegetation and gentle bokeh, authentic natural colors.",
+      "alt_de": "KI-Stilbeispiel Natur-Dokumentation: fiktive Reporterin am Fluss mit Brücke und Blumen.",
+      "review_note": ""
+    },
+    {
+      "style_id": "vintage_retro_film",
+      "name_de": "Körniger Retro-Film",
+      "category_id": "realism_cinema",
+      "image": "vintage_retro_film.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "796dd5a4a51cfea0f07f30e21112aa6a721944ca0766f8e4850f11740ff066db",
+      "prompt": "Use case: stylized-concept. Asset type: one standalone style-library example image for a news video creator. Landscape composition. Common motif: a fictional adult female local news reporter with short dark hair and a plain ochre jacket holding an unbranded microphone, standing beside a calm river; a small arched pedestrian bridge behind her, leafy tree and wildflowers in foreground. Medium-wide framing, reporter on left third, bridge on right, peaceful informative mood. No written words, captions, logos, watermarks, grids, collage, frames, or recognizable real people. Original character design. The image must strongly demonstrate the specified visual medium rather than a generic mixed style. Style/medium: 1970s analog 35mm movie still, visible fine film grain, muted warm colors, soft optical imperfections, nostalgic realistic photography.",
+      "alt_de": "KI-Stilbeispiel Körniger Retro-Film: fiktive Reporterin am Fluss mit Brücke und Blumen.",
+      "review_note": "Analogfilm-Anmutung; Beispielbild im Querformat, kein verbindliches 4:3-Ausgabeprofil."
+    },
+    {
+      "style_id": "pumuckl_hybrid",
+      "name_de": "80s Nostalgie-Mix (Pumuckl-Stil)",
+      "category_id": "realism_cinema",
+      "image": "pumuckl_hybrid.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "86e9cbdcdc8771f9e3ac636068e6202ec083304d9d85cc9d0d9ecf54165d8261",
+      "prompt": "Use case: stylized-concept. Asset type: one standalone style-library example image for a news video creator. Landscape composition. Common motif: a fictional adult female local news reporter with short dark hair and a plain ochre jacket holding an unbranded microphone, standing beside a calm river; a small arched pedestrian bridge behind her, leafy tree and wildflowers in foreground. Medium-wide framing, reporter on left third, bridge on right, peaceful informative mood. No written words, captions, logos, watermarks, grids, collage, frames, or recognizable real people. Original character design. The image must strongly demonstrate the specified visual medium rather than a generic mixed style. Style/medium: 1980s hybrid live action and hand drawn animation: a completely original hand-inked 2D cartoon reporter composited into a realistic photographed riverside landscape, warm nostalgic analog film grain. No existing fictional characters.",
+      "alt_de": "KI-Stilbeispiel 80s Nostalgie-Mix (Pumuckl-Stil): fiktive Reporterin am Fluss mit Brücke und Blumen.",
+      "review_note": ""
+    },
+    {
+      "style_id": "pixar_disney",
+      "name_de": "Pixar / Disney Charme",
+      "category_id": "3d_animation_cgi",
+      "image": "pixar_disney.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "597477b69d9cc15353964f0c5832b3e4307101b4d67b01be216cc7c2470e06d3",
+      "prompt": "Use case: stylized-concept. Asset type: one standalone style-library example image for a news video creator. Landscape composition. Common motif: a fictional adult female local news reporter with short dark hair and a plain ochre jacket holding an unbranded microphone, standing beside a calm river; a small arched pedestrian bridge behind her, leafy tree and wildflowers in foreground. Medium-wide framing, reporter on left third, bridge on right, peaceful informative mood. No written words, captions, logos, watermarks, grids, collage, frames, or recognizable real people. Original character design. The image must strongly demonstrate the specified visual medium rather than a generic mixed style. Style/medium: Polished friendly feature-film 3D animation, original appealing character with large expressive eyes, soft rounded forms, warm vivid lighting and tactile smooth materials. No existing fictional characters.",
+      "alt_de": "KI-Stilbeispiel Pixar / Disney Charme: fiktive Reporterin am Fluss mit Brücke und Blumen.",
+      "review_note": ""
+    },
+    {
+      "style_id": "gaming_cinematic",
+      "name_de": "Gaming Cinematic (Sci-Fi/Fantasy)",
+      "category_id": "3d_animation_cgi",
+      "image": "gaming_cinematic.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "d75fd851b054c67fefa227de2a3e31d6510681ca87077478b5a1867c426aa1c2",
+      "prompt": "Use case: stylized-concept. Asset type: one standalone style-library example image for a news video creator. Landscape composition. Common motif: a fictional adult female local news reporter with short dark hair and a plain ochre jacket holding an unbranded microphone, standing beside a calm river; a small arched pedestrian bridge behind her, leafy tree and wildflowers in foreground. Medium-wide framing, reporter on left third, bridge on right, peaceful informative mood. No written words, captions, logos, watermarks, grids, collage, frames, or recognizable real people. Original character design. The image must strongly demonstrate the specified visual medium rather than a generic mixed style. Style/medium: Detailed futuristic video game cinematic 3D render, original reporter in subtle sci-fi clothing, metallic reflections, atmospheric volumetric fog, dramatic river landscape.",
+      "alt_de": "KI-Stilbeispiel Gaming Cinematic (Sci-Fi/Fantasy): fiktive Reporterin am Fluss mit Brücke und Blumen.",
+      "review_note": ""
+    },
+    {
+      "style_id": "biene_maja_3d",
+      "name_de": "Modernes 3D-Insektenabenteuer",
+      "category_id": "3d_animation_cgi",
+      "image": "biene_maja_3d.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "b603f08bfc334438fd9825841fcb7e74d31d5b511db6ef68fddc50a5967423fa",
+      "prompt": "Use case: stylized-concept. Asset type: one standalone style-library example image for a news video creator. Landscape composition. Common motif: a fictional adult female local news reporter with short dark hair and a plain ochre jacket holding an unbranded microphone, standing beside a calm river; a small arched pedestrian bridge behind her, leafy tree and wildflowers in foreground. Medium-wide framing, reporter on left third, bridge on right, peaceful informative mood. No written words, captions, logos, watermarks, grids, collage, frames, or recognizable real people. Original character design. The image must strongly demonstrate the specified visual medium rather than a generic mixed style. Style/medium: Friendly children's 3D animated adventure, original cute rounded cartoon human reporter, vibrant flowers, sunny translucent grass, charming bee hovering nearby, rich smooth materials, low meadow camera.",
+      "alt_de": "KI-Stilbeispiel Modernes 3D-Insektenabenteuer: fiktive Reporterin am Fluss mit Brücke und Blumen.",
+      "review_note": ""
+    },
+    {
+      "style_id": "modern_anime",
+      "name_de": "Moderner Anime",
+      "category_id": "2d_illustration",
+      "image": "modern_anime.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "9657a97bf238cbd07ba7622d78e8a4e301aaa519502d72a9eb4954e01da35076",
+      "prompt": "Use case: stylized-concept. Asset type: one standalone style-library example image for a news video creator. Landscape composition. Common motif: a fictional adult female local news reporter with short dark hair and a plain ochre jacket holding an unbranded microphone, standing beside a calm river; a small arched pedestrian bridge behind her, leafy tree and wildflowers in foreground. Medium-wide framing, reporter on left third, bridge on right, peaceful informative mood. No written words, captions, logos, watermarks, grids, collage, frames, or recognizable real people. Original character design. The image must strongly demonstrate the specified visual medium rather than a generic mixed style. Style/medium: Contemporary Japanese hand drawn anime, original adult reporter, precise cel shading, richly painted landscape, dramatic luminous clouds, beautiful sunlight. No existing characters or specific artist imitation.",
+      "alt_de": "KI-Stilbeispiel Moderner Anime: fiktive Reporterin am Fluss mit Brücke und Blumen.",
+      "review_note": ""
+    },
+    {
+      "style_id": "graphic_novel_noir",
+      "name_de": "Graphic Novel / Comic Noir",
+      "category_id": "2d_illustration",
+      "image": "graphic_novel_noir.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "26f07ef6d4157ecce84924de6f4f182ac0a3277ebf977795059cf2adbea25f9b",
+      "prompt": "Use case: stylized-concept. Asset type: one standalone style-library example image for a news video creator. Landscape composition. Common motif: a fictional adult female local news reporter with short dark hair and a plain ochre jacket holding an unbranded microphone, standing beside a calm river; a small arched pedestrian bridge behind her, leafy tree and wildflowers in foreground. Medium-wide framing, reporter on left third, bridge on right, peaceful informative mood. No written words, captions, logos, watermarks, grids, collage, frames, or recognizable real people. Original character design. The image must strongly demonstrate the specified visual medium rather than a generic mixed style. Style/medium: Black and white graphic novel noir illustration, bold ink contours, deep solid black shadows, dramatic chiaroscuro, paper texture, serious original reporter.",
+      "alt_de": "KI-Stilbeispiel Graphic Novel / Comic Noir: fiktive Reporterin am Fluss mit Brücke und Blumen.",
+      "review_note": ""
+    },
+    {
+      "style_id": "la_linea",
+      "name_de": "La Linea (Die Linie)",
+      "category_id": "2d_illustration",
+      "image": "la_linea.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "3f5424118570da20241189b1709816c32eed251dec0ea97cec858460679c1d31",
+      "prompt": "Use case: stylized-concept. Asset type: one standalone style-library example image for a news video creator. Landscape composition. Common motif: a fictional adult female local news reporter with short dark hair and a plain ochre jacket holding an unbranded microphone, standing beside a calm river; a small arched pedestrian bridge behind her, leafy tree and wildflowers in foreground. Medium-wide framing, reporter on left third, bridge on right, peaceful informative mood. No written words, captions, logos, watermarks, grids, collage, frames, or recognizable real people. Original character design. The image must strongly demonstrate the specified visual medium rather than a generic mixed style. Style/medium: Extremely minimalist continuous white line drawing on a single solid blue background; original reporter, microphone, bridge and river suggested by one flowing thick white contour; no shading, no gradients, no filled character shapes.",
+      "alt_de": "KI-Stilbeispiel La Linea (Die Linie): fiktive Reporterin am Fluss mit Brücke und Blumen.",
+      "review_note": "Weiße Konturzeichnung; keine garantierte durchgehende Einzellinie."
+    },
+    {
+      "style_id": "biene_maja_70s",
+      "name_de": "70s Nostalgie-Zeichentrick",
+      "category_id": "2d_illustration",
+      "image": "biene_maja_70s.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7780b7635109edbce284dd964ee340741d0a1192b26beaa0cf811ad90e7ef900",
+      "prompt": "Use case: stylized-concept. Asset type: one standalone style-library example image for a news video creator. Landscape composition. Common motif: a fictional adult female local news reporter with short dark hair and a plain ochre jacket holding an unbranded microphone, standing beside a calm river; a small arched pedestrian bridge behind her, leafy tree and wildflowers in foreground. Medium-wide framing, reporter on left third, bridge on right, peaceful informative mood. No written words, captions, logos, watermarks, grids, collage, frames, or recognizable real people. Original character design. The image must strongly demonstrate the specified visual medium rather than a generic mixed style. Style/medium: Vintage 1970s European-Japanese children's cel animation, original human reporter, simple charming ink contours, soft warm palette, lush watercolor meadow background, gentle nostalgic summer light.",
+      "alt_de": "KI-Stilbeispiel 70s Nostalgie-Zeichentrick: fiktive Reporterin am Fluss mit Brücke und Blumen.",
+      "review_note": ""
+    },
+    {
+      "style_id": "pumuckl_2d",
+      "name_de": "Pumuckl Welt (Reiner Zeichentrick)",
+      "category_id": "2d_illustration",
+      "image": "pumuckl_2d.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "8c7d4abaee826a993a3168dedb53dd50ae3da16a4a6d9deb95ef51e0ebf55860",
+      "prompt": "Use case: stylized-concept. Asset type: one standalone style-library example image for a news video creator. Landscape composition. Common motif: a fictional adult female local news reporter with short dark hair and a plain ochre jacket holding an unbranded microphone, standing beside a calm river; a small arched pedestrian bridge behind her, leafy tree and wildflowers in foreground. Medium-wide framing, reporter on left third, bridge on right, peaceful informative mood. No written words, captions, logos, watermarks, grids, collage, frames, or recognizable real people. Original character design. The image must strongly demonstrate the specified visual medium rather than a generic mixed style. Style/medium: Traditional European full 2D cartoon illustration, original playful human reporter, clean black outlines, flat warm character colors, soft watercolor-painted riverside background, cozy storybook aesthetic. No photographed elements or existing characters.",
+      "alt_de": "KI-Stilbeispiel Pumuckl Welt (Reiner Zeichentrick): fiktive Reporterin am Fluss mit Brücke und Blumen.",
+      "review_note": ""
+    },
+    {
+      "style_id": "flat_design",
+      "name_de": "Flat Design / Vector Motion",
+      "category_id": "abstract_motion",
+      "image": "flat_design.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "1e6d298fcc5308151676d2be03d4fabecc375fa5323dce7604f241abf2c74665",
+      "prompt": "Use case: stylized-concept. Asset type: one standalone style-library example image for a news video creator. Landscape composition. Common motif: a fictional adult female local news reporter with short dark hair and a plain ochre jacket holding an unbranded microphone, standing beside a calm river; a small arched pedestrian bridge behind her, leafy tree and wildflowers in foreground. Medium-wide framing, reporter on left third, bridge on right, peaceful informative mood. No written words, captions, logos, watermarks, grids, collage, frames, or recognizable real people. Original character design. The image must strongly demonstrate the specified visual medium rather than a generic mixed style. Style/medium: Minimal flat vector-like illustration, original reporter built from clean geometric shapes, reduced corporate blue/green/orange palette, simple river bridge and plants, no gradients, shadows or 3D depth.",
+      "alt_de": "KI-Stilbeispiel Flat Design / Vector Motion: fiktive Reporterin am Fluss mit Brücke und Blumen.",
+      "review_note": "Flächige Illustration mit leichten Verläufen; kein strikt verlaufsfreier Vektornachweis."
+    }
+  ]
+}
