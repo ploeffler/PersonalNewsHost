@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 121,
+  "revision": 122,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4858,7 +4858,7 @@
       "id": "T324",
       "epic": "E31",
       "title": "Stilbeispielbilder und Kontextvorgaben für Fork-Vorschauen",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [],
       "instructions": [
         "13 KI-generierte Stilbeispiele mit gemeinsamem Motiv aus der Recherchebibliothek erzeugen, visuell prüfen und mit eindeutiger style_id im Repository speichern.",
@@ -4872,7 +4872,16 @@
       "source": "user-chat-2026-11-01-style-examples",
       "version": "0.2",
       "package": "A41",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "94dd5a003f724b5b81efa8f3b87db257",
+        "expires_at": 1793542055.5819793,
+        "files": [
+          "assets/style-examples/",
+          "planning/research/video_style_library.json",
+          "planning/reviews/T324-style-examples.md"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -6860,6 +6869,15 @@
       "client": "codex-local-coordinator",
       "at": 1793534853.073146,
       "note": "Explizite Nutzererweiterung um Stop-Motion; bestehender Review wird für gemeinsame 14-Bilder-Lieferung mit erweitertem Dateiumfang neu eingereicht. Bisherige Lieferung 52e25a2 bleibt im Gitverlauf."
+    },
+    {
+      "operation_id": "a9090a2403264f95be3559a2110d53b5",
+      "revision": 122,
+      "action": "claim",
+      "task": "T324",
+      "client": "codex-local-coordinator",
+      "at": 1793534855.5819793,
+      "note": ""
     }
   ]
 }
