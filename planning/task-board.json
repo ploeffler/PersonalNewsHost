@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 109,
+  "revision": 110,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -2379,7 +2379,7 @@
       "id": "T181",
       "epic": "E16",
       "title": "Repository-Installation unter Linux",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T180"
       ],
@@ -2395,21 +2395,7 @@
       "source": "planning/betriebswege-ergaenzung.yaml",
       "version": "0.2",
       "package": "A18",
-      "lease": {
-        "client": "codex-local-coordinator",
-        "token": "1d03e38f6be445c5a48bf451a9266337",
-        "expires_at": 1793535683.1876936,
-        "files": [
-          ".github/workflows/linux-install-smoke.yml",
-          ".gitignore",
-          "docs/guide/installation.md",
-          "docs/guide/linux-installation.md",
-          "planning/reviews/T181-linux-installation.md",
-          "scripts/install_linux.py",
-          "tests/linux_install_smoke.py",
-          "tests/test_install_linux.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-local-coordinator",
         "commit": "a3d1e6b00ef344d4647de1ea18c6a403aec92a00",
@@ -2423,10 +2409,15 @@
           "scripts/install_linux.py",
           "tests/linux_install_smoke.py",
           "tests/test_install_linux.py"
-        ]
+        ],
+        "reviewer": "human-ploeffler",
+        "decision": "Explizite menschliche Freigabe durch ploeffler im Chat: «freigabe», bezogen auf T181, T195 und T196. Durch Codex im Auftrag des Owners eingetragen; kein unabhängiger KI-Review. Vorhandene Test- und CI-Nachweise akzeptiert. Kein Versionsrelease und keine Freigabe für main oder Aktivierung in fremden Forks."
       },
       "local_work_pending": false,
-      "evidence": [],
+      "evidence": [
+        "a3d1e6b00ef344d4647de1ea18c6a403aec92a00",
+        "402 local offline regression tests passed; 6 installer tests passed. Fresh Ubuntu24.04/Python3.12 install, repeat data preservation, real espeak production and loopback video passed: https://github.com/ploeffler/PersonalNewsHost/actions/runs/41302108934 ; Foundation lint/offline regression/JS passed: https://github.com/ploeffler/PersonalNewsHost/actions/runs/41302108885 . Host Ubuntu26.04/Python3.14 left unchanged."
+      ],
       "implementation_note": "",
       "coordination_note": ""
     },
@@ -6704,6 +6695,15 @@
       "client": "codex-local-coordinator",
       "at": 1793532716.779608,
       "note": ""
+    },
+    {
+      "operation_id": "7056bd78f872429e84500f7209fce1eb",
+      "revision": 110,
+      "action": "complete",
+      "task": "T181",
+      "client": "human-ploeffler",
+      "at": 1793532879.9081345,
+      "note": "Explizite menschliche Freigabe durch ploeffler im Chat: «freigabe», bezogen auf T181, T195 und T196. Durch Codex im Auftrag des Owners eingetragen; kein unabhängiger KI-Review. Vorhandene Test- und CI-Nachweise akzeptiert. Kein Versionsrelease und keine Freigabe für main oder Aktivierung in fremden Forks."
     }
   ]
 }
