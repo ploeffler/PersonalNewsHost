@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 106,
+  "revision": 107,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4783,7 +4783,7 @@
       "id": "T196",
       "epic": "E16",
       "title": "Zurückliegende Fork-Branches mit Originalbranches synchronisieren",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T180"
       ],
@@ -4815,7 +4815,17 @@
           "tests/test_fork_sync.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-local-coordinator",
+        "commit": "cced3e339fc61517907f0fcf229f0fe17178d836",
+        "checks": "Final 396 offline tests including 24 fork tests and rendering passed. Exact head Foundation CI SUCCESS https://github.com/ploeffler/PersonalNewsHost/actions/runs/41291933887 including Ruff, network-isolated suite and JS. Read-only QSSTV graph and slash-branch API smoke passed. Branch writes and issue notifications simulated, not executed against real repositories. No-force fast-forward, preserving merge, conflicts, protection/head rechecks, mapped targets and daily opt-in automation verified. Local files remain untouched. Runtime activation not performed.",
+        "files": [
+          ".github/workflows/fork-sync.yml",
+          "planning/reviews/T196-fork-sync.md",
+          "scripts/fork_sync.py",
+          "tests/test_fork_sync.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "Korrigierter Nutzerumfang: Repository-Forksynchronisierung, keine automatische Software-/Containerinstallation.",
@@ -6638,6 +6648,15 @@
       "task": "T195",
       "client": "codex-local-coordinator",
       "at": 1793524385.4884326,
+      "note": ""
+    },
+    {
+      "operation_id": "e290f85a920a4f20ab3a8b5c509c4d5d",
+      "revision": 107,
+      "action": "submit",
+      "task": "T196",
+      "client": "codex-local-coordinator",
+      "at": 1793524387.7781062,
       "note": ""
     }
   ]
