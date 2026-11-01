@@ -77,12 +77,18 @@ def preview(paths, port):
 def main(argv=None):
     paths = layout()
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=['inspect', 'due', 'produce', 'serve-preview'])
+    parser.add_argument('command', choices=['inspect', 'due', 'produce', 'serve-preview', 'check-updates', 'watch-updates'])
     parser.add_argument('--config', type=Path, default=paths['config'])
     parser.add_argument('--show', default='main')
     parser.add_argument('--port', type=int, default=8080)
     args = parser.parse_args(argv)
     try:
+        if args.command in ('check-updates', 'watch-updates'):
+            try:
+                from .update_check import main as update_main
+            except ImportError:
+                from update_check import main as update_main
+            return update_main(['--watch'] if args.command == 'watch-updates' else [])
         if args.command == 'inspect':
             print(json.dumps({'paths': {key: str(value) for key, value in paths.items()},
                               'config': str(args.config.resolve()),
