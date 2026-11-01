@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 86,
+  "revision": 87,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4651,7 +4651,7 @@
       "id": "T323",
       "epic": "E31",
       "title": "Vorgezogene Einrichtungsabläufe je Provider dokumentieren",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T100"
       ],
@@ -4678,7 +4678,17 @@
           "planning/reviews/T323-provider-setup.md"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-local-coordinator",
+        "commit": "e616eceba8ea5ebb8dd2fec8877a3b611c4a5980",
+        "checks": "Official setup sources opened 2026-11-01. Mock CLI validated twice (second cached), 3 config examples valid, 10 coordination and 6 documentation gate tests pass; tracked secret scan, Markdown links and diff check pass. External installation and cloud calls deliberately not performed. See planning/reviews/T323-provider-setup.md.",
+        "files": [
+          "docs/guide/index.md",
+          "docs/guide/provider-einrichtung.md",
+          "docs/guide/provider-runtime.md",
+          "planning/reviews/T323-provider-setup.md"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "Dokumentationsanteil von T322 ausdrücklich vorgezogen. T102 und T320–T322 bleiben mit ihren vollständigen Umfängen offen.",
@@ -6303,6 +6313,15 @@
       "task": "T323",
       "client": "codex-local-coordinator",
       "at": 1793519458.7040806,
+      "note": ""
+    },
+    {
+      "operation_id": "f5a6ab7a8fbe4a999250175d1a8a97aa",
+      "revision": 87,
+      "action": "submit",
+      "task": "T323",
+      "client": "codex-local-coordinator",
+      "at": 1793519683.4716506,
       "note": ""
     }
   ]
