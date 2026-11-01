@@ -61,7 +61,8 @@
       "0.7",
       "0.8",
       "0.9",
-      "1.0"
+      "1.0",
+      "1.1"
     ],
     "active": "0.2",
     "completed": [
@@ -92,9 +93,9 @@
     "uncommitted_local_0_1_work": "Marked local_work_pending; reconcile deliberately after integration before another client claims it."
   },
   "inventory": {
-    "task_count": 154,
-    "package_count": 45,
-    "release_count": 10
+    "task_count": 157,
+    "package_count": 46,
+    "release_count": 11
   },
   "task_state_import": {
     "progress_source": "planning/fortschritt.yaml",
@@ -154,5 +155,17 @@
     "status": "local_editor_implemented_pending_review",
     "implementation_task": "T326",
     "integration_status": "shared_admin_and_production_integration_remain_in_T216_T217_T218"
+  },
+  "editorial_web_app": {
+    "version": "1.1",
+    "status": "planned",
+    "tasks": [
+      "T360",
+      "T361",
+      "T362"
+    ],
+    "scope": "Responsive browser workspace for the shared editorial access, preserving departments, virtual employees, source checking, review, shows and separate production/publication.",
+    "cms": false,
+    "virtual_employee_logins": false
   }
 }

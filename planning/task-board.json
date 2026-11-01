@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 129,
+  "revision": 130,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -5054,6 +5054,86 @@
       "evidence": [],
       "implementation_note": "T216–T218 bleiben für vollständige Integration in künftige gemeinsame Verwaltung/Produktionsadapter offen. Dieser vorgezogene Auftrag implementiert einen lokalen nutzbaren Einstieg und wiederverwendbaren Vertrag.",
       "coordination_note": "User explicitly requests implementation now; active release unchanged."
+    },
+    {
+      "id": "T360",
+      "epic": "E33",
+      "title": "Redaktions-Web-App: Bedienkonzept und Schnittstellen",
+      "status": "todo",
+      "depends_on": [
+        "T081"
+      ],
+      "instructions": [
+        "Browserbasierte Web-App als gemeinsame Arbeitsoberfläche der Redaktion planen; Desktop und mobile Geräte berücksichtigen.",
+        "Bestehende Redaktion, Ressorts, virtuelle Mitarbeiter und deren Beiträge, Quellenprüfung, Überarbeitung und menschliche Freigabe übernehmen. Kein CMS und keine eigenen Logins für virtuelle Mitarbeiter.",
+        "Arbeitsabläufe für Meldungseingang, Recherche, Bearbeitung, Rundown, Vorschau, Produktion und getrennte Veröffentlichung festlegen; vorhandene APIs und Datenmodelle wiederverwenden."
+      ],
+      "acceptance": [
+        "Prüfbares Bedienkonzept und API-Vertrag decken die vorhandenen Redaktionsabläufe ab; offene Integrationslücken sind benannt."
+      ],
+      "source": "user-chat-2026-11-01-redaktions-webapp",
+      "version": "1.1",
+      "package": "A45",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "Expliziter Planungsauftrag für Version 1.1; keine Vorverlegung der Implementierung.",
+      "coordination_note": ""
+    },
+    {
+      "id": "T361",
+      "epic": "E33",
+      "title": "Redaktions-Web-App implementieren",
+      "status": "todo",
+      "depends_on": [
+        "T360"
+      ],
+      "instructions": [
+        "Responsive Web-App mit gemeinsamem geschütztem Redaktionszugang und klar getrenntem Konfigurationszugang umsetzen.",
+        "Ressort- und Mitarbeiterübersicht, Meldungs-/Beitragsbearbeitung, Quellen und Prüfstatus, Freigabearbeitskorb, Sendungsplanung sowie Produktions- und Veröffentlichungsstatus integrieren.",
+        "Konkurrierende Bearbeitung sichtbar behandeln; versionierte Freigaben, verständliche Fehler und Wiederaufnahme nach Verbindungsunterbrechungen vorsehen. Serverseitige Secrets niemals im Browser ausliefern.",
+        "Bestehende Budgetgrenzen, Sprachvorgaben, Pflichtarchivierung und ausdrückliche Veröffentlichungsfreigaben beibehalten; keine laufenden Zusatzkosten voraussetzen."
+      ],
+      "acceptance": [
+        "Eine Meldung lässt sich im Browser vom Eingang über Bearbeitung und Freigabe bis zur Produktionsvorschau verfolgen; Veröffentlichung bleibt eine getrennte Aktion.",
+        "Desktop- und Mobilansicht sind tastaturbedienbar; Konflikte und fehlende Berechtigungen werden serverseitig abgefangen."
+      ],
+      "source": "user-chat-2026-11-01-redaktions-webapp",
+      "version": "1.1",
+      "package": "A45",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "Expliziter Planungsauftrag für Version 1.1; keine Vorverlegung der Implementierung.",
+      "coordination_note": ""
+    },
+    {
+      "id": "T362",
+      "epic": "E33",
+      "title": "Redaktions-Web-App abnehmen und dokumentieren",
+      "status": "todo",
+      "depends_on": [
+        "T361"
+      ],
+      "instructions": [
+        "Ende-zu-Ende-Tests mit Fixtures für Bearbeitung, Quellenprüfung, Freigabe, parallele Änderungen und getrennte Produktion/Veröffentlichung ergänzen.",
+        "Zugriffsschutz, CSRF, Secretfreiheit, Neustart/Persistenz und Budget-0-Fallbacks prüfen; Nutzeranleitung und Upgrade von 1.0 vorbereiten.",
+        "Dokumentation und Release erst nach bestätigter Abnahme von 1.1 veröffentlichen."
+      ],
+      "acceptance": [
+        "Browser-Abnahme und Regressionstests bestanden; vorhandene Daten und Redaktionsfunktionen bleiben bei Upgrade erhalten."
+      ],
+      "source": "user-chat-2026-11-01-redaktions-webapp",
+      "version": "1.1",
+      "package": "A45",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "Expliziter Planungsauftrag für Version 1.1; keine Vorverlegung der Implementierung.",
+      "coordination_note": ""
     }
   ],
   "packages": [
@@ -5480,6 +5560,15 @@
         "T351",
         "T352"
       ]
+    },
+    {
+      "id": "A45",
+      "title": "Redaktions-Web-App",
+      "tasks": [
+        "T360",
+        "T361",
+        "T362"
+      ]
     }
   ],
   "releases": [
@@ -5706,6 +5795,16 @@
         "T081"
       ],
       "acceptance": "Migration und vollständiger Mock-/Fallback-Abnahmelauf bestanden; reale Integrationen haben einen dokumentierten individuellen Prüfstatus."
+    },
+    {
+      "version": "1.1",
+      "title": "Web-App für die Redaktion",
+      "tasks": [
+        "T360",
+        "T361",
+        "T362"
+      ],
+      "acceptance": "Geschützte responsive Redaktions-Web-App integriert bestehende redaktionelle Abläufe; Browser-Abnahme, Migration und Regressionstests bestanden."
     }
   ],
   "source_sha256": {
@@ -5734,7 +5833,8 @@
   },
   "dependency_layers": [
     [
-      "T001"
+      "T001",
+      "T324"
     ],
     [
       "T002",
@@ -5779,6 +5879,8 @@
       "T142",
       "T144",
       "T160",
+      "T216",
+      "T326",
       "T902"
     ],
     [
@@ -5792,7 +5894,8 @@
       "T112",
       "T161",
       "T164",
-      "T201"
+      "T201",
+      "T217"
     ],
     [
       "T021",
@@ -5812,6 +5915,7 @@
       "T167",
       "T202",
       "T212",
+      "T218",
       "T230"
     ],
     [
@@ -5927,6 +6031,15 @@
     ],
     [
       "T081"
+    ],
+    [
+      "T360"
+    ],
+    [
+      "T361"
+    ],
+    [
+      "T362"
     ]
   ],
   "events": [
@@ -7090,6 +7203,13 @@
       "client": "codex-local-coordinator",
       "at": 1793538446.7616606,
       "note": ""
+    },
+    {
+      "revision": 130,
+      "action": "plan",
+      "client": "codex-webapp-plan",
+      "at": 1793547539.749,
+      "note": "Explicit user request: plan editorial web app for version 1.1; active release unchanged."
     }
   ]
 }
