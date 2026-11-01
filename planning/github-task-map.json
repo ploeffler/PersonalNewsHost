@@ -2,7 +2,7 @@
   "schema_version": 1,
   "repository": "ploeffler/PersonalNewsHost",
   "branch": "Full-featured-Newsoutlet",
-  "source_revision": 129,
+  "source_revision": 130,
   "milestones": {
     "0.1": {
       "number": 1,
@@ -43,6 +43,10 @@
     "1.0": {
       "number": 10,
       "url": "https://github.com/ploeffler/PersonalNewsHost/milestone/10"
+    },
+    "1.1": {
+      "number": 11,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/milestone/11"
     }
   },
   "tasks": {
@@ -815,6 +819,21 @@
       "number": 189,
       "url": "https://github.com/ploeffler/PersonalNewsHost/issues/189",
       "milestone": 2
+    },
+    "T360": {
+      "number": 190,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/190",
+      "milestone": 11
+    },
+    "T361": {
+      "number": 191,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/191",
+      "milestone": 11
+    },
+    "T362": {
+      "number": 192,
+      "url": "https://github.com/ploeffler/PersonalNewsHost/issues/192",
+      "milestone": 11
     }
   }
 }
