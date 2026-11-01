@@ -121,20 +121,16 @@
       "T195",
       "T196"
     ],
-    "stable_source": "released_version_tags",
+    "scope": "all fork branches compared with corresponding original branches",
+    "comparison": "ahead/behind commit graph; includes divergent and missing counterparts",
     "automatic_check": true,
-    "automatic_installation": "configurable_mode_with_maintenance_window",
-    "preserve": [
-      "configuration",
-      "secrets",
-      "certificates",
-      "models",
-      "archives",
-      "editorial_state",
-      "provider_usage"
-    ],
-    "local_code_changes": "detect_and_keep; no forced overwrite",
-    "rollback_required": true,
-    "implementation_status": "planned"
+    "notification": "new or changed behind status per branch; compare link and sync action",
+    "synchronization": "per branch or selected branches; configurable automatic conflict-free synchronization",
+    "preserve_own_commits": true,
+    "force_push": false,
+    "conflicts": "retain branch, report conflict or prepare reviewable PR",
+    "local_checkout": "separate from remote fork synchronization; preserve uncommitted files and user data",
+    "release_checker": "13d022d remains implemented separately; not fulfillment of this branch-sync request",
+    "implementation_status": "requirements corrected; branch checker and synchronization not implemented"
   }
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 97,
+  "revision": 98,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -2534,7 +2534,7 @@
         "Datenmigration, Sicherung und Wiederherstellung für beide Betriebswege definieren.",
         "Budget- und Jobzustände auch ohne Actions-Artefakte persistent speichern; konkurrierende Worker absichern.",
         "Logrotation, Speichergrenzen, Fehlerdiagnose und Update-/Rollback-Verfahren ergänzen.",
-        "Gemeinsame Backup-/Migrationsschnittstelle für den automatischen Updater T196 bereitstellen; Code-, Daten- und Rollbackstände konsistent zuordnen."
+        "Softwareupdates und Datenmigration vom Forkabgleich T195/T196 trennen; lokale Daten und Änderungen bei späterer Checkout-Aktualisierung erhalten."
       ],
       "acceptance": [
         "Backup und Wiederherstellung erhalten Archiv, Konfiguration und Verbrauchszähler.",
@@ -2566,7 +2566,7 @@
         "Testmatrix für Linux-Repo, Docker CLI und Portainer durchführen; mindestens zwei Shows mit lokalen Testfeeds.",
         "Start/Stop, Host-/Container-Neustart, Zeitplanung, lokale Webausgabe, fehlende Secrets, Offline-Fallback, Update und Wiederherstellung prüfen.",
         "Dokumentierte manuelle Portainer-Abnahme und automatisierbare Linux-/Container-Smoke-Tests klar unterscheiden.",
-        "Automatische Originalversionsprüfung T195 und Installation T196 einschließlich Konfliktfällen und Rollback in die Betriebsabnahme aufnehmen."
+        "Forkabgleich T195 und Branchsynchronisierung T196 einschließlich divergenter Branches, Konflikten und lokal unverändertem Arbeitsstand in die Betriebsabnahme aufnehmen."
       ],
       "acceptance": [
         "Abnahmebericht mit Befehlen, getesteten Versionen und Ergebnissen für alle drei Installationsvarianten liegt vor.",
@@ -4726,80 +4726,56 @@
     {
       "id": "T195",
       "epic": "E16",
-      "title": "Automatischer Versionscheck gegen das Originalrepository",
-      "status": "review",
+      "title": "Alle Fork-Branches automatisch mit dem Originalrepository vergleichen",
+      "status": "todo",
       "depends_on": [
         "T180"
       ],
       "instructions": [
-        "Originalrepository standardmäßig https://github.com/ploeffler/PersonalNewsHost festlegen; installierten Versions-Tag, Commit und gegebenenfalls Image-Digest persistent erfassen. Bei Forks Originalquelle und eigenen origin unterscheiden.",
-        "Beim Start und in einem konfigurierbaren Intervall nach neuen freigegebenen Release-Tags prüfen. Standardkanal stabile Versionen; Entwürfe, Vorabversionen, reine Branchbewegungen und Downgrades ausschließen. Entwicklungskanal nur ausdrücklich auswählen.",
-        "Versionen semantisch vergleichen, nicht lexikografisch; installierten Commit und Ziel-Commit unterscheiden. Umbenannte oder verschobene Tags erkennen und nicht stillschweigend als identischen Release übernehmen.",
-        "Aktuelle Version, verfügbare Zielversion, Änderungsnotizen, Kompatibilität, Prüfergebnis und Zeitpunkt der letzten erfolgreichen Prüfung über CLI bereitstellen; später dieselben Daten im geschützten Adminbereich verwenden.",
-        "Netzwerkfehler, Offlinebetrieb und API-Limits mit begrenztem Timeout/Backoff behandeln. Ein fehlgeschlagener Check verändert weder Installation noch Produktionsstatus; keine Tokens oder private Konfiguration übertragen."
+        "Benutzer-Fork und Originalrepository getrennt erfassen; Original für PersonalNewsHost standardmäßig ploeffler/PersonalNewsHost. Parent-/Source-Metadaten zur Zuordnung prüfen. Referenzbeispiel: ploeffler/QSSTV-Experimental gegen jbdubbs/QSSTV-Experimental.",
+        "Beim Start und regelmäßig alle Branches beider Repositorys vollständig und paginiert erfassen, nicht nur Defaultbranch, ausgecheckten Branch oder Release-Tags. Standardzuordnung gleicher Branchname; abweichende Zuordnung nur explizit konfigurieren.",
+        "Je Branch Commitgraph vergleichen und ahead/behind-Zahlen sowie aktuell, nur voraus, zurückliegend, auseinanderentwickelt oder ohne Gegenstück ausweisen. Fork-eigene und nur im Original vorhandene Branches gesondert anzeigen; keine automatische Löschung oder beliebige Vergleichszuordnung.",
+        "Benutzer bei neuen oder veränderten Rückständen verständlich benachrichtigen: Branchname, Originalbranch, fehlende und eigene Commitzahlen, Vergleichslink und angebotene Synchronisierung. Status über CLI bereitstellen und später in der geschützten Konfigurationsoberfläche verwenden. Keine ständigen doppelten Hinweise bei unverändertem Zustand.",
+        "Netzwerk-/API-Fehler, Limits und nicht zugreifbare Branches mit begrenztem Timeout/Backoff behandeln. Unbekannter Status darf nicht als aktuell gelten. Installierte Anwendung und Git-Branches durch reine Prüfung nicht verändern."
       ],
       "acceptance": [
-        "Lokales Testrepository bzw. API-Fixtures prüfen gleiche, ältere, neuere, Vorab- und verschobene Tags einschließlich semantischer Sortierung.",
-        "Automatische wiederholte Prüfung funktioniert ohne Nutzeraktion; Offline-/Limitfehler erhalten den laufenden Betrieb und sind verständlich sichtbar.",
-        "Fork-Installationen vergleichen ausdrücklich mit dem Originalrepository; bloße Branchänderungen lösen im stabilen Kanal kein Update aus."
+        "Test-Fork mit mehreren Branches weist für jeden Branch korrekte ahead/behind-Zahlen und Status aus, einschließlich divergent, fehlendem Gegenstück, Slashes im Namen und paginierten Listen.",
+        "Änderungen ausschließlich in einem Nicht-Defaultbranch lösen den passenden Benutzerhinweis aus; Releases oder neue Versionstags sind dafür nicht erforderlich.",
+        "Regelmäßige Prüfung erfasst alle Branches; Offline-/Limitfehler bleiben sichtbar und unveränderte Ergebnisse erzeugen keine wiederholten Benachrichtigungen."
       ],
       "source": "user-chat-2026-11-01-upstream-updates",
       "version": "0.2",
       "package": "A20",
-      "lease": {
-        "client": "codex-local-coordinator",
-        "token": "9b4f98217d7d42419aa1d49d1bbdc325",
-        "expires_at": 1793525209.4394906,
-        "files": [
-          "docs/guide/updates.md",
-          "planning/reviews/T195-update-check.md",
-          "scripts/local_runtime.py",
-          "scripts/update_check.py",
-          "tests/test_update_check.py"
-        ]
-      },
-      "review": {
-        "author": "codex-local-coordinator",
-        "commit": "13d022dd0ccdc5423cf024da16fa150cd75366c9",
-        "checks": "372 offline tests pass including videos; 14 checker tests and 8 runtime tests pass; syntax/secret/link/diff checks pass. Public live metadata check found confirmed v0.1 and offered no downgrade from 0.2 development. Initial FFmpeg error passed 10-show targeted rerun and entire rerun. Watch mode checks on startup/interval; service installation deferred to T182 and automatic installation to T196. See planning/reviews/T195-update-check.md.",
-        "files": [
-          "docs/guide/updates.md",
-          "planning/reviews/T195-update-check.md",
-          "scripts/local_runtime.py",
-          "scripts/update_check.py",
-          "tests/test_update_check.py"
-        ]
-      },
+      "lease": null,
+      "review": null,
       "local_work_pending": false,
-      "evidence": [],
-      "implementation_note": "Expliziter Nutzerauftrag: automatischer Versionscheck gegen das Originalrepository und Einspielen. Planung, noch keine Implementierung.",
-      "coordination_note": "Originalquelle ploeffler/PersonalNewsHost; Fork-origin nicht automatisch als Original behandeln."
+      "evidence": [
+        "13d022dd0ccdc5423cf024da16fa150cd75366c9: release-only checker; not the requested all-branch fork comparison"
+      ],
+      "implementation_note": "Nutzer präzisiert Fork-/Branch-Abgleich wie GitHub ahead/behind. Bestehender Release-Checker 13d022d bleibt erhalten, erfüllt diesen korrigierten Auftrag jedoch nicht.",
+      "coordination_note": "Vorheriger Review wegen konkretisierter Anforderung zurückgenommen; ursprünglicher Prüfnachweis bleibt im Planungsereignis erhalten. Kein unabhängiger Review oder Abschluss behauptet."
     },
     {
       "id": "T196",
       "epic": "E16",
-      "title": "Automatisches Einspielen geprüfter Originalversionen mit Rollback",
+      "title": "Zurückliegende Fork-Branches mit Originalbranches synchronisieren",
       "status": "todo",
       "depends_on": [
-        "T195",
-        "T186",
-        "T183"
+        "T195"
       ],
       "instructions": [
-        "Konfigurierbaren automatischen Updatebetrieb sowie manuelles Prüfen/Einspielen anbieten. Im automatischen Modus freigegebene kompatible Zielversionen ohne Freigabedialog pro Update installieren; Modus und Wartungsfenster bei Einrichtung festlegen.",
-        "Updates gegen gleichzeitige Produktion, Veröffentlichung und weitere Updater sperren; laufende Jobs geordnet beenden oder Update verschieben. Vorprüfung umfasst freien Speicher, Abhängigkeiten, Datenformat und Updateberechtigungen.",
-        "Linux-Repo: Zielversion in isolierter Umgebung vorbereiten und an ihren Release-Commit binden. Lokale Codeänderungen und eigene Fork-Commits erkennen, niemals durch reset/force überschreiben; Konflikt sichtbar melden und bestehende Installation weiterbetreiben.",
-        "Docker/Portainer: anhand der tatsächlich vorhandenen Distribution aktualisieren. Nur verifizierbare Version/Revision bzw. Image-Digest einsetzen; vorhandene Veröffentlichung in einer Registry nicht voraussetzen. Wenn nötig Image aus fixierter Originalrevision auf dem Zielhost bauen. Deployments dürfen keine Volumes löschen.",
-        "Konfiguration, Secrets, Zertifikate, Modelle, Archive, redaktionelle Daten und Verbrauchszähler vor Codewechsel sichern und erhalten. Migrationen vorab prüfen; bei inkompatiblen oder irreversiblen Schritten automatische Installation zurückstellen und Handlungsbedarf melden.",
-        "Erst nach erfolgreicher Migration und Gesundheits-/Produktionsprüfung auf die neue Version umschalten. Bei Fehlern die vorherige lauffähige Version und den dazu passenden Datenstand wiederherstellen; keine erfolgreiche Updateversion vorzeitig speichern.",
-        "Updater im passenden Host-/Deploymentkontext mit begrenzten Rechten betreiben; öffentliche Nachrichtenoberfläche erhält keine Updatefunktion. Verlauf mit Versionen, Ergebnis und Fehlerklasse ohne Secrets protokollieren.",
-        "Linux-, Compose- und Portainer-Abläufe einschließlich automatischem Modus, Wartungsfenster, Backup, Rollback und Verhalten bei eigenen Änderungen dokumentieren. Provider-/Modellupdates getrennt von Anwendungsupdates behandeln."
+        "Für jeden zurückliegenden Forkbranch eine Übernahme der fehlenden Originalcommits anbieten, einzeln oder gesammelt für ausgewählte Branches. Explizit konfigurierter Automatikmodus darf konfliktfreie Synchronisierungen ohne Freigabedialog pro Lauf ausführen; Prüf- und Schreibrechte getrennt halten.",
+        "Unmittelbar vor Übernahme beide Branchköpfe erneut prüfen. Fork nur behind und ohne eigene Commits: Fast-forward auf den Originalstand. Bei eigenen Commits: verlusterhaltenden Merge vorbereiten, bei Konflikten nichts überschreiben und einen verständlichen Konflikthinweis beziehungsweise prüfbaren Synchronisierungs-PR anbieten.",
+        "Keine Force-Pushes, keine Löschung oder stillschweigende Umbenennung von Branches. Geschützte Branches und fehlende Schreibrechte respektieren; gegebenenfalls PR statt Direktänderung. Ein fehlgeschlagener Branch darf unabhängige, konfliktfreie Branches nicht als erfolgreich synchronisiert ausweisen.",
+        "Fork-eigene Branches ohne Originalgegenstück unverändert erhalten. Nur im Original vorhandene Branches als anlegbar anzeigen; nicht ungefragt eigene Branches löschen oder ersetzen.",
+        "Synchronisierung im GitHub-Fork von lokalem Checkout und laufender Installation unterscheiden. Eine Remoteaktualisierung darf uncommittete lokale Dateien, persönliche Konfiguration, Secrets und erzeugte Daten nicht verwerfen. Lokale Checkout-Aktualisierung nur nach separater Prüfung.",
+        "Benötigte Repository-/Branch-Schreibrechte bei Einrichtung erklären, Tokens geschützt behandeln und Ergebnisse je Branch protokollieren. Teilweise Fehler, parallele neue Commits und wiederholte Läufe idempotent behandeln."
       ],
       "acceptance": [
-        "Automatischer End-to-End-Test installiert eine neuere freigegebene Version aus einem Test-Originalrepository ohne Nutzereingabe und erhält Konfiguration, Secrets, Zertifikate, Archive und Budgets.",
-        "Fehlgeschlagene Vorprüfung, Migration oder Gesundheitsprüfung lässt eine nutzbare vorherige Installation und einen konsistenten Datenstand zurück.",
-        "Lokale Änderungen, aktive Produktion, konkurrierende Updates, fehlender Speicher und offline verfügbares Repository werden ohne Datenverlust behandelt.",
-        "Linux- und Container-Smoke nachgewiesen; tatsächliche Portainer-Abnahme separat dokumentiert. Keine erfundene Registryverfügbarkeit oder pauschale Kompatibilitätsgarantie."
+        "Mehrbranch-Test synchronisiert zurückliegende Forkbranches und erhält vorausliegende sowie eigene Branches unverändert.",
+        "Divergente Branches behalten eigene Commits; Mergekonflikte führen zu keinem Datenverlust und werden branchbezogen gemeldet.",
+        "Parallel veränderte Köpfe, Branchschutz und fehlende Schreibrechte werden korrekt behandelt; kein Force-Push und kein Überschreiben lokaler Änderungen.",
+        "Forkbenutzer kann vom behind-Hinweis zur erfolgreichen Übernahme je Branch gelangen; automatische konfliktfreie Übernahme ist nach expliziter Einrichtung möglich."
       ],
       "source": "user-chat-2026-11-01-upstream-updates",
       "version": "0.2",
@@ -4808,8 +4784,8 @@
       "review": null,
       "local_work_pending": false,
       "evidence": [],
-      "implementation_note": "Expliziter Nutzerauftrag: automatischer Versionscheck gegen das Originalrepository und Einspielen. Planung, noch keine Implementierung.",
-      "coordination_note": "Originalquelle ploeffler/PersonalNewsHost; Fork-origin nicht automatisch als Original behandeln."
+      "implementation_note": "Korrigierter Nutzerumfang: Repository-Forksynchronisierung, keine automatische Software-/Containerinstallation.",
+      "coordination_note": "Ursprünglich zu weit als Release-Deployment interpretiert; durch Nutzerbeispiel auf GitHub-Fork-/Branch-Synchronisierung konkretisiert."
     }
   ],
   "packages": [
@@ -5524,6 +5500,7 @@
       "T142",
       "T144",
       "T160",
+      "T196",
       "T902"
     ],
     [
@@ -5596,13 +5573,12 @@
       "T188"
     ],
     [
+      "T187",
       "T189",
-      "T196",
       "T203",
       "T260"
     ],
     [
-      "T187",
       "T190",
       "T191",
       "T204",
@@ -6536,6 +6512,27 @@
       "client": "codex-local-coordinator",
       "at": 1793522023.0239434,
       "note": ""
+    },
+    {
+      "operation_id": "032d6a5a0b61439ab3ccd1e565ce13fa",
+      "revision": 98,
+      "action": "clarify-fork-branch-sync",
+      "task": "T195,T196",
+      "client": "codex-local-coordinator",
+      "at": 1793522251.5032434,
+      "note": "Owner explicitly clarifies all-branch fork ahead/behind checks and synchronization using QSSTV fork example. Release-only review is superseded, not approved.",
+      "superseded_review": {
+        "author": "codex-local-coordinator",
+        "commit": "13d022dd0ccdc5423cf024da16fa150cd75366c9",
+        "checks": "372 offline tests pass including videos; 14 checker tests and 8 runtime tests pass; syntax/secret/link/diff checks pass. Public live metadata check found confirmed v0.1 and offered no downgrade from 0.2 development. Initial FFmpeg error passed 10-show targeted rerun and entire rerun. Watch mode checks on startup/interval; service installation deferred to T182 and automatic installation to T196. See planning/reviews/T195-update-check.md.",
+        "files": [
+          "docs/guide/updates.md",
+          "planning/reviews/T195-update-check.md",
+          "scripts/local_runtime.py",
+          "scripts/update_check.py",
+          "tests/test_update_check.py"
+        ]
+      }
     }
   ]
 }
