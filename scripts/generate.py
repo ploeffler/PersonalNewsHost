@@ -812,7 +812,7 @@ def write_subtitles(parts, boundaries, directory, speech_durations=None):
     (directory / "subtitles.de.srt").write_text("".join(srt), encoding="utf-8")
 
 
-def main():
+def _generate():
     try:
         from .validate_config import validate_config
     except ImportError:
@@ -1483,6 +1483,25 @@ def main():
     home = DOCS / "index.html"
     home.write_text(decorate_homepage(home.read_text(encoding="utf-8")), encoding="utf-8")
     print(f"Generated {len(selected)} stories; video size {(DOCS / 'latest.mp4').stat().st_size} bytes")
+
+def main():
+    global DOCS
+    try:
+        from .production_quality import check_edition, staged_edition, QualityError
+    except ImportError:
+        from production_quality import check_edition, staged_edition, QualityError
+    destination = DOCS
+    try:
+        with staged_edition(destination) as candidate:
+            DOCS = candidate
+            _generate()
+            report = check_edition(candidate, CONFIG)
+            (candidate / 'production-quality.json').write_text(json.dumps(report, indent=2) + '\n')
+    except QualityError as error:
+        print('Production rejected: ' + str(error))
+        raise
+    finally:
+        DOCS = destination
 
 if __name__ == "__main__":
     main()

@@ -143,7 +143,7 @@ class NewsSelectionTests(unittest.TestCase):
             cfg['editorial'] = {'pipeline': {'enabled': False}, 'crosscheck': {'enabled': False}}
             with patch.object(news, 'ROOT', root), patch.object(news, 'DOCS', root / 'docs'), patch.object(news, 'CONFIG', cfg), patch.object(news, 'items_from_feed', return_value=items), patch.object(news, 'extract_article_text', return_value=''), patch.object(news.tempfile, 'TemporaryDirectory', side_effect=StopBeforeRendering):
                 with self.assertRaises(StopBeforeRendering):
-                    news.main()
+                    news._generate()
             groups = json.loads((root / 'docs/story-groups.json').read_text())
             self.assertEqual(len(groups), 1)
             self.assertEqual({source['url'] for source in groups[0]['sources']}, {item[2] for item in items})
