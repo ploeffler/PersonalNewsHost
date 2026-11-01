@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 124,
+  "revision": 125,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4858,7 +4858,7 @@
       "id": "T324",
       "epic": "E31",
       "title": "Stilbeispielbilder und Kontextvorgaben für Fork-Vorschauen",
-      "status": "review",
+      "status": "done",
       "depends_on": [],
       "instructions": [
         "14 KI-generierte Stilbeispiele mit gemeinsamem Motiv aus der Recherchebibliothek erzeugen, visuell prüfen und mit eindeutiger style_id im Repository speichern.",
@@ -4873,16 +4873,7 @@
       "source": "user-chat-2026-11-01-style-examples",
       "version": "0.2",
       "package": "A41",
-      "lease": {
-        "client": "codex-local-coordinator",
-        "token": "94dd5a003f724b5b81efa8f3b87db257",
-        "expires_at": 1793542055.5819793,
-        "files": [
-          "assets/style-examples/",
-          "planning/research/video_style_library.json",
-          "planning/reviews/T324-style-examples.md"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-local-coordinator",
         "commit": "cf45cb91eb4a66b815805f43c0a6c9e6c588a0d3",
@@ -4891,10 +4882,15 @@
           "assets/style-examples/",
           "planning/research/video_style_library.json",
           "planning/reviews/T324-style-examples.md"
-        ]
+        ],
+        "reviewer": "human-ploeffler",
+        "decision": "Explizite menschliche Merge-Freigabe im Chat: «mergen», anschließend Ziel klargestellt: ausschließlich Full-featured-Newsoutlet, nicht main. Codex trägt die Freigabe im Auftrag von ploeffler ein; kein unabhängiger KI-Review. Aktualisierte 14-Stil-Lieferung einschließlich Stop-Motion-Holzgliederfigur und hinterlegter Prüfungen akzeptiert. Kein Versionsrelease oder Merge nach main."
       },
       "local_work_pending": false,
-      "evidence": [],
+      "evidence": [
+        "cf45cb91eb4a66b815805f43c0a6c9e6c588a0d3",
+        "14/14 style IDs mapped; all PNGs decoded and dimensions/SHA256 verified; local gallery/Markdown links, secret scan, planning schema and 10 coordination tests pass. New wooden mannequin before photographic river background visually inspected. Library 1.2.0; original 13 PNGs unchanged. Prior 402 offline tests passed at 52e25a2; this extension changes assets/planning only. Single image does not validate stop-motion animation. Full prompts saved in manifest."
+      ],
       "implementation_note": "",
       "coordination_note": "Expliziter Nutzerauftrag: bilder jetzt erzeugen und alles ins repo stellen."
     }
@@ -6880,6 +6876,15 @@
       "client": "codex-local-coordinator",
       "at": 1793534981.9082522,
       "note": ""
+    },
+    {
+      "operation_id": "4c89901ce2754251bcd999a0466d16c4",
+      "revision": 125,
+      "action": "complete",
+      "task": "T324",
+      "client": "human-ploeffler",
+      "at": 1793535287.5232515,
+      "note": "Explizite menschliche Merge-Freigabe im Chat: «mergen», anschließend Ziel klargestellt: ausschließlich Full-featured-Newsoutlet, nicht main. Codex trägt die Freigabe im Auftrag von ploeffler ein; kein unabhängiger KI-Review. Aktualisierte 14-Stil-Lieferung einschließlich Stop-Motion-Holzgliederfigur und hinterlegter Prüfungen akzeptiert. Kein Versionsrelease oder Merge nach main."
     }
   ]
 }
