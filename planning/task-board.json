@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 111,
+  "revision": 112,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4793,7 +4793,7 @@
       "id": "T196",
       "epic": "E16",
       "title": "Zurückliegende Fork-Branches mit Originalbranches synchronisieren",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T180"
       ],
@@ -4814,17 +4814,7 @@
       "source": "user-chat-2026-11-01-upstream-updates",
       "version": "0.2",
       "package": "A20",
-      "lease": {
-        "client": "codex-local-coordinator",
-        "token": "12b9ce853c3a4bacb43825ff6584d116",
-        "expires_at": 1793527932.8141313,
-        "files": [
-          ".github/workflows/fork-sync.yml",
-          "planning/reviews/T196-fork-sync.md",
-          "scripts/fork_sync.py",
-          "tests/test_fork_sync.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-local-coordinator",
         "commit": "cced3e339fc61517907f0fcf229f0fe17178d836",
@@ -4834,10 +4824,15 @@
           "planning/reviews/T196-fork-sync.md",
           "scripts/fork_sync.py",
           "tests/test_fork_sync.py"
-        ]
+        ],
+        "reviewer": "human-ploeffler",
+        "decision": "Explizite menschliche Freigabe durch ploeffler im Chat: «freigabe», bezogen auf T181, T195 und T196. Durch Codex im Auftrag des Owners eingetragen; kein unabhängiger KI-Review. Vorhandene Test- und CI-Nachweise akzeptiert. Kein Versionsrelease und keine Freigabe für main oder Aktivierung in fremden Forks."
       },
       "local_work_pending": false,
-      "evidence": [],
+      "evidence": [
+        "cced3e339fc61517907f0fcf229f0fe17178d836",
+        "Final 396 offline tests including 24 fork tests and rendering passed. Exact head Foundation CI SUCCESS https://github.com/ploeffler/PersonalNewsHost/actions/runs/41291933887 including Ruff, network-isolated suite and JS. Read-only QSSTV graph and slash-branch API smoke passed. Branch writes and issue notifications simulated, not executed against real repositories. No-force fast-forward, preserving merge, conflicts, protection/head rechecks, mapped targets and daily opt-in automation verified. Local files remain untouched. Runtime activation not performed."
+      ],
       "implementation_note": "Korrigierter Nutzerumfang: Repository-Forksynchronisierung, keine automatische Software-/Containerinstallation.",
       "coordination_note": "Owner explicitly requests implementation of checker and synchronization as a paired feature. Both depend on the established runtime contract; T196 consumes the committed checker API and is integration-tested with it. Both require separate review; no T195 approval inferred."
     }
@@ -6703,6 +6698,15 @@
       "task": "T195",
       "client": "human-ploeffler",
       "at": 1793532890.2802458,
+      "note": "Explizite menschliche Freigabe durch ploeffler im Chat: «freigabe», bezogen auf T181, T195 und T196. Durch Codex im Auftrag des Owners eingetragen; kein unabhängiger KI-Review. Vorhandene Test- und CI-Nachweise akzeptiert. Kein Versionsrelease und keine Freigabe für main oder Aktivierung in fremden Forks."
+    },
+    {
+      "operation_id": "2dd217a7591444bdb352877521953aea",
+      "revision": 112,
+      "action": "complete",
+      "task": "T196",
+      "client": "human-ploeffler",
+      "at": 1793532892.632162,
       "note": "Explizite menschliche Freigabe durch ploeffler im Chat: «freigabe», bezogen auf T181, T195 und T196. Durch Codex im Auftrag des Owners eingetragen; kein unabhängiger KI-Review. Vorhandene Test- und CI-Nachweise akzeptiert. Kein Versionsrelease und keine Freigabe für main oder Aktivierung in fremden Forks."
     }
   ]
