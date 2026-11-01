@@ -6,6 +6,7 @@ Willkommen in der Wissensbasis zu PersonalNewsHost.
 
 - [Schritt-für-Schritt-Installation](installation.md)
 - [Konfiguration und Datenschutz](konfiguration.md)
+- [Provider einrichten: Schritte je Auswahl](provider-einrichtung.md)
 - [Betrieb, Telegram und Sicherheit](betrieb-und-sicherheit.md)
 - [Technische Architektur und Workflows](technik.md)
 - [Entwicklungsgeschichte und Roadmap](entwicklung.md)

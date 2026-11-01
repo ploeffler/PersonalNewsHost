@@ -1,6 +1,8 @@
-# Provider-Laufzeit: Offline-Grundlage für 0.1
+# Provider-Laufzeit und Konfiguration
 
-`scripts/provider_runtime.py` ergänzt die bisherige planende Registry um einen separat testbaren Ausführungsvertrag. Noch keine reguläre Sendung verwendet automatisch diese neue Laufzeit. Es gibt keine HTTP-Adapter und keine kostenpflichtige Ausführung.
+`scripts/provider_runtime.py` ist die getestete Mock-Laufzeit aus v0.1. Optionale Analysezuordnungen sind im Generator angebunden; ohne Zuordnung bleibt die Analyse aus. Es gibt keine HTTP-Adapter für reale Anbieter.
+
+Für konkrete Schritte nach der Anbieterauswahl siehe [Provider einrichten](provider-einrichtung.md).
 
 ## Fähigkeiten
 
@@ -32,17 +34,17 @@ result = runtime.run('local-text', Request(
 
 Pro Providerart gibt es eine feste Allowlist skalarer Felder. Andere Felder werden vor Ausführung entfernt; verschachtelte Inhalte in erlaubten Feldern werden abgelehnt. Erkennbare API-Key-/Bearer-Muster und ausdrücklich übergebene Secretwerte werden in Payload, Anfragemetadaten und Antworten geprüft. Eine solche Prüfung erkennt nicht garantiert alle möglichen Geheimnisse.
 
-Feedtext bleibt Datenmaterial, auch wenn er wie eine Anweisung aussieht. Die Laufzeit führt keine Modellantworten, Werkzeuge oder Dateipfade aus. Das ist keine Behauptung, ein echtes Sprachmodell könne dadurch niemals auf eingebettete Anweisungen reagieren. Gezielte Tests mit realen Modellen und die vollständigen aufgabenspezifischen Ausgabeschemata folgen noch.
+Feedtext bleibt Datenmaterial, auch wenn er wie eine Anweisung aussieht. Die Laufzeit führt keine Modellantworten, Werkzeuge oder Dateipfade aus. Das ist keine Behauptung, ein echtes Sprachmodell könne dadurch niemals auf eingebettete Anweisungen reagieren. Alle sieben aufgabenspezifischen Schemata und feindliche Feed-Fixtures sind getestet. Anweisungsähnlicher Quelltext bleibt inert erhalten; ein Schutz echter Sprachmodelle ist nicht nachgewiesen.
 
-Timeouts werden als Deadline-Budget an den Adapter übergeben. Ein Adapter muss seine tatsächlichen I/O-Zugriffe begrenzen; die Laufzeit kann beliebigen blockierenden Python-Code nicht sicher abbrechen. Derzeit simulieren Mocks Timeoutfehler. Auch Rate-Limits, Backoff, dauerhafte Kostenreservierung, Providerkonfiguration aus config.json und Actions-Cachepersistenz sind noch nicht integriert. Kostenpflichtige Provider werden deshalb **vor jedem Aufruf und auch vor Cachezugriff abgewiesen**; es gibt keine stillschweigende Freischaltung durch Konfiguration.
+Timeouts werden als Deadline-Budget an den Adapter übergeben. Die Runtime kann beliebigen blockierenden Python-Code nicht sicher abbrechen. Begrenzte Wiederholungen, Prozess-Rate-Limits in der Registry, persistente Mockreservierungen, Konfigurationsvalidierung und Actions-Cachewiederverwendung sind integriert. Reale kostenpflichtige Adapter bleiben nicht implementiert. Die direkte Analyse-Testfactory kann ausschließlich lokale Mockkosten nach explizitem Budget-Opt-in simulieren.
 
-Diese Grundlage ist noch keine vollständige Abnahme von T100/T101/T103/T104/T130/T135.
+T100/T101/T103/T104/T130/T135 sind für den dokumentierten Mock-Umfang abgenommen. Details und Grenzen stehen in den jeweiligen Nachweisen unter `planning/reviews/` sowie in der [Abnahme 0.1](abnahme-0.1.md).
 
 ## Konfiguration und Produktionsanbindung in 0.1
 
 Die oben beschriebene anfängliche Offline-Grundlage wurde für den 0.1-Meilenstein erweitert. Maßgeblich sind diese Ergänzungen:
 
-- `providers`: Liste mit `id`, `kind`, `adapter: "mock"`, `enabled`, `secret_name`, `endpoint`, `model`, `timeout_s`, `retries`, `rate_limit` (Anfragen/Minute), `cost_model`, `priority` und `fallback_to`. `priority` ist gespeicherte Auswahlmetadaten; in 0.1 wird die Zuordnung explizit vorgenommen. `endpoint` wird von Mocks nicht aufgerufen.
+- `providers`: Liste mit `id`, `kind`, `adapter: "mock"`, `enabled`, `secret_name`, `endpoint`, `model`, `timeout_s`, `retries`, `rate_limit` (Anfragen/Minute), `cost_model`, `priority` und `fallback_to`. `priority` bestimmt in der Registry die Auswahl aktivierter Anbieter (kleinere Werte zuerst); `provider_tasks` ordnet Analysen explizit zu. `endpoint` wird von Mocks nicht aufgerufen.
 - `provider_tasks`: explizite Zuordnung der sieben Analyseaufgaben zu aktivierten Textanalyse-Mocks. Ohne Zuordnung verändert sich die bisherige Produktion nicht. Ergebnisse landen in `provider-analysis.json`, nie ungeprüft im freigegebenen Sprechertext.
 - `provider_budgets`: `allow_paid`, `monthly_budget_eur`, `per_run_budget_eur`, `unit_limits`. Kostenstandard 0. `cost_model.max_cost_eur` und `cost_model.units` simulieren konservative Kosten/Einheiten je Mockversuch. Das ist keine Behauptung echter Tokenmessung.
 - `state/providers/`: Cache, dauerhafte Kostenreservierungen und Auditlog. Die gemeinsame Produktionsnamespace `installation` verhindert getrennte Monatsbudgets je Show. Dateizugriff auf SQLite ist auf den Dienstbenutzer begrenzt.
