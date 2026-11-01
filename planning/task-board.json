@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 120,
+  "revision": 121,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4858,7 +4858,7 @@
       "id": "T324",
       "epic": "E31",
       "title": "Stilbeispielbilder und Kontextvorgaben für Fork-Vorschauen",
-      "status": "review",
+      "status": "todo",
       "depends_on": [],
       "instructions": [
         "13 KI-generierte Stilbeispiele mit gemeinsamem Motiv aus der Recherchebibliothek erzeugen, visuell prüfen und mit eindeutiger style_id im Repository speichern.",
@@ -4872,24 +4872,8 @@
       "source": "user-chat-2026-11-01-style-examples",
       "version": "0.2",
       "package": "A41",
-      "lease": {
-        "client": "codex-local-coordinator",
-        "token": "c418a30eeefe46bd84266b606c91ebdf",
-        "expires_at": 1793548461.639952,
-        "files": [
-          "assets/style-examples/",
-          "planning/reviews/T324-style-examples.md"
-        ]
-      },
-      "review": {
-        "author": "codex-local-coordinator",
-        "commit": "52e25a2d84363f015ec07aa7662f171649c8b1ec",
-        "checks": "13 generated images visually inspected; exact research ID coverage, PNG decode/dimensions/SHA256, local gallery and Markdown links, secret scan passed. 402 offline regression tests and 10 coordination tests passed. Full prompts and known approximations included. Fork-context requirements persisted in planning and assets README/manifest. Selection UI and provider preview remain planned.",
-        "files": [
-          "assets/style-examples/",
-          "planning/reviews/T324-style-examples.md"
-        ]
-      },
+      "lease": null,
+      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -6867,6 +6851,15 @@
       "client": "codex-local-coordinator",
       "at": 1793534787.241824,
       "note": "Expliziter Nutzerauftrag: stop motion im Stil der IKEA-Figur vor realistischem Hintergrund hinzufügen."
+    },
+    {
+      "operation_id": "73a3b56fc45b4a89a7b60aca9694ff23",
+      "revision": 121,
+      "action": "release",
+      "task": "T324",
+      "client": "codex-local-coordinator",
+      "at": 1793534853.073146,
+      "note": "Explizite Nutzererweiterung um Stop-Motion; bestehender Review wird für gemeinsame 14-Bilder-Lieferung mit erweitertem Dateiumfang neu eingereicht. Bisherige Lieferung 52e25a2 bleibt im Gitverlauf."
     }
   ]
 }
