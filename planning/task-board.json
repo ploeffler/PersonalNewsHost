@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 123,
+  "revision": 124,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4858,7 +4858,7 @@
       "id": "T324",
       "epic": "E31",
       "title": "Stilbeispielbilder und Kontextvorgaben für Fork-Vorschauen",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [],
       "instructions": [
         "14 KI-generierte Stilbeispiele mit gemeinsamem Motiv aus der Recherchebibliothek erzeugen, visuell prüfen und mit eindeutiger style_id im Repository speichern.",
@@ -4883,7 +4883,16 @@
           "planning/reviews/T324-style-examples.md"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-local-coordinator",
+        "commit": "cf45cb91eb4a66b815805f43c0a6c9e6c588a0d3",
+        "checks": "14/14 style IDs mapped; all PNGs decoded and dimensions/SHA256 verified; local gallery/Markdown links, secret scan, planning schema and 10 coordination tests pass. New wooden mannequin before photographic river background visually inspected. Library 1.2.0; original 13 PNGs unchanged. Prior 402 offline tests passed at 52e25a2; this extension changes assets/planning only. Single image does not validate stop-motion animation. Full prompts saved in manifest.",
+        "files": [
+          "assets/style-examples/",
+          "planning/research/video_style_library.json",
+          "planning/reviews/T324-style-examples.md"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -6862,6 +6871,15 @@
       "client": "codex-local-coordinator",
       "at": 1793534937.4551563,
       "note": "Explizite Stop-Motion-Erweiterung in weiterhin ungeprüfte Gesamtlieferung T324 konsolidiert. Unbeanspruchter Duplikatauftrag T325 entfernt; alte Lieferung und Planungsereignisse bleiben im Gitverlauf. Bibliothek 1.2.0 mit 14 Styles."
+    },
+    {
+      "operation_id": "4f89cbcdd6a941dca05a60175433240e",
+      "revision": 124,
+      "action": "submit",
+      "task": "T324",
+      "client": "codex-local-coordinator",
+      "at": 1793534981.9082522,
+      "note": ""
     }
   ]
 }
