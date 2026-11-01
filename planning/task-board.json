@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 87,
+  "revision": 88,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -2320,7 +2320,7 @@
       "id": "T180",
       "epic": "E16",
       "title": "Betriebsvertrag für Linux und Container",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T001",
         "T002"
@@ -2337,7 +2337,17 @@
       "source": "planning/betriebswege-ergaenzung.yaml",
       "version": "0.2",
       "package": "A18",
-      "lease": null,
+      "lease": {
+        "client": "codex-local-coordinator",
+        "token": "795d37d744354e50a8279f2c0463790b",
+        "expires_at": 1793523397.4293468,
+        "files": [
+          "docs/guide/runtime-vertrag.md",
+          "planning/reviews/T180-runtime-contract.md",
+          "scripts/local_runtime.py",
+          "tests/test_local_runtime.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -6322,6 +6332,15 @@
       "task": "T323",
       "client": "codex-local-coordinator",
       "at": 1793519683.4716506,
+      "note": ""
+    },
+    {
+      "operation_id": "01864c04e9ed4841a5397d8babab5a02",
+      "revision": 88,
+      "action": "claim",
+      "task": "T180",
+      "client": "codex-local-coordinator",
+      "at": 1793519797.4293468,
       "note": ""
     }
   ]
