@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 81,
+  "revision": 82,
   "active_version": "0.1",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -1785,7 +1785,7 @@
       "id": "T135",
       "epic": "E12",
       "title": "Prompt-Injection-Schutz fuer Feed-Inhalte",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T100"
       ],
@@ -1799,16 +1799,7 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.1",
       "package": "A02",
-      "lease": {
-        "client": "codex-local-coordinator",
-        "token": "dcc3d5989cd5447da7b778b498b3225c",
-        "expires_at": 1793518921.4839187,
-        "files": [
-          "planning/reviews/T135-feed-injection.md",
-          "tests/fixtures/provider-injection.json",
-          "tests/test_feed_injection.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-local-coordinator",
         "commit": "b22e3ad738f364604c3546ab419db0393d2812d0",
@@ -1817,14 +1808,14 @@
           "planning/reviews/T135-feed-injection.md",
           "tests/fixtures/provider-injection.json",
           "tests/test_feed_injection.py"
-        ]
+        ],
+        "reviewer": "human-ploeffler",
+        "decision": "Repository owner explicitly approved with freigeben immediately after disclosure that embedded instruction-like prose is preserved as inert source data and that broader treatment remains open. Recorded on behalf of human-ploeffler, not an independent AI review. Submitted files unchanged since b22e3ad; 344 offline tests passed. Owner acceptance is limited to current mock-only task/schema/tool isolation and rejection of tool-shaped outputs. General removal of instructions inside prose and protection for future LLM adapters are NOT implemented or approved as solved; these remain required before admitting such adapters. Complete current mock-only scope with this explicit limitation. No version release implied."
       },
       "local_work_pending": false,
       "evidence": [
-        "scripts/provider_runtime.py",
-        "tests/test_provider_runtime.py",
-        "docs/guide/provider-runtime.md",
-        "f658a1710efcfb77cdb6eb0bff33e7f2b2e73247"
+        "b22e3ad738f364604c3546ab419db0393d2812d0",
+        "344 offline tests passed including video rendering, syntax, secret scan and local links; 5 analysis-contract and 3 hostile-feed tests pass. Mock-only task/schema/tool isolation verified. Remaining requirement: instruction-like prose is preserved as inert data, not generally sanitized; future LLM protection not proven. See planning/reviews/T135-feed-injection.md. Scope decision required before completion."
       ],
       "implementation_note": "",
       "coordination_note": "Previously local work integrated in f658a17 by explicit owner request; 324 offline tests passed. Clear obsolete local-only hold; acceptance audit and independent review remain pending."
@@ -6238,6 +6229,15 @@
       "client": "human-ploeffler",
       "at": 1793515505.1959631,
       "note": "Repository owner explicitly approved with freigeben after receiving the T130/T135 results and 344-test evidence in this conversation. Recorded on behalf of human-ploeffler, not an independent AI review. Submitted files unchanged since 9223631. All seven mock analysis schemas, invalid output handling, retry/fallback and cache contracts verified. Complete T130 for the documented deterministic/mock scope only; no substantive semantic analysis or version release claimed."
+    },
+    {
+      "operation_id": "714d9a0f486c4cc5b19c88eb9efc6b15",
+      "revision": 82,
+      "action": "complete",
+      "task": "T135",
+      "client": "human-ploeffler",
+      "at": 1793515507.5856495,
+      "note": "Repository owner explicitly approved with freigeben immediately after disclosure that embedded instruction-like prose is preserved as inert source data and that broader treatment remains open. Recorded on behalf of human-ploeffler, not an independent AI review. Submitted files unchanged since b22e3ad; 344 offline tests passed. Owner acceptance is limited to current mock-only task/schema/tool isolation and rejection of tool-shaped outputs. General removal of instructions inside prose and protection for future LLM adapters are NOT implemented or approved as solved; these remain required before admitting such adapters. Complete current mock-only scope with this explicit limitation. No version release implied."
     }
   ]
 }
