@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 93,
+  "revision": 94,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -501,7 +501,7 @@
       "id": "T051",
       "epic": "E5",
       "title": "Qualitaetspruefungen vor Veroeffentlichung",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T012"
       ],
@@ -515,18 +515,7 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A04",
-      "lease": {
-        "client": "codex-local-coordinator",
-        "token": "bb8c8939d26c41c588e74d7890ff99b8",
-        "expires_at": 1793523633.1302178,
-        "files": [
-          "planning/reviews/T051-production-quality.md",
-          "scripts/generate.py",
-          "scripts/production_quality.py",
-          "tests/test_news_selection.py",
-          "tests/test_production_quality.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-local-coordinator",
         "commit": "eb635242ff5f9a5af9f29dfa86867f1260c42434",
@@ -537,10 +526,15 @@
           "scripts/production_quality.py",
           "tests/test_news_selection.py",
           "tests/test_production_quality.py"
-        ]
+        ],
+        "reviewer": "human-ploeffler",
+        "decision": "Repository owner explicitly approved all pending changes with alle änderungen freigeben in this conversation. Recorded on behalf of human-ploeffler, not an independent AI review. Submitted files unchanged since eb63524. 358 local offline tests passed; exact implementation Foundation CI 41287276375 succeeded including lint, OS-isolated regression, video rendering and JavaScript contracts. Staged render, story/source/timeline/duration/audio validation, old edition preservation and rename rollback accepted. Single-producer, temporary double-storage and hard-crash recovery limitations remain as documented in planning/reviews/T051-production-quality.md. No version release implied."
       },
       "local_work_pending": false,
-      "evidence": [],
+      "evidence": [
+        "eb635242ff5f9a5af9f29dfa86867f1260c42434",
+        "358 offline tests passed including video rendering, syntax, secret and local-link checks. Six quality tests cover invalid media/metadata, previous video/feed/page preservation, successful swap, rename rollback and exclusion of stale candidate media. Single producer and crash-recovery limits documented in planning/reviews/T051-production-quality.md."
+      ],
       "implementation_note": "",
       "coordination_note": ""
     },
@@ -6409,6 +6403,15 @@
       "client": "human-ploeffler",
       "at": 1793520330.5621374,
       "note": "Repository owner explicitly approved all pending changes with alle änderungen freigeben in this conversation. Recorded on behalf of human-ploeffler, not an independent AI review. Submitted files unchanged since e616ece. Foundation CI 41286648306 succeeded; official sources checked 2026-11-01, mock example/cache and config/link/secret checks pass. Documentation acceptance only: external installations and cloud accounts not exercised; provider adapters and protected UI remain unimplemented. No wiki or version release implied."
+    },
+    {
+      "operation_id": "20339c6e85954edba1c1a5fd83cb3f12",
+      "revision": 94,
+      "action": "complete",
+      "task": "T051",
+      "client": "human-ploeffler",
+      "at": 1793520381.7872412,
+      "note": "Repository owner explicitly approved all pending changes with alle änderungen freigeben in this conversation. Recorded on behalf of human-ploeffler, not an independent AI review. Submitted files unchanged since eb63524. 358 local offline tests passed; exact implementation Foundation CI 41287276375 succeeded including lint, OS-isolated regression, video rendering and JavaScript contracts. Staged render, story/source/timeline/duration/audio validation, old edition preservation and rename rollback accepted. Single-producer, temporary double-storage and hard-crash recovery limitations remain as documented in planning/reviews/T051-production-quality.md. No version release implied."
     }
   ]
 }
