@@ -1,5 +1,9 @@
 # PersonalNewsHost – Schritt-für-Schritt-Installation
 
+Für den lokalen Linuxbetrieb im Entwicklungsbranch siehe die neue
+[Repository-Installation unter Linux](linux-installation.md). Die folgende Anleitung
+beschreibt den bisherigen GitHub-Fork-/Pages-Betrieb.
+
 Diese Anleitung richtet sich an Personen, die das öffentliche Projekt in ihrem **eigenen GitHub-Fork** betreiben möchten. Ein eigener Server und ein dauerhaft geöffneter Browser sind nicht nötig. Die kostenlosen GitHub-Kontingente und Nutzungsbedingungen gelten weiterhin.
 
 ## 1. Voraussetzungen
