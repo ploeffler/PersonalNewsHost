@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 115,
+  "revision": 116,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -4849,6 +4849,31 @@
       ],
       "implementation_note": "Korrigierter Nutzerumfang: Repository-Forksynchronisierung, keine automatische Software-/Containerinstallation.",
       "coordination_note": "Owner explicitly requests implementation of checker and synchronization as a paired feature. Both depend on the established runtime contract; T196 consumes the committed checker API and is integration-tested with it. Both require separate review; no T195 approval inferred."
+    },
+    {
+      "id": "T324",
+      "epic": "E31",
+      "title": "Stilbeispielbilder und Kontextvorgaben für Fork-Vorschauen",
+      "status": "todo",
+      "depends_on": [],
+      "instructions": [
+        "13 KI-generierte Stilbeispiele mit gemeinsamem Motiv aus der Recherchebibliothek erzeugen, visuell prüfen und mit eindeutiger style_id im Repository speichern.",
+        "Manifest mit Prompts, Herkunft, Bibliotheksversion und Bildpfaden bereitstellen; Beispiele nicht als Provider-Fähigkeitsnachweis ausgeben.",
+        "Bestätigte Vorgaben für eigene Fork-Vorschauen festhalten: Stil, Senderprofil/redaktionelle Ausrichtung, Zielgruppe, Sprache/Tonalität, Branding, Studio/Avatar, Format und Providerfähigkeiten; verwendeten Kontext versioniert speichern."
+      ],
+      "acceptance": [
+        "Für jeden der 13 Styles existiert ein lesbares, zugeordnetes Beispielbild ohne externe URLs oder Zugangsdaten.",
+        "Manifest und Galerie erlauben Sichtprüfung; Fork-Vorschauen sind als geplante Funktion gekennzeichnet."
+      ],
+      "source": "user-chat-2026-11-01-style-examples",
+      "version": "0.2",
+      "package": "A41",
+      "lease": null,
+      "review": null,
+      "local_work_pending": false,
+      "evidence": [],
+      "implementation_note": "",
+      "coordination_note": "Expliziter Nutzerauftrag: bilder jetzt erzeugen und alles ins repo stellen."
     }
   ],
   "packages": [
@@ -5244,7 +5269,8 @@
         "T320",
         "T321",
         "T322",
-        "T323"
+        "T323",
+        "T324"
       ]
     },
     {
@@ -5332,7 +5358,8 @@
         "T260",
         "T323",
         "T195",
-        "T196"
+        "T196",
+        "T324"
       ],
       "acceptance": "Linux- und Docker-Basis, HTTPS 443/8444, Login und persistentes Archiv sind technisch geprüft. Noch kein vollständiger neuer Produktionsbetrieb."
     },
@@ -6749,6 +6776,15 @@
       "client": "codex-local-coordinator",
       "at": 1793533670.3037984,
       "note": "Weitere explizite Nutzerergänzung: Stilauswahl auch bei Kurzupdates. In T250 für manuelle Erstellung und automatische Kurzupdate-Läufe eingeplant; bestehende abgeschlossene T013 unverändert. Keine UI-Implementierung."
+    },
+    {
+      "operation_id": "e6d35cf2ed1d4c9f9d21b63f57be3aa2",
+      "revision": 116,
+      "action": "requirements_update",
+      "task": "T324",
+      "client": "codex-local-coordinator",
+      "at": 1793534052.0496707,
+      "note": "Explizit beauftragte Stilbilder und bestätigte Fork-Vorschauanforderungen als vorgezogenen Auftrag aufnehmen."
     }
   ]
 }
