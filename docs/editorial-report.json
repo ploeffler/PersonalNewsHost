@@ -1,14 +1,490 @@
 {
   "version": 1,
   "mode": "production",
-  "generated_at": 1793567643.261638,
-  "source_updated_at": 1793567611.83406,
-  "source_digest": "074f6db320d7a6b33fde3949aeb0c40f896601e5793e811fc41ff4673a2a9435",
+  "generated_at": 1793580652.847966,
+  "source_updated_at": 1793580630.854729,
+  "source_digest": "88e605ae182a54321b9c65df2eacc66b3bdef9820b577bb8de65c8fb566d6143",
   "scope": "stored_source_support",
   "method": "local_extractive_multi_source",
   "independent_fact_check": false,
   "max_sentences": 2,
   "sources": {
+    "c4bfcf6c91c59bfcc44b8202": {
+      "id": "c4bfcf6c91c59bfcc44b8202",
+      "title": "Romantisch ins neue Jahr im Maiers Kuschelhotel",
+      "text": "Ein Jahreswechsel, bei dem die Zeit stillsteht und nur ihr zwei zählt: Das Maiers Kuschelhotel Loipersdorf ist ein exklusives Adults‑Only‑Hideaway für Paare, die den Jahreswechsel bewusst, sinnlich und in vollkommener Ruhe erleben möchten. Hier wird Silvester nicht laut gefeiert – sondern leise, liebevoll und mit viel Gefühl.",
+      "url": "https://www.krone.at/4342573",
+      "published_at": 1793574072.0,
+      "first_seen_at": 1793580630.854729,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4343601/v7fd04a/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4343601/v7fd04a/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4343601/v7fd04a/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4343601/v7fd04a/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Ein Jahreswechsel, bei dem die Zeit stillsteht und nur ihr zwei zählt: Das Maiers Kuschelhotel Loipersdorf ist ein exklusives Adults‑Only‑Hideaway für Paare, die den Jahreswechsel bewusst, sinnlich und in vollkommener Ruhe erleben möchten. Hier wird Silvester nicht laut gefeiert – sondern leise, liebevoll und mit viel Gefühl.",
+      "rss_revision_at": 1793574072.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "krone.at"
+    },
+    "c26303dcba2404c3421cf903": {
+      "id": "c26303dcba2404c3421cf903",
+      "title": "Über € 1.650 in der Pflegeausbildung? So geht’s!",
+      "text": "Geld während der Ausbildung, ein gutes Einstiegsgehalt und ein Job mit Zukunft: Wer in Oberösterreich in die Pflege einsteigen möchte, kann gleich mehrfach profitieren. Und der Weg dorthin ist oft einfacher als gedacht!",
+      "url": "https://www.krone.at/4352737",
+      "published_at": 1793574061.0,
+      "first_seen_at": 1793580630.854729,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4354022/v1da904/630x356",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4354022/v1da904/630x356",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4354022/v1da904/630x356",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4354022/v1da904/630x356",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Geld während der Ausbildung, ein gutes Einstiegsgehalt und ein Job mit Zukunft: Wer in Oberösterreich in die Pflege einsteigen möchte, kann gleich mehrfach profitieren. Und der Weg dorthin ist oft einfacher als gedacht!",
+      "rss_revision_at": 1793574061.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "krone.at"
+    },
+    "beb727bd9e776b13152b0666": {
+      "id": "beb727bd9e776b13152b0666",
+      "title": "Standardrätsel F 11432",
+      "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
+      "url": "https://www.derstandard.at/story/3000000346408/standardraetsel-f-11432?ref=rss",
+      "published_at": 1793574060.0,
+      "first_seen_at": 1793580630.854729,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/eqM6Eg/rs:fill:150:0/plain/lido-images/2023/05/19/17b073a2-2297-406c-a459-faf4e5a469ef.png",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
+      "rss_revision_at": 1793574060.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346408/standardraetsel-f-11432?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000346408/standardraetsel-f-11432?ref=rss",
+        "last_attempt_at": 1793580630.854729,
+        "rss_fingerprint": "e33e8b8cb6dc51ee75c7e2b2ecd7d76b02a3dbf60bf20b09f0feb9e6d2423ee9"
+      },
+      "publisher": "derstandard.at"
+    },
+    "c3bf5d77188bf845b5aad673": {
+      "id": "c3bf5d77188bf845b5aad673",
+      "title": "Xi nimmt Parteikader an die Kandare",
+      "text": "Die Kommunistische Partei Chinas will die Aufsicht über ihre Funktionäre verschärfen, indem sie deren Vermögen und Onlineaktivitäten genau untersucht. Das geht aus einem Dokument hervor, das die staatliche Nachrichtenagentur Xinhua am Sonntag nach Abschluss der Sitzung des Zentralkomitees der Partei in Peking veröffentlichte. Nur wenn sich die Partei beharrlich selbst reinige, könne sie ihren Charakter bewahren, sagte Staats- und Parteichef Xi Jinping.",
+      "url": "https://orf.at/stories/3446787/",
+      "published_at": 1793572027.0,
+      "first_seen_at": 1793573751.75028,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "Die Kommunistische Partei Chinas will die Aufsicht über ihre Funktionäre verschärfen, indem sie deren Vermögen und Onlineaktivitäten genau untersucht. Das geht aus einem Dokument hervor, das die staatliche Nachrichtenagentur Xinhua am Sonntag nach Abschluss der Sitzung des Zentralkomitees der Partei in Peking veröffentlichte. Nur wenn sich die Partei beharrlich selbst reinige, könne sie ihren Charakter bewahren, sagte Staats- und Parteichef Xi Jinping.",
+      "rss_revision_at": 1793572027.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "orf.at"
+    },
+    "86163d145e33b800bc923cbd": {
+      "id": "86163d145e33b800bc923cbd",
+      "title": "9 Insassen sterben bei Flugzeugabsturz in Florida",
+      "text": "Ein Privatflugzeug ist am Sonntag in den MIttagsstunden (Ortszeit) über einem Wohngebiet in Cresthaven im US-Bundesstaat abgestürzt. Alle neun Insassen kamen bei dem Unglück ums Leben.",
+      "url": "https://www.krone.at/4358400",
+      "published_at": 1793571024.0,
+      "first_seen_at": 1793573751.75028,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4358421/v903423/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4358421/v903423/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4358421/v903423/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4358421/v903423/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Ein Privatflugzeug ist am Sonntag in den MIttagsstunden (Ortszeit) über einem Wohngebiet in Cresthaven im US-Bundesstaat abgestürzt. Alle neun Insassen kamen bei dem Unglück ums Leben.",
+      "rss_revision_at": 1793571024.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "krone.at"
+    },
+    "2fac612c87967a4cdbcb1da4": {
+      "id": "2fac612c87967a4cdbcb1da4",
+      "title": "Unterlegene Demokratin in Michigan unterstützt nun Republikaner",
+      "text": "Haley Stevens spricht sich nach ihrer internen Wahlniederlage für den Republikaner Mike Rogers aus. Ihr Kontrahent Abdul El-Sayed gibt sich gelassen",
+      "url": "https://www.derstandard.at/story/3000000346971/unterlegene-demokratin-in-michigan-unterstuetzt-nun-republikaner?ref=rss",
+      "published_at": 1793570125.0,
+      "first_seen_at": 1793573751.75028,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/t3pKVA/rs:fill:150:0/plain/lido-images/2026/11/01/0ade3280-5ceb-43fb-8b10-676588e82907.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Haley Stevens spricht sich nach ihrer internen Wahlniederlage für den Republikaner Mike Rogers aus. Ihr Kontrahent Abdul El-Sayed gibt sich gelassen",
+      "rss_revision_at": 1793570125.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346971/unterlegene-demokratin-in-michigan-unterstuetzt-nun-republikaner?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000346971/unterlegene-demokratin-in-michigan-unterstuetzt-nun-republikaner?ref=rss",
+        "last_attempt_at": 1793573751.75028,
+        "rss_fingerprint": "682857a5911da00fb009717a6ece93f2a3d65dac34dae8789195f00aebe83a75"
+      },
+      "publisher": "derstandard.at"
+    },
+    "2e4e738dc6cbf3a2f18b1c2a": {
+      "id": "2e4e738dc6cbf3a2f18b1c2a",
+      "title": "Eisbullen verabschiedeten sich stark in die Pause",
+      "text": "Ein Schockmoment um Florian Baltram, zwei Stromausfälle und sieben Salzburger Treffer: Beim 7:2-Heimsieg gegen Fehervar erlebten die Eisbullen einen turbulenten Abend. Trotz des Kantersiegs rückte das Sportliche zwischenzeitlich völlig in den Hintergrund.",
+      "url": "https://www.krone.at/4358407",
+      "published_at": 1793570089.0,
+      "first_seen_at": 1793573751.75028,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4358408/vf948f0/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4358408/vf948f0/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4358408/vf948f0/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4358408/vf948f0/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Ein Schockmoment um Florian Baltram, zwei Stromausfälle und sieben Salzburger Treffer: Beim 7:2-Heimsieg gegen Fehervar erlebten die Eisbullen einen turbulenten Abend. Trotz des Kantersiegs rückte das Sportliche zwischenzeitlich völlig in den Hintergrund.",
+      "rss_revision_at": 1793570089.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "krone.at"
+    },
+    "fdaca6d919d370809f69dcd9": {
+      "id": "fdaca6d919d370809f69dcd9",
+      "title": "Ukraine: Warn-App für Luftangriffe wurde gehackt",
+      "text": "In der Ukraine ist nach Angaben der Luftstreitkräfte die öffentliche Warn-App für Luftangriffe gehackt worden. Die App zeigte kurzzeitig für Kiew und andere Gebiete einen Atomalarm an.\n\nDiese Anomalie verschwand jedoch später wieder. „Die Luftalarm-App scheint unter feindlichen Einfluss geraten zu sein“, teilten die ukrainischen Luftstreitkräfte gestern auf Telegram mit.",
+      "url": "https://orf.at/stories/3446807/",
+      "published_at": 1793569560.0,
+      "first_seen_at": 1793573751.75028,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "",
+      "rss_revision_at": 1793569560.0,
+      "content_kind": "news",
+      "text_origin": "linked_article",
+      "article_text": "In der Ukraine ist nach Angaben der Luftstreitkräfte die öffentliche Warn-App für Luftangriffe gehackt worden. Die App zeigte kurzzeitig für Kiew und andere Gebiete einen Atomalarm an.\n\nDiese Anomalie verschwand jedoch später wieder. „Die Luftalarm-App scheint unter feindlichen Einfluss geraten zu sein“, teilten die ukrainischen Luftstreitkräfte gestern auf Telegram mit.",
+      "article_fetch": {
+        "status": "success",
+        "method": "orf_story_story",
+        "page_title": "Ukraine: Warn-App für Luftangriffe wurde gehackt",
+        "canonical_url": "https://orf.at/stories/3446807/",
+        "resolved_url": "https://orf.at/stories/3446807/",
+        "requested_url": "https://orf.at/stories/3446807/",
+        "last_attempt_at": 1793573751.75028,
+        "rss_fingerprint": "4a14d583c01f4f0406268f3bef90b22ddd5da253fa3af8f1256b0b0bcf2a7c86",
+        "fetched_at": 1793573751.75028,
+        "text_sha256": "e87e04cab1d49baeeb9108cf266c495eb5cb90b5dfeb8ee6b115e80e7826aaa0"
+      },
+      "publisher": "orf.at"
+    },
+    "a506e78c2d88da2c4f9fabb7": {
+      "id": "a506e78c2d88da2c4f9fabb7",
+      "title": "Kimi Antonelli krönt sich in Mexiko zum jüngsten Formel-1-Weltmeister aller Zeiten",
+      "text": "Der Mercedes-Pilot fährt beim zwischenzeitlich unterbrochenen Grand Prix auf Rang drei ins Ziel. Den Rennsieg holt sich Verstappen vor Hamilton",
+      "url": "https://www.derstandard.at/story/3000000346959/grand-prix-von-mexiko-nach-bottas-unfall-unterbrochen-antonelli-auf-titelkurs?ref=rss",
+      "published_at": 1793569427.0,
+      "first_seen_at": 1793573751.75028,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/umFEJA/rs:fill:150:0/plain/lido-images/2026/11/01/08d3d316-14fc-4e17-8568-cbfa68777b99.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Der Mercedes-Pilot fährt beim zwischenzeitlich unterbrochenen Grand Prix auf Rang drei ins Ziel. Den Rennsieg holt sich Verstappen vor Hamilton",
+      "rss_revision_at": 1793569427.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346959/grand-prix-von-mexiko-nach-bottas-unfall-unterbrochen-antonelli-auf-titelkurs?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000346959/grand-prix-von-mexiko-nach-bottas-unfall-unterbrochen-antonelli-auf-titelkurs?ref=rss",
+        "last_attempt_at": 1793573751.75028,
+        "rss_fingerprint": "d076f309911acea27e3bec9c43a4a28092e364e391fcfec58133b9a0615655ec"
+      },
+      "publisher": "derstandard.at"
+    },
+    "8cee98c6c5c33859940d8d7e": {
+      "id": "8cee98c6c5c33859940d8d7e",
+      "title": "USA und Kanada betonen gute Gespräche über Handelsabkommen",
+      "text": "Nach einem guten Gespräch zwischen US-Präsident Donald Trump und dem kanadischen Ministerpräsidenten Mark Carney soll nun ein für beide vorteilhaftes Abkommen ausgearbeitet werden",
+      "url": "https://www.derstandard.at/story/3000000346970/carney-gutes-gespr228ch-mit-trump-252ber-handel-zwischen-kanada-und-usa?ref=rss",
+      "published_at": 1793569380.0,
+      "first_seen_at": 1793573751.75028,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/fjG95g/rs:fill:150:0/plain/lido-images/2026/11/01/ca4b5e8f-552f-45bf-919f-c35cb03f404e.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Nach einem guten Gespräch zwischen US-Präsident Donald Trump und dem kanadischen Ministerpräsidenten Mark Carney soll nun ein für beide vorteilhaftes Abkommen ausgearbeitet werden",
+      "rss_revision_at": 1793569380.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "derstandard.at"
+    },
+    "60cb35a7733683b190de977a": {
+      "id": "60cb35a7733683b190de977a",
+      "title": "Feuerpause in Oleschky endet",
+      "text": "Die sechstägige Feuerpause in der russisch besetzten südukrainischen Stadt Oleschky ist zu Ende gegangen. „Die vom 27. Oktober bis zum 1. November geltende Waffenruhe ist beendet“, erklärte der ukrainische Menschenrechtsbeauftragte Dmytro Lubinez gestern Abend.\n\nDie Feuerpause sei ein „wichtiger Schritt in unseren gemeinsamen humanitären Bemühungen“ gewesen. Er arbeite nun mit der russischen Menschenrechtsbeauftragten Jana Lantratowa an weiteren humanitären Initiativen, so Lubinez.\n\nDie nach Angaben des Weißen Hauses von US-First-Lady Melania Trump vermittelte Waffenruhe für Oleschky in der Region Cherson war am Dienstag in Kraft getreten. Sie endete um 22.59 Uhr Ortszeit (21.59 Uhr MEZ). Es handelte sich um die längste Waffenruhe seit Kriegsbeginn im Februar 2022.\n\nRussland hatte nach ukrainischen Angaben eine Verlängerung der Feuerpause abgelehnt. Ein ranghoher ukrainischer Regierungsvertreter sagte der Nachrichtenagentur AFP wenige Stunden vor Auslaufen der Waffenruhe, das Außenministerium in Kiew habe Moskau eine Verlängerung vorgeschlagen. „Die Russen wollen nicht“, fügte er hinzu.\n\nDie Feuerpause sollte angesichts gravierender Engpässe bei Lebensmitteln, Wasser und Medikamenten eine Versorgung der Bevölkerung, Hilfslieferungen und die Evakuierung von Zivilisten ermöglichen. Am Wochenende waren aus Oleschky gerettete Menschen über Russland und Belarus im Norden der Ukraine eingetroffen und hatten dort ihre Angehörigen wiedergesehen.",
+      "url": "https://orf.at/stories/3446806/",
+      "published_at": 1793568716.0,
+      "first_seen_at": 1793573751.75028,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "",
+      "rss_revision_at": 1793568716.0,
+      "content_kind": "news",
+      "text_origin": "linked_article",
+      "article_text": "Die sechstägige Feuerpause in der russisch besetzten südukrainischen Stadt Oleschky ist zu Ende gegangen. „Die vom 27. Oktober bis zum 1. November geltende Waffenruhe ist beendet“, erklärte der ukrainische Menschenrechtsbeauftragte Dmytro Lubinez gestern Abend.\n\nDie Feuerpause sei ein „wichtiger Schritt in unseren gemeinsamen humanitären Bemühungen“ gewesen. Er arbeite nun mit der russischen Menschenrechtsbeauftragten Jana Lantratowa an weiteren humanitären Initiativen, so Lubinez.\n\nDie nach Angaben des Weißen Hauses von US-First-Lady Melania Trump vermittelte Waffenruhe für Oleschky in der Region Cherson war am Dienstag in Kraft getreten. Sie endete um 22.59 Uhr Ortszeit (21.59 Uhr MEZ). Es handelte sich um die längste Waffenruhe seit Kriegsbeginn im Februar 2022.\n\nRussland hatte nach ukrainischen Angaben eine Verlängerung der Feuerpause abgelehnt. Ein ranghoher ukrainischer Regierungsvertreter sagte der Nachrichtenagentur AFP wenige Stunden vor Auslaufen der Waffenruhe, das Außenministerium in Kiew habe Moskau eine Verlängerung vorgeschlagen. „Die Russen wollen nicht“, fügte er hinzu.\n\nDie Feuerpause sollte angesichts gravierender Engpässe bei Lebensmitteln, Wasser und Medikamenten eine Versorgung der Bevölkerung, Hilfslieferungen und die Evakuierung von Zivilisten ermöglichen. Am Wochenende waren aus Oleschky gerettete Menschen über Russland und Belarus im Norden der Ukraine eingetroffen und hatten dort ihre Angehörigen wiedergesehen.",
+      "article_fetch": {
+        "status": "success",
+        "method": "orf_story_story",
+        "page_title": "Feuerpause in Oleschky endet",
+        "canonical_url": "https://orf.at/stories/3446806/",
+        "resolved_url": "https://orf.at/stories/3446806/",
+        "requested_url": "https://orf.at/stories/3446806/",
+        "last_attempt_at": 1793573751.75028,
+        "rss_fingerprint": "034a3b690fcb8cf1d265036129adec6e9df028f6dedfe044dd1bf6a1d320a49a",
+        "fetched_at": 1793573751.75028,
+        "text_sha256": "4c6cc53ccf0a3fde854716265db9398a58f9bca3e9da2f674d03e168d360fb10"
+      },
+      "publisher": "orf.at"
+    },
+    "8213660ec9a58d3b97b9f85b": {
+      "id": "8213660ec9a58d3b97b9f85b",
+      "title": "US-Minister: Neun Tote bei Flugzeugabsturz in Florida",
+      "text": "Beim Absturz eines Privatflugzeugs im US-Bundesstaat Florida sind Verkehrsminister Sean Duffy zufolge alle neun Insassen ums Leben gekommen. Die Maschine sei gestern Mittag (US-Ostküstenzeit) über einem Wohngebiet nahe Cresthaven abgestürzt, teilte er auf der Plattform X mit.\n\nWarum die Maschine abstürzte, blieb zunächst unklar. Auf dem Asphalt der Straße am Absturzort entstand ein riesiger Krater.\n\nDer Learjet 60 war vom Flughafen Austin-Bergstrom International Airport in Texas gestartet und auf dem Weg zum North Eleuthera Airport auf den Bahamas, wie die US-Luftverkehrsbehörde (FAA) der dpa mitteilte. Minister Duffy zufolge stürzte sie dann im Bezirk Palm Beach ab.",
+      "url": "https://orf.at/stories/3446805/",
+      "published_at": 1793568593.0,
+      "first_seen_at": 1793573751.75028,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "",
+      "rss_revision_at": 1793568593.0,
+      "content_kind": "news",
+      "text_origin": "linked_article",
+      "article_text": "Beim Absturz eines Privatflugzeugs im US-Bundesstaat Florida sind Verkehrsminister Sean Duffy zufolge alle neun Insassen ums Leben gekommen. Die Maschine sei gestern Mittag (US-Ostküstenzeit) über einem Wohngebiet nahe Cresthaven abgestürzt, teilte er auf der Plattform X mit.\n\nWarum die Maschine abstürzte, blieb zunächst unklar. Auf dem Asphalt der Straße am Absturzort entstand ein riesiger Krater.\n\nDer Learjet 60 war vom Flughafen Austin-Bergstrom International Airport in Texas gestartet und auf dem Weg zum North Eleuthera Airport auf den Bahamas, wie die US-Luftverkehrsbehörde (FAA) der dpa mitteilte. Minister Duffy zufolge stürzte sie dann im Bezirk Palm Beach ab.",
+      "article_fetch": {
+        "status": "success",
+        "method": "orf_story_story",
+        "page_title": "US-Minister: Neun Tote bei Flugzeugabsturz in Florida",
+        "canonical_url": "https://orf.at/stories/3446805/",
+        "resolved_url": "https://orf.at/stories/3446805/",
+        "requested_url": "https://orf.at/stories/3446805/",
+        "last_attempt_at": 1793573751.75028,
+        "rss_fingerprint": "1699b74b271956ccc036a49d0859b7b4dac4eb621e4411317f365d3f23326103",
+        "fetched_at": 1793573751.75028,
+        "text_sha256": "7f41e6dad7793cd2520169d4d267eea37e87062d55ed9afc441555e6d8b8c755"
+      },
+      "publisher": "orf.at"
+    },
+    "df7a9c7978b2d3b53f9b0807": {
+      "id": "df7a9c7978b2d3b53f9b0807",
+      "title": "Indianapolis Colts unterliegen mit Raimann auch in Jacksonville",
+      "text": "Die vierte Niederlage in Serie fiel deftig aus. Die Play-offs sind für die Colts bereits früh in der Saison in weite Ferne gerückt. Die Minnesota Vikings verloren erstmals",
+      "url": "https://www.derstandard.at/story/3000000346969/indianapolis-colts-unterliegen-mit-raimann-auch-in-jacksonville?ref=rss",
+      "published_at": 1793568583.0,
+      "first_seen_at": 1793573751.75028,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/QyjeJg/rs:fill:150:0/plain/lido-images/2026/11/01/f7d122dc-4d79-4c95-a57e-c78bdbc4422d.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Die vierte Niederlage in Serie fiel deftig aus. Die Play-offs sind für die Colts bereits früh in der Saison in weite Ferne gerückt. Die Minnesota Vikings verloren erstmals",
+      "rss_revision_at": 1793568583.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "derstandard.at"
+    },
+    "d0c82061ce1e1a4fec2184d4": {
+      "id": "d0c82061ce1e1a4fec2184d4",
+      "title": "Selenskyj zu Treffen mit Putin in Türkei bereit",
+      "text": "Der ukrainische Präsident Wolodymyr Selenskyj wäre zu einem direkten Treffen mit Kremlchef Wladimir Putin in der Türkei bereit. Das erklärte Selenskyj in einem Interview des Senders CNN Türk am Sonntag. Er hatte tags zuvor mit dem türkischen Präsidenten Recep Tayyip Erdogan über eine mögliche Vermittlung der Türkei im Ukraine-Konflikt gesprochen.",
+      "url": "https://www.krone.at/4358385",
+      "published_at": 1793568344.0,
+      "first_seen_at": 1793573751.75028,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/3872688/v10f2f9/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/3872688/v10f2f9/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/3872688/v10f2f9/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/3872688/v10f2f9/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Der ukrainische Präsident Wolodymyr Selenskyj wäre zu einem direkten Treffen mit Kremlchef Wladimir Putin in der Türkei bereit. Das erklärte Selenskyj in einem Interview des Senders CNN Türk am Sonntag. Er hatte tags zuvor mit dem türkischen Präsidenten Recep Tayyip Erdogan über eine mögliche Vermittlung der Türkei im Ukraine-Konflikt gesprochen.",
+      "rss_revision_at": 1793568344.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "krone.at"
+    },
+    "5e5a3dd36195c4fe01e0ac9b": {
+      "id": "5e5a3dd36195c4fe01e0ac9b",
+      "title": "Feuerwehr-Einsatz nach Feier von Rapid-Anhängern",
+      "text": "Feuerwehr-Einsatz am Rande des Empfangs der Mannschaft von Rapid nach dem Derby-Sieg gegen die Austria (2:0) am Sonntagabend. In der Keißlergasse, nahe dem Allianz-Stadion, sind Terrassenmöbel in Brand geraten. Laut „Krone“-Informationen gibt es einen Zusammenhang mit den Feierlichkeiten.",
+      "url": "https://www.krone.at/4358379",
+      "published_at": 1793567988.0,
+      "first_seen_at": 1793573751.75028,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/3801730/v2851ae/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/3801730/v2851ae/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/3801730/v2851ae/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/3801730/v2851ae/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Feuerwehr-Einsatz am Rande des Empfangs der Mannschaft von Rapid nach dem Derby-Sieg gegen die Austria (2:0) am Sonntagabend. In der Keißlergasse, nahe dem Allianz-Stadion, sind Terrassenmöbel in Brand geraten. Laut „Krone“-Informationen gibt es einen Zusammenhang mit den Feierlichkeiten.",
+      "rss_revision_at": 1793567988.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "krone.at"
+    },
+    "d4665becc7382bc93c34670a": {
+      "id": "d4665becc7382bc93c34670a",
+      "title": "6:0-Linzer: „Das macht was mit der Vienna!“",
+      "text": "Am Papier gibt‘s für Blau-Weiß nach dem Sieg bei der Vienna drei Punkte. Doch der 6:0-Kantersieg im Zweitliga-Hit auf der Hohen Warte war in Wahrheit nicht nur einen vierten Zähler wert – sondern aus psychologischer Hinsicht noch viel mehr.",
+      "url": "https://www.krone.at/4358369",
+      "published_at": 1793567345.0,
+      "first_seen_at": 1793573751.75028,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4358287/v13d52f/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4358287/v13d52f/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4358287/v13d52f/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4358287/v13d52f/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Am Papier gibt‘s für Blau-Weiß nach dem Sieg bei der Vienna drei Punkte. Doch der 6:0-Kantersieg im Zweitliga-Hit auf der Hohen Warte war in Wahrheit nicht nur einen vierten Zähler wert – sondern aus psychologischer Hinsicht noch viel mehr.",
+      "rss_revision_at": 1793567345.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "krone.at"
+    },
     "61352c2f0d3bf45fe5ddee35": {
       "id": "61352c2f0d3bf45fe5ddee35",
       "title": "Radler nahm Kindern zu Halloween Süßigkeiten weg",
@@ -41,6 +517,8 @@
       "rss_revision_at": 1793566623.0,
       "content_kind": "news",
       "text_origin": "rss",
+      "broadcast_id": "20261101T211404Z",
+      "broadcast_position": 1,
       "publisher": "krone.at"
     },
     "375ce7ca194a79bdaa5017e3": {
@@ -58,6 +536,8 @@
       "rss_revision_at": 1793565604.0,
       "content_kind": "news",
       "text_origin": "rss",
+      "broadcast_id": "20261101T211404Z",
+      "broadcast_position": 2,
       "publisher": "orf.at"
     },
     "edd59ac5c9e49f756b2869bf": {
@@ -92,9 +572,11 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41410130/bundeskanzler-stocker-mit-wirtschaftsdelegation-in-china",
-        "last_attempt_at": 1793567611.83406,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "40f4d9bdbc47be6cc0ef1bf13e74a36f30575ed45bf3a17e628fb3459890a8b1"
       },
+      "broadcast_id": "20261101T211404Z",
+      "broadcast_position": 3,
       "publisher": "kleinezeitung.at"
     },
     "7ec645a8125787410c3c3515": {
@@ -346,6 +828,8 @@
         "last_attempt_at": 1793567611.83406,
         "rss_fingerprint": "59848e78214870611188324d169406ab4cb3e0e88b3eb3e0237d09236798aa6b"
       },
+      "broadcast_id": "20261101T211404Z",
+      "broadcast_position": 4,
       "publisher": "derstandard.at"
     },
     "f353485434e34c18c177da8a": {
@@ -398,7 +882,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346922/politischer-machtkampf-in-den-usa-geht-in-die-naechste-phase?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000346922/politischer-machtkampf-in-den-usa-geht-in-die-naechste-phase?ref=rss",
+        "last_attempt_at": 1793573751.75028,
         "rss_fingerprint": "e1edc75ed06f031926990ccb7b06e29af7516d128b46d83e63e5271cd3b16f86"
       },
       "publisher": "derstandard.at"
@@ -492,7 +979,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346957/fu223ball-auslosung-214fb-cup-viertelfinale?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000346957/fu223ball-auslosung-214fb-cup-viertelfinale?ref=rss",
+        "last_attempt_at": 1793573751.75028,
         "rss_fingerprint": "d786ec2f1df8f1735b6d4ccda01d62eb2df66be73f6f609f9d3fe95b0c67b1d6"
       },
       "publisher": "derstandard.at"
@@ -806,7 +1296,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346949/russlandfreundliche-praesidentin-jotowa-liegt-laut-prognosen-in-bulgarien-vorn?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000346949/russlandfreundliche-praesidentin-jotowa-liegt-laut-prognosen-in-bulgarien-vorn?ref=rss",
+        "last_attempt_at": 1793573751.75028,
         "rss_fingerprint": "e6891845a941c2ea0c1c16b16bfe5169ac7389b66ccb478d41b1f23defeb11ee"
       },
       "publisher": "derstandard.at"
@@ -1084,7 +1577,7 @@
     "14a59125193e19088cdc3b8b": {
       "id": "14a59125193e19088cdc3b8b",
       "title": "Die besondere Tasche für die besondere Flasche!",
-      "text": "Kunst, die die eigenen Grenzen überwindet gibt es bei Christine Rechnitzer. Ihre Werke finden sich etwa auf Stoff.",
+      "text": "Kunst auf Stoff Die besondere Tasche für die besondere Flasche! Kunst auf einer „Bottle Bag“ verbindet Weingenuss und Kunst auf geniale Weise! Kunst, die die eigenen Grenzen überwindet gibt es bei Christine Rechnitzer. Ihre Werke finden sich etwa auf Stoff. Die Halbturner Künstlerin ist kreativ seit sie denken kann. Kunst gehört – natürlich -a auf Wände. Aber für Rechnitzer hört es da nicht auf. Kunst muss für sie getragen, gelebt und gefühlt werden. Also überlegte sie was machbar sei und kam auf die Idee ihre Kunstwerke auf Stoff zu drucken – als T-Shirts in etwa oder auch auf eine „Bottle Bag“ – sprich eine kleine Baumwolltasche für Weinflaschen. Christine Rechnitzer hat viele Ideen – sie finden ihren Platz auf Leinwänden, Textilien, aber auch zB auf Lampenschirmen. „Meine Kunst hat ihren Weg auf Stoff gefunden – und überschreitet damit ihre eigene Grenze: vom Bild zur körperlichen Erfahrung. Farben, Formen, Strukturen sind nicht mehr nur sicht-, sondern greifbar“, so Rechnitzer. Mit besonderer Tasche ausfalleneres Geschenk Kauft man in etwa eine Bottle Bag, um eine Weinflasche zu verschenken, hat man gleich zwei Präsente auf einmal gemacht: Den guten Tropfen und ein Kunstwerk einer regionalen Künstlerin. Übrigens sind die Sachen auch personalisierbar. Auf der Homepage der Halbturnerin – christinerechnitzer.com – findet sich ein eigener Abschnitt mit ihrer tragbaren Kunst. „Art 2 wear“ heißt er. Hier findet man vom Shirt über Hoodie bis hin zur Bottle Bag alles was das Herz begehrt. Übrigens: Die Bottle Bags gibts auch im Weinkulturhaus in Gols. Besonders praktisch, wenn man gleich ein Flascherl mitnimmt! Loading... 00:00 / 00:00 Loading... 00:00 00:00 1.0x Geschwindigkeit Burgenland 01.11.2026 19:00 Loading Newsletter ALLE NEWSLETTER",
       "url": "https://www.krone.at/4358253",
       "published_at": 1793556004.0,
       "first_seen_at": 1793560237.533036,
@@ -1112,16 +1605,20 @@
       "rss_text": "Kunst, die die eigenen Grenzen überwindet gibt es bei Christine Rechnitzer. Ihre Werke finden sich etwa auf Stoff.",
       "rss_revision_at": 1793556004.0,
       "content_kind": "news",
-      "text_origin": "rss",
+      "text_origin": "linked_article",
       "article_fetch": {
-        "status": "deferred",
+        "status": "success",
         "page_title": "Die besondere Tasche für die besondere Flasche!",
         "canonical_url": "https://www.krone.at/4358253",
         "resolved_url": "https://www.krone.at/4358253",
+        "method": "rdrr",
         "requested_url": "https://www.krone.at/4358253",
-        "last_attempt_at": 1793560237.533036,
-        "rss_fingerprint": "b6fb959e05329dfd71ce004e19ab3ab05cf5d948d4841d5d6056fa2384f2eeb4"
+        "last_attempt_at": 1793580630.854729,
+        "rss_fingerprint": "b6fb959e05329dfd71ce004e19ab3ab05cf5d948d4841d5d6056fa2384f2eeb4",
+        "fetched_at": 1793580630.854729,
+        "text_sha256": "1a46989138cf224399542308d7b3e62f0051b9c75c9932a9923817f98ee3f47d"
       },
+      "article_text": "Kunst auf Stoff Die besondere Tasche für die besondere Flasche! Kunst auf einer „Bottle Bag“ verbindet Weingenuss und Kunst auf geniale Weise! Kunst, die die eigenen Grenzen überwindet gibt es bei Christine Rechnitzer. Ihre Werke finden sich etwa auf Stoff. Die Halbturner Künstlerin ist kreativ seit sie denken kann. Kunst gehört – natürlich -a auf Wände. Aber für Rechnitzer hört es da nicht auf. Kunst muss für sie getragen, gelebt und gefühlt werden. Also überlegte sie was machbar sei und kam auf die Idee ihre Kunstwerke auf Stoff zu drucken – als T-Shirts in etwa oder auch auf eine „Bottle Bag“ – sprich eine kleine Baumwolltasche für Weinflaschen. Christine Rechnitzer hat viele Ideen – sie finden ihren Platz auf Leinwänden, Textilien, aber auch zB auf Lampenschirmen. „Meine Kunst hat ihren Weg auf Stoff gefunden – und überschreitet damit ihre eigene Grenze: vom Bild zur körperlichen Erfahrung. Farben, Formen, Strukturen sind nicht mehr nur sicht-, sondern greifbar“, so Rechnitzer. Mit besonderer Tasche ausfalleneres Geschenk Kauft man in etwa eine Bottle Bag, um eine Weinflasche zu verschenken, hat man gleich zwei Präsente auf einmal gemacht: Den guten Tropfen und ein Kunstwerk einer regionalen Künstlerin. Übrigens sind die Sachen auch personalisierbar. Auf der Homepage der Halbturnerin – christinerechnitzer.com – findet sich ein eigener Abschnitt mit ihrer tragbaren Kunst. „Art 2 wear“ heißt er. Hier findet man vom Shirt über Hoodie bis hin zur Bottle Bag alles was das Herz begehrt. Übrigens: Die Bottle Bags gibts auch im Weinkulturhaus in Gols. Besonders praktisch, wenn man gleich ein Flascherl mitnimmt! Loading... 00:00 / 00:00 Loading... 00:00 00:00 1.0x Geschwindigkeit Burgenland 01.11.2026 19:00 Loading Newsletter ALLE NEWSLETTER",
       "publisher": "krone.at"
     },
     "69377a9898d82022d2adb6e4": {
@@ -1175,10 +1672,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41409813/zehn-jahre-zu-spaet",
-        "last_attempt_at": 1793560237.533036,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "937b0945ef4b143d3084bf5e5c3f0d6d09a1cd72c7fc5a7e776f6d8f137e2642"
       },
       "publisher": "kleinezeitung.at"
@@ -1212,10 +1709,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41409946/rapid-gewinnt-wiener-derby-salzburg-ueberrollt-lustenau",
-        "last_attempt_at": 1793560237.533036,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "c27e7f092f8cae2d7c80f21077fed68b160894f42dd794d87f3f3b8b9f245ebc"
       },
       "publisher": "kleinezeitung.at"
@@ -1373,8 +1870,8 @@
     },
     "bf79a1699f2ecd9564b3e39f": {
       "id": "bf79a1699f2ecd9564b3e39f",
-      "title": "Siege für Serie-A-Leader Lazio und Schmids Frosinone",
-      "text": "Das noch ungeschlagene Team von Trainer Gennaro Gattuso bezwang Cagliari und liegt drei Punkte vor Inter Mailand. Aufsteiger Frosinone gewann gegen Torino",
+      "title": "Juventus schlägt Napoli, Siege für Leader Lazio und Schmids Frosinone",
+      "text": "Das ungeschlagene Lazio bezwang Cagliari und liegt drei Punkte vor Inter Mailand. Aufsteiger Frosinone gewann gegen Torino",
       "url": "https://www.derstandard.at/story/3000000346950/fu223ball-siege-f252r-serie-a-leader-lazio-und-schmids-frosinone?ref=rss",
       "published_at": 1793552651.0,
       "first_seen_at": 1793560237.533036,
@@ -1383,11 +1880,11 @@
       ],
       "media": [
         {
-          "url": "https://i.ds.at/_yavqQ/rs:fill:150:0/plain/lido-images/2026/11/01/ceda2160-8f86-47ec-a93e-26f3d24c8eba.jpg",
+          "url": "https://i.ds.at/Xc318g/rs:fill:150:0/plain/lido-images/2026/11/01/a7d66390-f230-40ca-85eb-83c986b0d82f.jpg",
           "kind": "image"
         }
       ],
-      "rss_text": "Das noch ungeschlagene Team von Trainer Gennaro Gattuso bezwang Cagliari und liegt drei Punkte vor Inter Mailand. Aufsteiger Frosinone gewann gegen Torino",
+      "rss_text": "Das ungeschlagene Lazio bezwang Cagliari und liegt drei Punkte vor Inter Mailand. Aufsteiger Frosinone gewann gegen Torino",
       "rss_revision_at": 1793552651.0,
       "content_kind": "news",
       "text_origin": "rss",
@@ -1395,8 +1892,8 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346950/fu223ball-siege-f252r-serie-a-leader-lazio-und-schmids-frosinone?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346950/fu223ball-siege-f252r-serie-a-leader-lazio-und-schmids-frosinone?ref=rss",
-        "last_attempt_at": 1793560237.533036,
-        "rss_fingerprint": "c90345ef0621930c7aa5effbe1528fef671b10b6e149bf16bdd8ce6d89f1d84a"
+        "last_attempt_at": 1793573751.75028,
+        "rss_fingerprint": "ac8fb42ccb211ed86a35ea710e52d1e867c74cb57e3b2be5881af422c44d9e6d"
       },
       "publisher": "derstandard.at"
     },
@@ -1735,10 +2232,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41405492/kaerntner-fotomeisterschaft-ging-in-launsdorf-ueber-die-buehne",
-        "last_attempt_at": 1793560237.533036,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "aba6fca284c540fb8d26c81f8638903c35c5aa6040cd1637a7eaf4573f17948f"
       },
       "publisher": "kleinezeitung.at"
@@ -1832,7 +2329,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346947/harald-krassnitzer-waere-ein-toller-praesident-findet-adele-neuhauser?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346947/harald-krassnitzer-waere-ein-toller-praesident-findet-adele-neuhauser?ref=rss",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793573751.75028,
         "rss_fingerprint": "6f63a4b31efd1ee37b49ba2e8f38daa62e074e7d544035adf584e6c7b5b71c42"
       },
       "broadcast_id": "20261101T165100Z",
@@ -1892,7 +2389,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346473/robuster-als-gedacht-heimische-industrie-waechst-wieder?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346473/robuster-als-gedacht-heimische-industrie-waechst-wieder?ref=rss",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793573751.75028,
         "rss_fingerprint": "e4f260457c0f8ec69dbcafd4444e9a1e5c2ba1c8e00208b0a6745c3f3eca2f3e"
       },
       "publisher": "derstandard.at"
@@ -1977,7 +2474,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346935/der-machtkampf-um-polens-verfassungsgericht-ist-noch-nicht-entschieden?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346935/der-machtkampf-um-polens-verfassungsgericht-ist-noch-nicht-entschieden?ref=rss",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793573751.75028,
         "rss_fingerprint": "042e829d6f638404ff29bd42c17eabb2998a854505f95f94b91e7ceae81f126b"
       },
       "publisher": "derstandard.at"
@@ -2028,7 +2525,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346901/openai-chef-altman-findet-es-furchtbar-dass-es-noch-ram-fuer-private-pcs-gibt?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346901/openai-chef-altman-findet-es-furchtbar-dass-es-noch-ram-fuer-private-pcs-gibt?ref=rss",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "7a23062508514ec9720875f3039208646356ee8166741673f26fb7492aec434b"
       },
       "publisher": "derstandard.at"
@@ -2090,9 +2587,9 @@
         "canonical_url": "https://orf.at/stories/3446790/",
         "resolved_url": "https://orf.at/stories/3446790/",
         "requested_url": "https://orf.at/stories/3446790/",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793573751.75028,
         "rss_fingerprint": "eeea6cff17fdbfd04005ed93a61f860b5e6f0bfc0718a8309bae0c26dcdab455",
-        "fetched_at": 1793551843.54801,
+        "fetched_at": 1793573751.75028,
         "text_sha256": "99e0e0c848181cea755b093447ce286176af75e610a187fe4d4eb877df9d8ed6"
       },
       "broadcast_id": "20261101T165100Z",
@@ -2123,7 +2620,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346334/die-irre-geschichte-des-chipherstellers-nvidia?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346334/die-irre-geschichte-des-chipherstellers-nvidia?ref=rss",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "8c2109cea1eadd001b23a5ba9f54ce3c2b721bd0c8a0d5be77c39b1728ec5feb"
       },
       "publisher": "derstandard.at"
@@ -2152,7 +2649,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346948/heat-regisseur-michael-mann-schiesst-sich-ins-eigene-bein-und-muss-ins-spital?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346948/heat-regisseur-michael-mann-schiesst-sich-ins-eigene-bein-und-muss-ins-spital?ref=rss",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "61a7c48ebbd9c90d817d85acbb23f144b94fea4111a6eafef452ebbc67a41f75"
       },
       "publisher": "derstandard.at"
@@ -2228,7 +2725,7 @@
     "f3938f0eea4269bee9ba46d3": {
       "id": "f3938f0eea4269bee9ba46d3",
       "title": "Nadeln in Halloween-Süßigkeiten in Deutschland entdeckt",
-      "text": "In ihren eingesammelten Halloween-Süßigkeiten haben Kinder an mehreren Orten in Deutschland Nadeln oder andere Metallobjekte gefunden. Entsprechende Fälle meldete die Polizei unter anderem in Thüringen, Baden-Württemberg, Bayern, Niedersachsen und Rheinland-Pfalz.\n\nIm thüringischen Leinefelde-Worbis geht die Polizei davon aus, dass die Süßigkeiten mit Absicht mit den Nadeln präpariert wurden, wie sie in einer Mitteilung schreibt. Es wird wegen versuchter gefährlicher Körperverletzung ermittelt. Einen ähnlichen Fall gab es in Herbsleben. Dort wurde eine Nadel in einem Kaubonbon gefunden.\n\nAuch in zwei Orten Baden-Württembergs werden Fälle gemeldet: In Filderstadt fanden zwei Familien am Halloween-Abend mehrere Nadeln in zwei Milch-Haselnuss-Schnitten, die ihre Kinder mitgebracht hatten. Nach Polizeiangaben waren die Nadeln von außen nicht zu sehen. Die Polizei geht davon aus, dass die Nadeln absichtlich in die Süßigkeiten gesteckt wurden.\n\nÄhnliches berichtete das Polizeipräsidium Konstanz aus Rielasingen-Worblingen. Dort enthielten einzeln verpackte Waffelschnitten metallische Fremdkörper. Um welche Gegenstände es sich genau handelte, blieb zunächst offen. Auch an mehreren Orten in Bayern wurden spitze Metallteile in den Halloween-Süßigkeiten gefunden, ebenso in Hannover, Bremen und Salzgitter.\n\nDie Polizei rief dazu auf, die Verpackungen von verdächtigen Süßigkeiten aufzubewahren und sich beim örtlich zuständigen Polizeirevier zu melden. Fremdkörper sollten nicht entfernt werden, um mögliche Spuren zu erhalten. In den vergangenen Jahren hatte es in Deutschland mehrfach vergleichbare Fälle gegeben, bei denen Kinder Metallgegenstände in Halloween-Süßigkeiten fanden.",
+      "text": "In ihren eingesammelten Halloween-Süßigkeiten haben Kinder gestern an mehreren Orten in Deutschland Nadeln oder andere Metallobjekte gefunden. Entsprechende Fälle meldete die Polizei unter anderem in Thüringen, Baden-Württemberg, Bayern, Niedersachsen und Rheinland-Pfalz.\n\nIm thüringischen Leinefelde-Worbis geht die Polizei davon aus, dass die Süßigkeiten mit Absicht mit den Nadeln präpariert wurden, wie sie in einer Mitteilung schreibt. Es wird wegen versuchter gefährlicher Körperverletzung ermittelt. Einen ähnlichen Fall gab es in Herbsleben. Dort wurde eine Nadel in einem Kaubonbon gefunden.\n\nAuch in zwei Orten Baden-Württembergs werden Fälle gemeldet: In Filderstadt fanden zwei Familien am Halloween-Abend mehrere Nadeln in zwei Milch-Haselnuss-Schnitten, die ihre Kinder mitgebracht hatten. Nach Polizeiangaben waren die Nadeln von außen nicht zu sehen. Die Polizei geht davon aus, dass die Nadeln absichtlich in die Süßigkeiten gesteckt wurden.\n\nÄhnliches berichtete das Polizeipräsidium Konstanz aus Rielasingen-Worblingen. Dort enthielten einzeln verpackte Waffelschnitten metallische Fremdkörper. Um welche Gegenstände es sich genau handelte, blieb zunächst offen. Auch an mehreren Orten in Bayern wurden spitze Metallteile in den Halloween-Süßigkeiten gefunden, ebenso in Hannover, Bremen und Salzgitter.\n\nDie Polizei rief dazu auf, die Verpackungen von verdächtigen Süßigkeiten aufzubewahren und sich beim örtlich zuständigen Polizeirevier zu melden. Fremdkörper sollten nicht entfernt werden, um mögliche Spuren zu erhalten. In den vergangenen Jahren hatte es in Deutschland mehrfach vergleichbare Fälle gegeben, bei denen Kinder Metallgegenstände in Halloween-Süßigkeiten fanden.",
       "url": "https://orf.at/stories/3446789/",
       "published_at": 1793550174.0,
       "first_seen_at": 1793551843.54801,
@@ -2240,7 +2737,7 @@
       "rss_revision_at": 1793550174.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "In ihren eingesammelten Halloween-Süßigkeiten haben Kinder an mehreren Orten in Deutschland Nadeln oder andere Metallobjekte gefunden. Entsprechende Fälle meldete die Polizei unter anderem in Thüringen, Baden-Württemberg, Bayern, Niedersachsen und Rheinland-Pfalz.\n\nIm thüringischen Leinefelde-Worbis geht die Polizei davon aus, dass die Süßigkeiten mit Absicht mit den Nadeln präpariert wurden, wie sie in einer Mitteilung schreibt. Es wird wegen versuchter gefährlicher Körperverletzung ermittelt. Einen ähnlichen Fall gab es in Herbsleben. Dort wurde eine Nadel in einem Kaubonbon gefunden.\n\nAuch in zwei Orten Baden-Württembergs werden Fälle gemeldet: In Filderstadt fanden zwei Familien am Halloween-Abend mehrere Nadeln in zwei Milch-Haselnuss-Schnitten, die ihre Kinder mitgebracht hatten. Nach Polizeiangaben waren die Nadeln von außen nicht zu sehen. Die Polizei geht davon aus, dass die Nadeln absichtlich in die Süßigkeiten gesteckt wurden.\n\nÄhnliches berichtete das Polizeipräsidium Konstanz aus Rielasingen-Worblingen. Dort enthielten einzeln verpackte Waffelschnitten metallische Fremdkörper. Um welche Gegenstände es sich genau handelte, blieb zunächst offen. Auch an mehreren Orten in Bayern wurden spitze Metallteile in den Halloween-Süßigkeiten gefunden, ebenso in Hannover, Bremen und Salzgitter.\n\nDie Polizei rief dazu auf, die Verpackungen von verdächtigen Süßigkeiten aufzubewahren und sich beim örtlich zuständigen Polizeirevier zu melden. Fremdkörper sollten nicht entfernt werden, um mögliche Spuren zu erhalten. In den vergangenen Jahren hatte es in Deutschland mehrfach vergleichbare Fälle gegeben, bei denen Kinder Metallgegenstände in Halloween-Süßigkeiten fanden.",
+      "article_text": "In ihren eingesammelten Halloween-Süßigkeiten haben Kinder gestern an mehreren Orten in Deutschland Nadeln oder andere Metallobjekte gefunden. Entsprechende Fälle meldete die Polizei unter anderem in Thüringen, Baden-Württemberg, Bayern, Niedersachsen und Rheinland-Pfalz.\n\nIm thüringischen Leinefelde-Worbis geht die Polizei davon aus, dass die Süßigkeiten mit Absicht mit den Nadeln präpariert wurden, wie sie in einer Mitteilung schreibt. Es wird wegen versuchter gefährlicher Körperverletzung ermittelt. Einen ähnlichen Fall gab es in Herbsleben. Dort wurde eine Nadel in einem Kaubonbon gefunden.\n\nAuch in zwei Orten Baden-Württembergs werden Fälle gemeldet: In Filderstadt fanden zwei Familien am Halloween-Abend mehrere Nadeln in zwei Milch-Haselnuss-Schnitten, die ihre Kinder mitgebracht hatten. Nach Polizeiangaben waren die Nadeln von außen nicht zu sehen. Die Polizei geht davon aus, dass die Nadeln absichtlich in die Süßigkeiten gesteckt wurden.\n\nÄhnliches berichtete das Polizeipräsidium Konstanz aus Rielasingen-Worblingen. Dort enthielten einzeln verpackte Waffelschnitten metallische Fremdkörper. Um welche Gegenstände es sich genau handelte, blieb zunächst offen. Auch an mehreren Orten in Bayern wurden spitze Metallteile in den Halloween-Süßigkeiten gefunden, ebenso in Hannover, Bremen und Salzgitter.\n\nDie Polizei rief dazu auf, die Verpackungen von verdächtigen Süßigkeiten aufzubewahren und sich beim örtlich zuständigen Polizeirevier zu melden. Fremdkörper sollten nicht entfernt werden, um mögliche Spuren zu erhalten. In den vergangenen Jahren hatte es in Deutschland mehrfach vergleichbare Fälle gegeben, bei denen Kinder Metallgegenstände in Halloween-Süßigkeiten fanden.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -2248,17 +2745,17 @@
         "canonical_url": "https://orf.at/stories/3446789/",
         "resolved_url": "https://orf.at/stories/3446789/",
         "requested_url": "https://orf.at/stories/3446789/",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793573751.75028,
         "rss_fingerprint": "19b385569d8266c421ea995b333d91690a63b4d7c0e091443a52c9805c85ac87",
-        "fetched_at": 1793551843.54801,
-        "text_sha256": "1e9c52dfbba53f1b6100dd774416c8635370309eb87c06c1180a01f944556524"
+        "fetched_at": 1793573751.75028,
+        "text_sha256": "13eb942be3429de4cd644fdb393ffdc4ed1d2e3283938deb7bf0f981b5530830"
       },
       "publisher": "orf.at"
     },
     "2d08fd60012048adf7e2e98a": {
       "id": "2d08fd60012048adf7e2e98a",
       "title": "US-Warnung vor Anschlag in Moskau: Minderjähriger verhaftet",
-      "text": "Nach einer US-Warnung vor einem womöglich geplanten Anschlag in Moskau haben die russischen Behörden einen Minderjährigen festgenommen. Es seien unter anderem auf TikTok Fotos des Verdächtigen in Kampfmontur und offenbar mit einer Waffe entdeckt worden, teilte der russische Inlandsgeheimdienst FSB heute mit.\n\nDie Ermittler hätten zudem auf seinem Handy „ein Abonnement eines neonazistischen Telegram-Kanals“ sowie in seinem Suchverlauf Recherchen zu terroristischen Anschlägen und Massenmorden gefunden.\n\nDer FSB hatte gestern mitgeteilt, dass er von den USA über einen womöglich geplanten Anschlag unterrichtet worden sei. Die US-Botschaft in Moskau sprach zeitgleich eine Sicherheitswarnung für das Zarizyno-Museum aus, eine Schloss- und Parkanlage im Süden von Moskau. Es gebe eine „glaubwürdige“ Bedrohungslage mit potenziell vielen Opfern.\n\nIm Zuge der Ermittlungen wurde laut FSB nun „ein minderjähriger russischer Staatsbürger“ festgenommen. Die von ihm selbst geposteten Fotos auf TikTok zeigten ihn mit „taktischer Ausrüstung sowie einer Sturmhaube“ und „einem Gegenstand, der einer automatischen Waffe ähnelt“.\n\nZudem seien Fotos entdeckt worden, die im Zarizyno-Museum aufgenommen wurden und mit der Bildunterschrift „Ich habe einen Ort gefunden“ versehen gewesen seien, erklärte der Geheimdienst laut russischen Staatsmedien.\n\nDie USA haben Russland in der Vergangenheit wiederholt vor drohenden Anschlägen gewarnt, unter anderem im März 2024, Wochen vor einem Anschlag auf eine Konzerthalle bei Moskau mit mehr als 140 Toten.\n\nAufgrund des US-Hinweises wurden gestern alle Massenveranstaltungen im Park abgesagt und die Sicherheitsmaßnahmen verstärkt. Auch die deutsche Botschaft in Moskau hatte in einem Rundschreiben vor dem Besuch von Zarizyno gewarnt.",
+      "text": "Nach einer US-Warnung vor einem womöglich geplanten Anschlag in Moskau haben die russischen Behörden einen Minderjährigen festgenommen. Es seien unter anderem auf TikTok Fotos des Verdächtigen in Kampfmontur und offenbar mit einer Waffe entdeckt worden, teilte der russische Inlandsgeheimdienst FSB gestern mit.\n\nDie Ermittler hätten zudem auf seinem Handy „ein Abonnement eines neonazistischen Telegram-Kanals“ sowie in seinem Suchverlauf Recherchen zu terroristischen Anschlägen und Massenmorden gefunden.\n\nDer FSB hatte gestern mitgeteilt, dass er von den USA über einen womöglich geplanten Anschlag unterrichtet worden sei. Die US-Botschaft in Moskau sprach zeitgleich eine Sicherheitswarnung für das Zarizyno-Museum aus, eine Schloss- und Parkanlage im Süden von Moskau. Es gebe eine „glaubwürdige“ Bedrohungslage mit potenziell vielen Opfern.\n\nIm Zuge der Ermittlungen wurde laut FSB nun „ein minderjähriger russischer Staatsbürger“ festgenommen. Die von ihm selbst geposteten Fotos auf TikTok zeigten ihn mit „taktischer Ausrüstung sowie einer Sturmhaube“ und „einem Gegenstand, der einer automatischen Waffe ähnelt“.\n\nZudem seien Fotos entdeckt worden, die im Zarizyno-Museum aufgenommen wurden und mit der Bildunterschrift „Ich habe einen Ort gefunden“ versehen gewesen seien, erklärte der Geheimdienst laut russischen Staatsmedien.\n\nDie USA haben Russland in der Vergangenheit wiederholt vor drohenden Anschlägen gewarnt, unter anderem im März 2024, Wochen vor einem Anschlag auf eine Konzerthalle bei Moskau mit mehr als 140 Toten.\n\nAufgrund des US-Hinweises wurden am Samstag alle Massenveranstaltungen im Park abgesagt und die Sicherheitsmaßnahmen verstärkt. Auch die deutsche Botschaft in Moskau hatte in einem Rundschreiben vor dem Besuch von Zarizyno gewarnt.",
       "url": "https://orf.at/stories/3446788/",
       "published_at": 1793549804.0,
       "first_seen_at": 1793551843.54801,
@@ -2270,7 +2767,7 @@
       "rss_revision_at": 1793549804.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Nach einer US-Warnung vor einem womöglich geplanten Anschlag in Moskau haben die russischen Behörden einen Minderjährigen festgenommen. Es seien unter anderem auf TikTok Fotos des Verdächtigen in Kampfmontur und offenbar mit einer Waffe entdeckt worden, teilte der russische Inlandsgeheimdienst FSB heute mit.\n\nDie Ermittler hätten zudem auf seinem Handy „ein Abonnement eines neonazistischen Telegram-Kanals“ sowie in seinem Suchverlauf Recherchen zu terroristischen Anschlägen und Massenmorden gefunden.\n\nDer FSB hatte gestern mitgeteilt, dass er von den USA über einen womöglich geplanten Anschlag unterrichtet worden sei. Die US-Botschaft in Moskau sprach zeitgleich eine Sicherheitswarnung für das Zarizyno-Museum aus, eine Schloss- und Parkanlage im Süden von Moskau. Es gebe eine „glaubwürdige“ Bedrohungslage mit potenziell vielen Opfern.\n\nIm Zuge der Ermittlungen wurde laut FSB nun „ein minderjähriger russischer Staatsbürger“ festgenommen. Die von ihm selbst geposteten Fotos auf TikTok zeigten ihn mit „taktischer Ausrüstung sowie einer Sturmhaube“ und „einem Gegenstand, der einer automatischen Waffe ähnelt“.\n\nZudem seien Fotos entdeckt worden, die im Zarizyno-Museum aufgenommen wurden und mit der Bildunterschrift „Ich habe einen Ort gefunden“ versehen gewesen seien, erklärte der Geheimdienst laut russischen Staatsmedien.\n\nDie USA haben Russland in der Vergangenheit wiederholt vor drohenden Anschlägen gewarnt, unter anderem im März 2024, Wochen vor einem Anschlag auf eine Konzerthalle bei Moskau mit mehr als 140 Toten.\n\nAufgrund des US-Hinweises wurden gestern alle Massenveranstaltungen im Park abgesagt und die Sicherheitsmaßnahmen verstärkt. Auch die deutsche Botschaft in Moskau hatte in einem Rundschreiben vor dem Besuch von Zarizyno gewarnt.",
+      "article_text": "Nach einer US-Warnung vor einem womöglich geplanten Anschlag in Moskau haben die russischen Behörden einen Minderjährigen festgenommen. Es seien unter anderem auf TikTok Fotos des Verdächtigen in Kampfmontur und offenbar mit einer Waffe entdeckt worden, teilte der russische Inlandsgeheimdienst FSB gestern mit.\n\nDie Ermittler hätten zudem auf seinem Handy „ein Abonnement eines neonazistischen Telegram-Kanals“ sowie in seinem Suchverlauf Recherchen zu terroristischen Anschlägen und Massenmorden gefunden.\n\nDer FSB hatte gestern mitgeteilt, dass er von den USA über einen womöglich geplanten Anschlag unterrichtet worden sei. Die US-Botschaft in Moskau sprach zeitgleich eine Sicherheitswarnung für das Zarizyno-Museum aus, eine Schloss- und Parkanlage im Süden von Moskau. Es gebe eine „glaubwürdige“ Bedrohungslage mit potenziell vielen Opfern.\n\nIm Zuge der Ermittlungen wurde laut FSB nun „ein minderjähriger russischer Staatsbürger“ festgenommen. Die von ihm selbst geposteten Fotos auf TikTok zeigten ihn mit „taktischer Ausrüstung sowie einer Sturmhaube“ und „einem Gegenstand, der einer automatischen Waffe ähnelt“.\n\nZudem seien Fotos entdeckt worden, die im Zarizyno-Museum aufgenommen wurden und mit der Bildunterschrift „Ich habe einen Ort gefunden“ versehen gewesen seien, erklärte der Geheimdienst laut russischen Staatsmedien.\n\nDie USA haben Russland in der Vergangenheit wiederholt vor drohenden Anschlägen gewarnt, unter anderem im März 2024, Wochen vor einem Anschlag auf eine Konzerthalle bei Moskau mit mehr als 140 Toten.\n\nAufgrund des US-Hinweises wurden am Samstag alle Massenveranstaltungen im Park abgesagt und die Sicherheitsmaßnahmen verstärkt. Auch die deutsche Botschaft in Moskau hatte in einem Rundschreiben vor dem Besuch von Zarizyno gewarnt.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -2278,10 +2775,10 @@
         "canonical_url": "https://orf.at/stories/3446788/",
         "resolved_url": "https://orf.at/stories/3446788/",
         "requested_url": "https://orf.at/stories/3446788/",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793573751.75028,
         "rss_fingerprint": "f5ca369a6d8598b93269920f9c6829a5dafb0e873c78f960ca322cb42e98d3bd",
-        "fetched_at": 1793551843.54801,
-        "text_sha256": "ad0f2e974f4873fb36de30768b8f24ef71572f332666f51c27718f67b30376fd"
+        "fetched_at": 1793573751.75028,
+        "text_sha256": "f77f931140b4f971084c2a97c32b94a3fe2c1d2e5c3c188e2702bbbe0cb644c9"
       },
       "publisher": "orf.at"
     },
@@ -2532,10 +3029,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41404778/flohmarkt-fuer-die-neuen-fenster-der-barbarakirche-mitterdorf",
-        "last_attempt_at": 1793560237.533036,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "a6f70de8727909a0c2690233faa3224aa70767a088056892ebfd8d77865ed2e5"
       },
       "publisher": "kleinezeitung.at"
@@ -2692,7 +3189,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346944/mehr-disziplin-chinas-f252hrung-st228rkt-xis-autorit228t-in-kp?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346944/mehr-disziplin-chinas-f252hrung-st228rkt-xis-autorit228t-in-kp?ref=rss",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "7b8479c4a88dbff4c8aef5a45a23d17ef7be92657d1fbfc0764efade102fcc12"
       },
       "publisher": "derstandard.at"
@@ -2765,7 +3262,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346914/zuversicht-ist-gut-jetzt-wird-es-zeit-fuer-den-richtigen-aufschwung?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346914/zuversicht-ist-gut-jetzt-wird-es-zeit-fuer-den-richtigen-aufschwung?ref=rss",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "51ac0df665249d660be848877db7478a90a8790dd5184b492221c303622edcd4"
       },
       "publisher": "derstandard.at"
@@ -2823,7 +3320,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346940/spaeter-elfmeter-rettet-sturm-graz-einen-punktgewinn-gegen-den-wac?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346940/spaeter-elfmeter-rettet-sturm-graz-einen-punktgewinn-gegen-den-wac?ref=rss",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "24439c8064629b10c59003a98d524e20f4a954b2b26d267d58d0318ca677b10d"
       },
       "publisher": "derstandard.at"
@@ -2857,10 +3354,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41409787/carlos-alcaraz-holt-sich-souveraen-den-titel-in-der-wiener-stadthalle",
-        "last_attempt_at": 1793560237.533036,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "f674e7b481eec6923eb19a8e93d90265738d4581b15cb17698e844d22dfb3460"
       },
       "publisher": "kleinezeitung.at"
@@ -3151,7 +3648,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346937/ocarlos-alcaraz-gewinnt-das-wiener-tennisturnier?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346937/ocarlos-alcaraz-gewinnt-das-wiener-tennisturnier?ref=rss",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "950054be82c3ff256f79d94f8a97b6cec10cb18997f09667413212f73b50054e"
       },
       "publisher": "derstandard.at"
@@ -3309,10 +3806,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "title_mismatch",
         "page_title": "Umstrittene Entscheidungen bei WAC gegen Sturm",
         "requested_url": "https://www.krone.at/4355995",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "7dcab70db8cc2ea35f69cc8a649d9b8a9935871e88ab4e43321d5c5be25f2081"
       },
       "publisher": "krone.at"
@@ -3629,10 +4126,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41389953/pfingstdays-muerzhofen-vorverkauf-ist-voll-angelaufen",
-        "last_attempt_at": 1793543416.683067,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "fdca56705d805fdfe848baa863a20d7c1a76bd35c26d79285f3380c611748075"
       },
       "publisher": "kleinezeitung.at"
@@ -3658,10 +4155,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346932/tirolerinnen-252berwiesen-internetbetr252gern-jeweils-f252nfstellige-summe?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346932/tirolerinnen-252berwiesen-internetbetr252gern-jeweils-f252nfstellige-summe?ref=rss",
-        "last_attempt_at": 1793543416.683067,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "5090b509e341030c57ee1ba6f095acd310a1dac9b5df30ded3cb610ba6e57b13"
       },
       "publisher": "derstandard.at"
@@ -3785,10 +4282,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346930/knapp-780-festnahmen-am-rande-von-protesten-in-frankreich?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346930/knapp-780-festnahmen-am-rande-von-protesten-in-frankreich?ref=rss",
-        "last_attempt_at": 1793543416.683067,
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "a792b6394e98325d400d5220accee4eb09f4c9d7d0b39a5f725a4b1fbe29bafd"
       },
       "publisher": "derstandard.at"
@@ -3818,7 +4315,7 @@
     "1b2d6b618bc6cf58e3e1b978": {
       "id": "1b2d6b618bc6cf58e3e1b978",
       "title": "Junger Steirer stürzte von Brücke: Schwer verletzt",
-      "text": "Ein Anfang 20-Jähriger dürfte im Bezirk Deutschlandsberg in der Nacht auf Sonntag von einer Brücke in die Lassnitz gestürzt sein. Er wurde ins Spital gebracht.",
+      "text": "In der Halloween-Nacht Junger Steirer stürzte von Brücke: Schwer verletzt Der Vorfall ereignete sich mitten in der Nacht. Ein Anfang 20-Jähriger dürfte im Bezirk Deutschlandsberg in der Nacht auf Sonntag von einer Brücke in die Lassnitz gestürzt sein. Er wurde ins Spital gebracht. Das war keine ruhige Nacht für die Einsatzkräfte im Bezirk Deutschlandsberg. Gegen 2.15 Uhr früh wurden sie zu einem Unfall bei der Einfahrt zur Klause gerufen. Ein junger Mann war von einer Brücke in die Lassnitz gestürzt. Dabei wurde er schwer verletzt. Notarzt, Polizei, Feuerwehr: Alle rückten aus. Ins UKH Graz geliefert Nach der Rettung durch die Freiwillige Feuerwehr Deutschlandsberg wurde er vom Roten Kreuz erstversorgt und ins UKH Graz gebracht. Auch ein Notarzt und die Polizei standen im Einsatz. Loading... 00:00 / 00:00 play_arrow close expand_more Loading... replay_10 skip_previous play_arrow skip_next forward_10 00:00 00:00 1.0x Geschwindigkeit Steiermark 01.11.2026 14:29 Loading Newsletter ALLE NEWSLETTER",
       "url": "https://www.krone.at/4357820",
       "published_at": 1793540333.0,
       "first_seen_at": 1793543416.683067,
@@ -3846,11 +4343,20 @@
       "rss_text": "Ein Anfang 20-Jähriger dürfte im Bezirk Deutschlandsberg in der Nacht auf Sonntag von einer Brücke in die Lassnitz gestürzt sein. Er wurde ins Spital gebracht.",
       "rss_revision_at": 1793540333.0,
       "content_kind": "news",
-      "text_origin": "rss",
+      "text_origin": "linked_article",
       "article_fetch": {
-        "status": "deferred",
-        "rss_fingerprint": "a4334dbb50b167ac072623af01168a83c2dbb6ab56fa7c0451ed0fe1e95544d1"
+        "status": "success",
+        "page_title": "Junger Steirer stürzte von Brücke: Schwer verletzt",
+        "canonical_url": "https://www.krone.at/4357820",
+        "resolved_url": "https://www.krone.at/4357820",
+        "method": "rdrr",
+        "requested_url": "https://www.krone.at/4357820",
+        "last_attempt_at": 1793580630.854729,
+        "rss_fingerprint": "a4334dbb50b167ac072623af01168a83c2dbb6ab56fa7c0451ed0fe1e95544d1",
+        "fetched_at": 1793580630.854729,
+        "text_sha256": "b356d65ddc5cf812ba30682638a52ba6eba494acb2af64d82ce229f0f4a8ef81"
       },
+      "article_text": "In der Halloween-Nacht Junger Steirer stürzte von Brücke: Schwer verletzt Der Vorfall ereignete sich mitten in der Nacht. Ein Anfang 20-Jähriger dürfte im Bezirk Deutschlandsberg in der Nacht auf Sonntag von einer Brücke in die Lassnitz gestürzt sein. Er wurde ins Spital gebracht. Das war keine ruhige Nacht für die Einsatzkräfte im Bezirk Deutschlandsberg. Gegen 2.15 Uhr früh wurden sie zu einem Unfall bei der Einfahrt zur Klause gerufen. Ein junger Mann war von einer Brücke in die Lassnitz gestürzt. Dabei wurde er schwer verletzt. Notarzt, Polizei, Feuerwehr: Alle rückten aus. Ins UKH Graz geliefert Nach der Rettung durch die Freiwillige Feuerwehr Deutschlandsberg wurde er vom Roten Kreuz erstversorgt und ins UKH Graz gebracht. Auch ein Notarzt und die Polizei standen im Einsatz. Loading... 00:00 / 00:00 play_arrow close expand_more Loading... replay_10 skip_previous play_arrow skip_next forward_10 00:00 00:00 1.0x Geschwindigkeit Steiermark 01.11.2026 14:29 Loading Newsletter ALLE NEWSLETTER",
       "publisher": "krone.at"
     },
     "7830813623b73eb336e8f359": {
@@ -3918,7 +4424,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346927/betroffene-bayern-m252ssen-sehr-viel-verarbeiten?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000346927/betroffene-bayern-m252ssen-sehr-viel-verarbeiten?ref=rss",
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "b14cfd54ec5138c39305d63c0457ab09269589a13668ebc220a7d248aa3b5320"
       },
       "publisher": "derstandard.at"
@@ -3982,7 +4491,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41409556/in-villach-beginnt-der-grosse-traum-fuer-oesterreichs-hockey-heldinnen",
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "8ab10df3cfd71c25c1b0ceb278edecdce57b6c92000cb9a109a45258660aa5c7"
       },
       "publisher": "kleinezeitung.at"
@@ -4016,7 +4528,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41409552/schwerer-anhaenger-in-osttirol-gestohlen-polizei-sucht-zeugen",
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "26a7e651aa90503bd7d8f8cf9eca0247e5f4d82cfc801a9a1499fb91ac2b1426"
       },
       "publisher": "kleinezeitung.at"
@@ -4072,7 +4587,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000345296/die-politisierung-tolkiens-von-hippie-fans-zum-liebling-der-rechten?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000345296/die-politisierung-tolkiens-von-hippie-fans-zum-liebling-der-rechten?ref=rss",
+        "last_attempt_at": 1793580630.854729,
         "rss_fingerprint": "c09fede475cda2c5f6610a7b988758d3971cc9fc87555dd9269d4be5d934c238"
       },
       "publisher": "derstandard.at"
@@ -6274,9 +6792,9 @@
         "canonical_url": "https://orf.at/stories/3446753/",
         "resolved_url": "https://orf.at/stories/3446753/",
         "requested_url": "https://orf.at/stories/3446753/",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793573751.75028,
         "rss_fingerprint": "a2408921ff85d50152fafa9080812117bea2583752f26c1730cb392e9286d108",
-        "fetched_at": 1793551843.54801,
+        "fetched_at": 1793573751.75028,
         "text_sha256": "168e2388adb8d65bd487ccc5d5f2db0a4b15ac44b770c9a579687c9785658a41"
       },
       "broadcast_id": "20261101T092602Z",
@@ -6328,9 +6846,9 @@
         "canonical_url": "https://orf.at/stories/3446751/",
         "resolved_url": "https://orf.at/stories/3446751/",
         "requested_url": "https://orf.at/stories/3446751/",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793573751.75028,
         "rss_fingerprint": "3ccfddc359ffbb80f1cc400a4b136291cf0ace5f7edff0f2a6e0b73e4fe299d3",
-        "fetched_at": 1793551843.54801,
+        "fetched_at": 1793573751.75028,
         "text_sha256": "d846e30bd099f36c79838e8545f7f3c861bc0c793701a0cec2826722e7c397a1"
       },
       "publisher": "orf.at"
@@ -6450,9 +6968,9 @@
         "canonical_url": "https://orf.at/stories/3446748/",
         "resolved_url": "https://orf.at/stories/3446748/",
         "requested_url": "https://orf.at/stories/3446748/",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793573751.75028,
         "rss_fingerprint": "e4e6f72003dfbc1668ddbee3aeee30f56e9c5fbefd52766963387e66728253a5",
-        "fetched_at": 1793551843.54801,
+        "fetched_at": 1793573751.75028,
         "text_sha256": "809cd0fec5a11d2d6522346e19099407883e38cac43b294e10b64f49df412a0a"
       },
       "publisher": "orf.at"
@@ -7370,9 +7888,9 @@
         "canonical_url": "https://orf.at/stories/3446741/",
         "resolved_url": "https://orf.at/stories/3446741/",
         "requested_url": "https://orf.at/stories/3446741/",
-        "last_attempt_at": 1793551843.54801,
+        "last_attempt_at": 1793573751.75028,
         "rss_fingerprint": "fb0a856572b07dd2bfc19824800ffce6997c2e5a7d7f8dc1c7cc9407b58598ee",
-        "fetched_at": 1793551843.54801,
+        "fetched_at": 1793573751.75028,
         "text_sha256": "8d32909100345c980a5aa51e254c50a2fbba91de8ac3b24aa7699f5a037b23f3"
       },
       "publisher": "orf.at"
@@ -7816,7 +8334,7 @@
     "8562bc30c6e96ea36b9c2145": {
       "id": "8562bc30c6e96ea36b9c2145",
       "title": "Selenskyj spricht von \"Rekordverlusten\" für Russland im Oktober",
-      "text": "Nach russischen Angriffen waren am Sonntag Hunderttausende Ukrainer ohne Strom. Selenskyj sprach am Samstag mit Erdoğan in Istanbul über Friedensverhandlungen",
+      "text": "Nach russischen Angriffen waren am Sonntag Hunderttausende Ukrainer ohne Strom. Selenskyj zeigte sich für ein direktes Treffen mit Putin in der Türkei bereit",
       "url": "https://www.derstandard.at/jetzt/livebericht/3000000346859/selenskyj-bei-erdogan-tuerkei-verurteilt-angriffe-auf-schiffe-im-schwarzen-meer?ref=rss",
       "published_at": 1793515164.0,
       "first_seen_at": 1793518194.095912,
@@ -7830,13 +8348,13 @@
           "kind": "image"
         }
       ],
-      "rss_text": "Nach russischen Angriffen waren am Sonntag Hunderttausende Ukrainer ohne Strom. Selenskyj sprach am Samstag mit Erdoğan in Istanbul über Friedensverhandlungen",
+      "rss_text": "Nach russischen Angriffen waren am Sonntag Hunderttausende Ukrainer ohne Strom. Selenskyj zeigte sich für ein direktes Treffen mit Putin in der Türkei bereit",
       "rss_revision_at": 1793515164.0,
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
         "status": "deferred",
-        "rss_fingerprint": "f22d95baac477864b7f6cde5b7d9939efce3fbc0931c291e173af7cf05b6b323"
+        "rss_fingerprint": "90234a494bc4ac7b2d6e99afea5ca05d75db1b7dce57481a2ecb8fcef4511c7c"
       },
       "publisher": "derstandard.at"
     },
@@ -8369,7 +8887,7 @@
       "rss_revision_at": 1793511240.0,
       "content_kind": "news",
       "text_origin": "rss",
-      "broadcast_id": "20261101T165100Z",
+      "broadcast_id": "20261101T211404Z",
       "broadcast_position": 5,
       "publisher": "bmi.gv.at"
     },
@@ -9334,406 +9852,913 @@
       "content_kind": "news",
       "text_origin": "rss",
       "publisher": "krone.at"
-    },
-    "f1cee8baa7519d4dbba7bf99": {
-      "id": "f1cee8baa7519d4dbba7bf99",
-      "title": "Höchste Präzision beim Guss",
-      "text": "Schon bei seinem Schnuppertag in der voestalpine Giesserei Traisen war für Christian klar: Diesen Berufsweg möchte er einschlagen. Heute ist der 20-Jährige im vierten Lehrjahr seiner Ausbildung zum Gießereitechniker und bereitet sich auf die Lehrabschlussprüfung vor.",
-      "url": "https://www.krone.at/4343695",
-      "published_at": 1793487818.0,
-      "first_seen_at": 1793499470.552618,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4343698/v430c69/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4343698/v430c69/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4343698/v430c69/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4343698/v430c69/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Schon bei seinem Schnuppertag in der voestalpine Giesserei Traisen war für Christian klar: Diesen Berufsweg möchte er einschlagen. Heute ist der 20-Jährige im vierten Lehrjahr seiner Ausbildung zum Gießereitechniker und bereitet sich auf die Lehrabschlussprüfung vor.",
-      "rss_revision_at": 1793487818.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "broadcast_id": "20261101T021817Z",
-      "broadcast_position": 1,
-      "publisher": "krone.at"
-    },
-    "b40fa8842f1b0f17b8c0bcd7": {
-      "id": "b40fa8842f1b0f17b8c0bcd7",
-      "title": "Ihre Welt ist digital",
-      "text": "Als Lehrling im dritten Jahr zur IT-Systemtechnikerin bei der voestalpine group-IT in Linz ist Alexandra (20) verantwortlich für die Konfiguration von Geräten, die Erstellung virtueller Maschinen und die Betreuung von Software.",
-      "url": "https://www.krone.at/4344979",
-      "published_at": 1793487689.0,
-      "first_seen_at": 1793499470.552618,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4344981/va776ba/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4344981/va776ba/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4344981/va776ba/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4344981/va776ba/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Als Lehrling im dritten Jahr zur IT-Systemtechnikerin bei der voestalpine group-IT in Linz ist Alexandra (20) verantwortlich für die Konfiguration von Geräten, die Erstellung virtueller Maschinen und die Betreuung von Software.",
-      "rss_revision_at": 1793487689.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "krone.at"
-    },
-    "f4415d4f541d91297ff94d2e": {
-      "id": "f4415d4f541d91297ff94d2e",
-      "title": "Erste Risse in Vucics System",
-      "text": "Mehr als ein Jahrzehnt hat die rechtsnationalistische Serbische Fortschrittspartei (SNS) unter Aleksandar Vucic umfassende Kontrolle über Serbien ausgeübt. Nach dem herausragenden Sieg der Studentenliste (SL) am vergangenen Sonntag erhöhen nun die Studierenden den Druck auf Medien, Justiz und Politik, sich dem Machtwechsel zu beugen. In einigen Bereichen zeigen sich bereits Risse im alten System. Zugleich müsse die Studierendenbewegung tragfähige Strukturen aufbauen, sagte Serbien-Experte Jakov Devcic im ORF.at-Interview.",
-      "url": "https://orf.at/stories/3446586/",
-      "published_at": 1793487062.0,
-      "first_seen_at": 1793499470.552618,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "Mehr als ein Jahrzehnt hat die rechtsnationalistische Serbische Fortschrittspartei (SNS) unter Aleksandar Vucic umfassende Kontrolle über Serbien ausgeübt. Nach dem herausragenden Sieg der Studentenliste (SL) am vergangenen Sonntag erhöhen nun die Studierenden den Druck auf Medien, Justiz und Politik, sich dem Machtwechsel zu beugen. In einigen Bereichen zeigen sich bereits Risse im alten System. Zugleich müsse die Studierendenbewegung tragfähige Strukturen aufbauen, sagte Serbien-Experte Jakov Devcic im ORF.at-Interview.",
-      "rss_revision_at": 1793487062.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "broadcast_id": "20261101T021817Z",
-      "broadcast_position": 2,
-      "publisher": "orf.at"
-    },
-    "522eefcb88188b2afc77e41b": {
-      "id": "522eefcb88188b2afc77e41b",
-      "title": "FBI sieht Nordkorea hinter Angriff auf Kryptobörse",
-      "text": "Nordkorea steckt nach FBI-Angaben hinter dem milliardenschweren Hackerangriff auf die größte Digitalwährungsbörse Binance. Die US-Bundespolizei veröffentlichte Informationen, wonach die Attacke durch die nordkoreanischen Hacker der Gruppe TraderTraitor durchgeführt wurde. Bereits zuvor hatte die Analysefirma TRM Labs der Gruppe die Tat zugeschrieben.\n\nDas FBI rief Unternehmen auf, Ein- und Auszahlungen von bestimmten Adressen zu blockieren. Dadurch solle verhindert werden, dass die Gruppe die entwendeten Vermögenswerte waschen kann. Nach Angaben des FBI geht es um mehr als sechs Milliarden Dollar (gut 5,37 Mrd. Euro). Bereits zuvor hatte Binance mitgeteilt, dass alle Ein- und Auszahlungen temporär ausgesetzt wurden.\n\nBinance teilte mit, dass inzwischen 90 Prozent der insgesamt gestohlenen Summe durch den Anbieter selbst gedeckt würde. Das geschieht zum Beispiel durch Rückkäufe. „Binance wird die finanziellen Auswirkungen dieses gestohlenen Vermögens tragen, nicht unsere Nutzer“, hieß es in einer Mitteilung des Unternehmens. Noch am Wochenende sollen voraussichtlich Auszahlungen an Nutzer und Nutzerinnen möglich sein.\n\nNach Erkenntnissen von TRM bewegten die Angreifer einen Großteil des Betrages von 6,36 Milliarden Dollar binnen 20 Minuten. Es sei der Angriff auf eine Digitalwährungsbörse mit dem größten Ausmaß gewesen.\n\nAnfang 2025 waren rund 1,5 Milliarden Dollar in Digitalwährungen auf der Börse Bybit erbeutet worden. Auch dieser Angriff wurde der nordkoreanischen Hackergruppe zugeschrieben.",
-      "url": "https://orf.at/stories/3446733/",
-      "published_at": 1793485855.0,
-      "first_seen_at": 1793485964.956292,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1793485855.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "FBI sieht Nordkorea hinter Angriff auf Kryptobörse",
-        "canonical_url": "https://orf.at/stories/3446733/",
-        "resolved_url": "https://orf.at/stories/3446733/",
-        "requested_url": "https://orf.at/stories/3446733/",
-        "last_attempt_at": 1793551843.54801,
-        "rss_fingerprint": "059201ade4792a010586d29325d307ea02c6cae481e3da467e1dbea4a27a3b47",
-        "fetched_at": 1793551843.54801,
-        "text_sha256": "10bb5fd48eaf59fa5e8b6affb9a52cd135a5d92fe6baf33c678c96f52675e4e7"
-      },
-      "broadcast_id": "20261031T223305Z",
-      "broadcast_position": 1,
-      "article_text": "Nordkorea steckt nach FBI-Angaben hinter dem milliardenschweren Hackerangriff auf die größte Digitalwährungsbörse Binance. Die US-Bundespolizei veröffentlichte Informationen, wonach die Attacke durch die nordkoreanischen Hacker der Gruppe TraderTraitor durchgeführt wurde. Bereits zuvor hatte die Analysefirma TRM Labs der Gruppe die Tat zugeschrieben.\n\nDas FBI rief Unternehmen auf, Ein- und Auszahlungen von bestimmten Adressen zu blockieren. Dadurch solle verhindert werden, dass die Gruppe die entwendeten Vermögenswerte waschen kann. Nach Angaben des FBI geht es um mehr als sechs Milliarden Dollar (gut 5,37 Mrd. Euro). Bereits zuvor hatte Binance mitgeteilt, dass alle Ein- und Auszahlungen temporär ausgesetzt wurden.\n\nBinance teilte mit, dass inzwischen 90 Prozent der insgesamt gestohlenen Summe durch den Anbieter selbst gedeckt würde. Das geschieht zum Beispiel durch Rückkäufe. „Binance wird die finanziellen Auswirkungen dieses gestohlenen Vermögens tragen, nicht unsere Nutzer“, hieß es in einer Mitteilung des Unternehmens. Noch am Wochenende sollen voraussichtlich Auszahlungen an Nutzer und Nutzerinnen möglich sein.\n\nNach Erkenntnissen von TRM bewegten die Angreifer einen Großteil des Betrages von 6,36 Milliarden Dollar binnen 20 Minuten. Es sei der Angriff auf eine Digitalwährungsbörse mit dem größten Ausmaß gewesen.\n\nAnfang 2025 waren rund 1,5 Milliarden Dollar in Digitalwährungen auf der Börse Bybit erbeutet worden. Auch dieser Angriff wurde der nordkoreanischen Hackergruppe zugeschrieben.",
-      "publisher": "orf.at"
-    },
-    "27534d129f8c065cbf9e2b8e": {
-      "id": "27534d129f8c065cbf9e2b8e",
-      "title": "„Ich gehe in Salzburg von einer Topleistung aus“",
-      "text": "Sieben Spiele gegen Red Bull Salzburg, 33 Gegentore – diese Bilanz macht Austria Lustenaus Tormann Domenik Schierl aber nichts aus. Der 32-Jährige hofft mit seiner Mannschaft am Sonntag auf die nächste Überraschung nach dem Cup-Aufstieg unter der Woche gegen Sturm Graz.",
-      "url": "https://www.krone.at/4356760",
-      "published_at": 1793485852.0,
-      "first_seen_at": 1793485964.956292,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4356771/v544e5d/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4356771/v544e5d/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4356771/v544e5d/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4356771/v544e5d/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Sieben Spiele gegen Red Bull Salzburg, 33 Gegentore – diese Bilanz macht Austria Lustenaus Tormann Domenik Schierl aber nichts aus. Der 32-Jährige hofft mit seiner Mannschaft am Sonntag auf die nächste Überraschung nach dem Cup-Aufstieg unter der Woche gegen Sturm Graz.",
-      "rss_revision_at": 1793487087.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "broadcast_id": "20261031T223305Z",
-      "broadcast_position": 2,
-      "publisher": "krone.at"
-    },
-    "465b2ebd8c40e19c226b74d0": {
-      "id": "465b2ebd8c40e19c226b74d0",
-      "title": "Lewis Hamilton holt vor Russell und Leclerc Pole Position in Mexiko",
-      "text": "Der Brite fuhr zu seiner 105. Pole und zu seiner ersten für Ferrari. Antonelli, der am Sonntag Weltmeister werden kann, startet von Rang vier",
-      "url": "https://www.derstandard.at/story/3000000346878/lewis-hamilton-holt-vor-russell-und-leclerc-pole-position-in-mexiko?ref=rss",
-      "published_at": 1793485039.0,
-      "first_seen_at": 1793485964.956292,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/WwVRNg/rs:fill:150:0/plain/lido-images/2026/10/31/6161d1df-c3ff-4eb1-ad67-db113241ca94.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Der Brite fuhr zu seiner 105. Pole und zu seiner ersten für Ferrari. Antonelli, der am Sonntag Weltmeister werden kann, startet von Rang vier",
-      "rss_revision_at": 1793485039.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "article_fetch": {
-        "status": "deferred",
-        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346878/lewis-hamilton-holt-vor-russell-und-leclerc-pole-position-in-mexiko?ref=rss",
-        "requested_url": "https://www.derstandard.at/story/3000000346878/lewis-hamilton-holt-vor-russell-und-leclerc-pole-position-in-mexiko?ref=rss",
-        "last_attempt_at": 1793499470.552618,
-        "rss_fingerprint": "e147974608988edae8ecbbca911d87e435c5cfe2c81c3130a422b53436cae627"
-      },
-      "broadcast_id": "20261101T021817Z",
-      "broadcast_position": 3,
-      "publisher": "derstandard.at"
-    },
-    "0115da36adc3dcc0ef8e7768": {
-      "id": "0115da36adc3dcc0ef8e7768",
-      "title": "FC Barcelona verteidigt Tabellenführung mit 6:1-Kantersieg",
-      "text": "Der Titelverteidiger fertigte Alaves ab. Verfolger Atletico Madrid gewann bei Ndukwe-Klub Levante",
-      "url": "https://www.derstandard.at/story/3000000346879/fu223ball-barcelona-nach-61-kantersieg-weiter-tabellenf252hrer?ref=rss",
-      "published_at": 1793484687.0,
-      "first_seen_at": 1793485964.956292,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/ziXM0g/rs:fill:150:0/plain/lido-images/2026/10/31/5127abb8-aca2-424f-9012-7c7ad881f975.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Der Titelverteidiger fertigte Alaves ab. Verfolger Atletico Madrid gewann bei Ndukwe-Klub Levante",
-      "rss_revision_at": 1793484687.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "article_fetch": {
-        "status": "deferred",
-        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346879/fu223ball-barcelona-nach-61-kantersieg-weiter-tabellenf252hrer?ref=rss",
-        "requested_url": "https://www.derstandard.at/story/3000000346879/fu223ball-barcelona-nach-61-kantersieg-weiter-tabellenf252hrer?ref=rss",
-        "last_attempt_at": 1793485964.956292,
-        "rss_fingerprint": "fbf60e99cb6d1e6d9bbdea97549101fb58f6b98c2deccc09a1a4aec0a1fbb6f3"
-      },
-      "publisher": "derstandard.at"
-    },
-    "9ce800bf01cf2699f93f4962": {
-      "id": "9ce800bf01cf2699f93f4962",
-      "title": "Hoher Silberpreis: Deutschland musste Münzen einschmelzen",
-      "text": "Der starke Anstieg des Silberpreises im vergangenen Jahr hat das Geschäft mit Sammlermünzen in Deutschland durcheinander gebracht.\n\nDie Münzen „125 Jahre Wuppertaler Schwebebahn“ und „Heilige drei Könige“ mussten vor der geplanten Ausgabe zerstört und neu geprägt werden, wie das deutsche Finanzministerium mitteilte. Zunächst hatte der „Spiegel“ darüber berichtet.\n\nDer Silberpreis war im vergangenen Jahr außergewöhnlich stark gestiegen. Der Materialwert der Münzen stieg entsprechend und überschritt zwischenzeitlich den aufgeprägten Wert von 20 beziehungsweise 25 Euro.\n\nDie Münzen gibt es nun deutlich verspätet mit einem geringeren Silbergehalt und höheren Nennwerten: 35 und 50 Euro. Das Ministerium rechnet trotz der Schwierigkeiten mit einem „Münzgewinn im oberen einstelligen Millionenbereich“ für die Staatskasse. Die Kosten für die Nichtausgabe werden auf insgesamt knapp 1,4 Millionen Euro beziffert.",
-      "url": "https://orf.at/stories/3446732/",
-      "published_at": 1793483966.0,
-      "first_seen_at": 1793484430.595493,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1793483966.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_text": "Der starke Anstieg des Silberpreises im vergangenen Jahr hat das Geschäft mit Sammlermünzen in Deutschland durcheinander gebracht.\n\nDie Münzen „125 Jahre Wuppertaler Schwebebahn“ und „Heilige drei Könige“ mussten vor der geplanten Ausgabe zerstört und neu geprägt werden, wie das deutsche Finanzministerium mitteilte. Zunächst hatte der „Spiegel“ darüber berichtet.\n\nDer Silberpreis war im vergangenen Jahr außergewöhnlich stark gestiegen. Der Materialwert der Münzen stieg entsprechend und überschritt zwischenzeitlich den aufgeprägten Wert von 20 beziehungsweise 25 Euro.\n\nDie Münzen gibt es nun deutlich verspätet mit einem geringeren Silbergehalt und höheren Nennwerten: 35 und 50 Euro. Das Ministerium rechnet trotz der Schwierigkeiten mit einem „Münzgewinn im oberen einstelligen Millionenbereich“ für die Staatskasse. Die Kosten für die Nichtausgabe werden auf insgesamt knapp 1,4 Millionen Euro beziffert.",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "Hoher Silberpreis: Deutschland musste Münzen einschmelzen",
-        "canonical_url": "https://orf.at/stories/3446732/",
-        "resolved_url": "https://orf.at/stories/3446732/",
-        "requested_url": "https://orf.at/stories/3446732/",
-        "last_attempt_at": 1793567611.83406,
-        "rss_fingerprint": "f23a00dcd0f4f2ae66da9219ffe0cc1c7f1e21b9ad5462452a080babba8f8df4",
-        "fetched_at": 1793567611.83406,
-        "text_sha256": "e586ba13549a9f98099ba4e22232036366a12c63ff34b20b8265be510cd84b8a"
-      },
-      "publisher": "orf.at"
-    },
-    "8c1db85492aab141735789d4": {
-      "id": "8c1db85492aab141735789d4",
-      "title": "Jemen: Von Huthis entführter UNO-Mitarbeiter tot",
-      "text": "Ein seit zwei Jahren in der Gewalt der Huthi-Rebellen im Jemen befindlicher UNO-Mitarbeiter ist nach offiziellen Angaben tot. Ein Minister der jemenitischen Regierung sagte laut einem Bericht des saudischen Senders al-Arabija, der jemenitische Staatsangehörige und Mitarbeiter im Büro des UNO-Hochkommissars für Menschenrechte sei in einem Huthi-Gefängnis zu Tode gefoltert worden.\n\nDer im Juni 2024 festgenommene Mann habe keinen Besuch empfangen oder mit Angehörigen kommunizieren dürfen, sagte ein Familienangehöriger. Die Familie sei über den Tod informiert worden und solle den Leichnam in Empfang nehmen. Die genauen Todesumstände sind nach diesen Angaben noch unklar.\n\nDer österreichische UNO-Hochkommissar Volker Türk nannte den Tod seines Mitarbeiters in einer Mitteilung „absolut verheerend“ und sprach der Familie sein Mitgefühl aus. Er verlangte eine unabhängige Untersuchung zu den Todesumständen. Er mache sich große Sorgen um die weiteren UNO-Mitarbeiter in den Händen der Rebellen, davon allein sieben aus seiner Organisation.\n\nDem Regierungsmitglied zufolge sind noch mehr als 70 UNO-Mitarbeitende in der Gewalt der Huthis. Die Rebellen begründen das in der Regel damit, dass diese als Spione für die USA oder Israel tätig waren.",
-      "url": "https://orf.at/stories/3446731/",
-      "published_at": 1793483644.0,
-      "first_seen_at": 1793484430.595493,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1793483644.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_text": "Ein seit zwei Jahren in der Gewalt der Huthi-Rebellen im Jemen befindlicher UNO-Mitarbeiter ist nach offiziellen Angaben tot. Ein Minister der jemenitischen Regierung sagte laut einem Bericht des saudischen Senders al-Arabija, der jemenitische Staatsangehörige und Mitarbeiter im Büro des UNO-Hochkommissars für Menschenrechte sei in einem Huthi-Gefängnis zu Tode gefoltert worden.\n\nDer im Juni 2024 festgenommene Mann habe keinen Besuch empfangen oder mit Angehörigen kommunizieren dürfen, sagte ein Familienangehöriger. Die Familie sei über den Tod informiert worden und solle den Leichnam in Empfang nehmen. Die genauen Todesumstände sind nach diesen Angaben noch unklar.\n\nDer österreichische UNO-Hochkommissar Volker Türk nannte den Tod seines Mitarbeiters in einer Mitteilung „absolut verheerend“ und sprach der Familie sein Mitgefühl aus. Er verlangte eine unabhängige Untersuchung zu den Todesumständen. Er mache sich große Sorgen um die weiteren UNO-Mitarbeiter in den Händen der Rebellen, davon allein sieben aus seiner Organisation.\n\nDem Regierungsmitglied zufolge sind noch mehr als 70 UNO-Mitarbeitende in der Gewalt der Huthis. Die Rebellen begründen das in der Regel damit, dass diese als Spione für die USA oder Israel tätig waren.",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "Jemen: Von Huthis entführter UNO-Mitarbeiter tot",
-        "canonical_url": "https://orf.at/stories/3446731/",
-        "resolved_url": "https://orf.at/stories/3446731/",
-        "requested_url": "https://orf.at/stories/3446731/",
-        "last_attempt_at": 1793567611.83406,
-        "rss_fingerprint": "38969064f4d986506dc792bd15cb29f5e03def6f3886ec668b4062084500fd3a",
-        "fetched_at": 1793567611.83406,
-        "text_sha256": "a22d46787698eee1e365a3e2263a031e79d4db957a48b8a4b3699cc3bb8ade80"
-      },
-      "publisher": "orf.at"
-    },
-    "855dd8bd510b9d9e34aea9e7": {
-      "id": "855dd8bd510b9d9e34aea9e7",
-      "title": "„Jesus“-Rufe und Böller statt Randale in Salzburg",
-      "text": "Während in Europas Großstädten Demonstrationen ausarteten, waren in Salzburg untertags nur „Jesus“-Parolen beim Hauptbahnhof und abends Knaller in der Altstadt zu hören: ein Lokalaugenschein der „Krone“ in der Mozartstadt zum Gruseltag.",
-      "url": "https://www.krone.at/4357452",
-      "published_at": 1793483145.0,
-      "first_seen_at": 1793484430.595493,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4357483/vd51f9a/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4357483/vd51f9a/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4357483/vd51f9a/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4357483/vd51f9a/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Während in Europas Großstädten Demonstrationen ausarteten, waren in Salzburg untertags nur „Jesus“-Parolen beim Hauptbahnhof und abends Knaller in der Altstadt zu hören: ein Lokalaugenschein der „Krone“ in der Mozartstadt zum Gruseltag.",
-      "rss_revision_at": 1793489622.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "krone.at"
-    },
-    "297fd9353b7f529340e749b5": {
-      "id": "297fd9353b7f529340e749b5",
-      "title": "Namensvettern bei Midterms: Alaska gegen Trump-Klage",
-      "text": "Bei seinem Eingriff in die US-Parlamentswahlen in Alaska ist Präsident Donald Trump aus den eigenen Reihen kritisiert worden. Die republikanische Regierung in dem Bundesstaat forderte einen Bundesrichter auf, eine entsprechende Klage des US-Justizministeriums abzuweisen, wie aus einem Dokument hervorgeht.\n\nDie Einwände der US-Regierung „liefern diesem Gericht keinen Grund, diese unbegründete Klage noch länger aufrechtzuerhalten“, heißt es.\n\nIm Kern geht es der Trump-Regierung darum, die Bestätigung einer möglichen Wahlniederlage des republikanischen Senators Dan S. Sullivan zu verhindern. Dieser muss sich am Dienstag gegen die demokratische Kontrahentin Mary Peltola und den politischen Neuling Dan J. Sullivan durchsetzen.\n\nTrump und die republikanische Partei befürchten, dass unaufmerksame Wähler und Wählerinnen aufgrund der Namensgleichheit ihr Kreuz falsch setzen könnten. Der US-Präsident hatte das US-Justizministerium daraufhin angewiesen, eine Klage gegen den nördlichsten US-Bundesstaat einzureichen.\n\nDamit will er eine Bestätigung der Wahlergebnisse verhindern, falls dem republikanischen Amtsinhaber wegen einer Namensverwechslung am Ende Stimmen fehlen sollten. Das Ministerium versuchte dann vor Gericht zu erwirken, dass bestimmte Stimmzettel nach der Senatswahl gesondert aufbewahrt werden.\n\nAlaska argumentierte nun, dass das ohnehin nicht nachzuverfolgen sei. „Das geheime Wahlrecht ist selbst ein entscheidender Bestandteil der Integrität des Wahlprozesses“, hieß es. Zudem habe die US-Regierung kein Recht, in die Wahl einzugreifen: Von Gesetzes her liegt die Wahlleitung bei den jeweiligen US-Bundesstaaten.\n\nDie Beamten in Alaska betonten außerdem, dass man eine mögliche Verwechslung bereits mitbedacht habe. Wählende könnten sich vorab informieren und der Wahlzettel sei entsprechend gestaltet worden: Während bei Dan S. Sullivan die Bezeichnung „Amtsinhaber“ und „Registrierter Republikaner“ hinzugefügt wurde, wird Dan J. Sullivan ohne Zusatz gelistet.",
-      "url": "https://orf.at/stories/3446730/",
-      "published_at": 1793483004.0,
-      "first_seen_at": 1793484430.595493,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1793483004.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_text": "Bei seinem Eingriff in die US-Parlamentswahlen in Alaska ist Präsident Donald Trump aus den eigenen Reihen kritisiert worden. Die republikanische Regierung in dem Bundesstaat forderte einen Bundesrichter auf, eine entsprechende Klage des US-Justizministeriums abzuweisen, wie aus einem Dokument hervorgeht.\n\nDie Einwände der US-Regierung „liefern diesem Gericht keinen Grund, diese unbegründete Klage noch länger aufrechtzuerhalten“, heißt es.\n\nIm Kern geht es der Trump-Regierung darum, die Bestätigung einer möglichen Wahlniederlage des republikanischen Senators Dan S. Sullivan zu verhindern. Dieser muss sich am Dienstag gegen die demokratische Kontrahentin Mary Peltola und den politischen Neuling Dan J. Sullivan durchsetzen.\n\nTrump und die republikanische Partei befürchten, dass unaufmerksame Wähler und Wählerinnen aufgrund der Namensgleichheit ihr Kreuz falsch setzen könnten. Der US-Präsident hatte das US-Justizministerium daraufhin angewiesen, eine Klage gegen den nördlichsten US-Bundesstaat einzureichen.\n\nDamit will er eine Bestätigung der Wahlergebnisse verhindern, falls dem republikanischen Amtsinhaber wegen einer Namensverwechslung am Ende Stimmen fehlen sollten. Das Ministerium versuchte dann vor Gericht zu erwirken, dass bestimmte Stimmzettel nach der Senatswahl gesondert aufbewahrt werden.\n\nAlaska argumentierte nun, dass das ohnehin nicht nachzuverfolgen sei. „Das geheime Wahlrecht ist selbst ein entscheidender Bestandteil der Integrität des Wahlprozesses“, hieß es. Zudem habe die US-Regierung kein Recht, in die Wahl einzugreifen: Von Gesetzes her liegt die Wahlleitung bei den jeweiligen US-Bundesstaaten.\n\nDie Beamten in Alaska betonten außerdem, dass man eine mögliche Verwechslung bereits mitbedacht habe. Wählende könnten sich vorab informieren und der Wahlzettel sei entsprechend gestaltet worden: Während bei Dan S. Sullivan die Bezeichnung „Amtsinhaber“ und „Registrierter Republikaner“ hinzugefügt wurde, wird Dan J. Sullivan ohne Zusatz gelistet.",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "Namensvettern bei Midterms: Alaska gegen Trump-Klage",
-        "canonical_url": "https://orf.at/stories/3446730/",
-        "resolved_url": "https://orf.at/stories/3446730/",
-        "requested_url": "https://orf.at/stories/3446730/",
-        "last_attempt_at": 1793567611.83406,
-        "rss_fingerprint": "fb10a4c212c44d3df1a908339e59c21e75fb618b3476e8d2d5c27b4cb58c038e",
-        "fetched_at": 1793567611.83406,
-        "text_sha256": "f6619910adbcb47a3df80fb46f6a7d8dffc3116164b42b669ba3f4476347fe93"
-      },
-      "publisher": "orf.at"
-    },
-    "56c605f7ce481bceaee55caf": {
-      "id": "56c605f7ce481bceaee55caf",
-      "title": "Plünderungen in Frankfurt nach friedlichen Protesten in deutschen Städten",
-      "text": "In Frankfurt schlugen Randalierer mehrere Schaufenster ein und stahlen Turnschuhe und andere Gegenstände. In Berlin kam es zu einigen Flaschen- und Böllerwürfen",
-      "url": "https://www.derstandard.at/story/3000000346876/ausschreitungen-in-mehreren-deutschen-st228dten-nach-protesten?ref=rss",
-      "published_at": 1793482549.0,
-      "first_seen_at": 1793484430.595493,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/4-caVQ/rs:fill:150:0/plain/lido-images/2026/10/31/5df0903a-c826-4616-bd8f-a75a1a4b7afa.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "In Frankfurt schlugen Randalierer mehrere Schaufenster ein und stahlen Turnschuhe und andere Gegenstände. In Berlin kam es zu einigen Flaschen- und Böllerwürfen",
-      "rss_revision_at": 1793482549.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "derstandard.at"
-    },
-    "eac27f74890525ebe67db8b6": {
-      "id": "eac27f74890525ebe67db8b6",
-      "title": "„AMS-Opfer“ bekommen heuer bis zu 2500 Euro zurück",
-      "text": "1,10 Euro pro Tag im Schnitt und bis zu 2500 Euro im Höchstfall bekommen Betroffene der AMS-Rechenpanne bald retour. Zurückgezahlt werden sollen die Summen noch heuer. Die „Krone“ kennt die Details.",
-      "url": "https://www.krone.at/4356008",
-      "published_at": 1793481585.0,
-      "first_seen_at": 1793484430.595493,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4341860/v95dfe5/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4341860/v95dfe5/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4341860/v95dfe5/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4341860/v95dfe5/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "1,10 Euro pro Tag im Schnitt und bis zu 2500 Euro im Höchstfall bekommen Betroffene der AMS-Rechenpanne bald retour. Zurückgezahlt werden sollen die Summen noch heuer. Die „Krone“ kennt die Details.",
-      "rss_revision_at": 1793481585.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "krone.at"
     }
   },
   "groups": [
+    {
+      "id": "c5e670ced0ce69b016f76a5a",
+      "member_ids": [
+        "c4bfcf6c91c59bfcc44b8202"
+      ],
+      "newest_at": 1793574072.0,
+      "draft": {
+        "headline": "Romantisch ins neue Jahr im Maiers Kuschelhotel",
+        "headline_source_id": "c4bfcf6c91c59bfcc44b8202",
+        "claims": [
+          {
+            "text": "Ein Jahreswechsel, bei dem die Zeit stillsteht und nur ihr zwei zählt: Das Maiers Kuschelhotel Loipersdorf ist ein exklusives Adults‑Only‑Hideaway für Paare, die den Jahreswechsel bewusst, sinnlich und in vollkommener Ruhe erleben möchten.",
+            "source_id": "c4bfcf6c91c59bfcc44b8202",
+            "field": "text",
+            "quote": "Ein Jahreswechsel, bei dem die Zeit stillsteht und nur ihr zwei zählt: Das Maiers Kuschelhotel Loipersdorf ist ein exklusives Adults‑Only‑Hideaway für Paare, die den Jahreswechsel bewusst, sinnlich und in vollkommener Ruhe erleben möchten."
+          },
+          {
+            "text": "Hier wird Silvester nicht laut gefeiert – sondern leise, liebevoll und mit viel Gefühl.",
+            "source_id": "c4bfcf6c91c59bfcc44b8202",
+            "field": "text",
+            "quote": "Hier wird Silvester nicht laut gefeiert – sondern leise, liebevoll und mit viel Gefühl."
+          }
+        ],
+        "text": "Romantisch ins neue Jahr im Maiers Kuschelhotel.\nEin Jahreswechsel, bei dem die Zeit stillsteht und nur ihr zwei zählt: Das Maiers Kuschelhotel Loipersdorf ist ein exklusives Adults‑Only‑Hideaway für Paare, die den Jahreswechsel bewusst, sinnlich und in vollkommener Ruhe erleben möchten. Hier wird Silvester nicht laut gefeiert – sondern leise, liebevoll und mit viel Gefühl.\nQuelle: krone.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "c4bfcf6c91c59bfcc44b8202",
+            "supported": true,
+            "quote": "Ein Jahreswechsel, bei dem die Zeit stillsteht und nur ihr zwei zählt: Das Maiers Kuschelhotel Loipersdorf ist ein exklusives Adults‑Only‑Hideaway für Paare, die den Jahreswechsel bewusst, sinnlich und in vollkommener Ruhe erleben möchten."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "c4bfcf6c91c59bfcc44b8202",
+            "supported": true,
+            "quote": "Hier wird Silvester nicht laut gefeiert – sondern leise, liebevoll und mit viel Gefühl."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "c4bfcf6c91c59bfcc44b8202"
+      ]
+    },
+    {
+      "id": "33deff9d4c4ec562a8f0333c",
+      "member_ids": [
+        "c26303dcba2404c3421cf903"
+      ],
+      "newest_at": 1793574061.0,
+      "draft": {
+        "headline": "Über € 1.650 in der Pflegeausbildung? So geht’s!",
+        "headline_source_id": "c26303dcba2404c3421cf903",
+        "claims": [
+          {
+            "text": "Geld während der Ausbildung, ein gutes Einstiegsgehalt und ein Job mit Zukunft: Wer in Oberösterreich in die Pflege einsteigen möchte, kann gleich mehrfach profitieren.",
+            "source_id": "c26303dcba2404c3421cf903",
+            "field": "text",
+            "quote": "Geld während der Ausbildung, ein gutes Einstiegsgehalt und ein Job mit Zukunft: Wer in Oberösterreich in die Pflege einsteigen möchte, kann gleich mehrfach profitieren."
+          },
+          {
+            "text": "Und der Weg dorthin ist oft einfacher als gedacht!",
+            "source_id": "c26303dcba2404c3421cf903",
+            "field": "text",
+            "quote": "Und der Weg dorthin ist oft einfacher als gedacht!"
+          }
+        ],
+        "text": "Über € 1.650 in der Pflegeausbildung? So geht’s!\nGeld während der Ausbildung, ein gutes Einstiegsgehalt und ein Job mit Zukunft: Wer in Oberösterreich in die Pflege einsteigen möchte, kann gleich mehrfach profitieren. Und der Weg dorthin ist oft einfacher als gedacht!\nQuelle: krone.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "c26303dcba2404c3421cf903",
+            "supported": true,
+            "quote": "Geld während der Ausbildung, ein gutes Einstiegsgehalt und ein Job mit Zukunft: Wer in Oberösterreich in die Pflege einsteigen möchte, kann gleich mehrfach profitieren."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "c26303dcba2404c3421cf903",
+            "supported": true,
+            "quote": "Und der Weg dorthin ist oft einfacher als gedacht!"
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "c26303dcba2404c3421cf903"
+      ]
+    },
+    {
+      "id": "b5ddf010992888f8c1db0ba3",
+      "member_ids": [
+        "beb727bd9e776b13152b0666"
+      ],
+      "newest_at": 1793574060.0,
+      "draft": {
+        "headline": "Standardrätsel F 11432",
+        "headline_source_id": "beb727bd9e776b13152b0666",
+        "claims": [
+          {
+            "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.",
+            "source_id": "beb727bd9e776b13152b0666",
+            "field": "text",
+            "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
+          }
+        ],
+        "text": "Standardrätsel F 11432.\nTäglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.\nQuelle: derstandard.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "beb727bd9e776b13152b0666",
+            "supported": true,
+            "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "beb727bd9e776b13152b0666"
+      ]
+    },
+    {
+      "id": "fce0194d7a9c4358ba475643",
+      "member_ids": [
+        "c3bf5d77188bf845b5aad673"
+      ],
+      "newest_at": 1793572027.0,
+      "draft": {
+        "headline": "Xi nimmt Parteikader an die Kandare",
+        "headline_source_id": "c3bf5d77188bf845b5aad673",
+        "claims": [
+          {
+            "text": "Die Kommunistische Partei Chinas will die Aufsicht über ihre Funktionäre verschärfen, indem sie deren Vermögen und Onlineaktivitäten genau untersucht.",
+            "source_id": "c3bf5d77188bf845b5aad673",
+            "field": "text",
+            "quote": "Die Kommunistische Partei Chinas will die Aufsicht über ihre Funktionäre verschärfen, indem sie deren Vermögen und Onlineaktivitäten genau untersucht."
+          },
+          {
+            "text": "Das geht aus einem Dokument hervor, das die staatliche Nachrichtenagentur Xinhua am Sonntag nach Abschluss der Sitzung des Zentralkomitees der Partei in Peking veröffentlichte.",
+            "source_id": "c3bf5d77188bf845b5aad673",
+            "field": "text",
+            "quote": "Das geht aus einem Dokument hervor, das die staatliche Nachrichtenagentur Xinhua am Sonntag nach Abschluss der Sitzung des Zentralkomitees der Partei in Peking veröffentlichte."
+          }
+        ],
+        "text": "Xi nimmt Parteikader an die Kandare.\nDie Kommunistische Partei Chinas will die Aufsicht über ihre Funktionäre verschärfen, indem sie deren Vermögen und Onlineaktivitäten genau untersucht. Das geht aus einem Dokument hervor, das die staatliche Nachrichtenagentur Xinhua am Sonntag nach Abschluss der Sitzung des Zentralkomitees der Partei in Peking veröffentlichte.\nQuelle: orf.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "c3bf5d77188bf845b5aad673",
+            "supported": true,
+            "quote": "Die Kommunistische Partei Chinas will die Aufsicht über ihre Funktionäre verschärfen, indem sie deren Vermögen und Onlineaktivitäten genau untersucht."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "c3bf5d77188bf845b5aad673",
+            "supported": true,
+            "quote": "Das geht aus einem Dokument hervor, das die staatliche Nachrichtenagentur Xinhua am Sonntag nach Abschluss der Sitzung des Zentralkomitees der Partei in Peking veröffentlichte."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "c3bf5d77188bf845b5aad673"
+      ]
+    },
+    {
+      "id": "ef11dd2eaf8a2cedf1c31edc",
+      "member_ids": [
+        "86163d145e33b800bc923cbd"
+      ],
+      "newest_at": 1793571024.0,
+      "draft": {
+        "headline": "9 Insassen sterben bei Flugzeugabsturz in Florida",
+        "headline_source_id": "86163d145e33b800bc923cbd",
+        "claims": [
+          {
+            "text": "Ein Privatflugzeug ist am Sonntag in den MIttagsstunden (Ortszeit) über einem Wohngebiet in Cresthaven im US-Bundesstaat abgestürzt.",
+            "source_id": "86163d145e33b800bc923cbd",
+            "field": "text",
+            "quote": "Ein Privatflugzeug ist am Sonntag in den MIttagsstunden (Ortszeit) über einem Wohngebiet in Cresthaven im US-Bundesstaat abgestürzt."
+          },
+          {
+            "text": "Alle neun Insassen kamen bei dem Unglück ums Leben.",
+            "source_id": "86163d145e33b800bc923cbd",
+            "field": "text",
+            "quote": "Alle neun Insassen kamen bei dem Unglück ums Leben."
+          }
+        ],
+        "text": "9 Insassen sterben bei Flugzeugabsturz in Florida.\nEin Privatflugzeug ist am Sonntag in den MIttagsstunden (Ortszeit) über einem Wohngebiet in Cresthaven im US-Bundesstaat abgestürzt. Alle neun Insassen kamen bei dem Unglück ums Leben.\nQuelle: krone.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "86163d145e33b800bc923cbd",
+            "supported": true,
+            "quote": "Ein Privatflugzeug ist am Sonntag in den MIttagsstunden (Ortszeit) über einem Wohngebiet in Cresthaven im US-Bundesstaat abgestürzt."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "86163d145e33b800bc923cbd",
+            "supported": true,
+            "quote": "Alle neun Insassen kamen bei dem Unglück ums Leben."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "86163d145e33b800bc923cbd"
+      ]
+    },
+    {
+      "id": "8f82d461517b7f7f14f55dd5",
+      "member_ids": [
+        "2fac612c87967a4cdbcb1da4"
+      ],
+      "newest_at": 1793570125.0,
+      "draft": {
+        "headline": "Unterlegene Demokratin in Michigan unterstützt nun Republikaner",
+        "headline_source_id": "2fac612c87967a4cdbcb1da4",
+        "claims": [
+          {
+            "text": "Haley Stevens spricht sich nach ihrer internen Wahlniederlage für den Republikaner Mike Rogers aus.",
+            "source_id": "2fac612c87967a4cdbcb1da4",
+            "field": "text",
+            "quote": "Haley Stevens spricht sich nach ihrer internen Wahlniederlage für den Republikaner Mike Rogers aus."
+          },
+          {
+            "text": "Ihr Kontrahent Abdul El-Sayed gibt sich gelassen.",
+            "source_id": "2fac612c87967a4cdbcb1da4",
+            "field": "text",
+            "quote": "Ihr Kontrahent Abdul El-Sayed gibt sich gelassen."
+          }
+        ],
+        "text": "Unterlegene Demokratin in Michigan unterstützt nun Republikaner.\nHaley Stevens spricht sich nach ihrer internen Wahlniederlage für den Republikaner Mike Rogers aus. Ihr Kontrahent Abdul El-Sayed gibt sich gelassen.\nQuelle: derstandard.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "2fac612c87967a4cdbcb1da4",
+            "supported": true,
+            "quote": "Haley Stevens spricht sich nach ihrer internen Wahlniederlage für den Republikaner Mike Rogers aus."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "2fac612c87967a4cdbcb1da4",
+            "supported": true,
+            "quote": "Ihr Kontrahent Abdul El-Sayed gibt sich gelassen."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "2fac612c87967a4cdbcb1da4"
+      ]
+    },
+    {
+      "id": "71bf3975631b476274c61ad9",
+      "member_ids": [
+        "2e4e738dc6cbf3a2f18b1c2a"
+      ],
+      "newest_at": 1793570089.0,
+      "draft": {
+        "headline": "Eisbullen verabschiedeten sich stark in die Pause",
+        "headline_source_id": "2e4e738dc6cbf3a2f18b1c2a",
+        "claims": [
+          {
+            "text": "Ein Schockmoment um Florian Baltram, zwei Stromausfälle und sieben Salzburger Treffer: Beim 7:2-Heimsieg gegen Fehervar erlebten die Eisbullen einen turbulenten Abend.",
+            "source_id": "2e4e738dc6cbf3a2f18b1c2a",
+            "field": "text",
+            "quote": "Ein Schockmoment um Florian Baltram, zwei Stromausfälle und sieben Salzburger Treffer: Beim 7:2-Heimsieg gegen Fehervar erlebten die Eisbullen einen turbulenten Abend."
+          },
+          {
+            "text": "Trotz des Kantersiegs rückte das Sportliche zwischenzeitlich völlig in den Hintergrund.",
+            "source_id": "2e4e738dc6cbf3a2f18b1c2a",
+            "field": "text",
+            "quote": "Trotz des Kantersiegs rückte das Sportliche zwischenzeitlich völlig in den Hintergrund."
+          }
+        ],
+        "text": "Eisbullen verabschiedeten sich stark in die Pause.\nEin Schockmoment um Florian Baltram, zwei Stromausfälle und sieben Salzburger Treffer: Beim 7:2-Heimsieg gegen Fehervar erlebten die Eisbullen einen turbulenten Abend. Trotz des Kantersiegs rückte das Sportliche zwischenzeitlich völlig in den Hintergrund.\nQuelle: krone.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "2e4e738dc6cbf3a2f18b1c2a",
+            "supported": true,
+            "quote": "Ein Schockmoment um Florian Baltram, zwei Stromausfälle und sieben Salzburger Treffer: Beim 7:2-Heimsieg gegen Fehervar erlebten die Eisbullen einen turbulenten Abend."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "2e4e738dc6cbf3a2f18b1c2a",
+            "supported": true,
+            "quote": "Trotz des Kantersiegs rückte das Sportliche zwischenzeitlich völlig in den Hintergrund."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "2e4e738dc6cbf3a2f18b1c2a"
+      ]
+    },
+    {
+      "id": "31bc317322bb02d358f556f6",
+      "member_ids": [
+        "fdaca6d919d370809f69dcd9"
+      ],
+      "newest_at": 1793569560.0,
+      "draft": {
+        "headline": "Ukraine: Warn-App für Luftangriffe wurde gehackt",
+        "headline_source_id": "fdaca6d919d370809f69dcd9",
+        "claims": [
+          {
+            "text": "In der Ukraine ist nach Angaben der Luftstreitkräfte die öffentliche Warn-App für Luftangriffe gehackt worden.",
+            "source_id": "fdaca6d919d370809f69dcd9",
+            "field": "text",
+            "quote": "In der Ukraine ist nach Angaben der Luftstreitkräfte die öffentliche Warn-App für Luftangriffe gehackt worden."
+          },
+          {
+            "text": "Die App zeigte kurzzeitig für Kiew und andere Gebiete einen Atomalarm an.",
+            "source_id": "fdaca6d919d370809f69dcd9",
+            "field": "text",
+            "quote": "Die App zeigte kurzzeitig für Kiew und andere Gebiete einen Atomalarm an."
+          }
+        ],
+        "text": "Ukraine: Warn-App für Luftangriffe wurde gehackt.\nIn der Ukraine ist nach Angaben der Luftstreitkräfte die öffentliche Warn-App für Luftangriffe gehackt worden. Die App zeigte kurzzeitig für Kiew und andere Gebiete einen Atomalarm an.\nQuelle: orf.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "fdaca6d919d370809f69dcd9",
+            "supported": true,
+            "quote": "In der Ukraine ist nach Angaben der Luftstreitkräfte die öffentliche Warn-App für Luftangriffe gehackt worden."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "fdaca6d919d370809f69dcd9",
+            "supported": true,
+            "quote": "Die App zeigte kurzzeitig für Kiew und andere Gebiete einen Atomalarm an."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "fdaca6d919d370809f69dcd9"
+      ]
+    },
+    {
+      "id": "6d08505dcb7769861d525071",
+      "member_ids": [
+        "a506e78c2d88da2c4f9fabb7"
+      ],
+      "newest_at": 1793569427.0,
+      "draft": {
+        "headline": "Kimi Antonelli krönt sich in Mexiko zum jüngsten Formel-1-Weltmeister aller Zeiten",
+        "headline_source_id": "a506e78c2d88da2c4f9fabb7",
+        "claims": [
+          {
+            "text": "Der Mercedes-Pilot fährt beim zwischenzeitlich unterbrochenen Grand Prix auf Rang drei ins Ziel.",
+            "source_id": "a506e78c2d88da2c4f9fabb7",
+            "field": "text",
+            "quote": "Der Mercedes-Pilot fährt beim zwischenzeitlich unterbrochenen Grand Prix auf Rang drei ins Ziel."
+          },
+          {
+            "text": "Den Rennsieg holt sich Verstappen vor Hamilton.",
+            "source_id": "a506e78c2d88da2c4f9fabb7",
+            "field": "text",
+            "quote": "Den Rennsieg holt sich Verstappen vor Hamilton."
+          }
+        ],
+        "text": "Kimi Antonelli krönt sich in Mexiko zum jüngsten Formel-1-Weltmeister aller Zeiten.\nDer Mercedes-Pilot fährt beim zwischenzeitlich unterbrochenen Grand Prix auf Rang drei ins Ziel. Den Rennsieg holt sich Verstappen vor Hamilton.\nQuelle: derstandard.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "a506e78c2d88da2c4f9fabb7",
+            "supported": true,
+            "quote": "Der Mercedes-Pilot fährt beim zwischenzeitlich unterbrochenen Grand Prix auf Rang drei ins Ziel."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "a506e78c2d88da2c4f9fabb7",
+            "supported": true,
+            "quote": "Den Rennsieg holt sich Verstappen vor Hamilton."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "a506e78c2d88da2c4f9fabb7"
+      ]
+    },
+    {
+      "id": "6d5425eadda0fd4fbc401719",
+      "member_ids": [
+        "8cee98c6c5c33859940d8d7e"
+      ],
+      "newest_at": 1793569380.0,
+      "draft": {
+        "headline": "USA und Kanada betonen gute Gespräche über Handelsabkommen",
+        "headline_source_id": "8cee98c6c5c33859940d8d7e",
+        "claims": [
+          {
+            "text": "Nach einem guten Gespräch zwischen US-Präsident Donald Trump und dem kanadischen Ministerpräsidenten Mark Carney soll nun ein für beide vorteilhaftes Abkommen ausgearbeitet werden.",
+            "source_id": "8cee98c6c5c33859940d8d7e",
+            "field": "text",
+            "quote": "Nach einem guten Gespräch zwischen US-Präsident Donald Trump und dem kanadischen Ministerpräsidenten Mark Carney soll nun ein für beide vorteilhaftes Abkommen ausgearbeitet werden."
+          }
+        ],
+        "text": "USA und Kanada betonen gute Gespräche über Handelsabkommen.\nNach einem guten Gespräch zwischen US-Präsident Donald Trump und dem kanadischen Ministerpräsidenten Mark Carney soll nun ein für beide vorteilhaftes Abkommen ausgearbeitet werden.\nQuelle: derstandard.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "8cee98c6c5c33859940d8d7e",
+            "supported": true,
+            "quote": "Nach einem guten Gespräch zwischen US-Präsident Donald Trump und dem kanadischen Ministerpräsidenten Mark Carney soll nun ein für beide vorteilhaftes Abkommen ausgearbeitet werden."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "8cee98c6c5c33859940d8d7e"
+      ]
+    },
+    {
+      "id": "5edc34edff6a478a8558b90d",
+      "member_ids": [
+        "60cb35a7733683b190de977a"
+      ],
+      "newest_at": 1793568716.0,
+      "draft": {
+        "headline": "Feuerpause in Oleschky endet",
+        "headline_source_id": "60cb35a7733683b190de977a",
+        "claims": [
+          {
+            "text": "Die sechstägige Feuerpause in der russisch besetzten südukrainischen Stadt Oleschky ist zu Ende gegangen.",
+            "source_id": "60cb35a7733683b190de977a",
+            "field": "text",
+            "quote": "Die sechstägige Feuerpause in der russisch besetzten südukrainischen Stadt Oleschky ist zu Ende gegangen."
+          },
+          {
+            "text": "„Die vom 27. Oktober bis zum 1. November geltende Waffenruhe ist beendet“, erklärte der ukrainische Menschenrechtsbeauftragte Dmytro Lubinez gestern Abend.",
+            "source_id": "60cb35a7733683b190de977a",
+            "field": "text",
+            "quote": "„Die vom 27. Oktober bis zum 1. November geltende Waffenruhe ist beendet“, erklärte der ukrainische Menschenrechtsbeauftragte Dmytro Lubinez gestern Abend."
+          }
+        ],
+        "text": "Feuerpause in Oleschky endet.\nDie sechstägige Feuerpause in der russisch besetzten südukrainischen Stadt Oleschky ist zu Ende gegangen. „Die vom 27. Oktober bis zum 1. November geltende Waffenruhe ist beendet“, erklärte der ukrainische Menschenrechtsbeauftragte Dmytro Lubinez gestern Abend.\nQuelle: orf.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "60cb35a7733683b190de977a",
+            "supported": true,
+            "quote": "Die sechstägige Feuerpause in der russisch besetzten südukrainischen Stadt Oleschky ist zu Ende gegangen."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "60cb35a7733683b190de977a",
+            "supported": true,
+            "quote": "„Die vom 27. Oktober bis zum 1. November geltende Waffenruhe ist beendet“, erklärte der ukrainische Menschenrechtsbeauftragte Dmytro Lubinez gestern Abend."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "60cb35a7733683b190de977a"
+      ]
+    },
+    {
+      "id": "6ce1659a73de90929c6a1458",
+      "member_ids": [
+        "8213660ec9a58d3b97b9f85b"
+      ],
+      "newest_at": 1793568593.0,
+      "draft": {
+        "headline": "US-Minister: Neun Tote bei Flugzeugabsturz in Florida",
+        "headline_source_id": "8213660ec9a58d3b97b9f85b",
+        "claims": [
+          {
+            "text": "Beim Absturz eines Privatflugzeugs im US-Bundesstaat Florida sind Verkehrsminister Sean Duffy zufolge alle neun Insassen ums Leben gekommen.",
+            "source_id": "8213660ec9a58d3b97b9f85b",
+            "field": "text",
+            "quote": "Beim Absturz eines Privatflugzeugs im US-Bundesstaat Florida sind Verkehrsminister Sean Duffy zufolge alle neun Insassen ums Leben gekommen."
+          },
+          {
+            "text": "Die Maschine sei gestern Mittag (US-Ostküstenzeit) über einem Wohngebiet nahe Cresthaven abgestürzt, teilte er auf der Plattform X mit.",
+            "source_id": "8213660ec9a58d3b97b9f85b",
+            "field": "text",
+            "quote": "Die Maschine sei gestern Mittag (US-Ostküstenzeit) über einem Wohngebiet nahe Cresthaven abgestürzt, teilte er auf der Plattform X mit."
+          }
+        ],
+        "text": "US-Minister: Neun Tote bei Flugzeugabsturz in Florida.\nBeim Absturz eines Privatflugzeugs im US-Bundesstaat Florida sind Verkehrsminister Sean Duffy zufolge alle neun Insassen ums Leben gekommen. Die Maschine sei gestern Mittag (US-Ostküstenzeit) über einem Wohngebiet nahe Cresthaven abgestürzt, teilte er auf der Plattform X mit.\nQuelle: orf.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "8213660ec9a58d3b97b9f85b",
+            "supported": true,
+            "quote": "Beim Absturz eines Privatflugzeugs im US-Bundesstaat Florida sind Verkehrsminister Sean Duffy zufolge alle neun Insassen ums Leben gekommen."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "8213660ec9a58d3b97b9f85b",
+            "supported": true,
+            "quote": "Die Maschine sei gestern Mittag (US-Ostküstenzeit) über einem Wohngebiet nahe Cresthaven abgestürzt, teilte er auf der Plattform X mit."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "8213660ec9a58d3b97b9f85b"
+      ]
+    },
+    {
+      "id": "ad69559e6ef7efbfbb207d60",
+      "member_ids": [
+        "df7a9c7978b2d3b53f9b0807"
+      ],
+      "newest_at": 1793568583.0,
+      "draft": {
+        "headline": "Indianapolis Colts unterliegen mit Raimann auch in Jacksonville",
+        "headline_source_id": "df7a9c7978b2d3b53f9b0807",
+        "claims": [
+          {
+            "text": "Die vierte Niederlage in Serie fiel deftig aus.",
+            "source_id": "df7a9c7978b2d3b53f9b0807",
+            "field": "text",
+            "quote": "Die vierte Niederlage in Serie fiel deftig aus."
+          },
+          {
+            "text": "Die Play-offs sind für die Colts bereits früh in der Saison in weite Ferne gerückt.",
+            "source_id": "df7a9c7978b2d3b53f9b0807",
+            "field": "text",
+            "quote": "Die Play-offs sind für die Colts bereits früh in der Saison in weite Ferne gerückt."
+          }
+        ],
+        "text": "Indianapolis Colts unterliegen mit Raimann auch in Jacksonville.\nDie vierte Niederlage in Serie fiel deftig aus. Die Play-offs sind für die Colts bereits früh in der Saison in weite Ferne gerückt.\nQuelle: derstandard.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "df7a9c7978b2d3b53f9b0807",
+            "supported": true,
+            "quote": "Die vierte Niederlage in Serie fiel deftig aus."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "df7a9c7978b2d3b53f9b0807",
+            "supported": true,
+            "quote": "Die Play-offs sind für die Colts bereits früh in der Saison in weite Ferne gerückt."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "df7a9c7978b2d3b53f9b0807"
+      ]
+    },
+    {
+      "id": "5c71a8b4ed1ba0aad1f2cc15",
+      "member_ids": [
+        "d0c82061ce1e1a4fec2184d4"
+      ],
+      "newest_at": 1793568344.0,
+      "draft": {
+        "headline": "Selenskyj zu Treffen mit Putin in Türkei bereit",
+        "headline_source_id": "d0c82061ce1e1a4fec2184d4",
+        "claims": [
+          {
+            "text": "Der ukrainische Präsident Wolodymyr Selenskyj wäre zu einem direkten Treffen mit Kremlchef Wladimir Putin in der Türkei bereit.",
+            "source_id": "d0c82061ce1e1a4fec2184d4",
+            "field": "text",
+            "quote": "Der ukrainische Präsident Wolodymyr Selenskyj wäre zu einem direkten Treffen mit Kremlchef Wladimir Putin in der Türkei bereit."
+          },
+          {
+            "text": "Das erklärte Selenskyj in einem Interview des Senders CNN Türk am Sonntag.",
+            "source_id": "d0c82061ce1e1a4fec2184d4",
+            "field": "text",
+            "quote": "Das erklärte Selenskyj in einem Interview des Senders CNN Türk am Sonntag."
+          }
+        ],
+        "text": "Selenskyj zu Treffen mit Putin in Türkei bereit.\nDer ukrainische Präsident Wolodymyr Selenskyj wäre zu einem direkten Treffen mit Kremlchef Wladimir Putin in der Türkei bereit. Das erklärte Selenskyj in einem Interview des Senders CNN Türk am Sonntag.\nQuelle: krone.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "d0c82061ce1e1a4fec2184d4",
+            "supported": true,
+            "quote": "Der ukrainische Präsident Wolodymyr Selenskyj wäre zu einem direkten Treffen mit Kremlchef Wladimir Putin in der Türkei bereit."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "d0c82061ce1e1a4fec2184d4",
+            "supported": true,
+            "quote": "Das erklärte Selenskyj in einem Interview des Senders CNN Türk am Sonntag."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "d0c82061ce1e1a4fec2184d4"
+      ]
+    },
+    {
+      "id": "b0ab6ed0b4f443c0f8e75efe",
+      "member_ids": [
+        "5e5a3dd36195c4fe01e0ac9b"
+      ],
+      "newest_at": 1793567988.0,
+      "draft": {
+        "headline": "Feuerwehr-Einsatz nach Feier von Rapid-Anhängern",
+        "headline_source_id": "5e5a3dd36195c4fe01e0ac9b",
+        "claims": [
+          {
+            "text": "Feuerwehr-Einsatz am Rande des Empfangs der Mannschaft von Rapid nach dem Derby-Sieg gegen die Austria (2:0) am Sonntagabend.",
+            "source_id": "5e5a3dd36195c4fe01e0ac9b",
+            "field": "text",
+            "quote": "Feuerwehr-Einsatz am Rande des Empfangs der Mannschaft von Rapid nach dem Derby-Sieg gegen die Austria (2:0) am Sonntagabend."
+          },
+          {
+            "text": "In der Keißlergasse, nahe dem Allianz-Stadion, sind Terrassenmöbel in Brand geraten.",
+            "source_id": "5e5a3dd36195c4fe01e0ac9b",
+            "field": "text",
+            "quote": "In der Keißlergasse, nahe dem Allianz-Stadion, sind Terrassenmöbel in Brand geraten."
+          }
+        ],
+        "text": "Feuerwehr-Einsatz nach Feier von Rapid-Anhängern.\nFeuerwehr-Einsatz am Rande des Empfangs der Mannschaft von Rapid nach dem Derby-Sieg gegen die Austria (2:0) am Sonntagabend. In der Keißlergasse, nahe dem Allianz-Stadion, sind Terrassenmöbel in Brand geraten.\nQuelle: krone.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "5e5a3dd36195c4fe01e0ac9b",
+            "supported": true,
+            "quote": "Feuerwehr-Einsatz am Rande des Empfangs der Mannschaft von Rapid nach dem Derby-Sieg gegen die Austria (2:0) am Sonntagabend."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "5e5a3dd36195c4fe01e0ac9b",
+            "supported": true,
+            "quote": "In der Keißlergasse, nahe dem Allianz-Stadion, sind Terrassenmöbel in Brand geraten."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "5e5a3dd36195c4fe01e0ac9b"
+      ]
+    },
+    {
+      "id": "48af084e2243804ef47ec994",
+      "member_ids": [
+        "d4665becc7382bc93c34670a"
+      ],
+      "newest_at": 1793567345.0,
+      "draft": {
+        "headline": "6:0-Linzer: „Das macht was mit der Vienna!“",
+        "headline_source_id": "d4665becc7382bc93c34670a",
+        "claims": [
+          {
+            "text": "Am Papier gibt‘s für Blau-Weiß nach dem Sieg bei der Vienna drei Punkte.",
+            "source_id": "d4665becc7382bc93c34670a",
+            "field": "text",
+            "quote": "Am Papier gibt‘s für Blau-Weiß nach dem Sieg bei der Vienna drei Punkte."
+          },
+          {
+            "text": "Doch der 6:0-Kantersieg im Zweitliga-Hit auf der Hohen Warte war in Wahrheit nicht nur einen vierten Zähler wert – sondern aus psychologischer Hinsicht noch viel mehr.",
+            "source_id": "d4665becc7382bc93c34670a",
+            "field": "text",
+            "quote": "Doch der 6:0-Kantersieg im Zweitliga-Hit auf der Hohen Warte war in Wahrheit nicht nur einen vierten Zähler wert – sondern aus psychologischer Hinsicht noch viel mehr."
+          }
+        ],
+        "text": "6:0-Linzer: „Das macht was mit der Vienna!“.\nAm Papier gibt‘s für Blau-Weiß nach dem Sieg bei der Vienna drei Punkte. Doch der 6:0-Kantersieg im Zweitliga-Hit auf der Hohen Warte war in Wahrheit nicht nur einen vierten Zähler wert – sondern aus psychologischer Hinsicht noch viel mehr.\nQuelle: krone.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "d4665becc7382bc93c34670a",
+            "supported": true,
+            "quote": "Am Papier gibt‘s für Blau-Weiß nach dem Sieg bei der Vienna drei Punkte."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "d4665becc7382bc93c34670a",
+            "supported": true,
+            "quote": "Doch der 6:0-Kantersieg im Zweitliga-Hit auf der Hohen Warte war in Wahrheit nicht nur einen vierten Zähler wert – sondern aus psychologischer Hinsicht noch viel mehr."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "d4665becc7382bc93c34670a"
+      ]
+    },
     {
       "id": "f5f0f588ca461827ad37861a",
       "member_ids": [
@@ -9775,7 +10800,7 @@
           "issues": []
         }
       ],
-      "selected": true,
+      "selected": false,
       "used_source_ids": [
         "61352c2f0d3bf45fe5ddee35"
       ]
@@ -9833,7 +10858,7 @@
           "issues": []
         }
       ],
-      "selected": true,
+      "selected": false,
       "used_source_ids": [
         "375ce7ca194a79bdaa5017e3"
       ]
@@ -10229,7 +11254,7 @@
           "issues": []
         }
       ],
-      "selected": true,
+      "selected": false,
       "used_source_ids": [
         "21fb37f722a5a9d35cee7758"
       ]
@@ -11635,19 +12660,19 @@
         "headline_source_id": "14a59125193e19088cdc3b8b",
         "claims": [
           {
-            "text": "Kunst, die die eigenen Grenzen überwindet gibt es bei Christine Rechnitzer.",
+            "text": "Kunst auf Stoff Die besondere Tasche für die besondere Flasche!",
             "source_id": "14a59125193e19088cdc3b8b",
             "field": "text",
-            "quote": "Kunst, die die eigenen Grenzen überwindet gibt es bei Christine Rechnitzer."
+            "quote": "Kunst auf Stoff Die besondere Tasche für die besondere Flasche!"
           },
           {
-            "text": "Ihre Werke finden sich etwa auf Stoff.",
+            "text": "Kunst auf einer „Bottle Bag“ verbindet Weingenuss und Kunst auf geniale Weise!",
             "source_id": "14a59125193e19088cdc3b8b",
             "field": "text",
-            "quote": "Ihre Werke finden sich etwa auf Stoff."
+            "quote": "Kunst auf einer „Bottle Bag“ verbindet Weingenuss und Kunst auf geniale Weise!"
           }
         ],
-        "text": "Die besondere Tasche für die besondere Flasche!\nKunst, die die eigenen Grenzen überwindet gibt es bei Christine Rechnitzer. Ihre Werke finden sich etwa auf Stoff.\nQuelle: krone.at."
+        "text": "Die besondere Tasche für die besondere Flasche!\nKunst auf Stoff Die besondere Tasche für die besondere Flasche! Kunst auf einer „Bottle Bag“ verbindet Weingenuss und Kunst auf geniale Weise!\nQuelle: krone.at."
       },
       "verification": {
         "status": "approved",
@@ -11658,13 +12683,13 @@
             "claim_index": 0,
             "source_id": "14a59125193e19088cdc3b8b",
             "supported": true,
-            "quote": "Kunst, die die eigenen Grenzen überwindet gibt es bei Christine Rechnitzer."
+            "quote": "Kunst auf Stoff Die besondere Tasche für die besondere Flasche!"
           },
           {
             "claim_index": 1,
             "source_id": "14a59125193e19088cdc3b8b",
             "supported": true,
-            "quote": "Ihre Werke finden sich etwa auf Stoff."
+            "quote": "Kunst auf einer „Bottle Bag“ verbindet Weingenuss und Kunst auf geniale Weise!"
           }
         ],
         "conflicts": [],
@@ -12117,14 +13142,14 @@
       ],
       "newest_at": 1793552651.0,
       "draft": {
-        "headline": "Siege für Serie-A-Leader Lazio und Schmids Frosinone",
+        "headline": "Juventus schlägt Napoli, Siege für Leader Lazio und Schmids Frosinone",
         "headline_source_id": "bf79a1699f2ecd9564b3e39f",
         "claims": [
           {
-            "text": "Das noch ungeschlagene Team von Trainer Gennaro Gattuso bezwang Cagliari und liegt drei Punkte vor Inter Mailand.",
+            "text": "Das ungeschlagene Lazio bezwang Cagliari und liegt drei Punkte vor Inter Mailand.",
             "source_id": "bf79a1699f2ecd9564b3e39f",
             "field": "text",
-            "quote": "Das noch ungeschlagene Team von Trainer Gennaro Gattuso bezwang Cagliari und liegt drei Punkte vor Inter Mailand."
+            "quote": "Das ungeschlagene Lazio bezwang Cagliari und liegt drei Punkte vor Inter Mailand."
           },
           {
             "text": "Aufsteiger Frosinone gewann gegen Torino.",
@@ -12133,7 +13158,7 @@
             "quote": "Aufsteiger Frosinone gewann gegen Torino."
           }
         ],
-        "text": "Siege für Serie-A-Leader Lazio und Schmids Frosinone.\nDas noch ungeschlagene Team von Trainer Gennaro Gattuso bezwang Cagliari und liegt drei Punkte vor Inter Mailand. Aufsteiger Frosinone gewann gegen Torino.\nQuelle: derstandard.at."
+        "text": "Juventus schlägt Napoli, Siege für Leader Lazio und Schmids Frosinone.\nDas ungeschlagene Lazio bezwang Cagliari und liegt drei Punkte vor Inter Mailand. Aufsteiger Frosinone gewann gegen Torino.\nQuelle: derstandard.at."
       },
       "verification": {
         "status": "approved",
@@ -12144,7 +13169,7 @@
             "claim_index": 0,
             "source_id": "bf79a1699f2ecd9564b3e39f",
             "supported": true,
-            "quote": "Das noch ungeschlagene Team von Trainer Gennaro Gattuso bezwang Cagliari und liegt drei Punkte vor Inter Mailand."
+            "quote": "Das ungeschlagene Lazio bezwang Cagliari und liegt drei Punkte vor Inter Mailand."
           },
           {
             "claim_index": 1,
@@ -13558,10 +14583,10 @@
         "headline_source_id": "f3938f0eea4269bee9ba46d3",
         "claims": [
           {
-            "text": "In ihren eingesammelten Halloween-Süßigkeiten haben Kinder an mehreren Orten in Deutschland Nadeln oder andere Metallobjekte gefunden.",
+            "text": "In ihren eingesammelten Halloween-Süßigkeiten haben Kinder gestern an mehreren Orten in Deutschland Nadeln oder andere Metallobjekte gefunden.",
             "source_id": "f3938f0eea4269bee9ba46d3",
             "field": "text",
-            "quote": "In ihren eingesammelten Halloween-Süßigkeiten haben Kinder an mehreren Orten in Deutschland Nadeln oder andere Metallobjekte gefunden."
+            "quote": "In ihren eingesammelten Halloween-Süßigkeiten haben Kinder gestern an mehreren Orten in Deutschland Nadeln oder andere Metallobjekte gefunden."
           },
           {
             "text": "Entsprechende Fälle meldete die Polizei unter anderem in Thüringen, Baden-Württemberg, Bayern, Niedersachsen und Rheinland-Pfalz.",
@@ -13570,7 +14595,7 @@
             "quote": "Entsprechende Fälle meldete die Polizei unter anderem in Thüringen, Baden-Württemberg, Bayern, Niedersachsen und Rheinland-Pfalz."
           }
         ],
-        "text": "Nadeln in Halloween-Süßigkeiten in Deutschland entdeckt.\nIn ihren eingesammelten Halloween-Süßigkeiten haben Kinder an mehreren Orten in Deutschland Nadeln oder andere Metallobjekte gefunden. Entsprechende Fälle meldete die Polizei unter anderem in Thüringen, Baden-Württemberg, Bayern, Niedersachsen und Rheinland-Pfalz.\nQuelle: orf.at."
+        "text": "Nadeln in Halloween-Süßigkeiten in Deutschland entdeckt.\nIn ihren eingesammelten Halloween-Süßigkeiten haben Kinder gestern an mehreren Orten in Deutschland Nadeln oder andere Metallobjekte gefunden. Entsprechende Fälle meldete die Polizei unter anderem in Thüringen, Baden-Württemberg, Bayern, Niedersachsen und Rheinland-Pfalz.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -13581,7 +14606,7 @@
             "claim_index": 0,
             "source_id": "f3938f0eea4269bee9ba46d3",
             "supported": true,
-            "quote": "In ihren eingesammelten Halloween-Süßigkeiten haben Kinder an mehreren Orten in Deutschland Nadeln oder andere Metallobjekte gefunden."
+            "quote": "In ihren eingesammelten Halloween-Süßigkeiten haben Kinder gestern an mehreren Orten in Deutschland Nadeln oder andere Metallobjekte gefunden."
           },
           {
             "claim_index": 1,
@@ -13622,13 +14647,13 @@
             "quote": "Nach einer US-Warnung vor einem womöglich geplanten Anschlag in Moskau haben die russischen Behörden einen Minderjährigen festgenommen."
           },
           {
-            "text": "Es seien unter anderem auf TikTok Fotos des Verdächtigen in Kampfmontur und offenbar mit einer Waffe entdeckt worden, teilte der russische Inlandsgeheimdienst FSB heute mit.",
+            "text": "Es seien unter anderem auf TikTok Fotos des Verdächtigen in Kampfmontur und offenbar mit einer Waffe entdeckt worden, teilte der russische Inlandsgeheimdienst FSB gestern mit.",
             "source_id": "2d08fd60012048adf7e2e98a",
             "field": "text",
-            "quote": "Es seien unter anderem auf TikTok Fotos des Verdächtigen in Kampfmontur und offenbar mit einer Waffe entdeckt worden, teilte der russische Inlandsgeheimdienst FSB heute mit."
+            "quote": "Es seien unter anderem auf TikTok Fotos des Verdächtigen in Kampfmontur und offenbar mit einer Waffe entdeckt worden, teilte der russische Inlandsgeheimdienst FSB gestern mit."
           }
         ],
-        "text": "US-Warnung vor Anschlag in Moskau: Minderjähriger verhaftet.\nNach einer US-Warnung vor einem womöglich geplanten Anschlag in Moskau haben die russischen Behörden einen Minderjährigen festgenommen. Es seien unter anderem auf TikTok Fotos des Verdächtigen in Kampfmontur und offenbar mit einer Waffe entdeckt worden, teilte der russische Inlandsgeheimdienst FSB heute mit.\nQuelle: orf.at."
+        "text": "US-Warnung vor Anschlag in Moskau: Minderjähriger verhaftet.\nNach einer US-Warnung vor einem womöglich geplanten Anschlag in Moskau haben die russischen Behörden einen Minderjährigen festgenommen. Es seien unter anderem auf TikTok Fotos des Verdächtigen in Kampfmontur und offenbar mit einer Waffe entdeckt worden, teilte der russische Inlandsgeheimdienst FSB gestern mit.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -13645,7 +14670,7 @@
             "claim_index": 1,
             "source_id": "2d08fd60012048adf7e2e98a",
             "supported": true,
-            "quote": "Es seien unter anderem auf TikTok Fotos des Verdächtigen in Kampfmontur und offenbar mit einer Waffe entdeckt worden, teilte der russische Inlandsgeheimdienst FSB heute mit."
+            "quote": "Es seien unter anderem auf TikTok Fotos des Verdächtigen in Kampfmontur und offenbar mit einer Waffe entdeckt worden, teilte der russische Inlandsgeheimdienst FSB gestern mit."
           }
         ],
         "conflicts": [],
@@ -16430,19 +17455,19 @@
         "headline_source_id": "1b2d6b618bc6cf58e3e1b978",
         "claims": [
           {
+            "text": "In der Halloween-Nacht Junger Steirer stürzte von Brücke: Schwer verletzt Der Vorfall ereignete sich mitten in der Nacht.",
+            "source_id": "1b2d6b618bc6cf58e3e1b978",
+            "field": "text",
+            "quote": "In der Halloween-Nacht Junger Steirer stürzte von Brücke: Schwer verletzt Der Vorfall ereignete sich mitten in der Nacht."
+          },
+          {
             "text": "Ein Anfang 20-Jähriger dürfte im Bezirk Deutschlandsberg in der Nacht auf Sonntag von einer Brücke in die Lassnitz gestürzt sein.",
             "source_id": "1b2d6b618bc6cf58e3e1b978",
             "field": "text",
             "quote": "Ein Anfang 20-Jähriger dürfte im Bezirk Deutschlandsberg in der Nacht auf Sonntag von einer Brücke in die Lassnitz gestürzt sein."
-          },
-          {
-            "text": "Er wurde ins Spital gebracht.",
-            "source_id": "1b2d6b618bc6cf58e3e1b978",
-            "field": "text",
-            "quote": "Er wurde ins Spital gebracht."
           }
         ],
-        "text": "Junger Steirer stürzte von Brücke: Schwer verletzt.\nEin Anfang 20-Jähriger dürfte im Bezirk Deutschlandsberg in der Nacht auf Sonntag von einer Brücke in die Lassnitz gestürzt sein. Er wurde ins Spital gebracht.\nQuelle: krone.at."
+        "text": "Junger Steirer stürzte von Brücke: Schwer verletzt.\nIn der Halloween-Nacht Junger Steirer stürzte von Brücke: Schwer verletzt Der Vorfall ereignete sich mitten in der Nacht. Ein Anfang 20-Jähriger dürfte im Bezirk Deutschlandsberg in der Nacht auf Sonntag von einer Brücke in die Lassnitz gestürzt sein.\nQuelle: krone.at."
       },
       "verification": {
         "status": "approved",
@@ -16453,13 +17478,13 @@
             "claim_index": 0,
             "source_id": "1b2d6b618bc6cf58e3e1b978",
             "supported": true,
-            "quote": "Ein Anfang 20-Jähriger dürfte im Bezirk Deutschlandsberg in der Nacht auf Sonntag von einer Brücke in die Lassnitz gestürzt sein."
+            "quote": "In der Halloween-Nacht Junger Steirer stürzte von Brücke: Schwer verletzt Der Vorfall ereignete sich mitten in der Nacht."
           },
           {
             "claim_index": 1,
             "source_id": "1b2d6b618bc6cf58e3e1b978",
             "supported": true,
-            "quote": "Er wurde ins Spital gebracht."
+            "quote": "Ein Anfang 20-Jähriger dürfte im Bezirk Deutschlandsberg in der Nacht auf Sonntag von einer Brücke in die Lassnitz gestürzt sein."
           }
         ],
         "conflicts": [],
@@ -23652,13 +24677,13 @@
             "quote": "Nach russischen Angriffen waren am Sonntag Hunderttausende Ukrainer ohne Strom."
           },
           {
-            "text": "Selenskyj sprach am Samstag mit Erdoğan in Istanbul über Friedensverhandlungen.",
+            "text": "Selenskyj zeigte sich für ein direktes Treffen mit Putin in der Türkei bereit.",
             "source_id": "8562bc30c6e96ea36b9c2145",
             "field": "text",
-            "quote": "Selenskyj sprach am Samstag mit Erdoğan in Istanbul über Friedensverhandlungen."
+            "quote": "Selenskyj zeigte sich für ein direktes Treffen mit Putin in der Türkei bereit."
           }
         ],
-        "text": "Selenskyj spricht von \"Rekordverlusten\" für Russland im Oktober.\nNach russischen Angriffen waren am Sonntag Hunderttausende Ukrainer ohne Strom. Selenskyj sprach am Samstag mit Erdoğan in Istanbul über Friedensverhandlungen.\nQuelle: derstandard.at."
+        "text": "Selenskyj spricht von \"Rekordverlusten\" für Russland im Oktober.\nNach russischen Angriffen waren am Sonntag Hunderttausende Ukrainer ohne Strom. Selenskyj zeigte sich für ein direktes Treffen mit Putin in der Türkei bereit.\nQuelle: derstandard.at."
       },
       "verification": {
         "status": "approved",
@@ -23675,7 +24700,7 @@
             "claim_index": 1,
             "source_id": "8562bc30c6e96ea36b9c2145",
             "supported": true,
-            "quote": "Selenskyj sprach am Samstag mit Erdoğan in Istanbul über Friedensverhandlungen."
+            "quote": "Selenskyj zeigte sich für ein direktes Treffen mit Putin in der Türkei bereit."
           }
         ],
         "conflicts": [],
@@ -26284,744 +27309,14 @@
       "used_source_ids": [
         "5d01eebe56496e05f0c6ff6f"
       ]
-    },
-    {
-      "id": "0b12c840fe9232a28a486ef2",
-      "member_ids": [
-        "f1cee8baa7519d4dbba7bf99"
-      ],
-      "newest_at": 1793487818.0,
-      "draft": {
-        "headline": "Höchste Präzision beim Guss",
-        "headline_source_id": "f1cee8baa7519d4dbba7bf99",
-        "claims": [
-          {
-            "text": "Schon bei seinem Schnuppertag in der voestalpine Giesserei Traisen war für Christian klar: Diesen Berufsweg möchte er einschlagen.",
-            "source_id": "f1cee8baa7519d4dbba7bf99",
-            "field": "text",
-            "quote": "Schon bei seinem Schnuppertag in der voestalpine Giesserei Traisen war für Christian klar: Diesen Berufsweg möchte er einschlagen."
-          },
-          {
-            "text": "Heute ist der 20-Jährige im vierten Lehrjahr seiner Ausbildung zum Gießereitechniker und bereitet sich auf die Lehrabschlussprüfung vor.",
-            "source_id": "f1cee8baa7519d4dbba7bf99",
-            "field": "text",
-            "quote": "Heute ist der 20-Jährige im vierten Lehrjahr seiner Ausbildung zum Gießereitechniker und bereitet sich auf die Lehrabschlussprüfung vor."
-          }
-        ],
-        "text": "Höchste Präzision beim Guss.\nSchon bei seinem Schnuppertag in der voestalpine Giesserei Traisen war für Christian klar: Diesen Berufsweg möchte er einschlagen. Heute ist der 20-Jährige im vierten Lehrjahr seiner Ausbildung zum Gießereitechniker und bereitet sich auf die Lehrabschlussprüfung vor.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "f1cee8baa7519d4dbba7bf99",
-            "supported": true,
-            "quote": "Schon bei seinem Schnuppertag in der voestalpine Giesserei Traisen war für Christian klar: Diesen Berufsweg möchte er einschlagen."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "f1cee8baa7519d4dbba7bf99",
-            "supported": true,
-            "quote": "Heute ist der 20-Jährige im vierten Lehrjahr seiner Ausbildung zum Gießereitechniker und bereitet sich auf die Lehrabschlussprüfung vor."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "f1cee8baa7519d4dbba7bf99"
-      ]
-    },
-    {
-      "id": "1da0bd03ccfba9879e70cd2a",
-      "member_ids": [
-        "b40fa8842f1b0f17b8c0bcd7"
-      ],
-      "newest_at": 1793487689.0,
-      "draft": {
-        "headline": "Ihre Welt ist digital",
-        "headline_source_id": "b40fa8842f1b0f17b8c0bcd7",
-        "claims": [
-          {
-            "text": "Als Lehrling im dritten Jahr zur IT-Systemtechnikerin bei der voestalpine group-IT in Linz ist Alexandra (20) verantwortlich für die Konfiguration von Geräten, die Erstellung virtueller Maschinen und die Betreuung von Software.",
-            "source_id": "b40fa8842f1b0f17b8c0bcd7",
-            "field": "text",
-            "quote": "Als Lehrling im dritten Jahr zur IT-Systemtechnikerin bei der voestalpine group-IT in Linz ist Alexandra (20) verantwortlich für die Konfiguration von Geräten, die Erstellung virtueller Maschinen und die Betreuung von Software."
-          }
-        ],
-        "text": "Ihre Welt ist digital.\nAls Lehrling im dritten Jahr zur IT-Systemtechnikerin bei der voestalpine group-IT in Linz ist Alexandra (20) verantwortlich für die Konfiguration von Geräten, die Erstellung virtueller Maschinen und die Betreuung von Software.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "b40fa8842f1b0f17b8c0bcd7",
-            "supported": true,
-            "quote": "Als Lehrling im dritten Jahr zur IT-Systemtechnikerin bei der voestalpine group-IT in Linz ist Alexandra (20) verantwortlich für die Konfiguration von Geräten, die Erstellung virtueller Maschinen und die Betreuung von Software."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "b40fa8842f1b0f17b8c0bcd7"
-      ]
-    },
-    {
-      "id": "7a119984c8084cc4fc9a5c10",
-      "member_ids": [
-        "f4415d4f541d91297ff94d2e"
-      ],
-      "newest_at": 1793487062.0,
-      "draft": {
-        "headline": "Erste Risse in Vucics System",
-        "headline_source_id": "f4415d4f541d91297ff94d2e",
-        "claims": [
-          {
-            "text": "Mehr als ein Jahrzehnt hat die rechtsnationalistische Serbische Fortschrittspartei (SNS) unter Aleksandar Vucic umfassende Kontrolle über Serbien ausgeübt.",
-            "source_id": "f4415d4f541d91297ff94d2e",
-            "field": "text",
-            "quote": "Mehr als ein Jahrzehnt hat die rechtsnationalistische Serbische Fortschrittspartei (SNS) unter Aleksandar Vucic umfassende Kontrolle über Serbien ausgeübt."
-          },
-          {
-            "text": "Nach dem herausragenden Sieg der Studentenliste (SL) am vergangenen Sonntag erhöhen nun die Studierenden den Druck auf Medien, Justiz und Politik, sich dem Machtwechsel zu beugen.",
-            "source_id": "f4415d4f541d91297ff94d2e",
-            "field": "text",
-            "quote": "Nach dem herausragenden Sieg der Studentenliste (SL) am vergangenen Sonntag erhöhen nun die Studierenden den Druck auf Medien, Justiz und Politik, sich dem Machtwechsel zu beugen."
-          }
-        ],
-        "text": "Erste Risse in Vucics System.\nMehr als ein Jahrzehnt hat die rechtsnationalistische Serbische Fortschrittspartei (SNS) unter Aleksandar Vucic umfassende Kontrolle über Serbien ausgeübt. Nach dem herausragenden Sieg der Studentenliste (SL) am vergangenen Sonntag erhöhen nun die Studierenden den Druck auf Medien, Justiz und Politik, sich dem Machtwechsel zu beugen.\nQuelle: orf.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "f4415d4f541d91297ff94d2e",
-            "supported": true,
-            "quote": "Mehr als ein Jahrzehnt hat die rechtsnationalistische Serbische Fortschrittspartei (SNS) unter Aleksandar Vucic umfassende Kontrolle über Serbien ausgeübt."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "f4415d4f541d91297ff94d2e",
-            "supported": true,
-            "quote": "Nach dem herausragenden Sieg der Studentenliste (SL) am vergangenen Sonntag erhöhen nun die Studierenden den Druck auf Medien, Justiz und Politik, sich dem Machtwechsel zu beugen."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "f4415d4f541d91297ff94d2e"
-      ]
-    },
-    {
-      "id": "2ab98e96138cf42b12c7b399",
-      "member_ids": [
-        "522eefcb88188b2afc77e41b"
-      ],
-      "newest_at": 1793485855.0,
-      "draft": {
-        "headline": "FBI sieht Nordkorea hinter Angriff auf Kryptobörse",
-        "headline_source_id": "522eefcb88188b2afc77e41b",
-        "claims": [
-          {
-            "text": "Nordkorea steckt nach FBI-Angaben hinter dem milliardenschweren Hackerangriff auf die größte Digitalwährungsbörse Binance.",
-            "source_id": "522eefcb88188b2afc77e41b",
-            "field": "text",
-            "quote": "Nordkorea steckt nach FBI-Angaben hinter dem milliardenschweren Hackerangriff auf die größte Digitalwährungsbörse Binance."
-          },
-          {
-            "text": "Die US-Bundespolizei veröffentlichte Informationen, wonach die Attacke durch die nordkoreanischen Hacker der Gruppe TraderTraitor durchgeführt wurde.",
-            "source_id": "522eefcb88188b2afc77e41b",
-            "field": "text",
-            "quote": "Die US-Bundespolizei veröffentlichte Informationen, wonach die Attacke durch die nordkoreanischen Hacker der Gruppe TraderTraitor durchgeführt wurde."
-          }
-        ],
-        "text": "FBI sieht Nordkorea hinter Angriff auf Kryptobörse.\nNordkorea steckt nach FBI-Angaben hinter dem milliardenschweren Hackerangriff auf die größte Digitalwährungsbörse Binance. Die US-Bundespolizei veröffentlichte Informationen, wonach die Attacke durch die nordkoreanischen Hacker der Gruppe TraderTraitor durchgeführt wurde.\nQuelle: orf.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "522eefcb88188b2afc77e41b",
-            "supported": true,
-            "quote": "Nordkorea steckt nach FBI-Angaben hinter dem milliardenschweren Hackerangriff auf die größte Digitalwährungsbörse Binance."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "522eefcb88188b2afc77e41b",
-            "supported": true,
-            "quote": "Die US-Bundespolizei veröffentlichte Informationen, wonach die Attacke durch die nordkoreanischen Hacker der Gruppe TraderTraitor durchgeführt wurde."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "522eefcb88188b2afc77e41b"
-      ]
-    },
-    {
-      "id": "3ce1be85e9f2146c45f947cf",
-      "member_ids": [
-        "27534d129f8c065cbf9e2b8e"
-      ],
-      "newest_at": 1793485852.0,
-      "draft": {
-        "headline": "„Ich gehe in Salzburg von einer Topleistung aus“",
-        "headline_source_id": "27534d129f8c065cbf9e2b8e",
-        "claims": [
-          {
-            "text": "Sieben Spiele gegen Red Bull Salzburg, 33 Gegentore – diese Bilanz macht Austria Lustenaus Tormann Domenik Schierl aber nichts aus.",
-            "source_id": "27534d129f8c065cbf9e2b8e",
-            "field": "text",
-            "quote": "Sieben Spiele gegen Red Bull Salzburg, 33 Gegentore – diese Bilanz macht Austria Lustenaus Tormann Domenik Schierl aber nichts aus."
-          },
-          {
-            "text": "Der 32-Jährige hofft mit seiner Mannschaft am Sonntag auf die nächste Überraschung nach dem Cup-Aufstieg unter der Woche gegen Sturm Graz.",
-            "source_id": "27534d129f8c065cbf9e2b8e",
-            "field": "text",
-            "quote": "Der 32-Jährige hofft mit seiner Mannschaft am Sonntag auf die nächste Überraschung nach dem Cup-Aufstieg unter der Woche gegen Sturm Graz."
-          }
-        ],
-        "text": "„Ich gehe in Salzburg von einer Topleistung aus“.\nSieben Spiele gegen Red Bull Salzburg, 33 Gegentore – diese Bilanz macht Austria Lustenaus Tormann Domenik Schierl aber nichts aus. Der 32-Jährige hofft mit seiner Mannschaft am Sonntag auf die nächste Überraschung nach dem Cup-Aufstieg unter der Woche gegen Sturm Graz.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "27534d129f8c065cbf9e2b8e",
-            "supported": true,
-            "quote": "Sieben Spiele gegen Red Bull Salzburg, 33 Gegentore – diese Bilanz macht Austria Lustenaus Tormann Domenik Schierl aber nichts aus."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "27534d129f8c065cbf9e2b8e",
-            "supported": true,
-            "quote": "Der 32-Jährige hofft mit seiner Mannschaft am Sonntag auf die nächste Überraschung nach dem Cup-Aufstieg unter der Woche gegen Sturm Graz."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "27534d129f8c065cbf9e2b8e"
-      ]
-    },
-    {
-      "id": "9b86e14a9c282fcde94c0b65",
-      "member_ids": [
-        "465b2ebd8c40e19c226b74d0"
-      ],
-      "newest_at": 1793485039.0,
-      "draft": {
-        "headline": "Lewis Hamilton holt vor Russell und Leclerc Pole Position in Mexiko",
-        "headline_source_id": "465b2ebd8c40e19c226b74d0",
-        "claims": [
-          {
-            "text": "Der Brite fuhr zu seiner 105.",
-            "source_id": "465b2ebd8c40e19c226b74d0",
-            "field": "text",
-            "quote": "Der Brite fuhr zu seiner 105."
-          },
-          {
-            "text": "Pole und zu seiner ersten für Ferrari.",
-            "source_id": "465b2ebd8c40e19c226b74d0",
-            "field": "text",
-            "quote": "Pole und zu seiner ersten für Ferrari."
-          }
-        ],
-        "text": "Lewis Hamilton holt vor Russell und Leclerc Pole Position in Mexiko.\nDer Brite fuhr zu seiner 105. Pole und zu seiner ersten für Ferrari.\nQuelle: derstandard.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "465b2ebd8c40e19c226b74d0",
-            "supported": true,
-            "quote": "Der Brite fuhr zu seiner 105."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "465b2ebd8c40e19c226b74d0",
-            "supported": true,
-            "quote": "Pole und zu seiner ersten für Ferrari."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "465b2ebd8c40e19c226b74d0"
-      ]
-    },
-    {
-      "id": "40f2937f5310e56305c990d6",
-      "member_ids": [
-        "0115da36adc3dcc0ef8e7768"
-      ],
-      "newest_at": 1793484687.0,
-      "draft": {
-        "headline": "FC Barcelona verteidigt Tabellenführung mit 6:1-Kantersieg",
-        "headline_source_id": "0115da36adc3dcc0ef8e7768",
-        "claims": [
-          {
-            "text": "Der Titelverteidiger fertigte Alaves ab.",
-            "source_id": "0115da36adc3dcc0ef8e7768",
-            "field": "text",
-            "quote": "Der Titelverteidiger fertigte Alaves ab."
-          },
-          {
-            "text": "Verfolger Atletico Madrid gewann bei Ndukwe-Klub Levante.",
-            "source_id": "0115da36adc3dcc0ef8e7768",
-            "field": "text",
-            "quote": "Verfolger Atletico Madrid gewann bei Ndukwe-Klub Levante."
-          }
-        ],
-        "text": "FC Barcelona verteidigt Tabellenführung mit 6:1-Kantersieg.\nDer Titelverteidiger fertigte Alaves ab. Verfolger Atletico Madrid gewann bei Ndukwe-Klub Levante.\nQuelle: derstandard.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "0115da36adc3dcc0ef8e7768",
-            "supported": true,
-            "quote": "Der Titelverteidiger fertigte Alaves ab."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "0115da36adc3dcc0ef8e7768",
-            "supported": true,
-            "quote": "Verfolger Atletico Madrid gewann bei Ndukwe-Klub Levante."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "0115da36adc3dcc0ef8e7768"
-      ]
-    },
-    {
-      "id": "3699f5a6c397a14449c7a017",
-      "member_ids": [
-        "9ce800bf01cf2699f93f4962"
-      ],
-      "newest_at": 1793483966.0,
-      "draft": {
-        "headline": "Hoher Silberpreis: Deutschland musste Münzen einschmelzen",
-        "headline_source_id": "9ce800bf01cf2699f93f4962",
-        "claims": [
-          {
-            "text": "Der starke Anstieg des Silberpreises im vergangenen Jahr hat das Geschäft mit Sammlermünzen in Deutschland durcheinander gebracht.",
-            "source_id": "9ce800bf01cf2699f93f4962",
-            "field": "text",
-            "quote": "Der starke Anstieg des Silberpreises im vergangenen Jahr hat das Geschäft mit Sammlermünzen in Deutschland durcheinander gebracht."
-          },
-          {
-            "text": "Die Münzen „125 Jahre Wuppertaler Schwebebahn“ und „Heilige drei Könige“ mussten vor der geplanten Ausgabe zerstört und neu geprägt werden, wie das deutsche Finanzministerium mitteilte.",
-            "source_id": "9ce800bf01cf2699f93f4962",
-            "field": "text",
-            "quote": "Die Münzen „125 Jahre Wuppertaler Schwebebahn“ und „Heilige drei Könige“ mussten vor der geplanten Ausgabe zerstört und neu geprägt werden, wie das deutsche Finanzministerium mitteilte."
-          }
-        ],
-        "text": "Hoher Silberpreis: Deutschland musste Münzen einschmelzen.\nDer starke Anstieg des Silberpreises im vergangenen Jahr hat das Geschäft mit Sammlermünzen in Deutschland durcheinander gebracht. Die Münzen „125 Jahre Wuppertaler Schwebebahn“ und „Heilige drei Könige“ mussten vor der geplanten Ausgabe zerstört und neu geprägt werden, wie das deutsche Finanzministerium mitteilte.\nQuelle: orf.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "9ce800bf01cf2699f93f4962",
-            "supported": true,
-            "quote": "Der starke Anstieg des Silberpreises im vergangenen Jahr hat das Geschäft mit Sammlermünzen in Deutschland durcheinander gebracht."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "9ce800bf01cf2699f93f4962",
-            "supported": true,
-            "quote": "Die Münzen „125 Jahre Wuppertaler Schwebebahn“ und „Heilige drei Könige“ mussten vor der geplanten Ausgabe zerstört und neu geprägt werden, wie das deutsche Finanzministerium mitteilte."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "9ce800bf01cf2699f93f4962"
-      ]
-    },
-    {
-      "id": "52c6812c23e4504e7d1a7b87",
-      "member_ids": [
-        "8c1db85492aab141735789d4"
-      ],
-      "newest_at": 1793483644.0,
-      "draft": {
-        "headline": "Jemen: Von Huthis entführter UNO-Mitarbeiter tot",
-        "headline_source_id": "8c1db85492aab141735789d4",
-        "claims": [
-          {
-            "text": "Ein seit zwei Jahren in der Gewalt der Huthi-Rebellen im Jemen befindlicher UNO-Mitarbeiter ist nach offiziellen Angaben tot.",
-            "source_id": "8c1db85492aab141735789d4",
-            "field": "text",
-            "quote": "Ein seit zwei Jahren in der Gewalt der Huthi-Rebellen im Jemen befindlicher UNO-Mitarbeiter ist nach offiziellen Angaben tot."
-          },
-          {
-            "text": "Ein Minister der jemenitischen Regierung sagte laut einem Bericht des saudischen Senders al-Arabija, der jemenitische Staatsangehörige und Mitarbeiter im Büro des UNO-Hochkommissars für Menschenrechte sei in einem Huthi-Gefängnis zu Tode gefoltert worden.",
-            "source_id": "8c1db85492aab141735789d4",
-            "field": "text",
-            "quote": "Ein Minister der jemenitischen Regierung sagte laut einem Bericht des saudischen Senders al-Arabija, der jemenitische Staatsangehörige und Mitarbeiter im Büro des UNO-Hochkommissars für Menschenrechte sei in einem Huthi-Gefängnis zu Tode gefoltert worden."
-          }
-        ],
-        "text": "Jemen: Von Huthis entführter UNO-Mitarbeiter tot.\nEin seit zwei Jahren in der Gewalt der Huthi-Rebellen im Jemen befindlicher UNO-Mitarbeiter ist nach offiziellen Angaben tot. Ein Minister der jemenitischen Regierung sagte laut einem Bericht des saudischen Senders al-Arabija, der jemenitische Staatsangehörige und Mitarbeiter im Büro des UNO-Hochkommissars für Menschenrechte sei in einem Huthi-Gefängnis zu Tode gefoltert worden.\nQuelle: orf.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "8c1db85492aab141735789d4",
-            "supported": true,
-            "quote": "Ein seit zwei Jahren in der Gewalt der Huthi-Rebellen im Jemen befindlicher UNO-Mitarbeiter ist nach offiziellen Angaben tot."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "8c1db85492aab141735789d4",
-            "supported": true,
-            "quote": "Ein Minister der jemenitischen Regierung sagte laut einem Bericht des saudischen Senders al-Arabija, der jemenitische Staatsangehörige und Mitarbeiter im Büro des UNO-Hochkommissars für Menschenrechte sei in einem Huthi-Gefängnis zu Tode gefoltert worden."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "8c1db85492aab141735789d4"
-      ]
-    },
-    {
-      "id": "44438aa34e4b1ba34015bc0f",
-      "member_ids": [
-        "855dd8bd510b9d9e34aea9e7"
-      ],
-      "newest_at": 1793483145.0,
-      "draft": {
-        "headline": "„Jesus“-Rufe und Böller statt Randale in Salzburg",
-        "headline_source_id": "855dd8bd510b9d9e34aea9e7",
-        "claims": [
-          {
-            "text": "Während in Europas Großstädten Demonstrationen ausarteten, waren in Salzburg untertags nur „Jesus“-Parolen beim Hauptbahnhof und abends Knaller in der Altstadt zu hören: ein Lokalaugenschein der „Krone“ in der Mozartstadt zum Gruseltag.",
-            "source_id": "855dd8bd510b9d9e34aea9e7",
-            "field": "text",
-            "quote": "Während in Europas Großstädten Demonstrationen ausarteten, waren in Salzburg untertags nur „Jesus“-Parolen beim Hauptbahnhof und abends Knaller in der Altstadt zu hören: ein Lokalaugenschein der „Krone“ in der Mozartstadt zum Gruseltag."
-          }
-        ],
-        "text": "„Jesus“-Rufe und Böller statt Randale in Salzburg.\nWährend in Europas Großstädten Demonstrationen ausarteten, waren in Salzburg untertags nur „Jesus“-Parolen beim Hauptbahnhof und abends Knaller in der Altstadt zu hören: ein Lokalaugenschein der „Krone“ in der Mozartstadt zum Gruseltag.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "855dd8bd510b9d9e34aea9e7",
-            "supported": true,
-            "quote": "Während in Europas Großstädten Demonstrationen ausarteten, waren in Salzburg untertags nur „Jesus“-Parolen beim Hauptbahnhof und abends Knaller in der Altstadt zu hören: ein Lokalaugenschein der „Krone“ in der Mozartstadt zum Gruseltag."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "855dd8bd510b9d9e34aea9e7"
-      ]
-    },
-    {
-      "id": "b8f2f1952a85bff1e7b53eab",
-      "member_ids": [
-        "297fd9353b7f529340e749b5"
-      ],
-      "newest_at": 1793483004.0,
-      "draft": {
-        "headline": "Namensvettern bei Midterms: Alaska gegen Trump-Klage",
-        "headline_source_id": "297fd9353b7f529340e749b5",
-        "claims": [
-          {
-            "text": "Bei seinem Eingriff in die US-Parlamentswahlen in Alaska ist Präsident Donald Trump aus den eigenen Reihen kritisiert worden.",
-            "source_id": "297fd9353b7f529340e749b5",
-            "field": "text",
-            "quote": "Bei seinem Eingriff in die US-Parlamentswahlen in Alaska ist Präsident Donald Trump aus den eigenen Reihen kritisiert worden."
-          },
-          {
-            "text": "Die republikanische Regierung in dem Bundesstaat forderte einen Bundesrichter auf, eine entsprechende Klage des US-Justizministeriums abzuweisen, wie aus einem Dokument hervorgeht.",
-            "source_id": "297fd9353b7f529340e749b5",
-            "field": "text",
-            "quote": "Die republikanische Regierung in dem Bundesstaat forderte einen Bundesrichter auf, eine entsprechende Klage des US-Justizministeriums abzuweisen, wie aus einem Dokument hervorgeht."
-          }
-        ],
-        "text": "Namensvettern bei Midterms: Alaska gegen Trump-Klage.\nBei seinem Eingriff in die US-Parlamentswahlen in Alaska ist Präsident Donald Trump aus den eigenen Reihen kritisiert worden. Die republikanische Regierung in dem Bundesstaat forderte einen Bundesrichter auf, eine entsprechende Klage des US-Justizministeriums abzuweisen, wie aus einem Dokument hervorgeht.\nQuelle: orf.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "297fd9353b7f529340e749b5",
-            "supported": true,
-            "quote": "Bei seinem Eingriff in die US-Parlamentswahlen in Alaska ist Präsident Donald Trump aus den eigenen Reihen kritisiert worden."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "297fd9353b7f529340e749b5",
-            "supported": true,
-            "quote": "Die republikanische Regierung in dem Bundesstaat forderte einen Bundesrichter auf, eine entsprechende Klage des US-Justizministeriums abzuweisen, wie aus einem Dokument hervorgeht."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "297fd9353b7f529340e749b5"
-      ]
-    },
-    {
-      "id": "159d9471ac00219dc6af1770",
-      "member_ids": [
-        "56c605f7ce481bceaee55caf"
-      ],
-      "newest_at": 1793482549.0,
-      "draft": {
-        "headline": "Plünderungen in Frankfurt nach friedlichen Protesten in deutschen Städten",
-        "headline_source_id": "56c605f7ce481bceaee55caf",
-        "claims": [
-          {
-            "text": "In Frankfurt schlugen Randalierer mehrere Schaufenster ein und stahlen Turnschuhe und andere Gegenstände.",
-            "source_id": "56c605f7ce481bceaee55caf",
-            "field": "text",
-            "quote": "In Frankfurt schlugen Randalierer mehrere Schaufenster ein und stahlen Turnschuhe und andere Gegenstände."
-          },
-          {
-            "text": "In Berlin kam es zu einigen Flaschen- und Böllerwürfen.",
-            "source_id": "56c605f7ce481bceaee55caf",
-            "field": "text",
-            "quote": "In Berlin kam es zu einigen Flaschen- und Böllerwürfen."
-          }
-        ],
-        "text": "Plünderungen in Frankfurt nach friedlichen Protesten in deutschen Städten.\nIn Frankfurt schlugen Randalierer mehrere Schaufenster ein und stahlen Turnschuhe und andere Gegenstände. In Berlin kam es zu einigen Flaschen- und Böllerwürfen.\nQuelle: derstandard.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "56c605f7ce481bceaee55caf",
-            "supported": true,
-            "quote": "In Frankfurt schlugen Randalierer mehrere Schaufenster ein und stahlen Turnschuhe und andere Gegenstände."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "56c605f7ce481bceaee55caf",
-            "supported": true,
-            "quote": "In Berlin kam es zu einigen Flaschen- und Böllerwürfen."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "56c605f7ce481bceaee55caf"
-      ]
-    },
-    {
-      "id": "a9e430543199bc6f06c226d8",
-      "member_ids": [
-        "eac27f74890525ebe67db8b6"
-      ],
-      "newest_at": 1793481585.0,
-      "draft": {
-        "headline": "„AMS-Opfer“ bekommen heuer bis zu 2500 Euro zurück",
-        "headline_source_id": "eac27f74890525ebe67db8b6",
-        "claims": [
-          {
-            "text": "1,10 Euro pro Tag im Schnitt und bis zu 2500 Euro im Höchstfall bekommen Betroffene der AMS-Rechenpanne bald retour.",
-            "source_id": "eac27f74890525ebe67db8b6",
-            "field": "text",
-            "quote": "1,10 Euro pro Tag im Schnitt und bis zu 2500 Euro im Höchstfall bekommen Betroffene der AMS-Rechenpanne bald retour."
-          },
-          {
-            "text": "Zurückgezahlt werden sollen die Summen noch heuer.",
-            "source_id": "eac27f74890525ebe67db8b6",
-            "field": "text",
-            "quote": "Zurückgezahlt werden sollen die Summen noch heuer."
-          }
-        ],
-        "text": "„AMS-Opfer“ bekommen heuer bis zu 2500 Euro zurück.\n1,10 Euro pro Tag im Schnitt und bis zu 2500 Euro im Höchstfall bekommen Betroffene der AMS-Rechenpanne bald retour. Zurückgezahlt werden sollen die Summen noch heuer.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "eac27f74890525ebe67db8b6",
-            "supported": true,
-            "quote": "1,10 Euro pro Tag im Schnitt und bis zu 2500 Euro im Höchstfall bekommen Betroffene der AMS-Rechenpanne bald retour."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "eac27f74890525ebe67db8b6",
-            "supported": true,
-            "quote": "Zurückgezahlt werden sollen die Summen noch heuer."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "eac27f74890525ebe67db8b6"
-      ]
     }
   ],
   "excluded_articles": [],
   "selected_ids": [
-    "f5f0f588ca461827ad37861a",
-    "179ff8ee429a1b9229ebc2c4",
+    "c5e670ced0ce69b016f76a5a",
+    "b5ddf010992888f8c1db0ba3",
+    "fce0194d7a9c4358ba475643",
     "c501f59e8afbe85fa3e522da",
-    "c53b06864a5e728c5c1134af",
     "128fdd777ec1d8d55acc6750"
   ]
 }

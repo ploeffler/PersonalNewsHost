@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261101T165100Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 01.11.2026 um 17:51 Uhr",
-      "created_at": 1793551860.91151,
-      "video": "broadcasts/20261101T165100Z.mp4",
-      "sources": [
-        {
-          "title": "Das hält Menschen trotz Todesgefahr in Oleschky",
-          "url": "https://www.krone.at/4358096"
-        },
-        {
-          "title": "Harald Krassnitzer wäre \"ein toller Präsident\", findet Adele Neuhauser",
-          "url": "https://www.derstandard.at/story/3000000346947/harald-krassnitzer-waere-ein-toller-praesident-findet-adele-neuhauser?ref=rss"
-        },
-        {
-          "title": "Equal Pay Day: Weiter Warten auf Lohntransparenz",
-          "url": "https://orf.at/stories/3446790/"
-        },
-        {
-          "title": "Im Liveticker: Der KAC will den Linzer Erfolgslauf stoppen",
-          "url": "https://www.kleinezeitung.at/artikel/41409797/im-liveticker-der-kac-will-den-linzer-erfolgslauf-stoppen"
-        },
-        {
-          "title": "Umfangreicher Verkehrsschwerpunkt an Halloween",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261101T165100Z.txt",
-      "subtitles": "broadcasts/20261101T165100Z.vtt",
-      "subtitle_download": "broadcasts/20261101T165100Z.srt"
-    },
-    {
       "id": "20261101T211404Z",
       "kind": "broadcast",
       "title": "Nachrichten 01.11.2026 um 22:14 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261101T211404Z.txt",
       "subtitles": "broadcasts/20261101T211404Z.vtt",
       "subtitle_download": "broadcasts/20261101T211404Z.srt"
+    },
+    {
+      "id": "20261102T005054Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 02.11.2026 um 01:50 Uhr",
+      "created_at": 1793580654.306765,
+      "video": "broadcasts/20261102T005054Z.mp4",
+      "sources": [
+        {
+          "title": "Romantisch ins neue Jahr im Maiers Kuschelhotel",
+          "url": "https://www.krone.at/4342573"
+        },
+        {
+          "title": "Standardrätsel F 11432",
+          "url": "https://www.derstandard.at/story/3000000346408/standardraetsel-f-11432?ref=rss"
+        },
+        {
+          "title": "Xi nimmt Parteikader an die Kandare",
+          "url": "https://orf.at/stories/3446787/"
+        },
+        {
+          "title": "Bundeskanzler Stocker mit Wirtschaftsdelegation in China",
+          "url": "https://www.kleinezeitung.at/artikel/41410130/bundeskanzler-stocker-mit-wirtschaftsdelegation-in-china"
+        },
+        {
+          "title": "Umfangreicher Verkehrsschwerpunkt an Halloween",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261102T005054Z.txt",
+      "subtitles": "broadcasts/20261102T005054Z.vtt",
+      "subtitle_download": "broadcasts/20261102T005054Z.srt"
     }
   ]
 }
