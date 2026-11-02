@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261102T005054Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 02.11.2026 um 01:50 Uhr",
-      "created_at": 1793580654.306765,
-      "video": "broadcasts/20261102T005054Z.mp4",
-      "sources": [
-        {
-          "title": "Romantisch ins neue Jahr im Maiers Kuschelhotel",
-          "url": "https://www.krone.at/4342573"
-        },
-        {
-          "title": "Standardrätsel F 11432",
-          "url": "https://www.derstandard.at/story/3000000346408/standardraetsel-f-11432?ref=rss"
-        },
-        {
-          "title": "Xi nimmt Parteikader an die Kandare",
-          "url": "https://orf.at/stories/3446787/"
-        },
-        {
-          "title": "Bundeskanzler Stocker mit Wirtschaftsdelegation in China",
-          "url": "https://www.kleinezeitung.at/artikel/41410130/bundeskanzler-stocker-mit-wirtschaftsdelegation-in-china"
-        },
-        {
-          "title": "Umfangreicher Verkehrsschwerpunkt an Halloween",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261102T005054Z.txt",
-      "subtitles": "broadcasts/20261102T005054Z.vtt",
-      "subtitle_download": "broadcasts/20261102T005054Z.srt"
-    },
-    {
       "id": "20261102T074434Z",
       "kind": "broadcast",
       "title": "Nachrichten 02.11.2026 um 08:44 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261102T074434Z.txt",
       "subtitles": "broadcasts/20261102T074434Z.vtt",
       "subtitle_download": "broadcasts/20261102T074434Z.srt"
+    },
+    {
+      "id": "20261102T182947Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 02.11.2026 um 19:29 Uhr",
+      "created_at": 1793644187.318499,
+      "video": "broadcasts/20261102T182947Z.mp4",
+      "sources": [
+        {
+          "title": "Rangnick: „Mein Gedächtnis funktioniert noch gut“",
+          "url": "https://www.krone.at/4359539"
+        },
+        {
+          "title": "Trump baut für mögliche Wahlschlappe vor",
+          "url": "https://orf.at/stories/3446837/"
+        },
+        {
+          "title": "Generikum von HIV-Prophylaxe-Injektion erhält US-Genehmigung",
+          "url": "https://www.derstandard.at/story/3000000347187/generikum-von-hiv-prophylaxe-injektion-erh228lt-us-genehmigung?ref=rss"
+        },
+        {
+          "title": "Depot warnt nach Insolvenz vor betrügerischen Fakeshops",
+          "url": "https://www.kleinezeitung.at/artikel/41412329/depot-warnt-nach-insolvenz-vor-betruegerischen-fakeshops"
+        },
+        {
+          "title": "Arbeitsunfall: Arbeiter von Vordach gestürzt",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261102T182947Z.txt",
+      "subtitles": "broadcasts/20261102T182947Z.vtt",
+      "subtitle_download": "broadcasts/20261102T182947Z.srt"
     }
   ]
 }
