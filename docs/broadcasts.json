@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261101T211404Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 01.11.2026 um 22:14 Uhr",
-      "created_at": 1793567644.946285,
-      "video": "broadcasts/20261101T211404Z.mp4",
-      "sources": [
-        {
-          "title": "Radler nahm Kindern zu Halloween Süßigkeiten weg",
-          "url": "https://www.krone.at/4358363"
-        },
-        {
-          "title": "Demokratenstreit in Michigan eskaliert",
-          "url": "https://orf.at/stories/3446799/"
-        },
-        {
-          "title": "Bundeskanzler Stocker mit Wirtschaftsdelegation in China",
-          "url": "https://www.kleinezeitung.at/artikel/41410130/bundeskanzler-stocker-mit-wirtschaftsdelegation-in-china"
-        },
-        {
-          "title": "Schönheit des Unvollkommenen: Neue Musik der Queens of the Stone Age",
-          "url": "https://www.derstandard.at/story/3000000346743/schoenheit-des-unvollkommenen-neue-musik-der-queens-of-the-stone-age?ref=rss"
-        },
-        {
-          "title": "Umfangreicher Verkehrsschwerpunkt an Halloween",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261101T211404Z.txt",
-      "subtitles": "broadcasts/20261101T211404Z.vtt",
-      "subtitle_download": "broadcasts/20261101T211404Z.srt"
-    },
-    {
       "id": "20261102T005054Z",
       "kind": "broadcast",
       "title": "Nachrichten 02.11.2026 um 01:50 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261102T005054Z.txt",
       "subtitles": "broadcasts/20261102T005054Z.vtt",
       "subtitle_download": "broadcasts/20261102T005054Z.srt"
+    },
+    {
+      "id": "20261102T074434Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 02.11.2026 um 08:44 Uhr",
+      "created_at": 1793605474.311949,
+      "video": "broadcasts/20261102T074434Z.mp4",
+      "sources": [
+        {
+          "title": "Vater fand kleine Nägel in Halloween-Süßigkeiten",
+          "url": "https://www.krone.at/4358546"
+        },
+        {
+          "title": "Tote bei israelischen Angriffen im Gazastreifen",
+          "url": "https://orf.at/stories/3446820/"
+        },
+        {
+          "title": "Am Dach gelandet: Auto hat sich auf der S 6 überschlagen",
+          "url": "https://www.kleinezeitung.at/artikel/41410274/am-dach-gelandet-auto-hat-sich-auf-der-s-6-ueberschlagen"
+        },
+        {
+          "title": "Nägel in Halloween-Süßigkeiten in Linz gefunden",
+          "url": "https://www.derstandard.at/story/3000000346986/naegel-in-halloween-suessigkeiten-in-linz-gefunden?ref=rss"
+        },
+        {
+          "title": "Alkolenker (41) ergriff nach Crash die Flucht",
+          "url": "https://www.krone.at/4358520"
+        }
+      ],
+      "transcript": "broadcasts/20261102T074434Z.txt",
+      "subtitles": "broadcasts/20261102T074434Z.vtt",
+      "subtitle_download": "broadcasts/20261102T074434Z.srt"
     }
   ]
 }
