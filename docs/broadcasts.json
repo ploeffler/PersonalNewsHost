@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261103T094003Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 03.11.2026 um 10:40 Uhr",
-      "created_at": 1793698803.512022,
-      "video": "broadcasts/20261103T094003Z.mp4",
-      "sources": [
-        {
-          "title": "Zweite Runde bei Gesprächen zu Handels-KV",
-          "url": "https://orf.at/stories/3446931/"
-        },
-        {
-          "title": "Lebensgefährlich verletzt: Grazer griff Nachbarin mit Messer und Axt an",
-          "url": "https://www.derstandard.at/story/3000000347258/lebensgefaehrlich-verletzt-grazer-griff-nachbarin-mit-messer-und-axt-a?ref=rss"
-        },
-        {
-          "title": "Rätsel um Mann ohne Erinnerung am Airport Neapel",
-          "url": "https://www.krone.at/4359897"
-        },
-        {
-          "title": "Manipulierte Süßigkeiten: Ermittlungsgruppe soll die Täter jagen",
-          "url": "https://www.kleinezeitung.at/artikel/41414588/manipulierte-suessigkeiten-ermittlungsgruppe-soll-die-taeter-jagen"
-        },
-        {
-          "title": "Verkehrsunfall: 16-Jähriger fuhr auf Dienstfahrzeug auf",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261103T094003Z.txt",
-      "subtitles": "broadcasts/20261103T094003Z.vtt",
-      "subtitle_download": "broadcasts/20261103T094003Z.srt"
-    },
-    {
       "id": "20261103T175407Z",
       "kind": "broadcast",
       "title": "Nachrichten 03.11.2026 um 18:54 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261103T175407Z.txt",
       "subtitles": "broadcasts/20261103T175407Z.vtt",
       "subtitle_download": "broadcasts/20261103T175407Z.srt"
+    },
+    {
+      "id": "20261103T232912Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 04.11.2026 um 00:29 Uhr",
+      "created_at": 1793748552.270922,
+      "video": "broadcasts/20261103T232912Z.mp4",
+      "sources": [
+        {
+          "title": "Standardrätsel L 11434",
+          "url": "https://www.derstandard.at/story/3000000346410/standardraetsel-l-11434?ref=rss"
+        },
+        {
+          "title": "Vorwurf des Landesverrats gegen Selenskyjs Ex-Sprecherin",
+          "url": "https://orf.at/stories/3447032/"
+        },
+        {
+          "title": "Zug-Drama: Spaniens Verkehrsminister tritt zurück",
+          "url": "https://www.krone.at/4361135"
+        },
+        {
+          "title": "Martin Kocher in der ZiB2: „Die Inflationsgefahr ist weiter hoch“",
+          "url": "https://www.kleinezeitung.at/artikel/41417050/martin-kocher-in-der-zib2-die-inflationsgefahr-ist-weiter-hoch"
+        },
+        {
+          "title": "Schwerwiegende Verstöße bei Sondertransport festgestellt",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261103T232912Z.txt",
+      "subtitles": "broadcasts/20261103T232912Z.vtt",
+      "subtitle_download": "broadcasts/20261103T232912Z.srt"
     }
   ]
 }
