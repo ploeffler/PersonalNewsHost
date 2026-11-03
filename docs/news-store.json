@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": 1793669935.996289,
+  "updated_at": 1793672930.258226,
   "articles": [
     {
       "id": "fab20426098e7d9548b25878",
@@ -89,7 +89,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346409/standardraetsel-k-11433?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000346409/standardraetsel-k-11433?ref=rss",
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "c5d5b0de437ce6783d20f061906957cc0d96458387d1041cc765fd76bcb8c4ae"
       },
       "broadcast_id": "20261103T013920Z",
@@ -194,7 +197,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347200/viertes-kind-von-brad-pitt-legt-namen-des-vaters-ab?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000347200/viertes-kind-von-brad-pitt-legt-namen-des-vaters-ab?ref=rss",
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "39470cc2890fa80a4454568de4d6999e97696f70eacfa2ff27c0eb9afaa0cce3"
       }
     },
@@ -271,7 +277,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347198/alaba-club-udinese-trennt-sich-von-trainer-runjaic?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000347198/alaba-club-udinese-trennt-sich-von-trainer-runjaic?ref=rss",
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "ed17e88592f26350533bc8fbf327386bccd2cf52bc2de92b3ebdc98e896dbb4f"
       }
     },
@@ -308,7 +317,7 @@
     {
       "id": "20b58d50421ad067ce3040f2",
       "title": "Zweifacher Vater stirbt, weil er Möwe retten will",
-      "text": "Ein 31-jähriger Amerikaner gab sich im US-Bundesstaat Florida Mühe, eine Möwe aus einer Angelschnur zu befreien – und verlor bei der Aktion sein Leben.",
+      "text": "Ein 31-jähriger Amerikaner gab sich im US-Bundesstaat Florida Mühe, eine Möwe aus einer Angelschnur zu befreien – und verlor bei der Aktion sein Leben.\n\nWilliam „Stone“ Romberg brach Ende Oktober gemeinsam mit seinen Freunden in der Nähe von Panama City Beach zu einem Angelausflug auf, berichtet der US-Sender „WJHG-TV“. Als plötzlich eine Möwe in seiner Angelschnur hängen geblieben sei.\n\nUm sie aus dem Haken zu befreien, sei der zweifache Familienvater ins Wasser gegangen. Doch das Unterfangen war schwieriger als gedacht. Der Haken wie auch der Vogel sollen sich in seiner Hand verfangen haben.\n\nStarke StrömungAls der 32-Jährige Richtung Ufer zurückschwimmen wollte, sei er in eine starke Strömung geraten. Immer weiter sei er aufs Meer hinausgetragen worden. Die Freunde mussten die Tragödie mitansehen: Anfangs soll noch Blickkontakt möglich gewesen sein.\n\nIn Angelschnur verwickeltDann habe sich Romberg immer mehr in der Angelschnur verwickelt. Bis er sich dem Bericht nach kaum noch über Wasser halten konnte. Als es den Freunden schließlich gelungen sei, den Mann aus dem Wasser zu ziehen, habe es für ihn keine Rettung mehr gegeben.\n\nDer 32-Jährige hinterlässt eine Ehefrau und zwei kleine Töchter.\n\nLiebe Leserin, lieber Leser, die Kommentarfunktion steht Ihnen ab 6 Uhr wieder wie gewohnt zur Verfügung. Mit freundlichen Grüßendas krone.at-Team\n\nHinweis in eigener Sache: Das krone.at-Forum präsentiert sich ab sofort in neuem Design! Wir freuen uns über konstruktives Feedback. Damit die Diskussionen in den Kommentarbereichen beim jeweiligen Thema bleiben, können Sie uns Rückmeldungen hier hinterlassen.\n\nUser-Beiträge geben nicht notwendigerweise die Meinung des Betreibers/der Redaktion bzw. von Krone Multimedia (KMM) wieder. In diesem Sinne distanziert sich die Redaktion/der Betreiber von den Inhalten in diesem Diskussionsforum. KMM behält sich insbesondere vor, gegen geltendes Recht verstoßende, den guten Sitten oder der Netiquette widersprechende bzw. dem Ansehen von KMM zuwiderlaufende Beiträge zu löschen, diesbezüglichen Schadenersatz gegenüber dem betreffenden User geltend zu machen, die Nutzer-Daten zu Zwecken der Rechtsverfolgung zu verwenden und strafrechtlich relevante Beiträge zur Anzeige zu bringen (siehe auch AGB). Hier können Sie das Community-Team via unserer Melde- und Abhilfestelle kontaktieren.",
       "url": "https://www.krone.at/4359656",
       "published_at": 1793655240.0,
       "first_seen_at": 1793669935.996289,
@@ -336,11 +345,20 @@
       "rss_text": "Ein 31-jähriger Amerikaner gab sich im US-Bundesstaat Florida Mühe, eine Möwe aus einer Angelschnur zu befreien – und verlor bei der Aktion sein Leben.",
       "rss_revision_at": 1793655240.0,
       "content_kind": "news",
-      "text_origin": "rss",
+      "text_origin": "linked_article",
       "article_fetch": {
-        "status": "deferred",
-        "rss_fingerprint": "38b7e5a0fe044f5ec78ab39564a7cb8f2a3eb5ce482c11760e817005fc3fcf9d"
-      }
+        "status": "success",
+        "method": "article_dom",
+        "page_title": "Zweifacher Vater stirbt, weil er Möwe retten will",
+        "canonical_url": "https://www.krone.at/4359656",
+        "resolved_url": "https://www.krone.at/4359656",
+        "requested_url": "https://www.krone.at/4359656",
+        "last_attempt_at": 1793672930.258226,
+        "rss_fingerprint": "38b7e5a0fe044f5ec78ab39564a7cb8f2a3eb5ce482c11760e817005fc3fcf9d",
+        "fetched_at": 1793672930.258226,
+        "text_sha256": "7da8cb6c66662d6245094569d34b07e28208dc30078ae21754792ad8705e4060"
+      },
+      "article_text": "Ein 31-jähriger Amerikaner gab sich im US-Bundesstaat Florida Mühe, eine Möwe aus einer Angelschnur zu befreien – und verlor bei der Aktion sein Leben.\n\nWilliam „Stone“ Romberg brach Ende Oktober gemeinsam mit seinen Freunden in der Nähe von Panama City Beach zu einem Angelausflug auf, berichtet der US-Sender „WJHG-TV“. Als plötzlich eine Möwe in seiner Angelschnur hängen geblieben sei.\n\nUm sie aus dem Haken zu befreien, sei der zweifache Familienvater ins Wasser gegangen. Doch das Unterfangen war schwieriger als gedacht. Der Haken wie auch der Vogel sollen sich in seiner Hand verfangen haben.\n\nStarke StrömungAls der 32-Jährige Richtung Ufer zurückschwimmen wollte, sei er in eine starke Strömung geraten. Immer weiter sei er aufs Meer hinausgetragen worden. Die Freunde mussten die Tragödie mitansehen: Anfangs soll noch Blickkontakt möglich gewesen sein.\n\nIn Angelschnur verwickeltDann habe sich Romberg immer mehr in der Angelschnur verwickelt. Bis er sich dem Bericht nach kaum noch über Wasser halten konnte. Als es den Freunden schließlich gelungen sei, den Mann aus dem Wasser zu ziehen, habe es für ihn keine Rettung mehr gegeben.\n\nDer 32-Jährige hinterlässt eine Ehefrau und zwei kleine Töchter.\n\nLiebe Leserin, lieber Leser, die Kommentarfunktion steht Ihnen ab 6 Uhr wieder wie gewohnt zur Verfügung. Mit freundlichen Grüßendas krone.at-Team\n\nHinweis in eigener Sache: Das krone.at-Forum präsentiert sich ab sofort in neuem Design! Wir freuen uns über konstruktives Feedback. Damit die Diskussionen in den Kommentarbereichen beim jeweiligen Thema bleiben, können Sie uns Rückmeldungen hier hinterlassen.\n\nUser-Beiträge geben nicht notwendigerweise die Meinung des Betreibers/der Redaktion bzw. von Krone Multimedia (KMM) wieder. In diesem Sinne distanziert sich die Redaktion/der Betreiber von den Inhalten in diesem Diskussionsforum. KMM behält sich insbesondere vor, gegen geltendes Recht verstoßende, den guten Sitten oder der Netiquette widersprechende bzw. dem Ansehen von KMM zuwiderlaufende Beiträge zu löschen, diesbezüglichen Schadenersatz gegenüber dem betreffenden User geltend zu machen, die Nutzer-Daten zu Zwecken der Rechtsverfolgung zu verwenden und strafrechtlich relevante Beiträge zur Anzeige zu bringen (siehe auch AGB). Hier können Sie das Community-Team via unserer Melde- und Abhilfestelle kontaktieren."
     },
     {
       "id": "310e8d36bafcc3a0348d469b",
@@ -500,7 +518,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41413981/spaeter-prozess-um-in-wien-niedergestochenen-opernsaenger",
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "57f4f2f2b2c90cad4d7215de9a91e7a55f02b01429834b112134ac0968b1c047"
       }
     },
@@ -534,7 +555,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41413299/uvc-graz-entschied-packendes-derby-in-hartberg-fuer-sich",
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "96b7e1798a86552af55cc487d4731e272e7717513d0453a265646e631a5af7ab"
       }
     },
@@ -632,7 +656,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346752/alles-was-ihr-ueber-die-midterms-wissen-muesst?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346752/alles-was-ihr-ueber-die-midterms-wissen-muesst?ref=rss",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "9e47b057df2b16f355d4644f9e901d4be80bd7bbd8d2c3021c25d002c5da6f6c"
       }
     },
@@ -660,7 +684,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347139/385-statt-120-us-dollar-ram-krise-macht-den-teuersten-raspberry-pi-richtig-teuer?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347139/385-statt-120-us-dollar-ram-krise-macht-den-teuersten-raspberry-pi-richtig-teuer?ref=rss",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "c249e2a4a191aee5270012aab611f5a10619a7e344b39172d6fda2f1e3c31acb"
       }
     },
@@ -751,10 +775,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347194/halloween-s252223igkeiten-mit-metall-in-mehreren-bundesl228ndern-gefunden?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347194/halloween-s252223igkeiten-mit-metall-in-mehreren-bundesl228ndern-gefunden?ref=rss",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "3743f16cfcd671d4f0eddb67551fe2ce7003cad0f8aa89f685cddfd0e176ab5d"
       }
     },
@@ -869,7 +893,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347192/social-media-sucht-snapchat-konzern-in-den-usa-schloss-vergleich?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347192/social-media-sucht-snapchat-konzern-in-den-usa-schloss-vergleich?ref=rss",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "3c592dc23b3c726d5a6526e2595ff69bf1f5398d554e589022e86821c2a52dbe"
       }
     },
@@ -1008,7 +1032,7 @@
     {
       "id": "a411a4d52bac03ef847373be",
       "title": "Social-Media-Sucht: Snapchat entgeht Prozess mit Vergleich",
-      "text": "Wenige Tage nach der Facebook-Mutter Meta hat auch der Snapchat-Mutterkonzern Snap einen US-Prozess um mutmaßliche Social-Media-Sucht mit einem Vergleich abgewendet. Das erklärten die Anwälte der Klägerinnen heute – nur zwei Tage vor dem geplanten Beginn der Eröffnungsplädoyers vor einem Gericht in Los Angeles. Die Höhe des Vergleichs wurde nicht bekannt.\n\nDie beiden jungen Klägerinnen hatten Snapchat vorgeworfen, so konzipiert zu sein, dass sie die App abhängig mache – mit der Folge von Depressionen, Angstzuständen und Essstörungen.\n\nDie Anwälte erklärten, sie seien stolz darauf, Gerechtigkeit für ihre Mandanten erreicht zu haben. „Unser oberstes Ziel ist es, diese Social-Media-Unternehmen dafür zur Verantwortung zu ziehen, wie sich ihr Handeln auf Millionen von Kindern im ganzen Land ausgewirkt hat, und diese Vergleiche ermöglichen es uns, weiter auf dieses Ziel hinzuarbeiten.“ Snap erklärte, das Unternehmen sei erfreut, diese Angelegenheit einvernehmlich beilegen zu können.\n\nErst am Freitag hatte Meta einen Prozess mit einem Vergleich abgewendet. Ein Anwalt der Klägerinnen sprach von einer „gerechten“ Vereinbarung. Inhalte des Vergleichs wurden nicht bekannt.\n\nIn den vergangenen Jahren sind in den USA Tausende Klagen wegen des Vorwurfs eingereicht worden, Social-Media-Plattformen würden Kindern und Jugendlichen schaden. Ein erstes solches Musterverfahren ging im März in Los Angeles mit einer wegweisenden Entscheidung zu Ende: Eine Jury verurteilte Meta und Google zur Zahlung von sechs Millionen Dollar an eine 20-jährige Klägerin. Diese hatte Instagram und YouTube vorgeworfen, sie als Minderjährige abhängig gemacht und ihr schwere psychische Schäden zugefügt zu haben.",
+      "text": "Wenige Tage nach der Facebook-Mutter Meta hat auch der Snapchat-Mutterkonzern Snap einen US-Prozess um mutmaßliche Social-Media-Sucht mit einem Vergleich abgewendet. Das erklärten die Anwälte der Klägerinnen gestern – nur zwei Tage vor dem geplanten Beginn der Eröffnungsplädoyers vor einem Gericht in Los Angeles. Die Höhe des Vergleichs wurde nicht bekannt.\n\nDie beiden jungen Klägerinnen hatten Snapchat vorgeworfen, so konzipiert zu sein, dass sie die App abhängig mache – mit der Folge von Depressionen, Angstzuständen und Essstörungen.\n\nDie Anwälte erklärten, sie seien stolz darauf, Gerechtigkeit für ihre Mandanten erreicht zu haben. „Unser oberstes Ziel ist es, diese Social-Media-Unternehmen dafür zur Verantwortung zu ziehen, wie sich ihr Handeln auf Millionen von Kindern im ganzen Land ausgewirkt hat, und diese Vergleiche ermöglichen es uns, weiter auf dieses Ziel hinzuarbeiten.“ Snap erklärte, das Unternehmen sei erfreut, diese Angelegenheit einvernehmlich beilegen zu können.\n\nErst am Freitag hatte Meta einen Prozess mit einem Vergleich abgewendet. Ein Anwalt der Klägerinnen sprach von einer „gerechten“ Vereinbarung. Inhalte des Vergleichs wurden nicht bekannt.\n\nIn den vergangenen Jahren sind in den USA Tausende Klagen wegen des Vorwurfs eingereicht worden, Social-Media-Plattformen würden Kindern und Jugendlichen schaden. Ein erstes solches Musterverfahren ging im März in Los Angeles mit einer wegweisenden Entscheidung zu Ende: Eine Jury verurteilte Meta und Google zur Zahlung von sechs Millionen Dollar an eine 20-jährige Klägerin. Diese hatte Instagram und YouTube vorgeworfen, sie als Minderjährige abhängig gemacht und ihr schwere psychische Schäden zugefügt zu haben.",
       "url": "https://orf.at/stories/3446899/",
       "published_at": 1793646564.0,
       "first_seen_at": 1793650700.578885,
@@ -1020,7 +1044,7 @@
       "rss_revision_at": 1793646564.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Wenige Tage nach der Facebook-Mutter Meta hat auch der Snapchat-Mutterkonzern Snap einen US-Prozess um mutmaßliche Social-Media-Sucht mit einem Vergleich abgewendet. Das erklärten die Anwälte der Klägerinnen heute – nur zwei Tage vor dem geplanten Beginn der Eröffnungsplädoyers vor einem Gericht in Los Angeles. Die Höhe des Vergleichs wurde nicht bekannt.\n\nDie beiden jungen Klägerinnen hatten Snapchat vorgeworfen, so konzipiert zu sein, dass sie die App abhängig mache – mit der Folge von Depressionen, Angstzuständen und Essstörungen.\n\nDie Anwälte erklärten, sie seien stolz darauf, Gerechtigkeit für ihre Mandanten erreicht zu haben. „Unser oberstes Ziel ist es, diese Social-Media-Unternehmen dafür zur Verantwortung zu ziehen, wie sich ihr Handeln auf Millionen von Kindern im ganzen Land ausgewirkt hat, und diese Vergleiche ermöglichen es uns, weiter auf dieses Ziel hinzuarbeiten.“ Snap erklärte, das Unternehmen sei erfreut, diese Angelegenheit einvernehmlich beilegen zu können.\n\nErst am Freitag hatte Meta einen Prozess mit einem Vergleich abgewendet. Ein Anwalt der Klägerinnen sprach von einer „gerechten“ Vereinbarung. Inhalte des Vergleichs wurden nicht bekannt.\n\nIn den vergangenen Jahren sind in den USA Tausende Klagen wegen des Vorwurfs eingereicht worden, Social-Media-Plattformen würden Kindern und Jugendlichen schaden. Ein erstes solches Musterverfahren ging im März in Los Angeles mit einer wegweisenden Entscheidung zu Ende: Eine Jury verurteilte Meta und Google zur Zahlung von sechs Millionen Dollar an eine 20-jährige Klägerin. Diese hatte Instagram und YouTube vorgeworfen, sie als Minderjährige abhängig gemacht und ihr schwere psychische Schäden zugefügt zu haben.",
+      "article_text": "Wenige Tage nach der Facebook-Mutter Meta hat auch der Snapchat-Mutterkonzern Snap einen US-Prozess um mutmaßliche Social-Media-Sucht mit einem Vergleich abgewendet. Das erklärten die Anwälte der Klägerinnen gestern – nur zwei Tage vor dem geplanten Beginn der Eröffnungsplädoyers vor einem Gericht in Los Angeles. Die Höhe des Vergleichs wurde nicht bekannt.\n\nDie beiden jungen Klägerinnen hatten Snapchat vorgeworfen, so konzipiert zu sein, dass sie die App abhängig mache – mit der Folge von Depressionen, Angstzuständen und Essstörungen.\n\nDie Anwälte erklärten, sie seien stolz darauf, Gerechtigkeit für ihre Mandanten erreicht zu haben. „Unser oberstes Ziel ist es, diese Social-Media-Unternehmen dafür zur Verantwortung zu ziehen, wie sich ihr Handeln auf Millionen von Kindern im ganzen Land ausgewirkt hat, und diese Vergleiche ermöglichen es uns, weiter auf dieses Ziel hinzuarbeiten.“ Snap erklärte, das Unternehmen sei erfreut, diese Angelegenheit einvernehmlich beilegen zu können.\n\nErst am Freitag hatte Meta einen Prozess mit einem Vergleich abgewendet. Ein Anwalt der Klägerinnen sprach von einer „gerechten“ Vereinbarung. Inhalte des Vergleichs wurden nicht bekannt.\n\nIn den vergangenen Jahren sind in den USA Tausende Klagen wegen des Vorwurfs eingereicht worden, Social-Media-Plattformen würden Kindern und Jugendlichen schaden. Ein erstes solches Musterverfahren ging im März in Los Angeles mit einer wegweisenden Entscheidung zu Ende: Eine Jury verurteilte Meta und Google zur Zahlung von sechs Millionen Dollar an eine 20-jährige Klägerin. Diese hatte Instagram und YouTube vorgeworfen, sie als Minderjährige abhängig gemacht und ihr schwere psychische Schäden zugefügt zu haben.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -1028,10 +1052,10 @@
         "canonical_url": "https://orf.at/stories/3446899/",
         "resolved_url": "https://orf.at/stories/3446899/",
         "requested_url": "https://orf.at/stories/3446899/",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "4f85920386e5247b3fcf5763f5e7ad56bc05c208341105cf6706a7eef8a17104",
-        "fetched_at": 1793650700.578885,
-        "text_sha256": "b5c7c55f5918db2b7ea97f9e6d234e5935d67a993adc66d03fd8cf48c305b22b"
+        "fetched_at": 1793672930.258226,
+        "text_sha256": "dcbc5b92c145caacc3ab3e73daf3bb64d8be37f5a4ce6cb96dec43df48b7f02c"
       }
     },
     {
@@ -1138,7 +1162,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347162/einwanderungsland-oesterreich-in-wien-soll-ein-gastarbeiter-denkmal-errichtet-werden?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347162/einwanderungsland-oesterreich-in-wien-soll-ein-gastarbeiter-denkmal-errichtet-werden?ref=rss",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "407bb9a8d77c4e4a3f4caa527af61d8682dc6bb194fe48939d49332b83865377"
       }
     },
@@ -1166,7 +1190,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347191/k228rntner-252berwiesen-anlagebetr252gern-sechsstelligen-betrag?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347191/k228rntner-252berwiesen-anlagebetr252gern-sechsstelligen-betrag?ref=rss",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "f5266b4cb7964d6a4dec3304f511e8a718e1846ed146669abd8169751af2fcbc"
       }
     },
@@ -1193,9 +1217,9 @@
         "canonical_url": "https://orf.at/stories/3446898/",
         "resolved_url": "https://orf.at/stories/3446898/",
         "requested_url": "https://orf.at/stories/3446898/",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "e44d59ed11a13384e98425485402b0f75ca28282461161c63b762c4076d158cf",
-        "fetched_at": 1793650700.578885,
+        "fetched_at": 1793672930.258226,
         "text_sha256": "b14d07e30d5538fd20a6be5613d3cc47d75982945e1dcd4ab72d7d5664e43c72"
       }
     },
@@ -1291,10 +1315,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41413902/liezen-baggerfahrer-von-kette-getroffen-und-schwer-verletzt",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "ac5a0e6ff95e7eb7d50148dbe4946035ad26ef6f402b6bdfdabcaeac2434a3cf"
       }
     },
@@ -1779,7 +1803,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347025/auch-jeffrey-epstein-beteiligt-erneut-vergewaltigungsvorwuerfe-gegen-donald-trump?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347025/auch-jeffrey-epstein-beteiligt-erneut-vergewaltigungsvorwuerfe-gegen-donald-trump?ref=rss",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "4610ba8c9edfec88108e5adeaa6d9f7adf412a83a10adbc771b9faf2263c80cc"
       }
     },
@@ -1862,10 +1886,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41412464/die-folgen-der-verunglueckten-wehrreform-debatte",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "80aef22bbdf2f0146714ba2a8d9c5282545b446d256107e33585d4b00e0ffff8"
       }
     },
@@ -1898,10 +1922,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41412329/depot-warnt-nach-insolvenz-vor-betruegerischen-fakeshops",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "98af264e50c1c9c4655c8282039fb61bc657df2d38f8b354ccf1dab427b90d48"
       },
       "broadcast_id": "20261102T182947Z",
@@ -1931,7 +1955,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347184/merz-spricht-sich-bei-steinmeier-nachfolge-f252r-frau-aus?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347184/merz-spricht-sich-bei-steinmeier-nachfolge-f252r-frau-aus?ref=rss",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "f7d58944bbf2b107b34e690eb75ea987bd84c5e5270d0e51cce959e1042ba3bf"
       }
     },
@@ -2290,7 +2314,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347179/libanon-schaltet-beh246rden-wegen-schulden-strom-ab?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347179/libanon-schaltet-beh246rden-wegen-schulden-strom-ab?ref=rss",
         "last_attempt_at": 1793650700.578885,
@@ -2318,7 +2342,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346280/der-nachruf-oder-wie-schreibe-ich-eine-grabrede-ein-essay-von-mario-schlembach?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000346280/der-nachruf-oder-wie-schreibe-ich-eine-grabrede-ein-essay-von-mario-schlembach?ref=rss",
         "last_attempt_at": 1793650700.578885,
@@ -2346,7 +2370,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347175/olympia-sieben-bewerbungen-f252r-ausrichtung-von-sommerspielen-2036?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347175/olympia-sieben-bewerbungen-f252r-ausrichtung-von-sommerspielen-2036?ref=rss",
         "last_attempt_at": 1793650700.578885,
@@ -2809,7 +2833,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347148/squiggly-sudoku-s6434b?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347148/squiggly-sudoku-s6434b?ref=rss",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "203116dc03972f670128724c22e769bb099830a92e6ecc56b7323dbd21ab5c90"
       }
     },
@@ -4051,6 +4075,34 @@
       "rss_revision_at": 1793632441.0,
       "content_kind": "news",
       "text_origin": "rss"
+    },
+    {
+      "id": "3e01a61823f1bb2f691cd937",
+      "title": "XSudoku mittel 6560b",
+      "text": "",
+      "url": "https://www.derstandard.at/story/3000000347146/xsudoku-mittel-6560b?ref=rss",
+      "published_at": 1793632441.0,
+      "first_seen_at": 1793672930.258226,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/a1yzpQ/rs:fill:150:0/plain/lido-images/2023/05/24/0c90f7d1-a795-401c-adfe-1fd553d0e611.png",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "",
+      "rss_revision_at": 1793632441.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347146/xsudoku-mittel-6560b?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000347146/xsudoku-mittel-6560b?ref=rss",
+        "last_attempt_at": 1793672930.258226,
+        "rss_fingerprint": "cdd1bf0a2b8c79cd117c26ba5924ded04d295d76c00f6fe66e5ab136a384035e"
+      }
     },
     {
       "id": "7efaa014cd2aec92799b283f",
@@ -7326,6 +7378,31 @@
       }
     },
     {
+      "id": "81c9d20f077463066b7ac0a0",
+      "title": "Wiener Kaffehauskultur: Bitte Handyfrei?",
+      "text": "Mein Forum: Diskutieren Sie dieses Thema mit der STANDARD-Community",
+      "url": "https://www.derstandard.at/story/3000000347003/wiener-kaffehauskultur-bitte-handyfrei?ref=rss",
+      "published_at": 1793617200.0,
+      "first_seen_at": 1793672930.258226,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/rweFYQ/rs:fill:150:0/plain/lido-images/2026/11/02/fed3a70e-13ae-40ca-88f6-91b32bcc8979.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Mein Forum: Diskutieren Sie dieses Thema mit der STANDARD-Community",
+      "rss_revision_at": 1793617200.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "deferred",
+        "rss_fingerprint": "d071e27a7db412eec6a58303535c07d9fb9e3e4c92ba2a3cb10e3e01be70bafa"
+      }
+    },
+    {
       "id": "bcf1fa33e838ec7a6e40052b",
       "title": "Rave in Bärnbach: Pipifein brachte Halle zum Beben",
       "text": "Mit fünf DJs, einer außergewöhnlichen Location und bester Stimmung wurde die Industriehalle von Stölzle Oberglas in Bärnbach zur Halloween-Partyzone.",
@@ -10280,9 +10357,9 @@
         "canonical_url": "https://orf.at/stories/3446817/",
         "resolved_url": "https://orf.at/stories/3446817/",
         "requested_url": "https://orf.at/stories/3446817/",
-        "last_attempt_at": 1793644153.788403,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "b49d1264f5858d35b6fc3e5ca93b7bbcf008aa4cea67a0fa678b23bb5e977144",
-        "fetched_at": 1793644153.788403,
+        "fetched_at": 1793672930.258226,
         "text_sha256": "f2f8ebff4a8a8adc25cd54cb818608a2fe0b3a87ac27792532fee4f7099da855"
       }
     },
@@ -10533,9 +10610,9 @@
         "canonical_url": "https://orf.at/stories/3446814/",
         "resolved_url": "https://orf.at/stories/3446814/",
         "requested_url": "https://orf.at/stories/3446814/",
-        "last_attempt_at": 1793644153.788403,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "380493509461377bb2a56436361ffb6dd1e6d422b05f679df14d599d85d369e6",
-        "fetched_at": 1793644153.788403,
+        "fetched_at": 1793672930.258226,
         "text_sha256": "62174ef1a8fc58cafed576dc3b27c35423439d03b014b1aca40e7b6303abec86"
       }
     },
@@ -11283,9 +11360,9 @@
         "canonical_url": "https://orf.at/stories/3446811/",
         "resolved_url": "https://orf.at/stories/3446811/",
         "requested_url": "https://orf.at/stories/3446811/",
-        "last_attempt_at": 1793650700.578885,
+        "last_attempt_at": 1793672930.258226,
         "rss_fingerprint": "aa04cc9db3294e070328c2a13f4608a88061182a89754a3cd645de131d5bf4b1",
-        "fetched_at": 1793650700.578885,
+        "fetched_at": 1793672930.258226,
         "text_sha256": "40cd0fdf62482f888016de085141dfde3dfac345564efb17d3abc53b9827d5ee"
       }
     },
@@ -12271,37 +12348,37 @@
     {
       "url": "https://www.derstandard.at/rss",
       "name": "derStandard.at | Nachrichten, Kommentare & Community",
-      "last_success_at": 1793669935.996289
+      "last_success_at": 1793672930.258226
     },
     {
       "url": "https://www.derstandard.at/rss/live",
       "name": "Live - derStandard.at",
-      "last_success_at": 1793669935.996289
+      "last_success_at": 1793672930.258226
     },
     {
       "url": "https://api.krone.at/v1/rss/rssfeed-nachrichten.html",
       "name": "krone.at - Nachrichten",
-      "last_success_at": 1793669935.996289
+      "last_success_at": 1793672930.258226
     },
     {
       "url": "https://rss.orf.at/news.xml",
       "name": "news.ORF.at",
-      "last_success_at": 1793669935.996289
+      "last_success_at": 1793672930.258226
     },
     {
       "url": "https://www.kleinezeitung.at/rss/steiermark",
       "name": "Kleine Zeitung - Steiermark",
-      "last_success_at": 1793669935.996289
+      "last_success_at": 1793672930.258226
     },
     {
       "url": "https://www.kleinezeitung.at/rss/oesterreich",
       "name": "Kleine Zeitung - Österreich",
-      "last_success_at": 1793669935.996289
+      "last_success_at": 1793672930.258226
     },
     {
       "url": "https://www.bmi.gv.at/rss/stmk_presse.xml",
       "name": "Polizei Steiermark - Presse",
-      "last_success_at": 1793669935.996289
+      "last_success_at": 1793672930.258226
     }
   ],
   "seen": {
@@ -12483,22 +12560,22 @@
     "7c706ee6b6bbaa8693415306": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1737119721.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "40ebafdcd48ccb3f94a90b72": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1790867488.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4807f8d9057ff8a6a8b77a73": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1791183600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "3c5ad0f32fb65610d1280b97": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1790668800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "23d5ca2a6943a6339422d026": {
       "first_seen_at": 1793270502.046248,
@@ -12538,7 +12615,7 @@
     "a3fed826e1fb47dba62e96c3": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793109600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f6d211a0cc3ce07b7bbd4335": {
       "first_seen_at": 1793270502.046248,
@@ -12968,12 +13045,12 @@
     "d93ee0da14046ffb1de48f15": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793035058.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "77b1be4efd411efa4866101a": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793160000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "205aff84c19a95a490c84901": {
       "first_seen_at": 1793270502.046248,
@@ -13033,22 +13110,22 @@
     "88ad8bd68b22d57bc4263aef": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793163600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "1c3d4b2a82f6408ab87dca1b": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1792576800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "457d630ab1a74fdafff6d55a": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1792934887.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "0139be499bbc65d4c3fbb5d7": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1792669953.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "8debab3e10be5721cee9dc9e": {
       "first_seen_at": 1793270502.046248,
@@ -13058,7 +13135,7 @@
     "cade3847c49c3d244f1776dc": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1792581499.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "6c9a8c0ed3cc1b460cea8822": {
       "first_seen_at": 1793270502.046248,
@@ -13088,117 +13165,117 @@
     "a4d049e290d75d66c724c68c": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1792908265.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "852808d93657b591c6fb1b9c": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1736688830.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b789e80c677d9f614078b74f": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1767360314.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ed502645a02c7a73c13f5203": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1707476400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "1fd555d23f457d617d75a9fd": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1693225268.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "bdf577ddd58926e0b96a36cc": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1725959420.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "75e4a1dc1a7445d30e26d491": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1697450400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c246dd820de025c46880df1b": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1647603118.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b3353e121e29808f01a2145f": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1672920931.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c09ea03a3f9be76d9417dcfa": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1646380936.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "3749055cf58f322afe3d4357": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1741262400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c8a77ad45c344c7e8ba39ba1": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1580984544.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "da7c4257a8fbbbca9e66e474": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1783422000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "bb695989274d076c0caf94c8": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1652118267.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b7ef7ef89a751e75bb2b9aad": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1731502832.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "02fd0f7957b1c503812a1b63": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1643902349.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "efb6e2bd86b608a759573d62": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1675776645.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "70368de1cdc233361d67ea31": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1725977784.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "93f52ae3a8d894dc0c4ca0fe": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1760088045.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "90944cc43119eaaa9517249c": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1636444370.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "1183f5916451159656ce0bcf": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793116210.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "af8f13c973eca9bfb26be25a": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1792829027.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "47473cd5f5a16a682b9a5771": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1792741426.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "da884ad4b4e95a7ea2505d93": {
       "first_seen_at": 1793270502.046248,
@@ -14308,42 +14385,42 @@
     "6254743a711258a5d52ee39e": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793262360.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "0579f7d466837ecf8042f613": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793214660.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "0b89bacd3df0e5456576ce32": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793180760.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "09d7c88469226acdbc60e57f": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793177820.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "7dcd951bef77d72f31fc4eb4": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793166060.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ddc5acaf29e80ef1f503ff12": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793164320.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b10d8b6004564af701a15fd6": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793126340.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "8bf67efae58ea9f12a48fad8": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793124540.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "7a20e45bfcfc1a1834b8ec36": {
       "first_seen_at": 1793270502.046248,
@@ -14448,7 +14525,7 @@
     "5a27aa478e2c435b6d47f9bb": {
       "first_seen_at": 1793271054.529431,
       "published_at": 1793265180.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "7d187654af6582060607cd58": {
       "first_seen_at": 1793274585.185946,
@@ -14968,7 +15045,7 @@
     "4b9098c900e1d1e57f95faf8": {
       "first_seen_at": 1793289752.872245,
       "published_at": 1793282400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "3b12d581ee0b3b83a151c910": {
       "first_seen_at": 1793289752.872245,
@@ -15353,12 +15430,12 @@
     "e45d7c473a50abfb71fbe205": {
       "first_seen_at": 1793289752.872245,
       "published_at": 1793280960.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "d4fabda4fd32acfb3b93eb77": {
       "first_seen_at": 1793289752.872245,
       "published_at": 1793279580.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "8044042e6686288bb3b0645d": {
       "first_seen_at": 1793293110.554284,
@@ -15898,7 +15975,7 @@
     "a1ba9ac19fbc1f13900f793c": {
       "first_seen_at": 1793307765.147039,
       "published_at": 1793291100.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "55e4ed3a6d6cdb2af2d95554": {
       "first_seen_at": 1793310673.280727,
@@ -16068,7 +16145,7 @@
     "e36702e62a40696925eb464c": {
       "first_seen_at": 1793342347.391874,
       "published_at": 1790151541.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "466b488465ec9a055dbc9818": {
       "first_seen_at": 1793342347.391874,
@@ -16463,7 +16540,7 @@
     "384e028a462c5c4f5ef8b79a": {
       "first_seen_at": 1793367738.781587,
       "published_at": 1793358000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c8aaade40e9cec69809094d3": {
       "first_seen_at": 1793367738.781587,
@@ -16693,7 +16770,7 @@
     "2a97ca0008b1b8f3e6ba9695": {
       "first_seen_at": 1793367738.781587,
       "published_at": 1793350716.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "69675d045a0a4a5acbdcefd8": {
       "first_seen_at": 1793367738.781587,
@@ -17228,12 +17305,12 @@
     "7347440e7ec326d5e6303dd7": {
       "first_seen_at": 1793367738.781587,
       "published_at": 1793353620.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f7e122e6c931e95c1e579b1a": {
       "first_seen_at": 1793367738.781587,
       "published_at": 1793350320.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a6eb1303e3f51fdda7781bc6": {
       "first_seen_at": 1793386510.326668,
@@ -17248,7 +17325,7 @@
     "2e8f17aed2eacb6cfd681351": {
       "first_seen_at": 1793386510.326668,
       "published_at": 1793377689.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "50c857b9d024a1d49097ac20": {
       "first_seen_at": 1793386510.326668,
@@ -17313,7 +17390,7 @@
     "51f331f7f6a98bb521e77579": {
       "first_seen_at": 1793386510.326668,
       "published_at": 1793368800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "897d063561b7e0dd0da9a115": {
       "first_seen_at": 1793386510.326668,
@@ -17858,12 +17935,12 @@
     "eaa3657d849f176112228c8c": {
       "first_seen_at": 1793386510.326668,
       "published_at": 1793364840.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4a826e7c19e81efe728e6674": {
       "first_seen_at": 1793386510.326668,
       "published_at": 1793363640.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "7fa5bb089870a56227797373": {
       "first_seen_at": 1793401001.995931,
@@ -18208,7 +18285,7 @@
     "3864674056e59c9db5dd5bbc": {
       "first_seen_at": 1793435629.922773,
       "published_at": 1793426400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "92e716f6ff51449438cf1bd4": {
       "first_seen_at": 1793435629.922773,
@@ -18238,7 +18315,7 @@
     "142bc3711ad25f55501316a8": {
       "first_seen_at": 1793435629.922773,
       "published_at": 1793358000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f903529c306ff88b408106e2": {
       "first_seen_at": 1793435629.922773,
@@ -18278,7 +18355,7 @@
     "7fa81bc411637bbf3e4d9840": {
       "first_seen_at": 1793435629.922773,
       "published_at": 1793427900.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "0e13473c3c8847b2f0d23fb8": {
       "first_seen_at": 1793435629.922773,
@@ -18658,7 +18735,7 @@
     "87c300aa428cf17d2f20a6b7": {
       "first_seen_at": 1793435629.922773,
       "published_at": 1793421720.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e1605bd242c9972f2a7b40ee": {
       "first_seen_at": 1793457800.281004,
@@ -18743,7 +18820,7 @@
     "b9710ecda0079b7247abea02": {
       "first_seen_at": 1793457800.281004,
       "published_at": 1793365200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4d76f3274e6f3157d82fd632": {
       "first_seen_at": 1793457800.281004,
@@ -19278,7 +19355,7 @@
     "7d61d965bbd731bea43e3b99": {
       "first_seen_at": 1793469237.94067,
       "published_at": 1793466000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "fa7fca19fdc4dd938b10df46": {
       "first_seen_at": 1793469237.94067,
@@ -19508,7 +19585,7 @@
     "2417c1058633c7cc810527d9": {
       "first_seen_at": 1793469237.94067,
       "published_at": 1793467800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "67753b1ea19631b15ec6e596": {
       "first_seen_at": 1793469237.94067,
@@ -19623,7 +19700,7 @@
     "b79445e15004409dc82437e4": {
       "first_seen_at": 1793469237.94067,
       "published_at": 1793459100.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "89bfe73d786cb3afe11ccb42": {
       "first_seen_at": 1793472761.633703,
@@ -19713,7 +19790,7 @@
     "e1e7a181a61bdb857c9f1f54": {
       "first_seen_at": 1793472761.633703,
       "published_at": 1793467500.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "56c605f7ce481bceaee55caf": {
       "first_seen_at": 1793484430.595493,
@@ -19873,7 +19950,7 @@
     "b7f8b17634c0c23c9a6b20ca": {
       "first_seen_at": 1793518194.095912,
       "published_at": 1793509200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "fa9382791f73f96c6ec8872f": {
       "first_seen_at": 1793518194.095912,
@@ -20048,32 +20125,32 @@
     "4f713e9fa5d83035c3594a84": {
       "first_seen_at": 1793518194.095912,
       "published_at": 1793514708.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "1e332df4fcd49e9bbe67cda9": {
       "first_seen_at": 1793518194.095912,
       "published_at": 1793514600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "bdf990a7bbb68165f96cac84": {
       "first_seen_at": 1793518194.095912,
       "published_at": 1793513693.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "31cc48abb1a30b7714eb1b7f": {
       "first_seen_at": 1793518194.095912,
       "published_at": 1793512800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a4864a585f0482e739ecf11f": {
       "first_seen_at": 1793518194.095912,
       "published_at": 1793509200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "7b58d876c4a9203056912c96": {
       "first_seen_at": 1793518194.095912,
       "published_at": 1793509200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "44596099a0170cf8486f8b82": {
       "first_seen_at": 1793518194.095912,
@@ -20083,7 +20160,7 @@
     "78dc07412548c077c8bb71a7": {
       "first_seen_at": 1793518194.095912,
       "published_at": 1793505600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f5d319be439ab136f2ab10d5": {
       "first_seen_at": 1793518194.095912,
@@ -20188,7 +20265,7 @@
     "57c743a9078585598e7b2d69": {
       "first_seen_at": 1793518194.095912,
       "published_at": 1793511240.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "717a53aac6c728b70a488d1f": {
       "first_seen_at": 1793525134.018645,
@@ -20218,7 +20295,7 @@
     "32cf913fc8d60ef8d44c374b": {
       "first_seen_at": 1793525134.018645,
       "published_at": 1793520000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c5d6eae5108c2768b92e6765": {
       "first_seen_at": 1793525134.018645,
@@ -20373,22 +20450,22 @@
     "696b5de0286f772e1fbdd8ad": {
       "first_seen_at": 1793525134.018645,
       "published_at": 1793520000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "cd6ae35f9363db3dab5c7ce4": {
       "first_seen_at": 1793525134.018645,
       "published_at": 1793520000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "055d0dc76d6ddda0f0d2b471": {
       "first_seen_at": 1793525134.018645,
       "published_at": 1793520000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "40f70fdb126f74c8a3d6b1fd": {
       "first_seen_at": 1793525134.018645,
       "published_at": 1793520000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "0be7895d9437ebcf09cf7bf4": {
       "first_seen_at": 1793525134.018645,
@@ -20453,12 +20530,12 @@
     "7830813623b73eb336e8f359": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793540040.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "3287b65d740d144055c5fa42": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793530800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "173f3c2e57735979a485e433": {
       "first_seen_at": 1793543416.683067,
@@ -20473,17 +20550,17 @@
     "1cf30e2e72b3270e82743a70": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793527860.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a26eeb93f38ac7d6bbcbdde9": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793541851.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4615bcc6727f84283657f928": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793526443.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "421bb8f0ac505779f0b17948": {
       "first_seen_at": 1793543416.683067,
@@ -20493,7 +20570,7 @@
     "f0c02e2b18c1a07a88a675f4": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793525760.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "3c9e921e5c761c3b2c2141ec": {
       "first_seen_at": 1793543416.683067,
@@ -20508,12 +20585,12 @@
     "c665898c95a9bf78815efef2": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793533697.0,
-      "last_seen_at": 1793613308.703875
+      "last_seen_at": 1793672930.258226
     },
     "18dbae5dde433d714cb91b5b": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793531901.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "1b6b57cc84fb58b008e823ab": {
       "first_seen_at": 1793543416.683067,
@@ -20773,52 +20850,52 @@
     "a40ce3915e5140ba69b0d099": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793541600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "06c555048faf46420244fb2f": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793536200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "25eb07bda9e1a22db20fab7b": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793534400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4fa87d526e769bd35b3cde55": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793534400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4cd2d7601f7017433c1bb792": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793534400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b069afb803dbc05ab32e8417": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793532859.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "1a6e2b6a72aba1e3b8cc273e": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793530860.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f32de13c824c75df5daf3770": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793530800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "6120e73b4661f349ebb569f9": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793529000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f44e7f40c0370614d4af98dd": {
       "first_seen_at": 1793543416.683067,
       "published_at": 1793527200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "67caf1970a8f15fe00e8be2a": {
       "first_seen_at": 1793543416.683067,
@@ -20908,7 +20985,7 @@
     "38886bb82c1cbe40e487dade": {
       "first_seen_at": 1793551843.54801,
       "published_at": 1793547480.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "339f37c7968c6cbd9a73666c": {
       "first_seen_at": 1793551843.54801,
@@ -20918,7 +20995,7 @@
     "678a60a488bdc179faa39642": {
       "first_seen_at": 1793551843.54801,
       "published_at": 1793550600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "58290c6ff7aebee6a95fbccd": {
       "first_seen_at": 1793551843.54801,
@@ -20928,7 +21005,7 @@
     "6b1197d6bf068409e238b54b": {
       "first_seen_at": 1793551843.54801,
       "published_at": 1793543820.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "fd8407288f0ee856bc2ee1bc": {
       "first_seen_at": 1793551843.54801,
@@ -21068,17 +21145,17 @@
     "78638c4629d6effe3faeecd0": {
       "first_seen_at": 1793551843.54801,
       "published_at": 1793549066.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c52932b498028c6260c534f1": {
       "first_seen_at": 1793551843.54801,
       "published_at": 1793548800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e64e4db0d5e7dca4b898fd6c": {
       "first_seen_at": 1793551843.54801,
       "published_at": 1793545200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "2cac64d34d7d581871335de2": {
       "first_seen_at": 1793551843.54801,
@@ -21133,7 +21210,7 @@
     "8621d4ca87465868cf09fd9e": {
       "first_seen_at": 1793560237.533036,
       "published_at": 1793557800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e91513347df8ced0beff8143": {
       "first_seen_at": 1793560237.533036,
@@ -21153,7 +21230,7 @@
     "9504905407c0aa80b10c2fb1": {
       "first_seen_at": 1793560237.533036,
       "published_at": 1793557887.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "2ed1e4793c2f940d4b23f65a": {
       "first_seen_at": 1793560237.533036,
@@ -21298,7 +21375,7 @@
     "1b98da74b33d81a439d13292": {
       "first_seen_at": 1793560237.533036,
       "published_at": 1793553432.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "0ea4e79b65d34fcc12f6231a": {
       "first_seen_at": 1793560237.533036,
@@ -21333,7 +21410,7 @@
     "d3d9441646ba1604bd9e1462": {
       "first_seen_at": 1793567611.83406,
       "published_at": 1793561580.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "21fb37f722a5a9d35cee7758": {
       "first_seen_at": 1793567611.83406,
@@ -21498,7 +21575,7 @@
     "c409d4e4fb7da8030b465952": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793592000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "8a5b3cf254e9340b4c73f36c": {
       "first_seen_at": 1793605446.374623,
@@ -21508,32 +21585,32 @@
     "294954ccee63820dfe2ea09d": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793602800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "2f7904bd1430696ef898f217": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793601918.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "04eedcb2bd1b47ee7786e565": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793595600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "92af987e07c87853950bf901": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793595600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "d00764598391d4f6874c3cd5": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793602800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f6f943cc6e60b671eed0b5be": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793592000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4f985685ee6b80bbec8b7285": {
       "first_seen_at": 1793605446.374623,
@@ -21543,12 +21620,12 @@
     "d49d514a5ea9fe6005359c52": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793602800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "8c07d9b5752b709cb5b6cf89": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793599309.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "11dc66650b7b84ad0b83f569": {
       "first_seen_at": 1793605446.374623,
@@ -21558,12 +21635,12 @@
     "9aadd66c5c859c6e05de99df": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793592000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e6e8c43f6c366a56592d9db1": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793592000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "6a8de476a5ab0190abf36e51": {
       "first_seen_at": 1793605446.374623,
@@ -21573,17 +21650,17 @@
     "ebe432f34b3714e56b77188c": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793600316.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a48af9d0205d330e6a4707ac": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793602800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e11ccfc2dc32b03f5a18abd1": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793601078.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "fe6fec19109299f583cad7db": {
       "first_seen_at": 1793605446.374623,
@@ -21613,17 +21690,17 @@
     "8f817bf6e0a0a790b1a6ae05": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793596495.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "439fd754082f0c05d9631d21": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793602201.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "5f372fa7fa4a8ecb54042860": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793599200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a5962ee2ceed95180fab1e6f": {
       "first_seen_at": 1793605446.374623,
@@ -21773,42 +21850,42 @@
     "51777ed775be26370e4b7c6a": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793604600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "fb849cc9b708cc9d8d6cd9a8": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793601172.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "967c49f10a1e36f62eb07611": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793599200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "9c4b42b4dd4dbc2ccdcafa37": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793599200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "031e03b691834cdfa8a547e8": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793595600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f0b14c8930de72aca9095d0d": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793595600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "9e72b6337b328b6813a04d4a": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793593800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b9280e77a387eb208386f493": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793592000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "0d2346811b284af5ce92c34c": {
       "first_seen_at": 1793605446.374623,
@@ -21848,7 +21925,7 @@
     "200460c47b1bb1f208d71645": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793598469.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f5eaca636c063c55479f7b0f": {
       "first_seen_at": 1793605446.374623,
@@ -21918,47 +21995,47 @@
     "187004f7d2f5affa9a724755": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793606400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "2ed785387ee89e6ecfadb22f": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793610000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "9a4c75e4c2c236067696a1be": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793606400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "40678560a6b67fba988ccf65": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793606400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4b66f82d7c26dc7e10f9289e": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793608421.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "8388b1630f2a8e94d13b8827": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793606400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "065fe011e306d869b710ac27": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793606400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "1bdec8c6260ca44cff3e5b11": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793610120.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "883ced65b30b638d53a35d98": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793611928.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e718535f2ef927d4e02b936b": {
       "first_seen_at": 1793613308.703875,
@@ -21978,7 +22055,7 @@
     "0375a5cd65459945dd3424cd": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793609226.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "415f0af8a21778e0e08746c1": {
       "first_seen_at": 1793613308.703875,
@@ -22003,7 +22080,7 @@
     "31ee59bc2ede39e9cbfafaef": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793610000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4b66f3db88189a025db15419": {
       "first_seen_at": 1793613308.703875,
@@ -22018,7 +22095,7 @@
     "f0009c6facee56218caa397b": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793609443.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "0992de6dd2e5450d762f44dc": {
       "first_seen_at": 1793613308.703875,
@@ -22028,7 +22105,7 @@
     "1fc458c2432baf470700ba9b": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793611013.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c8fb809b33b75af83a64ae8d": {
       "first_seen_at": 1793613308.703875,
@@ -22113,72 +22190,72 @@
     "ddc34845866269bd4673f8b0": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793611826.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "87f35515a82ba3f54906bcd6": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793611666.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "00a53cbb4d02c578d2f25250": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793610808.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "60fbf47e9ad070de263cca69": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793610000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "1869be144831ae18b05eda85": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793609940.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "fea8ed441aea2f67c2a96b25": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793609662.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "2dcb28e5b3a4cfdff3fa4c3e": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793608486.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "04129aa039810e0ac516e169": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793608200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "495001b6e443636d41713af3": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793608200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "edc9414afd27acfdc23fd061": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793607657.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "8a7da9fd8a293881ad9f9468": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793606400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4007dc41be8321e5219414fc": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793606400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "0b12e80088c4aec48767b412": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793606400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "734eaeacc168e47b5615cbce": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793605653.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "d10f4b0a6faa3af2996e205b": {
       "first_seen_at": 1793613308.703875,
@@ -22228,177 +22305,177 @@
     "0e9c03c612f0e898dd53bfcf": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793606554.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "abf6d24c8b2d749c577b7a48": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793599560.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "be7393410713fb19d9468de2": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638879.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "837ff62012039e2b991690cb": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793632621.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "88e66baf775ea5f29542432b": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793642400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "308074c6e0d0dd38f2f2a258": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793642400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "6a0c659da27d14017d22b56b": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638855.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b835cedd313a42083c61864b": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793635296.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "0da6455d9d2f3dd61ce71b53": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638767.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "269f9870f42e5b06ab47da1d": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638786.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a3809aeddb1ee30005b5d9ef": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793632196.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b4720070634174e581c10bb7": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793630106.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c0a1c7d116485e9750fb4663": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793628263.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b5949c56dc92fc93a5fe5ba4": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793635200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e1dc366ffc1b06f428d8ea2d": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793635675.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "5a284537576ee7bb4e7b0049": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793632162.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "3d274bc86d74679b75396d58": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793627625.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "098689ff257727617a8a62ad": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793617200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "65f04c33c09a942be6d8bb24": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793625672.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "474e7df36833f9861f0f8877": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793617353.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "01792093074540ccad93db6f": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793617200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "d8363d1ae86151ef40241c36": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793624400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "df6e0aaa57de5070c592c3dc": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793616333.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "74bbeeb88c5609e7586364db": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793422800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "2ef8b9ff5117871bc16b3655": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793628000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "66a8b8044cd2f989f5cdd0b1": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793623776.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "d683f8812790c3b16bface63": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793633813.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f3dd9678467232c5e7ac05e4": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793626145.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "56749d317ebbdd5574c4c62d": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793624067.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "10407c83e24995c08abb45db": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793619189.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b343b0ef2b115010d3903d52": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793642221.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "7f8d356c9b686b03c05810a4": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793642029.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f0637223d18c04af4e147a09": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793640391.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "91fb132f8dbb39430a27f3ab": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793629458.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f805b17cac2511a466b83745": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793621906.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e6c1eacd8f64cd527cf0c4f7": {
       "first_seen_at": 1793644153.788403,
@@ -22413,7 +22490,7 @@
     "e8e082180429f961621ee979": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793630370.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "beaabc6caff77aac168233d6": {
       "first_seen_at": 1793644153.788403,
@@ -22423,22 +22500,22 @@
     "0d83268e98f169a4215cd5bc": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793621150.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4ea7209c3466d62234c0ed35": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793622992.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "8746c1a82a4ed41f33a2bf7a": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793627920.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a9bdbf28f6438bdbb0b5e093": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793626127.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "9ee4066e43ec34e6cc2dea94": {
       "first_seen_at": 1793644153.788403,
@@ -22448,7 +22525,7 @@
     "e6b7e518276ad67ffd13e673": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793622754.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f152d7362b50d6984ecb364d": {
       "first_seen_at": 1793644153.788403,
@@ -22458,32 +22535,32 @@
     "7efaa014cd2aec92799b283f": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793632440.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f4bc076c0ffdd16554334e4c": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793625509.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "36770c22c1c92f26187fa860": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638443.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "8bf67493e96ae266ae9543b6": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793613840.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "caa422f2b2a667ffe7f46f95": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793619798.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "2109002581bb920f54f79a71": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793621747.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "93f5f7893b95e20cfae10f44": {
       "first_seen_at": 1793644153.788403,
@@ -22493,7 +22570,7 @@
     "d571784150f55cb0734fe1be": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638079.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a4c38a8686e609767d731e39": {
       "first_seen_at": 1793644153.788403,
@@ -22518,37 +22595,37 @@
     "d1863b36d791a0bb28217575": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793624400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "62bc681522c242a86c95f9bf": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793613900.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "72b9b9cd31c94a6c5c8468f5": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793613600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "09f784c7fc302a89d2488345": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793639940.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "92ddb11a5f617d4f6c795860": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793637180.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "17ad87170b9b8734cf35d082": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793626496.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "d65184e5bf82b44302510d8f": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793618662.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "85f76388ce657e527481a65f": {
       "first_seen_at": 1793644153.788403,
@@ -22558,22 +22635,22 @@
     "382910ab28d30de1898c1bd3": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793634553.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c17f14e03e78277901271469": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793630607.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ea4292c330d0e3f7d9a0be2e": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793624745.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "2f272bce650657f2d6604d31": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793618619.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "d502a6d12890c56962cee68b": {
       "first_seen_at": 1793644153.788403,
@@ -22583,17 +22660,17 @@
     "a4ecaae40888b4580c60e5f2": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793642690.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b22f16c2b64271dea61e032f": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793636880.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "866843f0af8d5cbe46762628": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793617200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c5e971b6380121c81ee2a570": {
       "first_seen_at": 1793644153.788403,
@@ -22603,27 +22680,27 @@
     "c2f05f7e2b059340cfd3db7c": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793614110.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4e8a1b6bb8c77397c18554fc": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793627497.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c6e2922d816a90f5dbc58f5d": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793613600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "53c0f64231f83244d4deea90": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793620565.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "1a77a6b7360f023a58d97073": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793622494.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e9777bd86b1fe3a9e4c1121c": {
       "first_seen_at": 1793644153.788403,
@@ -22633,12 +22710,12 @@
     "ba1cfa6ecf45e7629a501003": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "d04c87de9f96a1875d76aa22": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ee91baa5b3f643078d6d56a0": {
       "first_seen_at": 1793644153.788403,
@@ -22648,12 +22725,12 @@
     "7652b4655faf4394ff71f099": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793642409.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "53ca8c0e2b6f650f1d57b3f8": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638842.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "36eaceefedba3c95eeb1e909": {
       "first_seen_at": 1793644153.788403,
@@ -22668,17 +22745,17 @@
     "55cea275759d0f2ba116ea17": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793644076.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "523a60a6f08be123ddfa3dc8": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793643830.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "244cf1da2d1d9ac3861f78d8": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793637387.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e5f2b82a048e5aaaa7014def": {
       "first_seen_at": 1793644153.788403,
@@ -22693,17 +22770,17 @@
     "ea7ccc77fdf6757f78650afc": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793643731.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "448af5d9cf9bcf36c7036de1": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793643300.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "d5000e8521d39a329786bd2a": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793634618.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b7413c4ae01281e4b20158ac": {
       "first_seen_at": 1793644153.788403,
@@ -22723,42 +22800,42 @@
     "76f4f8be33458243b976915c": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793639765.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "00445ecaad0b557b581cab27": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793641037.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "30f586ae6192e9feecefd1dd": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793631622.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "cc9d5b3ba796af00081099d2": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793625726.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f9209260ccf544beeaf61458": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793623409.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "899c2eca88fc4b82cffc10a3": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793642407.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "146fefb821181ebeddbd91a9": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638820.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a9e6b81adb4ef1ed52e5950d": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793642721.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "0283d7523f2bd13a35c01834": {
       "first_seen_at": 1793644153.788403,
@@ -22768,12 +22845,12 @@
     "3375876d9bda5ea2e3efe753": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793642407.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "243c711ff519d3e2b3276c0c": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793631650.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "69211d260e22c31dbf1e7768": {
       "first_seen_at": 1793644153.788403,
@@ -22793,92 +22870,92 @@
     "72ffe88e0fe6ffcab28ce52f": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793642424.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "bc0449fa65f07838627f0ee9": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793643958.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "60f80acdc4d6b106724741ee": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793642092.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "570a7ccf4598205226f4abf0": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793641476.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "556921d0e1c9f2972e552555": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793636055.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "27b9cda4790eeca3ac121d1f": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793634641.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "9c5876fce4d24e46ce6e71e6": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793631875.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "7e7e1f7b0fc1ee91b039491d": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793631142.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "7af28d73d6af5a9b8cdd9232": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793628328.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c55b5300a6a386a9881b8da4": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793626921.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "2a93c33280b8e1a855990c91": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793626226.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "99b74e8b9f684f8ef5425063": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793624885.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "87e0503afbca3f48fbdb3876": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793624591.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "51b5658d6b16051817e8ec72": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793624202.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "995fb545c908c9db03bc9212": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793621313.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ecfaa9cc4d8490610488c43e": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793621253.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a0849d0b5c40308f2978b0f5": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793620896.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ea6db686926d558fe72e0f0a": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793620340.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "9690c5465129b015061ab31d": {
       "first_seen_at": 1793644153.788403,
@@ -22913,457 +22990,457 @@
     "1c2bff41a5b0cd20d17f534f": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793641945.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "3b7bf6d2c2ac7a6aedbe5089": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793640600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "11af0439a3b8d93a62cf3bfc": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793640600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "70196c9a3898a883bb6bb59f": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793639733.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "7ef76b8cff041e699a5c09e8": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "dc10795e81be954ccc7fef79": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "0461ddc7cad4010b58e97067": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638740.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "749caa6585846c9528d30fe0": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638500.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a305dfb307c64ae88638c89b": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793637826.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "7593975aaa61e7865f3053e3": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793637000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "228de94271b155fd2bfc8d2c": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793635200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "150d7568d9444fc8bfff64e2": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793635200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "fee19ed144e496037ebc5d13": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793633400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f05ac06d7b3664459ccb07d6": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793631808.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4c0cc211d23af5b1aead3664": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793631600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "9481bf7684c2806726aec061": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793631600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "967cf8c4f537a43cc3dd79bf": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793631600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "3c48d1ca5cd3064fb684cd0d": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793631300.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "036adfec89903b39705d48b3": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793629800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b3266414eb942fffcff67a00": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793629063.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "2b04d8e7733c71204ef728a3": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793628000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4211f5cd601e81c499729020": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793628000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "d177087a8e8be791b1eba9b8": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793628000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "eabd9cf46a7e26f72b033b41": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793628000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "947b7ffcb83e224d3b7a64f3": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793627820.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "d04b209fa6605c2b7c4fddbc": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793626734.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "7fe5761185461e7299be5163": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793626200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ae62d548b27c69752be2d7d2": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793624400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e23beeb588100df6ea55d1f1": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793624400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f2a011e27e7ff73e0deb74dd": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793624100.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e81dd5a3c3620df9fb7bb620": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793624055.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "3088513676c24c52b585e4d4": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793622600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "01b04eb7d4a19f7a346806c9": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793622426.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e5b91908817c7333ffd9bed6": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793621438.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "1b630517f1366c18dfafa85f": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793620108.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e388f68a07c208e2c29dd285": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793617200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ac90bb621557c87b58071038": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793617200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "8f8f5724fa65dbfe73a5d447": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793617200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "bcf1fa33e838ec7a6e40052b": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793616900.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "5ac4a2707b79cd745317aad7": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793616792.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "85bf89147deaeeb3abeabecd": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793616106.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "14bdcea2c4e684baac449a53": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793615267.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f9b240e25386ab4515af462f": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793614578.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "7839c98f00769c4a65835a26": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793613800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ea7d5ba97f1ff1f15fae70c1": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793613600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "342e1cb548405b1aa4124b9f": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793613600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "80483ca6b7f60ab4ff8369f9": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793613458.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "66ff8af0de24d1e478b0c266": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793642400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "5562ae7bee8e124a520f86b5": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793642400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "778d71a6c315255467b6ecd5": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793642400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ed784481c2730063b301e7c1": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793641927.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "04757b3f7c75013abad18e75": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793641770.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "818de4efca5abb4e62a21e51": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793639730.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ad12f524afb552811eb3cf4e": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793639640.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "7777a11e6b04eb50e6dc97b5": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e1450046ca0050bd359da45d": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "20c53ad158398223b37223a0": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a982509eedee8a800a953c30": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "9a10117ad74ad19707b0fa86": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "29acf6da9335420d0ff81736": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "bf023a5f0ef6a0f9523e1e1e": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638188.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "0850b6124a101fcf8a5aa2a7": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793637292.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "19071b3f424710ea73e35e0a": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793637167.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "03b5c6a23e604ec4f235694c": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793637000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "1903ebf92b445a6e9caeea97": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793635902.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4641dd636a1964985a3a0602": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793635200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "5dd5ddfa2bad2ddf1f7a21d3": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793634726.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "eafc6a1c4794751b512a6f67": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793632830.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4017d6c2f010e802173c2dee": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793632441.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "bba4d3e6213baff639c38fcb": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793631600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "bd6ec0a6ccafbfd116ca49bc": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793631600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "017bd40b3063aa6ecc55eea7": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793629800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e925c732840a924d9817b0ab": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793628000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ea6d12b0264da0edac483492": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793628000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "da16a111586143c06bfb7c1b": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793628000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "9d75c83af61aabe9c521b711": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793627129.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "87c417f4a97fd9344d154bbf": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793626577.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b57bdd33fcba8ec4ea7091f3": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793626080.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "3485fbce78d9dbd03f85dffb": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793625914.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "5c4bc5639c6e15d6c1e6ec00": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793624400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "edace4104c16da2cbe47d983": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793624400.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "5119404fa14912d6a83873d1": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793623185.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "eed4ba87c9fd482fcf38d994": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793620800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c49c40bdc61af34403a8a2cd": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793620800.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "806359c52cf823b1c41be842": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793620275.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "2c45b9a64c9b3ea87ed3887c": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793617325.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "754bee654791a8d9ccdffefd": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793617200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "cf529260d122a2343d23d375": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793617200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "88bf36b21b5fb890669ddcb8": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793617200.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "2a7e6aa74feee442ba45a2b8": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793616043.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4af2d2840beac7e17140711e": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793613600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "de69ba45fb11f0841f4aa464": {
       "first_seen_at": 1793644153.788403,
@@ -23373,67 +23450,67 @@
     "a5ce22e56c11981fac447f76": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793630520.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "7f22d90dcda9a4e4855d09eb": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793613780.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "fe0fb04b9499c4e7886b5196": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793645880.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f5c6f502d53dbe8b26a085e8": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793649840.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f6c2241af90f2c37f829fc91": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793649540.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c4759a0fb80efa824a1d9062": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793646000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "5b3416d707f67c57971b6472": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793649598.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "4f004e3dee212d26b1b80e2f": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793650480.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "22bbbf92955a6f91402e5cab": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793648408.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f4103530b0b97a75dbb85535": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793650037.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "bc87ecacf92b731393967ce5": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793645406.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "25e540a5070d3e908162b39a": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793650060.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "2879bf895eef055bed5a8791": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793647594.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ec7d5da06868e85850f6ea32": {
       "first_seen_at": 1793650700.578885,
@@ -23443,27 +23520,27 @@
     "9c23462473a8316a641ef25c": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793649301.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "5d47157ddebb89b6fc16bdeb": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793647833.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "be0ba19c89844e4e81aac510": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793647208.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b05ade8c7bfa0aaed025f577": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793649468.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c969b81ea082f0271c6769ce": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793649619.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "39a8e1ab1c2a97245b06414f": {
       "first_seen_at": 1793650700.578885,
@@ -23478,57 +23555,57 @@
     "829fc447b9f5762830741691": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793650529.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a411a4d52bac03ef847373be": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793646564.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ec9318bbe998218c5ee6cd60": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793644789.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a6efa0b4c696b370b537958e": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793646000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "3a2e1ae11d69cb762a5f65aa": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793644103.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "3a1a703adb3130bde1c51671": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793646000.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "32ba2b1c3714e0c0f56eb5dc": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793644404.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "ddc64423130715e47639042d": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793641860.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "498126dd3b3f1559d8f504bc": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793656103.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "088a6fd6864c9371610a8614": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793657481.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "d5b7e4167543ee76747eab83": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793652533.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "8efafe15fca592a033d5abbb": {
       "first_seen_at": 1793669935.996289,
@@ -23538,92 +23615,107 @@
     "6b7492ac4e587a255c5df5f0": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793653685.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "310e8d36bafcc3a0348d469b": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793654848.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "034002e8af99992b48061320": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793655509.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "97967bf48ccb04c720d0a8eb": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793660460.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "20b58d50421ad067ce3040f2": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793655240.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "a8a426b58e5a46e24151ca3a": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793653744.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "99246470d5a104c8fcd470dc": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793658405.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "c40e744767c5f224b969110b": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793660498.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "adef7af534efba099e14e256": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793652987.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "fab20426098e7d9548b25878": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793668757.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "822fb3bc99ab75266a0469c1": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793658873.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "d38afe2bc6e4d5004993c710": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793658671.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "f14af89cd20f387e9a3af9f1": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793655370.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "2428dd3b48caa1fbdb2e2cc0": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793651533.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "b8263308029115da60fda66c": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793631600.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "e1d4040bc70ba7896ad35dd9": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793656380.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "34f5a79cfe6396459d091f8a": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793651673.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
     },
     "03a2e3a807f7172abd2736c0": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793643360.0,
-      "last_seen_at": 1793669935.996289
+      "last_seen_at": 1793672930.258226
+    },
+    "fdb9d05209635cc75dff5675": {
+      "first_seen_at": 1793672930.258226,
+      "published_at": 1793523600.0,
+      "last_seen_at": 1793672930.258226
+    },
+    "81c9d20f077463066b7ac0a0": {
+      "first_seen_at": 1793672930.258226,
+      "published_at": 1793617200.0,
+      "last_seen_at": 1793672930.258226
+    },
+    "3e01a61823f1bb2f691cd937": {
+      "first_seen_at": 1793672930.258226,
+      "published_at": 1793632441.0,
+      "last_seen_at": 1793672930.258226
     }
   },
   "latest_broadcast": {
