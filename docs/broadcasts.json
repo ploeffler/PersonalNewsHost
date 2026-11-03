@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261102T182947Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 02.11.2026 um 19:29 Uhr",
-      "created_at": 1793644187.318499,
-      "video": "broadcasts/20261102T182947Z.mp4",
-      "sources": [
-        {
-          "title": "Rangnick: „Mein Gedächtnis funktioniert noch gut“",
-          "url": "https://www.krone.at/4359539"
-        },
-        {
-          "title": "Trump baut für mögliche Wahlschlappe vor",
-          "url": "https://orf.at/stories/3446837/"
-        },
-        {
-          "title": "Generikum von HIV-Prophylaxe-Injektion erhält US-Genehmigung",
-          "url": "https://www.derstandard.at/story/3000000347187/generikum-von-hiv-prophylaxe-injektion-erh228lt-us-genehmigung?ref=rss"
-        },
-        {
-          "title": "Depot warnt nach Insolvenz vor betrügerischen Fakeshops",
-          "url": "https://www.kleinezeitung.at/artikel/41412329/depot-warnt-nach-insolvenz-vor-betruegerischen-fakeshops"
-        },
-        {
-          "title": "Arbeitsunfall: Arbeiter von Vordach gestürzt",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261102T182947Z.txt",
-      "subtitles": "broadcasts/20261102T182947Z.vtt",
-      "subtitle_download": "broadcasts/20261102T182947Z.srt"
-    },
-    {
       "id": "20261103T013920Z",
       "kind": "broadcast",
       "title": "Nachrichten 03.11.2026 um 02:39 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261103T013920Z.txt",
       "subtitles": "broadcasts/20261103T013920Z.vtt",
       "subtitle_download": "broadcasts/20261103T013920Z.srt"
+    },
+    {
+      "id": "20261103T094003Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 03.11.2026 um 10:40 Uhr",
+      "created_at": 1793698803.512022,
+      "video": "broadcasts/20261103T094003Z.mp4",
+      "sources": [
+        {
+          "title": "Zweite Runde bei Gesprächen zu Handels-KV",
+          "url": "https://orf.at/stories/3446931/"
+        },
+        {
+          "title": "Lebensgefährlich verletzt: Grazer griff Nachbarin mit Messer und Axt an",
+          "url": "https://www.derstandard.at/story/3000000347258/lebensgefaehrlich-verletzt-grazer-griff-nachbarin-mit-messer-und-axt-a?ref=rss"
+        },
+        {
+          "title": "Rätsel um Mann ohne Erinnerung am Airport Neapel",
+          "url": "https://www.krone.at/4359897"
+        },
+        {
+          "title": "Manipulierte Süßigkeiten: Ermittlungsgruppe soll die Täter jagen",
+          "url": "https://www.kleinezeitung.at/artikel/41414588/manipulierte-suessigkeiten-ermittlungsgruppe-soll-die-taeter-jagen"
+        },
+        {
+          "title": "Verkehrsunfall: 16-Jähriger fuhr auf Dienstfahrzeug auf",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261103T094003Z.txt",
+      "subtitles": "broadcasts/20261103T094003Z.vtt",
+      "subtitle_download": "broadcasts/20261103T094003Z.srt"
     }
   ]
 }
