@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261102T074434Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 02.11.2026 um 08:44 Uhr",
-      "created_at": 1793605474.311949,
-      "video": "broadcasts/20261102T074434Z.mp4",
-      "sources": [
-        {
-          "title": "Vater fand kleine Nägel in Halloween-Süßigkeiten",
-          "url": "https://www.krone.at/4358546"
-        },
-        {
-          "title": "Tote bei israelischen Angriffen im Gazastreifen",
-          "url": "https://orf.at/stories/3446820/"
-        },
-        {
-          "title": "Am Dach gelandet: Auto hat sich auf der S 6 überschlagen",
-          "url": "https://www.kleinezeitung.at/artikel/41410274/am-dach-gelandet-auto-hat-sich-auf-der-s-6-ueberschlagen"
-        },
-        {
-          "title": "Nägel in Halloween-Süßigkeiten in Linz gefunden",
-          "url": "https://www.derstandard.at/story/3000000346986/naegel-in-halloween-suessigkeiten-in-linz-gefunden?ref=rss"
-        },
-        {
-          "title": "Alkolenker (41) ergriff nach Crash die Flucht",
-          "url": "https://www.krone.at/4358520"
-        }
-      ],
-      "transcript": "broadcasts/20261102T074434Z.txt",
-      "subtitles": "broadcasts/20261102T074434Z.vtt",
-      "subtitle_download": "broadcasts/20261102T074434Z.srt"
-    },
-    {
       "id": "20261102T182947Z",
       "kind": "broadcast",
       "title": "Nachrichten 02.11.2026 um 19:29 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261102T182947Z.txt",
       "subtitles": "broadcasts/20261102T182947Z.vtt",
       "subtitle_download": "broadcasts/20261102T182947Z.srt"
+    },
+    {
+      "id": "20261103T013920Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 03.11.2026 um 02:39 Uhr",
+      "created_at": 1793669960.558229,
+      "video": "broadcasts/20261103T013920Z.mp4",
+      "sources": [
+        {
+          "title": "Multinationale Ukraine-Truppe: Erste Übung ab 9. November",
+          "url": "https://orf.at/stories/3446906/"
+        },
+        {
+          "title": "Mehr ruhige Momente. Mehr von dem, was zählt.",
+          "url": "https://www.krone.at/4353814"
+        },
+        {
+          "title": "Standardrätsel K 11433",
+          "url": "https://www.derstandard.at/story/3000000346409/standardraetsel-k-11433?ref=rss"
+        },
+        {
+          "title": "„Benko“-Film im ORF: Der Milliardär ohne Eigenschaften",
+          "url": "https://www.kleinezeitung.at/artikel/41413992/benko-film-im-orf-der-milliardaer-ohne-eigenschaften"
+        },
+        {
+          "title": "Arbeitsunfall: Mann von Kette getroffen",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261103T013920Z.txt",
+      "subtitles": "broadcasts/20261103T013920Z.vtt",
+      "subtitle_download": "broadcasts/20261103T013920Z.srt"
     }
   ]
 }
