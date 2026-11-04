@@ -4,7 +4,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "fe6be59339e2b49122e03e16",
+    "pipeline_group_id": "995c9a58195d35f079c4329b",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -12,61 +12,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "eaecc73a7a3ef4e2a29c42cd",
+          "source_id": "6ca67a5c765ae9f676126762",
           "supported": true,
-          "quote": "US-Präsident Donald Trump tritt zwar Spekulationen entgegen, er plane nach den US-Zwischenwahlen neue Angriffe gegen den Iran, doch zwischen den Zeilen verstecken sich dennoch ernste Drohungen gegen die Führung in Teheran."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "9017b6e9eb1e6986bf7d2bb3",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "8f2dea410ea82df72d40f386",
-          "supported": true,
-          "quote": "Der VKI rät von Henna auf der Haut ab und verweist auf zugelassene Kosmetikstifte als Alternative."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "c3102b9da5bf1fa79b471778",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "1325bf39c531994d38cefeb4",
-          "supported": true,
-          "quote": "In den kalten Monaten haben auch Mittelohrentzündungen Hochsaison."
+          "quote": "Einem Tag nach der Verleihung des renommierten Prix Goncourt hat der französische Schriftsteller Philippe Jaenada den Einsatz künstlicher Intelligenz (KI) bei der Arbeit an seinem ausgezeichneten Roman eingeräumt – und das nach dem KI-Skandal um einen anderen Autor."
         },
         {
           "claim_index": 1,
-          "source_id": "1325bf39c531994d38cefeb4",
+          "source_id": "6ca67a5c765ae9f676126762",
           "supported": true,
-          "quote": "Auf welche Symptome Eltern achten sollten und wieso Allergien eine Rolle spielen könnten."
+          "quote": "Er habe ChatGPT insgesamt dreimal für „L’Inconnue du quai de Javel“ genutzt, sagte der 62-Jährige dem Radiosender France Inter."
         }
       ],
       "conflicts": [],
@@ -79,7 +33,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "abcca41a83443fead105cde9",
+    "pipeline_group_id": "62cf44e754ba716a811989c9",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -87,15 +41,9 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "7ecd998dff29b98e8321bf54",
+          "source_id": "9f10ea923491c66765419631",
           "supported": true,
-          "quote": "Russland hat in der Nacht auf heute wieder zahlreiche Landesteile der Ukraine angegriffen."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "7ecd998dff29b98e8321bf54",
-          "supported": true,
-          "quote": "Dabei seien zwei Kraftwerke in den Regionen Kiew und Schytomyr getroffen worden, teilte das russische Verteidigungsministerium auf Telegram mit."
+          "quote": "Höchstgericht: Nicht alle beanstandeten Aussagen zur Coronapandemie verstießen gegen das Audiovisuelle Mediendienste-Gesetz."
         }
       ],
       "conflicts": [],
@@ -108,7 +56,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "6f12898b4a38fd74c21a58d8",
+    "pipeline_group_id": "418dba7ee4529614cdb4f5a8",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -116,15 +64,73 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "7579da0974d85aa8a64c7459",
+          "source_id": "bcb7f82cbb23674204fb15f6",
           "supported": true,
-          "quote": "Obdach im Bezirk Murtal: Dienstag, 3. November 2026, hielten Polizisten im Zuge einer Schwerverkehrskontrolle auf der B78 einen Sondertransport an."
+          "quote": "Der US-Internetkonzern Google will mit einem Stellenabbau die steigenden Kosten für den Bau neuer Rechenzentren abfedern."
         },
         {
           "claim_index": 1,
-          "source_id": "7579da0974d85aa8a64c7459",
+          "source_id": "bcb7f82cbb23674204fb15f6",
           "supported": true,
-          "quote": "Bei der Kontrolle wurden erhebliche Mängel bei der Ladungssicherung sowie weitere Verstöße festgestellt."
+          "quote": "Ein seit Juni laufendes Abfindungsprogramm in mehreren Staaten außerhalb der USA werde daher verlängert, bestätigte die Alphabet-Tochter der Nachrichtenagentur Reuters am Mittwoch."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "b0572ba3e5bb9e94fb221679",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "c54594173a430cf40db3ec80",
+          "supported": true,
+          "quote": "Gelder für Klimaanpassung ärmerer Länder müssten verzehnfacht werden."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "c54594173a430cf40db3ec80",
+          "supported": true,
+          "quote": "UNO-Generalsekretär António Guterres kritisiert fehlenden politischen Willen."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "8201fcb32a655f1c210c1dd2",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "169cfd3a73eca00a3251b33b",
+          "supported": true,
+          "quote": "Passail im Bezirk Weiz: Mittwochfrüh, 4. November 2026, kollidierten auf der LB64 im Ortsgebiet von Affental zwei Pkw frontal."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "169cfd3a73eca00a3251b33b",
+          "supported": true,
+          "quote": "Beide Fahrzeuglenker erlitten dabei Verletzungen."
         }
       ],
       "conflicts": [],

@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261103T232912Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 04.11.2026 um 00:29 Uhr",
-      "created_at": 1793748552.270922,
-      "video": "broadcasts/20261103T232912Z.mp4",
-      "sources": [
-        {
-          "title": "Standardrätsel L 11434",
-          "url": "https://www.derstandard.at/story/3000000346410/standardraetsel-l-11434?ref=rss"
-        },
-        {
-          "title": "Vorwurf des Landesverrats gegen Selenskyjs Ex-Sprecherin",
-          "url": "https://orf.at/stories/3447032/"
-        },
-        {
-          "title": "Zug-Drama: Spaniens Verkehrsminister tritt zurück",
-          "url": "https://www.krone.at/4361135"
-        },
-        {
-          "title": "Martin Kocher in der ZiB2: „Die Inflationsgefahr ist weiter hoch“",
-          "url": "https://www.kleinezeitung.at/artikel/41417050/martin-kocher-in-der-zib2-die-inflationsgefahr-ist-weiter-hoch"
-        },
-        {
-          "title": "Schwerwiegende Verstöße bei Sondertransport festgestellt",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261103T232912Z.txt",
-      "subtitles": "broadcasts/20261103T232912Z.vtt",
-      "subtitle_download": "broadcasts/20261103T232912Z.srt"
-    },
-    {
       "id": "20261104T063533Z",
       "kind": "broadcast",
       "title": "Nachrichten 04.11.2026 um 07:35 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261104T063533Z.txt",
       "subtitles": "broadcasts/20261104T063533Z.vtt",
       "subtitle_download": "broadcasts/20261104T063533Z.srt"
+    },
+    {
+      "id": "20261104T153037Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 04.11.2026 um 16:30 Uhr",
+      "created_at": 1793806237.692873,
+      "video": "broadcasts/20261104T153037Z.mp4",
+      "sources": [
+        {
+          "title": "Goncourt-Preisträger bekennt sich zu begrenzter KI-Nutzung",
+          "url": "https://orf.at/stories/3447208/"
+        },
+        {
+          "title": "Verletztes Objektivitätsgebot: Teilsieg für Wegscheider vor Verfassungsgerichtshof",
+          "url": "https://www.kleinezeitung.at/artikel/41419876/verletztes-objektivitaetsgebot-teilsieg-fuer-wegscheider-vor"
+        },
+        {
+          "title": "Google: Stellenabbau soll hohe KI-Kosten abfedern",
+          "url": "https://www.krone.at/4362170"
+        },
+        {
+          "title": "Welt ist nicht auf sich zuspitzende Klimafolgen vorbereitet, warnt UN-Bericht",
+          "url": "https://www.derstandard.at/story/3000000347565/uno-bericht-hilfsgelder-f252r-klimaanpassung-m252ssen-steigen?ref=rss"
+        },
+        {
+          "title": "Frontalkollision nach Überholmanöver",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261104T153037Z.txt",
+      "subtitles": "broadcasts/20261104T153037Z.vtt",
+      "subtitle_download": "broadcasts/20261104T153037Z.srt"
     }
   ]
 }
