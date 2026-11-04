@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261103T175407Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 03.11.2026 um 18:54 Uhr",
-      "created_at": 1793728447.227265,
-      "video": "broadcasts/20261103T175407Z.mp4",
-      "sources": [
-        {
-          "title": "Handels-KV: Arbeitgeber bieten 2,1 Prozent und Einmalzahlung",
-          "url": "https://orf.at/stories/3447000/"
-        },
-        {
-          "title": "„Verrat“: Demokratin unterstützt nun Trumps Partei",
-          "url": "https://www.krone.at/4360741"
-        },
-        {
-          "title": "Was Flüchtlinge auf der Balkanroute zurückließen",
-          "url": "https://www.kleinezeitung.at/artikel/41416063/was-fluechtlinge-auf-der-balkanroute-zurueckliessen"
-        },
-        {
-          "title": "Lufthansa und Lissabon unterzeichnen Tap-Einstieg",
-          "url": "https://www.derstandard.at/story/3000000347376/lufthansa-und-lissabon-unterzeichnen-tap-einstieg?ref=rss"
-        },
-        {
-          "title": "76 neue Polizistinnen und Polizisten für die Steiermark",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261103T175407Z.txt",
-      "subtitles": "broadcasts/20261103T175407Z.vtt",
-      "subtitle_download": "broadcasts/20261103T175407Z.srt"
-    },
-    {
       "id": "20261103T232912Z",
       "kind": "broadcast",
       "title": "Nachrichten 04.11.2026 um 00:29 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261103T232912Z.txt",
       "subtitles": "broadcasts/20261103T232912Z.vtt",
       "subtitle_download": "broadcasts/20261103T232912Z.srt"
+    },
+    {
+      "id": "20261104T063533Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 04.11.2026 um 07:35 Uhr",
+      "created_at": 1793774133.870672,
+      "video": "broadcasts/20261104T063533Z.mp4",
+      "sources": [
+        {
+          "title": "Trump über neue Angriffe: „Müssen was Großes tun“",
+          "url": "https://www.krone.at/4361248"
+        },
+        {
+          "title": "Konsumentenschützer warnen vor Henna-Sommersprossen",
+          "url": "https://www.derstandard.at/story/3000000347409/konsumentensch252tzer-warnen-vor-henna-sommersprossen?ref=rss"
+        },
+        {
+          "title": "Wie Eltern Kinder gegen Mittelohrentzündungen schützen können",
+          "url": "https://www.kleinezeitung.at/artikel/41415827/wie-eltern-kinder-gegen-mittelohrentzuendungen-schuetzen-koennen"
+        },
+        {
+          "title": "Russland: Zwei Kraftwerke in Ukraine angegriffen",
+          "url": "https://orf.at/stories/3447102/"
+        },
+        {
+          "title": "Schwerwiegende Verstöße bei Sondertransport festgestellt",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261104T063533Z.txt",
+      "subtitles": "broadcasts/20261104T063533Z.vtt",
+      "subtitle_download": "broadcasts/20261104T063533Z.srt"
     }
   ]
 }
