@@ -1,24 +1,18 @@
 [
   {
-    "source": "https://orf.at/stories/3447208/",
+    "source": "https://www.krone.at/4362695",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
   },
   {
-    "source": "https://www.kleinezeitung.at/artikel/41419876/verletztes-objektivitaetsgebot-teilsieg-fuer-wegscheider-vor",
+    "source": "https://www.kleinezeitung.at/artikel/41419952/es-prickelt-fuer-den-kaerntner-bauern-wird-es-jetzt-ernst",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
   },
   {
-    "source": "https://www.krone.at/4362170",
-    "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
-    "original_media_retained": true
-  },
-  {
-    "source": "https://www.derstandard.at/story/3000000347565/uno-bericht-hilfsgelder-f252r-klimaanpassung-m252ssen-steigen?ref=rss",
+    "source": "https://www.derstandard.at/story/3000000347591/bayerischer-wirtschaftsminister-hubert-aiwanger-ist-tot?ref=rss",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
@@ -26,5 +20,11 @@
   {
     "source": "",
     "image_origin": "article_metadata_or_rss"
+  },
+  {
+    "source": "https://www.krone.at/4362736",
+    "image_origin": "article_metadata_or_rss",
+    "image_processing": "neural_fsrcnn_x2",
+    "original_media_retained": true
   }
 ]

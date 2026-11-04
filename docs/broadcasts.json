@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261104T063533Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 04.11.2026 um 07:35 Uhr",
-      "created_at": 1793774133.870672,
-      "video": "broadcasts/20261104T063533Z.mp4",
-      "sources": [
-        {
-          "title": "Trump über neue Angriffe: „Müssen was Großes tun“",
-          "url": "https://www.krone.at/4361248"
-        },
-        {
-          "title": "Konsumentenschützer warnen vor Henna-Sommersprossen",
-          "url": "https://www.derstandard.at/story/3000000347409/konsumentensch252tzer-warnen-vor-henna-sommersprossen?ref=rss"
-        },
-        {
-          "title": "Wie Eltern Kinder gegen Mittelohrentzündungen schützen können",
-          "url": "https://www.kleinezeitung.at/artikel/41415827/wie-eltern-kinder-gegen-mittelohrentzuendungen-schuetzen-koennen"
-        },
-        {
-          "title": "Russland: Zwei Kraftwerke in Ukraine angegriffen",
-          "url": "https://orf.at/stories/3447102/"
-        },
-        {
-          "title": "Schwerwiegende Verstöße bei Sondertransport festgestellt",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261104T063533Z.txt",
-      "subtitles": "broadcasts/20261104T063533Z.vtt",
-      "subtitle_download": "broadcasts/20261104T063533Z.srt"
-    },
-    {
       "id": "20261104T153037Z",
       "kind": "broadcast",
       "title": "Nachrichten 04.11.2026 um 16:30 Uhr",
@@ -63,6 +31,42 @@
       "transcript": "broadcasts/20261104T153037Z.txt",
       "subtitles": "broadcasts/20261104T153037Z.vtt",
       "subtitle_download": "broadcasts/20261104T153037Z.srt"
+    },
+    {
+      "id": "20261104T215704Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 04.11.2026 um 22:57 Uhr",
+      "created_at": 1793829424.948959,
+      "video": "broadcasts/20261104T215704Z.mp4",
+      "sources": [
+        {
+          "title": "Guter Zusatzjob? Lavanttalerin geriet an Betrüger",
+          "url": "https://www.krone.at/4362695"
+        },
+        {
+          "title": "„Es prickelt“: Für den Kärntner Bauern wird es jetzt ernst",
+          "url": "https://www.kleinezeitung.at/artikel/41419952/es-prickelt-fuer-den-kaerntner-bauern-wird-es-jetzt-ernst"
+        },
+        {
+          "title": "Bayerischer Wirtschaftsminister Hubert Aiwanger ist tot",
+          "url": "https://www.derstandard.at/story/3000000347591/bayerischer-wirtschaftsminister-hubert-aiwanger-ist-tot?ref=rss"
+        },
+        {
+          "title": "Bayerns Wirtschaftsminister Hubert Aiwanger ist tot",
+          "url": "https://orf.at/stories/3447236/"
+        },
+        {
+          "title": "Frontalkollision nach Überholmanöver",
+          "url": ""
+        },
+        {
+          "title": "Wohl Grizzly-Attacke: Frauen tot nach Wanderung",
+          "url": "https://www.krone.at/4362736"
+        }
+      ],
+      "transcript": "broadcasts/20261104T215704Z.txt",
+      "subtitles": "broadcasts/20261104T215704Z.vtt",
+      "subtitle_download": "broadcasts/20261104T215704Z.srt"
     }
   ]
 }

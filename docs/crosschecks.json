@@ -4,7 +4,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "995c9a58195d35f079c4329b",
+    "pipeline_group_id": "fa0dd76b903a8ad6eee1ea77",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -12,15 +12,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "6ca67a5c765ae9f676126762",
+          "source_id": "c79597b6e0b56b7e79fdb010",
           "supported": true,
-          "quote": "Einem Tag nach der Verleihung des renommierten Prix Goncourt hat der französische Schriftsteller Philippe Jaenada den Einsatz künstlicher Intelligenz (KI) bei der Arbeit an seinem ausgezeichneten Roman eingeräumt – und das nach dem KI-Skandal um einen anderen Autor."
+          "quote": "Ein monatliches Zusatzeinkommen, sich mehr leisten können – verlockend."
         },
         {
           "claim_index": 1,
-          "source_id": "6ca67a5c765ae9f676126762",
+          "source_id": "c79597b6e0b56b7e79fdb010",
           "supported": true,
-          "quote": "Er habe ChatGPT insgesamt dreimal für „L’Inconnue du quai de Javel“ genutzt, sagte der 62-Jährige dem Radiosender France Inter."
+          "quote": "Ein Angebot dafür fand eine Lavanttalerin auf einer Social-Media-Plattform."
         }
       ],
       "conflicts": [],
@@ -33,7 +33,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "62cf44e754ba716a811989c9",
+    "pipeline_group_id": "1dad565485bbb25d0f1f4b2f",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -41,9 +41,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "9f10ea923491c66765419631",
+          "source_id": "d1c2eb5f18b260f58db5001c",
           "supported": true,
-          "quote": "Höchstgericht: Nicht alle beanstandeten Aussagen zur Coronapandemie verstießen gegen das Audiovisuelle Mediendienste-Gesetz."
+          "quote": "In der neuen Folge der ATV-Show gibt es bei Thomas aus dem Bezirk Völkermarkt bereits Flirtgespräche und Zukunftspläne."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "d1c2eb5f18b260f58db5001c",
+          "supported": true,
+          "quote": "Die erste Dame muss den Hof verlassen."
         }
       ],
       "conflicts": [],
@@ -56,7 +62,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "418dba7ee4529614cdb4f5a8",
+    "pipeline_group_id": "7169dfa864f3ada63e3c038e",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -64,44 +70,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "bcb7f82cbb23674204fb15f6",
+          "source_id": "30163d3fd4f94825f0325901",
           "supported": true,
-          "quote": "Der US-Internetkonzern Google will mit einem Stellenabbau die steigenden Kosten für den Bau neuer Rechenzentren abfedern."
+          "quote": "Der Chef der Partei \"Freie Wähler\" und bayerischer Wirtschaftsminister Hubert Aiwanger wurde tot in einem Berliner Hotel gefunden."
         },
         {
           "claim_index": 1,
-          "source_id": "bcb7f82cbb23674204fb15f6",
+          "source_id": "5a388bff631710acc4670336",
           "supported": true,
-          "quote": "Ein seit Juni laufendes Abfindungsprogramm in mehreren Staaten außerhalb der USA werde daher verlängert, bestätigte die Alphabet-Tochter der Nachrichtenagentur Reuters am Mittwoch."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "b0572ba3e5bb9e94fb221679",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "c54594173a430cf40db3ec80",
-          "supported": true,
-          "quote": "Gelder für Klimaanpassung ärmerer Länder müssten verzehnfacht werden."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "c54594173a430cf40db3ec80",
-          "supported": true,
-          "quote": "UNO-Generalsekretär António Guterres kritisiert fehlenden politischen Willen."
+          "quote": "Der bayrische Wirtschaftsminister und Vizeministerpräsident Hubert Aiwanger (Freie Wähler) ist tot."
         }
       ],
       "conflicts": [],
@@ -131,6 +108,35 @@
           "source_id": "169cfd3a73eca00a3251b33b",
           "supported": true,
           "quote": "Beide Fahrzeuglenker erlitten dabei Verletzungen."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "f76c1db8c7f2c2bae8c3ad09",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "f9ef9b4fbbf10505241daafd",
+          "supported": true,
+          "quote": "Beim Wandern in Kanada sind eine Frau und ihre Tochter beim Wandern ums Leben gekommen."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "f9ef9b4fbbf10505241daafd",
+          "supported": true,
+          "quote": "Die Behörden vermuten eine Attacke durch einen Grizzlybären."
         }
       ],
       "conflicts": [],
