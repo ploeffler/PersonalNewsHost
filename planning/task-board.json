@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 134,
+  "revision": 135,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -5004,7 +5004,7 @@
       "id": "T326",
       "epic": "E18",
       "title": "Vorgezogener lokaler Senderstil-Editor mit URL-Recherche und Vorschaujobs",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T180",
         "T135",
@@ -5041,7 +5041,25 @@
           "tests/test_style_research.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-validation-20261105",
+        "commit": "b2906bbba9277e1c44aacf08a2ba4977ac5e3a99",
+        "checks": "2026-11-05 current integrated sender-style implementation, including explicit provider reissue: full offline runner executed 439 tests, 438 passed and one sandbox socket-creation PermissionError. All 4 repository-check tests passed separately outside that sandbox with their own network blocker active, covering the sole failing case. Targeted sender-style/research/preview/API: 36 passed. Coordination: 11 passed. Release gating: 6 passed. All 3 example configurations valid; Python syntax, secrets, local links and diff whitespace checks passed. No implementation changes during resubmission. Node/Ruff unavailable; no new browser/JS/lint run or paid API calls. Detailed fresh evidence in planning/reviews/T326-sender-style.md at submitted commit. Independent review required.",
+        "files": [
+          "assets/sender-style/",
+          "docs/guide/senderstil.md",
+          "planning/reviews/T326-sender-style.md",
+          "scripts/sender_style.py",
+          "scripts/sender_style_server.py",
+          "scripts/style_preview.py",
+          "scripts/style_research.py",
+          "tests/test_sender_style.py",
+          "tests/test_sender_style_browser.cjs",
+          "tests/test_sender_style_server.py",
+          "tests/test_style_preview.py",
+          "tests/test_style_research.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "T216–T218 bleiben für vollständige Integration in künftige gemeinsame Verwaltung/Produktionsadapter offen. Dieser vorgezogene Auftrag implementiert einen lokalen nutzbaren Einstieg und wiederverwendbaren Vertrag.",
@@ -7272,6 +7290,15 @@
       "task": "T326",
       "client": "codex-validation-20261105",
       "at": 1793901872.41284,
+      "note": ""
+    },
+    {
+      "operation_id": "118bc6299d64488e90375ba75f96d5bf",
+      "revision": 135,
+      "action": "submit",
+      "task": "T326",
+      "client": "codex-validation-20261105",
+      "at": 1793901975.021459,
       "note": ""
     }
   ]
