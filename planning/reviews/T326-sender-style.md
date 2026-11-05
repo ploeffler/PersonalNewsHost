@@ -26,3 +26,34 @@ URL-Vorschlag anwenden, Speichern/Reload, Übernahme, 14 Jobs, unveränderte Wie
 Button, konkurrierende Bearbeitung, Mobilansicht, Abmeldung. Reale passive URL-Recherche
 gegen python.org lieferte vier Quellen und beobachtete Farben/Schriften ohne Warnungen.
 Keine kostenpflichtigen API-Aufrufe oder Zugangsdaten im Test.
+
+## Erneute Einreichung – 5. November 2026
+
+Die ursprüngliche Einreichung wurde wegen nachträglicher Änderungen im Prüfumfang
+zurückgegeben. Diese Einreichung umfasst den aktuellen integrierten Senderstilstand
+einschließlich der ausdrücklichen Neubeauftragung mit aktueller Providerfreigabe.
+Es wurden in diesem Durchgang keine Produktfunktionen geändert.
+
+Getestete Codebasis: `7f4cfd2278b00d1522a0d4b91571c0556dde7cfc`; anschließend
+Fast-forward auf `bcd8247` mit ausschließlich Board-/Mirroränderungen.
+
+- `python3 scripts/check_repository.py`: 439 Tests ausgeführt; 438 bestanden,
+  ein Umgebungsfehler, weil die Sandbox das Erzeugen eines Sockets verbietet
+  (`test_network_guard_denies_tcp_udp_and_dns_and_restores`). Python-Syntax,
+  Secretprüfung und lokale Markdownlinks bestanden. Video-Fixtures wurden erzeugt.
+- `python3 -m unittest discover -s tests -p test_repository_checks.py` außerhalb
+  dieser Sandbox: alle vier Tests bestanden, einschließlich des betroffenen Tests.
+  Dessen eigener Netzwerkblocker blieb aktiv. Somit sind alle 439 Testfälle durch
+  den Gesamtlauf plus die isolierte Wiederholung erfolgreich abgedeckt; ein einziger
+  vollständig grüner Gesamtlauf wird hier nicht behauptet.
+- 36 gezielte Senderstil-/Recherche-/Vorschau-/API-Tests bestanden.
+- Nach dem Fast-forward: 11 Koordinationstests und 6 Release-Gating-Tests bestanden.
+- `config.json`, `config.example.json`, `config.shows.example.json` gültig;
+  `git diff --check` ohne Befund.
+
+Node.js und Ruff sind in dieser Umgebung nicht installiert. JavaScript-, Ruff- und
+Browserprüfungen wurden in diesem Durchgang nicht erneut ausgeführt; die oben
+genannten früheren Nachweise bleiben historische Nachweise. Kein kostenpflichtiger
+Provideraufruf, keine Telegram-Liveveröffentlichung und keine Versionsfreigabe.
+Der erneut eingereichte Commit braucht eine unabhängige Prüfung; der einreichende
+Client darf ihn nicht selbst abschließen.
