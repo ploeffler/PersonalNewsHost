@@ -144,7 +144,7 @@ class GitBoard:
         operation=uuid.uuid4().hex
         for attempt in range(4):
             head,board=self.snapshot()
-            if any(e['operation_id']==operation for e in board['events']):return next(t for t in board['tasks'] if t['id']==task)
+            if any(e.get('operation_id')==operation for e in board['events']):return next(t for t in board['tasks'] if t['id']==task)
             if expected_revision is not None and board['revision']!=expected_revision:raise Conflict('Board revision changed; fetch and reconsider')
             proof=kwargs.get('proof')
             if proof and proof.get('commit'):

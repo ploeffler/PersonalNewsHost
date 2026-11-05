@@ -5,6 +5,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from jsonschema import Draft202012Validator
 from scripts.task_client import GitBoard,Conflict,transition,validate
@@ -119,3 +120,31 @@ class GitCoordinationTests(unittest.TestCase):
         with a.locked():
             task=a.mutate('claim','T001','one',files=['a.py'])
             with self.assertRaises(Conflict):a.mutate('submit','T001','one',token=task['lease']['token'],proof={'commit':'a'*40,'checks':'passed'})
+
+    def test_legacy_events_preserved_and_successful_push_recovered(self):
+        client=self.clients[0]
+        legacy={'revision':1,'action':'plan','task':'T001','note':'Historical planning event'}
+        with client.locked():
+            head,data=client.snapshot()
+            data['revision']=1;data['events'].append(legacy)
+            commit=client.commit_board(head,data)
+            client.git('push','origin',commit+':refs/heads/Full-featured-Newsoutlet')
+            actual_git=client.git
+            pushes=[]
+            def lost_ack(*args,**kwargs):
+                result=actual_git(*args,**kwargs)
+                if args[0]=='push':
+                    pushes.append(args)
+                    self.assertEqual(result.returncode,0)
+                    # The remote accepted the push, but the client lost its acknowledgement.
+                    return subprocess.CompletedProcess(result.args,1,result.stdout,result.stderr)
+                return result
+            with patch.object(client,'git',side_effect=lost_ack):
+                task=client.mutate('claim','T001','worker',files=['a.py'])
+            self.assertEqual(task['lease']['client'],'worker')
+            _,current=client.snapshot()
+            self.assertEqual(current['revision'],2)
+            self.assertEqual(current['events'][0],legacy)
+            self.assertEqual(len(current['events']),2)
+            self.assertTrue(current['events'][1]['operation_id'])
+            self.assertEqual(len(pushes),1)
