@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 133,
+  "revision": 134,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -5004,7 +5004,7 @@
       "id": "T326",
       "epic": "E18",
       "title": "Vorgezogener lokaler Senderstil-Editor mit URL-Recherche und Vorschaujobs",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T180",
         "T135",
@@ -5022,11 +5022,10 @@
       "source": "user-chat-2026-11-01-implement-sender-ci",
       "version": "0.2",
       "package": "A25",
-      "lease": null,
-      "review": {
-        "author": "codex-local-coordinator",
-        "commit": "7b15b667acd65310bcd337bdeee4e056fb51532e",
-        "checks": "434 offline tests passed (32 new CI/research/preview/API tests), Ruff F821/F822/F823 and JS syntax passed. Real Chrome browser against local server: login, first setup, mocked URL findings applied explicitly, save/reload, atomic adoption with 14 jobs, idempotency, editor button, concurrent draft CAS, mobile, logout. Real passive python.org research: four sources, colors/fonts, no warnings. Foundation CI success https://github.com/ploeffler/PersonalNewsHost/actions/runs/41309444565 ; fresh Linux smoke success https://github.com/ploeffler/PersonalNewsHost/actions/runs/41309444642 . Optional OpenAI adapter exercised with synthetic responses only, no paid cloud calls. Local editor is usable; shared global admin, general production integration and video previews remain in T216-T218 and dependent tasks.",
+      "lease": {
+        "client": "codex-validation-20261105",
+        "token": "8ba2c0727bf24d77b629e5ca90e53138",
+        "expires_at": 1793905472.41284,
         "files": [
           "assets/sender-style/",
           "docs/guide/senderstil.md",
@@ -5040,10 +5039,9 @@
           "tests/test_sender_style_server.py",
           "tests/test_style_preview.py",
           "tests/test_style_research.py"
-        ],
-        "reviewer": "codex-review-20261105",
-        "rejected": "Independent review 2026-11-05: submitted SHA 7b15b667acd65310bcd337bdeee4e056fb51532e is stale; subsequent changes affect submitted sender-style scope. Snapshot 9570a27: 36 targeted tests passed. Original snapshot: 32 targeted passed; full offline run 433 passed, one sandbox socket-permission error. No implementation defect established. Please resubmit integrated SHA with current full regression evidence; completion requires unchanged reviewed scope. Coordination compatibility fixed separately in 7f4cfd2 (11 coordination and 6 release-gating tests passed)."
+        ]
       },
+      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "T216–T218 bleiben für vollständige Integration in künftige gemeinsame Verwaltung/Produktionsadapter offen. Dieser vorgezogene Auftrag implementiert einen lokalen nutzbaren Einstieg und wiederverwendbaren Vertrag.",
@@ -7266,6 +7264,15 @@
       "client": "codex-review-20261105",
       "at": 1793901143.396128,
       "note": "Independent review 2026-11-05: submitted SHA 7b15b667acd65310bcd337bdeee4e056fb51532e is stale; subsequent changes affect submitted sender-style scope. Snapshot 9570a27: 36 targeted tests passed. Original snapshot: 32 targeted passed; full offline run 433 passed, one sandbox socket-permission error. No implementation defect established. Please resubmit integrated SHA with current full regression evidence; completion requires unchanged reviewed scope. Coordination compatibility fixed separately in 7f4cfd2 (11 coordination and 6 release-gating tests passed)."
+    },
+    {
+      "operation_id": "935767cbf23441beb0e6d4140cc21a06",
+      "revision": 134,
+      "action": "claim",
+      "task": "T326",
+      "client": "codex-validation-20261105",
+      "at": 1793901872.41284,
+      "note": ""
     }
   ]
 }
