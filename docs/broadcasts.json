@@ -1,42 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261104T215704Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 04.11.2026 um 22:57 Uhr",
-      "created_at": 1793829424.948959,
-      "video": "broadcasts/20261104T215704Z.mp4",
-      "sources": [
-        {
-          "title": "Guter Zusatzjob? Lavanttalerin geriet an Betrüger",
-          "url": "https://www.krone.at/4362695"
-        },
-        {
-          "title": "„Es prickelt“: Für den Kärntner Bauern wird es jetzt ernst",
-          "url": "https://www.kleinezeitung.at/artikel/41419952/es-prickelt-fuer-den-kaerntner-bauern-wird-es-jetzt-ernst"
-        },
-        {
-          "title": "Bayerischer Wirtschaftsminister Hubert Aiwanger ist tot",
-          "url": "https://www.derstandard.at/story/3000000347591/bayerischer-wirtschaftsminister-hubert-aiwanger-ist-tot?ref=rss"
-        },
-        {
-          "title": "Bayerns Wirtschaftsminister Hubert Aiwanger ist tot",
-          "url": "https://orf.at/stories/3447236/"
-        },
-        {
-          "title": "Frontalkollision nach Überholmanöver",
-          "url": ""
-        },
-        {
-          "title": "Wohl Grizzly-Attacke: Frauen tot nach Wanderung",
-          "url": "https://www.krone.at/4362736"
-        }
-      ],
-      "transcript": "broadcasts/20261104T215704Z.txt",
-      "subtitles": "broadcasts/20261104T215704Z.vtt",
-      "subtitle_download": "broadcasts/20261104T215704Z.srt"
-    },
-    {
       "id": "20261105T023248Z",
       "kind": "broadcast",
       "title": "Nachrichten 05.11.2026 um 03:32 Uhr",
@@ -67,6 +31,38 @@
       "transcript": "broadcasts/20261105T023248Z.txt",
       "subtitles": "broadcasts/20261105T023248Z.vtt",
       "subtitle_download": "broadcasts/20261105T023248Z.srt"
+    },
+    {
+      "id": "20261105T110445Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 05.11.2026 um 12:04 Uhr",
+      "created_at": 1793876685.344672,
+      "video": "broadcasts/20261105T110445Z.mp4",
+      "sources": [
+        {
+          "title": "Bombendrohungen gegen Flüge in Europa",
+          "url": "https://orf.at/stories/3447301/"
+        },
+        {
+          "title": "„Glaubt keiner, dass du keine fünf Millionen hast“",
+          "url": "https://www.krone.at/4362400"
+        },
+        {
+          "title": "Goldene Ehrenzeichen des Landes für Öblarnerin und Liezener",
+          "url": "https://www.kleinezeitung.at/artikel/41420005/goldene-ehrenzeichen-des-landes-fuer-oeblarnerin-und-liezener"
+        },
+        {
+          "title": "Die geheimen Ministerratsprotokolle des Ersten Weltkriegs",
+          "url": "https://www.derstandard.at/story/3000000347106/die-geheimen-ministerratsprotokolle-des-ersten-weltkriegs?ref=rss"
+        },
+        {
+          "title": "Garagenbrand: Mann verletzt",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261105T110445Z.txt",
+      "subtitles": "broadcasts/20261105T110445Z.vtt",
+      "subtitle_download": "broadcasts/20261105T110445Z.srt"
     }
   ]
 }
