@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": 1793835343.510217,
+  "updated_at": 1793845937.882533,
   "articles": [
     {
       "id": "d4c40c620528430673bc055c",
@@ -29,7 +29,9 @@
         "rss_fingerprint": "40fbfec2da37654a5cd5bff37d7876957bd22bbcaa35c2a545a3f89800a704b2",
         "fetched_at": 1793835343.510217,
         "text_sha256": "e10de18ae8f8e47a06f843b9187d7a6b044e3ba5cae42219e4c127455cf82037"
-      }
+      },
+      "broadcast_id": "20261105T023248Z",
+      "broadcast_position": 1
     },
     {
       "id": "569b4e16fced89599d136c46",
@@ -57,7 +59,9 @@
         "requested_url": "https://www.derstandard.at/story/3000000346411/standardraetsel-j-11435?ref=rss",
         "last_attempt_at": 1793835343.510217,
         "rss_fingerprint": "014a048881e75492ecc5722fd542d465ba5283620767d2d53e837fdaf78e20de"
-      }
+      },
+      "broadcast_id": "20261105T023248Z",
+      "broadcast_position": 2
     },
     {
       "id": "7f3a76b600ff4c8ba29a2fdd",
@@ -90,7 +94,9 @@
       "rss_text": "Im Rahmen der China-Reise von Bundeskanzler Christian Stocker hat die österreichische Delegation in Shanghai auch eine Vorführung des großen Roboter-Herstellers Agibot bekommen. Das Highlight: „Luca“, 1,69 Meter groß und kundig sowohl der deutschen Sprache als auch des Tanzens. Nur Stocker hat er sich nicht gemerkt.",
       "rss_revision_at": 1793831586.0,
       "content_kind": "news",
-      "text_origin": "rss"
+      "text_origin": "rss",
+      "broadcast_id": "20261105T023248Z",
+      "broadcast_position": 3
     },
     {
       "id": "01c4e937c8236399fee0c16c",
@@ -316,11 +322,11 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41419952/es-prickelt-fuer-den-kaerntner-bauern-wird-es-jetzt-ernst",
-        "last_attempt_at": 1793835343.510217,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "0119607ab658243a5afff717ef9d154c3e7bbdec88df080d6e4d379a8d6bfa75"
       },
-      "broadcast_id": "20261104T215704Z",
-      "broadcast_position": 2
+      "broadcast_id": "20261105T023248Z",
+      "broadcast_position": 4
     },
     {
       "id": "1db3ba743bb55ae5c9cfbcf9",
@@ -464,7 +470,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41420584/prozess-nach-toedlichem-felssturz-in-steyr-geht-weiter",
-        "last_attempt_at": 1793835343.510217,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "5aa6d35df894fe9dbbe3481ba2509cfd37c1afc9845709f4bb8e06a7d1132ed5"
       }
     },
@@ -533,7 +539,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41414667/slalom-ass-kathi-truppe-ich-habe-mich-teilweise-selbst-fertig-gemacht",
-        "last_attempt_at": 1793835343.510217,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "71efb26098a9b8dea5fb371be99bcfaa95e486c85628e08ca9267971f44e5ef4"
       }
     },
@@ -729,7 +735,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41420567/kaernten-drogenlenker-ohne-fuehrerschein-borgte-sich-auto-aus",
-        "last_attempt_at": 1793835343.510217,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "7c5baba0729cb95c1fb4425dcabfff9d737aa8910975312f51f53b98c6c6c5e5"
       }
     },
@@ -860,7 +866,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41420507/bled-gelaufen-fpoe-wirbt-fuer-aenderungen-in-kaernten-und-zeigt",
-        "last_attempt_at": 1793835343.510217,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "a216d41f1945f8b7552eac9920f7d47e98332bf92ead40650de279694dee6071"
       }
     },
@@ -1068,7 +1074,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41420321/steirische-berufsfotografen-feiern-200-jahre-fotografie",
-        "last_attempt_at": 1793835343.510217,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "a8ff24023c7c648fe788430e5a393f095f534a1c602be56b271c0e15cce81f1f"
       }
     },
@@ -1104,7 +1110,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41418611/sie-kuemmern-sich-im-winter-um-sichere-strassen-in-feldkirchen",
-        "last_attempt_at": 1793835343.510217,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "5e56f6000bace18fe3001fec60457f63f65e6ccdd00153f5b4a9d0dd6e40ea41"
       }
     },
@@ -1378,7 +1384,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41420185/junkerpraesentation-2026-4000-stiessen-auf-den-neuen-jahrgang-an",
-        "last_attempt_at": 1793835343.510217,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "d0b663318bdc6317d7538eb16a828d3e14b2f3b5d2061048e6c735832cd2b6f0"
       }
     },
@@ -1443,7 +1449,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41420442/bahn-kv-nicht-auf-schiene-dritte-verhandlungsrunde-ergebnislos",
-        "last_attempt_at": 1793835343.510217,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "e7dd08782488746fac55a268bf9d1b87796d537684e2eb0dc1df88e29703de3d"
       }
     },
@@ -1798,9 +1804,9 @@
         "canonical_url": "https://orf.at/stories/3447221/",
         "resolved_url": "https://orf.at/stories/3447221/",
         "requested_url": "https://orf.at/stories/3447221/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "80b75bc113a39bdf42301b2fad55805a5e1d25c6025ec2abf87e6b8d3ed69bf7",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "ef149ba9abc413519826f312c4ce56def46df8a08f801716e851e3e11cdffd42"
       }
     },
@@ -1840,7 +1846,7 @@
     {
       "id": "06dbe624c6303cd52fe79b1f",
       "title": "Dirigent Herbert Blomstedt gestorben",
-      "text": "Der schwedisch-amerikanische Dirigent Herbert Blomstedt ist tot. Er starb heute im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte. Laut Berichten seiner Agentur starb er zu Hause im Kreis seiner Familie. Blomstedt dirigierte auch regelmäßig für die Wiener Philharmoniker.\n\nBlomstedt prägte viele Orchester in Europa und den USA: Er leitete die Staatskapelle Dresden, das Gewandhausorchester Leipzig und das NDR-Sinfonieorchester als Chefdirigent, zehn Jahre lang auch die San Francisco Symphony. Als Gastdirigent war er unter anderem in Boston, Chicago und Los Angeles gefragt. Bis ins hohe Alter wagte sich der Grandseigneur an frische Interpretationen.",
+      "text": "Der schwedisch-amerikanische Dirigent Herbert Blomstedt ist tot. Er starb gestern im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte. Laut Berichten seiner Agentur starb er zu Hause im Kreis seiner Familie. Blomstedt dirigierte auch regelmäßig für die Wiener Philharmoniker.\n\nBlomstedt prägte viele Orchester in Europa und den USA: Er leitete die Staatskapelle Dresden, das Gewandhausorchester Leipzig und das NDR-Sinfonieorchester als Chefdirigent, zehn Jahre lang auch die San Francisco Symphony. Als Gastdirigent war er unter anderem in Boston, Chicago und Los Angeles gefragt. Bis ins hohe Alter wagte sich der Grandseigneur an frische Interpretationen.",
       "url": "https://orf.at/stories/3447220/",
       "published_at": 1793813574.0,
       "first_seen_at": 1793815071.652229,
@@ -1852,7 +1858,7 @@
       "rss_revision_at": 1793813574.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Der schwedisch-amerikanische Dirigent Herbert Blomstedt ist tot. Er starb heute im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte. Laut Berichten seiner Agentur starb er zu Hause im Kreis seiner Familie. Blomstedt dirigierte auch regelmäßig für die Wiener Philharmoniker.\n\nBlomstedt prägte viele Orchester in Europa und den USA: Er leitete die Staatskapelle Dresden, das Gewandhausorchester Leipzig und das NDR-Sinfonieorchester als Chefdirigent, zehn Jahre lang auch die San Francisco Symphony. Als Gastdirigent war er unter anderem in Boston, Chicago und Los Angeles gefragt. Bis ins hohe Alter wagte sich der Grandseigneur an frische Interpretationen.",
+      "article_text": "Der schwedisch-amerikanische Dirigent Herbert Blomstedt ist tot. Er starb gestern im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte. Laut Berichten seiner Agentur starb er zu Hause im Kreis seiner Familie. Blomstedt dirigierte auch regelmäßig für die Wiener Philharmoniker.\n\nBlomstedt prägte viele Orchester in Europa und den USA: Er leitete die Staatskapelle Dresden, das Gewandhausorchester Leipzig und das NDR-Sinfonieorchester als Chefdirigent, zehn Jahre lang auch die San Francisco Symphony. Als Gastdirigent war er unter anderem in Boston, Chicago und Los Angeles gefragt. Bis ins hohe Alter wagte sich der Grandseigneur an frische Interpretationen.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -1860,10 +1866,10 @@
         "canonical_url": "https://orf.at/stories/3447220/",
         "resolved_url": "https://orf.at/stories/3447220/",
         "requested_url": "https://orf.at/stories/3447220/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "766ace78c287851c79a0cf76912fe62d68e5dc6aac53a4b746ea22cc10d60142",
-        "fetched_at": 1793815071.652229,
-        "text_sha256": "580b46bde0081183efc9dc0333557cd2dd9ef8a37d59c0ef70ac9818553a3397"
+        "fetched_at": 1793845937.882533,
+        "text_sha256": "e730009f3f02830ef52ee128a5b60c3421cf96345393f29c40f1b4c8aec5741b"
       }
     },
     {
@@ -2066,7 +2072,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347477/neue-mehrheiten-im-us-kongress-bringen-demokraten-nur-begrenzten-spielraum?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347477/neue-mehrheiten-im-us-kongress-bringen-demokraten-nur-begrenzten-spielraum?ref=rss",
         "last_attempt_at": 1793815071.652229,
@@ -2127,7 +2133,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347586/dirigent-herbert-blomstedt-99-jaehrig-verstorben?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347586/dirigent-herbert-blomstedt-99-jaehrig-verstorben?ref=rss",
         "last_attempt_at": 1793815071.652229,
@@ -2276,7 +2282,7 @@
     {
       "id": "66924309e3311ef8812c1426",
       "title": "Vance: Iran-Krieg schuld an Wahlniederlage",
-      "text": "Die überraschend deutliche Niederlage der Republikaner bei den US-Kongresswahlen ist nach Ansicht von Vizepräsident JD Vance auf den Iran-Krieg zurückzuführen. „Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er heute auf der Plattform X. Das habe auch Präsident Donald Trump bereits gesagt. „Jeder weiß, warum wir verloren haben. Und jede Diskussion darüber, wie es weitergeht, muss dort ansetzen.“\n\nViele Wähler und Wählerinnen, die bei den Präsidentschaftswahlen vor zwei Jahren für Vance und Trump gestimmt hätten, seien verärgert gewesen. Eine Umfrage habe erheben, dass sie sich nun vor allem vier Punkte gewünscht hätten: das Ende des Iran-Kriegs, den Fokus auf Lebenshaltungskosten und Inflation, Amerika an erste Stelle zu setzen und eine Neuausrichtung der Beziehungen zu Israel.\n\nVance äußerte Verständnis für die Kritik. „An alle, die einfach nur wütend über das Ergebnis sind: Das solltet ihr auch sein. Lasst uns diese Wut nutzen, um uns wieder der Aufgabe zu widmen, unser Land zu retten“, schrieb er.\n\nLaut einer Analyse des US-Senders CNN wolle sich Vance mit dem Posting von Trump abgrenzen und damit seine Chancen auf die republikanische Kandidatur für die Präsidentschaftswahl 2028 erhöhen. Seine Kritik deute an, dass er von Anfang an Gegner des Kriegs im Iran gewesen sei.",
+      "text": "Die überraschend deutliche Niederlage der Republikaner bei den US-Kongresswahlen ist nach Ansicht von Vizepräsident JD Vance auf den Iran-Krieg zurückzuführen. „Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er gestern auf der Plattform X. Das habe auch Präsident Donald Trump bereits gesagt. „Jeder weiß, warum wir verloren haben. Und jede Diskussion darüber, wie es weitergeht, muss dort ansetzen.“\n\nViele Wähler und Wählerinnen, die bei den Präsidentschaftswahlen vor zwei Jahren für Vance und Trump gestimmt hätten, seien verärgert gewesen. Eine Umfrage habe ergeben, dass sie sich nun vor allem vier Punkte gewünscht hätten: das Ende des Iran-Kriegs, den Fokus auf Lebenshaltungskosten und Inflation, Amerika an erste Stelle zu setzen und eine Neuausrichtung der Beziehungen zu Israel.\n\nVance äußerte Verständnis für die Kritik. „An alle, die einfach nur wütend über das Ergebnis sind: Das solltet ihr auch sein. Lasst uns diese Wut nutzen, um uns wieder der Aufgabe zu widmen, unser Land zu retten“, schrieb er.\n\nTrump räumte ein, dass die durch den Iran-Krieg gestiegenen Spritpreise ein Grund für die Niederlage waren. Er halte die Einschätzung von Vance für weitgehend zutreffend, sagte Trump vor Journalisten in Washington. Der Krieg habe die Preise kurzfristig „ein wenig“ in die Höhe getrieben.\n\nGleichzeitig verteidigte Trump seine Entscheidung zum Krieg gegen den Iran. Wenn er noch einmal vor der Wahl stünde, würde er genauso handeln, sagte der Republikaner. Man dürfe nicht zulassen, dass der Iran eine Atomwaffe bekomme. Auf die Frage, ob der Krieg es wert gewesen sei, antwortete er mit „Ja“. Er argumentierte auch, der Unmut richte sich nicht gegen den Krieg an sich, sondern gegen die gestiegenen Preise: „Es ist nicht der Krieg, sondern die Preise.“\n\nLaut einer Analyse des US-Senders CNN wolle sich Vance mit dem Posting von Trump abgrenzen und damit seine Chancen auf die republikanische Kandidatur für die Präsidentschaftswahl 2028 erhöhen. Seine Kritik deute an, dass er von Anfang an Gegner des Kriegs im Iran gewesen sei.",
       "url": "https://orf.at/stories/3447218/",
       "published_at": 1793811801.0,
       "first_seen_at": 1793815071.652229,
@@ -2288,7 +2294,7 @@
       "rss_revision_at": 1793811801.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Die überraschend deutliche Niederlage der Republikaner bei den US-Kongresswahlen ist nach Ansicht von Vizepräsident JD Vance auf den Iran-Krieg zurückzuführen. „Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er heute auf der Plattform X. Das habe auch Präsident Donald Trump bereits gesagt. „Jeder weiß, warum wir verloren haben. Und jede Diskussion darüber, wie es weitergeht, muss dort ansetzen.“\n\nViele Wähler und Wählerinnen, die bei den Präsidentschaftswahlen vor zwei Jahren für Vance und Trump gestimmt hätten, seien verärgert gewesen. Eine Umfrage habe erheben, dass sie sich nun vor allem vier Punkte gewünscht hätten: das Ende des Iran-Kriegs, den Fokus auf Lebenshaltungskosten und Inflation, Amerika an erste Stelle zu setzen und eine Neuausrichtung der Beziehungen zu Israel.\n\nVance äußerte Verständnis für die Kritik. „An alle, die einfach nur wütend über das Ergebnis sind: Das solltet ihr auch sein. Lasst uns diese Wut nutzen, um uns wieder der Aufgabe zu widmen, unser Land zu retten“, schrieb er.\n\nLaut einer Analyse des US-Senders CNN wolle sich Vance mit dem Posting von Trump abgrenzen und damit seine Chancen auf die republikanische Kandidatur für die Präsidentschaftswahl 2028 erhöhen. Seine Kritik deute an, dass er von Anfang an Gegner des Kriegs im Iran gewesen sei.",
+      "article_text": "Die überraschend deutliche Niederlage der Republikaner bei den US-Kongresswahlen ist nach Ansicht von Vizepräsident JD Vance auf den Iran-Krieg zurückzuführen. „Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er gestern auf der Plattform X. Das habe auch Präsident Donald Trump bereits gesagt. „Jeder weiß, warum wir verloren haben. Und jede Diskussion darüber, wie es weitergeht, muss dort ansetzen.“\n\nViele Wähler und Wählerinnen, die bei den Präsidentschaftswahlen vor zwei Jahren für Vance und Trump gestimmt hätten, seien verärgert gewesen. Eine Umfrage habe ergeben, dass sie sich nun vor allem vier Punkte gewünscht hätten: das Ende des Iran-Kriegs, den Fokus auf Lebenshaltungskosten und Inflation, Amerika an erste Stelle zu setzen und eine Neuausrichtung der Beziehungen zu Israel.\n\nVance äußerte Verständnis für die Kritik. „An alle, die einfach nur wütend über das Ergebnis sind: Das solltet ihr auch sein. Lasst uns diese Wut nutzen, um uns wieder der Aufgabe zu widmen, unser Land zu retten“, schrieb er.\n\nTrump räumte ein, dass die durch den Iran-Krieg gestiegenen Spritpreise ein Grund für die Niederlage waren. Er halte die Einschätzung von Vance für weitgehend zutreffend, sagte Trump vor Journalisten in Washington. Der Krieg habe die Preise kurzfristig „ein wenig“ in die Höhe getrieben.\n\nGleichzeitig verteidigte Trump seine Entscheidung zum Krieg gegen den Iran. Wenn er noch einmal vor der Wahl stünde, würde er genauso handeln, sagte der Republikaner. Man dürfe nicht zulassen, dass der Iran eine Atomwaffe bekomme. Auf die Frage, ob der Krieg es wert gewesen sei, antwortete er mit „Ja“. Er argumentierte auch, der Unmut richte sich nicht gegen den Krieg an sich, sondern gegen die gestiegenen Preise: „Es ist nicht der Krieg, sondern die Preise.“\n\nLaut einer Analyse des US-Senders CNN wolle sich Vance mit dem Posting von Trump abgrenzen und damit seine Chancen auf die republikanische Kandidatur für die Präsidentschaftswahl 2028 erhöhen. Seine Kritik deute an, dass er von Anfang an Gegner des Kriegs im Iran gewesen sei.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -2296,10 +2302,10 @@
         "canonical_url": "https://orf.at/stories/3447218/",
         "resolved_url": "https://orf.at/stories/3447218/",
         "requested_url": "https://orf.at/stories/3447218/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "6870a1df718d66710ff5cda40f5bffb17741d833f941c530a39e762372a17aa7",
-        "fetched_at": 1793815071.652229,
-        "text_sha256": "cd3b5bcc9b57773b8ffb23dcd5b9b07c542f178ed15bfb1489b2cde79ba91cb1"
+        "fetched_at": 1793845937.882533,
+        "text_sha256": "72fd1aead22f77b93b2b1b66c4d721b562ffb000024aa2403d908a498a926570"
       }
     },
     {
@@ -2323,7 +2329,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347585/-mordalarm-in-wien-meidling-mann-lag-leblos-auf-stra223e?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347585/-mordalarm-in-wien-meidling-mann-lag-leblos-auf-stra223e?ref=rss",
         "last_attempt_at": 1793815071.652229,
@@ -2495,7 +2501,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347153/squiggly-sudoku-s6434b?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347153/squiggly-sudoku-s6434b?ref=rss",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "809e3d61328fda434a42e3e37bf77d7f87cf771a7fd16817411bb6c824f470f1"
       }
     },
@@ -2813,7 +2819,7 @@
     {
       "id": "f5bdafe5a892ff827a06b69e",
       "title": "Huthi-Miliz verkündet neuen Angriff auf Flughafen Riad",
-      "text": "Die vom Iran unterstützte Huthi-Miliz hat erneut einen Angriff auf den Flughafen in der saudischen Hauptstadt Riad für sich beansprucht. Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari heute mit.\n\nReisende sowie Fluggesellschaften und deren Mitarbeiter und Mitarbeiterinnen warnte er erneut davor, den saudi-arabischen Flugraum zu nutzen, weil dieser nicht vor Angriffen der Huthis sicher sei.\n\nAuch im Jemen, wo es seit Monaten zu schweren Gefechten kommt, geht der Krieg weiter. Die Huthis kämpfen dabei unter anderem im Raum der strategisch wichtigen Stadt Tais gegen Truppen der Regierung, die von verbündeten Milizen und Saudi-Arabien unterstützt werden. Die Huthis greifen auch Ziele in der südlichen Küstenstadt Aden an, wo die international anerkannte Regierung ihren Sitz hat.\n\nDie ohnehin katastrophale humanitäre Lage im Jemen hat sich durch die Kämpfe noch weiter verschlechtert. Die Huthi-Rebellen haben Tais seit Wochen wieder eingekesselt. Dort werden die Vorräte an Wasser, Lebensmitteln, Kleidung und anderen Gütern knapp. Krankenhäusern fehlt es an Treibstoff und Arzneimitteln. UNO-Hilfsorganisationen könnten keine Lieferungen nach Tais bringen, weil Straßen gesperrt seien, sagte ein UNO-Sprecher.\n\nDas Rote Kreuz lieferte eigenen Angaben zufolge Hilfsgüter in die belagerte Stadt. Vier Lastwagen mit wichtigen medizinischen Gütern hätten Tais erreicht, teilte die Organisation heute mit. Nach Angaben von Hilfsorganisationen sind im gesamten Jemen Krankenhäuser überlastet, durch die Kämpfe sind rund 800.000 Menschen von lebenswichtiger Hilfe abgeschnitten.",
+      "text": "Die vom Iran unterstützte Huthi-Miliz hat erneut einen Angriff auf den Flughafen in der saudischen Hauptstadt Riad für sich beansprucht. Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari gestern mit.\n\nReisende sowie Fluggesellschaften und deren Mitarbeiter und Mitarbeiterinnen warnte er erneut davor, den saudi-arabischen Flugraum zu nutzen, weil dieser nicht vor Angriffen der Huthis sicher sei.\n\nAuch im Jemen, wo es seit Monaten zu schweren Gefechten kommt, geht der Krieg weiter. Die Huthis kämpfen dabei unter anderem im Raum der strategisch wichtigen Stadt Tais gegen Truppen der Regierung, die von verbündeten Milizen und Saudi-Arabien unterstützt werden. Die Huthis greifen auch Ziele in der südlichen Küstenstadt Aden an, wo die international anerkannte Regierung ihren Sitz hat.\n\nDie ohnehin katastrophale humanitäre Lage im Jemen hat sich durch die Kämpfe noch weiter verschlechtert. Die Huthi-Rebellen haben Tais seit Wochen wieder eingekesselt. Dort werden die Vorräte an Wasser, Lebensmitteln, Kleidung und anderen Gütern knapp. Krankenhäusern fehlt es an Treibstoff und Arzneimitteln. UNO-Hilfsorganisationen könnten keine Lieferungen nach Tais bringen, weil Straßen gesperrt seien, sagte ein UNO-Sprecher.\n\nDas Rote Kreuz lieferte eigenen Angaben zufolge Hilfsgüter in die belagerte Stadt. Vier Lastwagen mit wichtigen medizinischen Gütern hätten Tais erreicht, teilte die Organisation gestern mit. Nach Angaben von Hilfsorganisationen sind im gesamten Jemen Krankenhäuser überlastet, durch die Kämpfe sind rund 800.000 Menschen von lebenswichtiger Hilfe abgeschnitten.",
       "url": "https://orf.at/stories/3447217/",
       "published_at": 1793811247.0,
       "first_seen_at": 1793815071.652229,
@@ -2825,7 +2831,7 @@
       "rss_revision_at": 1793811247.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Die vom Iran unterstützte Huthi-Miliz hat erneut einen Angriff auf den Flughafen in der saudischen Hauptstadt Riad für sich beansprucht. Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari heute mit.\n\nReisende sowie Fluggesellschaften und deren Mitarbeiter und Mitarbeiterinnen warnte er erneut davor, den saudi-arabischen Flugraum zu nutzen, weil dieser nicht vor Angriffen der Huthis sicher sei.\n\nAuch im Jemen, wo es seit Monaten zu schweren Gefechten kommt, geht der Krieg weiter. Die Huthis kämpfen dabei unter anderem im Raum der strategisch wichtigen Stadt Tais gegen Truppen der Regierung, die von verbündeten Milizen und Saudi-Arabien unterstützt werden. Die Huthis greifen auch Ziele in der südlichen Küstenstadt Aden an, wo die international anerkannte Regierung ihren Sitz hat.\n\nDie ohnehin katastrophale humanitäre Lage im Jemen hat sich durch die Kämpfe noch weiter verschlechtert. Die Huthi-Rebellen haben Tais seit Wochen wieder eingekesselt. Dort werden die Vorräte an Wasser, Lebensmitteln, Kleidung und anderen Gütern knapp. Krankenhäusern fehlt es an Treibstoff und Arzneimitteln. UNO-Hilfsorganisationen könnten keine Lieferungen nach Tais bringen, weil Straßen gesperrt seien, sagte ein UNO-Sprecher.\n\nDas Rote Kreuz lieferte eigenen Angaben zufolge Hilfsgüter in die belagerte Stadt. Vier Lastwagen mit wichtigen medizinischen Gütern hätten Tais erreicht, teilte die Organisation heute mit. Nach Angaben von Hilfsorganisationen sind im gesamten Jemen Krankenhäuser überlastet, durch die Kämpfe sind rund 800.000 Menschen von lebenswichtiger Hilfe abgeschnitten.",
+      "article_text": "Die vom Iran unterstützte Huthi-Miliz hat erneut einen Angriff auf den Flughafen in der saudischen Hauptstadt Riad für sich beansprucht. Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari gestern mit.\n\nReisende sowie Fluggesellschaften und deren Mitarbeiter und Mitarbeiterinnen warnte er erneut davor, den saudi-arabischen Flugraum zu nutzen, weil dieser nicht vor Angriffen der Huthis sicher sei.\n\nAuch im Jemen, wo es seit Monaten zu schweren Gefechten kommt, geht der Krieg weiter. Die Huthis kämpfen dabei unter anderem im Raum der strategisch wichtigen Stadt Tais gegen Truppen der Regierung, die von verbündeten Milizen und Saudi-Arabien unterstützt werden. Die Huthis greifen auch Ziele in der südlichen Küstenstadt Aden an, wo die international anerkannte Regierung ihren Sitz hat.\n\nDie ohnehin katastrophale humanitäre Lage im Jemen hat sich durch die Kämpfe noch weiter verschlechtert. Die Huthi-Rebellen haben Tais seit Wochen wieder eingekesselt. Dort werden die Vorräte an Wasser, Lebensmitteln, Kleidung und anderen Gütern knapp. Krankenhäusern fehlt es an Treibstoff und Arzneimitteln. UNO-Hilfsorganisationen könnten keine Lieferungen nach Tais bringen, weil Straßen gesperrt seien, sagte ein UNO-Sprecher.\n\nDas Rote Kreuz lieferte eigenen Angaben zufolge Hilfsgüter in die belagerte Stadt. Vier Lastwagen mit wichtigen medizinischen Gütern hätten Tais erreicht, teilte die Organisation gestern mit. Nach Angaben von Hilfsorganisationen sind im gesamten Jemen Krankenhäuser überlastet, durch die Kämpfe sind rund 800.000 Menschen von lebenswichtiger Hilfe abgeschnitten.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -2833,10 +2839,10 @@
         "canonical_url": "https://orf.at/stories/3447217/",
         "resolved_url": "https://orf.at/stories/3447217/",
         "requested_url": "https://orf.at/stories/3447217/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "86d9bb554232172d972deb93b33bd3ac8078f9a10bcad5ff745a1a0fad029724",
-        "fetched_at": 1793815071.652229,
-        "text_sha256": "8448515f1322cf12c0fc0d0d3e7ba42a6fa9ee969227e9630a3dbf114e943f3c"
+        "fetched_at": 1793845937.882533,
+        "text_sha256": "67e919e0504e49a9b4a510309f4713e6555d3f3e1a8616093d25b9b28847f66c"
       }
     },
     {
@@ -2863,7 +2869,7 @@
     {
       "id": "c2538ddaa4837af2c82f9872",
       "title": "Ungarn macht erstmals Stasi-Akten umfassend zugänglich",
-      "text": "Erstmals seit der demokratischen Wende macht Ungarn Akten der kommunistischen Staatssicherheit umfassend zugänglich. „Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar heute im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt.\n\nÜber die Webseite des Archivs kann nun jeder Einsicht in das Material nehmen. Magyar regiert seit Mai dieses Jahres in Ungarn, die Öffnung des Stasi-Akten-Archivs war eines seiner zentralen Wahlversprechen. Die Spitzelnetze der kommunistischen Geheimdienste hätten alle Lebensbereiche durchdrungen und seien auch in Fabriken, Kirchen und Familien präsent gewesen, sagte Magyar.\n\nNach Angaben des Archivdirektors speichert das Archiv die Namen von rund 55.000 Menschen, an die die ungarische Stasi herantrat. Etwa 10.000 von ihnen könnten heute noch am Leben sein.\n\nDas veröffentlichte Material ist nicht vollständig. So sollen die Anwerbungs- und Personalakten erst im kommenden Februar veröffentlicht werden. Außerdem sind die dem Stasi-Aktenarchiv übergebenen Akten unvollständig, weil viele Akten noch in der Zeit des Kommunismus oder in der Wendezeit vernichtet wurden.\n\nGroße Überraschungen für die Öffentlichkeit dürfte das nun zugängliche Material aber nicht bergen. Historiker, Forscher, Journalisten und Opfer von Bespitzelungen konnten schon zuvor gezielt nach Akten suchen.\n\nSo ist etwa schon seit 2006 bekannt, dass der Filmregisseur und Oscar-Preisträger Istvan Szabo („Mephisto“, 1981) in seinen jungen Jahren für den Geheimdienst tätig war. Auch die Spitzeltätigkeit etlicher Politiker der Nach-Wende-Zeit wurde durch derartige Enthüllungen aufgedeckt.",
+      "text": "Erstmals seit der demokratischen Wende macht Ungarn Akten der kommunistischen Staatssicherheit umfassend zugänglich. „Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar gestern im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt.\n\nÜber die Webseite des Archivs kann nun jeder Einsicht in das Material nehmen. Magyar regiert seit Mai dieses Jahres in Ungarn, die Öffnung des Stasi-Akten-Archivs war eines seiner zentralen Wahlversprechen. Die Spitzelnetze der kommunistischen Geheimdienste hätten alle Lebensbereiche durchdrungen und seien auch in Fabriken, Kirchen und Familien präsent gewesen, sagte Magyar.\n\nNach Angaben des Archivdirektors speichert das Archiv die Namen von rund 55.000 Menschen, an die die ungarische Stasi herantrat. Etwa 10.000 von ihnen könnten heute noch am Leben sein.\n\nDas veröffentlichte Material ist nicht vollständig. So sollen die Anwerbungs- und Personalakten erst im kommenden Februar veröffentlicht werden. Außerdem sind die dem Stasi-Aktenarchiv übergebenen Akten unvollständig, weil viele Akten noch in der Zeit des Kommunismus oder in der Wendezeit vernichtet wurden.\n\nGroße Überraschungen für die Öffentlichkeit dürfte das nun zugängliche Material aber nicht bergen. Historiker, Forscher, Journalisten und Opfer von Bespitzelungen konnten schon zuvor gezielt nach Akten suchen.\n\nSo ist etwa schon seit 2006 bekannt, dass der Filmregisseur und Oscar-Preisträger Istvan Szabo („Mephisto“, 1981) in seinen jungen Jahren für den Geheimdienst tätig war. Auch die Spitzeltätigkeit etlicher Politiker der Nach-Wende-Zeit wurde durch derartige Enthüllungen aufgedeckt.",
       "url": "https://orf.at/stories/3447215/",
       "published_at": 1793809831.0,
       "first_seen_at": 1793815071.652229,
@@ -2875,7 +2881,7 @@
       "rss_revision_at": 1793809831.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Erstmals seit der demokratischen Wende macht Ungarn Akten der kommunistischen Staatssicherheit umfassend zugänglich. „Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar heute im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt.\n\nÜber die Webseite des Archivs kann nun jeder Einsicht in das Material nehmen. Magyar regiert seit Mai dieses Jahres in Ungarn, die Öffnung des Stasi-Akten-Archivs war eines seiner zentralen Wahlversprechen. Die Spitzelnetze der kommunistischen Geheimdienste hätten alle Lebensbereiche durchdrungen und seien auch in Fabriken, Kirchen und Familien präsent gewesen, sagte Magyar.\n\nNach Angaben des Archivdirektors speichert das Archiv die Namen von rund 55.000 Menschen, an die die ungarische Stasi herantrat. Etwa 10.000 von ihnen könnten heute noch am Leben sein.\n\nDas veröffentlichte Material ist nicht vollständig. So sollen die Anwerbungs- und Personalakten erst im kommenden Februar veröffentlicht werden. Außerdem sind die dem Stasi-Aktenarchiv übergebenen Akten unvollständig, weil viele Akten noch in der Zeit des Kommunismus oder in der Wendezeit vernichtet wurden.\n\nGroße Überraschungen für die Öffentlichkeit dürfte das nun zugängliche Material aber nicht bergen. Historiker, Forscher, Journalisten und Opfer von Bespitzelungen konnten schon zuvor gezielt nach Akten suchen.\n\nSo ist etwa schon seit 2006 bekannt, dass der Filmregisseur und Oscar-Preisträger Istvan Szabo („Mephisto“, 1981) in seinen jungen Jahren für den Geheimdienst tätig war. Auch die Spitzeltätigkeit etlicher Politiker der Nach-Wende-Zeit wurde durch derartige Enthüllungen aufgedeckt.",
+      "article_text": "Erstmals seit der demokratischen Wende macht Ungarn Akten der kommunistischen Staatssicherheit umfassend zugänglich. „Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar gestern im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt.\n\nÜber die Webseite des Archivs kann nun jeder Einsicht in das Material nehmen. Magyar regiert seit Mai dieses Jahres in Ungarn, die Öffnung des Stasi-Akten-Archivs war eines seiner zentralen Wahlversprechen. Die Spitzelnetze der kommunistischen Geheimdienste hätten alle Lebensbereiche durchdrungen und seien auch in Fabriken, Kirchen und Familien präsent gewesen, sagte Magyar.\n\nNach Angaben des Archivdirektors speichert das Archiv die Namen von rund 55.000 Menschen, an die die ungarische Stasi herantrat. Etwa 10.000 von ihnen könnten heute noch am Leben sein.\n\nDas veröffentlichte Material ist nicht vollständig. So sollen die Anwerbungs- und Personalakten erst im kommenden Februar veröffentlicht werden. Außerdem sind die dem Stasi-Aktenarchiv übergebenen Akten unvollständig, weil viele Akten noch in der Zeit des Kommunismus oder in der Wendezeit vernichtet wurden.\n\nGroße Überraschungen für die Öffentlichkeit dürfte das nun zugängliche Material aber nicht bergen. Historiker, Forscher, Journalisten und Opfer von Bespitzelungen konnten schon zuvor gezielt nach Akten suchen.\n\nSo ist etwa schon seit 2006 bekannt, dass der Filmregisseur und Oscar-Preisträger Istvan Szabo („Mephisto“, 1981) in seinen jungen Jahren für den Geheimdienst tätig war. Auch die Spitzeltätigkeit etlicher Politiker der Nach-Wende-Zeit wurde durch derartige Enthüllungen aufgedeckt.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -2883,10 +2889,10 @@
         "canonical_url": "https://orf.at/stories/3447215/",
         "resolved_url": "https://orf.at/stories/3447215/",
         "requested_url": "https://orf.at/stories/3447215/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "9b69b26113fad8529e57d61c0fe90622abb47487fa1a982cdd97420c6786343c",
-        "fetched_at": 1793815071.652229,
-        "text_sha256": "565bcb23af6382ef1d12cdb8f70db572e82ef9f0972d5114bee8ddbf6cd6ae6c"
+        "fetched_at": 1793845937.882533,
+        "text_sha256": "bfb0bf555c5f3585138650e3d580e347d97837db330d1d2dfe21326788ebb917"
       }
     },
     {
@@ -3118,7 +3124,7 @@
     {
       "id": "8408fea2a2187a43d4fcb1f3",
       "title": "Israels Präsident führt Gespräche zur Regierungsbildung",
-      "text": "Nach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog heute Konsultationen zur Regierungsbildung aufgenommen. Bis morgen Abend kommen Repräsentanten aller Parteien zu Gesprächen in seine Residenz in Jerusalem.\n\n„Ich beabsichtige, offene, freimütige und durchaus kritische Gespräche mit den Vertretern der Fraktionen zu führen“, sagte Herzog nach Erhalt der offiziellen Wahlergebnisse. Dabei werde er auch „schwierige Fragen stellen“.\n\nAngesichts des knappen Wahlausgangs ohne klaren Sieger sagte Herzog: „Ich wünsche mir Originalität und Kreativität, Mut und guten Willen, damit Israel am Ende als Gewinner dasteht.“ Eine Neuwahl will er nach Möglichkeit vermeiden.\n\nStärkste Kraft wurde bei der Wahl am 27. Oktober die rechtskonservative Likud-Partei von Ministerpräsident Benjamin Netanjahu mit 27 von insgesamt 120 Sitzen, gefolgt vom Oppositionsblock von Ex-Militärchef Gadi Eisenkot mit 21 Mandaten.\n\nTraditionell beauftragt der Präsident denjenigen Kandidaten mit der Regierungsbildung, dem er die besten Chancen auf eine parlamentarische Mehrheit einräumt. Das muss nicht automatisch der Vorsitzende der stärksten Partei sein. Nach Medienberichten wird damit gerechnet, dass Eisenkot zuerst den Auftrag erhält, weil er die meisten Empfehlungen erhalten könnte.\n\nDas Zentrale Wahlkomitee hatte das Resultat der Parlamentswahl zuvor in einer Abstimmung gebilligt. Die Prüfung sei abgeschlossen, und es gebe „keine Hinweise auf Unregelmäßigkeiten mit Auswirkungen auf Integrität oder Ergebnis“. Das Komitee habe sämtliche Beschwerden untersucht.\n\nAmit Halevi, Abgeordneter der rechtskonservativen Likud-Partei von Ministerpräsident Benjamin Netanjahu, kündigte daraufhin seinen Rücktritt aus dem Zentralen Wahlkomitee an. Solange schwerwiegende Vorwürfe einer Einmischung ausländischer Staaten nicht ausgeräumt seien, sei das Komitee nicht befugt, die Wahlergebnisse zu bestätigen.\n\nDie Opposition reagierte empört. Eisenkot schrieb auf der Plattform X: „In ihrer Verzweiflung versuchen der Likud und Netanjahu, ein Pogrom gegen die Demokratie und die Rechtsstaatlichkeit anzuzetteln. Sie versuchen, uns alle in eine gefährliche Staatskrise hineinzuziehen.“",
+      "text": "Nach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog gestern Konsultationen zur Regierungsbildung aufgenommen. Bis morgen Abend kommen Repräsentanten aller Parteien zu Gesprächen in seine Residenz in Jerusalem.\n\n„Ich beabsichtige, offene, freimütige und durchaus kritische Gespräche mit den Vertretern der Fraktionen zu führen“, sagte Herzog nach Erhalt der offiziellen Wahlergebnisse. Dabei werde er auch „schwierige Fragen stellen“.\n\nAngesichts des knappen Wahlausgangs ohne klaren Sieger sagte Herzog: „Ich wünsche mir Originalität und Kreativität, Mut und guten Willen, damit Israel am Ende als Gewinner dasteht.“ Eine Neuwahl will er nach Möglichkeit vermeiden.\n\nStärkste Kraft wurde bei der Wahl am 27. Oktober die rechtskonservative Likud-Partei von Ministerpräsident Benjamin Netanjahu mit 27 von insgesamt 120 Sitzen, gefolgt vom Oppositionsblock von Ex-Militärchef Gadi Eisenkot mit 21 Mandaten.\n\nTraditionell beauftragt der Präsident denjenigen Kandidaten mit der Regierungsbildung, dem er die besten Chancen auf eine parlamentarische Mehrheit einräumt. Das muss nicht automatisch der Vorsitzende der stärksten Partei sein. Nach Medienberichten wird damit gerechnet, dass Eisenkot zuerst den Auftrag erhält, weil er die meisten Empfehlungen erhalten könnte.\n\nDas Zentrale Wahlkomitee hatte das Resultat der Parlamentswahl zuvor in einer Abstimmung gebilligt. Die Prüfung sei abgeschlossen, und es gebe „keine Hinweise auf Unregelmäßigkeiten mit Auswirkungen auf Integrität oder Ergebnis“. Das Komitee habe sämtliche Beschwerden untersucht.\n\nAmit Halevi, Abgeordneter der rechtskonservativen Likud-Partei von Ministerpräsident Benjamin Netanjahu, kündigte daraufhin seinen Rücktritt aus dem Zentralen Wahlkomitee an. Solange schwerwiegende Vorwürfe einer Einmischung ausländischer Staaten nicht ausgeräumt seien, sei das Komitee nicht befugt, die Wahlergebnisse zu bestätigen.\n\nDie Opposition reagierte empört. Eisenkot schrieb auf der Plattform X: „In ihrer Verzweiflung versuchen der Likud und Netanjahu, ein Pogrom gegen die Demokratie und die Rechtsstaatlichkeit anzuzetteln. Sie versuchen, uns alle in eine gefährliche Staatskrise hineinzuziehen.“\n\nUnterdessen hat sich eine der beiden großen israelisch-arabischen Parteien hinter Eisenkot gestellt. Die Raam-Fraktion im Parlament habe „beschlossen, Eisenkot für die Bildung der nächsten Regierung zu empfehlen“, erklärte die Partei gestern.",
       "url": "https://orf.at/stories/3447213/",
       "published_at": 1793808853.0,
       "first_seen_at": 1793815071.652229,
@@ -3130,7 +3136,7 @@
       "rss_revision_at": 1793808853.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Nach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog heute Konsultationen zur Regierungsbildung aufgenommen. Bis morgen Abend kommen Repräsentanten aller Parteien zu Gesprächen in seine Residenz in Jerusalem.\n\n„Ich beabsichtige, offene, freimütige und durchaus kritische Gespräche mit den Vertretern der Fraktionen zu führen“, sagte Herzog nach Erhalt der offiziellen Wahlergebnisse. Dabei werde er auch „schwierige Fragen stellen“.\n\nAngesichts des knappen Wahlausgangs ohne klaren Sieger sagte Herzog: „Ich wünsche mir Originalität und Kreativität, Mut und guten Willen, damit Israel am Ende als Gewinner dasteht.“ Eine Neuwahl will er nach Möglichkeit vermeiden.\n\nStärkste Kraft wurde bei der Wahl am 27. Oktober die rechtskonservative Likud-Partei von Ministerpräsident Benjamin Netanjahu mit 27 von insgesamt 120 Sitzen, gefolgt vom Oppositionsblock von Ex-Militärchef Gadi Eisenkot mit 21 Mandaten.\n\nTraditionell beauftragt der Präsident denjenigen Kandidaten mit der Regierungsbildung, dem er die besten Chancen auf eine parlamentarische Mehrheit einräumt. Das muss nicht automatisch der Vorsitzende der stärksten Partei sein. Nach Medienberichten wird damit gerechnet, dass Eisenkot zuerst den Auftrag erhält, weil er die meisten Empfehlungen erhalten könnte.\n\nDas Zentrale Wahlkomitee hatte das Resultat der Parlamentswahl zuvor in einer Abstimmung gebilligt. Die Prüfung sei abgeschlossen, und es gebe „keine Hinweise auf Unregelmäßigkeiten mit Auswirkungen auf Integrität oder Ergebnis“. Das Komitee habe sämtliche Beschwerden untersucht.\n\nAmit Halevi, Abgeordneter der rechtskonservativen Likud-Partei von Ministerpräsident Benjamin Netanjahu, kündigte daraufhin seinen Rücktritt aus dem Zentralen Wahlkomitee an. Solange schwerwiegende Vorwürfe einer Einmischung ausländischer Staaten nicht ausgeräumt seien, sei das Komitee nicht befugt, die Wahlergebnisse zu bestätigen.\n\nDie Opposition reagierte empört. Eisenkot schrieb auf der Plattform X: „In ihrer Verzweiflung versuchen der Likud und Netanjahu, ein Pogrom gegen die Demokratie und die Rechtsstaatlichkeit anzuzetteln. Sie versuchen, uns alle in eine gefährliche Staatskrise hineinzuziehen.“",
+      "article_text": "Nach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog gestern Konsultationen zur Regierungsbildung aufgenommen. Bis morgen Abend kommen Repräsentanten aller Parteien zu Gesprächen in seine Residenz in Jerusalem.\n\n„Ich beabsichtige, offene, freimütige und durchaus kritische Gespräche mit den Vertretern der Fraktionen zu führen“, sagte Herzog nach Erhalt der offiziellen Wahlergebnisse. Dabei werde er auch „schwierige Fragen stellen“.\n\nAngesichts des knappen Wahlausgangs ohne klaren Sieger sagte Herzog: „Ich wünsche mir Originalität und Kreativität, Mut und guten Willen, damit Israel am Ende als Gewinner dasteht.“ Eine Neuwahl will er nach Möglichkeit vermeiden.\n\nStärkste Kraft wurde bei der Wahl am 27. Oktober die rechtskonservative Likud-Partei von Ministerpräsident Benjamin Netanjahu mit 27 von insgesamt 120 Sitzen, gefolgt vom Oppositionsblock von Ex-Militärchef Gadi Eisenkot mit 21 Mandaten.\n\nTraditionell beauftragt der Präsident denjenigen Kandidaten mit der Regierungsbildung, dem er die besten Chancen auf eine parlamentarische Mehrheit einräumt. Das muss nicht automatisch der Vorsitzende der stärksten Partei sein. Nach Medienberichten wird damit gerechnet, dass Eisenkot zuerst den Auftrag erhält, weil er die meisten Empfehlungen erhalten könnte.\n\nDas Zentrale Wahlkomitee hatte das Resultat der Parlamentswahl zuvor in einer Abstimmung gebilligt. Die Prüfung sei abgeschlossen, und es gebe „keine Hinweise auf Unregelmäßigkeiten mit Auswirkungen auf Integrität oder Ergebnis“. Das Komitee habe sämtliche Beschwerden untersucht.\n\nAmit Halevi, Abgeordneter der rechtskonservativen Likud-Partei von Ministerpräsident Benjamin Netanjahu, kündigte daraufhin seinen Rücktritt aus dem Zentralen Wahlkomitee an. Solange schwerwiegende Vorwürfe einer Einmischung ausländischer Staaten nicht ausgeräumt seien, sei das Komitee nicht befugt, die Wahlergebnisse zu bestätigen.\n\nDie Opposition reagierte empört. Eisenkot schrieb auf der Plattform X: „In ihrer Verzweiflung versuchen der Likud und Netanjahu, ein Pogrom gegen die Demokratie und die Rechtsstaatlichkeit anzuzetteln. Sie versuchen, uns alle in eine gefährliche Staatskrise hineinzuziehen.“\n\nUnterdessen hat sich eine der beiden großen israelisch-arabischen Parteien hinter Eisenkot gestellt. Die Raam-Fraktion im Parlament habe „beschlossen, Eisenkot für die Bildung der nächsten Regierung zu empfehlen“, erklärte die Partei gestern.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -3138,10 +3144,10 @@
         "canonical_url": "https://orf.at/stories/3447213/",
         "resolved_url": "https://orf.at/stories/3447213/",
         "requested_url": "https://orf.at/stories/3447213/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "57d876ddcdf5dd4704642bc92a5712386964ea9d2f1e7c3eac8b9b956375b990",
-        "fetched_at": 1793815071.652229,
-        "text_sha256": "3b7f018894c61e668a69b481253c19772049726ff80434519253c070d886e366"
+        "fetched_at": 1793845937.882533,
+        "text_sha256": "b76ecf155d8242ad62bbd8b36eeb3582e93a18021b209c66ad89b37e3c77ebfa"
       }
     },
     {
@@ -9229,9 +9235,9 @@
         "canonical_url": "https://orf.at/stories/3447148/",
         "resolved_url": "https://orf.at/stories/3447148/",
         "requested_url": "https://orf.at/stories/3447148/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "5fa9c794c819ad0c325ef79f739906f241ab8b03f82a2d520db821aec9e13f4c",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "6b7c370ba54500b9110cd89b12d52d17982330e30f2629c1f425a62515a1ebbb"
       }
     },
@@ -10035,6 +10041,31 @@
       "text_origin": "rss"
     },
     {
+      "id": "cd8cf0892d69a39b48871ead",
+      "title": "Wie nutzt ihr euren Wintergarten? Was sind eure besten Tipps?",
+      "text": "Mein Forum: Diskutieren Sie dieses Thema mit der STANDARD-Community",
+      "url": "https://www.derstandard.at/story/3000000347304/wie-nutzt-ihr-euren-wintergarten-was-sind-eure-besten-tipps?ref=rss",
+      "published_at": 1793782800.0,
+      "first_seen_at": 1793845937.882533,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/nb0yrg/rs:fill:150:0/plain/lido-images/2026/11/03/7ee7e7e4-3fa1-4de2-a608-124b7acb824d.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Mein Forum: Diskutieren Sie dieses Thema mit der STANDARD-Community",
+      "rss_revision_at": 1793782800.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "deferred",
+        "rss_fingerprint": "a42d630b637af18deeb0d837b4c9aee6f74639569464a11bf039da7365eb8f20"
+      }
+    },
+    {
       "id": "aea39fcaba165cd244882929",
       "title": "Premiere! Rad-Stars könnten in Kärnten gastieren",
       "text": "2027 steigt erstmals in Kärnten ein UCI-Tagesrennen. Dieses könnte im Juni Topstars anlocken. Von Bled soll es auf die Turrach gehen. Auch die Slowenien-Rundfahrt, die zwei Tage später beginnt, könnte in Kärnten gastieren. Und: Die Radentheinerin Magdalena Kleinsasser tritt bei den Olympischen Jugendspielen in Afrika in die Pedale.",
@@ -10183,9 +10214,9 @@
         "canonical_url": "https://orf.at/stories/3447140/",
         "resolved_url": "https://orf.at/stories/3447140/",
         "requested_url": "https://orf.at/stories/3447140/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "dc20c970b4854c0ad7908552de148dc46af1fcc576af599e65ccc03471981fe6",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "e8f2b6cf5400324e3d194f1f44ce8620bf83a26160842e50eea9fcccb86c21d8"
       }
     },
@@ -10245,9 +10276,9 @@
         "canonical_url": "https://orf.at/stories/3447139/",
         "resolved_url": "https://orf.at/stories/3447139/",
         "requested_url": "https://orf.at/stories/3447139/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "bc93f1a133a96ee62d7bf4a2c0b721e7b971d04340e399dd3bcab01e52888634",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "0513319ce58c5db9646dc301118d7b73a5ed9f0a73d0492681a83af36ffbd4e7"
       }
     },
@@ -10324,8 +10355,8 @@
       "rss_revision_at": 1793781180.0,
       "content_kind": "news",
       "text_origin": "rss",
-      "broadcast_id": "20261104T215704Z",
-      "broadcast_position": 4
+      "broadcast_id": "20261105T023248Z",
+      "broadcast_position": 5
     },
     {
       "id": "2b1b13df8a32fc25448de9f5",
@@ -10409,9 +10440,9 @@
         "canonical_url": "https://orf.at/stories/3447134/",
         "resolved_url": "https://orf.at/stories/3447134/",
         "requested_url": "https://orf.at/stories/3447134/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "b9226aafc5712feffb447e51f3f8d99609e8deeb97aa6acd59207c48d4221c8d",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "e4da48b673a9c328d9c3347a19882d0aec3f12c2b71f7a2da7db48f30ae2a5d9"
       }
     },
@@ -11039,9 +11070,9 @@
         "canonical_url": "https://orf.at/stories/3447125/",
         "resolved_url": "https://orf.at/stories/3447125/",
         "requested_url": "https://orf.at/stories/3447125/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "3bf99ff36af25928e4e6d4c2cc133fa1f55239ea639c97f93070560dcb3f47ed",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "642068790610e3480679bc81b90de899f9cbace6980627e207fa4917dffd2e5d"
       }
     },
@@ -11068,9 +11099,9 @@
         "canonical_url": "https://orf.at/stories/3447123/",
         "resolved_url": "https://orf.at/stories/3447123/",
         "requested_url": "https://orf.at/stories/3447123/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "5e46239fa96946c5bbbd950fcd2774e939c2576e6843e7b1ae510b7b24dd1bd2",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "85b8426a30e4237db3ba577e02e24d903569ca3335e6298e3adf37df1384e8d4"
       }
     },
@@ -11474,9 +11505,9 @@
         "canonical_url": "https://orf.at/stories/3447107/",
         "resolved_url": "https://orf.at/stories/3447107/",
         "requested_url": "https://orf.at/stories/3447107/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "6c0aa63952ff0926120e1e37a200be014f77597f382d1475fa4a916ee0064360",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "d228246457b823b4261192d0e4fc76cb04df6c36378c67934d623d7296297fa5"
       }
     },
@@ -11503,9 +11534,9 @@
         "canonical_url": "https://orf.at/stories/3447104/",
         "resolved_url": "https://orf.at/stories/3447104/",
         "requested_url": "https://orf.at/stories/3447104/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "b477502579dea9674fa1ff4f94b703c8e7b828a10f6b85b6b3787e5a3e8197b5",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "bd8e0faa879a29e3166c723e12686d30a629fb3ba0d68e0ebb9798078e41353d"
       }
     },
@@ -14367,105 +14398,43 @@
       "rss_revision_at": 1793764800.0,
       "content_kind": "news",
       "text_origin": "rss"
-    },
-    {
-      "id": "0103d8a5ce5e3b6a2db1fbee",
-      "title": "Trump wütet wegen Nachwahlumfrage: „Bullshit!“",
-      "text": "Donald Trump hat nach der Veröffentlichung der Nachwahlbefragung völlig die Fassung verloren. Eine überwältigende Mehrheit der Befragten verpassten ihm einen Denkzettel. In sozialen Netzwerken nannte er die Zahlen „Bullshit“.",
-      "url": "https://www.krone.at/4361171",
-      "published_at": 1793752912.0,
-      "first_seen_at": 1793760093.283775,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4354804/vc068d5/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4354804/vc068d5/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4354804/vc068d5/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4354804/vc068d5/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Donald Trump hat nach der Veröffentlichung der Nachwahlbefragung völlig die Fassung verloren. Eine überwältigende Mehrheit der Befragten verpassten ihm einen Denkzettel. In sozialen Netzwerken nannte er die Zahlen „Bullshit“.",
-      "rss_revision_at": 1793752912.0,
-      "content_kind": "news",
-      "text_origin": "rss"
-    },
-    {
-      "id": "b763af5c53e7d42338354b17",
-      "title": "Nordkorea warnt USA vor verschärfter Reaktion",
-      "text": "Nordkorea hat die USA wegen ihrer angeblich anhaltend „feindseligen“ Haltung gegenüber Pjöngjang vor einer verschärften Reaktion gewarnt.\n\nBei der „Umsetzung der feindseligen Politik“ der USA gegen Nordkorea würden derzeit „neue Rekorde“ aufgestellt, zitierte die staatliche Nachrichtenagentur KCNA heute die einflussreiche Schwester von Nordkoreas Machthaber Kim Jong Un, Kim Yo Jong. Da sei es „nur natürlich, dass auch bei unseren entsprechenden Gegenmaßnahmen neue Rekorde erzielt werden“.\n\nKim Yo Jong äußerte sich, nachdem sie bereits zuvor die Anschuldigung der US-Bundespolizei FBI zurückgewiesen hatte, dass Pjöngjang hinter dem bisher größten Diebstahl von Kryptowährungen in der Geschichte stecke. Laut FBI geht der Diebstahl bei der Kryptobörse Binance im Umfang von 6,3 Milliarden Dollar auf das Konto Nordkoreas.\n\nNun legte Kim Yo Jong noch einmal nach. Es sei „offensichtlich, dass der böswillige Versuch der USA, aus diesem Vorfall politischen und strategischen Nutzen zu ziehen, einen politischen Nebeneffekt zur Folge“ habe, sagte sie.\n\nBinance hatte den Hackerangriff am Donnerstag bekanntgegeben. Konkret macht das FBI für den Angriff die Hackergruppe TraderTraitor verantwortlich, diese soll Verbindungen zu Pjöngjangs Geheimdienst haben.",
-      "url": "https://orf.at/stories/3447044/",
-      "published_at": 1793751208.0,
-      "first_seen_at": 1793760093.283775,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1793751208.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_text": "Nordkorea hat die USA wegen ihrer angeblich anhaltend „feindseligen“ Haltung gegenüber Pjöngjang vor einer verschärften Reaktion gewarnt.\n\nBei der „Umsetzung der feindseligen Politik“ der USA gegen Nordkorea würden derzeit „neue Rekorde“ aufgestellt, zitierte die staatliche Nachrichtenagentur KCNA heute die einflussreiche Schwester von Nordkoreas Machthaber Kim Jong Un, Kim Yo Jong. Da sei es „nur natürlich, dass auch bei unseren entsprechenden Gegenmaßnahmen neue Rekorde erzielt werden“.\n\nKim Yo Jong äußerte sich, nachdem sie bereits zuvor die Anschuldigung der US-Bundespolizei FBI zurückgewiesen hatte, dass Pjöngjang hinter dem bisher größten Diebstahl von Kryptowährungen in der Geschichte stecke. Laut FBI geht der Diebstahl bei der Kryptobörse Binance im Umfang von 6,3 Milliarden Dollar auf das Konto Nordkoreas.\n\nNun legte Kim Yo Jong noch einmal nach. Es sei „offensichtlich, dass der böswillige Versuch der USA, aus diesem Vorfall politischen und strategischen Nutzen zu ziehen, einen politischen Nebeneffekt zur Folge“ habe, sagte sie.\n\nBinance hatte den Hackerangriff am Donnerstag bekanntgegeben. Konkret macht das FBI für den Angriff die Hackergruppe TraderTraitor verantwortlich, diese soll Verbindungen zu Pjöngjangs Geheimdienst haben.",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "Nordkorea warnt USA vor verschärfter Reaktion",
-        "canonical_url": "https://orf.at/stories/3447044/",
-        "resolved_url": "https://orf.at/stories/3447044/",
-        "requested_url": "https://orf.at/stories/3447044/",
-        "last_attempt_at": 1793815071.652229,
-        "rss_fingerprint": "ae35ea123d4996bf0c1cec399517692632e7c3ae70312af8348c6bf90218c9ba",
-        "fetched_at": 1793815071.652229,
-        "text_sha256": "67de22f7d7c8491043a956a36059dba1aa5e67877886eada4c7f71a276151cea"
-      }
     }
   ],
   "feeds": [
     {
       "url": "https://www.derstandard.at/rss",
       "name": "derStandard.at | Nachrichten, Kommentare & Community",
-      "last_success_at": 1793835343.510217
+      "last_success_at": 1793845937.882533
     },
     {
       "url": "https://www.derstandard.at/rss/live",
       "name": "Live - derStandard.at",
-      "last_success_at": 1793835343.510217
+      "last_success_at": 1793845937.882533
     },
     {
       "url": "https://api.krone.at/v1/rss/rssfeed-nachrichten.html",
       "name": "krone.at - Nachrichten",
-      "last_success_at": 1793835343.510217
+      "last_success_at": 1793845937.882533
     },
     {
       "url": "https://rss.orf.at/news.xml",
       "name": "news.ORF.at",
-      "last_success_at": 1793835343.510217
+      "last_success_at": 1793845937.882533
     },
     {
       "url": "https://www.kleinezeitung.at/rss/steiermark",
       "name": "Kleine Zeitung - Steiermark",
-      "last_success_at": 1793835343.510217
+      "last_success_at": 1793845937.882533
     },
     {
       "url": "https://www.kleinezeitung.at/rss/oesterreich",
       "name": "Kleine Zeitung - Österreich",
-      "last_success_at": 1793835343.510217
+      "last_success_at": 1793845937.882533
     },
     {
       "url": "https://www.bmi.gv.at/rss/stmk_presse.xml",
       "name": "Polizei Steiermark - Presse",
-      "last_success_at": 1793835343.510217
+      "last_success_at": 1793845937.882533
     }
   ],
   "seen": {
@@ -14647,7 +14616,7 @@
     "7c706ee6b6bbaa8693415306": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1737119721.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "40ebafdcd48ccb3f94a90b72": {
       "first_seen_at": 1793270502.046248,
@@ -14657,12 +14626,12 @@
     "4807f8d9057ff8a6a8b77a73": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1791183600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "3c5ad0f32fb65610d1280b97": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1790668800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "23d5ca2a6943a6339422d026": {
       "first_seen_at": 1793270502.046248,
@@ -15197,7 +15166,7 @@
     "88ad8bd68b22d57bc4263aef": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793163600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1c3d4b2a82f6408ab87dca1b": {
       "first_seen_at": 1793270502.046248,
@@ -15207,12 +15176,12 @@
     "457d630ab1a74fdafff6d55a": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1792934887.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "0139be499bbc65d4c3fbb5d7": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1792669953.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "8debab3e10be5721cee9dc9e": {
       "first_seen_at": 1793270502.046248,
@@ -15252,62 +15221,62 @@
     "a4d049e290d75d66c724c68c": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1792908265.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "852808d93657b591c6fb1b9c": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1736688830.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b789e80c677d9f614078b74f": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1767360314.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "ed502645a02c7a73c13f5203": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1707476400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1fd555d23f457d617d75a9fd": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1693225268.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "bdf577ddd58926e0b96a36cc": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1725959420.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "75e4a1dc1a7445d30e26d491": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1697450400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c246dd820de025c46880df1b": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1647603118.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b3353e121e29808f01a2145f": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1672920931.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c09ea03a3f9be76d9417dcfa": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1646380936.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "3749055cf58f322afe3d4357": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1741262400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c8a77ad45c344c7e8ba39ba1": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1580984544.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "da7c4257a8fbbbca9e66e474": {
       "first_seen_at": 1793270502.046248,
@@ -15317,37 +15286,37 @@
     "bb695989274d076c0caf94c8": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1652118267.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b7ef7ef89a751e75bb2b9aad": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1731502832.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "02fd0f7957b1c503812a1b63": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1643902349.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "efb6e2bd86b608a759573d62": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1675776645.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "70368de1cdc233361d67ea31": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1725977784.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "93f52ae3a8d894dc0c4ca0fe": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1760088045.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "90944cc43119eaaa9517249c": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1636444370.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1183f5916451159656ce0bcf": {
       "first_seen_at": 1793270502.046248,
@@ -16472,7 +16441,7 @@
     "6254743a711258a5d52ee39e": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1793262360.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "0579f7d466837ecf8042f613": {
       "first_seen_at": 1793270502.046248,
@@ -16612,7 +16581,7 @@
     "5a27aa478e2c435b6d47f9bb": {
       "first_seen_at": 1793271054.529431,
       "published_at": 1793265180.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "7d187654af6582060607cd58": {
       "first_seen_at": 1793274585.185946,
@@ -17132,7 +17101,7 @@
     "4b9098c900e1d1e57f95faf8": {
       "first_seen_at": 1793289752.872245,
       "published_at": 1793282400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "3b12d581ee0b3b83a151c910": {
       "first_seen_at": 1793289752.872245,
@@ -17517,12 +17486,12 @@
     "e45d7c473a50abfb71fbe205": {
       "first_seen_at": 1793289752.872245,
       "published_at": 1793280960.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "d4fabda4fd32acfb3b93eb77": {
       "first_seen_at": 1793289752.872245,
       "published_at": 1793279580.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "8044042e6686288bb3b0645d": {
       "first_seen_at": 1793293110.554284,
@@ -18062,7 +18031,7 @@
     "a1ba9ac19fbc1f13900f793c": {
       "first_seen_at": 1793307765.147039,
       "published_at": 1793291100.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "55e4ed3a6d6cdb2af2d95554": {
       "first_seen_at": 1793310673.280727,
@@ -18232,7 +18201,7 @@
     "e36702e62a40696925eb464c": {
       "first_seen_at": 1793342347.391874,
       "published_at": 1790151541.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "466b488465ec9a055dbc9818": {
       "first_seen_at": 1793342347.391874,
@@ -19392,12 +19361,12 @@
     "7347440e7ec326d5e6303dd7": {
       "first_seen_at": 1793367738.781587,
       "published_at": 1793353620.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f7e122e6c931e95c1e579b1a": {
       "first_seen_at": 1793367738.781587,
       "published_at": 1793350320.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a6eb1303e3f51fdda7781bc6": {
       "first_seen_at": 1793386510.326668,
@@ -20022,12 +19991,12 @@
     "eaa3657d849f176112228c8c": {
       "first_seen_at": 1793386510.326668,
       "published_at": 1793364840.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "4a826e7c19e81efe728e6674": {
       "first_seen_at": 1793386510.326668,
       "published_at": 1793363640.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "7fa5bb089870a56227797373": {
       "first_seen_at": 1793401001.995931,
@@ -20822,7 +20791,7 @@
     "87c300aa428cf17d2f20a6b7": {
       "first_seen_at": 1793435629.922773,
       "published_at": 1793421720.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "e1605bd242c9972f2a7b40ee": {
       "first_seen_at": 1793457800.281004,
@@ -21442,7 +21411,7 @@
     "7d61d965bbd731bea43e3b99": {
       "first_seen_at": 1793469237.94067,
       "published_at": 1793466000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "fa7fca19fdc4dd938b10df46": {
       "first_seen_at": 1793469237.94067,
@@ -21787,7 +21756,7 @@
     "b79445e15004409dc82437e4": {
       "first_seen_at": 1793469237.94067,
       "published_at": 1793459100.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "89bfe73d786cb3afe11ccb42": {
       "first_seen_at": 1793472761.633703,
@@ -21877,7 +21846,7 @@
     "e1e7a181a61bdb857c9f1f54": {
       "first_seen_at": 1793472761.633703,
       "published_at": 1793467500.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "56c605f7ce481bceaee55caf": {
       "first_seen_at": 1793484430.595493,
@@ -22352,7 +22321,7 @@
     "57c743a9078585598e7b2d69": {
       "first_seen_at": 1793518194.095912,
       "published_at": 1793511240.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "717a53aac6c728b70a488d1f": {
       "first_seen_at": 1793525134.018645,
@@ -22382,7 +22351,7 @@
     "32cf913fc8d60ef8d44c374b": {
       "first_seen_at": 1793525134.018645,
       "published_at": 1793520000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c5d6eae5108c2768b92e6765": {
       "first_seen_at": 1793525134.018645,
@@ -23742,7 +23711,7 @@
     "a48af9d0205d330e6a4707ac": {
       "first_seen_at": 1793605446.374623,
       "published_at": 1793602800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "e11ccfc2dc32b03f5a18abd1": {
       "first_seen_at": 1793605446.374623,
@@ -24092,7 +24061,7 @@
     "9a4c75e4c2c236067696a1be": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793606400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "40678560a6b67fba988ccf65": {
       "first_seen_at": 1793613308.703875,
@@ -24397,7 +24366,7 @@
     "abf6d24c8b2d749c577b7a48": {
       "first_seen_at": 1793613308.703875,
       "published_at": 1793599560.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "be7393410713fb19d9468de2": {
       "first_seen_at": 1793644153.788403,
@@ -24422,7 +24391,7 @@
     "6a0c659da27d14017d22b56b": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638855.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b835cedd313a42083c61864b": {
       "first_seen_at": 1793644153.788403,
@@ -24487,7 +24456,7 @@
     "474e7df36833f9861f0f8877": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793617353.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "01792093074540ccad93db6f": {
       "first_seen_at": 1793644153.788403,
@@ -24497,7 +24466,7 @@
     "d8363d1ae86151ef40241c36": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793624400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "df6e0aaa57de5070c592c3dc": {
       "first_seen_at": 1793644153.788403,
@@ -24787,7 +24756,7 @@
     "1a77a6b7360f023a58d97073": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793622494.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "e9777bd86b1fe3a9e4c1121c": {
       "first_seen_at": 1793644153.788403,
@@ -25537,12 +25506,12 @@
     "a5ce22e56c11981fac447f76": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793630520.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "7f22d90dcda9a4e4855d09eb": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793613780.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "fe0fb04b9499c4e7886b5196": {
       "first_seen_at": 1793650700.578885,
@@ -25677,7 +25646,7 @@
     "ddc64423130715e47639042d": {
       "first_seen_at": 1793650700.578885,
       "published_at": 1793641860.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "498126dd3b3f1559d8f504bc": {
       "first_seen_at": 1793669935.996289,
@@ -25787,7 +25756,7 @@
     "03a2e3a807f7172abd2736c0": {
       "first_seen_at": 1793669935.996289,
       "published_at": 1793643360.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "fdb9d05209635cc75dff5675": {
       "first_seen_at": 1793672930.258226,
@@ -25847,7 +25816,7 @@
     "7dc77715622be5ee77977f88": {
       "first_seen_at": 1793698777.495455,
       "published_at": 1793682122.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "010e625308982b8183d054f2": {
       "first_seen_at": 1793698777.495455,
@@ -25887,12 +25856,12 @@
     "7d0aab36c324441ef8c1c77a": {
       "first_seen_at": 1793698777.495455,
       "published_at": 1793689200.0,
-      "last_seen_at": 1793786329.303307
+      "last_seen_at": 1793845937.882533
     },
     "114164d55e22d22008932823": {
       "first_seen_at": 1793698777.495455,
       "published_at": 1793689200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "7d529031d691fc6caf79328d": {
       "first_seen_at": 1793698777.495455,
@@ -25912,7 +25881,7 @@
     "55d655134e10cd471544dcfd": {
       "first_seen_at": 1793698777.495455,
       "published_at": 1793686800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "49ecb0cde42dc1196e317548": {
       "first_seen_at": 1793698777.495455,
@@ -26082,7 +26051,7 @@
     "3250bbf3bbab126ae8c5e3f3": {
       "first_seen_at": 1793698777.495455,
       "published_at": 1793688124.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "3715f035270c3d2be741a85c": {
       "first_seen_at": 1793698777.495455,
@@ -26612,12 +26581,12 @@
     "a5a0f8adf1a773d4ce462ec9": {
       "first_seen_at": 1793698777.495455,
       "published_at": 1793685960.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f2d90e62bee1705f54075669": {
       "first_seen_at": 1793698777.495455,
       "published_at": 1793684160.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "ff634c655328a8a1f59706c7": {
       "first_seen_at": 1793700034.899593,
@@ -26647,7 +26616,7 @@
     "25aa0f99b31eb0b38ddfd169": {
       "first_seen_at": 1793700034.899593,
       "published_at": 1793693880.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a5ebdca0fd7ae2169be409ab": {
       "first_seen_at": 1793727981.073729,
@@ -26657,12 +26626,12 @@
     "e1a499f61bfc502df34f8c58": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793715120.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "af163b43a2cbcfe684a0e549": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793706806.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "5a8113c7b5a8f744de83e20f": {
       "first_seen_at": 1793727981.073729,
@@ -26687,7 +26656,7 @@
     "8648a0e0e4c0eb983198353f": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793716365.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "80c3b6ecbcd14f159b728c33": {
       "first_seen_at": 1793727981.073729,
@@ -26712,22 +26681,22 @@
     "f0d39ee6167bee927a97659f": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793725200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f07370c1ad48c1713253b91f": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793720417.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "86e5ce54713df354628c1570": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793715894.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "df7923d3ca6a833bd2793fe3": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793711302.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "2ee3b2691109dd3f50147a78": {
       "first_seen_at": 1793727981.073729,
@@ -26742,17 +26711,17 @@
     "e7062bfe531f1f8ab3646695": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793714400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "478365bc3ee80a3c63863e5f": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793710800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "d885d75c4006149ceb1f5d7f": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793721577.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "307f7469a41497432c845404": {
       "first_seen_at": 1793727981.073729,
@@ -26762,7 +26731,7 @@
     "0815d56e08487a353c642090": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793712600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b08f3a3e11f8463f68f226e5": {
       "first_seen_at": 1793727981.073729,
@@ -26777,7 +26746,7 @@
     "cc2157b65dab7b04b349eaa5": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793703600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "5b30ff978a033d6c1ab94fce": {
       "first_seen_at": 1793727981.073729,
@@ -26802,12 +26771,12 @@
     "ad6a4969007b855ec89f6f55": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793705247.0,
-      "last_seen_at": 1793786329.303307
+      "last_seen_at": 1793845937.882533
     },
     "05541e033c9c9b82a5ac741a": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793714400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b16e510ffed01ad107fe64a3": {
       "first_seen_at": 1793727981.073729,
@@ -26847,7 +26816,7 @@
     "d8c25c6b9cb297b379079ef5": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793702988.0,
-      "last_seen_at": 1793815071.652229
+      "last_seen_at": 1793845937.882533
     },
     "e9a1d9b091dd7cd0146c222b": {
       "first_seen_at": 1793727981.073729,
@@ -26857,7 +26826,7 @@
     "9b9a6c245b8923561bf575aa": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793718976.0,
-      "last_seen_at": 1793829392.520771
+      "last_seen_at": 1793845937.882533
     },
     "212c99a511937bd6e0487b86": {
       "first_seen_at": 1793727981.073729,
@@ -26957,7 +26926,7 @@
     "36cac76c52b583f6bfd0203c": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793703600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f38f6aadd1fac0484acdaa2e": {
       "first_seen_at": 1793727981.073729,
@@ -26997,17 +26966,17 @@
     "82f8895041854ede75e338ec": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793703454.0,
-      "last_seen_at": 1793815071.652229
+      "last_seen_at": 1793845937.882533
     },
     "f0ac137fc60f750bb6822d41": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793710800.0,
-      "last_seen_at": 1793786329.303307
+      "last_seen_at": 1793845937.882533
     },
     "3916a96d9d21e5576662f76d": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793707860.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "7c4da080bc46117dae8752cb": {
       "first_seen_at": 1793727981.073729,
@@ -27047,7 +27016,7 @@
     "186105a237ef501a08d935a7": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793706900.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "8163016da5387b120a4b74d7": {
       "first_seen_at": 1793727981.073729,
@@ -27337,27 +27306,27 @@
     "f9969dba175a3d9f121b7e3a": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793725807.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "2d8050e8fe5db85487c89276": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793725200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "0bbee256e6723af5992c85cb": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793725200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b043696dd3581b9e89372546": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793725200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "156f8c0e06885edd60262a1d": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793724720.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f943399dc280925427923f39": {
       "first_seen_at": 1793727981.073729,
@@ -27372,7 +27341,7 @@
     "f3c8590f6462deed6b9e7331": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793722201.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "720756b43e00c84d93587649": {
       "first_seen_at": 1793727981.073729,
@@ -27392,7 +27361,7 @@
     "a6c36d0d33eddc827bdbe2ed": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793719800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "0fd396ea8002e1f0c65e5861": {
       "first_seen_at": 1793727981.073729,
@@ -27742,12 +27711,12 @@
     "84d5e3d962cd8fab9f60a12e": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793717940.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a7579ea7ef994b80c0cff8bc": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793698260.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "3c67883d7e12977a6a08fb74": {
       "first_seen_at": 1793728421.238861,
@@ -27767,7 +27736,7 @@
     "49791c74ec9e7cfc5bad7039": {
       "first_seen_at": 1793745365.77206,
       "published_at": 1793736842.0,
-      "last_seen_at": 1793815071.652229
+      "last_seen_at": 1793845937.882533
     },
     "09afc7df23a0ae033484cfb7": {
       "first_seen_at": 1793745365.77206,
@@ -27777,7 +27746,7 @@
     "fca436a20d203ac238952ccb": {
       "first_seen_at": 1793745365.77206,
       "published_at": 1793736000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "fed2c099a206773c4db26b7b": {
       "first_seen_at": 1793745365.77206,
@@ -27787,7 +27756,7 @@
     "4384d58e7531fc281cbe659b": {
       "first_seen_at": 1793745365.77206,
       "published_at": 1793732400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9b4a48899c24f94918ab0f05": {
       "first_seen_at": 1793745365.77206,
@@ -27857,7 +27826,7 @@
     "1dc1793ed377d865a2370f1c": {
       "first_seen_at": 1793745365.77206,
       "published_at": 1793744842.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "7c0a1fb7847ba8c4af82b562": {
       "first_seen_at": 1793745365.77206,
@@ -27957,7 +27926,7 @@
     "1d5f79f060c2d783d1eb4b67": {
       "first_seen_at": 1793745365.77206,
       "published_at": 1793739410.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "0115dda759426968625225bf": {
       "first_seen_at": 1793745365.77206,
@@ -27967,22 +27936,22 @@
     "9960e1dc79e5822917c064dd": {
       "first_seen_at": 1793745365.77206,
       "published_at": 1793732520.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9a43c54ff2c862b1e17ea18a": {
       "first_seen_at": 1793745365.77206,
       "published_at": 1793728800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "094a33e0402b7a80e603e370": {
       "first_seen_at": 1793745365.77206,
       "published_at": 1793728800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "ca54e06c41a64c38f61a5a36": {
       "first_seen_at": 1793745365.77206,
       "published_at": 1793728800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "73f3e2d9b9b3fb98773cd860": {
       "first_seen_at": 1793745365.77206,
@@ -28017,7 +27986,7 @@
     "7579da0974d85aa8a64c7459": {
       "first_seen_at": 1793745365.77206,
       "published_at": 1793737560.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "e90ea9822d8ccb9e4a7ea794": {
       "first_seen_at": 1793748521.847108,
@@ -28072,12 +28041,12 @@
     "2b941064b0b0031994623112": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793773621.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "7bfced6928f14a2775fba2b6": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793764800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "64c3f3fab14231d43b9ddc14": {
       "first_seen_at": 1793774111.191241,
@@ -28097,12 +28066,12 @@
     "5e9d6605d5c6cceb03873763": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793767264.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9a2f45f9a70c15bed6e7463e": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793764800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "5a6ed0bdb8cb8306c548e374": {
       "first_seen_at": 1793774111.191241,
@@ -28117,12 +28086,12 @@
     "92a2574962154d83cd13dc28": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793764800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "2e99a633318ba98fc07da23e": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793772000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "49d7e6200d5c8eef22bc60dd": {
       "first_seen_at": 1793774111.191241,
@@ -28152,7 +28121,7 @@
     "6c4ecd3893ac0a3a0f7ca762": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793771887.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "51f570eb07d251460edd1baf": {
       "first_seen_at": 1793774111.191241,
@@ -28162,12 +28131,12 @@
     "6873d51ff7a44104615531b9": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793770118.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9ecd4a7332eb7c2a7c15db72": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793768400.0,
-      "last_seen_at": 1793786329.303307
+      "last_seen_at": 1793845937.882533
     },
     "b0d7a25008e5ad328217040d": {
       "first_seen_at": 1793774111.191241,
@@ -28182,22 +28151,22 @@
     "8f2dea410ea82df72d40f386": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793773887.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "e505c246bcc452d5c666d35b": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793768385.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "0ec23075c099d71d6b0208f6": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793768685.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "cd04f61d34b798b3945a96e6": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793769525.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1ef7f7658dc0eb25c10d2794": {
       "first_seen_at": 1793774111.191241,
@@ -28367,77 +28336,77 @@
     "306b34e237aa9fbb88da06eb": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793772000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "250a6b5fda51aa469264bc9d": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793772000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "5f902bee5aaa1c0c76efb5ef": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793771336.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "af071cd207d9956a4217ff16": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793770200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f11f849b88bda85a33fdebf1": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793768400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "253b186073ad7e3834519c33": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793768400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "03edd4460cd8bffccca291c0": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793768400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "db617a779c4a9fbfbe0d3058": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793768100.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "4ece95d1c2984880ef74b1ce": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793766600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "34570a66867a0459b7456bf0": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793766600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "e0f23dceaef1c6eae4d7320e": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793765427.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "86edb6a881f1cd8d85e17b61": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793764800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "78d4508172ef95f63cd665f1": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793764800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9c7d999a63556e7b41ab9a8a": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793764800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "df22707e0331a824d6cd0724": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793764800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1325bf39c531994d38cefeb4": {
       "first_seen_at": 1793774111.191241,
@@ -28547,27 +28516,27 @@
     "4afe6d48e020e245f7ac664c": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793694485.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "0ab920fd995fb50508f9f227": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793779252.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a1574195ab79e07221c489b4": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793779534.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "2dc55f518dc8ad4faffe4436": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793784897.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9bdc81892b5fe44067419d53": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793775600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "31fc2842ed81bf7ee1556ba8": {
       "first_seen_at": 1793786329.303307,
@@ -28577,62 +28546,62 @@
     "0cbe76c18d39c5a581a7fc7f": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793776042.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "49734951d1e1dcda3062a114": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793777452.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1856f63276e1596e55845f6c": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793779200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "435b266f4b97b3e3319041d7": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793779377.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "6d553b3ced68a9e7655a879a": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793775600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "e808285d47f1baf5bb2f5a9d": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793783336.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "d35c7515e5e67e5d3dd2191c": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793782800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "af7ed18cbe1c8ffa736ed089": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793784953.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9346811262e40ec69eab56d3": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793779200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f670af7319408843dea269e1": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793776104.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "631a7d46b64270e83c711e45": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793783283.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "67117c4066801b5419e94a6d": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793777462.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "2b1b13df8a32fc25448de9f5": {
       "first_seen_at": 1793786329.303307,
@@ -28642,12 +28611,12 @@
     "a37a569413ee25dedee9debc": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793776504.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "5f14cbc8fb4f86fd8dcde96a": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793776246.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "d6599326082f536431807c16": {
       "first_seen_at": 1793786329.303307,
@@ -28677,7 +28646,7 @@
     "621038754a75c04a468acfc8": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793784579.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "ee867d58ce31369b230930e1": {
       "first_seen_at": 1793786329.303307,
@@ -28687,27 +28656,27 @@
     "6591fd88a13c3e34bf4ca69c": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793780049.0,
-      "last_seen_at": 1793829392.520771
+      "last_seen_at": 1793845937.882533
     },
     "cf21d0a2806bc8f3ec213f61": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793785625.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "0bff4b7d3d178631e6a1741a": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793778309.0,
-      "last_seen_at": 1793806205.624658
+      "last_seen_at": 1793845937.882533
     },
     "79396dfe68190ba1bfe9f61c": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793786168.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "5ae43d7fe40f14fb0f61cc1e": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793785521.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "6ebcba1769429f0041deb54f": {
       "first_seen_at": 1793786329.303307,
@@ -28857,92 +28826,92 @@
     "8cff2fb9655b1f9b010da494": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793784407.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "36c2931ac496efc3a5b0b9f0": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793784215.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "8604892505d71633d6ce5266": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793783837.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "957f93c9b367237e6d649c0e": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793783762.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "d184143e93c99c5c796459f7": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793782800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "ddc35254c6b4a76ef72b2a39": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793782800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1019acd2d9a20f291b3e4bad": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793782800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a0e9b093d7fdbe5515bae076": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793782800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "66efc2ab30297f599018b0eb": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793782569.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "0784f70e549a7ad63eeca60e": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793782440.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "8310fa5c9eb6925b5576ae0a": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793780217.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "10ae43e04c6b7fbc019bb073": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793779200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "5489fe000d9ba1ceafca8d2b": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793779200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "0e13526ef2769f51472eccf0": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793779200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b303aefe6a96a87e4f42f684": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793779200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "edb6b31aa3431e466d85eaab": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793775600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "55adb8e9387b99be622e777d": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793775600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "ad03d65975a89094c19c673b": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793774329.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "4ae05c16d453dd298af99c5d": {
       "first_seen_at": 1793786329.303307,
@@ -29027,7 +28996,7 @@
     "169cfd3a73eca00a3251b33b": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793781180.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "caa8a4972e486437084c6d77": {
       "first_seen_at": 1793806205.624658,
@@ -29037,7 +29006,7 @@
     "47688df4a5640286f3af46f1": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793803815.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1b7506513d320681045f9c7d": {
       "first_seen_at": 1793806205.624658,
@@ -29047,77 +29016,77 @@
     "7a0c22a298862ec7e204f24f": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793802233.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "eb95c32dfec38cd3962dcbeb": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793804877.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "42b861e73400bb831d5809c9": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793790000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c1639d5e722368327495f33f": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793798102.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "d1aa5e452d75bb7b5a3b9a1b": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793793600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "13b2104f30f85b77004527ac": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797132.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a9a56f466d814a4bb3ee8ef3": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793790000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "bb09bd1d6fc338de2a54aaba": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793799123.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "59b0363237f992039b805bf1": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793801502.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "2214bada351513628a64e975": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "d2c2958364e268c495a38af2": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793800800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1b4a1357a4d0ad107d4bf7e2": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793793600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "e0c74d959121bb144649448d": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797064.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9052d737748c2f0ce54c499f": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793783412.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "0268849ebce8622ddcfcd4f5": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793790000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "43753e6f8d5ba5a3fda75b73": {
       "first_seen_at": 1793806205.624658,
@@ -29127,37 +29096,37 @@
     "e0e458dae5ff97e1dc695eb8": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793789119.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "01302c5de0783a0a5ddb047a": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793788150.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "313a000d8dbf51e3d137c674": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793798588.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "2bee5f54c19351bafd4e5e1d": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793801460.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "d9dd5cb44676963fed9f48e7": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793800483.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "e8f334aaedd03c124cabb055": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793788038.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f491ba0c4bb2b1aa7a6518df": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793804627.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c54594173a430cf40db3ec80": {
       "first_seen_at": 1793806205.624658,
@@ -29167,17 +29136,17 @@
     "d74d216b162cf0fa2df9d793": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793796638.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c343cb3cd49f3f40dbfef0fc": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793798515.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1f4f0c0be7ff36352f25c1cc": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793799591.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "d9b78df7cf42b0b28922dc9d": {
       "first_seen_at": 1793806205.624658,
@@ -29192,37 +29161,37 @@
     "d606c8ffaeb227f9f1c37d05": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793802222.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "eecd16b390915b28ef416447": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793788298.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "58d62041902d24a7d205009e": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793786400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "3211701145761f82dd393784": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793805575.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b23d4afb2211cde7985c8ec4": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793805323.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "486cc6187c65f910e70e9b87": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793801431.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "382e37c48223439abb4adf9d": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793800994.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "0f26ee55e02783bbeb9aabb1": {
       "first_seen_at": 1793806205.624658,
@@ -29237,12 +29206,12 @@
     "19e1ec44e727655109ed3d2a": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793790000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1725a511d64754d49df591d9": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793786400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "7e363f6d838cfbd0ee078f1d": {
       "first_seen_at": 1793806205.624658,
@@ -29257,12 +29226,12 @@
     "2a0fcd1dc199c0057fea02cf": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797972.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "6beca6c609818e84be0a5e98": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797237.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b4075394d3f57b92abf335bd": {
       "first_seen_at": 1793806205.624658,
@@ -29287,17 +29256,17 @@
     "187d235cdfe540ab72c4e276": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793791936.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c83fa7a61f9d8e1e952e3c39": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793793600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c117cbd8ae4cd35d918810e9": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793790000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f2b35111abed95fe8f2ae319": {
       "first_seen_at": 1793806205.624658,
@@ -29337,7 +29306,7 @@
     "86e29b8c4fd30b1362518e44": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793801153.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "6f33810ea4219e8dc3dc6c17": {
       "first_seen_at": 1793806205.624658,
@@ -29402,12 +29371,12 @@
     "cfb4dd1803136836fd57bfad": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793799719.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b4d8c00d7db820ed438ef4f1": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797534.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1e5f204e2a1b3f520f49d242": {
       "first_seen_at": 1793806205.624658,
@@ -29432,7 +29401,7 @@
     "e1a49a6d6fa6bc78f6b2e2ab": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793804709.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f59e67349ed197b4be54115b": {
       "first_seen_at": 1793806205.624658,
@@ -29462,42 +29431,42 @@
     "6ca67a5c765ae9f676126762": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793806012.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b132872a695d7a7e84583fcf": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793804203.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "db2da07a77be30f8ae22a2e7": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793799802.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "d97f137afb67951bfb256209": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793799514.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "688e63de9e5d5d79d361e2b4": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793798123.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "5704a65d153c947cb34af434": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797354.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "4c80550d23a36c5ff7403e0a": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793796803.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "61df7f57aa1668b77ece478e": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793795158.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c3083f98a3442b5b48575381": {
       "first_seen_at": 1793806205.624658,
@@ -29547,322 +29516,322 @@
     "dd59a99ad6fd87a5a4993f48": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793804400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "21fd2706a0a339dc58ee2e0c": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793804400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "3f9a06bb66a80900f4868f33": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793804400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "4875300bb87ff4d88e95ef4b": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793802688.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f06e0344040fe80d52642cc2": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793802600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "285f05f22e29945b54e03439": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793800833.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a2ff581e209d714f5d8095f4": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793800800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "8a5c585edce167f9b04c9dc3": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793800800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9171a7345a4cda12af1d8248": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793800800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "ab7770dd8ee74e13da0bf876": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793799000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "6f3584ffe3e923fd101f1e0d": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793799000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "d78c336adae06c89e929a9de": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797626.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "443bc473e80daed2319455d2": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797207.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "769cb81552ea1c3dfd169bb4": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "5609060ccd25107adc5a4ca5": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b4030b395146100e799d34a9": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "087e0ef19543cb3b4b2e68bd": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "52f594213a43a3ab45d1dc34": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793796729.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "649359902b270b929c9a7114": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793794453.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "00a1732ff194422d5e20d8c2": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793793949.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "becec4ebb243d20764d152a1": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793793790.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "eb9d929d30ad5aea84505424": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793793600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "212ed13dc949758bdc6f51dc": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793792919.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "faaad1c5720a417c78831c02": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793791800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9e141a5f0c40b82d91c7d762": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793791800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f1495aa79bdb1fb7a5f148f1": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793790145.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f67bf17a54ace16d7667ae1c": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793790000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "07b716985839ba0b64000a8c": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793790000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1b4e894374770d22b7237434": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793790000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "3c24461909cd35bff02fe399": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793789460.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "935d32b00b4aab8b0f36e936": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793788696.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "e728e18755eacac77829725b": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793788200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "bc32a44a8e44b9223043eccc": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793786400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "99e6e63973c47d24be7be0d0": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793786400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b3e673a0158c1dcd2cb729bd": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793782800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9f10ea923491c66765419631": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793805697.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f63e9b5a225047904ea5db43": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793804959.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "82c13deee9c53f14f76ae066": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793804400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "10e7437e01815672bdb752d3": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793804400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a4e5be94fa79481b45066019": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793804133.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a8ef44d99863359d1d1bf000": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793800800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "73f8808cf50b7d76d8260ba8": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793800800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "982c02cb89e608c6b82897cc": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793800134.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "4dfe825f791fd57b6f5f9a84": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793800103.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "356ddadb36d6d4a50ef27e05": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793799443.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "fa1181972247e5e849e797f2": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793798327.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a7df723f85fb6602698e9eef": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797320.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "7b68f44de0e23bd56fa43426": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797278.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a0c1bde65d3666655b968b31": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "614c3f25e3f3fc992141fc7d": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793797200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "314481fcbffdc26bf29f593d": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793796620.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a827e392cfc31308335b5518": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793793600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f9a86098ddea72e3672441a0": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793793600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "2b46e5ae1eb748371d2510cf": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793793588.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f0857247c72a24dd31c4cf1d": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793793377.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "daa71fcac6e2342cae89cca2": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793793054.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "041cb72fa5a15752800a60f5": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793792771.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "498bc7f4ab14e6d72ca8cbb7": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793791800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "bc652807928cb5852d4a81c9": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793791764.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "fa5e24740b753fbe9923e3da": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793791493.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c670fdf339ec1dcf876c1c97": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793790426.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "7b05c393ab7eb6aace5d614c": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793790000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "02c2792d969aa3e20848403c": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793790000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "3d061b20319bbd328bc9caa7": {
       "first_seen_at": 1793806205.624658,
       "published_at": 1793790000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "ea4fd908a474fb67b75647ef": {
       "first_seen_at": 1793806205.624658,
@@ -29887,102 +29856,102 @@
     "18d17dace1a65f92bfa0039b": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793810590.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b1410abe72a43af049d14e4e": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793808241.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9f841735a7a2050df7e61318": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793812799.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b742025f5d190f761989db4c": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793809710.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "156eaa9344ea5a4ecb5d323a": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793812847.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9de6f735bda90d4990cc22b0": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793808162.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "09383bd20ee493d91cb6fde8": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793812636.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9875c2fffbd03ab5e040dd35": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811780.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "3b02762a8dd4a8a51046cfe4": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793807194.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "3773599395089ccf68dc99eb": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793801962.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "223db7e1ee6c08c1c96bc138": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793806459.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "046f31f0698299b6987424ec": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793807735.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "8951cc93dd907c9dd00f7702": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793640115.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "fc8a103556cf293da30b8f2b": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793809203.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b6d2c2b73595de0c94dc0c14": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793806180.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "bc821b3b9e0542b97909874c": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793808378.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "532b0247d4099794b4d3d430": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793808185.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "357e9abf31e94d03e9ad5631": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793807332.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "08204fbd29771056294ffdd4": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793807473.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "8ec63b1d51eca5b450dbdfc6": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "33608fa42c257e118d7637fc": {
       "first_seen_at": 1793815071.652229,
@@ -29992,17 +29961,17 @@
     "79656ecb1a5b8aef9c97f906": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811600.0,
-      "last_seen_at": 1793829392.520771
+      "last_seen_at": 1793845937.882533
     },
     "ba2087dd12ce9f776e2e2482": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "dd5843dc56f6e5c8599c408d": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793812372.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c1902ce9441879e445e398bd": {
       "first_seen_at": 1793815071.652229,
@@ -30012,7 +29981,7 @@
     "15e18c618f0edf89cc517ba5": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811358.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a25bdd02c77282a9434bd0e6": {
       "first_seen_at": 1793815071.652229,
@@ -30022,12 +29991,12 @@
     "1d749cbebfb880df44eae6c9": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793814761.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a5fe57c6094dbe0c993a117a": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793812119.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "243aac42d29de0fb9acd99a4": {
       "first_seen_at": 1793815071.652229,
@@ -30042,12 +30011,12 @@
     "7db606e7bd51f61d9bb41a96": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811626.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "ed1d9ff35e1de5f3f8e65691": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811619.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "6448a6a2ae4807f805748768": {
       "first_seen_at": 1793815071.652229,
@@ -30057,7 +30026,7 @@
     "c997783d092e06e99daa8d5e": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793813425.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "90a9ff10ce26e365be784774": {
       "first_seen_at": 1793815071.652229,
@@ -30082,212 +30051,212 @@
     "7ef5adea33ad06942645a069": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793814218.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "06dbe624c6303cd52fe79b1f": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793813574.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "66924309e3311ef8812c1426": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811801.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f5bdafe5a892ff827a06b69e": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811247.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c2538ddaa4837af2c82f9872": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793809831.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "e096a1bd8be97c7b8f138ac6": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793809420.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "8408fea2a2187a43d4fcb1f3": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793808853.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "4df72dc33dd35f79430c81d8": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793807007.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "3d84314324b57a80b8842513": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793813400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b62eeb3531ef778515bc905c": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793812476.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "73a1f8fc7498a1bda02a63d0": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9d27463122906d1ca1cefa1e": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a0f5b272a20868f4f13223c2": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "117919f40f7052b52bcc0118": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811480.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "13d637e08044175c11b6c3d9": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811300.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "6779468380a422426e0f7d3b": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793809800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "2c82778ca4395fd943efe61a": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793809800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "632e493391f87b6a655c8ccb": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793808984.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f9cd7a45b163b55889b54b16": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793808000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "943026e3bf44677d66874899": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793808000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "2a03509a4b251aadb5bf7524": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793808000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "255e9cde9edb26bb6598c00b": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793807471.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "5b18769203b19cf0737dfdd9": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793807449.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "ba94d9f2e8d4aef72cfe485b": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793806200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "5aeafcc22dc2287b9f47aad7": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793806200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "531837c563f8d6eadc2d63a6": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793813400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "da7c695d30edf3f44d05ac55": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793812177.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "6f95972483db61feea039bbd": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "97a0b9d57e9880853c06336f": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811600.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c74dd85988b79b4304bdf6e7": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793811495.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "23d3e4b269042a88600e913f": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793809800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "66fb4fc429f46d5f7f10547d": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793809800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "4bb352e56ee68c977501b91d": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793808000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a51b6585e40c7e9a3a78dafb": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793808000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "7fd32b1971a5479ac14c121a": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793806708.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "62b41ecc6cbdf1c1827858c7": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793818353.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "30163d3fd4f94825f0325901": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793825388.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "a6859fb4f4256bcdf2e474ff": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793822400.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "cc19a6d946ba020c6e78943f": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793819362.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "20b6bd0918d93c7b1df8dfce": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793818800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "7e090036e70a2de299a12c72": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793815707.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "4638fdfa0972b3b1d6632730": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793818129.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "8248318d0dc7ce8809a4a0f6": {
       "first_seen_at": 1793829392.520771,
@@ -30297,7 +30266,7 @@
     "b6cdd99beef9e3b28226509a": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793815530.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1b961287478b3877c643e2c3": {
       "first_seen_at": 1793829392.520771,
@@ -30307,207 +30276,207 @@
     "fa663278b7900d4cb68c25a4": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793822482.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "b3b240a91e093905b5472669": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793818112.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "5b49117ba849ac6d2cd0cffa": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793822232.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f9ef9b4fbbf10505241daafd": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793827894.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "05c43572c99987681852607b": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793821189.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1db3ba743bb55ae5c9cfbcf9": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793826988.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "4dfa85f1d830230d709f8411": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793818859.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1b6f5649d960593e9bd22a01": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793819195.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "60551246a0b66364a7adc4c1": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793823087.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "71926e16015f57657f0e3e5e": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793818624.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "e699d46b3dcabf038882a8e6": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793815804.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "d7b7886b03f570aa921eab13": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793823117.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "78fa2584dfa79876cd7c7dac": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793815295.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "ab70f0a4adb0eb77c804a53a": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793824217.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "c79597b6e0b56b7e79fdb010": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793828225.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "fd856b853d59b6cb7cccb6b7": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793822575.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "4d5311d0a5ebeffe329a79aa": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793818806.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "5a388bff631710acc4670336": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793825152.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "417cc3ca67ec1b45f1dc52a8": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793824798.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "51a8f4bf0bc49c4f1a7ebd5b": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793819133.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "5417e5d82f8f8f945c12fb57": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793818586.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "7f3fee8d35704c67330e3615": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793818198.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "46cb05195e36abf412f5ead5": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793817572.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "51db665cb264f36420626530": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793815696.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "fc59d18a7ac39f483862595d": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793818800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f75025c032beb6d4a3985bad": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793817000.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f5aaa49821e6dfa2cfe70b16": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793815239.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9925f610c08c559c622bc201": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793815200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "d1c2eb5f18b260f58db5001c": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793827800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "e222502b5ffec1b01d982200": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793824499.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "e85f8a4b0c592737cd102d9b": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793823300.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "1d6ec83134cb46e50ea72270": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793822270.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "8f83459080e475c4c835c696": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793821347.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "491467c1cba91dde83ad9e47": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793820784.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "9e85dec1a43ef11cd8dbfb29": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793818800.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "f468385519706b3913b144a2": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793816867.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "76c3011da0f0d8958a2574f4": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793816491.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "720c5e330d0b0accc731544a": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793815200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "072c318a3858e51b3c3fac29": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793815200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "bb18d04827afc447f270a8db": {
       "first_seen_at": 1793829392.520771,
       "published_at": 1793815200.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "116501651b5be303af0df9c9": {
       "first_seen_at": 1793835343.510217,
       "published_at": 1793831251.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "2025557a0a4a2cd70dd283c0": {
       "first_seen_at": 1793835343.510217,
@@ -30517,57 +30486,91 @@
     "569b4e16fced89599d136c46": {
       "first_seen_at": 1793835343.510217,
       "published_at": 1793833260.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "7f3a76b600ff4c8ba29a2fdd": {
       "first_seen_at": 1793835343.510217,
       "published_at": 1793831586.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "2c0508763af09d070b0d4bd4": {
       "first_seen_at": 1793835343.510217,
       "published_at": 1793830617.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "d4c40c620528430673bc055c": {
       "first_seen_at": 1793835343.510217,
       "published_at": 1793833380.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "01c4e937c8236399fee0c16c": {
       "first_seen_at": 1793835343.510217,
       "published_at": 1793831576.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "742235645c3da70b09613baa": {
       "first_seen_at": 1793835343.510217,
       "published_at": 1793831267.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
     },
     "4932bd24bc2671b92f4993cc": {
       "first_seen_at": 1793835343.510217,
       "published_at": 1793830174.0,
-      "last_seen_at": 1793835343.510217
+      "last_seen_at": 1793845937.882533
+    },
+    "b84536041459456f128911f4": {
+      "first_seen_at": 1793845937.882533,
+      "published_at": 1793703611.0,
+      "last_seen_at": 1793845937.882533
+    },
+    "cd8cf0892d69a39b48871ead": {
+      "first_seen_at": 1793845937.882533,
+      "published_at": 1793782800.0,
+      "last_seen_at": 1793845937.882533
+    },
+    "d0d0d480943dc5be469b81ba": {
+      "first_seen_at": 1793845937.882533,
+      "published_at": 1768567689.0,
+      "last_seen_at": 1793845937.882533
     }
   },
   "latest_broadcast": {
-    "id": "20261104T215704Z",
-    "created_at": 1793829424.948959,
+    "id": "20261105T023248Z",
+    "created_at": 1793845968.688765,
     "article_ids": [
-      "c79597b6e0b56b7e79fdb010",
+      "d4c40c620528430673bc055c",
+      "569b4e16fced89599d136c46",
+      "7f3a76b600ff4c8ba29a2fdd",
       "d1c2eb5f18b260f58db5001c",
-      "30163d3fd4f94825f0325901",
-      "5a388bff631710acc4670336",
-      "169cfd3a73eca00a3251b33b",
-      "f9ef9b4fbbf10505241daafd"
+      "169cfd3a73eca00a3251b33b"
     ],
     "records": [
       {
-        "id": "c79597b6e0b56b7e79fdb010",
-        "title": "Guter Zusatzjob? Lavanttalerin geriet an Betrüger",
-        "url": "https://www.krone.at/4362695",
-        "published_at": 1793828225.0,
-        "first_seen_at": 1793829392.520771,
+        "id": "d4c40c620528430673bc055c",
+        "title": "Zulagen für Gewerkschafter: Ermittlungen eingeleitet",
+        "url": "https://orf.at/stories/3447240/",
+        "published_at": 1793833380.0,
+        "first_seen_at": 1793835343.510217,
+        "feed_urls": [
+          "https://rss.orf.at/news.xml"
+        ]
+      },
+      {
+        "id": "569b4e16fced89599d136c46",
+        "title": "Standardrätsel J 11435",
+        "url": "https://www.derstandard.at/story/3000000346411/standardraetsel-j-11435?ref=rss",
+        "published_at": 1793833260.0,
+        "first_seen_at": 1793835343.510217,
+        "feed_urls": [
+          "https://www.derstandard.at/rss"
+        ]
+      },
+      {
+        "id": "7f3a76b600ff4c8ba29a2fdd",
+        "title": "„Luca“ kennt Stocker nicht: „Müssen da noch …“",
+        "url": "https://www.krone.at/4362782",
+        "published_at": 1793831586.0,
+        "first_seen_at": 1793835343.510217,
         "feed_urls": [
           "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
         ]
@@ -30583,26 +30586,6 @@
         ]
       },
       {
-        "id": "30163d3fd4f94825f0325901",
-        "title": "Bayerischer Wirtschaftsminister Hubert Aiwanger ist tot",
-        "url": "https://www.derstandard.at/story/3000000347591/bayerischer-wirtschaftsminister-hubert-aiwanger-ist-tot?ref=rss",
-        "published_at": 1793825388.0,
-        "first_seen_at": 1793829392.520771,
-        "feed_urls": [
-          "https://www.derstandard.at/rss"
-        ]
-      },
-      {
-        "id": "5a388bff631710acc4670336",
-        "title": "Bayerns Wirtschaftsminister Hubert Aiwanger ist tot",
-        "url": "https://orf.at/stories/3447236/",
-        "published_at": 1793825152.0,
-        "first_seen_at": 1793829392.520771,
-        "feed_urls": [
-          "https://rss.orf.at/news.xml"
-        ]
-      },
-      {
         "id": "169cfd3a73eca00a3251b33b",
         "title": "Frontalkollision nach Überholmanöver",
         "url": "",
@@ -30610,16 +30593,6 @@
         "first_seen_at": 1793786329.303307,
         "feed_urls": [
           "https://www.bmi.gv.at/rss/stmk_presse.xml"
-        ]
-      },
-      {
-        "id": "f9ef9b4fbbf10505241daafd",
-        "title": "Wohl Grizzly-Attacke: Frauen tot nach Wanderung",
-        "url": "https://www.krone.at/4362736",
-        "published_at": 1793827894.0,
-        "first_seen_at": 1793829392.520771,
-        "feed_urls": [
-          "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
         ]
       }
     ]

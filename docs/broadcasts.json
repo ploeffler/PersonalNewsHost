@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261104T153037Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 04.11.2026 um 16:30 Uhr",
-      "created_at": 1793806237.692873,
-      "video": "broadcasts/20261104T153037Z.mp4",
-      "sources": [
-        {
-          "title": "Goncourt-Preisträger bekennt sich zu begrenzter KI-Nutzung",
-          "url": "https://orf.at/stories/3447208/"
-        },
-        {
-          "title": "Verletztes Objektivitätsgebot: Teilsieg für Wegscheider vor Verfassungsgerichtshof",
-          "url": "https://www.kleinezeitung.at/artikel/41419876/verletztes-objektivitaetsgebot-teilsieg-fuer-wegscheider-vor"
-        },
-        {
-          "title": "Google: Stellenabbau soll hohe KI-Kosten abfedern",
-          "url": "https://www.krone.at/4362170"
-        },
-        {
-          "title": "Welt ist nicht auf sich zuspitzende Klimafolgen vorbereitet, warnt UN-Bericht",
-          "url": "https://www.derstandard.at/story/3000000347565/uno-bericht-hilfsgelder-f252r-klimaanpassung-m252ssen-steigen?ref=rss"
-        },
-        {
-          "title": "Frontalkollision nach Überholmanöver",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261104T153037Z.txt",
-      "subtitles": "broadcasts/20261104T153037Z.vtt",
-      "subtitle_download": "broadcasts/20261104T153037Z.srt"
-    },
-    {
       "id": "20261104T215704Z",
       "kind": "broadcast",
       "title": "Nachrichten 04.11.2026 um 22:57 Uhr",
@@ -67,6 +35,38 @@
       "transcript": "broadcasts/20261104T215704Z.txt",
       "subtitles": "broadcasts/20261104T215704Z.vtt",
       "subtitle_download": "broadcasts/20261104T215704Z.srt"
+    },
+    {
+      "id": "20261105T023248Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 05.11.2026 um 03:32 Uhr",
+      "created_at": 1793845968.688765,
+      "video": "broadcasts/20261105T023248Z.mp4",
+      "sources": [
+        {
+          "title": "Zulagen für Gewerkschafter: Ermittlungen eingeleitet",
+          "url": "https://orf.at/stories/3447240/"
+        },
+        {
+          "title": "Standardrätsel J 11435",
+          "url": "https://www.derstandard.at/story/3000000346411/standardraetsel-j-11435?ref=rss"
+        },
+        {
+          "title": "„Luca“ kennt Stocker nicht: „Müssen da noch …“",
+          "url": "https://www.krone.at/4362782"
+        },
+        {
+          "title": "„Es prickelt“: Für den Kärntner Bauern wird es jetzt ernst",
+          "url": "https://www.kleinezeitung.at/artikel/41419952/es-prickelt-fuer-den-kaerntner-bauern-wird-es-jetzt-ernst"
+        },
+        {
+          "title": "Frontalkollision nach Überholmanöver",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261105T023248Z.txt",
+      "subtitles": "broadcasts/20261105T023248Z.vtt",
+      "subtitle_download": "broadcasts/20261105T023248Z.srt"
     }
   ]
 }

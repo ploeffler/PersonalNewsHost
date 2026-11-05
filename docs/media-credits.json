@@ -1,6 +1,18 @@
 [
   {
-    "source": "https://www.krone.at/4362695",
+    "source": "https://orf.at/stories/3447240/",
+    "image_origin": "article_metadata_or_rss",
+    "image_processing": "neural_fsrcnn_x2",
+    "original_media_retained": true
+  },
+  {
+    "source": "https://www.derstandard.at/story/3000000346411/standardraetsel-j-11435?ref=rss",
+    "image_origin": "article_metadata_or_rss",
+    "image_processing": "neural_fsrcnn_x2",
+    "original_media_retained": true
+  },
+  {
+    "source": "https://www.krone.at/4362782",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
@@ -12,19 +24,7 @@
     "original_media_retained": true
   },
   {
-    "source": "https://www.derstandard.at/story/3000000347591/bayerischer-wirtschaftsminister-hubert-aiwanger-ist-tot?ref=rss",
-    "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
-    "original_media_retained": true
-  },
-  {
     "source": "",
     "image_origin": "article_metadata_or_rss"
-  },
-  {
-    "source": "https://www.krone.at/4362736",
-    "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
-    "original_media_retained": true
   }
 ]

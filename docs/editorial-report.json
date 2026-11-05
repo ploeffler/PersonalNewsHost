@@ -1,14 +1,234 @@
 {
   "version": 1,
   "mode": "production",
-  "generated_at": 1793829422.097497,
-  "source_updated_at": 1793829392.520771,
-  "source_digest": "b77a70b9af8e62e1a59688ecbb78484e19c2a25a45ef84e442b8e99d1b700821",
+  "generated_at": 1793845965.539775,
+  "source_updated_at": 1793845937.882533,
+  "source_digest": "6e4778f3fba1683d101e37f5682b998963e5f2571d1c1b39718386ac14ce33e6",
   "scope": "stored_source_support",
   "method": "local_extractive_multi_source",
   "independent_fact_check": false,
   "max_sentences": 2,
   "sources": {
+    "d4c40c620528430673bc055c": {
+      "id": "d4c40c620528430673bc055c",
+      "title": "Zulagen für Gewerkschafter: Ermittlungen eingeleitet",
+      "text": "Die Staatsanwaltschaft Wien hat Ermittlungen in der Causa rund um die Auszahlungen von Zulagen an freigestellte Personalvertreterinnen und Personalvertreter im öffentlichen Dienst aufgenommen. Wie die ZIB2 gestern berichtete, wurden die Ermittlungen nach dem Eingang einer anonymen Anzeige mit den Vorwürfen der Untreue und des Amtsmissbrauchs eingeleitet.\n\nDie Gewerkschafterinnen und Gewerkschafter sollen nach einer Umstellung des Zulagensystems durch den Nationalrat im Jahr 2025 teilweise mehrere Tausend Euro mehr erhalten haben. Im Gegenzug sollen die Personalvertreter einen vergleichsweise geringen Lohnabschluss akzeptiert haben.",
+      "url": "https://orf.at/stories/3447240/",
+      "published_at": 1793833380.0,
+      "first_seen_at": 1793835343.510217,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "",
+      "rss_revision_at": 1793833380.0,
+      "content_kind": "news",
+      "text_origin": "linked_article",
+      "article_text": "Die Staatsanwaltschaft Wien hat Ermittlungen in der Causa rund um die Auszahlungen von Zulagen an freigestellte Personalvertreterinnen und Personalvertreter im öffentlichen Dienst aufgenommen. Wie die ZIB2 gestern berichtete, wurden die Ermittlungen nach dem Eingang einer anonymen Anzeige mit den Vorwürfen der Untreue und des Amtsmissbrauchs eingeleitet.\n\nDie Gewerkschafterinnen und Gewerkschafter sollen nach einer Umstellung des Zulagensystems durch den Nationalrat im Jahr 2025 teilweise mehrere Tausend Euro mehr erhalten haben. Im Gegenzug sollen die Personalvertreter einen vergleichsweise geringen Lohnabschluss akzeptiert haben.",
+      "article_fetch": {
+        "status": "success",
+        "method": "orf_story_story",
+        "page_title": "Zulagen für Gewerkschafter: Ermittlungen eingeleitet",
+        "canonical_url": "https://orf.at/stories/3447240/",
+        "resolved_url": "https://orf.at/stories/3447240/",
+        "requested_url": "https://orf.at/stories/3447240/",
+        "last_attempt_at": 1793835343.510217,
+        "rss_fingerprint": "40fbfec2da37654a5cd5bff37d7876957bd22bbcaa35c2a545a3f89800a704b2",
+        "fetched_at": 1793835343.510217,
+        "text_sha256": "e10de18ae8f8e47a06f843b9187d7a6b044e3ba5cae42219e4c127455cf82037"
+      },
+      "publisher": "orf.at"
+    },
+    "569b4e16fced89599d136c46": {
+      "id": "569b4e16fced89599d136c46",
+      "title": "Standardrätsel J 11435",
+      "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
+      "url": "https://www.derstandard.at/story/3000000346411/standardraetsel-j-11435?ref=rss",
+      "published_at": 1793833260.0,
+      "first_seen_at": 1793835343.510217,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/eqM6Eg/rs:fill:150:0/plain/lido-images/2023/05/19/17b073a2-2297-406c-a459-faf4e5a469ef.png",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
+      "rss_revision_at": 1793833260.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346411/standardraetsel-j-11435?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000346411/standardraetsel-j-11435?ref=rss",
+        "last_attempt_at": 1793835343.510217,
+        "rss_fingerprint": "014a048881e75492ecc5722fd542d465ba5283620767d2d53e837fdaf78e20de"
+      },
+      "publisher": "derstandard.at"
+    },
+    "7f3a76b600ff4c8ba29a2fdd": {
+      "id": "7f3a76b600ff4c8ba29a2fdd",
+      "title": "„Luca“ kennt Stocker nicht: „Müssen da noch …“",
+      "text": "Im Rahmen der China-Reise von Bundeskanzler Christian Stocker hat die österreichische Delegation in Shanghai auch eine Vorführung des großen Roboter-Herstellers Agibot bekommen. Das Highlight: „Luca“, 1,69 Meter groß und kundig sowohl der deutschen Sprache als auch des Tanzens. Nur Stocker hat er sich nicht gemerkt.",
+      "url": "https://www.krone.at/4362782",
+      "published_at": 1793831586.0,
+      "first_seen_at": 1793835343.510217,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4362813/v715bba/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4362813/v715bba/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4362813/v715bba/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4362813/v715bba/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Im Rahmen der China-Reise von Bundeskanzler Christian Stocker hat die österreichische Delegation in Shanghai auch eine Vorführung des großen Roboter-Herstellers Agibot bekommen. Das Highlight: „Luca“, 1,69 Meter groß und kundig sowohl der deutschen Sprache als auch des Tanzens. Nur Stocker hat er sich nicht gemerkt.",
+      "rss_revision_at": 1793831586.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "krone.at"
+    },
+    "01c4e937c8236399fee0c16c": {
+      "id": "01c4e937c8236399fee0c16c",
+      "title": "Mehr Kontrolle für Demokraten über Trump",
+      "text": "Der Verlust der Mehrheiten im Kongress ist eine herbe Niederlage für US-Präsident Donald Trump. Künftig muss Trump damit rechnen, dass sein Handeln stärker kontrolliert wird. Mit Jahresbeginn werden die Demokraten bei der Gesetzgebung den Ton angeben, so US-Medien. Im Senat müssen Kandidaten und Kandidatinnen für wichtige Regierungs- und Justizposten bestätigt werden, auch das ein großer Dämpfer für die Republikaner. Doch Trump könnte den Demokraten weiterhin Schwierigkeiten bereiten.",
+      "url": "https://orf.at/stories/3447167/",
+      "published_at": 1793831576.0,
+      "first_seen_at": 1793835343.510217,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "Der Verlust der Mehrheiten im Kongress ist eine herbe Niederlage für US-Präsident Donald Trump. Künftig muss Trump damit rechnen, dass sein Handeln stärker kontrolliert wird. Mit Jahresbeginn werden die Demokraten bei der Gesetzgebung den Ton angeben, so US-Medien. Im Senat müssen Kandidaten und Kandidatinnen für wichtige Regierungs- und Justizposten bestätigt werden, auch das ein großer Dämpfer für die Republikaner. Doch Trump könnte den Demokraten weiterhin Schwierigkeiten bereiten.",
+      "rss_revision_at": 1793831576.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "orf.at"
+    },
+    "742235645c3da70b09613baa": {
+      "id": "742235645c3da70b09613baa",
+      "title": "Repräsentantenhaus: Demokrat Jeffries will Sprecher werden",
+      "text": "Einen Tag nach der US-Zwischenwahl, hat sich der prominente Demokrat Hakeem Jeffries für den Topjob als Sprecher des Repräsentantenhauses in Stellung gebracht. Nach dem Sieg der Demokraten erklärte er gestern seine Kandidatur. Die Zeiten, in denen das Repräsentantenhaus wie eine hundertprozentige Tochtergesellschaft der Regierung von US-Präsident Donald Trump funktioniere, seien vorbei, schrieb er.\n\nJeffries wäre der erste Schwarze im Amt des Sprechers. Bisher ist er Minderheitsführer im Repräsentantenhaus. Anfang Jänner beginnt die neue Legislaturperiode, dann steht auch die Wahl des Sprechers an. Ein Kandidat muss nach Kongressangaben die Mehrheit der abgegebenen Stimmen auf sich vereinen.\n\nDer Sprecher des Repräsentantenhauses leitet die Sitzungen der Parlamentskammer im Kongress und nimmt eine prominente Stellung ein. Zudem ist er der Führer der Mehrheitsfraktion.\n\nAktuell ist der Republikaner Mike Johnson Sprecher der Parlamentskammer. US-Medien zufolge will er nicht als Minderheitsführer weitermachen. Das habe Johnson seinen Mitarbeiterinnen und Mitarbeitern in einer telefonischen Besprechung gesagt, berichteten mehrere US-Medien übereinstimmend unter Berufung auf Teilnehmerinnen und Teilnehmer. Öffentlich äußerte sich Johnson dazu zunächst nicht.\n\nDer republikanische Politiker aus dem südlichen Bundesstaat Louisiana war 2017 ins Repräsentantenhaus und 2023 zu dessen Sprecher gewählt worden. Johnson gilt als enger Vertrauter von US-Präsident Donald Trump.",
+      "url": "https://orf.at/stories/3447238/",
+      "published_at": 1793831267.0,
+      "first_seen_at": 1793835343.510217,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "",
+      "rss_revision_at": 1793831267.0,
+      "content_kind": "news",
+      "text_origin": "linked_article",
+      "article_text": "Einen Tag nach der US-Zwischenwahl, hat sich der prominente Demokrat Hakeem Jeffries für den Topjob als Sprecher des Repräsentantenhauses in Stellung gebracht. Nach dem Sieg der Demokraten erklärte er gestern seine Kandidatur. Die Zeiten, in denen das Repräsentantenhaus wie eine hundertprozentige Tochtergesellschaft der Regierung von US-Präsident Donald Trump funktioniere, seien vorbei, schrieb er.\n\nJeffries wäre der erste Schwarze im Amt des Sprechers. Bisher ist er Minderheitsführer im Repräsentantenhaus. Anfang Jänner beginnt die neue Legislaturperiode, dann steht auch die Wahl des Sprechers an. Ein Kandidat muss nach Kongressangaben die Mehrheit der abgegebenen Stimmen auf sich vereinen.\n\nDer Sprecher des Repräsentantenhauses leitet die Sitzungen der Parlamentskammer im Kongress und nimmt eine prominente Stellung ein. Zudem ist er der Führer der Mehrheitsfraktion.\n\nAktuell ist der Republikaner Mike Johnson Sprecher der Parlamentskammer. US-Medien zufolge will er nicht als Minderheitsführer weitermachen. Das habe Johnson seinen Mitarbeiterinnen und Mitarbeitern in einer telefonischen Besprechung gesagt, berichteten mehrere US-Medien übereinstimmend unter Berufung auf Teilnehmerinnen und Teilnehmer. Öffentlich äußerte sich Johnson dazu zunächst nicht.\n\nDer republikanische Politiker aus dem südlichen Bundesstaat Louisiana war 2017 ins Repräsentantenhaus und 2023 zu dessen Sprecher gewählt worden. Johnson gilt als enger Vertrauter von US-Präsident Donald Trump.",
+      "article_fetch": {
+        "status": "success",
+        "method": "orf_story_story",
+        "page_title": "Repräsentantenhaus: Demokrat Jeffries will Sprecher werden",
+        "canonical_url": "https://orf.at/stories/3447238/",
+        "resolved_url": "https://orf.at/stories/3447238/",
+        "requested_url": "https://orf.at/stories/3447238/",
+        "last_attempt_at": 1793835343.510217,
+        "rss_fingerprint": "8b71d31a894d02900b72a27a486097876802fd01ef109ca9f68e6f1fcb9d5262",
+        "fetched_at": 1793835343.510217,
+        "text_sha256": "11b31503054217f3015dbc75dcae8e9fb0517cbd117ead60d91f491f481a2ae3"
+      },
+      "publisher": "orf.at"
+    },
+    "116501651b5be303af0df9c9": {
+      "id": "116501651b5be303af0df9c9",
+      "title": "CL-Siege für Real, ManCity, BVB, Arsenal – Como gewann 9:1",
+      "text": "Liverpool verlor überraschend bei Fenerbahce. Haaland schoss City bei Baumgartners Startelf-Comeback in Leipzig zum Erfolg",
+      "url": "https://www.derstandard.at/story/3000000347592/fu223ball-cl-siege-f252r-real-mancity-bvb-arsenal-como-gewann-91?ref=rss",
+      "published_at": 1793831251.0,
+      "first_seen_at": 1793835343.510217,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/iR7jCQ/rs:fill:150:0/plain/lido-images/2026/11/04/661579b3-7681-471f-b61c-61e458786443.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Liverpool verlor überraschend bei Fenerbahce. Haaland schoss City bei Baumgartners Startelf-Comeback in Leipzig zum Erfolg",
+      "rss_revision_at": 1793831251.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347592/fu223ball-cl-siege-f252r-real-mancity-bvb-arsenal-como-gewann-91?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000347592/fu223ball-cl-siege-f252r-real-mancity-bvb-arsenal-como-gewann-91?ref=rss",
+        "last_attempt_at": 1793835343.510217,
+        "rss_fingerprint": "e24f40587a4fa69a7cecf0c4942c0fef0b41add63654e42d7df3a9fe55d63174"
+      },
+      "publisher": "derstandard.at"
+    },
+    "2c0508763af09d070b0d4bd4": {
+      "id": "2c0508763af09d070b0d4bd4",
+      "title": "Trump hat jetzt überhaupt nichts mehr zu verlieren",
+      "text": "Die Midterm-Wahlen in den USA endeten mit einer deutlichen Pleite für den Präsidenten. Donald Trump lobte danach die Demokraten, möchte Gesetze per Veto verhindern – und kann weiter Kriege führen.",
+      "url": "https://www.krone.at/4362769",
+      "published_at": 1793830617.0,
+      "first_seen_at": 1793835343.510217,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4362770/v175d7e/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4362770/v175d7e/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4362770/v175d7e/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4362770/v175d7e/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Die Midterm-Wahlen in den USA endeten mit einer deutlichen Pleite für den Präsidenten. Donald Trump lobte danach die Demokraten, möchte Gesetze per Veto verhindern – und kann weiter Kriege führen.",
+      "rss_revision_at": 1793830617.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "krone.at"
+    },
+    "4932bd24bc2671b92f4993cc": {
+      "id": "4932bd24bc2671b92f4993cc",
+      "title": "Hubert Aiwanger ist tot",
+      "text": "Der bayrische Vizeministerpräsident und Freie-Wähler-Chef Hubert Aiwanger ist überraschend gestorben. Das teilten der bayrische Ministerpräsident Markus Söder (CSU) und die Berliner Staatsanwaltschaft am Mittwochabend mit. Aiwanger, der auch bayrischer Wirtschaftsminister war, starb im Alter von 55 Jahren in einem Berliner Hotel.",
+      "url": "https://orf.at/stories/3447235/",
+      "published_at": 1793830174.0,
+      "first_seen_at": 1793835343.510217,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "Der bayrische Vizeministerpräsident und Freie-Wähler-Chef Hubert Aiwanger ist überraschend gestorben. Das teilten der bayrische Ministerpräsident Markus Söder (CSU) und die Berliner Staatsanwaltschaft am Mittwochabend mit. Aiwanger, der auch bayrischer Wirtschaftsminister war, starb im Alter von 55 Jahren in einem Berliner Hotel.",
+      "rss_revision_at": 1793830174.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "orf.at"
+    },
     "c79597b6e0b56b7e79fdb010": {
       "id": "c79597b6e0b56b7e79fdb010",
       "title": "Guter Zusatzjob? Lavanttalerin geriet an Betrüger",
@@ -41,6 +261,8 @@
       "rss_revision_at": 1793828225.0,
       "content_kind": "news",
       "text_origin": "rss",
+      "broadcast_id": "20261104T215704Z",
+      "broadcast_position": 1,
       "publisher": "krone.at"
     },
     "f9ef9b4fbbf10505241daafd": {
@@ -75,6 +297,8 @@
       "rss_revision_at": 1793827894.0,
       "content_kind": "news",
       "text_origin": "rss",
+      "broadcast_id": "20261104T215704Z",
+      "broadcast_position": 5,
       "publisher": "krone.at"
     },
     "d1c2eb5f18b260f58db5001c": {
@@ -106,9 +330,14 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41419952/es-prickelt-fuer-den-kaerntner-bauern-wird-es-jetzt-ernst",
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "0119607ab658243a5afff717ef9d154c3e7bbdec88df080d6e4d379a8d6bfa75"
       },
+      "broadcast_id": "20261104T215704Z",
+      "broadcast_position": 2,
       "publisher": "kleinezeitung.at"
     },
     "1db3ba743bb55ae5c9cfbcf9": {
@@ -166,9 +395,14 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347591/bayerischer-wirtschaftsminister-hubert-aiwanger-ist-tot?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000347591/bayerischer-wirtschaftsminister-hubert-aiwanger-ist-tot?ref=rss",
+        "last_attempt_at": 1793835343.510217,
         "rss_fingerprint": "3d15ce56930fe59f6467dd9df7d2bbb77617bb81e52d93128d7fd85154297fdb"
       },
+      "broadcast_id": "20261104T215704Z",
+      "broadcast_position": 3,
       "publisher": "derstandard.at"
     },
     "5a388bff631710acc4670336": {
@@ -199,6 +433,8 @@
         "fetched_at": 1793829392.520771,
         "text_sha256": "cc204bdea36c1cd559e4d195a8e933ac4e015f88ff6d56e9ef86e5aa6c472f3c"
       },
+      "broadcast_id": "20261104T215704Z",
+      "broadcast_position": 3,
       "publisher": "orf.at"
     },
     "417cc3ca67ec1b45f1dc52a8": {
@@ -247,7 +483,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41420584/prozess-nach-toedlichem-felssturz-in-steyr-geht-weiter",
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "5aa6d35df894fe9dbbe3481ba2509cfd37c1afc9845709f4bb8e06a7d1132ed5"
       },
       "publisher": "kleinezeitung.at"
@@ -315,7 +554,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41414667/slalom-ass-kathi-truppe-ich-habe-mich-teilweise-selbst-fertig-gemacht",
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "71efb26098a9b8dea5fb371be99bcfaa95e486c85628e08ca9267971f44e5ef4"
       },
       "publisher": "kleinezeitung.at"
@@ -477,7 +719,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347465/hinweise-entdeckt-der-mars-koennte-noch-immer-vulkanisch-aktiv-sein?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000347465/hinweise-entdeckt-der-mars-koennte-noch-immer-vulkanisch-aktiv-sein?ref=rss",
+        "last_attempt_at": 1793835343.510217,
         "rss_fingerprint": "4dbb2b2bed446ca652d3ddcb1edb7ea1832b075f851b8a0bf93f90e5b6ccb3ad"
       },
       "publisher": "derstandard.at"
@@ -511,7 +756,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41420567/kaernten-drogenlenker-ohne-fuehrerschein-borgte-sich-auto-aus",
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "7c5baba0729cb95c1fb4425dcabfff9d737aa8910975312f51f53b98c6c6c5e5"
       },
       "publisher": "kleinezeitung.at"
@@ -643,7 +891,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41420507/bled-gelaufen-fpoe-wirbt-fuer-aenderungen-in-kaernten-und-zeigt",
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "a216d41f1945f8b7552eac9920f7d47e98332bf92ead40650de279694dee6071"
       },
       "publisher": "kleinezeitung.at"
@@ -669,7 +920,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347370/misshandlungsprozess-um-pruegelnden-vater-in-absolutem-gewaltrausch?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000347370/misshandlungsprozess-um-pruegelnden-vater-in-absolutem-gewaltrausch?ref=rss",
+        "last_attempt_at": 1793835343.510217,
         "rss_fingerprint": "d924870710e6369b636eb726f84e88b0f87171964de8ba008bd533e2205937d7"
       },
       "publisher": "derstandard.at"
@@ -814,7 +1068,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347239/warum-new-yorks-buergermeister-zohran-mamdani-jetzt-einen-millennial-schnauzer-traegt?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000347239/warum-new-yorks-buergermeister-zohran-mamdani-jetzt-einen-millennial-schnauzer-traegt?ref=rss",
+        "last_attempt_at": 1793835343.510217,
         "rss_fingerprint": "ec1bfc2c14c8c58ef77c3c4f1cf77f7b3c67001afdcef69f13ac6071fcd87da7"
       },
       "publisher": "derstandard.at"
@@ -849,7 +1106,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41420321/steirische-berufsfotografen-feiern-200-jahre-fotografie",
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "a8ff24023c7c648fe788430e5a393f095f534a1c602be56b271c0e15cce81f1f"
       },
       "publisher": "kleinezeitung.at"
@@ -883,7 +1143,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41418611/sie-kuemmern-sich-im-winter-um-sichere-strassen-in-feldkirchen",
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "5e56f6000bace18fe3001fec60457f63f65e6ccdd00153f5b4a9d0dd6e40ea41"
       },
       "publisher": "kleinezeitung.at"
@@ -917,7 +1180,7 @@
         }
       ],
       "rss_text": "Es muss ein unfassbares Martyrium gewesen sein, das ein zwölfjähriger Bursche am 12. Juli 2026 erleben musste. Als sein Vater ihn unfassbare fünfeinhalb Stunden schlug. „Er hat das Kind ausgepeitscht. Er hat das Kind gefoltert“, so die Staatsanwältin. Auch seine zwei älteren Brüder sollen schon jahrelang unter Gewaltexzessen des Syrers gelitten haben. Dafür setzt es eine lange Haftstrafe – nicht rechtskräftig.",
-      "rss_revision_at": 1793818624.0,
+      "rss_revision_at": 1793831509.0,
       "content_kind": "news",
       "text_origin": "rss",
       "publisher": "krone.at"
@@ -973,15 +1236,18 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347588/nach-wahlniederlage-vance-gibt-irankrieg-schuld-trump-verteidigt-ihn?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000347588/nach-wahlniederlage-vance-gibt-irankrieg-schuld-trump-verteidigt-ihn?ref=rss",
+        "last_attempt_at": 1793835343.510217,
         "rss_fingerprint": "723421941d332d101fad319e826eab509a1758b1af72f834b93f7a14d4d15dd0"
       },
       "publisher": "derstandard.at"
     },
     "7f3fee8d35704c67330e3615": {
       "id": "7f3fee8d35704c67330e3615",
-      "title": "Die Gewinnzahlen bei Lotto „6 aus 45“",
-      "text": "Bei der heutigen Ziehung bei Lotto „6 aus 45“ wurden folgende Gewinnzahlen ermittelt:\n\n7 13 15 29 43 44/Zusatzzahl: 22\n\nDie aktuellen LottoPlus-Zahlen lauten:\n\n12 17 24 27 31 41\n\nZweite Ziehung:\n\n4 10 16 30 35 40\n\nDie aktuelle Joker-Zahl lautet:\n\n4 8 9 7 3 7\n\nAlle Angaben ohne Gewähr",
+      "title": "Dreifachjackpot bei Lotto „6 aus 45“",
+      "text": "Bei der gestrigen Ziehung von Lotto „6 aus 45“ hat niemand auf die sechs Richtigen getippt.\n\nDas bedeutet Dreifachjackpot. Im Topf liegen zusätzlich zum ersten Rang der nächsten Runde 2.062.826,17 Euro.\n\nEs wurden folgende Gewinnzahlen ermittelt:\n\n7 13 15 29 43 44/Zusatzzahl: 22\n\nDie aktuellen LottoPlus-Zahlen lauten:\n\n12 17 24 27 31 41\n\nZweite Ziehung:\n\n4 10 16 30 35 40\n\nDie aktuelle Joker-Zahl lautet:\n\n4 8 9 7 3 7\n\nAlle Angaben ohne Gewähr",
       "url": "https://orf.at/stories/3447227/",
       "published_at": 1793818198.0,
       "first_seen_at": 1793829392.520771,
@@ -993,19 +1259,19 @@
       "rss_revision_at": 1793818198.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Bei der heutigen Ziehung bei Lotto „6 aus 45“ wurden folgende Gewinnzahlen ermittelt:\n\n7 13 15 29 43 44/Zusatzzahl: 22\n\nDie aktuellen LottoPlus-Zahlen lauten:\n\n12 17 24 27 31 41\n\nZweite Ziehung:\n\n4 10 16 30 35 40\n\nDie aktuelle Joker-Zahl lautet:\n\n4 8 9 7 3 7\n\nAlle Angaben ohne Gewähr",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
-        "page_title": "Die Gewinnzahlen bei Lotto „6 aus 45“",
+        "page_title": "Dreifachjackpot bei Lotto „6 aus 45“",
         "canonical_url": "https://orf.at/stories/3447227/",
         "resolved_url": "https://orf.at/stories/3447227/",
         "requested_url": "https://orf.at/stories/3447227/",
-        "last_attempt_at": 1793829392.520771,
-        "rss_fingerprint": "d49ede31b3f7f84629ff9acb04dd9e8f1992c1710cc697887f217864ad31365e",
-        "fetched_at": 1793829392.520771,
-        "text_sha256": "354756b1cd0e56390568fb597d0733bb8cb9945b9c3392c528e236eeeebc390b"
+        "last_attempt_at": 1793835343.510217,
+        "rss_fingerprint": "4cb5ff58213f69f9b4eec7bb5d1b2f98a9617db9a98bf6575cc37503a6b44c4c",
+        "fetched_at": 1793835343.510217,
+        "text_sha256": "df128372930ba7d158158dacd36cfef168ec5b178c431507557bb59f64f5c039"
       },
+      "article_text": "Bei der gestrigen Ziehung von Lotto „6 aus 45“ hat niemand auf die sechs Richtigen getippt.\n\nDas bedeutet Dreifachjackpot. Im Topf liegen zusätzlich zum ersten Rang der nächsten Runde 2.062.826,17 Euro.\n\nEs wurden folgende Gewinnzahlen ermittelt:\n\n7 13 15 29 43 44/Zusatzzahl: 22\n\nDie aktuellen LottoPlus-Zahlen lauten:\n\n12 17 24 27 31 41\n\nZweite Ziehung:\n\n4 10 16 30 35 40\n\nDie aktuelle Joker-Zahl lautet:\n\n4 8 9 7 3 7\n\nAlle Angaben ohne Gewähr",
       "publisher": "orf.at"
     },
     "4638fdfa0972b3b1d6632730": {
@@ -1029,7 +1295,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347496/wichtigster-kommentator-unseres-landes-hans-rauscher-mit-ari-rath-preis-ausgezeichnet?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000347496/wichtigster-kommentator-unseres-landes-hans-rauscher-mit-ari-rath-preis-ausgezeichnet?ref=rss",
+        "last_attempt_at": 1793835343.510217,
         "rss_fingerprint": "1c7638af754fec30146ea663036c82040678a6d026df5eb724825c99776c01b7"
       },
       "publisher": "derstandard.at"
@@ -1119,7 +1388,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347540/was-verraet-die-wandelnde-atombomben-metapher-godzilla-ueber-die-gegenwart?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000347540/was-verraet-die-wandelnde-atombomben-metapher-godzilla-ueber-die-gegenwart?ref=rss",
+        "last_attempt_at": 1793835343.510217,
         "rss_fingerprint": "2e842a606d6338e62fc0595250122cd3abb765c3aef06fc09ddf0dc3d652db51"
       },
       "publisher": "derstandard.at"
@@ -1154,7 +1426,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41420185/junkerpraesentation-2026-4000-stiessen-auf-den-neuen-jahrgang-an",
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "d0b663318bdc6317d7538eb16a828d3e14b2f3b5d2061048e6c735832cd2b6f0"
       },
       "publisher": "kleinezeitung.at"
@@ -1218,7 +1493,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41420442/bahn-kv-nicht-auf-schiene-dritte-verhandlungsrunde-ergebnislos",
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "e7dd08782488746fac55a268bf9d1b87796d537684e2eb0dc1df88e29703de3d"
       },
       "publisher": "kleinezeitung.at"
@@ -1585,9 +1863,9 @@
         "canonical_url": "https://orf.at/stories/3447221/",
         "resolved_url": "https://orf.at/stories/3447221/",
         "requested_url": "https://orf.at/stories/3447221/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "80b75bc113a39bdf42301b2fad55805a5e1d25c6025ec2abf87e6b8d3ed69bf7",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "ef149ba9abc413519826f312c4ce56def46df8a08f801716e851e3e11cdffd42"
       },
       "publisher": "orf.at"
@@ -1629,7 +1907,7 @@
     "06dbe624c6303cd52fe79b1f": {
       "id": "06dbe624c6303cd52fe79b1f",
       "title": "Dirigent Herbert Blomstedt gestorben",
-      "text": "Der schwedisch-amerikanische Dirigent Herbert Blomstedt ist tot. Er starb heute im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte. Laut Berichten seiner Agentur starb er zu Hause im Kreis seiner Familie. Blomstedt dirigierte auch regelmäßig für die Wiener Philharmoniker.\n\nBlomstedt prägte viele Orchester in Europa und den USA: Er leitete die Staatskapelle Dresden, das Gewandhausorchester Leipzig und das NDR-Sinfonieorchester als Chefdirigent, zehn Jahre lang auch die San Francisco Symphony. Als Gastdirigent war er unter anderem in Boston, Chicago und Los Angeles gefragt. Bis ins hohe Alter wagte sich der Grandseigneur an frische Interpretationen.",
+      "text": "Der schwedisch-amerikanische Dirigent Herbert Blomstedt ist tot. Er starb gestern im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte. Laut Berichten seiner Agentur starb er zu Hause im Kreis seiner Familie. Blomstedt dirigierte auch regelmäßig für die Wiener Philharmoniker.\n\nBlomstedt prägte viele Orchester in Europa und den USA: Er leitete die Staatskapelle Dresden, das Gewandhausorchester Leipzig und das NDR-Sinfonieorchester als Chefdirigent, zehn Jahre lang auch die San Francisco Symphony. Als Gastdirigent war er unter anderem in Boston, Chicago und Los Angeles gefragt. Bis ins hohe Alter wagte sich der Grandseigneur an frische Interpretationen.",
       "url": "https://orf.at/stories/3447220/",
       "published_at": 1793813574.0,
       "first_seen_at": 1793815071.652229,
@@ -1641,7 +1919,7 @@
       "rss_revision_at": 1793813574.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Der schwedisch-amerikanische Dirigent Herbert Blomstedt ist tot. Er starb heute im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte. Laut Berichten seiner Agentur starb er zu Hause im Kreis seiner Familie. Blomstedt dirigierte auch regelmäßig für die Wiener Philharmoniker.\n\nBlomstedt prägte viele Orchester in Europa und den USA: Er leitete die Staatskapelle Dresden, das Gewandhausorchester Leipzig und das NDR-Sinfonieorchester als Chefdirigent, zehn Jahre lang auch die San Francisco Symphony. Als Gastdirigent war er unter anderem in Boston, Chicago und Los Angeles gefragt. Bis ins hohe Alter wagte sich der Grandseigneur an frische Interpretationen.",
+      "article_text": "Der schwedisch-amerikanische Dirigent Herbert Blomstedt ist tot. Er starb gestern im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte. Laut Berichten seiner Agentur starb er zu Hause im Kreis seiner Familie. Blomstedt dirigierte auch regelmäßig für die Wiener Philharmoniker.\n\nBlomstedt prägte viele Orchester in Europa und den USA: Er leitete die Staatskapelle Dresden, das Gewandhausorchester Leipzig und das NDR-Sinfonieorchester als Chefdirigent, zehn Jahre lang auch die San Francisco Symphony. Als Gastdirigent war er unter anderem in Boston, Chicago und Los Angeles gefragt. Bis ins hohe Alter wagte sich der Grandseigneur an frische Interpretationen.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -1649,10 +1927,10 @@
         "canonical_url": "https://orf.at/stories/3447220/",
         "resolved_url": "https://orf.at/stories/3447220/",
         "requested_url": "https://orf.at/stories/3447220/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "766ace78c287851c79a0cf76912fe62d68e5dc6aac53a4b746ea22cc10d60142",
-        "fetched_at": 1793815071.652229,
-        "text_sha256": "580b46bde0081183efc9dc0333557cd2dd9ef8a37d59c0ef70ac9818553a3397"
+        "fetched_at": 1793845937.882533,
+        "text_sha256": "e730009f3f02830ef52ee128a5b60c3421cf96345393f29c40f1b4c8aec5741b"
       },
       "publisher": "orf.at"
     },
@@ -1862,7 +2140,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347477/neue-mehrheiten-im-us-kongress-bringen-demokraten-nur-begrenzten-spielraum?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347477/neue-mehrheiten-im-us-kongress-bringen-demokraten-nur-begrenzten-spielraum?ref=rss",
         "last_attempt_at": 1793815071.652229,
@@ -1925,7 +2203,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347586/dirigent-herbert-blomstedt-99-jaehrig-verstorben?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347586/dirigent-herbert-blomstedt-99-jaehrig-verstorben?ref=rss",
         "last_attempt_at": 1793815071.652229,
@@ -2079,7 +2357,7 @@
     "66924309e3311ef8812c1426": {
       "id": "66924309e3311ef8812c1426",
       "title": "Vance: Iran-Krieg schuld an Wahlniederlage",
-      "text": "Die überraschend deutliche Niederlage der Republikaner bei den US-Kongresswahlen ist nach Ansicht von Vizepräsident JD Vance auf den Iran-Krieg zurückzuführen. „Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er heute auf der Plattform X. Das habe auch Präsident Donald Trump bereits gesagt. „Jeder weiß, warum wir verloren haben. Und jede Diskussion darüber, wie es weitergeht, muss dort ansetzen.“\n\nViele Wähler und Wählerinnen, die bei den Präsidentschaftswahlen vor zwei Jahren für Vance und Trump gestimmt hätten, seien verärgert gewesen. Eine Umfrage habe erheben, dass sie sich nun vor allem vier Punkte gewünscht hätten: das Ende des Iran-Kriegs, den Fokus auf Lebenshaltungskosten und Inflation, Amerika an erste Stelle zu setzen und eine Neuausrichtung der Beziehungen zu Israel.\n\nVance äußerte Verständnis für die Kritik. „An alle, die einfach nur wütend über das Ergebnis sind: Das solltet ihr auch sein. Lasst uns diese Wut nutzen, um uns wieder der Aufgabe zu widmen, unser Land zu retten“, schrieb er.\n\nLaut einer Analyse des US-Senders CNN wolle sich Vance mit dem Posting von Trump abgrenzen und damit seine Chancen auf die republikanische Kandidatur für die Präsidentschaftswahl 2028 erhöhen. Seine Kritik deute an, dass er von Anfang an Gegner des Kriegs im Iran gewesen sei.",
+      "text": "Die überraschend deutliche Niederlage der Republikaner bei den US-Kongresswahlen ist nach Ansicht von Vizepräsident JD Vance auf den Iran-Krieg zurückzuführen. „Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er gestern auf der Plattform X. Das habe auch Präsident Donald Trump bereits gesagt. „Jeder weiß, warum wir verloren haben. Und jede Diskussion darüber, wie es weitergeht, muss dort ansetzen.“\n\nViele Wähler und Wählerinnen, die bei den Präsidentschaftswahlen vor zwei Jahren für Vance und Trump gestimmt hätten, seien verärgert gewesen. Eine Umfrage habe ergeben, dass sie sich nun vor allem vier Punkte gewünscht hätten: das Ende des Iran-Kriegs, den Fokus auf Lebenshaltungskosten und Inflation, Amerika an erste Stelle zu setzen und eine Neuausrichtung der Beziehungen zu Israel.\n\nVance äußerte Verständnis für die Kritik. „An alle, die einfach nur wütend über das Ergebnis sind: Das solltet ihr auch sein. Lasst uns diese Wut nutzen, um uns wieder der Aufgabe zu widmen, unser Land zu retten“, schrieb er.\n\nTrump räumte ein, dass die durch den Iran-Krieg gestiegenen Spritpreise ein Grund für die Niederlage waren. Er halte die Einschätzung von Vance für weitgehend zutreffend, sagte Trump vor Journalisten in Washington. Der Krieg habe die Preise kurzfristig „ein wenig“ in die Höhe getrieben.\n\nGleichzeitig verteidigte Trump seine Entscheidung zum Krieg gegen den Iran. Wenn er noch einmal vor der Wahl stünde, würde er genauso handeln, sagte der Republikaner. Man dürfe nicht zulassen, dass der Iran eine Atomwaffe bekomme. Auf die Frage, ob der Krieg es wert gewesen sei, antwortete er mit „Ja“. Er argumentierte auch, der Unmut richte sich nicht gegen den Krieg an sich, sondern gegen die gestiegenen Preise: „Es ist nicht der Krieg, sondern die Preise.“\n\nLaut einer Analyse des US-Senders CNN wolle sich Vance mit dem Posting von Trump abgrenzen und damit seine Chancen auf die republikanische Kandidatur für die Präsidentschaftswahl 2028 erhöhen. Seine Kritik deute an, dass er von Anfang an Gegner des Kriegs im Iran gewesen sei.",
       "url": "https://orf.at/stories/3447218/",
       "published_at": 1793811801.0,
       "first_seen_at": 1793815071.652229,
@@ -2091,7 +2369,7 @@
       "rss_revision_at": 1793811801.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Die überraschend deutliche Niederlage der Republikaner bei den US-Kongresswahlen ist nach Ansicht von Vizepräsident JD Vance auf den Iran-Krieg zurückzuführen. „Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er heute auf der Plattform X. Das habe auch Präsident Donald Trump bereits gesagt. „Jeder weiß, warum wir verloren haben. Und jede Diskussion darüber, wie es weitergeht, muss dort ansetzen.“\n\nViele Wähler und Wählerinnen, die bei den Präsidentschaftswahlen vor zwei Jahren für Vance und Trump gestimmt hätten, seien verärgert gewesen. Eine Umfrage habe erheben, dass sie sich nun vor allem vier Punkte gewünscht hätten: das Ende des Iran-Kriegs, den Fokus auf Lebenshaltungskosten und Inflation, Amerika an erste Stelle zu setzen und eine Neuausrichtung der Beziehungen zu Israel.\n\nVance äußerte Verständnis für die Kritik. „An alle, die einfach nur wütend über das Ergebnis sind: Das solltet ihr auch sein. Lasst uns diese Wut nutzen, um uns wieder der Aufgabe zu widmen, unser Land zu retten“, schrieb er.\n\nLaut einer Analyse des US-Senders CNN wolle sich Vance mit dem Posting von Trump abgrenzen und damit seine Chancen auf die republikanische Kandidatur für die Präsidentschaftswahl 2028 erhöhen. Seine Kritik deute an, dass er von Anfang an Gegner des Kriegs im Iran gewesen sei.",
+      "article_text": "Die überraschend deutliche Niederlage der Republikaner bei den US-Kongresswahlen ist nach Ansicht von Vizepräsident JD Vance auf den Iran-Krieg zurückzuführen. „Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er gestern auf der Plattform X. Das habe auch Präsident Donald Trump bereits gesagt. „Jeder weiß, warum wir verloren haben. Und jede Diskussion darüber, wie es weitergeht, muss dort ansetzen.“\n\nViele Wähler und Wählerinnen, die bei den Präsidentschaftswahlen vor zwei Jahren für Vance und Trump gestimmt hätten, seien verärgert gewesen. Eine Umfrage habe ergeben, dass sie sich nun vor allem vier Punkte gewünscht hätten: das Ende des Iran-Kriegs, den Fokus auf Lebenshaltungskosten und Inflation, Amerika an erste Stelle zu setzen und eine Neuausrichtung der Beziehungen zu Israel.\n\nVance äußerte Verständnis für die Kritik. „An alle, die einfach nur wütend über das Ergebnis sind: Das solltet ihr auch sein. Lasst uns diese Wut nutzen, um uns wieder der Aufgabe zu widmen, unser Land zu retten“, schrieb er.\n\nTrump räumte ein, dass die durch den Iran-Krieg gestiegenen Spritpreise ein Grund für die Niederlage waren. Er halte die Einschätzung von Vance für weitgehend zutreffend, sagte Trump vor Journalisten in Washington. Der Krieg habe die Preise kurzfristig „ein wenig“ in die Höhe getrieben.\n\nGleichzeitig verteidigte Trump seine Entscheidung zum Krieg gegen den Iran. Wenn er noch einmal vor der Wahl stünde, würde er genauso handeln, sagte der Republikaner. Man dürfe nicht zulassen, dass der Iran eine Atomwaffe bekomme. Auf die Frage, ob der Krieg es wert gewesen sei, antwortete er mit „Ja“. Er argumentierte auch, der Unmut richte sich nicht gegen den Krieg an sich, sondern gegen die gestiegenen Preise: „Es ist nicht der Krieg, sondern die Preise.“\n\nLaut einer Analyse des US-Senders CNN wolle sich Vance mit dem Posting von Trump abgrenzen und damit seine Chancen auf die republikanische Kandidatur für die Präsidentschaftswahl 2028 erhöhen. Seine Kritik deute an, dass er von Anfang an Gegner des Kriegs im Iran gewesen sei.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -2099,10 +2377,10 @@
         "canonical_url": "https://orf.at/stories/3447218/",
         "resolved_url": "https://orf.at/stories/3447218/",
         "requested_url": "https://orf.at/stories/3447218/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "6870a1df718d66710ff5cda40f5bffb17741d833f941c530a39e762372a17aa7",
-        "fetched_at": 1793815071.652229,
-        "text_sha256": "cd3b5bcc9b57773b8ffb23dcd5b9b07c542f178ed15bfb1489b2cde79ba91cb1"
+        "fetched_at": 1793845937.882533,
+        "text_sha256": "72fd1aead22f77b93b2b1b66c4d721b562ffb000024aa2403d908a498a926570"
       },
       "publisher": "orf.at"
     },
@@ -2127,7 +2405,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347585/-mordalarm-in-wien-meidling-mann-lag-leblos-auf-stra223e?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347585/-mordalarm-in-wien-meidling-mann-lag-leblos-auf-stra223e?ref=rss",
         "last_attempt_at": 1793815071.652229,
@@ -2261,7 +2539,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347153/squiggly-sudoku-s6434b?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347153/squiggly-sudoku-s6434b?ref=rss",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "809e3d61328fda434a42e3e37bf77d7f87cf771a7fd16817411bb6c824f470f1"
       },
       "publisher": "derstandard.at"
@@ -2568,7 +2846,7 @@
     "f5bdafe5a892ff827a06b69e": {
       "id": "f5bdafe5a892ff827a06b69e",
       "title": "Huthi-Miliz verkündet neuen Angriff auf Flughafen Riad",
-      "text": "Die vom Iran unterstützte Huthi-Miliz hat erneut einen Angriff auf den Flughafen in der saudischen Hauptstadt Riad für sich beansprucht. Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari heute mit.\n\nReisende sowie Fluggesellschaften und deren Mitarbeiter und Mitarbeiterinnen warnte er erneut davor, den saudi-arabischen Flugraum zu nutzen, weil dieser nicht vor Angriffen der Huthis sicher sei.\n\nAuch im Jemen, wo es seit Monaten zu schweren Gefechten kommt, geht der Krieg weiter. Die Huthis kämpfen dabei unter anderem im Raum der strategisch wichtigen Stadt Tais gegen Truppen der Regierung, die von verbündeten Milizen und Saudi-Arabien unterstützt werden. Die Huthis greifen auch Ziele in der südlichen Küstenstadt Aden an, wo die international anerkannte Regierung ihren Sitz hat.\n\nDie ohnehin katastrophale humanitäre Lage im Jemen hat sich durch die Kämpfe noch weiter verschlechtert. Die Huthi-Rebellen haben Tais seit Wochen wieder eingekesselt. Dort werden die Vorräte an Wasser, Lebensmitteln, Kleidung und anderen Gütern knapp. Krankenhäusern fehlt es an Treibstoff und Arzneimitteln. UNO-Hilfsorganisationen könnten keine Lieferungen nach Tais bringen, weil Straßen gesperrt seien, sagte ein UNO-Sprecher.\n\nDas Rote Kreuz lieferte eigenen Angaben zufolge Hilfsgüter in die belagerte Stadt. Vier Lastwagen mit wichtigen medizinischen Gütern hätten Tais erreicht, teilte die Organisation heute mit. Nach Angaben von Hilfsorganisationen sind im gesamten Jemen Krankenhäuser überlastet, durch die Kämpfe sind rund 800.000 Menschen von lebenswichtiger Hilfe abgeschnitten.",
+      "text": "Die vom Iran unterstützte Huthi-Miliz hat erneut einen Angriff auf den Flughafen in der saudischen Hauptstadt Riad für sich beansprucht. Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari gestern mit.\n\nReisende sowie Fluggesellschaften und deren Mitarbeiter und Mitarbeiterinnen warnte er erneut davor, den saudi-arabischen Flugraum zu nutzen, weil dieser nicht vor Angriffen der Huthis sicher sei.\n\nAuch im Jemen, wo es seit Monaten zu schweren Gefechten kommt, geht der Krieg weiter. Die Huthis kämpfen dabei unter anderem im Raum der strategisch wichtigen Stadt Tais gegen Truppen der Regierung, die von verbündeten Milizen und Saudi-Arabien unterstützt werden. Die Huthis greifen auch Ziele in der südlichen Küstenstadt Aden an, wo die international anerkannte Regierung ihren Sitz hat.\n\nDie ohnehin katastrophale humanitäre Lage im Jemen hat sich durch die Kämpfe noch weiter verschlechtert. Die Huthi-Rebellen haben Tais seit Wochen wieder eingekesselt. Dort werden die Vorräte an Wasser, Lebensmitteln, Kleidung und anderen Gütern knapp. Krankenhäusern fehlt es an Treibstoff und Arzneimitteln. UNO-Hilfsorganisationen könnten keine Lieferungen nach Tais bringen, weil Straßen gesperrt seien, sagte ein UNO-Sprecher.\n\nDas Rote Kreuz lieferte eigenen Angaben zufolge Hilfsgüter in die belagerte Stadt. Vier Lastwagen mit wichtigen medizinischen Gütern hätten Tais erreicht, teilte die Organisation gestern mit. Nach Angaben von Hilfsorganisationen sind im gesamten Jemen Krankenhäuser überlastet, durch die Kämpfe sind rund 800.000 Menschen von lebenswichtiger Hilfe abgeschnitten.",
       "url": "https://orf.at/stories/3447217/",
       "published_at": 1793811247.0,
       "first_seen_at": 1793815071.652229,
@@ -2580,7 +2858,7 @@
       "rss_revision_at": 1793811247.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Die vom Iran unterstützte Huthi-Miliz hat erneut einen Angriff auf den Flughafen in der saudischen Hauptstadt Riad für sich beansprucht. Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari heute mit.\n\nReisende sowie Fluggesellschaften und deren Mitarbeiter und Mitarbeiterinnen warnte er erneut davor, den saudi-arabischen Flugraum zu nutzen, weil dieser nicht vor Angriffen der Huthis sicher sei.\n\nAuch im Jemen, wo es seit Monaten zu schweren Gefechten kommt, geht der Krieg weiter. Die Huthis kämpfen dabei unter anderem im Raum der strategisch wichtigen Stadt Tais gegen Truppen der Regierung, die von verbündeten Milizen und Saudi-Arabien unterstützt werden. Die Huthis greifen auch Ziele in der südlichen Küstenstadt Aden an, wo die international anerkannte Regierung ihren Sitz hat.\n\nDie ohnehin katastrophale humanitäre Lage im Jemen hat sich durch die Kämpfe noch weiter verschlechtert. Die Huthi-Rebellen haben Tais seit Wochen wieder eingekesselt. Dort werden die Vorräte an Wasser, Lebensmitteln, Kleidung und anderen Gütern knapp. Krankenhäusern fehlt es an Treibstoff und Arzneimitteln. UNO-Hilfsorganisationen könnten keine Lieferungen nach Tais bringen, weil Straßen gesperrt seien, sagte ein UNO-Sprecher.\n\nDas Rote Kreuz lieferte eigenen Angaben zufolge Hilfsgüter in die belagerte Stadt. Vier Lastwagen mit wichtigen medizinischen Gütern hätten Tais erreicht, teilte die Organisation heute mit. Nach Angaben von Hilfsorganisationen sind im gesamten Jemen Krankenhäuser überlastet, durch die Kämpfe sind rund 800.000 Menschen von lebenswichtiger Hilfe abgeschnitten.",
+      "article_text": "Die vom Iran unterstützte Huthi-Miliz hat erneut einen Angriff auf den Flughafen in der saudischen Hauptstadt Riad für sich beansprucht. Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari gestern mit.\n\nReisende sowie Fluggesellschaften und deren Mitarbeiter und Mitarbeiterinnen warnte er erneut davor, den saudi-arabischen Flugraum zu nutzen, weil dieser nicht vor Angriffen der Huthis sicher sei.\n\nAuch im Jemen, wo es seit Monaten zu schweren Gefechten kommt, geht der Krieg weiter. Die Huthis kämpfen dabei unter anderem im Raum der strategisch wichtigen Stadt Tais gegen Truppen der Regierung, die von verbündeten Milizen und Saudi-Arabien unterstützt werden. Die Huthis greifen auch Ziele in der südlichen Küstenstadt Aden an, wo die international anerkannte Regierung ihren Sitz hat.\n\nDie ohnehin katastrophale humanitäre Lage im Jemen hat sich durch die Kämpfe noch weiter verschlechtert. Die Huthi-Rebellen haben Tais seit Wochen wieder eingekesselt. Dort werden die Vorräte an Wasser, Lebensmitteln, Kleidung und anderen Gütern knapp. Krankenhäusern fehlt es an Treibstoff und Arzneimitteln. UNO-Hilfsorganisationen könnten keine Lieferungen nach Tais bringen, weil Straßen gesperrt seien, sagte ein UNO-Sprecher.\n\nDas Rote Kreuz lieferte eigenen Angaben zufolge Hilfsgüter in die belagerte Stadt. Vier Lastwagen mit wichtigen medizinischen Gütern hätten Tais erreicht, teilte die Organisation gestern mit. Nach Angaben von Hilfsorganisationen sind im gesamten Jemen Krankenhäuser überlastet, durch die Kämpfe sind rund 800.000 Menschen von lebenswichtiger Hilfe abgeschnitten.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -2588,10 +2866,10 @@
         "canonical_url": "https://orf.at/stories/3447217/",
         "resolved_url": "https://orf.at/stories/3447217/",
         "requested_url": "https://orf.at/stories/3447217/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "86d9bb554232172d972deb93b33bd3ac8078f9a10bcad5ff745a1a0fad029724",
-        "fetched_at": 1793815071.652229,
-        "text_sha256": "8448515f1322cf12c0fc0d0d3e7ba42a6fa9ee969227e9630a3dbf114e943f3c"
+        "fetched_at": 1793845937.882533,
+        "text_sha256": "67e919e0504e49a9b4a510309f4713e6555d3f3e1a8616093d25b9b28847f66c"
       },
       "publisher": "orf.at"
     },
@@ -2620,7 +2898,7 @@
     "c2538ddaa4837af2c82f9872": {
       "id": "c2538ddaa4837af2c82f9872",
       "title": "Ungarn macht erstmals Stasi-Akten umfassend zugänglich",
-      "text": "Erstmals seit der demokratischen Wende macht Ungarn Akten der kommunistischen Staatssicherheit umfassend zugänglich. „Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar heute im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt.\n\nÜber die Webseite des Archivs kann nun jeder Einsicht in das Material nehmen. Magyar regiert seit Mai dieses Jahres in Ungarn, die Öffnung des Stasi-Akten-Archivs war eines seiner zentralen Wahlversprechen. Die Spitzelnetze der kommunistischen Geheimdienste hätten alle Lebensbereiche durchdrungen und seien auch in Fabriken, Kirchen und Familien präsent gewesen, sagte Magyar.\n\nNach Angaben des Archivdirektors speichert das Archiv die Namen von rund 55.000 Menschen, an die die ungarische Stasi herantrat. Etwa 10.000 von ihnen könnten heute noch am Leben sein.\n\nDas veröffentlichte Material ist nicht vollständig. So sollen die Anwerbungs- und Personalakten erst im kommenden Februar veröffentlicht werden. Außerdem sind die dem Stasi-Aktenarchiv übergebenen Akten unvollständig, weil viele Akten noch in der Zeit des Kommunismus oder in der Wendezeit vernichtet wurden.\n\nGroße Überraschungen für die Öffentlichkeit dürfte das nun zugängliche Material aber nicht bergen. Historiker, Forscher, Journalisten und Opfer von Bespitzelungen konnten schon zuvor gezielt nach Akten suchen.\n\nSo ist etwa schon seit 2006 bekannt, dass der Filmregisseur und Oscar-Preisträger Istvan Szabo („Mephisto“, 1981) in seinen jungen Jahren für den Geheimdienst tätig war. Auch die Spitzeltätigkeit etlicher Politiker der Nach-Wende-Zeit wurde durch derartige Enthüllungen aufgedeckt.",
+      "text": "Erstmals seit der demokratischen Wende macht Ungarn Akten der kommunistischen Staatssicherheit umfassend zugänglich. „Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar gestern im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt.\n\nÜber die Webseite des Archivs kann nun jeder Einsicht in das Material nehmen. Magyar regiert seit Mai dieses Jahres in Ungarn, die Öffnung des Stasi-Akten-Archivs war eines seiner zentralen Wahlversprechen. Die Spitzelnetze der kommunistischen Geheimdienste hätten alle Lebensbereiche durchdrungen und seien auch in Fabriken, Kirchen und Familien präsent gewesen, sagte Magyar.\n\nNach Angaben des Archivdirektors speichert das Archiv die Namen von rund 55.000 Menschen, an die die ungarische Stasi herantrat. Etwa 10.000 von ihnen könnten heute noch am Leben sein.\n\nDas veröffentlichte Material ist nicht vollständig. So sollen die Anwerbungs- und Personalakten erst im kommenden Februar veröffentlicht werden. Außerdem sind die dem Stasi-Aktenarchiv übergebenen Akten unvollständig, weil viele Akten noch in der Zeit des Kommunismus oder in der Wendezeit vernichtet wurden.\n\nGroße Überraschungen für die Öffentlichkeit dürfte das nun zugängliche Material aber nicht bergen. Historiker, Forscher, Journalisten und Opfer von Bespitzelungen konnten schon zuvor gezielt nach Akten suchen.\n\nSo ist etwa schon seit 2006 bekannt, dass der Filmregisseur und Oscar-Preisträger Istvan Szabo („Mephisto“, 1981) in seinen jungen Jahren für den Geheimdienst tätig war. Auch die Spitzeltätigkeit etlicher Politiker der Nach-Wende-Zeit wurde durch derartige Enthüllungen aufgedeckt.",
       "url": "https://orf.at/stories/3447215/",
       "published_at": 1793809831.0,
       "first_seen_at": 1793815071.652229,
@@ -2632,7 +2910,7 @@
       "rss_revision_at": 1793809831.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Erstmals seit der demokratischen Wende macht Ungarn Akten der kommunistischen Staatssicherheit umfassend zugänglich. „Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar heute im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt.\n\nÜber die Webseite des Archivs kann nun jeder Einsicht in das Material nehmen. Magyar regiert seit Mai dieses Jahres in Ungarn, die Öffnung des Stasi-Akten-Archivs war eines seiner zentralen Wahlversprechen. Die Spitzelnetze der kommunistischen Geheimdienste hätten alle Lebensbereiche durchdrungen und seien auch in Fabriken, Kirchen und Familien präsent gewesen, sagte Magyar.\n\nNach Angaben des Archivdirektors speichert das Archiv die Namen von rund 55.000 Menschen, an die die ungarische Stasi herantrat. Etwa 10.000 von ihnen könnten heute noch am Leben sein.\n\nDas veröffentlichte Material ist nicht vollständig. So sollen die Anwerbungs- und Personalakten erst im kommenden Februar veröffentlicht werden. Außerdem sind die dem Stasi-Aktenarchiv übergebenen Akten unvollständig, weil viele Akten noch in der Zeit des Kommunismus oder in der Wendezeit vernichtet wurden.\n\nGroße Überraschungen für die Öffentlichkeit dürfte das nun zugängliche Material aber nicht bergen. Historiker, Forscher, Journalisten und Opfer von Bespitzelungen konnten schon zuvor gezielt nach Akten suchen.\n\nSo ist etwa schon seit 2006 bekannt, dass der Filmregisseur und Oscar-Preisträger Istvan Szabo („Mephisto“, 1981) in seinen jungen Jahren für den Geheimdienst tätig war. Auch die Spitzeltätigkeit etlicher Politiker der Nach-Wende-Zeit wurde durch derartige Enthüllungen aufgedeckt.",
+      "article_text": "Erstmals seit der demokratischen Wende macht Ungarn Akten der kommunistischen Staatssicherheit umfassend zugänglich. „Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar gestern im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt.\n\nÜber die Webseite des Archivs kann nun jeder Einsicht in das Material nehmen. Magyar regiert seit Mai dieses Jahres in Ungarn, die Öffnung des Stasi-Akten-Archivs war eines seiner zentralen Wahlversprechen. Die Spitzelnetze der kommunistischen Geheimdienste hätten alle Lebensbereiche durchdrungen und seien auch in Fabriken, Kirchen und Familien präsent gewesen, sagte Magyar.\n\nNach Angaben des Archivdirektors speichert das Archiv die Namen von rund 55.000 Menschen, an die die ungarische Stasi herantrat. Etwa 10.000 von ihnen könnten heute noch am Leben sein.\n\nDas veröffentlichte Material ist nicht vollständig. So sollen die Anwerbungs- und Personalakten erst im kommenden Februar veröffentlicht werden. Außerdem sind die dem Stasi-Aktenarchiv übergebenen Akten unvollständig, weil viele Akten noch in der Zeit des Kommunismus oder in der Wendezeit vernichtet wurden.\n\nGroße Überraschungen für die Öffentlichkeit dürfte das nun zugängliche Material aber nicht bergen. Historiker, Forscher, Journalisten und Opfer von Bespitzelungen konnten schon zuvor gezielt nach Akten suchen.\n\nSo ist etwa schon seit 2006 bekannt, dass der Filmregisseur und Oscar-Preisträger Istvan Szabo („Mephisto“, 1981) in seinen jungen Jahren für den Geheimdienst tätig war. Auch die Spitzeltätigkeit etlicher Politiker der Nach-Wende-Zeit wurde durch derartige Enthüllungen aufgedeckt.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -2640,10 +2918,10 @@
         "canonical_url": "https://orf.at/stories/3447215/",
         "resolved_url": "https://orf.at/stories/3447215/",
         "requested_url": "https://orf.at/stories/3447215/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "9b69b26113fad8529e57d61c0fe90622abb47487fa1a982cdd97420c6786343c",
-        "fetched_at": 1793815071.652229,
-        "text_sha256": "565bcb23af6382ef1d12cdb8f70db572e82ef9f0972d5114bee8ddbf6cd6ae6c"
+        "fetched_at": 1793845937.882533,
+        "text_sha256": "bfb0bf555c5f3585138650e3d580e347d97837db330d1d2dfe21326788ebb917"
       },
       "publisher": "orf.at"
     },
@@ -2884,7 +3162,7 @@
     "8408fea2a2187a43d4fcb1f3": {
       "id": "8408fea2a2187a43d4fcb1f3",
       "title": "Israels Präsident führt Gespräche zur Regierungsbildung",
-      "text": "Nach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog heute Konsultationen zur Regierungsbildung aufgenommen. Bis morgen Abend kommen Repräsentanten aller Parteien zu Gesprächen in seine Residenz in Jerusalem.\n\n„Ich beabsichtige, offene, freimütige und durchaus kritische Gespräche mit den Vertretern der Fraktionen zu führen“, sagte Herzog nach Erhalt der offiziellen Wahlergebnisse. Dabei werde er auch „schwierige Fragen stellen“.\n\nAngesichts des knappen Wahlausgangs ohne klaren Sieger sagte Herzog: „Ich wünsche mir Originalität und Kreativität, Mut und guten Willen, damit Israel am Ende als Gewinner dasteht.“ Eine Neuwahl will er nach Möglichkeit vermeiden.\n\nStärkste Kraft wurde bei der Wahl am 27. Oktober die rechtskonservative Likud-Partei von Ministerpräsident Benjamin Netanjahu mit 27 von insgesamt 120 Sitzen, gefolgt vom Oppositionsblock von Ex-Militärchef Gadi Eisenkot mit 21 Mandaten.\n\nTraditionell beauftragt der Präsident denjenigen Kandidaten mit der Regierungsbildung, dem er die besten Chancen auf eine parlamentarische Mehrheit einräumt. Das muss nicht automatisch der Vorsitzende der stärksten Partei sein. Nach Medienberichten wird damit gerechnet, dass Eisenkot zuerst den Auftrag erhält, weil er die meisten Empfehlungen erhalten könnte.\n\nDas Zentrale Wahlkomitee hatte das Resultat der Parlamentswahl zuvor in einer Abstimmung gebilligt. Die Prüfung sei abgeschlossen, und es gebe „keine Hinweise auf Unregelmäßigkeiten mit Auswirkungen auf Integrität oder Ergebnis“. Das Komitee habe sämtliche Beschwerden untersucht.\n\nAmit Halevi, Abgeordneter der rechtskonservativen Likud-Partei von Ministerpräsident Benjamin Netanjahu, kündigte daraufhin seinen Rücktritt aus dem Zentralen Wahlkomitee an. Solange schwerwiegende Vorwürfe einer Einmischung ausländischer Staaten nicht ausgeräumt seien, sei das Komitee nicht befugt, die Wahlergebnisse zu bestätigen.\n\nDie Opposition reagierte empört. Eisenkot schrieb auf der Plattform X: „In ihrer Verzweiflung versuchen der Likud und Netanjahu, ein Pogrom gegen die Demokratie und die Rechtsstaatlichkeit anzuzetteln. Sie versuchen, uns alle in eine gefährliche Staatskrise hineinzuziehen.“",
+      "text": "Nach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog gestern Konsultationen zur Regierungsbildung aufgenommen. Bis morgen Abend kommen Repräsentanten aller Parteien zu Gesprächen in seine Residenz in Jerusalem.\n\n„Ich beabsichtige, offene, freimütige und durchaus kritische Gespräche mit den Vertretern der Fraktionen zu führen“, sagte Herzog nach Erhalt der offiziellen Wahlergebnisse. Dabei werde er auch „schwierige Fragen stellen“.\n\nAngesichts des knappen Wahlausgangs ohne klaren Sieger sagte Herzog: „Ich wünsche mir Originalität und Kreativität, Mut und guten Willen, damit Israel am Ende als Gewinner dasteht.“ Eine Neuwahl will er nach Möglichkeit vermeiden.\n\nStärkste Kraft wurde bei der Wahl am 27. Oktober die rechtskonservative Likud-Partei von Ministerpräsident Benjamin Netanjahu mit 27 von insgesamt 120 Sitzen, gefolgt vom Oppositionsblock von Ex-Militärchef Gadi Eisenkot mit 21 Mandaten.\n\nTraditionell beauftragt der Präsident denjenigen Kandidaten mit der Regierungsbildung, dem er die besten Chancen auf eine parlamentarische Mehrheit einräumt. Das muss nicht automatisch der Vorsitzende der stärksten Partei sein. Nach Medienberichten wird damit gerechnet, dass Eisenkot zuerst den Auftrag erhält, weil er die meisten Empfehlungen erhalten könnte.\n\nDas Zentrale Wahlkomitee hatte das Resultat der Parlamentswahl zuvor in einer Abstimmung gebilligt. Die Prüfung sei abgeschlossen, und es gebe „keine Hinweise auf Unregelmäßigkeiten mit Auswirkungen auf Integrität oder Ergebnis“. Das Komitee habe sämtliche Beschwerden untersucht.\n\nAmit Halevi, Abgeordneter der rechtskonservativen Likud-Partei von Ministerpräsident Benjamin Netanjahu, kündigte daraufhin seinen Rücktritt aus dem Zentralen Wahlkomitee an. Solange schwerwiegende Vorwürfe einer Einmischung ausländischer Staaten nicht ausgeräumt seien, sei das Komitee nicht befugt, die Wahlergebnisse zu bestätigen.\n\nDie Opposition reagierte empört. Eisenkot schrieb auf der Plattform X: „In ihrer Verzweiflung versuchen der Likud und Netanjahu, ein Pogrom gegen die Demokratie und die Rechtsstaatlichkeit anzuzetteln. Sie versuchen, uns alle in eine gefährliche Staatskrise hineinzuziehen.“\n\nUnterdessen hat sich eine der beiden großen israelisch-arabischen Parteien hinter Eisenkot gestellt. Die Raam-Fraktion im Parlament habe „beschlossen, Eisenkot für die Bildung der nächsten Regierung zu empfehlen“, erklärte die Partei gestern.",
       "url": "https://orf.at/stories/3447213/",
       "published_at": 1793808853.0,
       "first_seen_at": 1793815071.652229,
@@ -2896,7 +3174,7 @@
       "rss_revision_at": 1793808853.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Nach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog heute Konsultationen zur Regierungsbildung aufgenommen. Bis morgen Abend kommen Repräsentanten aller Parteien zu Gesprächen in seine Residenz in Jerusalem.\n\n„Ich beabsichtige, offene, freimütige und durchaus kritische Gespräche mit den Vertretern der Fraktionen zu führen“, sagte Herzog nach Erhalt der offiziellen Wahlergebnisse. Dabei werde er auch „schwierige Fragen stellen“.\n\nAngesichts des knappen Wahlausgangs ohne klaren Sieger sagte Herzog: „Ich wünsche mir Originalität und Kreativität, Mut und guten Willen, damit Israel am Ende als Gewinner dasteht.“ Eine Neuwahl will er nach Möglichkeit vermeiden.\n\nStärkste Kraft wurde bei der Wahl am 27. Oktober die rechtskonservative Likud-Partei von Ministerpräsident Benjamin Netanjahu mit 27 von insgesamt 120 Sitzen, gefolgt vom Oppositionsblock von Ex-Militärchef Gadi Eisenkot mit 21 Mandaten.\n\nTraditionell beauftragt der Präsident denjenigen Kandidaten mit der Regierungsbildung, dem er die besten Chancen auf eine parlamentarische Mehrheit einräumt. Das muss nicht automatisch der Vorsitzende der stärksten Partei sein. Nach Medienberichten wird damit gerechnet, dass Eisenkot zuerst den Auftrag erhält, weil er die meisten Empfehlungen erhalten könnte.\n\nDas Zentrale Wahlkomitee hatte das Resultat der Parlamentswahl zuvor in einer Abstimmung gebilligt. Die Prüfung sei abgeschlossen, und es gebe „keine Hinweise auf Unregelmäßigkeiten mit Auswirkungen auf Integrität oder Ergebnis“. Das Komitee habe sämtliche Beschwerden untersucht.\n\nAmit Halevi, Abgeordneter der rechtskonservativen Likud-Partei von Ministerpräsident Benjamin Netanjahu, kündigte daraufhin seinen Rücktritt aus dem Zentralen Wahlkomitee an. Solange schwerwiegende Vorwürfe einer Einmischung ausländischer Staaten nicht ausgeräumt seien, sei das Komitee nicht befugt, die Wahlergebnisse zu bestätigen.\n\nDie Opposition reagierte empört. Eisenkot schrieb auf der Plattform X: „In ihrer Verzweiflung versuchen der Likud und Netanjahu, ein Pogrom gegen die Demokratie und die Rechtsstaatlichkeit anzuzetteln. Sie versuchen, uns alle in eine gefährliche Staatskrise hineinzuziehen.“",
+      "article_text": "Nach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog gestern Konsultationen zur Regierungsbildung aufgenommen. Bis morgen Abend kommen Repräsentanten aller Parteien zu Gesprächen in seine Residenz in Jerusalem.\n\n„Ich beabsichtige, offene, freimütige und durchaus kritische Gespräche mit den Vertretern der Fraktionen zu führen“, sagte Herzog nach Erhalt der offiziellen Wahlergebnisse. Dabei werde er auch „schwierige Fragen stellen“.\n\nAngesichts des knappen Wahlausgangs ohne klaren Sieger sagte Herzog: „Ich wünsche mir Originalität und Kreativität, Mut und guten Willen, damit Israel am Ende als Gewinner dasteht.“ Eine Neuwahl will er nach Möglichkeit vermeiden.\n\nStärkste Kraft wurde bei der Wahl am 27. Oktober die rechtskonservative Likud-Partei von Ministerpräsident Benjamin Netanjahu mit 27 von insgesamt 120 Sitzen, gefolgt vom Oppositionsblock von Ex-Militärchef Gadi Eisenkot mit 21 Mandaten.\n\nTraditionell beauftragt der Präsident denjenigen Kandidaten mit der Regierungsbildung, dem er die besten Chancen auf eine parlamentarische Mehrheit einräumt. Das muss nicht automatisch der Vorsitzende der stärksten Partei sein. Nach Medienberichten wird damit gerechnet, dass Eisenkot zuerst den Auftrag erhält, weil er die meisten Empfehlungen erhalten könnte.\n\nDas Zentrale Wahlkomitee hatte das Resultat der Parlamentswahl zuvor in einer Abstimmung gebilligt. Die Prüfung sei abgeschlossen, und es gebe „keine Hinweise auf Unregelmäßigkeiten mit Auswirkungen auf Integrität oder Ergebnis“. Das Komitee habe sämtliche Beschwerden untersucht.\n\nAmit Halevi, Abgeordneter der rechtskonservativen Likud-Partei von Ministerpräsident Benjamin Netanjahu, kündigte daraufhin seinen Rücktritt aus dem Zentralen Wahlkomitee an. Solange schwerwiegende Vorwürfe einer Einmischung ausländischer Staaten nicht ausgeräumt seien, sei das Komitee nicht befugt, die Wahlergebnisse zu bestätigen.\n\nDie Opposition reagierte empört. Eisenkot schrieb auf der Plattform X: „In ihrer Verzweiflung versuchen der Likud und Netanjahu, ein Pogrom gegen die Demokratie und die Rechtsstaatlichkeit anzuzetteln. Sie versuchen, uns alle in eine gefährliche Staatskrise hineinzuziehen.“\n\nUnterdessen hat sich eine der beiden großen israelisch-arabischen Parteien hinter Eisenkot gestellt. Die Raam-Fraktion im Parlament habe „beschlossen, Eisenkot für die Bildung der nächsten Regierung zu empfehlen“, erklärte die Partei gestern.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -2904,10 +3182,10 @@
         "canonical_url": "https://orf.at/stories/3447213/",
         "resolved_url": "https://orf.at/stories/3447213/",
         "requested_url": "https://orf.at/stories/3447213/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "57d876ddcdf5dd4704642bc92a5712386964ea9d2f1e7c3eac8b9b956375b990",
-        "fetched_at": 1793815071.652229,
-        "text_sha256": "3b7f018894c61e668a69b481253c19772049726ff80434519253c070d886e366"
+        "fetched_at": 1793845937.882533,
+        "text_sha256": "b76ecf155d8242ad62bbd8b36eeb3582e93a18021b209c66ad89b37e3c77ebfa"
       },
       "publisher": "orf.at"
     },
@@ -9207,9 +9485,9 @@
         "canonical_url": "https://orf.at/stories/3447148/",
         "resolved_url": "https://orf.at/stories/3447148/",
         "requested_url": "https://orf.at/stories/3447148/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "5fa9c794c819ad0c325ef79f739906f241ab8b03f82a2d520db821aec9e13f4c",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "6b7c370ba54500b9110cd89b12d52d17982330e30f2629c1f425a62515a1ebbb"
       },
       "publisher": "orf.at"
@@ -10039,6 +10317,32 @@
       "text_origin": "rss",
       "publisher": "kleinezeitung.at"
     },
+    "cd8cf0892d69a39b48871ead": {
+      "id": "cd8cf0892d69a39b48871ead",
+      "title": "Wie nutzt ihr euren Wintergarten? Was sind eure besten Tipps?",
+      "text": "Mein Forum: Diskutieren Sie dieses Thema mit der STANDARD-Community",
+      "url": "https://www.derstandard.at/story/3000000347304/wie-nutzt-ihr-euren-wintergarten-was-sind-eure-besten-tipps?ref=rss",
+      "published_at": 1793782800.0,
+      "first_seen_at": 1793845937.882533,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/nb0yrg/rs:fill:150:0/plain/lido-images/2026/11/03/7ee7e7e4-3fa1-4de2-a608-124b7acb824d.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Mein Forum: Diskutieren Sie dieses Thema mit der STANDARD-Community",
+      "rss_revision_at": 1793782800.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "deferred",
+        "rss_fingerprint": "a42d630b637af18deeb0d837b4c9aee6f74639569464a11bf039da7365eb8f20"
+      },
+      "publisher": "derstandard.at"
+    },
     "aea39fcaba165cd244882929": {
       "id": "aea39fcaba165cd244882929",
       "title": "Premiere! Rad-Stars könnten in Kärnten gastieren",
@@ -10192,9 +10496,9 @@
         "canonical_url": "https://orf.at/stories/3447140/",
         "resolved_url": "https://orf.at/stories/3447140/",
         "requested_url": "https://orf.at/stories/3447140/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "dc20c970b4854c0ad7908552de148dc46af1fcc576af599e65ccc03471981fe6",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "e8f2b6cf5400324e3d194f1f44ce8620bf83a26160842e50eea9fcccb86c21d8"
       },
       "publisher": "orf.at"
@@ -10256,9 +10560,9 @@
         "canonical_url": "https://orf.at/stories/3447139/",
         "resolved_url": "https://orf.at/stories/3447139/",
         "requested_url": "https://orf.at/stories/3447139/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "bc93f1a133a96ee62d7bf4a2c0b721e7b971d04340e399dd3bcab01e52888634",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "0513319ce58c5db9646dc301118d7b73a5ed9f0a73d0492681a83af36ffbd4e7"
       },
       "publisher": "orf.at"
@@ -10338,8 +10642,8 @@
       "rss_revision_at": 1793781180.0,
       "content_kind": "news",
       "text_origin": "rss",
-      "broadcast_id": "20261104T153037Z",
-      "broadcast_position": 5,
+      "broadcast_id": "20261104T215704Z",
+      "broadcast_position": 4,
       "publisher": "bmi.gv.at"
     },
     "2b1b13df8a32fc25448de9f5": {
@@ -10426,9 +10730,9 @@
         "canonical_url": "https://orf.at/stories/3447134/",
         "resolved_url": "https://orf.at/stories/3447134/",
         "requested_url": "https://orf.at/stories/3447134/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "b9226aafc5712feffb447e51f3f8d99609e8deeb97aa6acd59207c48d4221c8d",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "e4da48b673a9c328d9c3347a19882d0aec3f12c2b71f7a2da7db48f30ae2a5d9"
       },
       "publisher": "orf.at"
@@ -11078,9 +11382,9 @@
         "canonical_url": "https://orf.at/stories/3447125/",
         "resolved_url": "https://orf.at/stories/3447125/",
         "requested_url": "https://orf.at/stories/3447125/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "3bf99ff36af25928e4e6d4c2cc133fa1f55239ea639c97f93070560dcb3f47ed",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "642068790610e3480679bc81b90de899f9cbace6980627e207fa4917dffd2e5d"
       },
       "publisher": "orf.at"
@@ -11108,9 +11412,9 @@
         "canonical_url": "https://orf.at/stories/3447123/",
         "resolved_url": "https://orf.at/stories/3447123/",
         "requested_url": "https://orf.at/stories/3447123/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "5e46239fa96946c5bbbd950fcd2774e939c2576e6843e7b1ae510b7b24dd1bd2",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "85b8426a30e4237db3ba577e02e24d903569ca3335e6298e3adf37df1384e8d4"
       },
       "publisher": "orf.at"
@@ -11529,9 +11833,9 @@
         "canonical_url": "https://orf.at/stories/3447107/",
         "resolved_url": "https://orf.at/stories/3447107/",
         "requested_url": "https://orf.at/stories/3447107/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "6c0aa63952ff0926120e1e37a200be014f77597f382d1475fa4a916ee0064360",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "d228246457b823b4261192d0e4fc76cb04df6c36378c67934d623d7296297fa5"
       },
       "publisher": "orf.at"
@@ -11559,9 +11863,9 @@
         "canonical_url": "https://orf.at/stories/3447104/",
         "resolved_url": "https://orf.at/stories/3447104/",
         "requested_url": "https://orf.at/stories/3447104/",
-        "last_attempt_at": 1793815071.652229,
+        "last_attempt_at": 1793845937.882533,
         "rss_fingerprint": "b477502579dea9674fa1ff4f94b703c8e7b828a10f6b85b6b3787e5a3e8197b5",
-        "fetched_at": 1793815071.652229,
+        "fetched_at": 1793845937.882533,
         "text_sha256": "bd8e0faa879a29e3166c723e12686d30a629fb3ba0d68e0ebb9798078e41353d"
       },
       "publisher": "orf.at"
@@ -12909,9 +13213,9 @@
         "canonical_url": "https://orf.at/stories/3447087/",
         "resolved_url": "https://orf.at/stories/3447087/",
         "requested_url": "https://orf.at/stories/3447087/",
-        "last_attempt_at": 1793806205.624658,
+        "last_attempt_at": 1793835343.510217,
         "rss_fingerprint": "bd3efeb5ace429f831d7788f3846f0e833ddcc1c9a23c469de47982ac0fe4596",
-        "fetched_at": 1793806205.624658,
+        "fetched_at": 1793835343.510217,
         "text_sha256": "74f3245f25016c0145c987309361c75987b28c8915e51b034d354bb08a584cd9"
       },
       "publisher": "orf.at"
@@ -13676,9 +13980,9 @@
         "canonical_url": "https://orf.at/stories/3447069/",
         "resolved_url": "https://orf.at/stories/3447069/",
         "requested_url": "https://orf.at/stories/3447069/",
-        "last_attempt_at": 1793806205.624658,
+        "last_attempt_at": 1793835343.510217,
         "rss_fingerprint": "824cf791ee6a336c9ace58c6f1a8b4a4801ab29b69752fff50e6259466dd86fd",
-        "fetched_at": 1793806205.624658,
+        "fetched_at": 1793835343.510217,
         "text_sha256": "4ffcc21e5030bcb69fba1c63c3c89030d205a607befae29c8ecf9706a3b4438a"
       },
       "publisher": "orf.at"
@@ -14045,9 +14349,9 @@
         "canonical_url": "https://orf.at/stories/3447071/",
         "resolved_url": "https://orf.at/stories/3447071/",
         "requested_url": "https://orf.at/stories/3447071/",
-        "last_attempt_at": 1793806205.624658,
+        "last_attempt_at": 1793835343.510217,
         "rss_fingerprint": "b690c778603f2af26f490170b39ea5377df6c873927b4e16662a57724206af34",
-        "fetched_at": 1793806205.624658,
+        "fetched_at": 1793835343.510217,
         "text_sha256": "d5dfc94f32dcd32c181fe0ca25eaf835b6e403545bcd5caf09a56f8a6773419e"
       },
       "publisher": "orf.at"
@@ -14521,325 +14825,464 @@
       "content_kind": "news",
       "text_origin": "rss",
       "publisher": "kleinezeitung.at"
-    },
-    "0103d8a5ce5e3b6a2db1fbee": {
-      "id": "0103d8a5ce5e3b6a2db1fbee",
-      "title": "Trump wütet wegen Nachwahlumfrage: „Bullshit!“",
-      "text": "Donald Trump hat nach der Veröffentlichung der Nachwahlbefragung völlig die Fassung verloren. Eine überwältigende Mehrheit der Befragten verpassten ihm einen Denkzettel. In sozialen Netzwerken nannte er die Zahlen „Bullshit“.",
-      "url": "https://www.krone.at/4361171",
-      "published_at": 1793752912.0,
-      "first_seen_at": 1793760093.283775,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4354804/vc068d5/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4354804/vc068d5/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4354804/vc068d5/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4354804/vc068d5/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Donald Trump hat nach der Veröffentlichung der Nachwahlbefragung völlig die Fassung verloren. Eine überwältigende Mehrheit der Befragten verpassten ihm einen Denkzettel. In sozialen Netzwerken nannte er die Zahlen „Bullshit“.",
-      "rss_revision_at": 1793752912.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "krone.at"
-    },
-    "b763af5c53e7d42338354b17": {
-      "id": "b763af5c53e7d42338354b17",
-      "title": "Nordkorea warnt USA vor verschärfter Reaktion",
-      "text": "Nordkorea hat die USA wegen ihrer angeblich anhaltend „feindseligen“ Haltung gegenüber Pjöngjang vor einer verschärften Reaktion gewarnt.\n\nBei der „Umsetzung der feindseligen Politik“ der USA gegen Nordkorea würden derzeit „neue Rekorde“ aufgestellt, zitierte die staatliche Nachrichtenagentur KCNA heute die einflussreiche Schwester von Nordkoreas Machthaber Kim Jong Un, Kim Yo Jong. Da sei es „nur natürlich, dass auch bei unseren entsprechenden Gegenmaßnahmen neue Rekorde erzielt werden“.\n\nKim Yo Jong äußerte sich, nachdem sie bereits zuvor die Anschuldigung der US-Bundespolizei FBI zurückgewiesen hatte, dass Pjöngjang hinter dem bisher größten Diebstahl von Kryptowährungen in der Geschichte stecke. Laut FBI geht der Diebstahl bei der Kryptobörse Binance im Umfang von 6,3 Milliarden Dollar auf das Konto Nordkoreas.\n\nNun legte Kim Yo Jong noch einmal nach. Es sei „offensichtlich, dass der böswillige Versuch der USA, aus diesem Vorfall politischen und strategischen Nutzen zu ziehen, einen politischen Nebeneffekt zur Folge“ habe, sagte sie.\n\nBinance hatte den Hackerangriff am Donnerstag bekanntgegeben. Konkret macht das FBI für den Angriff die Hackergruppe TraderTraitor verantwortlich, diese soll Verbindungen zu Pjöngjangs Geheimdienst haben.",
-      "url": "https://orf.at/stories/3447044/",
-      "published_at": 1793751208.0,
-      "first_seen_at": 1793760093.283775,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1793751208.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_text": "Nordkorea hat die USA wegen ihrer angeblich anhaltend „feindseligen“ Haltung gegenüber Pjöngjang vor einer verschärften Reaktion gewarnt.\n\nBei der „Umsetzung der feindseligen Politik“ der USA gegen Nordkorea würden derzeit „neue Rekorde“ aufgestellt, zitierte die staatliche Nachrichtenagentur KCNA heute die einflussreiche Schwester von Nordkoreas Machthaber Kim Jong Un, Kim Yo Jong. Da sei es „nur natürlich, dass auch bei unseren entsprechenden Gegenmaßnahmen neue Rekorde erzielt werden“.\n\nKim Yo Jong äußerte sich, nachdem sie bereits zuvor die Anschuldigung der US-Bundespolizei FBI zurückgewiesen hatte, dass Pjöngjang hinter dem bisher größten Diebstahl von Kryptowährungen in der Geschichte stecke. Laut FBI geht der Diebstahl bei der Kryptobörse Binance im Umfang von 6,3 Milliarden Dollar auf das Konto Nordkoreas.\n\nNun legte Kim Yo Jong noch einmal nach. Es sei „offensichtlich, dass der böswillige Versuch der USA, aus diesem Vorfall politischen und strategischen Nutzen zu ziehen, einen politischen Nebeneffekt zur Folge“ habe, sagte sie.\n\nBinance hatte den Hackerangriff am Donnerstag bekanntgegeben. Konkret macht das FBI für den Angriff die Hackergruppe TraderTraitor verantwortlich, diese soll Verbindungen zu Pjöngjangs Geheimdienst haben.",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "Nordkorea warnt USA vor verschärfter Reaktion",
-        "canonical_url": "https://orf.at/stories/3447044/",
-        "resolved_url": "https://orf.at/stories/3447044/",
-        "requested_url": "https://orf.at/stories/3447044/",
-        "last_attempt_at": 1793815071.652229,
-        "rss_fingerprint": "ae35ea123d4996bf0c1cec399517692632e7c3ae70312af8348c6bf90218c9ba",
-        "fetched_at": 1793815071.652229,
-        "text_sha256": "67de22f7d7c8491043a956a36059dba1aa5e67877886eada4c7f71a276151cea"
-      },
-      "publisher": "orf.at"
-    },
-    "521f69bd3220bd4abad9ea96": {
-      "id": "521f69bd3220bd4abad9ea96",
-      "title": "Sleaford Mods: Die Extra-Zwiebel auf dem Burger",
-      "text": "Drei Jahre nach ihrem letzten Stelldichein in Wien geigten die Nottinghamer Postpunk-Spoken-Word-Proleten Sleaford Mods Dienstagabend in der Wiener Arena auf. Eineinhalb Stunden drehten Jason Williamson und Andrew Fearn die englische Regierung, Korruption und Lobbyisten durch den kulturellen Fleischwolf und bewiesen eindrucksvoll – das Simple kann oft die größte Kraft entfachen.",
-      "url": "https://www.krone.at/4360794",
-      "published_at": 1793748826.0,
-      "first_seen_at": 1793760093.283775,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4361162/ve3a2a9/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4361162/ve3a2a9/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4361162/ve3a2a9/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4361162/ve3a2a9/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Drei Jahre nach ihrem letzten Stelldichein in Wien geigten die Nottinghamer Postpunk-Spoken-Word-Proleten Sleaford Mods Dienstagabend in der Wiener Arena auf. Eineinhalb Stunden drehten Jason Williamson und Andrew Fearn die englische Regierung, Korruption und Lobbyisten durch den kulturellen Fleischwolf und bewiesen eindrucksvoll – das Simple kann oft die größte Kraft entfachen.",
-      "rss_revision_at": 1793748826.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "krone.at"
-    },
-    "896a271586479f2be70f11ec": {
-      "id": "896a271586479f2be70f11ec",
-      "title": "Standardrätsel L 11434",
-      "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
-      "url": "https://www.derstandard.at/story/3000000346410/standardraetsel-l-11434?ref=rss",
-      "published_at": 1793746860.0,
-      "first_seen_at": 1793748521.847108,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/eqM6Eg/rs:fill:150:0/plain/lido-images/2023/05/19/17b073a2-2297-406c-a459-faf4e5a469ef.png",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
-      "rss_revision_at": 1793746860.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "article_fetch": {
-        "status": "deferred",
-        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000346410/standardraetsel-l-11434?ref=rss",
-        "requested_url": "https://www.derstandard.at/story/3000000346410/standardraetsel-l-11434?ref=rss",
-        "last_attempt_at": 1793748521.847108,
-        "rss_fingerprint": "d03098e950fc27b152ddcff8ddb99222bf5baa8224f9ba59e00c6da3234304a9"
-      },
-      "broadcast_id": "20261103T232912Z",
-      "broadcast_position": 1,
-      "publisher": "derstandard.at"
-    },
-    "204570f8ea8ce6323796fc66": {
-      "id": "204570f8ea8ce6323796fc66",
-      "title": "Vorwurf des Landesverrats gegen Selenskyjs Ex-Sprecherin",
-      "text": "Nach Kritik an Präsident Wolodymyr Selenskyj werfen ukrainische Behörden seiner Ex-Pressesprecherin, Julia Mendel, Landesverrat vor. Sie betreibe „Informations- und Sabotageaktivitäten gegen die Ukraine“, teilte der Selenskyj unterstellte Geheimdienst SBU gestern mit.\n\nNach einer Analyse ihrer öffentlichen Auftritte und Äußerungen seien die Staatsanwaltschaft und der SBU zu dem Schluss gekommen, dass Mendel das „Kreml-Regime“ und den russischen Krieg gegen die Ukraine rechtfertige.\n\nDie Staatsanwaltschaft begründete den Verdacht unter anderem mit einem Interview Mendels mit dem früheren Fox-News-Moderator und Blogger Tucker Carlson. Aussagen wie „Ich glaube, dass die Ukraine kurz vor dem Verschwinden ist“ und „Sehen Sie, meine Nation degradiert“ seien von der russischen Propaganda verwendet worden. Zudem habe sie die Verbote in der heutigen Ukraine mit denen in der Sowjetunion verglichen.\n\nMit Mendels Äußerungen solle international der Eindruck erweckt werden, dass die Ukraine keine weitere Unterstützung verdiene und die ukrainische Führung ein Hindernis für Frieden darstelle, hieß es.\n\nMendel wies den Vorwurf einer Tätigkeit im Interesse Russlands umgehend zurück. „Grund für diesen Verdacht waren meine öffentlichen Äußerungen in westlichen Medien und meine Beiträge in sozialen Netzwerken – insbesondere jene, die sich auf die Aufdeckung von Korruption im Umfeld von Selenskyj, die fehlende Meinungsfreiheit und politische Verfolgungen bezogen“, schrieb sie auf Facebook.",
-      "url": "https://orf.at/stories/3447032/",
-      "published_at": 1793746061.0,
-      "first_seen_at": 1793748521.847108,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1793746061.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_text": "Nach Kritik an Präsident Wolodymyr Selenskyj werfen ukrainische Behörden seiner Ex-Pressesprecherin, Julia Mendel, Landesverrat vor. Sie betreibe „Informations- und Sabotageaktivitäten gegen die Ukraine“, teilte der Selenskyj unterstellte Geheimdienst SBU gestern mit.\n\nNach einer Analyse ihrer öffentlichen Auftritte und Äußerungen seien die Staatsanwaltschaft und der SBU zu dem Schluss gekommen, dass Mendel das „Kreml-Regime“ und den russischen Krieg gegen die Ukraine rechtfertige.\n\nDie Staatsanwaltschaft begründete den Verdacht unter anderem mit einem Interview Mendels mit dem früheren Fox-News-Moderator und Blogger Tucker Carlson. Aussagen wie „Ich glaube, dass die Ukraine kurz vor dem Verschwinden ist“ und „Sehen Sie, meine Nation degradiert“ seien von der russischen Propaganda verwendet worden. Zudem habe sie die Verbote in der heutigen Ukraine mit denen in der Sowjetunion verglichen.\n\nMit Mendels Äußerungen solle international der Eindruck erweckt werden, dass die Ukraine keine weitere Unterstützung verdiene und die ukrainische Führung ein Hindernis für Frieden darstelle, hieß es.\n\nMendel wies den Vorwurf einer Tätigkeit im Interesse Russlands umgehend zurück. „Grund für diesen Verdacht waren meine öffentlichen Äußerungen in westlichen Medien und meine Beiträge in sozialen Netzwerken – insbesondere jene, die sich auf die Aufdeckung von Korruption im Umfeld von Selenskyj, die fehlende Meinungsfreiheit und politische Verfolgungen bezogen“, schrieb sie auf Facebook.",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "Vorwurf des Landesverrats gegen Selenskyjs Ex-Sprecherin",
-        "canonical_url": "https://orf.at/stories/3447032/",
-        "resolved_url": "https://orf.at/stories/3447032/",
-        "requested_url": "https://orf.at/stories/3447032/",
-        "last_attempt_at": 1793806205.624658,
-        "rss_fingerprint": "754bbe5505ecce1ebcba2ac6b1ff37daa640f11f66271481382db4cfc2291a5a",
-        "fetched_at": 1793806205.624658,
-        "text_sha256": "b92745203323345c78361a683e32db7ab406b51a7aff0edc3c280f7e32458d65"
-      },
-      "broadcast_id": "20261103T232912Z",
-      "broadcast_position": 2,
-      "publisher": "orf.at"
-    },
-    "d3cc9e5b4832e0cde243427d": {
-      "id": "d3cc9e5b4832e0cde243427d",
-      "title": "Zug-Drama: Spaniens Verkehrsminister tritt zurück",
-      "text": "Knapp eine Woche nach dem Zugunglück mit 69 Toten in Spanien hat Verkehrsminister Óscar Puente seinen Rücktritt erklärt. Dieser Schritt war von allen Oppositionsparteien gefordert worden und kam trotzdem überraschend, denn er war von Puente und auch von Ministerpräsident Pedro Sánchez in den vergangenen Tagen mehrfach ausgeschlossen worden.",
-      "url": "https://www.krone.at/4361135",
-      "published_at": 1793745966.0,
-      "first_seen_at": 1793748521.847108,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4361145/v6676e2/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4361145/v6676e2/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4361145/v6676e2/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4361145/v6676e2/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Knapp eine Woche nach dem Zugunglück mit 69 Toten in Spanien hat Verkehrsminister Óscar Puente seinen Rücktritt erklärt. Dieser Schritt war von allen Oppositionsparteien gefordert worden und kam trotzdem überraschend, denn er war von Puente und auch von Ministerpräsident Pedro Sánchez in den vergangenen Tagen mehrfach ausgeschlossen worden.",
-      "rss_revision_at": 1793745966.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "broadcast_id": "20261103T232912Z",
-      "broadcast_position": 3,
-      "publisher": "krone.at"
-    },
-    "38349e54f92fb37ffa286a19": {
-      "id": "38349e54f92fb37ffa286a19",
-      "title": "Horvath: „Wahnsinn, dass ich das sagen muss“",
-      "text": "LASK-Kapitän Sascha Horvath hat bei allem Jubel über den klaren 4:0-Sieg in der Champions League gegen Slovan Bratislava auch ein kleines Manko gefunden. Wenngleich an diesem Abend mit einem breiten Grisen im Gesicht.",
-      "url": "https://www.krone.at/4361118",
-      "published_at": 1793745197.0,
-      "first_seen_at": 1793745365.77206,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4361157/v550171/630x356",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4361157/v550171/630x356",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4361157/v550171/630x356",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4361157/v550171/630x356",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "LASK-Kapitän Sascha Horvath hat bei allem Jubel über den klaren 4:0-Sieg in der Champions League gegen Slovan Bratislava auch ein kleines Manko gefunden. Wenngleich an diesem Abend mit einem breiten Grisen im Gesicht.",
-      "rss_revision_at": 1793746228.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "krone.at"
-    },
-    "13bb28ef29d0e38b3dc3ceb9": {
-      "id": "13bb28ef29d0e38b3dc3ceb9",
-      "title": "Manchester United dreht 0:2 gegen Roma, Laimer trifft bei Bayern-Sieg",
-      "text": "PSG stellte beim 6:0 über Villarreal einen Rekord auf, ÖFB-Legionär Spalt gab für Stuttgart sein CL-Debüt",
-      "url": "https://www.derstandard.at/story/3000000347389/fu223ball-psg-stellte-bei-60-sieg-bei-villarreal-neuen-cl-rekord-auf?ref=rss",
-      "published_at": 1793744872.0,
-      "first_seen_at": 1793745365.77206,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/OkaC_A/rs:fill:150:0/plain/lido-images/2026/11/03/f4bd5c24-3ce3-4106-a801-1d57cfed811b.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "PSG stellte beim 6:0 über Villarreal einen Rekord auf, ÖFB-Legionär Spalt gab für Stuttgart sein CL-Debüt",
-      "rss_revision_at": 1793744872.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "article_fetch": {
-        "status": "deferred",
-        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347389/fu223ball-psg-stellte-bei-60-sieg-bei-villarreal-neuen-cl-rekord-auf?ref=rss",
-        "requested_url": "https://www.derstandard.at/story/3000000347389/fu223ball-psg-stellte-bei-60-sieg-bei-villarreal-neuen-cl-rekord-auf?ref=rss",
-        "last_attempt_at": 1793745365.77206,
-        "rss_fingerprint": "bdbc0fb65e3388e84fb1e8a80f759da5baccb8d49a35b4bf0da32d868fe3fdf4"
-      },
-      "publisher": "derstandard.at"
-    },
-    "1dc1793ed377d865a2370f1c": {
-      "id": "1dc1793ed377d865a2370f1c",
-      "title": "Trump verteidigt Iran-Krieg und droht Demokraten",
-      "text": "Donald Trump und seine Republikaner haben bei den US-Zwischenwahlen eine krachende Niederlage kassiert. Die Demokraten haben die Mehrheit in beiden Kammern des US-Kongresses zurückerobert. Für den US-Präsidenten bedeutet das künftig Gegenwind an fast allen Fronten – sogar von seinem eigenen Vizepräsidenten. Doch der 80-Jährige zeigt sich davon wenig beeindruckt. Der Ticker zum Nachlesen.",
-      "url": "https://www.krone.at/4358922",
-      "published_at": 1793744842.0,
-      "first_seen_at": 1793745365.77206,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4362622/v350747/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4362622/v350747/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4362622/v350747/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4362622/v350747/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Donald Trump und seine Republikaner haben bei den US-Zwischenwahlen eine krachende Niederlage kassiert. Die Demokraten haben die Mehrheit in beiden Kammern des US-Kongresses zurückerobert. Für den US-Präsidenten bedeutet das künftig Gegenwind an fast allen Fronten – sogar von seinem eigenen Vizepräsidenten. Doch der 80-Jährige zeigt sich davon wenig beeindruckt. Der Ticker zum Nachlesen.",
-      "rss_revision_at": 1793822721.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "krone.at"
-    },
-    "09afc7df23a0ae033484cfb7": {
-      "id": "09afc7df23a0ae033484cfb7",
-      "title": "LASK schießt sich mit 4:0 gegen Slovan in die Aufstiegszone der Champions League",
-      "text": "Die Linzer liegen mit sechs Punkten in der Ligaphase gut im Rennen um einem Platz im Playoff. Schon zur Pause war die Partie gegen ein schwaches Bratislava entschieden",
-      "url": "https://www.derstandard.at/story/3000000347388/fu223ball-lask-nach-40-gegen-slovan-mittendrin-im-cl-aufstiegsrennen?ref=rss",
-      "published_at": 1793743614.0,
-      "first_seen_at": 1793745365.77206,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/jpuSxQ/rs:fill:150:0/plain/lido-images/2026/11/03/f6b4bce2-08dc-458a-8dbd-1e4d65f85f57.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Die Linzer liegen mit sechs Punkten in der Ligaphase gut im Rennen um einem Platz im Playoff. Schon zur Pause war die Partie gegen ein schwaches Bratislava entschieden",
-      "rss_revision_at": 1793743614.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "derstandard.at"
     }
   },
   "groups": [
+    {
+      "id": "97ddc16951e1f4566a00fce6",
+      "member_ids": [
+        "d4c40c620528430673bc055c"
+      ],
+      "newest_at": 1793833380.0,
+      "draft": {
+        "headline": "Zulagen für Gewerkschafter: Ermittlungen eingeleitet",
+        "headline_source_id": "d4c40c620528430673bc055c",
+        "claims": [
+          {
+            "text": "Die Staatsanwaltschaft Wien hat Ermittlungen in der Causa rund um die Auszahlungen von Zulagen an freigestellte Personalvertreterinnen und Personalvertreter im öffentlichen Dienst aufgenommen.",
+            "source_id": "d4c40c620528430673bc055c",
+            "field": "text",
+            "quote": "Die Staatsanwaltschaft Wien hat Ermittlungen in der Causa rund um die Auszahlungen von Zulagen an freigestellte Personalvertreterinnen und Personalvertreter im öffentlichen Dienst aufgenommen."
+          },
+          {
+            "text": "Wie die ZIB2 gestern berichtete, wurden die Ermittlungen nach dem Eingang einer anonymen Anzeige mit den Vorwürfen der Untreue und des Amtsmissbrauchs eingeleitet.",
+            "source_id": "d4c40c620528430673bc055c",
+            "field": "text",
+            "quote": "Wie die ZIB2 gestern berichtete, wurden die Ermittlungen nach dem Eingang einer anonymen Anzeige mit den Vorwürfen der Untreue und des Amtsmissbrauchs eingeleitet."
+          }
+        ],
+        "text": "Zulagen für Gewerkschafter: Ermittlungen eingeleitet.\nDie Staatsanwaltschaft Wien hat Ermittlungen in der Causa rund um die Auszahlungen von Zulagen an freigestellte Personalvertreterinnen und Personalvertreter im öffentlichen Dienst aufgenommen. Wie die ZIB2 gestern berichtete, wurden die Ermittlungen nach dem Eingang einer anonymen Anzeige mit den Vorwürfen der Untreue und des Amtsmissbrauchs eingeleitet.\nQuelle: orf.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "d4c40c620528430673bc055c",
+            "supported": true,
+            "quote": "Die Staatsanwaltschaft Wien hat Ermittlungen in der Causa rund um die Auszahlungen von Zulagen an freigestellte Personalvertreterinnen und Personalvertreter im öffentlichen Dienst aufgenommen."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "d4c40c620528430673bc055c",
+            "supported": true,
+            "quote": "Wie die ZIB2 gestern berichtete, wurden die Ermittlungen nach dem Eingang einer anonymen Anzeige mit den Vorwürfen der Untreue und des Amtsmissbrauchs eingeleitet."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "d4c40c620528430673bc055c"
+      ]
+    },
+    {
+      "id": "82568a21c3a81e10df055cdc",
+      "member_ids": [
+        "569b4e16fced89599d136c46"
+      ],
+      "newest_at": 1793833260.0,
+      "draft": {
+        "headline": "Standardrätsel J 11435",
+        "headline_source_id": "569b4e16fced89599d136c46",
+        "claims": [
+          {
+            "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.",
+            "source_id": "569b4e16fced89599d136c46",
+            "field": "text",
+            "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
+          }
+        ],
+        "text": "Standardrätsel J 11435.\nTäglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.\nQuelle: derstandard.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "569b4e16fced89599d136c46",
+            "supported": true,
+            "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "569b4e16fced89599d136c46"
+      ]
+    },
+    {
+      "id": "70700abed6cb499f9df5213c",
+      "member_ids": [
+        "7f3a76b600ff4c8ba29a2fdd"
+      ],
+      "newest_at": 1793831586.0,
+      "draft": {
+        "headline": "„Luca“ kennt Stocker nicht: „Müssen da noch …“",
+        "headline_source_id": "7f3a76b600ff4c8ba29a2fdd",
+        "claims": [
+          {
+            "text": "Im Rahmen der China-Reise von Bundeskanzler Christian Stocker hat die österreichische Delegation in Shanghai auch eine Vorführung des großen Roboter-Herstellers Agibot bekommen.",
+            "source_id": "7f3a76b600ff4c8ba29a2fdd",
+            "field": "text",
+            "quote": "Im Rahmen der China-Reise von Bundeskanzler Christian Stocker hat die österreichische Delegation in Shanghai auch eine Vorführung des großen Roboter-Herstellers Agibot bekommen."
+          },
+          {
+            "text": "Das Highlight: „Luca“, 1,69 Meter groß und kundig sowohl der deutschen Sprache als auch des Tanzens.",
+            "source_id": "7f3a76b600ff4c8ba29a2fdd",
+            "field": "text",
+            "quote": "Das Highlight: „Luca“, 1,69 Meter groß und kundig sowohl der deutschen Sprache als auch des Tanzens."
+          }
+        ],
+        "text": "„Luca“ kennt Stocker nicht: „Müssen da noch …“.\nIm Rahmen der China-Reise von Bundeskanzler Christian Stocker hat die österreichische Delegation in Shanghai auch eine Vorführung des großen Roboter-Herstellers Agibot bekommen. Das Highlight: „Luca“, 1,69 Meter groß und kundig sowohl der deutschen Sprache als auch des Tanzens.\nQuelle: krone.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "7f3a76b600ff4c8ba29a2fdd",
+            "supported": true,
+            "quote": "Im Rahmen der China-Reise von Bundeskanzler Christian Stocker hat die österreichische Delegation in Shanghai auch eine Vorführung des großen Roboter-Herstellers Agibot bekommen."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "7f3a76b600ff4c8ba29a2fdd",
+            "supported": true,
+            "quote": "Das Highlight: „Luca“, 1,69 Meter groß und kundig sowohl der deutschen Sprache als auch des Tanzens."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "7f3a76b600ff4c8ba29a2fdd"
+      ]
+    },
+    {
+      "id": "bc58879a20cf1b2293c5a121",
+      "member_ids": [
+        "01c4e937c8236399fee0c16c"
+      ],
+      "newest_at": 1793831576.0,
+      "draft": {
+        "headline": "Mehr Kontrolle für Demokraten über Trump",
+        "headline_source_id": "01c4e937c8236399fee0c16c",
+        "claims": [
+          {
+            "text": "Der Verlust der Mehrheiten im Kongress ist eine herbe Niederlage für US-Präsident Donald Trump.",
+            "source_id": "01c4e937c8236399fee0c16c",
+            "field": "text",
+            "quote": "Der Verlust der Mehrheiten im Kongress ist eine herbe Niederlage für US-Präsident Donald Trump."
+          },
+          {
+            "text": "Künftig muss Trump damit rechnen, dass sein Handeln stärker kontrolliert wird.",
+            "source_id": "01c4e937c8236399fee0c16c",
+            "field": "text",
+            "quote": "Künftig muss Trump damit rechnen, dass sein Handeln stärker kontrolliert wird."
+          }
+        ],
+        "text": "Mehr Kontrolle für Demokraten über Trump.\nDer Verlust der Mehrheiten im Kongress ist eine herbe Niederlage für US-Präsident Donald Trump. Künftig muss Trump damit rechnen, dass sein Handeln stärker kontrolliert wird.\nQuelle: orf.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "01c4e937c8236399fee0c16c",
+            "supported": true,
+            "quote": "Der Verlust der Mehrheiten im Kongress ist eine herbe Niederlage für US-Präsident Donald Trump."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "01c4e937c8236399fee0c16c",
+            "supported": true,
+            "quote": "Künftig muss Trump damit rechnen, dass sein Handeln stärker kontrolliert wird."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "01c4e937c8236399fee0c16c"
+      ]
+    },
+    {
+      "id": "b8ef1f62b0148f95cc5b96df",
+      "member_ids": [
+        "742235645c3da70b09613baa"
+      ],
+      "newest_at": 1793831267.0,
+      "draft": {
+        "headline": "Repräsentantenhaus: Demokrat Jeffries will Sprecher werden",
+        "headline_source_id": "742235645c3da70b09613baa",
+        "claims": [
+          {
+            "text": "Einen Tag nach der US-Zwischenwahl, hat sich der prominente Demokrat Hakeem Jeffries für den Topjob als Sprecher des Repräsentantenhauses in Stellung gebracht.",
+            "source_id": "742235645c3da70b09613baa",
+            "field": "text",
+            "quote": "Einen Tag nach der US-Zwischenwahl, hat sich der prominente Demokrat Hakeem Jeffries für den Topjob als Sprecher des Repräsentantenhauses in Stellung gebracht."
+          },
+          {
+            "text": "Nach dem Sieg der Demokraten erklärte er gestern seine Kandidatur.",
+            "source_id": "742235645c3da70b09613baa",
+            "field": "text",
+            "quote": "Nach dem Sieg der Demokraten erklärte er gestern seine Kandidatur."
+          }
+        ],
+        "text": "Repräsentantenhaus: Demokrat Jeffries will Sprecher werden.\nEinen Tag nach der US-Zwischenwahl, hat sich der prominente Demokrat Hakeem Jeffries für den Topjob als Sprecher des Repräsentantenhauses in Stellung gebracht. Nach dem Sieg der Demokraten erklärte er gestern seine Kandidatur.\nQuelle: orf.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "742235645c3da70b09613baa",
+            "supported": true,
+            "quote": "Einen Tag nach der US-Zwischenwahl, hat sich der prominente Demokrat Hakeem Jeffries für den Topjob als Sprecher des Repräsentantenhauses in Stellung gebracht."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "742235645c3da70b09613baa",
+            "supported": true,
+            "quote": "Nach dem Sieg der Demokraten erklärte er gestern seine Kandidatur."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "742235645c3da70b09613baa"
+      ]
+    },
+    {
+      "id": "997fcad24ed0705886f57e18",
+      "member_ids": [
+        "116501651b5be303af0df9c9"
+      ],
+      "newest_at": 1793831251.0,
+      "draft": {
+        "headline": "CL-Siege für Real, ManCity, BVB, Arsenal – Como gewann 9:1",
+        "headline_source_id": "116501651b5be303af0df9c9",
+        "claims": [
+          {
+            "text": "Liverpool verlor überraschend bei Fenerbahce.",
+            "source_id": "116501651b5be303af0df9c9",
+            "field": "text",
+            "quote": "Liverpool verlor überraschend bei Fenerbahce."
+          },
+          {
+            "text": "Haaland schoss City bei Baumgartners Startelf-Comeback in Leipzig zum Erfolg.",
+            "source_id": "116501651b5be303af0df9c9",
+            "field": "text",
+            "quote": "Haaland schoss City bei Baumgartners Startelf-Comeback in Leipzig zum Erfolg."
+          }
+        ],
+        "text": "CL-Siege für Real, ManCity, BVB, Arsenal – Como gewann 9:1.\nLiverpool verlor überraschend bei Fenerbahce. Haaland schoss City bei Baumgartners Startelf-Comeback in Leipzig zum Erfolg.\nQuelle: derstandard.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "116501651b5be303af0df9c9",
+            "supported": true,
+            "quote": "Liverpool verlor überraschend bei Fenerbahce."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "116501651b5be303af0df9c9",
+            "supported": true,
+            "quote": "Haaland schoss City bei Baumgartners Startelf-Comeback in Leipzig zum Erfolg."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "116501651b5be303af0df9c9"
+      ]
+    },
+    {
+      "id": "cb78f63a296a40221644f426",
+      "member_ids": [
+        "2c0508763af09d070b0d4bd4"
+      ],
+      "newest_at": 1793830617.0,
+      "draft": {
+        "headline": "Trump hat jetzt überhaupt nichts mehr zu verlieren",
+        "headline_source_id": "2c0508763af09d070b0d4bd4",
+        "claims": [
+          {
+            "text": "Die Midterm-Wahlen in den USA endeten mit einer deutlichen Pleite für den Präsidenten.",
+            "source_id": "2c0508763af09d070b0d4bd4",
+            "field": "text",
+            "quote": "Die Midterm-Wahlen in den USA endeten mit einer deutlichen Pleite für den Präsidenten."
+          },
+          {
+            "text": "Donald Trump lobte danach die Demokraten, möchte Gesetze per Veto verhindern – und kann weiter Kriege führen.",
+            "source_id": "2c0508763af09d070b0d4bd4",
+            "field": "text",
+            "quote": "Donald Trump lobte danach die Demokraten, möchte Gesetze per Veto verhindern – und kann weiter Kriege führen."
+          }
+        ],
+        "text": "Trump hat jetzt überhaupt nichts mehr zu verlieren.\nDie Midterm-Wahlen in den USA endeten mit einer deutlichen Pleite für den Präsidenten. Donald Trump lobte danach die Demokraten, möchte Gesetze per Veto verhindern – und kann weiter Kriege führen.\nQuelle: krone.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "2c0508763af09d070b0d4bd4",
+            "supported": true,
+            "quote": "Die Midterm-Wahlen in den USA endeten mit einer deutlichen Pleite für den Präsidenten."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "2c0508763af09d070b0d4bd4",
+            "supported": true,
+            "quote": "Donald Trump lobte danach die Demokraten, möchte Gesetze per Veto verhindern – und kann weiter Kriege führen."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "2c0508763af09d070b0d4bd4"
+      ]
+    },
+    {
+      "id": "0b86a5ef92c50ae40bc25f8b",
+      "member_ids": [
+        "4932bd24bc2671b92f4993cc",
+        "30163d3fd4f94825f0325901",
+        "5a388bff631710acc4670336"
+      ],
+      "newest_at": 1793830174.0,
+      "draft": {
+        "headline": "Hubert Aiwanger ist tot",
+        "headline_source_id": "4932bd24bc2671b92f4993cc",
+        "claims": [
+          {
+            "text": "Der bayrische Vizeministerpräsident und Freie-Wähler-Chef Hubert Aiwanger ist überraschend gestorben.",
+            "source_id": "4932bd24bc2671b92f4993cc",
+            "field": "text",
+            "quote": "Der bayrische Vizeministerpräsident und Freie-Wähler-Chef Hubert Aiwanger ist überraschend gestorben."
+          },
+          {
+            "text": "Der Chef der Partei \"Freie Wähler\" und bayerischer Wirtschaftsminister Hubert Aiwanger wurde tot in einem Berliner Hotel gefunden.",
+            "source_id": "30163d3fd4f94825f0325901",
+            "field": "text",
+            "quote": "Der Chef der Partei \"Freie Wähler\" und bayerischer Wirtschaftsminister Hubert Aiwanger wurde tot in einem Berliner Hotel gefunden."
+          }
+        ],
+        "text": "Hubert Aiwanger ist tot.\nDer bayrische Vizeministerpräsident und Freie-Wähler-Chef Hubert Aiwanger ist überraschend gestorben. Der Chef der Partei \"Freie Wähler\" und bayerischer Wirtschaftsminister Hubert Aiwanger wurde tot in einem Berliner Hotel gefunden.\nQuellen: orf.at, derstandard.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "4932bd24bc2671b92f4993cc",
+            "supported": true,
+            "quote": "Der bayrische Vizeministerpräsident und Freie-Wähler-Chef Hubert Aiwanger ist überraschend gestorben."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "30163d3fd4f94825f0325901",
+            "supported": true,
+            "quote": "Der Chef der Partei \"Freie Wähler\" und bayerischer Wirtschaftsminister Hubert Aiwanger wurde tot in einem Berliner Hotel gefunden."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "30163d3fd4f94825f0325901",
+        "4932bd24bc2671b92f4993cc"
+      ]
+    },
     {
       "id": "fa0dd76b903a8ad6eee1ea77",
       "member_ids": [
@@ -14893,7 +15336,7 @@
           "issues": []
         }
       ],
-      "selected": true,
+      "selected": false,
       "used_source_ids": [
         "c79597b6e0b56b7e79fdb010"
       ]
@@ -14951,7 +15394,7 @@
           "issues": []
         }
       ],
-      "selected": true,
+      "selected": false,
       "used_source_ids": [
         "f9ef9b4fbbf10505241daafd"
       ]
@@ -15070,66 +15513,6 @@
       "selected": false,
       "used_source_ids": [
         "1db3ba743bb55ae5c9cfbcf9"
-      ]
-    },
-    {
-      "id": "7169dfa864f3ada63e3c038e",
-      "member_ids": [
-        "30163d3fd4f94825f0325901",
-        "5a388bff631710acc4670336"
-      ],
-      "newest_at": 1793825388.0,
-      "draft": {
-        "headline": "Bayerischer Wirtschaftsminister Hubert Aiwanger ist tot",
-        "headline_source_id": "30163d3fd4f94825f0325901",
-        "claims": [
-          {
-            "text": "Der Chef der Partei \"Freie Wähler\" und bayerischer Wirtschaftsminister Hubert Aiwanger wurde tot in einem Berliner Hotel gefunden.",
-            "source_id": "30163d3fd4f94825f0325901",
-            "field": "text",
-            "quote": "Der Chef der Partei \"Freie Wähler\" und bayerischer Wirtschaftsminister Hubert Aiwanger wurde tot in einem Berliner Hotel gefunden."
-          },
-          {
-            "text": "Der bayrische Wirtschaftsminister und Vizeministerpräsident Hubert Aiwanger (Freie Wähler) ist tot.",
-            "source_id": "5a388bff631710acc4670336",
-            "field": "text",
-            "quote": "Der bayrische Wirtschaftsminister und Vizeministerpräsident Hubert Aiwanger (Freie Wähler) ist tot."
-          }
-        ],
-        "text": "Bayerischer Wirtschaftsminister Hubert Aiwanger ist tot.\nDer Chef der Partei \"Freie Wähler\" und bayerischer Wirtschaftsminister Hubert Aiwanger wurde tot in einem Berliner Hotel gefunden. Der bayrische Wirtschaftsminister und Vizeministerpräsident Hubert Aiwanger (Freie Wähler) ist tot.\nQuellen: derstandard.at, orf.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "30163d3fd4f94825f0325901",
-            "supported": true,
-            "quote": "Der Chef der Partei \"Freie Wähler\" und bayerischer Wirtschaftsminister Hubert Aiwanger wurde tot in einem Berliner Hotel gefunden."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "5a388bff631710acc4670336",
-            "supported": true,
-            "quote": "Der bayrische Wirtschaftsminister und Vizeministerpräsident Hubert Aiwanger (Freie Wähler) ist tot."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": true,
-      "used_source_ids": [
-        "30163d3fd4f94825f0325901",
-        "5a388bff631710acc4670336"
       ]
     },
     {
@@ -16529,17 +16912,23 @@
       ],
       "newest_at": 1793818198.0,
       "draft": {
-        "headline": "Die Gewinnzahlen bei Lotto „6 aus 45“",
+        "headline": "Dreifachjackpot bei Lotto „6 aus 45“",
         "headline_source_id": "7f3fee8d35704c67330e3615",
         "claims": [
           {
-            "text": "Bei der heutigen Ziehung bei Lotto „6 aus 45“ wurden folgende Gewinnzahlen ermittelt: 7 13 15 29 43 44/Zusatzzahl: 22 Die aktuellen LottoPlus-Zahlen lauten: 12 17 24 27 31 41 Zweite Ziehung: 4 10 16 30 35 40 Die aktuelle Joker-Zahl lautet: 4 8 9 7 3 7 Alle Angaben ohne Gewähr.",
+            "text": "Bei der gestrigen Ziehung von Lotto „6 aus 45“ hat niemand auf die sechs Richtigen getippt.",
             "source_id": "7f3fee8d35704c67330e3615",
             "field": "text",
-            "quote": "Bei der heutigen Ziehung bei Lotto „6 aus 45“ wurden folgende Gewinnzahlen ermittelt: 7 13 15 29 43 44/Zusatzzahl: 22 Die aktuellen LottoPlus-Zahlen lauten: 12 17 24 27 31 41 Zweite Ziehung: 4 10 16 30 35 40 Die aktuelle Joker-Zahl lautet: 4 8 9 7 3 7 Alle Angaben ohne Gewähr."
+            "quote": "Bei der gestrigen Ziehung von Lotto „6 aus 45“ hat niemand auf die sechs Richtigen getippt."
+          },
+          {
+            "text": "Das bedeutet Dreifachjackpot.",
+            "source_id": "7f3fee8d35704c67330e3615",
+            "field": "text",
+            "quote": "Das bedeutet Dreifachjackpot."
           }
         ],
-        "text": "Die Gewinnzahlen bei Lotto „6 aus 45“.\nBei der heutigen Ziehung bei Lotto „6 aus 45“ wurden folgende Gewinnzahlen ermittelt: 7 13 15 29 43 44/Zusatzzahl: 22 Die aktuellen LottoPlus-Zahlen lauten: 12 17 24 27 31 41 Zweite Ziehung: 4 10 16 30 35 40 Die aktuelle Joker-Zahl lautet: 4 8 9 7 3 7 Alle Angaben ohne Gewähr.\nQuelle: orf.at."
+        "text": "Dreifachjackpot bei Lotto „6 aus 45“.\nBei der gestrigen Ziehung von Lotto „6 aus 45“ hat niemand auf die sechs Richtigen getippt. Das bedeutet Dreifachjackpot.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -16550,7 +16939,13 @@
             "claim_index": 0,
             "source_id": "7f3fee8d35704c67330e3615",
             "supported": true,
-            "quote": "Bei der heutigen Ziehung bei Lotto „6 aus 45“ wurden folgende Gewinnzahlen ermittelt: 7 13 15 29 43 44/Zusatzzahl: 22 Die aktuellen LottoPlus-Zahlen lauten: 12 17 24 27 31 41 Zweite Ziehung: 4 10 16 30 35 40 Die aktuelle Joker-Zahl lautet: 4 8 9 7 3 7 Alle Angaben ohne Gewähr."
+            "quote": "Bei der gestrigen Ziehung von Lotto „6 aus 45“ hat niemand auf die sechs Richtigen getippt."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "7f3fee8d35704c67330e3615",
+            "supported": true,
+            "quote": "Das bedeutet Dreifachjackpot."
           }
         ],
         "conflicts": [],
@@ -17673,13 +18068,13 @@
             "quote": "Der schwedisch-amerikanische Dirigent Herbert Blomstedt ist tot."
           },
           {
-            "text": "Er starb heute im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte.",
+            "text": "Er starb gestern im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte.",
             "source_id": "06dbe624c6303cd52fe79b1f",
             "field": "text",
-            "quote": "Er starb heute im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte."
+            "quote": "Er starb gestern im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte."
           }
         ],
-        "text": "Dirigent Herbert Blomstedt gestorben.\nDer schwedisch-amerikanische Dirigent Herbert Blomstedt ist tot. Er starb heute im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte.\nQuelle: orf.at."
+        "text": "Dirigent Herbert Blomstedt gestorben.\nDer schwedisch-amerikanische Dirigent Herbert Blomstedt ist tot. Er starb gestern im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -17696,7 +18091,7 @@
             "claim_index": 1,
             "source_id": "06dbe624c6303cd52fe79b1f",
             "supported": true,
-            "quote": "Er starb heute im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte."
+            "quote": "Er starb gestern im Alter von 99 Jahren in Göteborg, wie das Leipziger Gewandhaus mitteilte."
           }
         ],
         "conflicts": [],
@@ -18473,13 +18868,13 @@
             "quote": "Die überraschend deutliche Niederlage der Republikaner bei den US-Kongresswahlen ist nach Ansicht von Vizepräsident JD Vance auf den Iran-Krieg zurückzuführen."
           },
           {
-            "text": "„Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er heute auf der Plattform X.",
+            "text": "„Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er gestern auf der Plattform X.",
             "source_id": "66924309e3311ef8812c1426",
             "field": "text",
-            "quote": "„Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er heute auf der Plattform X."
+            "quote": "„Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er gestern auf der Plattform X."
           }
         ],
-        "text": "Vance: Iran-Krieg schuld an Wahlniederlage.\nDie überraschend deutliche Niederlage der Republikaner bei den US-Kongresswahlen ist nach Ansicht von Vizepräsident JD Vance auf den Iran-Krieg zurückzuführen. „Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er heute auf der Plattform X.\nQuelle: orf.at."
+        "text": "Vance: Iran-Krieg schuld an Wahlniederlage.\nDie überraschend deutliche Niederlage der Republikaner bei den US-Kongresswahlen ist nach Ansicht von Vizepräsident JD Vance auf den Iran-Krieg zurückzuführen. „Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er gestern auf der Plattform X.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -18496,7 +18891,7 @@
             "claim_index": 1,
             "source_id": "66924309e3311ef8812c1426",
             "supported": true,
-            "quote": "„Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er heute auf der Plattform X."
+            "quote": "„Der Grund, warum wir verloren haben, ist der Krieg“, schrieb er gestern auf der Plattform X."
           }
         ],
         "conflicts": [],
@@ -19295,13 +19690,13 @@
             "quote": "Die vom Iran unterstützte Huthi-Miliz hat erneut einen Angriff auf den Flughafen in der saudischen Hauptstadt Riad für sich beansprucht."
           },
           {
-            "text": "Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari heute mit.",
+            "text": "Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari gestern mit.",
             "source_id": "f5bdafe5a892ff827a06b69e",
             "field": "text",
-            "quote": "Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari heute mit."
+            "quote": "Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari gestern mit."
           }
         ],
-        "text": "Huthi-Miliz verkündet neuen Angriff auf Flughafen Riad.\nDie vom Iran unterstützte Huthi-Miliz hat erneut einen Angriff auf den Flughafen in der saudischen Hauptstadt Riad für sich beansprucht. Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari heute mit.\nQuelle: orf.at."
+        "text": "Huthi-Miliz verkündet neuen Angriff auf Flughafen Riad.\nDie vom Iran unterstützte Huthi-Miliz hat erneut einen Angriff auf den Flughafen in der saudischen Hauptstadt Riad für sich beansprucht. Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari gestern mit.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -19318,7 +19713,7 @@
             "claim_index": 1,
             "source_id": "f5bdafe5a892ff827a06b69e",
             "supported": true,
-            "quote": "Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari heute mit."
+            "quote": "Eine Rakete habe den Flughafen direkt getroffen, teilte Militärsprecher Jahja Sari gestern mit."
           }
         ],
         "conflicts": [],
@@ -19411,13 +19806,13 @@
             "quote": "Erstmals seit der demokratischen Wende macht Ungarn Akten der kommunistischen Staatssicherheit umfassend zugänglich."
           },
           {
-            "text": "„Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar heute im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt.",
+            "text": "„Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar gestern im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt.",
             "source_id": "c2538ddaa4837af2c82f9872",
             "field": "text",
-            "quote": "„Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar heute im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt."
+            "quote": "„Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar gestern im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt."
           }
         ],
-        "text": "Ungarn macht erstmals Stasi-Akten umfassend zugänglich.\nErstmals seit der demokratischen Wende macht Ungarn Akten der kommunistischen Staatssicherheit umfassend zugänglich. „Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar heute im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt.\nQuelle: orf.at."
+        "text": "Ungarn macht erstmals Stasi-Akten umfassend zugänglich.\nErstmals seit der demokratischen Wende macht Ungarn Akten der kommunistischen Staatssicherheit umfassend zugänglich. „Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar gestern im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -19434,7 +19829,7 @@
             "claim_index": 1,
             "source_id": "c2538ddaa4837af2c82f9872",
             "supported": true,
-            "quote": "„Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar heute im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt."
+            "quote": "„Mit 36 Jahren Verspätung tun wir das, was keine einzige andere Partei seit der Wende getan hat“, sagte Ministerpräsident Peter Magyar gestern im Historischen Archiv der Staatssicherheitsdienste (ABTL), das den Großteil der noch erhaltenen Stasi-Akten aufbewahrt."
           }
         ],
         "conflicts": [],
@@ -19915,10 +20310,10 @@
         "headline_source_id": "8408fea2a2187a43d4fcb1f3",
         "claims": [
           {
-            "text": "Nach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog heute Konsultationen zur Regierungsbildung aufgenommen.",
+            "text": "Nach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog gestern Konsultationen zur Regierungsbildung aufgenommen.",
             "source_id": "8408fea2a2187a43d4fcb1f3",
             "field": "text",
-            "quote": "Nach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog heute Konsultationen zur Regierungsbildung aufgenommen."
+            "quote": "Nach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog gestern Konsultationen zur Regierungsbildung aufgenommen."
           },
           {
             "text": "Bis morgen Abend kommen Repräsentanten aller Parteien zu Gesprächen in seine Residenz in Jerusalem.",
@@ -19927,7 +20322,7 @@
             "quote": "Bis morgen Abend kommen Repräsentanten aller Parteien zu Gesprächen in seine Residenz in Jerusalem."
           }
         ],
-        "text": "Israels Präsident führt Gespräche zur Regierungsbildung.\nNach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog heute Konsultationen zur Regierungsbildung aufgenommen. Bis morgen Abend kommen Repräsentanten aller Parteien zu Gesprächen in seine Residenz in Jerusalem.\nQuelle: orf.at."
+        "text": "Israels Präsident führt Gespräche zur Regierungsbildung.\nNach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog gestern Konsultationen zur Regierungsbildung aufgenommen. Bis morgen Abend kommen Repräsentanten aller Parteien zu Gesprächen in seine Residenz in Jerusalem.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -19938,7 +20333,7 @@
             "claim_index": 0,
             "source_id": "8408fea2a2187a43d4fcb1f3",
             "supported": true,
-            "quote": "Nach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog heute Konsultationen zur Regierungsbildung aufgenommen."
+            "quote": "Nach Übergabe der amtlichen Endergebnisse der Wahl in Israel hat Präsident Jizchak Herzog gestern Konsultationen zur Regierungsbildung aufgenommen."
           },
           {
             "claim_index": 1,
@@ -32529,6 +32924,52 @@
       ]
     },
     {
+      "id": "59eeb1ac3c92eb3758b2038e",
+      "member_ids": [
+        "cd8cf0892d69a39b48871ead"
+      ],
+      "newest_at": 1793782800.0,
+      "draft": {
+        "headline": "Wie nutzt ihr euren Wintergarten? Was sind eure besten Tipps?",
+        "headline_source_id": "cd8cf0892d69a39b48871ead",
+        "claims": [
+          {
+            "text": "Mein Forum: Diskutieren Sie dieses Thema mit der STANDARD-Community.",
+            "source_id": "cd8cf0892d69a39b48871ead",
+            "field": "text",
+            "quote": "Mein Forum: Diskutieren Sie dieses Thema mit der STANDARD-Community."
+          }
+        ],
+        "text": "Wie nutzt ihr euren Wintergarten? Was sind eure besten Tipps?\nMein Forum: Diskutieren Sie dieses Thema mit der STANDARD-Community.\nQuelle: derstandard.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "cd8cf0892d69a39b48871ead",
+            "supported": true,
+            "quote": "Mein Forum: Diskutieren Sie dieses Thema mit der STANDARD-Community."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "cd8cf0892d69a39b48871ead"
+      ]
+    },
+    {
       "id": "35d254a36064ae92c48a6baf",
       "member_ids": [
         "d184143e93c99c5c796459f7"
@@ -40578,562 +41019,6 @@
       "used_source_ids": [
         "e31a9617a7e6c6c6bc151fce"
       ]
-    },
-    {
-      "id": "ef631c42fb98b9d3a13ee900",
-      "member_ids": [
-        "0103d8a5ce5e3b6a2db1fbee"
-      ],
-      "newest_at": 1793752912.0,
-      "draft": {
-        "headline": "Trump wütet wegen Nachwahlumfrage: „Bullshit!“",
-        "headline_source_id": "0103d8a5ce5e3b6a2db1fbee",
-        "claims": [
-          {
-            "text": "Donald Trump hat nach der Veröffentlichung der Nachwahlbefragung völlig die Fassung verloren.",
-            "source_id": "0103d8a5ce5e3b6a2db1fbee",
-            "field": "text",
-            "quote": "Donald Trump hat nach der Veröffentlichung der Nachwahlbefragung völlig die Fassung verloren."
-          },
-          {
-            "text": "Eine überwältigende Mehrheit der Befragten verpassten ihm einen Denkzettel.",
-            "source_id": "0103d8a5ce5e3b6a2db1fbee",
-            "field": "text",
-            "quote": "Eine überwältigende Mehrheit der Befragten verpassten ihm einen Denkzettel."
-          }
-        ],
-        "text": "Trump wütet wegen Nachwahlumfrage: „Bullshit!“.\nDonald Trump hat nach der Veröffentlichung der Nachwahlbefragung völlig die Fassung verloren. Eine überwältigende Mehrheit der Befragten verpassten ihm einen Denkzettel.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "0103d8a5ce5e3b6a2db1fbee",
-            "supported": true,
-            "quote": "Donald Trump hat nach der Veröffentlichung der Nachwahlbefragung völlig die Fassung verloren."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "0103d8a5ce5e3b6a2db1fbee",
-            "supported": true,
-            "quote": "Eine überwältigende Mehrheit der Befragten verpassten ihm einen Denkzettel."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "0103d8a5ce5e3b6a2db1fbee"
-      ]
-    },
-    {
-      "id": "825c95627cde9cbc9a11789e",
-      "member_ids": [
-        "b763af5c53e7d42338354b17"
-      ],
-      "newest_at": 1793751208.0,
-      "draft": {
-        "headline": "Nordkorea warnt USA vor verschärfter Reaktion",
-        "headline_source_id": "b763af5c53e7d42338354b17",
-        "claims": [
-          {
-            "text": "Nordkorea hat die USA wegen ihrer angeblich anhaltend „feindseligen“ Haltung gegenüber Pjöngjang vor einer verschärften Reaktion gewarnt.",
-            "source_id": "b763af5c53e7d42338354b17",
-            "field": "text",
-            "quote": "Nordkorea hat die USA wegen ihrer angeblich anhaltend „feindseligen“ Haltung gegenüber Pjöngjang vor einer verschärften Reaktion gewarnt."
-          },
-          {
-            "text": "Bei der „Umsetzung der feindseligen Politik“ der USA gegen Nordkorea würden derzeit „neue Rekorde“ aufgestellt, zitierte die staatliche Nachrichtenagentur KCNA heute die einflussreiche Schwester von Nordkoreas Machthaber Kim Jong Un, Kim Yo Jong.",
-            "source_id": "b763af5c53e7d42338354b17",
-            "field": "text",
-            "quote": "Bei der „Umsetzung der feindseligen Politik“ der USA gegen Nordkorea würden derzeit „neue Rekorde“ aufgestellt, zitierte die staatliche Nachrichtenagentur KCNA heute die einflussreiche Schwester von Nordkoreas Machthaber Kim Jong Un, Kim Yo Jong."
-          }
-        ],
-        "text": "Nordkorea warnt USA vor verschärfter Reaktion.\nNordkorea hat die USA wegen ihrer angeblich anhaltend „feindseligen“ Haltung gegenüber Pjöngjang vor einer verschärften Reaktion gewarnt. Bei der „Umsetzung der feindseligen Politik“ der USA gegen Nordkorea würden derzeit „neue Rekorde“ aufgestellt, zitierte die staatliche Nachrichtenagentur KCNA heute die einflussreiche Schwester von Nordkoreas Machthaber Kim Jong Un, Kim Yo Jong.\nQuelle: orf.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "b763af5c53e7d42338354b17",
-            "supported": true,
-            "quote": "Nordkorea hat die USA wegen ihrer angeblich anhaltend „feindseligen“ Haltung gegenüber Pjöngjang vor einer verschärften Reaktion gewarnt."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "b763af5c53e7d42338354b17",
-            "supported": true,
-            "quote": "Bei der „Umsetzung der feindseligen Politik“ der USA gegen Nordkorea würden derzeit „neue Rekorde“ aufgestellt, zitierte die staatliche Nachrichtenagentur KCNA heute die einflussreiche Schwester von Nordkoreas Machthaber Kim Jong Un, Kim Yo Jong."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "b763af5c53e7d42338354b17"
-      ]
-    },
-    {
-      "id": "001074f83878ae6278929ddd",
-      "member_ids": [
-        "521f69bd3220bd4abad9ea96"
-      ],
-      "newest_at": 1793748826.0,
-      "draft": {
-        "headline": "Sleaford Mods: Die Extra-Zwiebel auf dem Burger",
-        "headline_source_id": "521f69bd3220bd4abad9ea96",
-        "claims": [
-          {
-            "text": "Drei Jahre nach ihrem letzten Stelldichein in Wien geigten die Nottinghamer Postpunk-Spoken-Word-Proleten Sleaford Mods Dienstagabend in der Wiener Arena auf.",
-            "source_id": "521f69bd3220bd4abad9ea96",
-            "field": "text",
-            "quote": "Drei Jahre nach ihrem letzten Stelldichein in Wien geigten die Nottinghamer Postpunk-Spoken-Word-Proleten Sleaford Mods Dienstagabend in der Wiener Arena auf."
-          },
-          {
-            "text": "Eineinhalb Stunden drehten Jason Williamson und Andrew Fearn die englische Regierung, Korruption und Lobbyisten durch den kulturellen Fleischwolf und bewiesen eindrucksvoll – das Simple kann oft die größte Kraft entfachen.",
-            "source_id": "521f69bd3220bd4abad9ea96",
-            "field": "text",
-            "quote": "Eineinhalb Stunden drehten Jason Williamson und Andrew Fearn die englische Regierung, Korruption und Lobbyisten durch den kulturellen Fleischwolf und bewiesen eindrucksvoll – das Simple kann oft die größte Kraft entfachen."
-          }
-        ],
-        "text": "Sleaford Mods: Die Extra-Zwiebel auf dem Burger.\nDrei Jahre nach ihrem letzten Stelldichein in Wien geigten die Nottinghamer Postpunk-Spoken-Word-Proleten Sleaford Mods Dienstagabend in der Wiener Arena auf. Eineinhalb Stunden drehten Jason Williamson und Andrew Fearn die englische Regierung, Korruption und Lobbyisten durch den kulturellen Fleischwolf und bewiesen eindrucksvoll – das Simple kann oft die größte Kraft entfachen.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "521f69bd3220bd4abad9ea96",
-            "supported": true,
-            "quote": "Drei Jahre nach ihrem letzten Stelldichein in Wien geigten die Nottinghamer Postpunk-Spoken-Word-Proleten Sleaford Mods Dienstagabend in der Wiener Arena auf."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "521f69bd3220bd4abad9ea96",
-            "supported": true,
-            "quote": "Eineinhalb Stunden drehten Jason Williamson und Andrew Fearn die englische Regierung, Korruption und Lobbyisten durch den kulturellen Fleischwolf und bewiesen eindrucksvoll – das Simple kann oft die größte Kraft entfachen."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "521f69bd3220bd4abad9ea96"
-      ]
-    },
-    {
-      "id": "2b53c86610dd7c32da3f74ea",
-      "member_ids": [
-        "896a271586479f2be70f11ec"
-      ],
-      "newest_at": 1793746860.0,
-      "draft": {
-        "headline": "Standardrätsel L 11434",
-        "headline_source_id": "896a271586479f2be70f11ec",
-        "claims": [
-          {
-            "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.",
-            "source_id": "896a271586479f2be70f11ec",
-            "field": "text",
-            "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
-          }
-        ],
-        "text": "Standardrätsel L 11434.\nTäglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.\nQuelle: derstandard.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "896a271586479f2be70f11ec",
-            "supported": true,
-            "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "896a271586479f2be70f11ec"
-      ]
-    },
-    {
-      "id": "761d06ed735c1da4ea3cff59",
-      "member_ids": [
-        "204570f8ea8ce6323796fc66"
-      ],
-      "newest_at": 1793746061.0,
-      "draft": {
-        "headline": "Vorwurf des Landesverrats gegen Selenskyjs Ex-Sprecherin",
-        "headline_source_id": "204570f8ea8ce6323796fc66",
-        "claims": [
-          {
-            "text": "Nach Kritik an Präsident Wolodymyr Selenskyj werfen ukrainische Behörden seiner Ex-Pressesprecherin, Julia Mendel, Landesverrat vor.",
-            "source_id": "204570f8ea8ce6323796fc66",
-            "field": "text",
-            "quote": "Nach Kritik an Präsident Wolodymyr Selenskyj werfen ukrainische Behörden seiner Ex-Pressesprecherin, Julia Mendel, Landesverrat vor."
-          },
-          {
-            "text": "Sie betreibe „Informations- und Sabotageaktivitäten gegen die Ukraine“, teilte der Selenskyj unterstellte Geheimdienst SBU gestern mit.",
-            "source_id": "204570f8ea8ce6323796fc66",
-            "field": "text",
-            "quote": "Sie betreibe „Informations- und Sabotageaktivitäten gegen die Ukraine“, teilte der Selenskyj unterstellte Geheimdienst SBU gestern mit."
-          }
-        ],
-        "text": "Vorwurf des Landesverrats gegen Selenskyjs Ex-Sprecherin.\nNach Kritik an Präsident Wolodymyr Selenskyj werfen ukrainische Behörden seiner Ex-Pressesprecherin, Julia Mendel, Landesverrat vor. Sie betreibe „Informations- und Sabotageaktivitäten gegen die Ukraine“, teilte der Selenskyj unterstellte Geheimdienst SBU gestern mit.\nQuelle: orf.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "204570f8ea8ce6323796fc66",
-            "supported": true,
-            "quote": "Nach Kritik an Präsident Wolodymyr Selenskyj werfen ukrainische Behörden seiner Ex-Pressesprecherin, Julia Mendel, Landesverrat vor."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "204570f8ea8ce6323796fc66",
-            "supported": true,
-            "quote": "Sie betreibe „Informations- und Sabotageaktivitäten gegen die Ukraine“, teilte der Selenskyj unterstellte Geheimdienst SBU gestern mit."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "204570f8ea8ce6323796fc66"
-      ]
-    },
-    {
-      "id": "d9c54f62d11612129bd76caf",
-      "member_ids": [
-        "d3cc9e5b4832e0cde243427d"
-      ],
-      "newest_at": 1793745966.0,
-      "draft": {
-        "headline": "Zug-Drama: Spaniens Verkehrsminister tritt zurück",
-        "headline_source_id": "d3cc9e5b4832e0cde243427d",
-        "claims": [
-          {
-            "text": "Knapp eine Woche nach dem Zugunglück mit 69 Toten in Spanien hat Verkehrsminister Óscar Puente seinen Rücktritt erklärt.",
-            "source_id": "d3cc9e5b4832e0cde243427d",
-            "field": "text",
-            "quote": "Knapp eine Woche nach dem Zugunglück mit 69 Toten in Spanien hat Verkehrsminister Óscar Puente seinen Rücktritt erklärt."
-          },
-          {
-            "text": "Dieser Schritt war von allen Oppositionsparteien gefordert worden und kam trotzdem überraschend, denn er war von Puente und auch von Ministerpräsident Pedro Sánchez in den vergangenen Tagen mehrfach ausgeschlossen worden.",
-            "source_id": "d3cc9e5b4832e0cde243427d",
-            "field": "text",
-            "quote": "Dieser Schritt war von allen Oppositionsparteien gefordert worden und kam trotzdem überraschend, denn er war von Puente und auch von Ministerpräsident Pedro Sánchez in den vergangenen Tagen mehrfach ausgeschlossen worden."
-          }
-        ],
-        "text": "Zug-Drama: Spaniens Verkehrsminister tritt zurück.\nKnapp eine Woche nach dem Zugunglück mit 69 Toten in Spanien hat Verkehrsminister Óscar Puente seinen Rücktritt erklärt. Dieser Schritt war von allen Oppositionsparteien gefordert worden und kam trotzdem überraschend, denn er war von Puente und auch von Ministerpräsident Pedro Sánchez in den vergangenen Tagen mehrfach ausgeschlossen worden.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "d3cc9e5b4832e0cde243427d",
-            "supported": true,
-            "quote": "Knapp eine Woche nach dem Zugunglück mit 69 Toten in Spanien hat Verkehrsminister Óscar Puente seinen Rücktritt erklärt."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "d3cc9e5b4832e0cde243427d",
-            "supported": true,
-            "quote": "Dieser Schritt war von allen Oppositionsparteien gefordert worden und kam trotzdem überraschend, denn er war von Puente und auch von Ministerpräsident Pedro Sánchez in den vergangenen Tagen mehrfach ausgeschlossen worden."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "d3cc9e5b4832e0cde243427d"
-      ]
-    },
-    {
-      "id": "20f14f82d8476a961b292bbf",
-      "member_ids": [
-        "38349e54f92fb37ffa286a19"
-      ],
-      "newest_at": 1793745197.0,
-      "draft": {
-        "headline": "Horvath: „Wahnsinn, dass ich das sagen muss“",
-        "headline_source_id": "38349e54f92fb37ffa286a19",
-        "claims": [
-          {
-            "text": "LASK-Kapitän Sascha Horvath hat bei allem Jubel über den klaren 4:0-Sieg in der Champions League gegen Slovan Bratislava auch ein kleines Manko gefunden.",
-            "source_id": "38349e54f92fb37ffa286a19",
-            "field": "text",
-            "quote": "LASK-Kapitän Sascha Horvath hat bei allem Jubel über den klaren 4:0-Sieg in der Champions League gegen Slovan Bratislava auch ein kleines Manko gefunden."
-          },
-          {
-            "text": "Wenngleich an diesem Abend mit einem breiten Grisen im Gesicht.",
-            "source_id": "38349e54f92fb37ffa286a19",
-            "field": "text",
-            "quote": "Wenngleich an diesem Abend mit einem breiten Grisen im Gesicht."
-          }
-        ],
-        "text": "Horvath: „Wahnsinn, dass ich das sagen muss“.\nLASK-Kapitän Sascha Horvath hat bei allem Jubel über den klaren 4:0-Sieg in der Champions League gegen Slovan Bratislava auch ein kleines Manko gefunden. Wenngleich an diesem Abend mit einem breiten Grisen im Gesicht.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "38349e54f92fb37ffa286a19",
-            "supported": true,
-            "quote": "LASK-Kapitän Sascha Horvath hat bei allem Jubel über den klaren 4:0-Sieg in der Champions League gegen Slovan Bratislava auch ein kleines Manko gefunden."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "38349e54f92fb37ffa286a19",
-            "supported": true,
-            "quote": "Wenngleich an diesem Abend mit einem breiten Grisen im Gesicht."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "38349e54f92fb37ffa286a19"
-      ]
-    },
-    {
-      "id": "38af3fbd7dfa3a16ade37405",
-      "member_ids": [
-        "13bb28ef29d0e38b3dc3ceb9"
-      ],
-      "newest_at": 1793744872.0,
-      "draft": {
-        "headline": "Manchester United dreht 0:2 gegen Roma, Laimer trifft bei Bayern-Sieg",
-        "headline_source_id": "13bb28ef29d0e38b3dc3ceb9",
-        "claims": [
-          {
-            "text": "PSG stellte beim 6:0 über Villarreal einen Rekord auf, ÖFB-Legionär Spalt gab für Stuttgart sein CL-Debüt.",
-            "source_id": "13bb28ef29d0e38b3dc3ceb9",
-            "field": "text",
-            "quote": "PSG stellte beim 6:0 über Villarreal einen Rekord auf, ÖFB-Legionär Spalt gab für Stuttgart sein CL-Debüt."
-          }
-        ],
-        "text": "Manchester United dreht 0:2 gegen Roma, Laimer trifft bei Bayern-Sieg.\nPSG stellte beim 6:0 über Villarreal einen Rekord auf, ÖFB-Legionär Spalt gab für Stuttgart sein CL-Debüt.\nQuelle: derstandard.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "13bb28ef29d0e38b3dc3ceb9",
-            "supported": true,
-            "quote": "PSG stellte beim 6:0 über Villarreal einen Rekord auf, ÖFB-Legionär Spalt gab für Stuttgart sein CL-Debüt."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "13bb28ef29d0e38b3dc3ceb9"
-      ]
-    },
-    {
-      "id": "5368d1c84f003fa54f95335d",
-      "member_ids": [
-        "1dc1793ed377d865a2370f1c"
-      ],
-      "newest_at": 1793744842.0,
-      "draft": {
-        "headline": "Trump verteidigt Iran-Krieg und droht Demokraten",
-        "headline_source_id": "1dc1793ed377d865a2370f1c",
-        "claims": [
-          {
-            "text": "Donald Trump und seine Republikaner haben bei den US-Zwischenwahlen eine krachende Niederlage kassiert.",
-            "source_id": "1dc1793ed377d865a2370f1c",
-            "field": "text",
-            "quote": "Donald Trump und seine Republikaner haben bei den US-Zwischenwahlen eine krachende Niederlage kassiert."
-          },
-          {
-            "text": "Die Demokraten haben die Mehrheit in beiden Kammern des US-Kongresses zurückerobert.",
-            "source_id": "1dc1793ed377d865a2370f1c",
-            "field": "text",
-            "quote": "Die Demokraten haben die Mehrheit in beiden Kammern des US-Kongresses zurückerobert."
-          }
-        ],
-        "text": "Trump verteidigt Iran-Krieg und droht Demokraten.\nDonald Trump und seine Republikaner haben bei den US-Zwischenwahlen eine krachende Niederlage kassiert. Die Demokraten haben die Mehrheit in beiden Kammern des US-Kongresses zurückerobert.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "1dc1793ed377d865a2370f1c",
-            "supported": true,
-            "quote": "Donald Trump und seine Republikaner haben bei den US-Zwischenwahlen eine krachende Niederlage kassiert."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "1dc1793ed377d865a2370f1c",
-            "supported": true,
-            "quote": "Die Demokraten haben die Mehrheit in beiden Kammern des US-Kongresses zurückerobert."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "1dc1793ed377d865a2370f1c"
-      ]
-    },
-    {
-      "id": "0246a3da944424e9ee607a61",
-      "member_ids": [
-        "09afc7df23a0ae033484cfb7"
-      ],
-      "newest_at": 1793743614.0,
-      "draft": {
-        "headline": "LASK schießt sich mit 4:0 gegen Slovan in die Aufstiegszone der Champions League",
-        "headline_source_id": "09afc7df23a0ae033484cfb7",
-        "claims": [
-          {
-            "text": "Die Linzer liegen mit sechs Punkten in der Ligaphase gut im Rennen um einem Platz im Playoff.",
-            "source_id": "09afc7df23a0ae033484cfb7",
-            "field": "text",
-            "quote": "Die Linzer liegen mit sechs Punkten in der Ligaphase gut im Rennen um einem Platz im Playoff."
-          },
-          {
-            "text": "Schon zur Pause war die Partie gegen ein schwaches Bratislava entschieden.",
-            "source_id": "09afc7df23a0ae033484cfb7",
-            "field": "text",
-            "quote": "Schon zur Pause war die Partie gegen ein schwaches Bratislava entschieden."
-          }
-        ],
-        "text": "LASK schießt sich mit 4:0 gegen Slovan in die Aufstiegszone der Champions League.\nDie Linzer liegen mit sechs Punkten in der Ligaphase gut im Rennen um einem Platz im Playoff. Schon zur Pause war die Partie gegen ein schwaches Bratislava entschieden.\nQuelle: derstandard.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "09afc7df23a0ae033484cfb7",
-            "supported": true,
-            "quote": "Die Linzer liegen mit sechs Punkten in der Ligaphase gut im Rennen um einem Platz im Playoff."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "09afc7df23a0ae033484cfb7",
-            "supported": true,
-            "quote": "Schon zur Pause war die Partie gegen ein schwaches Bratislava entschieden."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "09afc7df23a0ae033484cfb7"
-      ]
     }
   ],
   "excluded_articles": [
@@ -41157,10 +41042,10 @@
     }
   ],
   "selected_ids": [
-    "fa0dd76b903a8ad6eee1ea77",
+    "97ddc16951e1f4566a00fce6",
+    "82568a21c3a81e10df055cdc",
+    "70700abed6cb499f9df5213c",
     "1dad565485bbb25d0f1f4b2f",
-    "7169dfa864f3ada63e3c038e",
-    "8201fcb32a655f1c210c1dd2",
-    "f76c1db8c7f2c2bae8c3ad09"
+    "8201fcb32a655f1c210c1dd2"
   ]
 }
