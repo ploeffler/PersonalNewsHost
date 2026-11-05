@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261105T023248Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 05.11.2026 um 03:32 Uhr",
-      "created_at": 1793845968.688765,
-      "video": "broadcasts/20261105T023248Z.mp4",
-      "sources": [
-        {
-          "title": "Zulagen für Gewerkschafter: Ermittlungen eingeleitet",
-          "url": "https://orf.at/stories/3447240/"
-        },
-        {
-          "title": "Standardrätsel J 11435",
-          "url": "https://www.derstandard.at/story/3000000346411/standardraetsel-j-11435?ref=rss"
-        },
-        {
-          "title": "„Luca“ kennt Stocker nicht: „Müssen da noch …“",
-          "url": "https://www.krone.at/4362782"
-        },
-        {
-          "title": "„Es prickelt“: Für den Kärntner Bauern wird es jetzt ernst",
-          "url": "https://www.kleinezeitung.at/artikel/41419952/es-prickelt-fuer-den-kaerntner-bauern-wird-es-jetzt-ernst"
-        },
-        {
-          "title": "Frontalkollision nach Überholmanöver",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261105T023248Z.txt",
-      "subtitles": "broadcasts/20261105T023248Z.vtt",
-      "subtitle_download": "broadcasts/20261105T023248Z.srt"
-    },
-    {
       "id": "20261105T110445Z",
       "kind": "broadcast",
       "title": "Nachrichten 05.11.2026 um 12:04 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261105T110445Z.txt",
       "subtitles": "broadcasts/20261105T110445Z.vtt",
       "subtitle_download": "broadcasts/20261105T110445Z.srt"
+    },
+    {
+      "id": "20261105T184939Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 05.11.2026 um 19:49 Uhr",
+      "created_at": 1793904579.629552,
+      "video": "broadcasts/20261105T184939Z.mp4",
+      "sources": [
+        {
+          "title": "Skandal um „verschwundene“ Gemeindewohnungen: Stadt blitzt vor OGH ab",
+          "url": "https://www.kleinezeitung.at/artikel/41417721/skandal-um-verschwundene-gemeindewohnungen-stadt-blitzt-vor-ogh-ab"
+        },
+        {
+          "title": "Obduktion: Keine Anzeichen für Fremdverschulden",
+          "url": "https://www.krone.at/4363752"
+        },
+        {
+          "title": "Selenskyj bei Iberoamerika-Gipfel in Madrid",
+          "url": "https://orf.at/stories/3447351/"
+        },
+        {
+          "title": "Modedesigner Pierpaolo Piccioli verlässt Balenciaga nach nicht einmal zwei Jahren",
+          "url": "https://www.derstandard.at/story/3000000347791/der-modedesigner-pierpaolo-piccioli-verlaesst-balenciaga-nach-nicht-einmal-zwei-jahren?ref=rss"
+        },
+        {
+          "title": "Wohnungsbrand in Mehrparteienhaus",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261105T184939Z.txt",
+      "subtitles": "broadcasts/20261105T184939Z.vtt",
+      "subtitle_download": "broadcasts/20261105T184939Z.srt"
     }
   ]
 }
