@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 132,
+  "revision": 133,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -5004,7 +5004,7 @@
       "id": "T326",
       "epic": "E18",
       "title": "Vorgezogener lokaler Senderstil-Editor mit URL-Recherche und Vorschaujobs",
-      "status": "review",
+      "status": "todo",
       "depends_on": [
         "T180",
         "T135",
@@ -5022,25 +5022,7 @@
       "source": "user-chat-2026-11-01-implement-sender-ci",
       "version": "0.2",
       "package": "A25",
-      "lease": {
-        "client": "codex-local-coordinator",
-        "token": "37dd2e09fa9640e1a6c9ee04619d3661",
-        "expires_at": 1793550998.2118852,
-        "files": [
-          "assets/sender-style/",
-          "docs/guide/senderstil.md",
-          "planning/reviews/T326-sender-style.md",
-          "scripts/sender_style.py",
-          "scripts/sender_style_server.py",
-          "scripts/style_preview.py",
-          "scripts/style_research.py",
-          "tests/test_sender_style.py",
-          "tests/test_sender_style_browser.cjs",
-          "tests/test_sender_style_server.py",
-          "tests/test_style_preview.py",
-          "tests/test_style_research.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-local-coordinator",
         "commit": "7b15b667acd65310bcd337bdeee4e056fb51532e",
@@ -5058,7 +5040,9 @@
           "tests/test_sender_style_server.py",
           "tests/test_style_preview.py",
           "tests/test_style_research.py"
-        ]
+        ],
+        "reviewer": "codex-review-20261105",
+        "rejected": "Independent review 2026-11-05: submitted SHA 7b15b667acd65310bcd337bdeee4e056fb51532e is stale; subsequent changes affect submitted sender-style scope. Snapshot 9570a27: 36 targeted tests passed. Original snapshot: 32 targeted passed; full offline run 433 passed, one sandbox socket-permission error. No implementation defect established. Please resubmit integrated SHA with current full regression evidence; completion requires unchanged reviewed scope. Coordination compatibility fixed separately in 7f4cfd2 (11 coordination and 6 release-gating tests passed)."
       },
       "local_work_pending": false,
       "evidence": [],
@@ -7273,6 +7257,15 @@
       "client": "codex-scheduling",
       "at": 1793547934.4454868,
       "note": ""
+    },
+    {
+      "operation_id": "6ca73f0296c04207b0a2dea480050de6",
+      "revision": 133,
+      "action": "reject",
+      "task": "T326",
+      "client": "codex-review-20261105",
+      "at": 1793901143.396128,
+      "note": "Independent review 2026-11-05: submitted SHA 7b15b667acd65310bcd337bdeee4e056fb51532e is stale; subsequent changes affect submitted sender-style scope. Snapshot 9570a27: 36 targeted tests passed. Original snapshot: 32 targeted passed; full offline run 433 passed, one sandbox socket-permission error. No implementation defect established. Please resubmit integrated SHA with current full regression evidence; completion requires unchanged reviewed scope. Coordination compatibility fixed separately in 7f4cfd2 (11 coordination and 6 release-gating tests passed)."
     }
   ]
 }
