@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261106T002623Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 06.11.2026 um 01:26 Uhr",
-      "created_at": 1793924783.103506,
-      "video": "broadcasts/20261106T002623Z.mp4",
-      "sources": [
-        {
-          "title": "Dämpfer für KI-Branche",
-          "url": "https://orf.at/stories/3447202/"
-        },
-        {
-          "title": "Standardrätsel E 11436",
-          "url": "https://www.derstandard.at/story/3000000346412/standardraetsel-e-11436?ref=rss"
-        },
-        {
-          "title": "Auch in Lennart Braun lebt der Traum von der NHL",
-          "url": "https://www.kleinezeitung.at/artikel/41420132/auch-in-lennart-braun-lebt-der-traum-von-der-nhl"
-        },
-        {
-          "title": "Politiker nahmen an Demonstration in Paris teil",
-          "url": "https://www.krone.at/4364355"
-        },
-        {
-          "title": "Fliegerbombe entschärft",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261106T002623Z.txt",
-      "subtitles": "broadcasts/20261106T002623Z.vtt",
-      "subtitle_download": "broadcasts/20261106T002623Z.srt"
-    },
-    {
       "id": "20261106T075900Z",
       "kind": "broadcast",
       "title": "Nachrichten 06.11.2026 um 08:59 Uhr",
@@ -71,6 +39,38 @@
       "transcript": "broadcasts/20261106T075900Z.txt",
       "subtitles": "broadcasts/20261106T075900Z.vtt",
       "subtitle_download": "broadcasts/20261106T075900Z.srt"
+    },
+    {
+      "id": "20261106T155928Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 06.11.2026 um 16:59 Uhr",
+      "created_at": 1793980768.429105,
+      "video": "broadcasts/20261106T155928Z.mp4",
+      "sources": [
+        {
+          "title": "Diese Frau soll deutsche Bundespräsidentin werden",
+          "url": "https://www.krone.at/4365386"
+        },
+        {
+          "title": "Jemen: Viele Tote bei Angriff in Provinz Taiz",
+          "url": "https://orf.at/stories/3447449/"
+        },
+        {
+          "title": "Theatergruppe Deutsch Goritz sammelt für krebskranken Stradener",
+          "url": "https://www.kleinezeitung.at/artikel/41425910/theatergruppe-deutsch-goritz-sammelt-fuer-krebskranken-stradener"
+        },
+        {
+          "title": "Festnahme von Meghans Vater: Verdacht auf Besitz von Missbrauchsdarstellungen",
+          "url": "https://www.derstandard.at/story/3000000347943/festnahme-von-meghans-vater-verdacht-auf-besitz-von-missbrauchsdarstellungen?ref=rss"
+        },
+        {
+          "title": "Rascher Fahndungserfolg nach Messerattacke",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261106T155928Z.txt",
+      "subtitles": "broadcasts/20261106T155928Z.vtt",
+      "subtitle_download": "broadcasts/20261106T155928Z.srt"
     }
   ]
 }
