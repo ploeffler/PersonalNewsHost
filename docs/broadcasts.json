@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261105T184939Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 05.11.2026 um 19:49 Uhr",
-      "created_at": 1793904579.629552,
-      "video": "broadcasts/20261105T184939Z.mp4",
-      "sources": [
-        {
-          "title": "Skandal um „verschwundene“ Gemeindewohnungen: Stadt blitzt vor OGH ab",
-          "url": "https://www.kleinezeitung.at/artikel/41417721/skandal-um-verschwundene-gemeindewohnungen-stadt-blitzt-vor-ogh-ab"
-        },
-        {
-          "title": "Obduktion: Keine Anzeichen für Fremdverschulden",
-          "url": "https://www.krone.at/4363752"
-        },
-        {
-          "title": "Selenskyj bei Iberoamerika-Gipfel in Madrid",
-          "url": "https://orf.at/stories/3447351/"
-        },
-        {
-          "title": "Modedesigner Pierpaolo Piccioli verlässt Balenciaga nach nicht einmal zwei Jahren",
-          "url": "https://www.derstandard.at/story/3000000347791/der-modedesigner-pierpaolo-piccioli-verlaesst-balenciaga-nach-nicht-einmal-zwei-jahren?ref=rss"
-        },
-        {
-          "title": "Wohnungsbrand in Mehrparteienhaus",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261105T184939Z.txt",
-      "subtitles": "broadcasts/20261105T184939Z.vtt",
-      "subtitle_download": "broadcasts/20261105T184939Z.srt"
-    },
-    {
       "id": "20261106T002623Z",
       "kind": "broadcast",
       "title": "Nachrichten 06.11.2026 um 01:26 Uhr",
@@ -63,6 +31,46 @@
       "transcript": "broadcasts/20261106T002623Z.txt",
       "subtitles": "broadcasts/20261106T002623Z.vtt",
       "subtitle_download": "broadcasts/20261106T002623Z.srt"
+    },
+    {
+      "id": "20261106T075900Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 06.11.2026 um 08:59 Uhr",
+      "created_at": 1793951940.684753,
+      "video": "broadcasts/20261106T075900Z.mp4",
+      "sources": [
+        {
+          "title": "Hegseth kämpft um sein Amt",
+          "url": "https://orf.at/stories/3447376/"
+        },
+        {
+          "title": "Hegseth verteidigt Iran-Krieg und kämpft um sein Amt",
+          "url": "https://orf.at/stories/3447372/"
+        },
+        {
+          "title": "Kanzler Stocker auf heikler Mission in Peking",
+          "url": "https://www.krone.at/4364560"
+        },
+        {
+          "title": "SPÖ verlor in Ära Babler eine halbe Million Wähler",
+          "url": "https://www.krone.at/4364526"
+        },
+        {
+          "title": "SPÖ verlor in Ära Babler in Umfragen rund eine halbe Million Wähler",
+          "url": "https://www.derstandard.at/story/3000000347809/sp214-verlor-in-196ra-babler-in-umfragen-rund-eine-halbe-mio-w228hler?ref=rss"
+        },
+        {
+          "title": "Adrian Pertl: „Es ist so schwierig, dafür eine Antwort zu finden“",
+          "url": "https://www.kleinezeitung.at/artikel/41417648/adrian-pertl-es-ist-so-schwierig-dafuer-eine-antwort-zu-finden"
+        },
+        {
+          "title": "Schwerer Verkehrsunfall unter Alkoholeinfluss",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261106T075900Z.txt",
+      "subtitles": "broadcasts/20261106T075900Z.vtt",
+      "subtitle_download": "broadcasts/20261106T075900Z.srt"
     }
   ]
 }

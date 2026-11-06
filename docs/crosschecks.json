@@ -4,7 +4,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "46bc9e5ddd3ab345236b45b9",
+    "pipeline_group_id": "40082181a460cd9a217d946c",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -12,15 +12,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "60394a39feeeed7a56f99eda",
+          "source_id": "da2042388c313e2268e947a4",
           "supported": true,
-          "quote": "Der deutliche Wahlsieg der Demokraten in beiden Kammern des US-Kongresses und bei zahlreichen Gouverneurswahlen erhöht den Druck auf die KI-Branche."
+          "quote": "Nach dem Wahldebakel der Republikaner bei den US-Zwischenwahlen hat US-Verteidigungsminister Pete Hegseth den Krieg gegen den Iran verteidigt und sich angesichts einer drohenden Amtsenthebung kämpferisch gezeigt."
         },
         {
           "claim_index": 1,
-          "source_id": "60394a39feeeed7a56f99eda",
+          "source_id": "5439e922af6c0d2e7e1dfcfd",
           "supported": true,
-          "quote": "Ein Dämpfer gilt als wahrscheinlich."
+          "quote": "In einer gestern (Ortszeit) veröffentlichten Videobotschaft bezeichnete er den Militäreinsatz als mutig und historisch."
         }
       ],
       "conflicts": [],
@@ -33,7 +33,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "32dc7a1579c9cc69f80d67c7",
+    "pipeline_group_id": "08071de63da83dc8c82f96cd",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -41,61 +41,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "fdb1e17abfcda09e362ef727",
+          "source_id": "54d9d2b64a7c9f9f87502b55",
           "supported": true,
-          "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "3bc99b6fbeb6eb5e30eeb18c",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "2ea8dc10cdcfdf844993f5d5",
-          "supported": true,
-          "quote": "Nachwuchssportlerwahl 2026: Lennart Braun war im Vorjahr das jüngste Teammitglied der Graz99ers bei ihrem historischen Meistertitel."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "f1af0dead286ad6e0a4404b1",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "5c06ce5e4bf27850306ab590",
-          "supported": true,
-          "quote": "Am Donnerstag haben in Frankreich landesweit etwa 575.000 Menschen für höhere Löhne und bessere Bedingungen an Schulen und Universitäten demonstriert."
+          "quote": "Bundeskanzler Christian Stocker ist aktuell auf einer heiklen Mission in China."
         },
         {
           "claim_index": 1,
-          "source_id": "5c06ce5e4bf27850306ab590",
+          "source_id": "54d9d2b64a7c9f9f87502b55",
           "supported": true,
-          "quote": "In Paris nahmen auch mehrere linke Präsidentschaftskandidaten teil, einer von ihnen wurde jedoch ausgebuht."
+          "quote": "Es geht vorrangig um ein wachsendes wirtschaftliches Ungleichgewicht zwischen beiden Ländern."
         }
       ],
       "conflicts": [],
@@ -108,7 +62,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "54614fb17326b66470151132",
+    "pipeline_group_id": "2b7f34214ccc67b984908e10",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -116,15 +70,67 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "bbe0cbe8313ffc25e35cef24",
+          "source_id": "9cecafb39dd69b61b8085d78",
           "supported": true,
-          "quote": "Judenburg im Bezirk Murtal: Bei Baggerarbeiten in der Mur kam Donnerstagnachmittag, 5. November 2026, eine Fliegerbombe zum Vorschein."
+          "quote": "Die Ära von SPÖ-Chef Andreas Babler steht kurz vor ihrem Ende."
         },
         {
           "claim_index": 1,
-          "source_id": "bbe0cbe8313ffc25e35cef24",
+          "source_id": "837726587caa0a556082a578",
           "supported": true,
-          "quote": "Der Entminungsdienst konnte sie noch vor Ort erfolgreich entschärfen."
+          "quote": "Die Wähler gingen vor allem zu den Grünen und der FPÖ."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "2d74a41cca8abe63d8598451",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "666466c2d9f9ea6c3b23e510",
+          "supported": true,
+          "quote": "Der Kärntner Adrian Pertl (30), Slalom-Vizeweltmeister von 2021, will nach schwierigen Jahren endlich wieder den Anschluss finden."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "cbd4c504ccc5bce961b3b6f7",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "6d16b0f4645c37998b205ebb",
+          "supported": true,
+          "quote": "Krottendorf im Bezirk Weiz: Donnerstagabend, 5. November 2026, geriet ein 32-jähriger Pkw-Lenker auf der B72 von der Fahrbahn ab."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "6d16b0f4645c37998b205ebb",
+          "supported": true,
+          "quote": "Das Fahrzeug überschlug sich, geriet in Brand und der schwer verletzte Mann musste von Ersthelfern gerettet werden."
         }
       ],
       "conflicts": [],
