@@ -1,46 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261106T075900Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 06.11.2026 um 08:59 Uhr",
-      "created_at": 1793951940.684753,
-      "video": "broadcasts/20261106T075900Z.mp4",
-      "sources": [
-        {
-          "title": "Hegseth kämpft um sein Amt",
-          "url": "https://orf.at/stories/3447376/"
-        },
-        {
-          "title": "Hegseth verteidigt Iran-Krieg und kämpft um sein Amt",
-          "url": "https://orf.at/stories/3447372/"
-        },
-        {
-          "title": "Kanzler Stocker auf heikler Mission in Peking",
-          "url": "https://www.krone.at/4364560"
-        },
-        {
-          "title": "SPÖ verlor in Ära Babler eine halbe Million Wähler",
-          "url": "https://www.krone.at/4364526"
-        },
-        {
-          "title": "SPÖ verlor in Ära Babler in Umfragen rund eine halbe Million Wähler",
-          "url": "https://www.derstandard.at/story/3000000347809/sp214-verlor-in-196ra-babler-in-umfragen-rund-eine-halbe-mio-w228hler?ref=rss"
-        },
-        {
-          "title": "Adrian Pertl: „Es ist so schwierig, dafür eine Antwort zu finden“",
-          "url": "https://www.kleinezeitung.at/artikel/41417648/adrian-pertl-es-ist-so-schwierig-dafuer-eine-antwort-zu-finden"
-        },
-        {
-          "title": "Schwerer Verkehrsunfall unter Alkoholeinfluss",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261106T075900Z.txt",
-      "subtitles": "broadcasts/20261106T075900Z.vtt",
-      "subtitle_download": "broadcasts/20261106T075900Z.srt"
-    },
-    {
       "id": "20261106T155928Z",
       "kind": "broadcast",
       "title": "Nachrichten 06.11.2026 um 16:59 Uhr",
@@ -71,6 +31,38 @@
       "transcript": "broadcasts/20261106T155928Z.txt",
       "subtitles": "broadcasts/20261106T155928Z.vtt",
       "subtitle_download": "broadcasts/20261106T155928Z.srt"
+    },
+    {
+      "id": "20261106T213444Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 06.11.2026 um 22:34 Uhr",
+      "created_at": 1794000884.551287,
+      "video": "broadcasts/20261106T213444Z.mp4",
+      "sources": [
+        {
+          "title": "Südamerika-Tour: Papst freut sich auf „Rückkehr“",
+          "url": "https://www.krone.at/4365864"
+        },
+        {
+          "title": "Mehr Nachzügler, mehr Drama – aber auch mehr Niveau im Forsthaus?",
+          "url": "https://www.kleinezeitung.at/artikel/41428026/mehr-nachzuegler-mehr-drama-aber-auch-mehr-niveau-im-forsthaus"
+        },
+        {
+          "title": "Weltmeister Antonelli fährt zur Trainingsbestzeit in Brasilien",
+          "url": "https://www.derstandard.at/story/3000000347961/weltmeister-antonelli-faehrt-zur-trainingsbestzeit-in-brasilien?ref=rss"
+        },
+        {
+          "title": "Papst startet Südamerika-Reise in Uruguay",
+          "url": "https://orf.at/stories/3447471/"
+        },
+        {
+          "title": "Forstunfall in St. Radegund",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261106T213444Z.txt",
+      "subtitles": "broadcasts/20261106T213444Z.vtt",
+      "subtitle_download": "broadcasts/20261106T213444Z.srt"
     }
   ]
 }
