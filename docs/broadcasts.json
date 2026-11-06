@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261105T110445Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 05.11.2026 um 12:04 Uhr",
-      "created_at": 1793876685.344672,
-      "video": "broadcasts/20261105T110445Z.mp4",
-      "sources": [
-        {
-          "title": "Bombendrohungen gegen Flüge in Europa",
-          "url": "https://orf.at/stories/3447301/"
-        },
-        {
-          "title": "„Glaubt keiner, dass du keine fünf Millionen hast“",
-          "url": "https://www.krone.at/4362400"
-        },
-        {
-          "title": "Goldene Ehrenzeichen des Landes für Öblarnerin und Liezener",
-          "url": "https://www.kleinezeitung.at/artikel/41420005/goldene-ehrenzeichen-des-landes-fuer-oeblarnerin-und-liezener"
-        },
-        {
-          "title": "Die geheimen Ministerratsprotokolle des Ersten Weltkriegs",
-          "url": "https://www.derstandard.at/story/3000000347106/die-geheimen-ministerratsprotokolle-des-ersten-weltkriegs?ref=rss"
-        },
-        {
-          "title": "Garagenbrand: Mann verletzt",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261105T110445Z.txt",
-      "subtitles": "broadcasts/20261105T110445Z.vtt",
-      "subtitle_download": "broadcasts/20261105T110445Z.srt"
-    },
-    {
       "id": "20261105T184939Z",
       "kind": "broadcast",
       "title": "Nachrichten 05.11.2026 um 19:49 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261105T184939Z.txt",
       "subtitles": "broadcasts/20261105T184939Z.vtt",
       "subtitle_download": "broadcasts/20261105T184939Z.srt"
+    },
+    {
+      "id": "20261106T002623Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 06.11.2026 um 01:26 Uhr",
+      "created_at": 1793924783.103506,
+      "video": "broadcasts/20261106T002623Z.mp4",
+      "sources": [
+        {
+          "title": "Dämpfer für KI-Branche",
+          "url": "https://orf.at/stories/3447202/"
+        },
+        {
+          "title": "Standardrätsel E 11436",
+          "url": "https://www.derstandard.at/story/3000000346412/standardraetsel-e-11436?ref=rss"
+        },
+        {
+          "title": "Auch in Lennart Braun lebt der Traum von der NHL",
+          "url": "https://www.kleinezeitung.at/artikel/41420132/auch-in-lennart-braun-lebt-der-traum-von-der-nhl"
+        },
+        {
+          "title": "Politiker nahmen an Demonstration in Paris teil",
+          "url": "https://www.krone.at/4364355"
+        },
+        {
+          "title": "Fliegerbombe entschärft",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261106T002623Z.txt",
+      "subtitles": "broadcasts/20261106T002623Z.vtt",
+      "subtitle_download": "broadcasts/20261106T002623Z.srt"
     }
   ]
 }
