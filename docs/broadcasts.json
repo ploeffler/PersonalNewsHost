@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261106T213444Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 06.11.2026 um 22:34 Uhr",
-      "created_at": 1794000884.551287,
-      "video": "broadcasts/20261106T213444Z.mp4",
-      "sources": [
-        {
-          "title": "Südamerika-Tour: Papst freut sich auf „Rückkehr“",
-          "url": "https://www.krone.at/4365864"
-        },
-        {
-          "title": "Mehr Nachzügler, mehr Drama – aber auch mehr Niveau im Forsthaus?",
-          "url": "https://www.kleinezeitung.at/artikel/41428026/mehr-nachzuegler-mehr-drama-aber-auch-mehr-niveau-im-forsthaus"
-        },
-        {
-          "title": "Weltmeister Antonelli fährt zur Trainingsbestzeit in Brasilien",
-          "url": "https://www.derstandard.at/story/3000000347961/weltmeister-antonelli-faehrt-zur-trainingsbestzeit-in-brasilien?ref=rss"
-        },
-        {
-          "title": "Papst startet Südamerika-Reise in Uruguay",
-          "url": "https://orf.at/stories/3447471/"
-        },
-        {
-          "title": "Forstunfall in St. Radegund",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261106T213444Z.txt",
-      "subtitles": "broadcasts/20261106T213444Z.vtt",
-      "subtitle_download": "broadcasts/20261106T213444Z.srt"
-    },
-    {
       "id": "20261107T020005Z",
       "kind": "broadcast",
       "title": "Nachrichten 07.11.2026 um 03:00 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261107T020005Z.txt",
       "subtitles": "broadcasts/20261107T020005Z.vtt",
       "subtitle_download": "broadcasts/20261107T020005Z.srt"
+    },
+    {
+      "id": "20261107T085313Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 07.11.2026 um 09:53 Uhr",
+      "created_at": 1794041593.330223,
+      "video": "broadcasts/20261107T085313Z.mp4",
+      "sources": [
+        {
+          "title": "Trump vor Aus? Nun wird über Rücktritt spekuliert",
+          "url": "https://www.krone.at/4366060"
+        },
+        {
+          "title": "Raser flüchtet mit über 100 km/h vor Polizei",
+          "url": "https://www.kleinezeitung.at/artikel/41428165/raser-fluechtet-mit-ueber-100-km-h-vor-polizei"
+        },
+        {
+          "title": "87-Jähriger bei Alpinunfall im Bezirk Wiener Neustadt gestorben",
+          "url": "https://www.derstandard.at/story/3000000347975/87-j228hriger-bei-alpinunfall-im-bezirk-wiener-neustadt-gestorben?ref=rss"
+        },
+        {
+          "title": "Erneut russische Angriffe auf Energieanlagen rund um Kiew",
+          "url": "https://orf.at/stories/3447485/"
+        },
+        {
+          "title": "Einbruchsdiebstähle geklärt",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261107T085313Z.txt",
+      "subtitles": "broadcasts/20261107T085313Z.vtt",
+      "subtitle_download": "broadcasts/20261107T085313Z.srt"
     }
   ]
 }
