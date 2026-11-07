@@ -1,24 +1,18 @@
 [
   {
-    "source": "https://www.krone.at/4366060",
+    "source": "https://orf.at/stories/3447539/",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
   },
   {
-    "source": "https://www.kleinezeitung.at/artikel/41428165/raser-fluechtet-mit-ueber-100-km-h-vor-polizei",
+    "source": "https://www.krone.at/4366696",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
   },
   {
-    "source": "https://www.derstandard.at/story/3000000347975/87-j228hriger-bei-alpinunfall-im-bezirk-wiener-neustadt-gestorben?ref=rss",
-    "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
-    "original_media_retained": true
-  },
-  {
-    "source": "https://orf.at/stories/3447485/",
+    "source": "https://www.kleinezeitung.at/artikel/41413614/extremer-aufwand-so-entstehen-die-lichterwelten-am-schwarzlsee",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
@@ -26,5 +20,11 @@
   {
     "source": "",
     "image_origin": "article_metadata_or_rss"
+  },
+  {
+    "source": "https://www.krone.at/4366435",
+    "image_origin": "article_metadata_or_rss",
+    "image_processing": "neural_fsrcnn_x2",
+    "original_media_retained": true
   }
 ]

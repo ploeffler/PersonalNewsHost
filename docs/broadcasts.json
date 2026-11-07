@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261107T020005Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 07.11.2026 um 03:00 Uhr",
-      "created_at": 1794016805.38603,
-      "video": "broadcasts/20261107T020005Z.mp4",
-      "sources": [
-        {
-          "title": "Standardrätsel C 11437",
-          "url": "https://www.derstandard.at/story/3000000346413/standardraetsel-c-11437?ref=rss"
-        },
-        {
-          "title": "Paraguay: Senat enthebt Präsident Pena des Amtes",
-          "url": "https://orf.at/stories/3447479/"
-        },
-        {
-          "title": "Bürmoos mit Nullnummer statt Herbstmeistertitel",
-          "url": "https://www.krone.at/4365958"
-        },
-        {
-          "title": "Kärntner Fußball: Das große „Bierkisten-Ranking“ – das sind die Sieger",
-          "url": "https://www.kleinezeitung.at/artikel/41424578/kaerntner-fussball-das-grosse-bierkisten-ranking-das-sind-die-sieger"
-        },
-        {
-          "title": "Forstunfall in St. Radegund",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261107T020005Z.txt",
-      "subtitles": "broadcasts/20261107T020005Z.vtt",
-      "subtitle_download": "broadcasts/20261107T020005Z.srt"
-    },
-    {
       "id": "20261107T085313Z",
       "kind": "broadcast",
       "title": "Nachrichten 07.11.2026 um 09:53 Uhr",
@@ -63,6 +31,42 @@
       "transcript": "broadcasts/20261107T085313Z.txt",
       "subtitles": "broadcasts/20261107T085313Z.vtt",
       "subtitle_download": "broadcasts/20261107T085313Z.srt"
+    },
+    {
+      "id": "20261107T154340Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 07.11.2026 um 16:43 Uhr",
+      "created_at": 1794066220.643922,
+      "video": "broadcasts/20261107T154340Z.mp4",
+      "sources": [
+        {
+          "title": "Huthi: Tote bei Luftangriffen auf Sanaa",
+          "url": "https://orf.at/stories/3447539/"
+        },
+        {
+          "title": "Huthi: Tote bei Luftangriffen auf Jemens Hauptstadt Sanaa",
+          "url": "https://www.derstandard.at/story/3000000348018/huthi-tote-bei-luftangriffen-auf-jemens-hauptstadt-sanaa?ref=rss"
+        },
+        {
+          "title": "Mann schoss in Krakau aus fahrendem Auto: 5 Tote",
+          "url": "https://www.krone.at/4366696"
+        },
+        {
+          "title": "„Extremer Aufwand“: So entstehen die Lichterwelten am Schwarzlsee",
+          "url": "https://www.kleinezeitung.at/artikel/41413614/extremer-aufwand-so-entstehen-die-lichterwelten-am-schwarzlsee"
+        },
+        {
+          "title": "Schwerpunktstreife: Festnahme nach Flucht und Raser gestoppt",
+          "url": ""
+        },
+        {
+          "title": "„Manipulation“: Klitschko greift Selenskyj an",
+          "url": "https://www.krone.at/4366435"
+        }
+      ],
+      "transcript": "broadcasts/20261107T154340Z.txt",
+      "subtitles": "broadcasts/20261107T154340Z.vtt",
+      "subtitle_download": "broadcasts/20261107T154340Z.srt"
     }
   ]
 }
