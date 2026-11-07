@@ -4,7 +4,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "fd00adf868773c155ae56346",
+    "pipeline_group_id": "61cdaf6e0ed8d4ee26807105",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -12,15 +12,9 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "db7476927a2958b8964e0d7e",
+          "source_id": "56ed23d7776dd31d4da2bae0",
           "supported": true,
-          "quote": "Bei Luftangriffen in der jemenitischen Hauptstadt Sanaa sind nach Angaben der Huthi mindestens 25 Menschen getötet worden."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "4dba880221eecd764a10882f",
-          "supported": true,
-          "quote": "Laut einem Huthi-nahen TV-Sender wurden mindestens 25 Menschen getötet und 30 verletzt."
+          "quote": "Israelischen Medien zufolge hat Israels Präsident Herzog Gadi Eisenkot mit der Regierungsbildung beauftragt, obwohl auch sein Block keine klare Mehrheit hat."
         }
       ],
       "conflicts": [],
@@ -33,7 +27,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "3046005c0b0a02bedc1ae0bb",
+    "pipeline_group_id": "5b30b3808546212ee8753219",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -41,15 +35,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "c1cc3ef30c64557bb61979e5",
+          "source_id": "63ca0bcb21147c45233f7561",
           "supported": true,
-          "quote": "Am Samstagnachmittag sind im Zentrum der polnischen Stadt Krakau Schüsse gefallen."
+          "quote": "Zu einem nicht gerade alltäglichen Einsatz rückten die Experten der Österreichischen Tierrettung kürzlich aus."
         },
         {
           "claim_index": 1,
-          "source_id": "c1cc3ef30c64557bb61979e5",
+          "source_id": "63ca0bcb21147c45233f7561",
           "supported": true,
-          "quote": "Mindestens fünf Personen sind ums Leben gekommen, wie mehrere Medien berichten."
+          "quote": "Im Lager einer Drogerie in der Gemeinde Wals-Siezenheim wurde ein Rotkehlchen gefunden, das offensichtlich nicht mehr fliegen konnte."
         }
       ],
       "conflicts": [],
@@ -62,7 +56,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "698035247327458bc13d6cf5",
+    "pipeline_group_id": "58cec9de31b6c5ae58d054fe",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -70,15 +64,38 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "75ed43e304b35a8fd937e623",
+          "source_id": "78248ebe2f4d0f4e1053bff1",
           "supported": true,
-          "quote": "Schon seit Wochen läuft der Aufbau für den größten Lichterpark der Steiermark südlich von Graz."
+          "quote": "In Israel ist Oppositionspolitiker Gadi Eisenkot mit der Bildung einer neuen Regierung beauftragt worden."
         },
         {
           "claim_index": 1,
-          "source_id": "75ed43e304b35a8fd937e623",
+          "source_id": "78248ebe2f4d0f4e1053bff1",
           "supported": true,
-          "quote": "Ab 14. November wird der Parcours dort zum Strahlen gebracht – und die Besucher auch."
+          "quote": "Präsident Jizchak Herzog habe eine entsprechende Entscheidung getroffen, berichteten israelische Medien heute Abend."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "40a3d6f5dae8d921fc85c0be",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "21420007a74d605f414587d5",
+          "supported": true,
+          "quote": "Die Verdächtigen, drei Männer und eine Frau aus dem Suchtgiftmilieu, konnten noch beim Verlassen des Wohnhauses von der Polizei festgenommen werden."
         }
       ],
       "conflicts": [],
@@ -108,35 +125,6 @@
           "source_id": "84e5e2fad00454e606dfc829",
           "supported": true,
           "quote": "Polizisten nahmen einen 28-jährigen Lenker nach einer Flucht fest und zogen zwei Raser aus dem Verkehr."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "1a61e53e54cfb4650c491fd7",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "fa91c75bdec5757fda0a7524",
-          "supported": true,
-          "quote": "Kiew war in der Nacht auf Samstag wieder einem Raketen- und Bombenhagel aus Russland ausgesetzt."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "fa91c75bdec5757fda0a7524",
-          "supported": true,
-          "quote": "Die Folge: schwere Probleme bei der Stromversorgung der ukrainischen Hauptstadt – und für die macht Präsident Wolodymyr Selenskyj nicht nur den Kreml, sondern auch Bürgermeister Vitali Klitschko verantwortlich."
         }
       ],
       "conflicts": [],

@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261107T085313Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 07.11.2026 um 09:53 Uhr",
-      "created_at": 1794041593.330223,
-      "video": "broadcasts/20261107T085313Z.mp4",
-      "sources": [
-        {
-          "title": "Trump vor Aus? Nun wird über Rücktritt spekuliert",
-          "url": "https://www.krone.at/4366060"
-        },
-        {
-          "title": "Raser flüchtet mit über 100 km/h vor Polizei",
-          "url": "https://www.kleinezeitung.at/artikel/41428165/raser-fluechtet-mit-ueber-100-km-h-vor-polizei"
-        },
-        {
-          "title": "87-Jähriger bei Alpinunfall im Bezirk Wiener Neustadt gestorben",
-          "url": "https://www.derstandard.at/story/3000000347975/87-j228hriger-bei-alpinunfall-im-bezirk-wiener-neustadt-gestorben?ref=rss"
-        },
-        {
-          "title": "Erneut russische Angriffe auf Energieanlagen rund um Kiew",
-          "url": "https://orf.at/stories/3447485/"
-        },
-        {
-          "title": "Einbruchsdiebstähle geklärt",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261107T085313Z.txt",
-      "subtitles": "broadcasts/20261107T085313Z.vtt",
-      "subtitle_download": "broadcasts/20261107T085313Z.srt"
-    },
-    {
       "id": "20261107T154340Z",
       "kind": "broadcast",
       "title": "Nachrichten 07.11.2026 um 16:43 Uhr",
@@ -67,6 +35,38 @@
       "transcript": "broadcasts/20261107T154340Z.txt",
       "subtitles": "broadcasts/20261107T154340Z.vtt",
       "subtitle_download": "broadcasts/20261107T154340Z.srt"
+    },
+    {
+      "id": "20261107T201721Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 07.11.2026 um 21:17 Uhr",
+      "created_at": 1794082641.178534,
+      "video": "broadcasts/20261107T201721Z.mp4",
+      "sources": [
+        {
+          "title": "Netanjahu-Rivale Einsenkot mit Regierungsbildung in Israel beauftragt",
+          "url": "https://www.derstandard.at/story/3000000348036/netanjahu-rivale-einsenkot-mit-regierungsbildung-in-israel-beauftragt?ref=rss"
+        },
+        {
+          "title": "Tierretter-Team befreite hilfloses Rotkehlchen",
+          "url": "https://www.krone.at/4367264"
+        },
+        {
+          "title": "Israel: Eisenkot erhält Regierungsbildungsauftrag",
+          "url": "https://orf.at/stories/3447553/"
+        },
+        {
+          "title": "Kärntner traten Türe ein und besprühten Bewohner mit Pfefferspray",
+          "url": "https://www.kleinezeitung.at/artikel/41429763/kaerntner-traten-tuere-ein-und-bespruehten-bewohner-mit-pfefferspray"
+        },
+        {
+          "title": "Schwerpunktstreife: Festnahme nach Flucht und Raser gestoppt",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261107T201721Z.txt",
+      "subtitles": "broadcasts/20261107T201721Z.vtt",
+      "subtitle_download": "broadcasts/20261107T201721Z.srt"
     }
   ]
 }
