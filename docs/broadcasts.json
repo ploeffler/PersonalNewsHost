@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261106T155928Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 06.11.2026 um 16:59 Uhr",
-      "created_at": 1793980768.429105,
-      "video": "broadcasts/20261106T155928Z.mp4",
-      "sources": [
-        {
-          "title": "Diese Frau soll deutsche Bundespräsidentin werden",
-          "url": "https://www.krone.at/4365386"
-        },
-        {
-          "title": "Jemen: Viele Tote bei Angriff in Provinz Taiz",
-          "url": "https://orf.at/stories/3447449/"
-        },
-        {
-          "title": "Theatergruppe Deutsch Goritz sammelt für krebskranken Stradener",
-          "url": "https://www.kleinezeitung.at/artikel/41425910/theatergruppe-deutsch-goritz-sammelt-fuer-krebskranken-stradener"
-        },
-        {
-          "title": "Festnahme von Meghans Vater: Verdacht auf Besitz von Missbrauchsdarstellungen",
-          "url": "https://www.derstandard.at/story/3000000347943/festnahme-von-meghans-vater-verdacht-auf-besitz-von-missbrauchsdarstellungen?ref=rss"
-        },
-        {
-          "title": "Rascher Fahndungserfolg nach Messerattacke",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261106T155928Z.txt",
-      "subtitles": "broadcasts/20261106T155928Z.vtt",
-      "subtitle_download": "broadcasts/20261106T155928Z.srt"
-    },
-    {
       "id": "20261106T213444Z",
       "kind": "broadcast",
       "title": "Nachrichten 06.11.2026 um 22:34 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261106T213444Z.txt",
       "subtitles": "broadcasts/20261106T213444Z.vtt",
       "subtitle_download": "broadcasts/20261106T213444Z.srt"
+    },
+    {
+      "id": "20261107T020005Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 07.11.2026 um 03:00 Uhr",
+      "created_at": 1794016805.38603,
+      "video": "broadcasts/20261107T020005Z.mp4",
+      "sources": [
+        {
+          "title": "Standardrätsel C 11437",
+          "url": "https://www.derstandard.at/story/3000000346413/standardraetsel-c-11437?ref=rss"
+        },
+        {
+          "title": "Paraguay: Senat enthebt Präsident Pena des Amtes",
+          "url": "https://orf.at/stories/3447479/"
+        },
+        {
+          "title": "Bürmoos mit Nullnummer statt Herbstmeistertitel",
+          "url": "https://www.krone.at/4365958"
+        },
+        {
+          "title": "Kärntner Fußball: Das große „Bierkisten-Ranking“ – das sind die Sieger",
+          "url": "https://www.kleinezeitung.at/artikel/41424578/kaerntner-fussball-das-grosse-bierkisten-ranking-das-sind-die-sieger"
+        },
+        {
+          "title": "Forstunfall in St. Radegund",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261107T020005Z.txt",
+      "subtitles": "broadcasts/20261107T020005Z.vtt",
+      "subtitle_download": "broadcasts/20261107T020005Z.srt"
     }
   ]
 }

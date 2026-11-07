@@ -4,7 +4,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "7af58ac2385c0811292021f7",
+    "pipeline_group_id": "0166fc7f8d9a53ee8a8b3bdd",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -12,15 +12,38 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "461adb47b94ad9cdfdbab234",
+          "source_id": "3c88e8512a493dfbc8a79cbb",
           "supported": true,
-          "quote": "hat seine zwölftägige Südamerika-Reise am Freitag begonnen und ist am Abend in Uruguays Hauptstadt Montevideo gelandet."
+          "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Phoenixen-Rätsel des STANDARD."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "ae06a5b696782fe26092db81",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "91eae723ae96e3924ab493d7",
+          "supported": true,
+          "quote": "Inmitten der Regierungskrise in Paraguay infolge eines Bankenskandals hat der Senat Präsident Santiago Pena des Amtes enthoben."
         },
         {
           "claim_index": 1,
-          "source_id": "461adb47b94ad9cdfdbab234",
+          "source_id": "91eae723ae96e3924ab493d7",
           "supported": true,
-          "quote": "Wegen seiner Krebserkrankung hatte es in den vergangenen Wochen Zweifel gegeben, ob der 71-Jährige die Reise überhaupt antreten kann."
+          "quote": "Das Votum der Parlamentskammer fiel gestern einstimmig aus: Alle 44 anwesenden Senatoren und Senatorinnen stimmten dafür, den rechtsgerichteten Pena abzusetzen."
         }
       ],
       "conflicts": [],
@@ -33,7 +56,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "da028bfceb78c8c3ccbb5b86",
+    "pipeline_group_id": "eb5fb64ab7cb786d3a11e03b",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -41,61 +64,44 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "a1db5ea52b56fc89c3ddca41",
+          "source_id": "1696248f922b65eca1a9dd97",
           "supported": true,
-          "quote": "In der aktuellen Folge der ATV-Sendung „Forsthaus Rampensau“ zieht ein neues Vater-Sohn-Duo ins Almhaus ein, die Allianzen spitzen sich zu und Tränen fließen."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "5c3f2e75da52422d112a12bf",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "9d3830db01adfa2148a526e4",
-          "supported": true,
-          "quote": "Im zweiten Training von Interlagos distanzierte der neue Champion die Konkurrenz."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "49f5a71e69bd231ad0f51e4f",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "dbd0fa72a7b6b09a35011a36",
-          "supported": true,
-          "quote": "Zum Auftakt einer zwölftägigen Südamerika-Reise ist Papst Leo XIV."
+          "quote": "Eigentlich war alles angerichtet!"
         },
         {
           "claim_index": 1,
-          "source_id": "dbd0fa72a7b6b09a35011a36",
+          "source_id": "1696248f922b65eca1a9dd97",
           "supported": true,
-          "quote": "heute in Uruguay angekommen."
+          "quote": "Mit einem Heimsieg gegen Golling hätte sich Bürmoos vorzeitig die Herbstkrone in der Salzburger Liga sichern können."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "d5eee91e90523fe3da26be84",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "2c0475866f1ae477fad9c5d9",
+          "supported": true,
+          "quote": "Der Grunddurchgang in der Regionalliga Süd und die Hinrunde in der Kärntner Liga sind abgeschlossen – und damit auch das Kleine Zeitung-„Bierkisten-Ranking“."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "2c0475866f1ae477fad9c5d9",
+          "supported": true,
+          "quote": "Hier gibt‘s alle Namen!"
         }
       ],
       "conflicts": [],
