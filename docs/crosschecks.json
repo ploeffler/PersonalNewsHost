@@ -4,7 +4,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "61cdaf6e0ed8d4ee26807105",
+    "pipeline_group_id": "9d9153b420e06cd2352a8389",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -12,38 +12,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "56ed23d7776dd31d4da2bae0",
+          "source_id": "d5f447bd583c488179f0d3d2",
           "supported": true,
-          "quote": "Israelischen Medien zufolge hat Israels Präsident Herzog Gadi Eisenkot mit der Regierungsbildung beauftragt, obwohl auch sein Block keine klare Mehrheit hat."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "5b30b3808546212ee8753219",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "63ca0bcb21147c45233f7561",
-          "supported": true,
-          "quote": "Zu einem nicht gerade alltäglichen Einsatz rückten die Experten der Österreichischen Tierrettung kürzlich aus."
+          "quote": "Die polnische Stadt Krakau ist nach dem rechtsextremen Anschlag mitten am Markplatz in Schockstarre."
         },
         {
           "claim_index": 1,
-          "source_id": "63ca0bcb21147c45233f7561",
+          "source_id": "d5f447bd583c488179f0d3d2",
           "supported": true,
-          "quote": "Im Lager einer Drogerie in der Gemeinde Wals-Siezenheim wurde ein Rotkehlchen gefunden, das offensichtlich nicht mehr fliegen konnte."
+          "quote": "Augenzeugen schildern die grausamen Momente, aber auch den Mut vieler: „Die Leute zogen ihre Hemden aus, um die Blutungen der am Boden Liegenden zu stillen“, so einer von vielen, die zusehen mussten, wie am Samstag sechs Passanten erschossen wurden."
         }
       ],
       "conflicts": [],
@@ -56,7 +33,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "58cec9de31b6c5ae58d054fe",
+    "pipeline_group_id": "70e06c97239aabc3a51cea2a",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -64,15 +41,38 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "78248ebe2f4d0f4e1053bff1",
+          "source_id": "602d20d0e20d1e9bdc6130bf",
           "supported": true,
-          "quote": "In Israel ist Oppositionspolitiker Gadi Eisenkot mit der Bildung einer neuen Regierung beauftragt worden."
+          "quote": "Valverde, Güler und Mbappé sorgten für den Sieg der Mourinho-Elf."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "f72325ddc459154a3f7c90c0",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "fce47757f304b790399e6f1c",
+          "supported": true,
+          "quote": "Nach dem tödlichen Schussangriff im Zentrum der polnischen Stadt Krakau hat Polens Premier Donald Tusk von einem Akt des „Terrorismus“ gesprochen."
         },
         {
           "claim_index": 1,
-          "source_id": "78248ebe2f4d0f4e1053bff1",
+          "source_id": "fce47757f304b790399e6f1c",
           "supported": true,
-          "quote": "Präsident Jizchak Herzog habe eine entsprechende Entscheidung getroffen, berichteten israelische Medien heute Abend."
+          "quote": "Ein Mann hatte Samstagnachmittag sechs Menschen erschossen."
         }
       ],
       "conflicts": [],
@@ -85,7 +85,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "40a3d6f5dae8d921fc85c0be",
+    "pipeline_group_id": "41d45fe7bb4d50ed977d3270",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -93,9 +93,9 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "21420007a74d605f414587d5",
+          "source_id": "1cc2ec584fff34a999cbb34d",
           "supported": true,
-          "quote": "Die Verdächtigen, drei Männer und eine Frau aus dem Suchtgiftmilieu, konnten noch beim Verlassen des Wohnhauses von der Polizei festgenommen werden."
+          "quote": "Nach dem Grundsatzparteitag der Tiroler ÖVP am Samstag im Innsbrucker Congress hat die Landespartei ein Jahr vor der Landtagswahl zwecks Mobilisierung auf..."
         }
       ],
       "conflicts": [],
