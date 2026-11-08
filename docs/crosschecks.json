@@ -4,7 +4,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "9d9153b420e06cd2352a8389",
+    "pipeline_group_id": "abea200c20d01bdb6bbf0c19",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -12,15 +12,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "d5f447bd583c488179f0d3d2",
+          "source_id": "a4af10f4f37610e909ed1a8c",
           "supported": true,
-          "quote": "Die polnische Stadt Krakau ist nach dem rechtsextremen Anschlag mitten am Markplatz in Schockstarre."
+          "quote": "Im Wohnhaus des Schützen wurden drei weitere tote Personen gefunden."
         },
         {
           "claim_index": 1,
-          "source_id": "d5f447bd583c488179f0d3d2",
+          "source_id": "a4af10f4f37610e909ed1a8c",
           "supported": true,
-          "quote": "Augenzeugen schildern die grausamen Momente, aber auch den Mut vieler: „Die Leute zogen ihre Hemden aus, um die Blutungen der am Boden Liegenden zu stillen“, so einer von vielen, die zusehen mussten, wie am Samstag sechs Passanten erschossen wurden."
+          "quote": "Die Ermittlungen laufen."
         }
       ],
       "conflicts": [],
@@ -33,7 +33,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "70e06c97239aabc3a51cea2a",
+    "pipeline_group_id": "4a037c696c9ff0902369d4e0",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -41,9 +41,44 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "602d20d0e20d1e9bdc6130bf",
+          "source_id": "8259157b22f817ee1e49c465",
           "supported": true,
-          "quote": "Valverde, Güler und Mbappé sorgten für den Sieg der Mourinho-Elf."
+          "quote": "Die Zahl ist beeindruckend: 800.000 Menschen sind in Niederösterreich freiwillig aktiv."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "8259157b22f817ee1e49c465",
+          "supported": true,
+          "quote": "Im Rahmen der „Krone Herzensmensch“-Aktion wurden nun besonders engagierte Personen, Vereine und Gemeinden prämiert."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "076c4a99e13cf0365e5984d8",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "76ef2cf7ecebbb9d93c6951e",
+          "supported": true,
+          "quote": "Sabine Ambrosius, Welterbe-Hüterin für Graz, rät von der Schwächung der Altstadtkommission dringend ab."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "76ef2cf7ecebbb9d93c6951e",
+          "supported": true,
+          "quote": "Die Berliner Icomos-Expertin warnt vor Verfahren, die dann bis zur Unesco gehen müssen."
         }
       ],
       "conflicts": [],
@@ -73,29 +108,6 @@
           "source_id": "fce47757f304b790399e6f1c",
           "supported": true,
           "quote": "Ein Mann hatte Samstagnachmittag sechs Menschen erschossen."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "41d45fe7bb4d50ed977d3270",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "1cc2ec584fff34a999cbb34d",
-          "supported": true,
-          "quote": "Nach dem Grundsatzparteitag der Tiroler ÖVP am Samstag im Innsbrucker Congress hat die Landespartei ein Jahr vor der Landtagswahl zwecks Mobilisierung auf..."
         }
       ],
       "conflicts": [],

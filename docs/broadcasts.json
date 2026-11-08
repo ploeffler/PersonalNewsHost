@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261107T201721Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 07.11.2026 um 21:17 Uhr",
-      "created_at": 1794082641.178534,
-      "video": "broadcasts/20261107T201721Z.mp4",
-      "sources": [
-        {
-          "title": "Netanjahu-Rivale Einsenkot mit Regierungsbildung in Israel beauftragt",
-          "url": "https://www.derstandard.at/story/3000000348036/netanjahu-rivale-einsenkot-mit-regierungsbildung-in-israel-beauftragt?ref=rss"
-        },
-        {
-          "title": "Tierretter-Team befreite hilfloses Rotkehlchen",
-          "url": "https://www.krone.at/4367264"
-        },
-        {
-          "title": "Israel: Eisenkot erhält Regierungsbildungsauftrag",
-          "url": "https://orf.at/stories/3447553/"
-        },
-        {
-          "title": "Kärntner traten Türe ein und besprühten Bewohner mit Pfefferspray",
-          "url": "https://www.kleinezeitung.at/artikel/41429763/kaerntner-traten-tuere-ein-und-bespruehten-bewohner-mit-pfefferspray"
-        },
-        {
-          "title": "Schwerpunktstreife: Festnahme nach Flucht und Raser gestoppt",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261107T201721Z.txt",
-      "subtitles": "broadcasts/20261107T201721Z.vtt",
-      "subtitle_download": "broadcasts/20261107T201721Z.srt"
-    },
-    {
       "id": "20261107T234257Z",
       "kind": "broadcast",
       "title": "Nachrichten 08.11.2026 um 00:42 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261107T234257Z.txt",
       "subtitles": "broadcasts/20261107T234257Z.vtt",
       "subtitle_download": "broadcasts/20261107T234257Z.srt"
+    },
+    {
+      "id": "20261108T061209Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 08.11.2026 um 07:12 Uhr",
+      "created_at": 1794118329.663735,
+      "video": "broadcasts/20261108T061209Z.mp4",
+      "sources": [
+        {
+          "title": "Mindestens sechs Tote in Krakau: Polens Ministerpräsident spricht von \"Terrorismus\"",
+          "url": "https://www.derstandard.at/story/3000000348045/anschlag-in-krakau-eine-verletzte-person-aus-214sterreich?ref=rss"
+        },
+        {
+          "title": "Herzensmensch-Gala mit viel Emotion und „Waldfee“",
+          "url": "https://www.krone.at/4366265"
+        },
+        {
+          "title": "Altstadtschutz: „Investoren werden diese Lücken finden und nützen“",
+          "url": "https://www.kleinezeitung.at/artikel/41427250/altstadtschutz-investoren-werden-diese-luecken-finden-und-nuetzen"
+        },
+        {
+          "title": "Schussangriff laut Tusk „Terrorismus“",
+          "url": "https://orf.at/stories/3447559/"
+        },
+        {
+          "title": "Schwerpunktstreife: Festnahme nach Flucht und Raser gestoppt",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261108T061209Z.txt",
+      "subtitles": "broadcasts/20261108T061209Z.vtt",
+      "subtitle_download": "broadcasts/20261108T061209Z.srt"
     }
   ]
 }
