@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261108T061209Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 08.11.2026 um 07:12 Uhr",
-      "created_at": 1794118329.663735,
-      "video": "broadcasts/20261108T061209Z.mp4",
-      "sources": [
-        {
-          "title": "Mindestens sechs Tote in Krakau: Polens Ministerpräsident spricht von \"Terrorismus\"",
-          "url": "https://www.derstandard.at/story/3000000348045/anschlag-in-krakau-eine-verletzte-person-aus-214sterreich?ref=rss"
-        },
-        {
-          "title": "Herzensmensch-Gala mit viel Emotion und „Waldfee“",
-          "url": "https://www.krone.at/4366265"
-        },
-        {
-          "title": "Altstadtschutz: „Investoren werden diese Lücken finden und nützen“",
-          "url": "https://www.kleinezeitung.at/artikel/41427250/altstadtschutz-investoren-werden-diese-luecken-finden-und-nuetzen"
-        },
-        {
-          "title": "Schussangriff laut Tusk „Terrorismus“",
-          "url": "https://orf.at/stories/3447559/"
-        },
-        {
-          "title": "Schwerpunktstreife: Festnahme nach Flucht und Raser gestoppt",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261108T061209Z.txt",
-      "subtitles": "broadcasts/20261108T061209Z.vtt",
-      "subtitle_download": "broadcasts/20261108T061209Z.srt"
-    },
-    {
       "id": "20261108T133423Z",
       "kind": "broadcast",
       "title": "Nachrichten 08.11.2026 um 14:34 Uhr",
@@ -67,6 +35,38 @@
       "transcript": "broadcasts/20261108T133423Z.txt",
       "subtitles": "broadcasts/20261108T133423Z.vtt",
       "subtitle_download": "broadcasts/20261108T133423Z.srt"
+    },
+    {
+      "id": "20261108T185309Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 08.11.2026 um 19:53 Uhr",
+      "created_at": 1794163989.797636,
+      "video": "broadcasts/20261108T185309Z.mp4",
+      "sources": [
+        {
+          "title": "Brighton neuer Zweiter, Manchester United spielt 4:4 gegen Aston Villa",
+          "url": "https://www.derstandard.at/story/3000000348115/brighton-neuer-zweiter-manchester-united-spielt-44-gegen-aston-villa?ref=rss"
+        },
+        {
+          "title": "Sechs Drogenlenker wurden am Wochenende gestoppt",
+          "url": "https://www.krone.at/4368082"
+        },
+        {
+          "title": "Krakau: Terrorismusexperte Neumann im Studio",
+          "url": "https://orf.at/stories/3447627/"
+        },
+        {
+          "title": "Kärntner Fußballverein startet mit besonderem Team durch",
+          "url": "https://www.kleinezeitung.at/artikel/41424826/kaerntner-fussballverein-startet-mit-besonderem-team-durch"
+        },
+        {
+          "title": "Pkw mit Wildschwein kollidiert",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261108T185309Z.txt",
+      "subtitles": "broadcasts/20261108T185309Z.vtt",
+      "subtitle_download": "broadcasts/20261108T185309Z.srt"
     }
   ]
 }
