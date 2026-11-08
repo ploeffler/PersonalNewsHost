@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261107T234257Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 08.11.2026 um 00:42 Uhr",
-      "created_at": 1794094977.2768,
-      "video": "broadcasts/20261107T234257Z.mp4",
-      "sources": [
-        {
-          "title": "„Leute zogen ihre Hemden aus, um Opfern zu helfen“",
-          "url": "https://www.krone.at/4367332"
-        },
-        {
-          "title": "Achter Sieg in Folge: Real gewann in Valencia 3:0",
-          "url": "https://www.derstandard.at/story/3000000348044/fu223ball-achter-sieg-in-folge-real-gewann-in-valencia-30?ref=rss"
-        },
-        {
-          "title": "Schussangriff laut Tusk „Terrorismus“",
-          "url": "https://orf.at/stories/3447559/"
-        },
-        {
-          "title": "Mattle und Söder als bürgerliche \"Wertegemeinschaft\"",
-          "url": "https://www.kleinezeitung.at/artikel/41429810/mattle-und-soeder-als-buergerliche-wertegemeinschaft"
-        },
-        {
-          "title": "Schwerpunktstreife: Festnahme nach Flucht und Raser gestoppt",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261107T234257Z.txt",
-      "subtitles": "broadcasts/20261107T234257Z.vtt",
-      "subtitle_download": "broadcasts/20261107T234257Z.srt"
-    },
-    {
       "id": "20261108T061209Z",
       "kind": "broadcast",
       "title": "Nachrichten 08.11.2026 um 07:12 Uhr",
@@ -63,6 +31,42 @@
       "transcript": "broadcasts/20261108T061209Z.txt",
       "subtitles": "broadcasts/20261108T061209Z.vtt",
       "subtitle_download": "broadcasts/20261108T061209Z.srt"
+    },
+    {
+      "id": "20261108T133423Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 08.11.2026 um 14:34 Uhr",
+      "created_at": 1794144863.267056,
+      "video": "broadcasts/20261108T133423Z.mp4",
+      "sources": [
+        {
+          "title": "Klangforum Wien zwischen Fanfaren und Erdbebenrhythmen",
+          "url": "https://www.derstandard.at/story/3000000348085/klangforum-wien-zwischen-fanfaren-und-erdbebenrhythmen?ref=rss"
+        },
+        {
+          "title": "Anschlag in Krakau: Österreicherin unter Toten",
+          "url": "https://www.krone.at/4367805"
+        },
+        {
+          "title": "100 Jahre Strasser Harmonikas: Auch ein Silbereisen war mit dabei",
+          "url": "https://www.kleinezeitung.at/artikel/41430868/100-jahre-strasser-harmonikas-auch-ein-silbereisen-war-mit-dabei"
+        },
+        {
+          "title": "Österreicherin bei Anschlag gestorben",
+          "url": "https://orf.at/stories/3447600/"
+        },
+        {
+          "title": "Österreicherin bei Anschlag in Krakau gestorben",
+          "url": "https://orf.at/stories/3447599/"
+        },
+        {
+          "title": "Pkw mit Wildschwein kollidiert",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261108T133423Z.txt",
+      "subtitles": "broadcasts/20261108T133423Z.vtt",
+      "subtitle_download": "broadcasts/20261108T133423Z.srt"
     }
   ]
 }
