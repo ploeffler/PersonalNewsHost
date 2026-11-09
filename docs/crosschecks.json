@@ -4,6 +4,58 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
+    "pipeline_group_id": "7efad95044b9cbe900094698",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "105ab98b3f7f5c49925848f9",
+          "supported": true,
+          "quote": "Zahlreiche Gerichtsurteile sagen eindeutig: Die von Banken verrechneten Kreditbearbeitungsgebühren sind rechtswidrig und müssen rückerstattet werden!"
+        },
+        {
+          "claim_index": 1,
+          "source_id": "105ab98b3f7f5c49925848f9",
+          "supported": true,
+          "quote": "Der Europäischer Konsumenten(schutz)verein – EKV hat vielen Betroffenen geholfen, ihr Geld zurückzuholen."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "b61e3c22a34497e414111c84",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "c6b726f0c6da6adfc18b27ed",
+          "supported": true,
+          "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
     "pipeline_group_id": "a0fa0026e4c1ffe4a3a7614a",
     "verification": {
       "status": "approved",
@@ -21,64 +73,6 @@
           "source_id": "3eb4960ce5730e90fbc52135",
           "supported": true,
           "quote": "Ausschlaggebend für die Erfolge war dabei stets eine hohe Wahlbeteiligung."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "d7515bb952d048b1deb126c2",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "49d6db0bdff40c73dfebdfab",
-          "supported": true,
-          "quote": "Fermin Lopez traf beim 2:1-Sieg der Katalanen doppelt."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "49d6db0bdff40c73dfebdfab",
-          "supported": true,
-          "quote": "Den entscheidenden Treffer bereitete Lamine Yamal vor."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "6280d769603865fa52776483",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "4068d7e842a748d4255afe52",
-          "supported": true,
-          "quote": "Es ist eine Nachricht, die in ihrer Heimat tiefe Trauer und Fassungslosigkeit auslöst: Jene Österreicherin, die bei dem blutigen Anschlag in Krakau ums Leben kam, war erst 51 Jahre alt und stammte aus dem niederösterreichischen Marchfeld."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "4068d7e842a748d4255afe52",
-          "supported": true,
-          "quote": "Ihr Ehemann wurde bei dem Angriff ebenfalls verletzt, befindet sich aber zum Glück nicht in Lebensgefahr."
         }
       ],
       "conflicts": [],

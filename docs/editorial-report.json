@@ -1,14 +1,77 @@
 {
   "version": 1,
   "mode": "production",
-  "generated_at": 1794178628.959643,
-  "source_updated_at": 1794178599.9694,
-  "source_digest": "0e7140a27454b495afa4a9fbdbae1aa7c1c62a382426762684465cc853f80633",
+  "generated_at": 1794192224.867421,
+  "source_updated_at": 1794192192.640153,
+  "source_digest": "34b17b3ff0bc249abf53487c41fa765b7eadd3df037217e89a0672d57a168377",
   "scope": "stored_source_support",
   "method": "local_extractive_multi_source",
   "independent_fact_check": false,
   "max_sentences": 2,
   "sources": {
+    "105ab98b3f7f5c49925848f9": {
+      "id": "105ab98b3f7f5c49925848f9",
+      "title": "Illegale Kreditgebühren: Holen Sie Ihr Geld zurück",
+      "text": "Zahlreiche Gerichtsurteile sagen eindeutig: Die von Banken verrechneten Kreditbearbeitungsgebühren sind rechtswidrig und müssen rückerstattet werden! Der Europäischer Konsumenten(schutz)verein – EKV hat vielen Betroffenen geholfen, ihr Geld zurückzuholen. Lassen Sie Ihren Vertrag kostenlos prüfen und setzen Sie ihr Recht risikofrei durch!",
+      "url": "https://www.krone.at/4364704",
+      "published_at": 1794178911.0,
+      "first_seen_at": 1794190109.81259,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4364885/vc8f6ca/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4364885/vc8f6ca/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4364885/vc8f6ca/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4364885/vc8f6ca/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Zahlreiche Gerichtsurteile sagen eindeutig: Die von Banken verrechneten Kreditbearbeitungsgebühren sind rechtswidrig und müssen rückerstattet werden! Der Europäischer Konsumenten(schutz)verein – EKV hat vielen Betroffenen geholfen, ihr Geld zurückzuholen. Lassen Sie Ihren Vertrag kostenlos prüfen und setzen Sie ihr Recht risikofrei durch!",
+      "rss_revision_at": 1794178911.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "krone.at"
+    },
+    "c6b726f0c6da6adfc18b27ed": {
+      "id": "c6b726f0c6da6adfc18b27ed",
+      "title": "Standardrätsel C 11438",
+      "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
+      "url": "https://www.derstandard.at/story/3000000347077/standardraetsel-c-11438?ref=rss",
+      "published_at": 1794178860.0,
+      "first_seen_at": 1794190109.81259,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/eqM6Eg/rs:fill:150:0/plain/lido-images/2023/05/19/17b073a2-2297-406c-a459-faf4e5a469ef.png",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
+      "rss_revision_at": 1794178860.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347077/standardraetsel-c-11438?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000347077/standardraetsel-c-11438?ref=rss",
+        "last_attempt_at": 1794190109.81259,
+        "rss_fingerprint": "d58785022cdcc1cf69347480ae6d6c9d857916fd7519144c2a766d3f736deba8"
+      },
+      "publisher": "derstandard.at"
+    },
     "3eb4960ce5730e90fbc52135": {
       "id": "3eb4960ce5730e90fbc52135",
       "title": "Mobilisierung als Front gegen Autoritarismus",
@@ -24,6 +87,8 @@
       "rss_revision_at": 1794177971.0,
       "content_kind": "news",
       "text_origin": "rss",
+      "broadcast_id": "20261108T225710Z",
+      "broadcast_position": 1,
       "publisher": "orf.at"
     },
     "49d6db0bdff40c73dfebdfab": {
@@ -53,6 +118,8 @@
         "last_attempt_at": 1794178599.9694,
         "rss_fingerprint": "d3559bea8187359f0001ca7406b5053bfeec9d5627da21214fe3a203fc9d1c45"
       },
+      "broadcast_id": "20261108T225710Z",
+      "broadcast_position": 2,
       "publisher": "derstandard.at"
     },
     "4068d7e842a748d4255afe52": {
@@ -87,6 +154,8 @@
       "rss_revision_at": 1794176501.0,
       "content_kind": "news",
       "text_origin": "rss",
+      "broadcast_id": "20261108T225710Z",
+      "broadcast_position": 3,
       "publisher": "krone.at"
     },
     "7f58d0f62d4a44c374542dc0": {
@@ -356,9 +425,11 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41423645/die-schoensten-bilder-vom-grazer-krampuslauf-2026",
-        "last_attempt_at": 1794178599.9694,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "a9af09a43b69131bb205780e11950615fc3d437ab6d04f2b6eff089008e831c9"
       },
+      "broadcast_id": "20261108T225710Z",
+      "broadcast_position": 4,
       "publisher": "kleinezeitung.at"
     },
     "e8ea4edf1ddce33bd5e4f0b2": {
@@ -422,7 +493,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41432541/uno-klimagipfel-in-antalya-startet-mit-massnahmen-als-ziel",
-        "last_attempt_at": 1794178599.9694,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "d1df9a1195a6bef39ac0dff9a76d20ac00862d9d1095229b13bc3a72985d6713"
       },
       "publisher": "kleinezeitung.at"
@@ -713,7 +784,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41432490/auto-geriet-auf-der-tauernautobahn-in-kaernten-in-vollbrand",
-        "last_attempt_at": 1794178599.9694,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "41d6d8cb843883b754e418be40de1e121e042e5ca19bc9a04b869fac125d57da"
       },
       "publisher": "kleinezeitung.at"
@@ -861,7 +932,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41432468/e-bike-fahrer-lag-auf-strasse-polizei-in-kaernten-bittet-um-hinweise",
-        "last_attempt_at": 1794178599.9694,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "53a7bfe645109ff0faaf485fc5f183dd51823e194e8597b56aefabf5cf88a56f"
       },
       "publisher": "kleinezeitung.at"
@@ -1086,7 +1157,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347920/cordon-bleu-vom-fasan-vom-revier-in-die-panier?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347920/cordon-bleu-vom-fasan-vom-revier-in-die-panier?ref=rss",
-        "last_attempt_at": 1794164699.406693,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "50ccaaa55eef352deb888211c2f435380caad4c3c70dbe3671007378ae361de1"
       },
       "publisher": "derstandard.at"
@@ -1123,7 +1194,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41426524/desolater-strassenabschnitt-in-mittelkaernten-wird-saniert",
-        "last_attempt_at": 1794178599.9694,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "a5cd6927f01a2a7dab3f17d0b7335f6d016bbab725697a435b033a973d7d45e7"
       },
       "publisher": "kleinezeitung.at"
@@ -1183,7 +1254,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348115/brighton-neuer-zweiter-manchester-united-spielt-44-gegen-aston-villa?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348115/brighton-neuer-zweiter-manchester-united-spielt-44-gegen-aston-villa?ref=rss",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "6787adf1fc722eec8fe69e41e8b96a3ad23a1daefdc5635f64d060bda60d1a17"
       },
       "broadcast_id": "20261108T185309Z",
@@ -1214,7 +1285,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348115/brighton-neuer-zweiter-manchester-united-spielt-44?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348115/brighton-neuer-zweiter-manchester-united-spielt-44?ref=rss",
-        "last_attempt_at": 1794164699.406693,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "cd1c96d5efd25ac04d5000106dd3f026171dae2681367124e48f250d84e66b8d"
       },
       "publisher": "derstandard.at"
@@ -1335,7 +1406,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348113/motorrad-marquez-in-katar-zweiter-wm-entscheidung-vertagt?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348113/motorrad-marquez-in-katar-zweiter-wm-entscheidung-vertagt?ref=rss",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "291a1d61d359826930a574f6904607246df1e4a5be82aebfcc80d61fbca4e92e"
       },
       "publisher": "derstandard.at"
@@ -1364,7 +1435,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348112/alcaraz-gewinnt-auch-atp-turnier-in-paris?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348112/alcaraz-gewinnt-auch-atp-turnier-in-paris?ref=rss",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "0ace87ea83fcac56210a2bf13554c5a116c2737c78115ca18ad5108f579e399e"
       },
       "publisher": "derstandard.at"
@@ -1392,9 +1463,9 @@
         "canonical_url": "https://orf.at/stories/3447627/",
         "resolved_url": "https://orf.at/stories/3447627/",
         "requested_url": "https://orf.at/stories/3447627/",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "4e114f6c3c4049bd6b5e68c63ba14d5a7bc48fe18bb2ebb27a1e2222f95ff5a0",
-        "fetched_at": 1794163963.300073,
+        "fetched_at": 1794190109.81259,
         "text_sha256": "61e72c45c27b300ecab7361c4e5b37d125df13beb00e64809ba12ea5b643c450"
       },
       "broadcast_id": "20261108T185309Z",
@@ -1425,7 +1496,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348111/resalzburg-gewinnt-schlagabtausch-bei-sturm-graz-43?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348111/resalzburg-gewinnt-schlagabtausch-bei-sturm-graz-43?ref=rss",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "31101fee9a8ef158fd7ac518e5a7593a36c0c9e1e7f8fb3f47266b910fc8daec"
       },
       "publisher": "derstandard.at"
@@ -1606,9 +1677,9 @@
         "resolved_url": "https://www.krone.at/4367510",
         "method": "rdrr",
         "requested_url": "https://www.krone.at/4367510",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "49c6a660d02b0681e087f4f565d07c9ffd10bab91c5b0b826be3229f664304b1",
-        "fetched_at": 1794163963.300073,
+        "fetched_at": 1794192192.640153,
         "text_sha256": "53b2618c8702adcff8dc1b8c0717c337f6be70392a543fcd1118792804201fe6"
       },
       "publisher": "krone.at"
@@ -1671,7 +1742,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348074/ilse-aigner-eine-bodenstaendige-bayerin-soll-ins-hoechste-deutsche-staatsamt?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348074/ilse-aigner-eine-bodenstaendige-bayerin-soll-ins-hoechste-deutsche-staatsamt?ref=rss",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "429bae941fec8cfbd662a39f6bb3f27b60e5d808c00e03c6efa0ee7b0c186672"
       },
       "publisher": "derstandard.at"
@@ -1730,7 +1801,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41430757/war-sebastian-kurz-das-opfer-eines-spions-trau-schau-wem",
-        "last_attempt_at": 1794178599.9694,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "0f6d7f21de4b5cb7530d995744aeb4cf1d5e5b7ae4a6324b083ed1461f2307bb"
       },
       "publisher": "kleinezeitung.at"
@@ -1800,7 +1871,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41427492/matura-im-wunderland-grosse-abschlussfeier-der-hlw-in-hartberg",
-        "last_attempt_at": 1794178599.9694,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "c82041393c5dd2b91dd63f3f2dc1714eeaa3bf3500860c88289d6ad95cdd3427"
       },
       "publisher": "kleinezeitung.at"
@@ -1829,7 +1900,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348110/anc-f228hrt-bei-kommunalwahlen-in-s252dafrika-historische-niederlage-ein?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348110/anc-f228hrt-bei-kommunalwahlen-in-s252dafrika-historische-niederlage-ein?ref=rss",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "c9a3936ba60450e7406af786150b4970ef8e60ae2fb3d6e273b66a6aa0d1f8f2"
       },
       "publisher": "derstandard.at"
@@ -1901,7 +1972,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41432263/mit-wohnmobil-in-kroatien-vermisst-steirische-anwaeltin-sucht-vater",
-        "last_attempt_at": 1794178599.9694,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "f9bfca388a086a8cf2a12672e2aa040caa1d4f6d847b9d5760b731603f37bd97"
       },
       "publisher": "kleinezeitung.at"
@@ -2036,7 +2107,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41430821/guinness-buch-weihnachtshaus-im-burgenland-will-lichterweltrekord",
-        "last_attempt_at": 1794178599.9694,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "e1173618a2f7cc44f462c19c9433f52ee24ddaffdb10500f3807c4b4576b5d75"
       },
       "publisher": "kleinezeitung.at"
@@ -2081,9 +2152,9 @@
         "resolved_url": "https://www.krone.at/4368166",
         "method": "rdrr",
         "requested_url": "https://www.krone.at/4368166",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "3775a9b6f1ffc54de17f5bcf6fd779308515363665ed2ec673c18b2b452e352b",
-        "fetched_at": 1794163963.300073,
+        "fetched_at": 1794192192.640153,
         "text_sha256": "e13ce9638c48c3629023bf52a7be87f3101960e124da968f20bfd969a1748926"
       },
       "publisher": "krone.at"
@@ -2125,7 +2196,7 @@
     "7318edc62274a06c5009ae36": {
       "id": "7318edc62274a06c5009ae36",
       "title": "Vermisste Schülerin aus Berlin tot aufgefunden: Mann verhaftet",
-      "text": "Bei der Suche nach einer vermissten 13-Jährigen aus Berlin-Marzahn ist heute eine Leiche gefunden worden. Nach Angaben der Staatsanwaltschaft handelt es sich um das gesuchte Mädchen. Zuerst berichtete RTL über den Leichenfund.\n\nIm Zusammenhang mit dem Tod des Mädchens wurde laut Staatsanwaltschaft auch ein Verdächtiger gefasst. Der Mann habe sich selbst schwer verletzt und befinde sich in einem kritischen Zustand, teilte Behördensprecher Michael Petzold mit.\n\nDie Schülerin Lisa T. wurde seit Dienstag vermisst. Die 13-Jährige hatte ihr Wohnhaus gegen 7.20 Uhr verlassen, um gegen 7.30 Uhr vom Barnimplatz zu ihrer Schule in der Sella-Hasse-Straße zu fahren. Dort kam sie jedoch nicht an.\n\nDie Polizei startete am Freitag eine großangelegte Suche mit Hunderten Beamten. Die Ermittler gingen von Tür zu Tür, sprachen mit Anwohnern, verteilten Zeugenaufrufe und suchten die Umgebung ab. Auch Spürhunde, ein Hubschrauber und eine Unterwasserdrohne kamen zum Einsatz.",
+      "text": "Bei der Suche nach einer vermissten 13-Jährigen aus Berlin-Marzahn ist gestern eine Leiche gefunden worden. Nach Angaben der Staatsanwaltschaft handelt es sich um das gesuchte Mädchen. Zuerst berichtete RTL über den Leichenfund.\n\nIm Zusammenhang mit dem Tod des Mädchens wurde laut Staatsanwaltschaft auch ein Verdächtiger gefasst. Der Mann habe sich selbst schwer verletzt und befinde sich in einem kritischen Zustand, teilte Behördensprecher Michael Petzold mit.\n\nDie Schülerin Lisa T. wurde seit Dienstag vermisst. Die 13-Jährige hatte ihr Wohnhaus gegen 7.20 Uhr verlassen, um gegen 7.30 Uhr vom Barnimplatz zu ihrer Schule in der Sella-Hasse-Straße zu fahren. Dort kam sie jedoch nicht an.\n\nDie Polizei startete am Freitag eine großangelegte Suche mit Hunderten Beamten. Die Ermittler gingen von Tür zu Tür, sprachen mit Anwohnern, verteilten Zeugenaufrufe und suchten die Umgebung ab. Auch Spürhunde, ein Hubschrauber und eine Unterwasserdrohne kamen zum Einsatz.",
       "url": "https://orf.at/stories/3447624/",
       "published_at": 1794158010.0,
       "first_seen_at": 1794163963.300073,
@@ -2137,7 +2208,7 @@
       "rss_revision_at": 1794158010.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Bei der Suche nach einer vermissten 13-Jährigen aus Berlin-Marzahn ist heute eine Leiche gefunden worden. Nach Angaben der Staatsanwaltschaft handelt es sich um das gesuchte Mädchen. Zuerst berichtete RTL über den Leichenfund.\n\nIm Zusammenhang mit dem Tod des Mädchens wurde laut Staatsanwaltschaft auch ein Verdächtiger gefasst. Der Mann habe sich selbst schwer verletzt und befinde sich in einem kritischen Zustand, teilte Behördensprecher Michael Petzold mit.\n\nDie Schülerin Lisa T. wurde seit Dienstag vermisst. Die 13-Jährige hatte ihr Wohnhaus gegen 7.20 Uhr verlassen, um gegen 7.30 Uhr vom Barnimplatz zu ihrer Schule in der Sella-Hasse-Straße zu fahren. Dort kam sie jedoch nicht an.\n\nDie Polizei startete am Freitag eine großangelegte Suche mit Hunderten Beamten. Die Ermittler gingen von Tür zu Tür, sprachen mit Anwohnern, verteilten Zeugenaufrufe und suchten die Umgebung ab. Auch Spürhunde, ein Hubschrauber und eine Unterwasserdrohne kamen zum Einsatz.",
+      "article_text": "Bei der Suche nach einer vermissten 13-Jährigen aus Berlin-Marzahn ist gestern eine Leiche gefunden worden. Nach Angaben der Staatsanwaltschaft handelt es sich um das gesuchte Mädchen. Zuerst berichtete RTL über den Leichenfund.\n\nIm Zusammenhang mit dem Tod des Mädchens wurde laut Staatsanwaltschaft auch ein Verdächtiger gefasst. Der Mann habe sich selbst schwer verletzt und befinde sich in einem kritischen Zustand, teilte Behördensprecher Michael Petzold mit.\n\nDie Schülerin Lisa T. wurde seit Dienstag vermisst. Die 13-Jährige hatte ihr Wohnhaus gegen 7.20 Uhr verlassen, um gegen 7.30 Uhr vom Barnimplatz zu ihrer Schule in der Sella-Hasse-Straße zu fahren. Dort kam sie jedoch nicht an.\n\nDie Polizei startete am Freitag eine großangelegte Suche mit Hunderten Beamten. Die Ermittler gingen von Tür zu Tür, sprachen mit Anwohnern, verteilten Zeugenaufrufe und suchten die Umgebung ab. Auch Spürhunde, ein Hubschrauber und eine Unterwasserdrohne kamen zum Einsatz.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -2145,10 +2216,10 @@
         "canonical_url": "https://orf.at/stories/3447624/",
         "resolved_url": "https://orf.at/stories/3447624/",
         "requested_url": "https://orf.at/stories/3447624/",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "85afbc25f4f91088274d87218ebcffe2256056b75ac87de7eeef48f7be786871",
-        "fetched_at": 1794163963.300073,
-        "text_sha256": "abfef67e7c74abcb1f0cd1b67e42142408c583bf596821ae9505e901722dbdf0"
+        "fetched_at": 1794190109.81259,
+        "text_sha256": "f6002853ff716937c29c93586c17611c306ad42630e1d85903c74144393b9056"
       },
       "publisher": "orf.at"
     },
@@ -2296,7 +2367,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347766/the-prairie-fire-behind-the-democrats-big-win?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347766/the-prairie-fire-behind-the-democrats-big-win?ref=rss",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "9f18a9bd60611a331fac96ca20076160364b2e43893635851e9e91b6cdbb77da"
       },
       "publisher": "derstandard.at"
@@ -2325,7 +2396,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348058/pr-stunt-entgleist-fake-razzia-von-content-creator-handofblood-unterschaetzt?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348058/pr-stunt-entgleist-fake-razzia-von-content-creator-handofblood-unterschaetzt?ref=rss",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "dec99c2d0c1398231e2fb089c3e2b61fe33ff1058040b65fec4c53773ba60ff6"
       },
       "publisher": "derstandard.at"
@@ -2376,7 +2447,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347861/trinkgeld-im-urlaub-nur-nicht-stressen-lassen?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347861/trinkgeld-im-urlaub-nur-nicht-stressen-lassen?ref=rss",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "827f1230fb1fd30bb12a5a6bc8cf8e137f26df08175865fe86909f2b74a0a5f3"
       },
       "publisher": "derstandard.at"
@@ -2405,7 +2476,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347161/xsudoku-mittel-6566b?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000347161/xsudoku-mittel-6566b?ref=rss",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "4d33046053ad1b961feca40e29239526ed525aff5b06fdaf6357e65bfaabfa17"
       },
       "publisher": "derstandard.at"
@@ -2442,7 +2513,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41424433/fuehrte-cocktailbar-in-china-neue-paechterin-fuer-klagenfurter",
-        "last_attempt_at": 1794178599.9694,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "f25bef575ed6d317da700657d8ed94fb7c05ebd76a55a66b7eafc9794ac7001f"
       },
       "publisher": "kleinezeitung.at"
@@ -2479,7 +2550,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41421791/so-ruestet-sich-der-winterdienst-fuer-den-bezirk-wolfsberg",
-        "last_attempt_at": 1794178599.9694,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "d094211009b3843dd4caf14abc54bfada551c4783689abe10833e04d49b8ab2d"
       },
       "publisher": "kleinezeitung.at"
@@ -2504,7 +2575,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41426756/fotos-fotos-fotos-das-war-der-maturaball-der-hlw-murau",
-        "last_attempt_at": 1794178599.9694,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "3e4639fdb02e33081a6d93180cffa96dde2f89dd7ceb8693034ab1399a664892"
       },
       "publisher": "kleinezeitung.at"
@@ -2538,10 +2609,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41432051/sturm-fanklub-feiert-mit-grosser-choreo-geburtstag",
-        "last_attempt_at": 1794164699.406693,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "d52ff3ed02a04cca4737700d7720459bb33ecb1d6674346e25f60378172711f9"
       },
       "publisher": "kleinezeitung.at"
@@ -2601,7 +2672,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348107/protestaktion-vor-reichstag-aktivist-tauscht-deutschland-gegen-palaestinaflagge?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348107/protestaktion-vor-reichstag-aktivist-tauscht-deutschland-gegen-palaestinaflagge?ref=rss",
-        "last_attempt_at": 1794164699.406693,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "f560ea9204b1e31c4a22c0866a26aedfecc16c0b567d7b3be98807b8bd142048"
       },
       "publisher": "derstandard.at"
@@ -2636,10 +2707,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41431862/nach-acht-jahren-einsatz-im-plus-maturaball-des-sarce-coeur-graz",
-        "last_attempt_at": 1794164699.406693,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "5f322424762dbbd1f5809b97746b4c738981780099a149e6d8ad938e2db8a5a8"
       },
       "publisher": "kleinezeitung.at"
@@ -2763,10 +2834,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348102/fu223ball-214fb-team-in-nations-league-ohne-marco-gr252ll?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348102/fu223ball-214fb-team-in-nations-league-ohne-marco-gr252ll?ref=rss",
-        "last_attempt_at": 1794164699.406693,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "3ebf4d2e7c79dcdf402ef134c26de13d96d1c297e47d1be53d75b74c2633ce4f"
       },
       "publisher": "derstandard.at"
@@ -2929,7 +3000,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348106/zwei-tote-und-33-verletzte-bei-busungl252ck-in-kroatien?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348106/zwei-tote-und-33-verletzte-bei-busungl252ck-in-kroatien?ref=rss",
-        "last_attempt_at": 1794164699.406693,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "587661956d2af3ff6023540cf77ffb6748aab5b0e0c0007e8997d69efc6fcc7e"
       },
       "publisher": "derstandard.at"
@@ -2997,10 +3068,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41427554/hotel-savoy-am-burgtheater-verlorene-auf-dem-truemmerfeld-der",
-        "last_attempt_at": 1794164699.406693,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "ebeaac8d1883f30f034951d67603e8c9f1dde8a1697b183adc0e54c85abc09d9"
       },
       "publisher": "kleinezeitung.at"
@@ -3029,7 +3100,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348103/fu223ball-austria-holte-mit-11-bei-der-wsg-ersten-punkt-unter-uhlig?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348103/fu223ball-austria-holte-mit-11-bei-der-wsg-ersten-punkt-unter-uhlig?ref=rss",
-        "last_attempt_at": 1794164699.406693,
+        "last_attempt_at": 1794192192.640153,
         "rss_fingerprint": "de16e7ed362422066f45f1cd11909ed4864b7385ee1634e3623d0cb858c7e0c7"
       },
       "publisher": "derstandard.at"
@@ -3077,7 +3148,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348104/vier-tote-und-88-verletzte-bei-schwerem-zugsungl252ck-in-196gypten?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348104/vier-tote-und-88-verletzte-bei-schwerem-zugsungl252ck-in-196gypten?ref=rss",
         "last_attempt_at": 1794164699.406693,
@@ -3106,7 +3177,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348100/frankreichs-pr228sidentschaftsanw228rter-m233lenchon-fordert-nato-austritt?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348100/frankreichs-pr228sidentschaftsanw228rter-m233lenchon-fordert-nato-austritt?ref=rss",
         "last_attempt_at": 1794164699.406693,
@@ -3218,7 +3289,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348097/214sterreichischer-dokumentarfilm-who-cares-holte-preis-in-florenz?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348097/214sterreichischer-dokumentarfilm-who-cares-holte-preis-in-florenz?ref=rss",
         "last_attempt_at": 1794164699.406693,
@@ -3247,7 +3318,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348099/das-wetter-wird-unbest228ndig?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348099/das-wetter-wird-unbest228ndig?ref=rss",
         "last_attempt_at": 1794164699.406693,
@@ -3276,7 +3347,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348073/tabus-klischees-und-vorurteile-wie-sehen-sie-den-tatort-aus-zuerich?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348073/tabus-klischees-und-vorurteile-wie-sehen-sie-den-tatort-aus-zuerich?ref=rss",
         "last_attempt_at": 1794164699.406693,
@@ -3307,9 +3378,9 @@
         "canonical_url": "https://orf.at/stories/3447617/",
         "resolved_url": "https://orf.at/stories/3447617/",
         "requested_url": "https://orf.at/stories/3447617/",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "b9daf9ba31eca0dc331541a2c5a08e2d4fd517e7bddd107fd2c67c3f518b654d",
-        "fetched_at": 1794163963.300073,
+        "fetched_at": 1794190109.81259,
         "text_sha256": "92392dfbc0d62fc2a8d17c72c7a4862f959d27e9f7d969efa4adb76187ddb3c5"
       },
       "publisher": "orf.at"
@@ -3373,7 +3444,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348080/wind-of-change-scorpions-biopic-kommt-ende-j228nner-ins-kino?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348080/wind-of-change-scorpions-biopic-kommt-ende-j228nner-ins-kino?ref=rss",
         "last_attempt_at": 1794164699.406693,
@@ -3436,7 +3507,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348098/61-j228hriger-mit-wingsuit-in-salzburg-t246dlich-verungl252ckt?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348098/61-j228hriger-mit-wingsuit-in-salzburg-t246dlich-verungl252ckt?ref=rss",
         "last_attempt_at": 1794164699.406693,
@@ -3580,7 +3651,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348064/feine-intonationskunst-mit-nicholas-ofczarek-hotel-savoy-im-burgtheater?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348064/feine-intonationskunst-mit-nicholas-ofczarek-hotel-savoy-im-burgtheater?ref=rss",
         "last_attempt_at": 1794164699.406693,
@@ -3609,7 +3680,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348077/offiziell-eisenkots-huerdenlauf-einer-regierungsbildung-in-israel-beginnt?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348077/offiziell-eisenkots-huerdenlauf-einer-regierungsbildung-in-israel-beginnt?ref=rss",
         "last_attempt_at": 1794164699.406693,
@@ -3620,7 +3691,7 @@
     "9c4307073e33b046b527ee39": {
       "id": "9c4307073e33b046b527ee39",
       "title": "Tote und Verletzte bei Zugsunglück in Ägypten",
-      "text": "Bei einem Zugsunglück in Ägypten sind nach offiziellen Angaben mindestens sieben Menschen getötet und 112 verletzt worden. Bei dem Unfall in Giseh seien mehrere Waggons eines Passagierzugs entgleist, teilte das Gesundheitsministerium heute mit.\n\nDer Unfall ereignete sich auf der Strecke zwischen Kairo und Assuan, die als wichtigste Verbindung zwischen der Hauptstadt und der Nil-Stadt weit im Süden gilt. Die staatliche Eisenbahnbehörde teilte mit, dass ein Zug in das hintere Ende eines weiteren Zugs gefahren sei.\n\nMehr als 70 Krankenwagen waren im Einsatz, um die Verletzten zu versorgen und in Krankenhäuser zu bringen. Zudem wurden Kräne zur Unfallstelle gebracht, um Wrackteile zu beseitigen und die Strecke schnell wieder für den Zugsverkehr freizugeben.\n\nIn dem nordafrikanischen Land kommt es regelmäßig zu teils schweren Zugsunfällen. Dabei gab es auch in vergangenen Jahren immer wieder Dutzende Tote und Verletzte. Eines der schwersten Unglücke ereignete sich 2002 in Giseh, als in einem Zug auf dem Weg von Kairo nach Luxor im Süden ein Feuer ausbrach. Mehr als 360 Menschen kamen ums Leben.\n\nAls Ursachen dieser Unglücke werden häufig menschliches Versagen und Fehler der Signalanlagen genannt. Die Regierung arbeitet seit Jahren daran, Züge und Schienen zu modernisieren.",
+      "text": "Bei einem Zugsunglück in Ägypten sind nach offiziellen Angaben mindestens sieben Menschen getötet und 112 verletzt worden. Bei dem Unfall in Giseh seien mehrere Waggons eines Passagierzugs entgleist, teilte das Gesundheitsministerium gestern mit.\n\nDer Unfall ereignete sich auf der Strecke zwischen Kairo und Assuan, die als wichtigste Verbindung zwischen der Hauptstadt und der Nil-Stadt weit im Süden gilt. Die staatliche Eisenbahnbehörde teilte mit, dass ein Zug in das hintere Ende eines weiteren Zugs gefahren sei.\n\nMehr als 70 Krankenwagen waren im Einsatz, um die Verletzten zu versorgen und in Krankenhäuser zu bringen. Zudem wurden Kräne zur Unfallstelle gebracht, um Wrackteile zu beseitigen und die Strecke schnell wieder für den Zugsverkehr freizugeben.\n\nIn dem nordafrikanischen Land kommt es regelmäßig zu teils schweren Zugsunfällen. Dabei gab es auch in vergangenen Jahren immer wieder Dutzende Tote und Verletzte. Eines der schwersten Unglücke ereignete sich 2002 in Giseh, als in einem Zug auf dem Weg von Kairo nach Luxor im Süden ein Feuer ausbrach. Mehr als 360 Menschen kamen ums Leben.\n\nAls Ursachen dieser Unglücke werden häufig menschliches Versagen und Fehler der Signalanlagen genannt. Die Regierung arbeitet seit Jahren daran, Züge und Schienen zu modernisieren.",
       "url": "https://orf.at/stories/3447615/",
       "published_at": 1794149580.0,
       "first_seen_at": 1794163963.300073,
@@ -3632,7 +3703,7 @@
       "rss_revision_at": 1794149580.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Bei einem Zugsunglück in Ägypten sind nach offiziellen Angaben mindestens sieben Menschen getötet und 112 verletzt worden. Bei dem Unfall in Giseh seien mehrere Waggons eines Passagierzugs entgleist, teilte das Gesundheitsministerium heute mit.\n\nDer Unfall ereignete sich auf der Strecke zwischen Kairo und Assuan, die als wichtigste Verbindung zwischen der Hauptstadt und der Nil-Stadt weit im Süden gilt. Die staatliche Eisenbahnbehörde teilte mit, dass ein Zug in das hintere Ende eines weiteren Zugs gefahren sei.\n\nMehr als 70 Krankenwagen waren im Einsatz, um die Verletzten zu versorgen und in Krankenhäuser zu bringen. Zudem wurden Kräne zur Unfallstelle gebracht, um Wrackteile zu beseitigen und die Strecke schnell wieder für den Zugsverkehr freizugeben.\n\nIn dem nordafrikanischen Land kommt es regelmäßig zu teils schweren Zugsunfällen. Dabei gab es auch in vergangenen Jahren immer wieder Dutzende Tote und Verletzte. Eines der schwersten Unglücke ereignete sich 2002 in Giseh, als in einem Zug auf dem Weg von Kairo nach Luxor im Süden ein Feuer ausbrach. Mehr als 360 Menschen kamen ums Leben.\n\nAls Ursachen dieser Unglücke werden häufig menschliches Versagen und Fehler der Signalanlagen genannt. Die Regierung arbeitet seit Jahren daran, Züge und Schienen zu modernisieren.",
+      "article_text": "Bei einem Zugsunglück in Ägypten sind nach offiziellen Angaben mindestens sieben Menschen getötet und 112 verletzt worden. Bei dem Unfall in Giseh seien mehrere Waggons eines Passagierzugs entgleist, teilte das Gesundheitsministerium gestern mit.\n\nDer Unfall ereignete sich auf der Strecke zwischen Kairo und Assuan, die als wichtigste Verbindung zwischen der Hauptstadt und der Nil-Stadt weit im Süden gilt. Die staatliche Eisenbahnbehörde teilte mit, dass ein Zug in das hintere Ende eines weiteren Zugs gefahren sei.\n\nMehr als 70 Krankenwagen waren im Einsatz, um die Verletzten zu versorgen und in Krankenhäuser zu bringen. Zudem wurden Kräne zur Unfallstelle gebracht, um Wrackteile zu beseitigen und die Strecke schnell wieder für den Zugsverkehr freizugeben.\n\nIn dem nordafrikanischen Land kommt es regelmäßig zu teils schweren Zugsunfällen. Dabei gab es auch in vergangenen Jahren immer wieder Dutzende Tote und Verletzte. Eines der schwersten Unglücke ereignete sich 2002 in Giseh, als in einem Zug auf dem Weg von Kairo nach Luxor im Süden ein Feuer ausbrach. Mehr als 360 Menschen kamen ums Leben.\n\nAls Ursachen dieser Unglücke werden häufig menschliches Versagen und Fehler der Signalanlagen genannt. Die Regierung arbeitet seit Jahren daran, Züge und Schienen zu modernisieren.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -3640,17 +3711,17 @@
         "canonical_url": "https://orf.at/stories/3447615/",
         "resolved_url": "https://orf.at/stories/3447615/",
         "requested_url": "https://orf.at/stories/3447615/",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "973f29c137d633f24498479b19c7d69468cb783819e62824a707349a70b35ea0",
-        "fetched_at": 1794163963.300073,
-        "text_sha256": "8c52fd3ae808cffb601068dda6d46e6bfddf2b57b714964d85487e5757abb0ad"
+        "fetched_at": 1794190109.81259,
+        "text_sha256": "f76c704cc07d5a1b2e1730d404f8e3d8b1a682d277833b0d2df8640267a59110"
       },
       "publisher": "orf.at"
     },
     "148f39ca1befa3ad999c020e": {
       "id": "148f39ca1befa3ad999c020e",
       "title": "Österreichischer Dokufilm „Who cares“ holte Preis in Florenz",
-      "text": "Der österreichische Dokumentarfilm „Who cares – Ohne uns steht die Welt still“ von Regisseurin Ina Ivanceanu ist in Florenz beim Festival dei Popoli, dem weltältesten Dokufilmfestival der Welt, mit einem Preis ausgezeichnet worden.\n\nDer Film, der sich auf persönlich-essayistische Weise mit dem Thema Care-Arbeit auseinandersetzt, gewann den „Gian Paolo Paoli Award – Award for Best Anthropological Film“, wie die Produktionsfirma Amour Fou heute mitteilte.\n\nDer Preis wurde gestern Abend in Florenz von Festivaldirektor Alessandro Stellino übergeben. Die Auszeichnung gehe an einen \"Film, der sich auf umfassende und internationale Weise mit einer Reihe dringlicher Fragen auseinandersetzt, die uns alle betreffen.\n\nEr stellt die Fragen: Was ist Arbeit? Wird Arbeit ausschließlich durch den Austausch von Geld definiert? Wie wird Arbeit bewertet und entwertet?\", urteilte die Jury laut Aussendung.\n\n„Who cares“, eine österreichisch-luxemburgisch-slowakische Koproduktion, feierte beim Festival dei Popoli – Ehrenpräsident ist der britische Starregisseur Ken Loach – seine Weltpremiere. Regulär läuft die Dokumentation hierzulande am 26. Februar 2027 in den Kinos an. Produziert wurde der Film von Amour Fou Vienna, Amour Fou Luxembourg und der slowakischen Sen Film.",
+      "text": "Der österreichische Dokumentarfilm „Who cares – Ohne uns steht die Welt still“ von Regisseurin Ina Ivanceanu ist in Florenz beim Festival dei Popoli, dem weltältesten Dokufilmfestival der Welt, mit einem Preis ausgezeichnet worden.\n\nDer Film, der sich auf persönlich-essayistische Weise mit dem Thema Care-Arbeit auseinandersetzt, gewann den „Gian Paolo Paoli Award – Award for Best Anthropological Film“, wie die Produktionsfirma Amour Fou gestern mitteilte.\n\nDer Preis wurde in Florenz von Festivaldirektor Alessandro Stellino übergeben. Die Auszeichnung gehe an einen \"Film, der sich auf umfassende und internationale Weise mit einer Reihe dringlicher Fragen auseinandersetzt, die uns alle betreffen.\n\nEr stellt die Fragen: Was ist Arbeit? Wird Arbeit ausschließlich durch den Austausch von Geld definiert? Wie wird Arbeit bewertet und entwertet?\", urteilte die Jury laut Aussendung.\n\n„Who cares“, eine österreichisch-luxemburgisch-slowakische Koproduktion, feierte beim Festival dei Popoli – Ehrenpräsident ist der britische Starregisseur Ken Loach – seine Weltpremiere. Regulär läuft die Dokumentation hierzulande am 26. Februar 2027 in den Kinos an. Produziert wurde der Film von Amour Fou Vienna, Amour Fou Luxembourg und der slowakischen Sen Film.",
       "url": "https://orf.at/stories/3447614/",
       "published_at": 1794149464.0,
       "first_seen_at": 1794163963.300073,
@@ -3662,7 +3733,7 @@
       "rss_revision_at": 1794149464.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Der österreichische Dokumentarfilm „Who cares – Ohne uns steht die Welt still“ von Regisseurin Ina Ivanceanu ist in Florenz beim Festival dei Popoli, dem weltältesten Dokufilmfestival der Welt, mit einem Preis ausgezeichnet worden.\n\nDer Film, der sich auf persönlich-essayistische Weise mit dem Thema Care-Arbeit auseinandersetzt, gewann den „Gian Paolo Paoli Award – Award for Best Anthropological Film“, wie die Produktionsfirma Amour Fou heute mitteilte.\n\nDer Preis wurde gestern Abend in Florenz von Festivaldirektor Alessandro Stellino übergeben. Die Auszeichnung gehe an einen \"Film, der sich auf umfassende und internationale Weise mit einer Reihe dringlicher Fragen auseinandersetzt, die uns alle betreffen.\n\nEr stellt die Fragen: Was ist Arbeit? Wird Arbeit ausschließlich durch den Austausch von Geld definiert? Wie wird Arbeit bewertet und entwertet?\", urteilte die Jury laut Aussendung.\n\n„Who cares“, eine österreichisch-luxemburgisch-slowakische Koproduktion, feierte beim Festival dei Popoli – Ehrenpräsident ist der britische Starregisseur Ken Loach – seine Weltpremiere. Regulär läuft die Dokumentation hierzulande am 26. Februar 2027 in den Kinos an. Produziert wurde der Film von Amour Fou Vienna, Amour Fou Luxembourg und der slowakischen Sen Film.",
+      "article_text": "Der österreichische Dokumentarfilm „Who cares – Ohne uns steht die Welt still“ von Regisseurin Ina Ivanceanu ist in Florenz beim Festival dei Popoli, dem weltältesten Dokufilmfestival der Welt, mit einem Preis ausgezeichnet worden.\n\nDer Film, der sich auf persönlich-essayistische Weise mit dem Thema Care-Arbeit auseinandersetzt, gewann den „Gian Paolo Paoli Award – Award for Best Anthropological Film“, wie die Produktionsfirma Amour Fou gestern mitteilte.\n\nDer Preis wurde in Florenz von Festivaldirektor Alessandro Stellino übergeben. Die Auszeichnung gehe an einen \"Film, der sich auf umfassende und internationale Weise mit einer Reihe dringlicher Fragen auseinandersetzt, die uns alle betreffen.\n\nEr stellt die Fragen: Was ist Arbeit? Wird Arbeit ausschließlich durch den Austausch von Geld definiert? Wie wird Arbeit bewertet und entwertet?\", urteilte die Jury laut Aussendung.\n\n„Who cares“, eine österreichisch-luxemburgisch-slowakische Koproduktion, feierte beim Festival dei Popoli – Ehrenpräsident ist der britische Starregisseur Ken Loach – seine Weltpremiere. Regulär läuft die Dokumentation hierzulande am 26. Februar 2027 in den Kinos an. Produziert wurde der Film von Amour Fou Vienna, Amour Fou Luxembourg und der slowakischen Sen Film.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -3670,17 +3741,17 @@
         "canonical_url": "https://orf.at/stories/3447614/",
         "resolved_url": "https://orf.at/stories/3447614/",
         "requested_url": "https://orf.at/stories/3447614/",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "c348870db64aadf40af6c83febd36911548fad20548603490509ca8950bae046",
-        "fetched_at": 1794163963.300073,
-        "text_sha256": "1b66b55d26cbbb3547e66f2829af22adc4db1c105497d93b226b53ac0811147a"
+        "fetched_at": 1794190109.81259,
+        "text_sha256": "0b80b7e8aea61d1c4feaa442ff8ed16d8b122efd1aa977a932020d1d8a9ee816"
       },
       "publisher": "orf.at"
     },
     "499a8fdb2dc46a92fb03dc7d": {
       "id": "499a8fdb2dc46a92fb03dc7d",
       "title": "Golfstaaten treiben gemeinsames Schienennetz voran",
-      "text": "Die Golfstaaten arbeiten weiter an einem gemeinsamen Schienennetz entlang der Küste zum Persischen Golf. Bahrains Kronprinz Salman bin Hamad empfing Vertreter der Staaten, die in der Hauptstadt Manama ein Abkommen zu dem Projekt unterzeichneten, wie die Staatsagentur BNA heute berichtete.\n\nBahrains Transportminister bezeichnete die Pläne örtlichen Medien zufolge als „Investition in die Zukunft der Golfregion und der nächsten Generationen“. Das Netz soll bis zum Jahr 2030 fertiggestellt werden.\n\nDie Schienenverbindung soll aus Kuwait im Norden über Saudi-Arabien, Bahrain, Katar und die Vereinigten Arabischen Emirate bis Oman führen, das im Südosten der Arabischen Halbinsel liegt.\n\nÜber mehr als 2.100 Kilometer sollen Passagiere und Passagierinnen sowie Güter mit Zügen ans Ziel gebracht werden. Die Kosten wurden in vergangenen Jahren auf rund 250 Milliarden US-Dollar geschätzt. Am stärksten investierten bisher Saudi-Arabien und die Emirate in eigene Schienennetze.\n\nDiskussionen über ein gemeinsames Netz gibt es schon seit den 1980er Jahren. Auf dessen Ausbau einigten sich die sechs Golfstaaten 2009, die Umsetzung kam aber unterschiedlich schnell voran. Wegen der deutlich gefallenen Ölpreise in den 2010er Jahren mussten die Golfmonarchien, die stark von den Ölexporten abhängig sind, große Infrastrukturprojekte überdenken.\n\nDazu kam eine Krise ab 2017, bei der mehrere Länder unter Führung Saudi-Arabiens eine Blockade gegen den kleinen Staat Katar verhängten. Das Ziel, das gemeinsame Netz 2018 in Betrieb zu nehmen, wurde verfehlt.\n\nMit Beginn des Iran-Krieges im Februar und der faktischen Blockade der Straße von Hormus bekam das Projekt neue Dringlichkeit.\n\nDenn über den Seeweg exportieren die Länder unter anderem Öl und Flüssiggas, importieren so aber auch Waren und Güter, darunter Lebensmittel. Wegen der hohen wirtschaftlichen Verluste im Zuge des Krieges gibt es dennoch Zweifel, ob die Länder noch die nötigen Mittel für den Bau aufbringen können.",
+      "text": "Die Golfstaaten arbeiten weiter an einem gemeinsamen Schienennetz entlang der Küste zum Persischen Golf. Bahrains Kronprinz Salman bin Hamad empfing Vertreter der Staaten, die in der Hauptstadt Manama ein Abkommen zu dem Projekt unterzeichneten, wie die Staatsagentur BNA gestern berichtete.\n\nBahrains Transportminister bezeichnete die Pläne örtlichen Medien zufolge als „Investition in die Zukunft der Golfregion und der nächsten Generationen“. Das Netz soll bis zum Jahr 2030 fertiggestellt werden.\n\nDie Schienenverbindung soll aus Kuwait im Norden über Saudi-Arabien, Bahrain, Katar und die Vereinigten Arabischen Emirate bis Oman führen, das im Südosten der Arabischen Halbinsel liegt.\n\nÜber mehr als 2.100 Kilometer sollen Passagiere und Passagierinnen sowie Güter mit Zügen ans Ziel gebracht werden. Die Kosten wurden in vergangenen Jahren auf rund 250 Milliarden US-Dollar geschätzt. Am stärksten investierten bisher Saudi-Arabien und die Emirate in eigene Schienennetze.\n\nDiskussionen über ein gemeinsames Netz gibt es schon seit den 1980er Jahren. Auf dessen Ausbau einigten sich die sechs Golfstaaten 2009, die Umsetzung kam aber unterschiedlich schnell voran. Wegen der deutlich gefallenen Ölpreise in den 2010er Jahren mussten die Golfmonarchien, die stark von den Ölexporten abhängig sind, große Infrastrukturprojekte überdenken.\n\nDazu kam eine Krise ab 2017, bei der mehrere Länder unter Führung Saudi-Arabiens eine Blockade gegen den kleinen Staat Katar verhängten. Das Ziel, das gemeinsame Netz 2018 in Betrieb zu nehmen, wurde verfehlt.\n\nMit Beginn des Iran-Krieges im Februar und der faktischen Blockade der Straße von Hormus bekam das Projekt neue Dringlichkeit.\n\nDenn über den Seeweg exportieren die Länder unter anderem Öl und Flüssiggas, importieren so aber auch Waren und Güter, darunter Lebensmittel. Wegen der hohen wirtschaftlichen Verluste im Zuge des Krieges gibt es dennoch Zweifel, ob die Länder noch die nötigen Mittel für den Bau aufbringen können.",
       "url": "https://orf.at/stories/3447613/",
       "published_at": 1794149379.0,
       "first_seen_at": 1794163963.300073,
@@ -3692,7 +3763,7 @@
       "rss_revision_at": 1794149379.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Die Golfstaaten arbeiten weiter an einem gemeinsamen Schienennetz entlang der Küste zum Persischen Golf. Bahrains Kronprinz Salman bin Hamad empfing Vertreter der Staaten, die in der Hauptstadt Manama ein Abkommen zu dem Projekt unterzeichneten, wie die Staatsagentur BNA heute berichtete.\n\nBahrains Transportminister bezeichnete die Pläne örtlichen Medien zufolge als „Investition in die Zukunft der Golfregion und der nächsten Generationen“. Das Netz soll bis zum Jahr 2030 fertiggestellt werden.\n\nDie Schienenverbindung soll aus Kuwait im Norden über Saudi-Arabien, Bahrain, Katar und die Vereinigten Arabischen Emirate bis Oman führen, das im Südosten der Arabischen Halbinsel liegt.\n\nÜber mehr als 2.100 Kilometer sollen Passagiere und Passagierinnen sowie Güter mit Zügen ans Ziel gebracht werden. Die Kosten wurden in vergangenen Jahren auf rund 250 Milliarden US-Dollar geschätzt. Am stärksten investierten bisher Saudi-Arabien und die Emirate in eigene Schienennetze.\n\nDiskussionen über ein gemeinsames Netz gibt es schon seit den 1980er Jahren. Auf dessen Ausbau einigten sich die sechs Golfstaaten 2009, die Umsetzung kam aber unterschiedlich schnell voran. Wegen der deutlich gefallenen Ölpreise in den 2010er Jahren mussten die Golfmonarchien, die stark von den Ölexporten abhängig sind, große Infrastrukturprojekte überdenken.\n\nDazu kam eine Krise ab 2017, bei der mehrere Länder unter Führung Saudi-Arabiens eine Blockade gegen den kleinen Staat Katar verhängten. Das Ziel, das gemeinsame Netz 2018 in Betrieb zu nehmen, wurde verfehlt.\n\nMit Beginn des Iran-Krieges im Februar und der faktischen Blockade der Straße von Hormus bekam das Projekt neue Dringlichkeit.\n\nDenn über den Seeweg exportieren die Länder unter anderem Öl und Flüssiggas, importieren so aber auch Waren und Güter, darunter Lebensmittel. Wegen der hohen wirtschaftlichen Verluste im Zuge des Krieges gibt es dennoch Zweifel, ob die Länder noch die nötigen Mittel für den Bau aufbringen können.",
+      "article_text": "Die Golfstaaten arbeiten weiter an einem gemeinsamen Schienennetz entlang der Küste zum Persischen Golf. Bahrains Kronprinz Salman bin Hamad empfing Vertreter der Staaten, die in der Hauptstadt Manama ein Abkommen zu dem Projekt unterzeichneten, wie die Staatsagentur BNA gestern berichtete.\n\nBahrains Transportminister bezeichnete die Pläne örtlichen Medien zufolge als „Investition in die Zukunft der Golfregion und der nächsten Generationen“. Das Netz soll bis zum Jahr 2030 fertiggestellt werden.\n\nDie Schienenverbindung soll aus Kuwait im Norden über Saudi-Arabien, Bahrain, Katar und die Vereinigten Arabischen Emirate bis Oman führen, das im Südosten der Arabischen Halbinsel liegt.\n\nÜber mehr als 2.100 Kilometer sollen Passagiere und Passagierinnen sowie Güter mit Zügen ans Ziel gebracht werden. Die Kosten wurden in vergangenen Jahren auf rund 250 Milliarden US-Dollar geschätzt. Am stärksten investierten bisher Saudi-Arabien und die Emirate in eigene Schienennetze.\n\nDiskussionen über ein gemeinsames Netz gibt es schon seit den 1980er Jahren. Auf dessen Ausbau einigten sich die sechs Golfstaaten 2009, die Umsetzung kam aber unterschiedlich schnell voran. Wegen der deutlich gefallenen Ölpreise in den 2010er Jahren mussten die Golfmonarchien, die stark von den Ölexporten abhängig sind, große Infrastrukturprojekte überdenken.\n\nDazu kam eine Krise ab 2017, bei der mehrere Länder unter Führung Saudi-Arabiens eine Blockade gegen den kleinen Staat Katar verhängten. Das Ziel, das gemeinsame Netz 2018 in Betrieb zu nehmen, wurde verfehlt.\n\nMit Beginn des Iran-Krieges im Februar und der faktischen Blockade der Straße von Hormus bekam das Projekt neue Dringlichkeit.\n\nDenn über den Seeweg exportieren die Länder unter anderem Öl und Flüssiggas, importieren so aber auch Waren und Güter, darunter Lebensmittel. Wegen der hohen wirtschaftlichen Verluste im Zuge des Krieges gibt es dennoch Zweifel, ob die Länder noch die nötigen Mittel für den Bau aufbringen können.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -3700,10 +3771,10 @@
         "canonical_url": "https://orf.at/stories/3447613/",
         "resolved_url": "https://orf.at/stories/3447613/",
         "requested_url": "https://orf.at/stories/3447613/",
-        "last_attempt_at": 1794163963.300073,
+        "last_attempt_at": 1794190109.81259,
         "rss_fingerprint": "8652e8828d99d2dbf889bb23c96e599d7d9a712eb76038e068f7ae391521a572",
-        "fetched_at": 1794163963.300073,
-        "text_sha256": "712cccb81266509b9d743b8bdc7ad41a61c129ecc08326c90a19c2fe3bef4e26"
+        "fetched_at": 1794190109.81259,
+        "text_sha256": "2b5ff4c875bea20535eca20d306cc47cd9102d8c6fedb5c7eb9aa5c994129cff"
       },
       "publisher": "orf.at"
     },
@@ -6006,7 +6077,7 @@
       "rss_revision_at": 1794137220.0,
       "content_kind": "news",
       "text_origin": "rss",
-      "broadcast_id": "20261108T185309Z",
+      "broadcast_id": "20261108T225710Z",
       "broadcast_position": 5,
       "publisher": "bmi.gv.at"
     },
@@ -10691,144 +10762,113 @@
         "rss_fingerprint": "d06b0653bcc38cb4367911ef5564b6aca32403cfa2fa43a5d114458856e2a153"
       },
       "publisher": "kleinezeitung.at"
-    },
-    "d5f447bd583c488179f0d3d2": {
-      "id": "d5f447bd583c488179f0d3d2",
-      "title": "„Leute zogen ihre Hemden aus, um Opfern zu helfen“",
-      "text": "Die polnische Stadt Krakau ist nach dem rechtsextremen Anschlag mitten am Markplatz in Schockstarre. Augenzeugen schildern die grausamen Momente, aber auch den Mut vieler: „Die Leute zogen ihre Hemden aus, um die Blutungen der am Boden Liegenden zu stillen“, so einer von vielen, die zusehen mussten, wie am Samstag sechs Passanten erschossen wurden. Zahlreiche Menschen wurden verletzt – darunter eine Person aus Österreich.",
-      "url": "https://www.krone.at/4367332",
-      "published_at": 1794093487.0,
-      "first_seen_at": 1794094948.645857,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4367391/v522a8a/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4367391/v522a8a/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4367391/v522a8a/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4367391/v522a8a/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Die polnische Stadt Krakau ist nach dem rechtsextremen Anschlag mitten am Markplatz in Schockstarre. Augenzeugen schildern die grausamen Momente, aber auch den Mut vieler: „Die Leute zogen ihre Hemden aus, um die Blutungen der am Boden Liegenden zu stillen“, so einer von vielen, die zusehen mussten, wie am Samstag sechs Passanten erschossen wurden. Zahlreiche Menschen wurden verletzt – darunter eine Person aus Österreich.",
-      "rss_revision_at": 1794118823.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "broadcast_id": "20261107T234257Z",
-      "broadcast_position": 1,
-      "publisher": "krone.at"
-    },
-    "602d20d0e20d1e9bdc6130bf": {
-      "id": "602d20d0e20d1e9bdc6130bf",
-      "title": "Achter Sieg in Folge: Real gewann in Valencia 3:0",
-      "text": "Valverde, Güler und Mbappé sorgten für den Sieg der Mourinho-Elf",
-      "url": "https://www.derstandard.at/story/3000000348044/fu223ball-achter-sieg-in-folge-real-gewann-in-valencia-30?ref=rss",
-      "published_at": 1794093028.0,
-      "first_seen_at": 1794094948.645857,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/DjWuCg/rs:fill:150:0/plain/lido-images/2026/11/07/3d22b871-f253-442a-b09c-40b4fc758084.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Valverde, Güler und Mbappé sorgten für den Sieg der Mourinho-Elf",
-      "rss_revision_at": 1794093028.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "article_fetch": {
-        "status": "deferred",
-        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348044/fu223ball-achter-sieg-in-folge-real-gewann-in-valencia-30?ref=rss",
-        "requested_url": "https://www.derstandard.at/story/3000000348044/fu223ball-achter-sieg-in-folge-real-gewann-in-valencia-30?ref=rss",
-        "last_attempt_at": 1794094948.645857,
-        "rss_fingerprint": "c375fb0d2a8813bdab82789f8d6b5ccbf4f2e3d9969d58cd65a6d068b219631d"
-      },
-      "broadcast_id": "20261107T234257Z",
-      "broadcast_position": 2,
-      "publisher": "derstandard.at"
-    },
-    "bfb37e4bda6e4a9e23d45498": {
-      "id": "bfb37e4bda6e4a9e23d45498",
-      "title": "Von der Idee zur Maschine",
-      "text": "Sebastian (17) taucht bei seiner Ausbildung zum Maschinenbautechniker tief in die Welt komplexer Industrieanlagen ein. Bei der voestalpine Krems GmbH ist er mittlerweile im dritten Lehrjahr und weiß: Technik ist genau sein Ding.",
-      "url": "https://www.krone.at/4364011",
-      "published_at": 1794092593.0,
-      "first_seen_at": 1794094948.645857,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4364018/ve77a66/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4364018/ve77a66/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4364018/ve77a66/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4364018/ve77a66/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Sebastian (17) taucht bei seiner Ausbildung zum Maschinenbautechniker tief in die Welt komplexer Industrieanlagen ein. Bei der voestalpine Krems GmbH ist er mittlerweile im dritten Lehrjahr und weiß: Technik ist genau sein Ding.",
-      "rss_revision_at": 1794092593.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "krone.at"
-    },
-    "302c8351f9e6b972d8f42083": {
-      "id": "302c8351f9e6b972d8f42083",
-      "title": "Mit Plan durch die Industrie",
-      "text": "Von der Schulbank direkt ins Berufsleben: Katharina (16) entschied sich für eine Lehre zur Industriekauffrau bei der voestalpine in Linz. Im zweiten Lehrjahr ist sie bereits mittendrin in der kaufmännischen Welt eines internationalen Konzerns.",
-      "url": "https://www.krone.at/4362263",
-      "published_at": 1794092463.0,
-      "first_seen_at": 1794094948.645857,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4362274/v1960ad/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4362274/v1960ad/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4362274/v1960ad/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4362274/v1960ad/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Von der Schulbank direkt ins Berufsleben: Katharina (16) entschied sich für eine Lehre zur Industriekauffrau bei der voestalpine in Linz. Im zweiten Lehrjahr ist sie bereits mittendrin in der kaufmännischen Welt eines internationalen Konzerns.",
-      "rss_revision_at": 1794092463.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "krone.at"
     }
   },
   "groups": [
+    {
+      "id": "7efad95044b9cbe900094698",
+      "member_ids": [
+        "105ab98b3f7f5c49925848f9"
+      ],
+      "newest_at": 1794178911.0,
+      "draft": {
+        "headline": "Illegale Kreditgebühren: Holen Sie Ihr Geld zurück",
+        "headline_source_id": "105ab98b3f7f5c49925848f9",
+        "claims": [
+          {
+            "text": "Zahlreiche Gerichtsurteile sagen eindeutig: Die von Banken verrechneten Kreditbearbeitungsgebühren sind rechtswidrig und müssen rückerstattet werden!",
+            "source_id": "105ab98b3f7f5c49925848f9",
+            "field": "text",
+            "quote": "Zahlreiche Gerichtsurteile sagen eindeutig: Die von Banken verrechneten Kreditbearbeitungsgebühren sind rechtswidrig und müssen rückerstattet werden!"
+          },
+          {
+            "text": "Der Europäischer Konsumenten(schutz)verein – EKV hat vielen Betroffenen geholfen, ihr Geld zurückzuholen.",
+            "source_id": "105ab98b3f7f5c49925848f9",
+            "field": "text",
+            "quote": "Der Europäischer Konsumenten(schutz)verein – EKV hat vielen Betroffenen geholfen, ihr Geld zurückzuholen."
+          }
+        ],
+        "text": "Illegale Kreditgebühren: Holen Sie Ihr Geld zurück.\nZahlreiche Gerichtsurteile sagen eindeutig: Die von Banken verrechneten Kreditbearbeitungsgebühren sind rechtswidrig und müssen rückerstattet werden! Der Europäischer Konsumenten(schutz)verein – EKV hat vielen Betroffenen geholfen, ihr Geld zurückzuholen.\nQuelle: krone.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "105ab98b3f7f5c49925848f9",
+            "supported": true,
+            "quote": "Zahlreiche Gerichtsurteile sagen eindeutig: Die von Banken verrechneten Kreditbearbeitungsgebühren sind rechtswidrig und müssen rückerstattet werden!"
+          },
+          {
+            "claim_index": 1,
+            "source_id": "105ab98b3f7f5c49925848f9",
+            "supported": true,
+            "quote": "Der Europäischer Konsumenten(schutz)verein – EKV hat vielen Betroffenen geholfen, ihr Geld zurückzuholen."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "105ab98b3f7f5c49925848f9"
+      ]
+    },
+    {
+      "id": "b61e3c22a34497e414111c84",
+      "member_ids": [
+        "c6b726f0c6da6adfc18b27ed"
+      ],
+      "newest_at": 1794178860.0,
+      "draft": {
+        "headline": "Standardrätsel C 11438",
+        "headline_source_id": "c6b726f0c6da6adfc18b27ed",
+        "claims": [
+          {
+            "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.",
+            "source_id": "c6b726f0c6da6adfc18b27ed",
+            "field": "text",
+            "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
+          }
+        ],
+        "text": "Standardrätsel C 11438.\nTäglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.\nQuelle: derstandard.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "c6b726f0c6da6adfc18b27ed",
+            "supported": true,
+            "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "c6b726f0c6da6adfc18b27ed"
+      ]
+    },
     {
       "id": "a0fa0026e4c1ffe4a3a7614a",
       "member_ids": [
@@ -10940,7 +10980,7 @@
           "issues": []
         }
       ],
-      "selected": true,
+      "selected": false,
       "used_source_ids": [
         "49d6db0bdff40c73dfebdfab"
       ]
@@ -10998,7 +11038,7 @@
           "issues": []
         }
       ],
-      "selected": true,
+      "selected": false,
       "used_source_ids": [
         "4068d7e842a748d4255afe52"
       ]
@@ -14401,10 +14441,10 @@
         "headline_source_id": "7318edc62274a06c5009ae36",
         "claims": [
           {
-            "text": "Bei der Suche nach einer vermissten 13-Jährigen aus Berlin-Marzahn ist heute eine Leiche gefunden worden.",
+            "text": "Bei der Suche nach einer vermissten 13-Jährigen aus Berlin-Marzahn ist gestern eine Leiche gefunden worden.",
             "source_id": "7318edc62274a06c5009ae36",
             "field": "text",
-            "quote": "Bei der Suche nach einer vermissten 13-Jährigen aus Berlin-Marzahn ist heute eine Leiche gefunden worden."
+            "quote": "Bei der Suche nach einer vermissten 13-Jährigen aus Berlin-Marzahn ist gestern eine Leiche gefunden worden."
           },
           {
             "text": "Nach Angaben der Staatsanwaltschaft handelt es sich um das gesuchte Mädchen.",
@@ -14413,7 +14453,7 @@
             "quote": "Nach Angaben der Staatsanwaltschaft handelt es sich um das gesuchte Mädchen."
           }
         ],
-        "text": "Vermisste Schülerin aus Berlin tot aufgefunden: Mann verhaftet.\nBei der Suche nach einer vermissten 13-Jährigen aus Berlin-Marzahn ist heute eine Leiche gefunden worden. Nach Angaben der Staatsanwaltschaft handelt es sich um das gesuchte Mädchen.\nQuelle: orf.at."
+        "text": "Vermisste Schülerin aus Berlin tot aufgefunden: Mann verhaftet.\nBei der Suche nach einer vermissten 13-Jährigen aus Berlin-Marzahn ist gestern eine Leiche gefunden worden. Nach Angaben der Staatsanwaltschaft handelt es sich um das gesuchte Mädchen.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -14424,7 +14464,7 @@
             "claim_index": 0,
             "source_id": "7318edc62274a06c5009ae36",
             "supported": true,
-            "quote": "Bei der Suche nach einer vermissten 13-Jährigen aus Berlin-Marzahn ist heute eine Leiche gefunden worden."
+            "quote": "Bei der Suche nach einer vermissten 13-Jährigen aus Berlin-Marzahn ist gestern eine Leiche gefunden worden."
           },
           {
             "claim_index": 1,
@@ -17137,13 +17177,13 @@
             "quote": "Bei einem Zugsunglück in Ägypten sind nach offiziellen Angaben mindestens sieben Menschen getötet und 112 verletzt worden."
           },
           {
-            "text": "Bei dem Unfall in Giseh seien mehrere Waggons eines Passagierzugs entgleist, teilte das Gesundheitsministerium heute mit.",
+            "text": "Bei dem Unfall in Giseh seien mehrere Waggons eines Passagierzugs entgleist, teilte das Gesundheitsministerium gestern mit.",
             "source_id": "9c4307073e33b046b527ee39",
             "field": "text",
-            "quote": "Bei dem Unfall in Giseh seien mehrere Waggons eines Passagierzugs entgleist, teilte das Gesundheitsministerium heute mit."
+            "quote": "Bei dem Unfall in Giseh seien mehrere Waggons eines Passagierzugs entgleist, teilte das Gesundheitsministerium gestern mit."
           }
         ],
-        "text": "Tote und Verletzte bei Zugsunglück in Ägypten.\nBei einem Zugsunglück in Ägypten sind nach offiziellen Angaben mindestens sieben Menschen getötet und 112 verletzt worden. Bei dem Unfall in Giseh seien mehrere Waggons eines Passagierzugs entgleist, teilte das Gesundheitsministerium heute mit.\nQuelle: orf.at."
+        "text": "Tote und Verletzte bei Zugsunglück in Ägypten.\nBei einem Zugsunglück in Ägypten sind nach offiziellen Angaben mindestens sieben Menschen getötet und 112 verletzt worden. Bei dem Unfall in Giseh seien mehrere Waggons eines Passagierzugs entgleist, teilte das Gesundheitsministerium gestern mit.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -17160,7 +17200,7 @@
             "claim_index": 1,
             "source_id": "9c4307073e33b046b527ee39",
             "supported": true,
-            "quote": "Bei dem Unfall in Giseh seien mehrere Waggons eines Passagierzugs entgleist, teilte das Gesundheitsministerium heute mit."
+            "quote": "Bei dem Unfall in Giseh seien mehrere Waggons eines Passagierzugs entgleist, teilte das Gesundheitsministerium gestern mit."
           }
         ],
         "conflicts": [],
@@ -17195,13 +17235,13 @@
             "quote": "Der österreichische Dokumentarfilm „Who cares – Ohne uns steht die Welt still“ von Regisseurin Ina Ivanceanu ist in Florenz beim Festival dei Popoli, dem weltältesten Dokufilmfestival der Welt, mit einem Preis ausgezeichnet worden."
           },
           {
-            "text": "Der Film, der sich auf persönlich-essayistische Weise mit dem Thema Care-Arbeit auseinandersetzt, gewann den „Gian Paolo Paoli Award – Award for Best Anthropological Film“, wie die Produktionsfirma Amour Fou heute mitteilte.",
+            "text": "Der Film, der sich auf persönlich-essayistische Weise mit dem Thema Care-Arbeit auseinandersetzt, gewann den „Gian Paolo Paoli Award – Award for Best Anthropological Film“, wie die Produktionsfirma Amour Fou gestern mitteilte.",
             "source_id": "148f39ca1befa3ad999c020e",
             "field": "text",
-            "quote": "Der Film, der sich auf persönlich-essayistische Weise mit dem Thema Care-Arbeit auseinandersetzt, gewann den „Gian Paolo Paoli Award – Award for Best Anthropological Film“, wie die Produktionsfirma Amour Fou heute mitteilte."
+            "quote": "Der Film, der sich auf persönlich-essayistische Weise mit dem Thema Care-Arbeit auseinandersetzt, gewann den „Gian Paolo Paoli Award – Award for Best Anthropological Film“, wie die Produktionsfirma Amour Fou gestern mitteilte."
           }
         ],
-        "text": "Österreichischer Dokufilm „Who cares“ holte Preis in Florenz.\nDer österreichische Dokumentarfilm „Who cares – Ohne uns steht die Welt still“ von Regisseurin Ina Ivanceanu ist in Florenz beim Festival dei Popoli, dem weltältesten Dokufilmfestival der Welt, mit einem Preis ausgezeichnet worden. Der Film, der sich auf persönlich-essayistische Weise mit dem Thema Care-Arbeit auseinandersetzt, gewann den „Gian Paolo Paoli Award – Award for Best Anthropological Film“, wie die Produktionsfirma Amour Fou heute mitteilte.\nQuelle: orf.at."
+        "text": "Österreichischer Dokufilm „Who cares“ holte Preis in Florenz.\nDer österreichische Dokumentarfilm „Who cares – Ohne uns steht die Welt still“ von Regisseurin Ina Ivanceanu ist in Florenz beim Festival dei Popoli, dem weltältesten Dokufilmfestival der Welt, mit einem Preis ausgezeichnet worden. Der Film, der sich auf persönlich-essayistische Weise mit dem Thema Care-Arbeit auseinandersetzt, gewann den „Gian Paolo Paoli Award – Award for Best Anthropological Film“, wie die Produktionsfirma Amour Fou gestern mitteilte.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -17218,7 +17258,7 @@
             "claim_index": 1,
             "source_id": "148f39ca1befa3ad999c020e",
             "supported": true,
-            "quote": "Der Film, der sich auf persönlich-essayistische Weise mit dem Thema Care-Arbeit auseinandersetzt, gewann den „Gian Paolo Paoli Award – Award for Best Anthropological Film“, wie die Produktionsfirma Amour Fou heute mitteilte."
+            "quote": "Der Film, der sich auf persönlich-essayistische Weise mit dem Thema Care-Arbeit auseinandersetzt, gewann den „Gian Paolo Paoli Award – Award for Best Anthropological Film“, wie die Produktionsfirma Amour Fou gestern mitteilte."
           }
         ],
         "conflicts": [],
@@ -17253,13 +17293,13 @@
             "quote": "Die Golfstaaten arbeiten weiter an einem gemeinsamen Schienennetz entlang der Küste zum Persischen Golf."
           },
           {
-            "text": "Bahrains Kronprinz Salman bin Hamad empfing Vertreter der Staaten, die in der Hauptstadt Manama ein Abkommen zu dem Projekt unterzeichneten, wie die Staatsagentur BNA heute berichtete.",
+            "text": "Bahrains Kronprinz Salman bin Hamad empfing Vertreter der Staaten, die in der Hauptstadt Manama ein Abkommen zu dem Projekt unterzeichneten, wie die Staatsagentur BNA gestern berichtete.",
             "source_id": "499a8fdb2dc46a92fb03dc7d",
             "field": "text",
-            "quote": "Bahrains Kronprinz Salman bin Hamad empfing Vertreter der Staaten, die in der Hauptstadt Manama ein Abkommen zu dem Projekt unterzeichneten, wie die Staatsagentur BNA heute berichtete."
+            "quote": "Bahrains Kronprinz Salman bin Hamad empfing Vertreter der Staaten, die in der Hauptstadt Manama ein Abkommen zu dem Projekt unterzeichneten, wie die Staatsagentur BNA gestern berichtete."
           }
         ],
-        "text": "Golfstaaten treiben gemeinsames Schienennetz voran.\nDie Golfstaaten arbeiten weiter an einem gemeinsamen Schienennetz entlang der Küste zum Persischen Golf. Bahrains Kronprinz Salman bin Hamad empfing Vertreter der Staaten, die in der Hauptstadt Manama ein Abkommen zu dem Projekt unterzeichneten, wie die Staatsagentur BNA heute berichtete.\nQuelle: orf.at."
+        "text": "Golfstaaten treiben gemeinsames Schienennetz voran.\nDie Golfstaaten arbeiten weiter an einem gemeinsamen Schienennetz entlang der Küste zum Persischen Golf. Bahrains Kronprinz Salman bin Hamad empfing Vertreter der Staaten, die in der Hauptstadt Manama ein Abkommen zu dem Projekt unterzeichneten, wie die Staatsagentur BNA gestern berichtete.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -17276,7 +17316,7 @@
             "claim_index": 1,
             "source_id": "499a8fdb2dc46a92fb03dc7d",
             "supported": true,
-            "quote": "Bahrains Kronprinz Salman bin Hamad empfing Vertreter der Staaten, die in der Hauptstadt Manama ein Abkommen zu dem Projekt unterzeichneten, wie die Staatsagentur BNA heute berichtete."
+            "quote": "Bahrains Kronprinz Salman bin Hamad empfing Vertreter der Staaten, die in der Hauptstadt Manama ein Abkommen zu dem Projekt unterzeichneten, wie die Staatsagentur BNA gestern berichtete."
           }
         ],
         "conflicts": [],
@@ -29520,226 +29560,6 @@
       "used_source_ids": [
         "ebc58ef4d7816fdb3c640037"
       ]
-    },
-    {
-      "id": "9d9153b420e06cd2352a8389",
-      "member_ids": [
-        "d5f447bd583c488179f0d3d2"
-      ],
-      "newest_at": 1794093487.0,
-      "draft": {
-        "headline": "„Leute zogen ihre Hemden aus, um Opfern zu helfen“",
-        "headline_source_id": "d5f447bd583c488179f0d3d2",
-        "claims": [
-          {
-            "text": "Die polnische Stadt Krakau ist nach dem rechtsextremen Anschlag mitten am Markplatz in Schockstarre.",
-            "source_id": "d5f447bd583c488179f0d3d2",
-            "field": "text",
-            "quote": "Die polnische Stadt Krakau ist nach dem rechtsextremen Anschlag mitten am Markplatz in Schockstarre."
-          },
-          {
-            "text": "Augenzeugen schildern die grausamen Momente, aber auch den Mut vieler: „Die Leute zogen ihre Hemden aus, um die Blutungen der am Boden Liegenden zu stillen“, so einer von vielen, die zusehen mussten, wie am Samstag sechs Passanten erschossen wurden.",
-            "source_id": "d5f447bd583c488179f0d3d2",
-            "field": "text",
-            "quote": "Augenzeugen schildern die grausamen Momente, aber auch den Mut vieler: „Die Leute zogen ihre Hemden aus, um die Blutungen der am Boden Liegenden zu stillen“, so einer von vielen, die zusehen mussten, wie am Samstag sechs Passanten erschossen wurden."
-          }
-        ],
-        "text": "„Leute zogen ihre Hemden aus, um Opfern zu helfen“.\nDie polnische Stadt Krakau ist nach dem rechtsextremen Anschlag mitten am Markplatz in Schockstarre. Augenzeugen schildern die grausamen Momente, aber auch den Mut vieler: „Die Leute zogen ihre Hemden aus, um die Blutungen der am Boden Liegenden zu stillen“, so einer von vielen, die zusehen mussten, wie am Samstag sechs Passanten erschossen wurden.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "d5f447bd583c488179f0d3d2",
-            "supported": true,
-            "quote": "Die polnische Stadt Krakau ist nach dem rechtsextremen Anschlag mitten am Markplatz in Schockstarre."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "d5f447bd583c488179f0d3d2",
-            "supported": true,
-            "quote": "Augenzeugen schildern die grausamen Momente, aber auch den Mut vieler: „Die Leute zogen ihre Hemden aus, um die Blutungen der am Boden Liegenden zu stillen“, so einer von vielen, die zusehen mussten, wie am Samstag sechs Passanten erschossen wurden."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "d5f447bd583c488179f0d3d2"
-      ]
-    },
-    {
-      "id": "70e06c97239aabc3a51cea2a",
-      "member_ids": [
-        "602d20d0e20d1e9bdc6130bf"
-      ],
-      "newest_at": 1794093028.0,
-      "draft": {
-        "headline": "Achter Sieg in Folge: Real gewann in Valencia 3:0",
-        "headline_source_id": "602d20d0e20d1e9bdc6130bf",
-        "claims": [
-          {
-            "text": "Valverde, Güler und Mbappé sorgten für den Sieg der Mourinho-Elf.",
-            "source_id": "602d20d0e20d1e9bdc6130bf",
-            "field": "text",
-            "quote": "Valverde, Güler und Mbappé sorgten für den Sieg der Mourinho-Elf."
-          }
-        ],
-        "text": "Achter Sieg in Folge: Real gewann in Valencia 3:0.\nValverde, Güler und Mbappé sorgten für den Sieg der Mourinho-Elf.\nQuelle: derstandard.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "602d20d0e20d1e9bdc6130bf",
-            "supported": true,
-            "quote": "Valverde, Güler und Mbappé sorgten für den Sieg der Mourinho-Elf."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "602d20d0e20d1e9bdc6130bf"
-      ]
-    },
-    {
-      "id": "b11b7d5821cd0bcd2cdf43a1",
-      "member_ids": [
-        "bfb37e4bda6e4a9e23d45498"
-      ],
-      "newest_at": 1794092593.0,
-      "draft": {
-        "headline": "Von der Idee zur Maschine",
-        "headline_source_id": "bfb37e4bda6e4a9e23d45498",
-        "claims": [
-          {
-            "text": "Sebastian (17) taucht bei seiner Ausbildung zum Maschinenbautechniker tief in die Welt komplexer Industrieanlagen ein.",
-            "source_id": "bfb37e4bda6e4a9e23d45498",
-            "field": "text",
-            "quote": "Sebastian (17) taucht bei seiner Ausbildung zum Maschinenbautechniker tief in die Welt komplexer Industrieanlagen ein."
-          },
-          {
-            "text": "Bei der voestalpine Krems GmbH ist er mittlerweile im dritten Lehrjahr und weiß: Technik ist genau sein Ding.",
-            "source_id": "bfb37e4bda6e4a9e23d45498",
-            "field": "text",
-            "quote": "Bei der voestalpine Krems GmbH ist er mittlerweile im dritten Lehrjahr und weiß: Technik ist genau sein Ding."
-          }
-        ],
-        "text": "Von der Idee zur Maschine.\nSebastian (17) taucht bei seiner Ausbildung zum Maschinenbautechniker tief in die Welt komplexer Industrieanlagen ein. Bei der voestalpine Krems GmbH ist er mittlerweile im dritten Lehrjahr und weiß: Technik ist genau sein Ding.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "bfb37e4bda6e4a9e23d45498",
-            "supported": true,
-            "quote": "Sebastian (17) taucht bei seiner Ausbildung zum Maschinenbautechniker tief in die Welt komplexer Industrieanlagen ein."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "bfb37e4bda6e4a9e23d45498",
-            "supported": true,
-            "quote": "Bei der voestalpine Krems GmbH ist er mittlerweile im dritten Lehrjahr und weiß: Technik ist genau sein Ding."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "bfb37e4bda6e4a9e23d45498"
-      ]
-    },
-    {
-      "id": "0c8129b8c3720ac90fd42915",
-      "member_ids": [
-        "302c8351f9e6b972d8f42083"
-      ],
-      "newest_at": 1794092463.0,
-      "draft": {
-        "headline": "Mit Plan durch die Industrie",
-        "headline_source_id": "302c8351f9e6b972d8f42083",
-        "claims": [
-          {
-            "text": "Von der Schulbank direkt ins Berufsleben: Katharina (16) entschied sich für eine Lehre zur Industriekauffrau bei der voestalpine in Linz.",
-            "source_id": "302c8351f9e6b972d8f42083",
-            "field": "text",
-            "quote": "Von der Schulbank direkt ins Berufsleben: Katharina (16) entschied sich für eine Lehre zur Industriekauffrau bei der voestalpine in Linz."
-          },
-          {
-            "text": "Im zweiten Lehrjahr ist sie bereits mittendrin in der kaufmännischen Welt eines internationalen Konzerns.",
-            "source_id": "302c8351f9e6b972d8f42083",
-            "field": "text",
-            "quote": "Im zweiten Lehrjahr ist sie bereits mittendrin in der kaufmännischen Welt eines internationalen Konzerns."
-          }
-        ],
-        "text": "Mit Plan durch die Industrie.\nVon der Schulbank direkt ins Berufsleben: Katharina (16) entschied sich für eine Lehre zur Industriekauffrau bei der voestalpine in Linz. Im zweiten Lehrjahr ist sie bereits mittendrin in der kaufmännischen Welt eines internationalen Konzerns.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "302c8351f9e6b972d8f42083",
-            "supported": true,
-            "quote": "Von der Schulbank direkt ins Berufsleben: Katharina (16) entschied sich für eine Lehre zur Industriekauffrau bei der voestalpine in Linz."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "302c8351f9e6b972d8f42083",
-            "supported": true,
-            "quote": "Im zweiten Lehrjahr ist sie bereits mittendrin in der kaufmännischen Welt eines internationalen Konzerns."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "302c8351f9e6b972d8f42083"
-      ]
     }
   ],
   "excluded_articles": [
@@ -29751,9 +29571,9 @@
     }
   ],
   "selected_ids": [
+    "7efad95044b9cbe900094698",
+    "b61e3c22a34497e414111c84",
     "a0fa0026e4c1ffe4a3a7614a",
-    "d7515bb952d048b1deb126c2",
-    "6280d769603865fa52776483",
     "6530edaf65ce982715dc6253",
     "2d2677079891bb8722302d53"
   ]

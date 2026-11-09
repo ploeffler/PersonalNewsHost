@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261108T185309Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 08.11.2026 um 19:53 Uhr",
-      "created_at": 1794163989.797636,
-      "video": "broadcasts/20261108T185309Z.mp4",
-      "sources": [
-        {
-          "title": "Brighton neuer Zweiter, Manchester United spielt 4:4 gegen Aston Villa",
-          "url": "https://www.derstandard.at/story/3000000348115/brighton-neuer-zweiter-manchester-united-spielt-44-gegen-aston-villa?ref=rss"
-        },
-        {
-          "title": "Sechs Drogenlenker wurden am Wochenende gestoppt",
-          "url": "https://www.krone.at/4368082"
-        },
-        {
-          "title": "Krakau: Terrorismusexperte Neumann im Studio",
-          "url": "https://orf.at/stories/3447627/"
-        },
-        {
-          "title": "Kärntner Fußballverein startet mit besonderem Team durch",
-          "url": "https://www.kleinezeitung.at/artikel/41424826/kaerntner-fussballverein-startet-mit-besonderem-team-durch"
-        },
-        {
-          "title": "Pkw mit Wildschwein kollidiert",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261108T185309Z.txt",
-      "subtitles": "broadcasts/20261108T185309Z.vtt",
-      "subtitle_download": "broadcasts/20261108T185309Z.srt"
-    },
-    {
       "id": "20261108T225710Z",
       "kind": "broadcast",
       "title": "Nachrichten 08.11.2026 um 23:57 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261108T225710Z.txt",
       "subtitles": "broadcasts/20261108T225710Z.vtt",
       "subtitle_download": "broadcasts/20261108T225710Z.srt"
+    },
+    {
+      "id": "20261109T024346Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 09.11.2026 um 03:43 Uhr",
+      "created_at": 1794192226.829618,
+      "video": "broadcasts/20261109T024346Z.mp4",
+      "sources": [
+        {
+          "title": "Illegale Kreditgebühren: Holen Sie Ihr Geld zurück",
+          "url": "https://www.krone.at/4364704"
+        },
+        {
+          "title": "Standardrätsel C 11438",
+          "url": "https://www.derstandard.at/story/3000000347077/standardraetsel-c-11438?ref=rss"
+        },
+        {
+          "title": "Mobilisierung als Front gegen Autoritarismus",
+          "url": "https://orf.at/stories/3447307/"
+        },
+        {
+          "title": "Die schönsten Bilder vom Grazer Krampuslauf 2026",
+          "url": "https://www.kleinezeitung.at/artikel/41423645/die-schoensten-bilder-vom-grazer-krampuslauf-2026"
+        },
+        {
+          "title": "Pkw mit Wildschwein kollidiert",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261109T024346Z.txt",
+      "subtitles": "broadcasts/20261109T024346Z.vtt",
+      "subtitle_download": "broadcasts/20261109T024346Z.srt"
     }
   ]
 }
