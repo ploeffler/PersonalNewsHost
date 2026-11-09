@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261108T225710Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 08.11.2026 um 23:57 Uhr",
-      "created_at": 1794178630.91766,
-      "video": "broadcasts/20261108T225710Z.mp4",
-      "sources": [
-        {
-          "title": "Mobilisierung als Front gegen Autoritarismus",
-          "url": "https://orf.at/stories/3447307/"
-        },
-        {
-          "title": "Barcelona bestätigt Tabellenführung bei Atletico",
-          "url": "https://www.derstandard.at/story/3000000348120/barcelona-bestaetigt-tabellenfuehrung-bei-atletico?ref=rss"
-        },
-        {
-          "title": "Krakau-Attentäter tötete zweifache Mutter aus NÖ",
-          "url": "https://www.krone.at/4367892"
-        },
-        {
-          "title": "Die schönsten Bilder vom Grazer Krampuslauf 2026",
-          "url": "https://www.kleinezeitung.at/artikel/41423645/die-schoensten-bilder-vom-grazer-krampuslauf-2026"
-        },
-        {
-          "title": "Pkw mit Wildschwein kollidiert",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261108T225710Z.txt",
-      "subtitles": "broadcasts/20261108T225710Z.vtt",
-      "subtitle_download": "broadcasts/20261108T225710Z.srt"
-    },
-    {
       "id": "20261109T024346Z",
       "kind": "broadcast",
       "title": "Nachrichten 09.11.2026 um 03:43 Uhr",
@@ -63,6 +31,46 @@
       "transcript": "broadcasts/20261109T024346Z.txt",
       "subtitles": "broadcasts/20261109T024346Z.vtt",
       "subtitle_download": "broadcasts/20261109T024346Z.srt"
+    },
+    {
+      "id": "20261109T114334Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 09.11.2026 um 12:43 Uhr",
+      "created_at": 1794224614.658754,
+      "video": "broadcasts/20261109T114334Z.mp4",
+      "sources": [
+        {
+          "title": "Brennertunnel: Hacker fordern Lösegeld für Daten",
+          "url": "https://www.krone.at/4368923"
+        },
+        {
+          "title": "Marterbauer ist gegen ersatzlose Streichung der Flugabgabe",
+          "url": "https://www.kleinezeitung.at/artikel/41435710/marterbauer-ist-gegen-ersatzlose-streichung-der-flugabgabe"
+        },
+        {
+          "title": "Flugabgabe: Marterbauer lehnt ersatzlose Streichung ab",
+          "url": "https://www.derstandard.at/story/3000000348217/flugabgabe-marterbauer-erteilt-ersatzloser-streichung-eine-absage?ref=rss"
+        },
+        {
+          "title": "Warnung vor wachsendem Antisemitismus",
+          "url": "https://orf.at/stories/3447677/"
+        },
+        {
+          "title": "Brand eines Wirtschaftsgebäudes",
+          "url": ""
+        },
+        {
+          "title": "Brenner Basistunnel: Lösegeldforderung für 812 GB gestohlene Daten",
+          "url": "https://www.kleinezeitung.at/artikel/41435678/brenner-basistunnel-loesegeldforderung-fuer-812-gb-gestohlene-daten"
+        },
+        {
+          "title": "Brenner Basistunnel: Lösegeldforderung für 812 GB gestohlene Daten",
+          "url": "https://www.derstandard.at/story/3000000348239/brenner-basistunnel-loesegeldforderung-fuer-812-gb-gestohlene-daten?ref=rss"
+        }
+      ],
+      "transcript": "broadcasts/20261109T114334Z.txt",
+      "subtitles": "broadcasts/20261109T114334Z.vtt",
+      "subtitle_download": "broadcasts/20261109T114334Z.srt"
     }
   ]
 }
