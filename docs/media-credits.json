@@ -1,18 +1,24 @@
 [
   {
-    "source": "https://www.krone.at/4368923",
+    "source": "https://orf.at/stories/3447695/",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
   },
   {
-    "source": "https://www.kleinezeitung.at/artikel/41435710/marterbauer-ist-gegen-ersatzlose-streichung-der-flugabgabe",
+    "source": "https://www.krone.at/4368566",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
   },
   {
-    "source": "https://orf.at/stories/3447677/",
+    "source": "https://www.kleinezeitung.at/artikel/41437739/hameseder-muessen-alles-tun-um-run-auf-zivildienst-zu-stoppen",
+    "image_origin": "article_metadata_or_rss",
+    "image_processing": "neural_fsrcnn_x2",
+    "original_media_retained": true
+  },
+  {
+    "source": "https://www.derstandard.at/story/3000000348340/mayr-melnhof-verkauft-mehrheit-an-packaging-geschaeft?ref=rss",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
@@ -20,11 +26,5 @@
   {
     "source": "",
     "image_origin": "article_metadata_or_rss"
-  },
-  {
-    "source": "https://www.kleinezeitung.at/artikel/41435678/brenner-basistunnel-loesegeldforderung-fuer-812-gb-gestohlene-daten",
-    "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
-    "original_media_retained": true
   }
 ]

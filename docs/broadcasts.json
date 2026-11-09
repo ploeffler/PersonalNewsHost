@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261109T024346Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 09.11.2026 um 03:43 Uhr",
-      "created_at": 1794192226.829618,
-      "video": "broadcasts/20261109T024346Z.mp4",
-      "sources": [
-        {
-          "title": "Illegale Kreditgebühren: Holen Sie Ihr Geld zurück",
-          "url": "https://www.krone.at/4364704"
-        },
-        {
-          "title": "Standardrätsel C 11438",
-          "url": "https://www.derstandard.at/story/3000000347077/standardraetsel-c-11438?ref=rss"
-        },
-        {
-          "title": "Mobilisierung als Front gegen Autoritarismus",
-          "url": "https://orf.at/stories/3447307/"
-        },
-        {
-          "title": "Die schönsten Bilder vom Grazer Krampuslauf 2026",
-          "url": "https://www.kleinezeitung.at/artikel/41423645/die-schoensten-bilder-vom-grazer-krampuslauf-2026"
-        },
-        {
-          "title": "Pkw mit Wildschwein kollidiert",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261109T024346Z.txt",
-      "subtitles": "broadcasts/20261109T024346Z.vtt",
-      "subtitle_download": "broadcasts/20261109T024346Z.srt"
-    },
-    {
       "id": "20261109T114334Z",
       "kind": "broadcast",
       "title": "Nachrichten 09.11.2026 um 12:43 Uhr",
@@ -71,6 +39,38 @@
       "transcript": "broadcasts/20261109T114334Z.txt",
       "subtitles": "broadcasts/20261109T114334Z.vtt",
       "subtitle_download": "broadcasts/20261109T114334Z.srt"
+    },
+    {
+      "id": "20261109T222821Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 09.11.2026 um 23:28 Uhr",
+      "created_at": 1794263301.842556,
+      "video": "broadcasts/20261109T222821Z.mp4",
+      "sources": [
+        {
+          "title": "Männerduell um Lagardes Nachfolge",
+          "url": "https://orf.at/stories/3447695/"
+        },
+        {
+          "title": "Nur eine Stange: EU will „Tschickhandel“ begrenzen",
+          "url": "https://www.krone.at/4368566"
+        },
+        {
+          "title": "Hameseder: „Müssen alles tun, um Run auf Zivildienst zu stoppen“",
+          "url": "https://www.kleinezeitung.at/artikel/41437739/hameseder-muessen-alles-tun-um-run-auf-zivildienst-zu-stoppen"
+        },
+        {
+          "title": "Mayr-Melnhof verkauft Mehrheit an Packaging-Geschäft",
+          "url": "https://www.derstandard.at/story/3000000348340/mayr-melnhof-verkauft-mehrheit-an-packaging-geschaeft?ref=rss"
+        },
+        {
+          "title": "Zeugenaufruf: Hahn getötet",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261109T222821Z.txt",
+      "subtitles": "broadcasts/20261109T222821Z.vtt",
+      "subtitle_download": "broadcasts/20261109T222821Z.srt"
     }
   ]
 }
