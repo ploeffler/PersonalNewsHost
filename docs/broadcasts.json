@@ -1,46 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261109T114334Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 09.11.2026 um 12:43 Uhr",
-      "created_at": 1794224614.658754,
-      "video": "broadcasts/20261109T114334Z.mp4",
-      "sources": [
-        {
-          "title": "Brennertunnel: Hacker fordern Lösegeld für Daten",
-          "url": "https://www.krone.at/4368923"
-        },
-        {
-          "title": "Marterbauer ist gegen ersatzlose Streichung der Flugabgabe",
-          "url": "https://www.kleinezeitung.at/artikel/41435710/marterbauer-ist-gegen-ersatzlose-streichung-der-flugabgabe"
-        },
-        {
-          "title": "Flugabgabe: Marterbauer lehnt ersatzlose Streichung ab",
-          "url": "https://www.derstandard.at/story/3000000348217/flugabgabe-marterbauer-erteilt-ersatzloser-streichung-eine-absage?ref=rss"
-        },
-        {
-          "title": "Warnung vor wachsendem Antisemitismus",
-          "url": "https://orf.at/stories/3447677/"
-        },
-        {
-          "title": "Brand eines Wirtschaftsgebäudes",
-          "url": ""
-        },
-        {
-          "title": "Brenner Basistunnel: Lösegeldforderung für 812 GB gestohlene Daten",
-          "url": "https://www.kleinezeitung.at/artikel/41435678/brenner-basistunnel-loesegeldforderung-fuer-812-gb-gestohlene-daten"
-        },
-        {
-          "title": "Brenner Basistunnel: Lösegeldforderung für 812 GB gestohlene Daten",
-          "url": "https://www.derstandard.at/story/3000000348239/brenner-basistunnel-loesegeldforderung-fuer-812-gb-gestohlene-daten?ref=rss"
-        }
-      ],
-      "transcript": "broadcasts/20261109T114334Z.txt",
-      "subtitles": "broadcasts/20261109T114334Z.vtt",
-      "subtitle_download": "broadcasts/20261109T114334Z.srt"
-    },
-    {
       "id": "20261109T222821Z",
       "kind": "broadcast",
       "title": "Nachrichten 09.11.2026 um 23:28 Uhr",
@@ -71,6 +31,38 @@
       "transcript": "broadcasts/20261109T222821Z.txt",
       "subtitles": "broadcasts/20261109T222821Z.vtt",
       "subtitle_download": "broadcasts/20261109T222821Z.srt"
+    },
+    {
+      "id": "20261110T044140Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 10.11.2026 um 05:41 Uhr",
+      "created_at": 1794285700.423369,
+      "video": "broadcasts/20261110T044140Z.mp4",
+      "sources": [
+        {
+          "title": "So kommen Sie nun zu einer Wohnung in der Hofburg",
+          "url": "https://www.krone.at/4369222"
+        },
+        {
+          "title": "Max Thaller: „Wenn du sowas ablieferst, macht das was mit dir“",
+          "url": "https://www.kleinezeitung.at/artikel/41435595/max-thaller-wenn-du-sowas-ablieferst-macht-das-was-mit-dir"
+        },
+        {
+          "title": "Trumps Krieg im Iran bremst 2026 fossile Emissionen – trotzdem gibt es keinen Grund zum Feiern",
+          "url": "https://www.derstandard.at/story/3000000347905/trumps-krieg-im-iran-bremst-2026-fossile-emissionen-trotzdem-gibt-es-keinen-grund-zum-feiern?ref=rss"
+        },
+        {
+          "title": "Trump: FBI ermittelt bei Affäre des Nvidia-Chefs",
+          "url": "https://orf.at/stories/3447744/"
+        },
+        {
+          "title": "Zeugenaufruf: Hahn getötet",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261110T044140Z.txt",
+      "subtitles": "broadcasts/20261110T044140Z.vtt",
+      "subtitle_download": "broadcasts/20261110T044140Z.srt"
     }
   ]
 }

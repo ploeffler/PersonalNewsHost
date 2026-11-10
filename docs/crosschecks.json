@@ -4,7 +4,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "ca17f7a9949a90ffefe5276a",
+    "pipeline_group_id": "99d226e80a94c00a5f9b113a",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -12,15 +12,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "a20708da24c8db58c4fcf27c",
+          "source_id": "ea4884565741acd3982cbb8b",
           "supported": true,
-          "quote": "Die Frage, wer auf Christine Lagarde an der Spitze der Europäischen Zentralbank (EZB) folgt, bleibt vorerst noch ungeklärt."
+          "quote": "Residieren neben dem Bundespräsidenten: Die Burghauptmannschaft hat die Vormerklisten für Wohnungen in der Hofburg eingestampft und auf ein neues Vergabesystem umgestellt."
         },
         {
           "claim_index": 1,
-          "source_id": "a20708da24c8db58c4fcf27c",
+          "source_id": "ea4884565741acd3982cbb8b",
           "supported": true,
-          "quote": "Die Französin hatte Ende Oktober ihren vorzeitigen Rücktritt mit Februar 2027 angekündigt."
+          "quote": "Sie kommen Sie jetzt zu einer der raren Top-Adressen in der Wiener Innenstadt."
         }
       ],
       "conflicts": [],
@@ -33,7 +33,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "fd6a0ee74a882f5b632bd7c4",
+    "pipeline_group_id": "63be988f01ebf0745408e5fb",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -41,15 +41,38 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "fc53a8ac0a8433a82bfc6369",
+          "source_id": "55215c3046d4c8f7428d6a01",
           "supported": true,
-          "quote": "Statt vier Stangen sollen Reisende künftig nur noch 200 Zigaretten aus anderen EU-Staaten mitbringen dürfen."
+          "quote": "Hartbergs Volleyballer empfangen am Dienstag (19 Uhr, ORF Sport + live) in der Champions League das Team von Fino Kaposvár."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "02b373c2d1b7bfe54bccc519",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "a9a626be985d4bee476ee4ac",
+          "supported": true,
+          "quote": "Die Ölkrise, aber auch der Aufstieg der Erneuerbaren bilden sich im prognostizierten CO₂-Ausstoß dieses Jahres ab."
         },
         {
           "claim_index": 1,
-          "source_id": "fc53a8ac0a8433a82bfc6369",
+          "source_id": "a9a626be985d4bee476ee4ac",
           "supported": true,
-          "quote": "Auch für E-Zigaretten-Liquids ist eine deutliche Verschärfung geplant."
+          "quote": "Trotzdem wird ein neues Höchstniveau erwartet."
         }
       ],
       "conflicts": [],
@@ -62,7 +85,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "834ec69a4a28c7817761579e",
+    "pipeline_group_id": "da446f11b58546eee1e272fb",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -70,32 +93,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "7d87bc3186c1fbb62af09d6f",
+          "source_id": "3803445354adf859ee5fe0ce",
           "supported": true,
-          "quote": "Der Leiter der Heereskommission Erwin Hameseder fordert in der ZIB2 nachdrücklich eine sofortige Verlängerung der Dauer des Wehrersatzdienstes."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "065c5b58968781613caedc02",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
+          "quote": "Das FBI ermittelt nach Worten von US-Präsident Donald Trump im Fall der Affäre von Nvidia-Chef Jensen Huang mit einer möglichen chinesischen Spionin."
+        },
         {
-          "claim_index": 0,
-          "source_id": "f669dd8898efe21ba1493bd8",
+          "claim_index": 1,
+          "source_id": "3803445354adf859ee5fe0ce",
           "supported": true,
-          "quote": "KPS Capital Partners erhält 70 Prozent bei einer Unternehmensbewertung von 2,4 Milliarden Euro."
+          "quote": "Die US-Bundespolizei prüfe den Fall, sagte Trump auf einer Pressekonferenz im Weißen Haus."
         }
       ],
       "conflicts": [],
