@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261109T222821Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 09.11.2026 um 23:28 Uhr",
-      "created_at": 1794263301.842556,
-      "video": "broadcasts/20261109T222821Z.mp4",
-      "sources": [
-        {
-          "title": "Männerduell um Lagardes Nachfolge",
-          "url": "https://orf.at/stories/3447695/"
-        },
-        {
-          "title": "Nur eine Stange: EU will „Tschickhandel“ begrenzen",
-          "url": "https://www.krone.at/4368566"
-        },
-        {
-          "title": "Hameseder: „Müssen alles tun, um Run auf Zivildienst zu stoppen“",
-          "url": "https://www.kleinezeitung.at/artikel/41437739/hameseder-muessen-alles-tun-um-run-auf-zivildienst-zu-stoppen"
-        },
-        {
-          "title": "Mayr-Melnhof verkauft Mehrheit an Packaging-Geschäft",
-          "url": "https://www.derstandard.at/story/3000000348340/mayr-melnhof-verkauft-mehrheit-an-packaging-geschaeft?ref=rss"
-        },
-        {
-          "title": "Zeugenaufruf: Hahn getötet",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261109T222821Z.txt",
-      "subtitles": "broadcasts/20261109T222821Z.vtt",
-      "subtitle_download": "broadcasts/20261109T222821Z.srt"
-    },
-    {
       "id": "20261110T044140Z",
       "kind": "broadcast",
       "title": "Nachrichten 10.11.2026 um 05:41 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261110T044140Z.txt",
       "subtitles": "broadcasts/20261110T044140Z.vtt",
       "subtitle_download": "broadcasts/20261110T044140Z.srt"
+    },
+    {
+      "id": "20261110T133310Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 10.11.2026 um 14:33 Uhr",
+      "created_at": 1794317590.797043,
+      "video": "broadcasts/20261110T133310Z.mp4",
+      "sources": [
+        {
+          "title": "Beratungsinitiative gegen Leerstand in Osttirol",
+          "url": "https://www.krone.at/4369310"
+        },
+        {
+          "title": "Mehrheit der US-Bürger will vom neuen Kongress Ende des Iran-Kriegs",
+          "url": "https://www.derstandard.at/story/3000000348562/mehrheit-der-us-b252rger-will-vom-neuen-kongress-ende-des-iran-kriegs?ref=rss"
+        },
+        {
+          "title": "Auslaufender Mietvertrag: Lagerhaus sperrt Standort in Spittal zu",
+          "url": "https://www.kleinezeitung.at/artikel/41438003/auslaufender-mietvertrag-lagerhaus-sperrt-standort-in-spittal-zu"
+        },
+        {
+          "title": "Anthropic-Börsengang soll 64 Mrd. Dollar bringen",
+          "url": "https://orf.at/stories/3447801/"
+        },
+        {
+          "title": "Salztorbrücke: „Meine 50 Kilo hält sie aus“",
+          "url": "https://www.krone.at/4370398"
+        }
+      ],
+      "transcript": "broadcasts/20261110T133310Z.txt",
+      "subtitles": "broadcasts/20261110T133310Z.vtt",
+      "subtitle_download": "broadcasts/20261110T133310Z.srt"
     }
   ]
 }
