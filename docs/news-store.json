@@ -1,7 +1,538 @@
 {
   "version": 1,
-  "updated_at": 1794343958.184662,
+  "updated_at": 1794354399.513657,
   "articles": [
+    {
+      "id": "1269efea78e83f0ed4f8e4f8",
+      "title": "KI erkennt drohende Maschinenstillstände",
+      "text": "Der Spezialist für maßgeschneiderte Stahlprofile Welser Profile aus Gresten treibt die digitale Transformation im Unternehmen voran. Eine wichtige Rolle spielt dabei Künstliche Intelligenz.",
+      "url": "https://www.krone.at/4362327",
+      "published_at": 1794351679.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4362342/vb722a9/630x356",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4362342/vb722a9/630x356",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4362342/vb722a9/630x356",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4362342/vb722a9/630x356",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Der Spezialist für maßgeschneiderte Stahlprofile Welser Profile aus Gresten treibt die digitale Transformation im Unternehmen voran. Eine wichtige Rolle spielt dabei Künstliche Intelligenz.",
+      "rss_revision_at": 1794351679.0,
+      "content_kind": "news",
+      "text_origin": "rss"
+    },
+    {
+      "id": "7e25ebc8167956a8336f8541",
+      "title": "Heute vorsorgen. Morgen Chancen schenken.",
+      "text": "Die erste eigene Wohnung, ein Studium oder der Führerschein: Kinder haben viele Träume. Wer frühzeitig finanziell vorsorgt, kann dazu beitragen, dass aus diesen Träumen später Wirklichkeit wird. Die Wiener Städtische unterstützt Familien mit ihrer neuen Kindervorsorge „sorgenfreies.zukunftsnest“.",
+      "url": "https://www.krone.at/4362394",
+      "published_at": 1794351675.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4333564/ve8e0f6/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4333564/ve8e0f6/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4333564/ve8e0f6/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4333564/ve8e0f6/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Die erste eigene Wohnung, ein Studium oder der Führerschein: Kinder haben viele Träume. Wer frühzeitig finanziell vorsorgt, kann dazu beitragen, dass aus diesen Träumen später Wirklichkeit wird. Die Wiener Städtische unterstützt Familien mit ihrer neuen Kindervorsorge „sorgenfreies.zukunftsnest“.",
+      "rss_revision_at": 1794351675.0,
+      "content_kind": "news",
+      "text_origin": "rss"
+    },
+    {
+      "id": "f403d2b010723c95f3066eee",
+      "title": "Standardrätsel K 11440",
+      "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
+      "url": "https://www.derstandard.at/story/3000000347079/standardraetsel-k-11440?ref=rss",
+      "published_at": 1794351660.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/eqM6Eg/rs:fill:150:0/plain/lido-images/2023/05/19/17b073a2-2297-406c-a459-faf4e5a469ef.png",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
+      "rss_revision_at": 1794351660.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347079/standardraetsel-k-11440?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000347079/standardraetsel-k-11440?ref=rss",
+        "last_attempt_at": 1794354399.513657,
+        "rss_fingerprint": "d7ca89d27d76000639c4a23c278980a756efcf21bc1fb20fd152bc1e368e59dc"
+      }
+    },
+    {
+      "id": "96976b0a504540a41a625825",
+      "title": "Kulturkampf um Krakauer Todesschützen",
+      "text": "Nach der erschütternden Bluttat mit neun Todesopfern in Krakau ist im politisch tief gespaltenen Polen ein Kulturkampf über die möglichen Motive des Schützen entbrannt – der sich über soziale Netzwerke in ganz Europa fortsetzt. Die erste Einschätzung einer mutmaßlich rechtsextremen Ideologie des Täters war wohl vorschnell. Im Gegenzug wird nun ventiliert, der Schütze sei eher dem linken Lager zuzuordnen – doch die Indizien sind wacklig und teilweise KI-generiert.",
+      "url": "https://orf.at/stories/3447766/",
+      "published_at": 1794351527.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "Nach der erschütternden Bluttat mit neun Todesopfern in Krakau ist im politisch tief gespaltenen Polen ein Kulturkampf über die möglichen Motive des Schützen entbrannt – der sich über soziale Netzwerke in ganz Europa fortsetzt. Die erste Einschätzung einer mutmaßlich rechtsextremen Ideologie des Täters war wohl vorschnell. Im Gegenzug wird nun ventiliert, der Schütze sei eher dem linken Lager zuzuordnen – doch die Indizien sind wacklig und teilweise KI-generiert.",
+      "rss_revision_at": 1794351527.0,
+      "content_kind": "news",
+      "text_origin": "rss"
+    },
+    {
+      "id": "39c4595344156441f0590d7f",
+      "title": "14 Meter hohe Papst-Statue in Peru fertiggestellt",
+      "text": "In der peruanischen Hafenstadt Callao ist eine 14 Meter hohe Statue zu Ehren von Papst Leo XIV. errichtet worden. Es handle sich dabei um das weltweit höchste Monument, das dem aktuellen Papst gewidmet sei, teilte die Stadtverwaltung Callaos mit.\n\nCallao erwarte Leo XIV. „mit offenen Armen und einem Herzen voller Glauben“, heißt es weiter in Bezug auf die Statue, die das Oberhaupt der katholischen Kirche mit ausgebreiteten Armen zeigt.\n\nDie Skulptur, die unter der Leitung der Bildhauer Deyvi Wong und Rafael Gutierrez entstand, besteht laut offiziellen Angaben aus einer zehn Meter hohen Metallkonstruktion. Diese ist mit Glasfaser in Marmoroptik verkleidet. Die Figur steht auf einem vier Meter hohen Sockel. Die Konstruktion sei so ausgelegt, dass sie Windlasten von bis zu 120 Kilometern pro Stunde standhalte.\n\nDie Enthüllung des Denkmals durch Bürgermeister Cesar Perez und Bischof Luis Alberto Barrera und weitere Würdenträger erfolgte kurz vor dem Besuch des Papstes in Peru, der heute in dem Andenland erwartet wird. Leo XIV. befindet sich derzeit auf einer Südamerika-Reise, die ihn bereits nach Uruguay und Argentinien führte. In Peru wird er sechs Tage lang bleiben.\n\nDer Bau der Statue solle auch eine Hommage an die Verbindung Leos XIV. mit Callao darstellen, teilte die Verwaltung der Hafenstadt mit. Dort war Robert Francis Prevost – so der Geburtsname des heutigen Papstes – zeitweise als apostolischer Administrator der Diözese tätig.\n\nDer aus den USA stammende Papst Leo XIV. verbrachte insgesamt gut zwei Jahrzehnte in Peru. Der Andenstaat ist für ihn während seiner priesterlichen Tätigkeit zu einer zweiten Heimat geworden.",
+      "url": "https://orf.at/stories/3447853/",
+      "published_at": 1794350958.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "",
+      "rss_revision_at": 1794350958.0,
+      "content_kind": "news",
+      "text_origin": "linked_article",
+      "article_text": "In der peruanischen Hafenstadt Callao ist eine 14 Meter hohe Statue zu Ehren von Papst Leo XIV. errichtet worden. Es handle sich dabei um das weltweit höchste Monument, das dem aktuellen Papst gewidmet sei, teilte die Stadtverwaltung Callaos mit.\n\nCallao erwarte Leo XIV. „mit offenen Armen und einem Herzen voller Glauben“, heißt es weiter in Bezug auf die Statue, die das Oberhaupt der katholischen Kirche mit ausgebreiteten Armen zeigt.\n\nDie Skulptur, die unter der Leitung der Bildhauer Deyvi Wong und Rafael Gutierrez entstand, besteht laut offiziellen Angaben aus einer zehn Meter hohen Metallkonstruktion. Diese ist mit Glasfaser in Marmoroptik verkleidet. Die Figur steht auf einem vier Meter hohen Sockel. Die Konstruktion sei so ausgelegt, dass sie Windlasten von bis zu 120 Kilometern pro Stunde standhalte.\n\nDie Enthüllung des Denkmals durch Bürgermeister Cesar Perez und Bischof Luis Alberto Barrera und weitere Würdenträger erfolgte kurz vor dem Besuch des Papstes in Peru, der heute in dem Andenland erwartet wird. Leo XIV. befindet sich derzeit auf einer Südamerika-Reise, die ihn bereits nach Uruguay und Argentinien führte. In Peru wird er sechs Tage lang bleiben.\n\nDer Bau der Statue solle auch eine Hommage an die Verbindung Leos XIV. mit Callao darstellen, teilte die Verwaltung der Hafenstadt mit. Dort war Robert Francis Prevost – so der Geburtsname des heutigen Papstes – zeitweise als apostolischer Administrator der Diözese tätig.\n\nDer aus den USA stammende Papst Leo XIV. verbrachte insgesamt gut zwei Jahrzehnte in Peru. Der Andenstaat ist für ihn während seiner priesterlichen Tätigkeit zu einer zweiten Heimat geworden.",
+      "article_fetch": {
+        "status": "success",
+        "method": "orf_story_story",
+        "page_title": "14 Meter hohe Papst-Statue in Peru fertiggestellt",
+        "canonical_url": "https://orf.at/stories/3447853/",
+        "resolved_url": "https://orf.at/stories/3447853/",
+        "requested_url": "https://orf.at/stories/3447853/",
+        "last_attempt_at": 1794354399.513657,
+        "rss_fingerprint": "a9fdc63c43a7865252113977e1c0d06225c7eb36141ee21db9d91a3f39f6cc6d",
+        "fetched_at": 1794354399.513657,
+        "text_sha256": "3b87efe41b0ecd9fe44fde8cb8d8e9bb59538ec6ef056643eaaed6cf9d01fb4a"
+      }
+    },
+    {
+      "id": "dc4198f08f257048d3760fb1",
+      "title": "Bahn-KV: Annäherungen, aber noch keine Einigung",
+      "text": "Auch in der vierten Verhandlungsrunde für den Eisenbahn-Kollektivvertrag konnte am Dienstag keine Einigung erzielt werden. Im Mittelpunkt steht eine mögliche Arbeitszeitverkürzung. Am 18. November wird weiterverhandelt.",
+      "url": "https://www.krone.at/4370985",
+      "published_at": 1794350092.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4331360/vb68dd7/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4331360/vb68dd7/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4331360/vb68dd7/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4331360/vb68dd7/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Auch in der vierten Verhandlungsrunde für den Eisenbahn-Kollektivvertrag konnte am Dienstag keine Einigung erzielt werden. Im Mittelpunkt steht eine mögliche Arbeitszeitverkürzung. Am 18. November wird weiterverhandelt.",
+      "rss_revision_at": 1794350092.0,
+      "content_kind": "news",
+      "text_origin": "rss"
+    },
+    {
+      "id": "6c8b0c220d1371b5bc786b2e",
+      "title": "Feuerwehr rettet Pferd aus Swimmingpool",
+      "text": "Aus einem Swimmingpool ist in Neusiedl bei Güssing (Burgenland) ein Pferd gerettet worden. Es stand bis zum Bauch im Wasser.",
+      "url": "https://www.krone.at/4370971",
+      "published_at": 1794349923.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4370974/v70ea93/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4370974/v70ea93/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4370974/v70ea93/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4370974/v70ea93/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Aus einem Swimmingpool ist in Neusiedl bei Güssing (Burgenland) ein Pferd gerettet worden. Es stand bis zum Bauch im Wasser.",
+      "rss_revision_at": 1794349923.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "no_article_text",
+        "page_title": "Feuerwehr rettet Pferd aus Swimmingpool",
+        "canonical_url": "https://www.krone.at/4370971",
+        "resolved_url": "https://www.krone.at/4370971",
+        "requested_url": "https://www.krone.at/4370971",
+        "last_attempt_at": 1794354399.513657,
+        "rss_fingerprint": "7a9dbf01b8244f43d923123937d203a8d2e2c7b8870f8f28d096138d283e7139"
+      }
+    },
+    {
+      "id": "7b28d4ad534ab2a6927c2582",
+      "title": "Junge kommen in Welt, die Frage-Antwort-Spiel ist",
+      "text": "Der Schriftsteller und Philosoph Richard David Precht sieht in Künstlicher Intelligenz eine Gefahr für die Bildung der Kinder und das Ende jeglicher Neugier.",
+      "url": "https://www.krone.at/4370986",
+      "published_at": 1794347888.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4370984/v4ea5ee/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4370984/v4ea5ee/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4370984/v4ea5ee/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4370984/v4ea5ee/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Der Schriftsteller und Philosoph Richard David Precht sieht in Künstlicher Intelligenz eine Gefahr für die Bildung der Kinder und das Ende jeglicher Neugier.",
+      "rss_revision_at": 1794347888.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "no_article_text",
+        "page_title": "Junge kommen in Welt, die Frage-Antwort-Spiel ist",
+        "canonical_url": "https://www.krone.at/4370986",
+        "resolved_url": "https://www.krone.at/4370986",
+        "requested_url": "https://www.krone.at/4370986",
+        "last_attempt_at": 1794354399.513657,
+        "rss_fingerprint": "a9a6da4fb6526766946106e8e7452cb2812d6d6de3a2bf4c3d7c39bac9a5d51c"
+      }
+    },
+    {
+      "id": "a3a8f1bcfdcdf3aac17460ab",
+      "title": "Bericht deutet auf riesiges Ausmaß hin",
+      "text": "Die Affäre von Nvidia-Chef Jensen Huang mit einer mutmaßlichen chinesischen Spionin hat laut einem Bericht des Nachrichtenportals „The Information“ weitreichende Konsequenzen gehabt. Durch die Beziehung zum Mitgründer des weltgrößten Chipkonzerns habe die Frau KI-Hochleistungsprozessoren im Wert von 7,5 Milliarden Dollar (gut 6,7 Mrd. Euro) nach China geschleust, berichtete das Portal am Dienstag unter Berufung auf zwei Bekannte der Verdächtigen.",
+      "url": "https://orf.at/stories/3447811/",
+      "published_at": 1794347362.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "Die Affäre von Nvidia-Chef Jensen Huang mit einer mutmaßlichen chinesischen Spionin hat laut einem Bericht des Nachrichtenportals „The Information“ weitreichende Konsequenzen gehabt. Durch die Beziehung zum Mitgründer des weltgrößten Chipkonzerns habe die Frau KI-Hochleistungsprozessoren im Wert von 7,5 Milliarden Dollar (gut 6,7 Mrd. Euro) nach China geschleust, berichtete das Portal am Dienstag unter Berufung auf zwei Bekannte der Verdächtigen.",
+      "rss_revision_at": 1794347362.0,
+      "content_kind": "news",
+      "text_origin": "rss"
+    },
+    {
+      "id": "53d18dd6810ed703f21d298a",
+      "title": "Republikaner Jordan wird Minderheitsführer im US-Repräsentantenhaus",
+      "text": "Jordan pflege „enge Verbindungen“ zu Donald Trump. John Thune bleibt weiterhin republikanischer Fraktionsvorsitzender im Senat",
+      "url": "https://www.derstandard.at/story/3000000348618/republikaner-jordan-wird-minderheitsf252hrer-im-us-repr228sentantenhaus?ref=rss",
+      "published_at": 1794347072.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/0F5EKQ/rs:fill:150:0/plain/lido-images/2026/11/10/1c4af12a-c9a4-4e45-b365-8a6155a699c6.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Jordan pflege „enge Verbindungen“ zu Donald Trump. John Thune bleibt weiterhin republikanischer Fraktionsvorsitzender im Senat",
+      "rss_revision_at": 1794347072.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348618/republikaner-jordan-wird-minderheitsf252hrer-im-us-repr228sentantenhaus?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000348618/republikaner-jordan-wird-minderheitsf252hrer-im-us-repr228sentantenhaus?ref=rss",
+        "last_attempt_at": 1794354399.513657,
+        "rss_fingerprint": "9669a77c8cd982bf4ed29b9ef2fddddfc23c6b208e74c2f9d54ea9505af2dde8"
+      }
+    },
+    {
+      "id": "b53e2639667c94bf7fc976c8",
+      "title": "El Salvador meldet Zerstörung von Bandenquartier in Haiti",
+      "text": "Der Staatschef von El Salvador, Nayib Bukele, hat die Zerstörung des Hauptquartiers einer der mächtigsten Banden in Haiti durch salvadorianische Truppen bekanntgegeben.\n\nDie salvadorianischen Soldaten hätten das „Hauptquartier der Bande 400 Mawozo“ und das Haus von Bandenchef Lanmo San Jou zerstört, erklärte Bukele gestern im Onlinedienst X. Bukele hat seit Ende Oktober mehr als 2.000 Soldaten nach Haiti verlegt, nachdem vier salvadorianische Soldaten in dem Land in der Karibik als vermisst gemeldet worden waren.\n\nDer rechtsgerichtete Staatschef veröffentlichte ein Video, das mindestens drei Helikopter zeigt, die über dem zweistöckigen Haus in Croix-des-Bouquets nahe der haitianischen Hauptstadt Port-au-Prince kreisen und darauf schießen. Außerdem sind Menschen zu sehen, die aus dem Gebiet fliehen.\n\nDie US-Zeitung „Miami Herald“ berichtete, der Angriff habe am Sonntag stattgefunden und sei von einer haitianischen Polizeisondereinheit ausgeführt worden, die von salvadorianischen Truppen unterstützt worden sei. Bei dem Einsatz seien 20 Menschen getötet worden, berichtete die Zeitung.\n\nBandenchef Lanmo San Jou, dessen richtiger Name Wilson Joseph ist, befand sich nach Angaben regierungsnaher Medien in El Salvador zum Zeitpunkt des Angriffs allerdings nicht in dem Haus.\n\nDer Angriff erfolgte, nachdem ein Nutzer im Onlinedienst X am vergangenen Donnerstag ein Foto veröffentlicht hatte, von dem er sagte, es zeige das Hauptquartier der Bande. Der Nutzer forderte Bukele auf, es zerstören zu lassen. Bukele antwortete darauf: „Wo steht dieses Haus? Gebt uns die genaue Adresse und wir werden es zerstören.“ Nun erklärte Bukele auf X: „Wir haben unser Versprechen erfüllt.“\n\nHaiti ist das ärmste Land des amerikanischen Kontinents. Nach UNO-Angaben wurden dort etwa 1,5 Millionen Menschen durch kriminelle Banden vertrieben. Die Gangs verüben Morde, Entführungen und Vergewaltigungen und zwingen Kinder, für sie zu kämpfen.",
+      "url": "https://orf.at/stories/3447851/",
+      "published_at": 1794346911.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "",
+      "rss_revision_at": 1794346911.0,
+      "content_kind": "news",
+      "text_origin": "linked_article",
+      "article_text": "Der Staatschef von El Salvador, Nayib Bukele, hat die Zerstörung des Hauptquartiers einer der mächtigsten Banden in Haiti durch salvadorianische Truppen bekanntgegeben.\n\nDie salvadorianischen Soldaten hätten das „Hauptquartier der Bande 400 Mawozo“ und das Haus von Bandenchef Lanmo San Jou zerstört, erklärte Bukele gestern im Onlinedienst X. Bukele hat seit Ende Oktober mehr als 2.000 Soldaten nach Haiti verlegt, nachdem vier salvadorianische Soldaten in dem Land in der Karibik als vermisst gemeldet worden waren.\n\nDer rechtsgerichtete Staatschef veröffentlichte ein Video, das mindestens drei Helikopter zeigt, die über dem zweistöckigen Haus in Croix-des-Bouquets nahe der haitianischen Hauptstadt Port-au-Prince kreisen und darauf schießen. Außerdem sind Menschen zu sehen, die aus dem Gebiet fliehen.\n\nDie US-Zeitung „Miami Herald“ berichtete, der Angriff habe am Sonntag stattgefunden und sei von einer haitianischen Polizeisondereinheit ausgeführt worden, die von salvadorianischen Truppen unterstützt worden sei. Bei dem Einsatz seien 20 Menschen getötet worden, berichtete die Zeitung.\n\nBandenchef Lanmo San Jou, dessen richtiger Name Wilson Joseph ist, befand sich nach Angaben regierungsnaher Medien in El Salvador zum Zeitpunkt des Angriffs allerdings nicht in dem Haus.\n\nDer Angriff erfolgte, nachdem ein Nutzer im Onlinedienst X am vergangenen Donnerstag ein Foto veröffentlicht hatte, von dem er sagte, es zeige das Hauptquartier der Bande. Der Nutzer forderte Bukele auf, es zerstören zu lassen. Bukele antwortete darauf: „Wo steht dieses Haus? Gebt uns die genaue Adresse und wir werden es zerstören.“ Nun erklärte Bukele auf X: „Wir haben unser Versprechen erfüllt.“\n\nHaiti ist das ärmste Land des amerikanischen Kontinents. Nach UNO-Angaben wurden dort etwa 1,5 Millionen Menschen durch kriminelle Banden vertrieben. Die Gangs verüben Morde, Entführungen und Vergewaltigungen und zwingen Kinder, für sie zu kämpfen.",
+      "article_fetch": {
+        "status": "success",
+        "method": "orf_story_story",
+        "page_title": "El Salvador meldet Zerstörung von Bandenquartier in Haiti",
+        "canonical_url": "https://orf.at/stories/3447851/",
+        "resolved_url": "https://orf.at/stories/3447851/",
+        "requested_url": "https://orf.at/stories/3447851/",
+        "last_attempt_at": 1794354399.513657,
+        "rss_fingerprint": "d151416cd2863906bb40a4627ea69e2b68a3bc70ad5385ffdd247aabeb6ac30d",
+        "fetched_at": 1794354399.513657,
+        "text_sha256": "e7d1342da84b2891dbeb487c0da9d03248f88df898637b6bbfcdb7011fd4b6f1"
+      }
+    },
+    {
+      "id": "c9939c3be599ff05928393fc",
+      "title": "Deutsche Bundeswehr verbannt chinesische Drohnen und Autos",
+      "text": "Die deutsche Bundeswehr verbannt laut einem Pressebericht wegen akuter Sicherheitsbedenken ab sofort alle chinesischen Kleindrohnen aus Kasernen und von Übungsplätzen der Truppe.\n\nKünftig würden bei der Bundeswehr „keine chinesischen Modelle mehr eingesetzt und vorhandene Systeme durch nationale oder europäische Produkte ersetzt“, teilte ein Sprecher des deutschen Verteidigungsministeriums dem Magazin „Spiegel“ gestern mit.\n\nDem „Spiegel“ zufolge hat die Bundeswehr außerdem weitgehende Verbote für die Einfahrt von chinesischen Autos auf die Gelände von Kasernen und andere Liegenschaften verhängt. In den vergangenen Wochen war dem Bericht zufolge für die gesamte Bundeswehr angeordnet worden, dass bereits angeschaffte handelsübliche Drohnen der großen chinesischen Hersteller wie DJI nicht mehr eingesetzt werden sollen. Der Grund dafür sind erhebliche Sicherheitsbedenken.\n\nDie Befürchtung ist, dass die Kleindrohnen sensible Daten über Übungen, Bilder der Kasernen und von Übungsplätzen oder gar Informationen über deutsche Waffensysteme an die chinesischen Geheimdienste weiterleiten.\n\nNeben chinesischen Drohnen will die Bundeswehr dem „Spiegel“ zufolge auch chinesische Autos verbannen. In der Truppe kursieren demnach konkrete Listen von diversen Modellen chinesischer Hersteller wie BYD, Geely und NIO, die nicht mehr in die als Sicherheitsbereiche klassifizierten Liegenschaften dürfen. Soldaten, die solche Autos besitzen, müssen nun außerhalb der Kasernen parken.",
+      "url": "https://orf.at/stories/3447850/",
+      "published_at": 1794346558.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "",
+      "rss_revision_at": 1794346558.0,
+      "content_kind": "news",
+      "text_origin": "linked_article",
+      "article_text": "Die deutsche Bundeswehr verbannt laut einem Pressebericht wegen akuter Sicherheitsbedenken ab sofort alle chinesischen Kleindrohnen aus Kasernen und von Übungsplätzen der Truppe.\n\nKünftig würden bei der Bundeswehr „keine chinesischen Modelle mehr eingesetzt und vorhandene Systeme durch nationale oder europäische Produkte ersetzt“, teilte ein Sprecher des deutschen Verteidigungsministeriums dem Magazin „Spiegel“ gestern mit.\n\nDem „Spiegel“ zufolge hat die Bundeswehr außerdem weitgehende Verbote für die Einfahrt von chinesischen Autos auf die Gelände von Kasernen und andere Liegenschaften verhängt. In den vergangenen Wochen war dem Bericht zufolge für die gesamte Bundeswehr angeordnet worden, dass bereits angeschaffte handelsübliche Drohnen der großen chinesischen Hersteller wie DJI nicht mehr eingesetzt werden sollen. Der Grund dafür sind erhebliche Sicherheitsbedenken.\n\nDie Befürchtung ist, dass die Kleindrohnen sensible Daten über Übungen, Bilder der Kasernen und von Übungsplätzen oder gar Informationen über deutsche Waffensysteme an die chinesischen Geheimdienste weiterleiten.\n\nNeben chinesischen Drohnen will die Bundeswehr dem „Spiegel“ zufolge auch chinesische Autos verbannen. In der Truppe kursieren demnach konkrete Listen von diversen Modellen chinesischer Hersteller wie BYD, Geely und NIO, die nicht mehr in die als Sicherheitsbereiche klassifizierten Liegenschaften dürfen. Soldaten, die solche Autos besitzen, müssen nun außerhalb der Kasernen parken.",
+      "article_fetch": {
+        "status": "success",
+        "method": "orf_story_story",
+        "page_title": "Deutsche Bundeswehr verbannt chinesische Drohnen und Autos",
+        "canonical_url": "https://orf.at/stories/3447850/",
+        "resolved_url": "https://orf.at/stories/3447850/",
+        "requested_url": "https://orf.at/stories/3447850/",
+        "last_attempt_at": 1794354399.513657,
+        "rss_fingerprint": "52f127718699b6cecebff66f15d72ad9d754249f1112dd59a79a38e95c5b605e",
+        "fetched_at": 1794354399.513657,
+        "text_sha256": "971ca6a2287afc2189474326628291b17986a628518e782602fe9db243e457eb"
+      }
+    },
+    {
+      "id": "deaa894e724a3a24b6ddafa5",
+      "title": "Mit viel Teamgeist auf den Bürgermeisterthron",
+      "text": "SPÖ-Bürgermeisterkandidat Manfred Mertel setzt auf Zusammenhalt und einen neuen politischen Stil. Beim Kampagnenauftakt erzählte er von seiner Familie, seiner Fußballerzeit und seinen Plänen für Klagenfurt. Sein Leitspruch lautet: „Auf geht’s, 9020!“ Das kennt er aus seiner Trainerzeit.",
+      "url": "https://www.krone.at/4370549",
+      "published_at": 1794346219.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4370554/v20f651/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4370554/v20f651/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4370554/v20f651/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4370554/v20f651/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "SPÖ-Bürgermeisterkandidat Manfred Mertel setzt auf Zusammenhalt und einen neuen politischen Stil. Beim Kampagnenauftakt erzählte er von seiner Familie, seiner Fußballerzeit und seinen Plänen für Klagenfurt. Sein Leitspruch lautet: „Auf geht’s, 9020!“ Das kennt er aus seiner Trainerzeit.",
+      "rss_revision_at": 1794346219.0,
+      "content_kind": "news",
+      "text_origin": "rss"
+    },
+    {
+      "id": "3d998423e84fe1dde5a9e741",
+      "title": "Portugal bereitet sich auf schweren Sturm vor",
+      "text": "Wegen eines drohenden Sturms mit Windgeschwindigkeiten von bis zu 140 km/h bleiben in Portugal heute Schulen und alle nicht wesentlichen Behörden geschlossen.\n\n„Alle, die können, sollten zu Hause bleiben“, sagte Innenminister Luis Neves. Regierungschef Luis Montenegro rief die Bevölkerung nach einer Sitzung des Katastrophenschutzes auf, die mit dem Sturm verbundenen Gefahren nicht zu unterschätzen.\n\nIm gesamten Süden des Landes wurde wegen des Sturms „Charles“ die höchste Unwetterwarnstufe ausgerufen, im Rest des Landes gilt die zweithöchste Warnstufe. Sämtliche geplante Veranstaltungen der internationalen Technologiekonferenz Web Summit in Lissabon wurden aus Sicherheitsgründen abgesagt, wie die Veranstalter mitteilten.\n\nDie Stadtverwaltung von Lissabon sperrte vorsichtshalber sämtliche Straßentunnel sowie Parks und Museen. Der Flughafenbetreiber ANA warnte, es sei mit Flugstreichungen zu rechnen.",
+      "url": "https://orf.at/stories/3447849/",
+      "published_at": 1794345473.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "",
+      "rss_revision_at": 1794345473.0,
+      "content_kind": "news",
+      "text_origin": "linked_article",
+      "article_text": "Wegen eines drohenden Sturms mit Windgeschwindigkeiten von bis zu 140 km/h bleiben in Portugal heute Schulen und alle nicht wesentlichen Behörden geschlossen.\n\n„Alle, die können, sollten zu Hause bleiben“, sagte Innenminister Luis Neves. Regierungschef Luis Montenegro rief die Bevölkerung nach einer Sitzung des Katastrophenschutzes auf, die mit dem Sturm verbundenen Gefahren nicht zu unterschätzen.\n\nIm gesamten Süden des Landes wurde wegen des Sturms „Charles“ die höchste Unwetterwarnstufe ausgerufen, im Rest des Landes gilt die zweithöchste Warnstufe. Sämtliche geplante Veranstaltungen der internationalen Technologiekonferenz Web Summit in Lissabon wurden aus Sicherheitsgründen abgesagt, wie die Veranstalter mitteilten.\n\nDie Stadtverwaltung von Lissabon sperrte vorsichtshalber sämtliche Straßentunnel sowie Parks und Museen. Der Flughafenbetreiber ANA warnte, es sei mit Flugstreichungen zu rechnen.",
+      "article_fetch": {
+        "status": "success",
+        "method": "orf_story_story",
+        "page_title": "Portugal bereitet sich auf schweren Sturm vor",
+        "canonical_url": "https://orf.at/stories/3447849/",
+        "resolved_url": "https://orf.at/stories/3447849/",
+        "requested_url": "https://orf.at/stories/3447849/",
+        "last_attempt_at": 1794354399.513657,
+        "rss_fingerprint": "ee5fa552e4089949386070116746e2fbbaa86807c1d451a689aca76b679669d3",
+        "fetched_at": 1794354399.513657,
+        "text_sha256": "c5d472b6d73e6ae225493b1af7c401504b497caddbe2b0c7a00ad461ec6fe3bb"
+      }
+    },
+    {
+      "id": "eaaa61a8eb9a9872e0e1cf87",
+      "title": "Eishockey-WM: Österreicherinnen verlieren auch gegen die Schweiz und müssen in Relegation",
+      "text": "Kapitänin Anna Meixner und Co. lagen im letzten Gruppenspiel zwischenzeitlich 19 Sekunden in Führung. Am Freitag steigt das Entscheidungsspiel um den Klassenerhalt",
+      "url": "https://www.derstandard.at/story/3000000348617/eishockey-214sterreichs-frauen-nach-24-gegen-schweiz-in-wm-relegation?ref=rss",
+      "published_at": 1794344597.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/n0s18g/rs:fill:150:0/plain/lido-images/2026/11/10/60e419e8-6dc5-4db2-b4ba-3227da71ec0e.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Kapitänin Anna Meixner und Co. lagen im letzten Gruppenspiel zwischenzeitlich 19 Sekunden in Führung. Am Freitag steigt das Entscheidungsspiel um den Klassenerhalt",
+      "rss_revision_at": 1794344597.0,
+      "content_kind": "news",
+      "text_origin": "rss"
+    },
+    {
+      "id": "5926f792b65efac9e8db722e",
+      "title": "Verkehr ist der größte Klimakiller in Salzburg",
+      "text": "Um 50 Prozent gestiegen sind die Treibhausgas-Emissionen beim Verkehr in Salzburg seit dem Jahr 1990. Zu dieser Analyse kommt der Verkehrsclub Österreich (VCÖ), der sich dabei auf Zahlen des Umweltbundesamts beruft. In anderen Sektoren sei der Trend dagegen rückläufig und die Belastung sinke.",
+      "url": "https://www.krone.at/4370119",
+      "published_at": 1794344420.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/3796806/v2a695a/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/3796806/v2a695a/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/3796806/v2a695a/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/3796806/v2a695a/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Um 50 Prozent gestiegen sind die Treibhausgas-Emissionen beim Verkehr in Salzburg seit dem Jahr 1990. Zu dieser Analyse kommt der Verkehrsclub Österreich (VCÖ), der sich dabei auf Zahlen des Umweltbundesamts beruft. In anderen Sektoren sei der Trend dagegen rückläufig und die Belastung sinke.",
+      "rss_revision_at": 1794344420.0,
+      "content_kind": "news",
+      "text_origin": "rss"
+    },
+    {
+      "id": "aba916be44e64e8e40101b35",
+      "title": "Jordan wird Minderheitsführer im US-Repräsentantenhaus",
+      "text": "Nach der Wahlniederlage bei den Midterms haben die Republikaner im US-Repräsentantenhaus einen Führungswechsel eingeleitet. Die Abgeordneten wählten Jim Jordan zu ihrem Minderheitsführer, wie unter anderem Fox News und die „Washington Post“ gestern berichteten.\n\nDie Abgeordnete Anna Paulina Luna bestätigte Jordans Wahl auf der Plattform X. Der Republikaner Mike Johnson, derzeit Sprecher der Kammer, war nicht erneut angetreten.\n\nJordan sitzt derzeit dem Justizausschuss vor und vertritt seinen Wahlkreis in Ohio seit 2007. Die „New York Times“ bezeichnete Jordan als „kampflustigen Draufgänger“ mit engen Verbindungen zu Präsident Donald Trump.\n\n2023 hatte sich Jordan erfolglos um den Vorsitz des Repräsentantenhauses beworben – nach wochenlangem Chaos setzte sich Johnson durch. Jordan hatte damals drei erfolglose Wahlgänge in der Kammer über sich ergehen lassen, bevor seine Fraktion ihn aus dem Rennen nahm.\n\nJordan setzte sich nun in der Wahl gegen Steve Scalise durch, der bisher die Nummer zwei der Republikaner im Repräsentantenhaus war. Nach der Niederlage bei den Kongresswahlen vor einer Woche waren in der Partei Forderungen nach einem Führungswechsel laut geworden. Im neuen Kongress müssen sich die Republikaner gegen eine komfortable Mehrheit der Demokraten stemmen – das genaue Kräfteverhältnis ist wegen laufender Auszählungen noch unklar.",
+      "url": "https://orf.at/stories/3447848/",
+      "published_at": 1794344044.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "",
+      "rss_revision_at": 1794344044.0,
+      "content_kind": "news",
+      "text_origin": "linked_article",
+      "article_text": "Nach der Wahlniederlage bei den Midterms haben die Republikaner im US-Repräsentantenhaus einen Führungswechsel eingeleitet. Die Abgeordneten wählten Jim Jordan zu ihrem Minderheitsführer, wie unter anderem Fox News und die „Washington Post“ gestern berichteten.\n\nDie Abgeordnete Anna Paulina Luna bestätigte Jordans Wahl auf der Plattform X. Der Republikaner Mike Johnson, derzeit Sprecher der Kammer, war nicht erneut angetreten.\n\nJordan sitzt derzeit dem Justizausschuss vor und vertritt seinen Wahlkreis in Ohio seit 2007. Die „New York Times“ bezeichnete Jordan als „kampflustigen Draufgänger“ mit engen Verbindungen zu Präsident Donald Trump.\n\n2023 hatte sich Jordan erfolglos um den Vorsitz des Repräsentantenhauses beworben – nach wochenlangem Chaos setzte sich Johnson durch. Jordan hatte damals drei erfolglose Wahlgänge in der Kammer über sich ergehen lassen, bevor seine Fraktion ihn aus dem Rennen nahm.\n\nJordan setzte sich nun in der Wahl gegen Steve Scalise durch, der bisher die Nummer zwei der Republikaner im Repräsentantenhaus war. Nach der Niederlage bei den Kongresswahlen vor einer Woche waren in der Partei Forderungen nach einem Führungswechsel laut geworden. Im neuen Kongress müssen sich die Republikaner gegen eine komfortable Mehrheit der Demokraten stemmen – das genaue Kräfteverhältnis ist wegen laufender Auszählungen noch unklar.",
+      "article_fetch": {
+        "status": "success",
+        "method": "orf_story_story",
+        "page_title": "Jordan wird Minderheitsführer im US-Repräsentantenhaus",
+        "canonical_url": "https://orf.at/stories/3447848/",
+        "resolved_url": "https://orf.at/stories/3447848/",
+        "requested_url": "https://orf.at/stories/3447848/",
+        "last_attempt_at": 1794354399.513657,
+        "rss_fingerprint": "9dc199240691009dfcf9f246e2aee70e886fe883757054ed0066a2329912a681",
+        "fetched_at": 1794354399.513657,
+        "text_sha256": "aba32b26e97cc4618ce6756c7f6ddd73ab6709a033358f771279eb9e3ead7338"
+      }
+    },
+    {
+      "id": "c2b2e5d62657bfbf756c165c",
+      "title": "Spanien gedenkt bei Messe der Opfer des Zugunglücks von Urda",
+      "text": "In der Kathedrale von Toledo fand die Trauerfeier statt. Im Mittelpunkt standen Angehörige und Ersthelfer",
+      "url": "https://www.derstandard.at/story/3000000348616/spanien-gedenkt-bei-messe-der-opfer-des-zugungl252cks-von-urda?ref=rss",
+      "published_at": 1794343999.0,
+      "first_seen_at": 1794354399.513657,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/fJryCw/rs:fill:150:0/plain/lido-images/2026/11/10/34bf5af2-4ef1-4545-b692-5b03d06fcd32.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "In der Kathedrale von Toledo fand die Trauerfeier statt. Im Mittelpunkt standen Angehörige und Ersthelfer",
+      "rss_revision_at": 1794343999.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348616/spanien-gedenkt-bei-messe-der-opfer-des-zugungl252cks-von-urda?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000348616/spanien-gedenkt-bei-messe-der-opfer-des-zugungl252cks-von-urda?ref=rss",
+        "last_attempt_at": 1794354399.513657,
+        "rss_fingerprint": "10db3f0af9f632178728dd57cef7eff2ac5c8e40eb483886488b4902806eff54"
+      }
+    },
     {
       "id": "2bb4b1e2f3ec3f4b7f6392a5",
       "title": "„Das große Backen Österreich“: Für Steirerin Liana wurde es eng",
@@ -67,7 +598,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41440324/stockwerkjazz-ken-vandermark-hatte-luft-nach-oben",
-        "last_attempt_at": 1794343958.184662,
+        "last_attempt_at": 1794354399.513657,
         "rss_fingerprint": "10c9c72247c89b96cf6e801e49f89181af6aba95cfea724f81ae8840d495ac3b"
       }
     },
@@ -103,7 +634,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41440781/oesterreichs-frauen-spielen-nach-2-4-gegen-die-schweiz-um-den",
-        "last_attempt_at": 1794343958.184662,
+        "last_attempt_at": 1794354399.513657,
         "rss_fingerprint": "64c318e8f6c9603d37f0dd5fb64f93b37c0d15bc2bdf156ac266fc2c3630bc37"
       }
     },
@@ -386,7 +917,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41440793/benko-insolvenz-masseverwalter-sichert-50-millionen-euro",
-        "last_attempt_at": 1794343958.184662,
+        "last_attempt_at": 1794354399.513657,
         "rss_fingerprint": "42b748045437d8de450cffd05f9c9a9ed9ef731acf29cd29ba730a73b0f0e94b"
       }
     },
@@ -419,7 +950,7 @@
         }
       ],
       "rss_text": "Ein seit elf Jahren hier in Salzburg lebender Iraner (44) ging am 1. April zur Polizeiinspektion beim Hauptbahnhof, um seinen Vermieter anzuzeigen. „Ich habe zur Frau Inspektorin gesagt, dass ich meinen Vermieter umbringen wollte.“ Deshalb saß er am Dienstag wegen versuchten Mordes vor den Geschworenen, die ihn schuldig sprachen ...",
-      "rss_revision_at": 1794341392.0,
+      "rss_revision_at": 1794349052.0,
       "content_kind": "news",
       "text_origin": "rss"
     },
@@ -510,7 +1041,7 @@
     },
     {
       "id": "8652ee9a035ca7eb2785a08a",
-      "title": "Jugendlicher (17) ritzte Nazi-Symbole in Bahnhof",
+      "title": "Jugendlicher ritzte Nazi-Symbole in Bahnhofswand",
       "text": "Ende August soll ein 17-jähriger Pinzgauer in der Wartehalle des Bahnhofs Zell am See mehrere Nazi-Symbole in Wände, Boden und Säulen geritzt haben. Die Höhe des Schadens liegt bei mehr als 11.000 Euro. Dazu kommen noch weitere Vorwürfe. Er wird wegen mehrerer Delikte angezeigt.",
       "url": "https://www.krone.at/4370911",
       "published_at": 1794340707.0,
@@ -537,7 +1068,7 @@
         }
       ],
       "rss_text": "Ende August soll ein 17-jähriger Pinzgauer in der Wartehalle des Bahnhofs Zell am See mehrere Nazi-Symbole in Wände, Boden und Säulen geritzt haben. Die Höhe des Schadens liegt bei mehr als 11.000 Euro. Dazu kommen noch weitere Vorwürfe. Er wird wegen mehrerer Delikte angezeigt.",
-      "rss_revision_at": 1794340707.0,
+      "rss_revision_at": 1794349743.0,
       "content_kind": "news",
       "text_origin": "rss"
     },
@@ -562,7 +1093,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348613/benko-masseverwalter-sichert-50-mio-euro-f252r-insolvenzverfahren?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000348613/benko-masseverwalter-sichert-50-mio-euro-f252r-insolvenzverfahren?ref=rss",
+        "last_attempt_at": 1794354399.513657,
         "rss_fingerprint": "a39c782738b71fd24da36e20659b5b9374d76690f482ab3ec1e0efda8c554cbb"
       }
     },
@@ -666,7 +1200,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348611/-fu223ball-cl-partie-der-austria-frauen-bei-benfica-wurde-abgesagt?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000348611/-fu223ball-cl-partie-der-austria-frauen-bei-benfica-wurde-abgesagt?ref=rss",
+        "last_attempt_at": 1794354399.513657,
         "rss_fingerprint": "a42f961b42bcead10c8c9104071d48b63a27c6b8ec5c81fa14ab2fbef43e855e"
       }
     },
@@ -700,7 +1237,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41440716/champions-league-tapfere-hartberger-muessen-sich-verabschieden",
+        "last_attempt_at": 1794354399.513657,
         "rss_fingerprint": "ad5f8dfe745976326e397dcd1817a93af89737e44bb983ac0dcff1fa3548d5f4"
       }
     },
@@ -725,7 +1265,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348612/303-millionen-euro-f252r-reparatur-von-tschernobyl-schutzh252lle-zugesagt?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000348612/303-millionen-euro-f252r-reparatur-von-tschernobyl-schutzh252lle-zugesagt?ref=rss",
+        "last_attempt_at": 1794354399.513657,
         "rss_fingerprint": "106e47aa66ece46a5a0f9214c9fc91fbf2f8933a3a086451adf3df42b6cafa57"
       }
     },
@@ -758,7 +1301,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41440750/vsv-masseverwalter-es-gibt-keine-drei-tage-heimspiele-frist",
+        "last_attempt_at": 1794354399.513657,
         "rss_fingerprint": "e0ab45da61901e09668bb44926c551ca3b1fa2e069fb65243430fe1b0e6b0fed"
       }
     },
@@ -791,7 +1337,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41440758/kollektivvertrag-eisenbahner-verhandeln-naechste-woche-weiter",
+        "last_attempt_at": 1794354399.513657,
         "rss_fingerprint": "5131e1e177cf83161388368b00c5392bd3e4ba47059dc7d6f953a998237e71c0"
       }
     },
@@ -1083,7 +1632,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41439182/asbest-gutachten-stapeln-sich-im-burgenland-doch-die-politik-nicht",
+        "last_attempt_at": 1794354399.513657,
         "rss_fingerprint": "360f482706494187f4005c0b5c4fde1142deb74c4cec3afdc06768f9e32d8d62"
       }
     },
@@ -1225,7 +1777,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348610/prager-studenten-protestieren-gegen-umstrittene-medienreform?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000348610/prager-studenten-protestieren-gegen-umstrittene-medienreform?ref=rss",
+        "last_attempt_at": 1794354399.513657,
         "rss_fingerprint": "72b7471fbfb5d323ed1138f9d0158324c29af58bd44c499b0ddbfe312887915f"
       }
     },
@@ -1363,8 +1918,8 @@
     },
     {
       "id": "54716f155cf7e5fc4ae0e013",
-      "title": "Prag: Proteste gegen umstrittene Medienreform",
-      "text": "Studenten und Lehrende verschiedener Universitäten sind in Prag auf die Straße gegangen, um gegen geplante Änderungen bei der Finanzierung der öffentlich-rechtlichen Medien zu protestieren. Zu einer Abschlusskundgebung versammelten sich heute Abend Hunderte auf dem Platz der Republik im Zentrum der tschechischen Hauptstadt.\n\nDie Teilnehmenden skandierten „Wir geben die Medien nicht auf!“. Sie trugen Schilder mit Aufschriften wie „Unabhängige Medien sind ein Pfeiler der Demokratie“. Mehr als 2.000 Studierende und Absolventen der Journalistik unterzeichneten einen offenen Brief, in dem sie ihre Sorgen um die künftige Unabhängigkeit des öffentlich-rechtlichen Rundfunks zum Ausdruck brachten.\n\nDie rechte Koalition unter dem Regierungschef und Milliardär Andrej Babis will den öffentlich-rechtlichen Rundfunk künftig nicht mehr über Gebühren, sondern direkt aus dem Budget finanzieren. Ein entsprechender Gesetzesentwurf passierte in erster Lesung das Abgeordnetenhaus des EU-Mitgliedsstaats. Geplant sind zudem Kürzungen der Mittel um mehr als 15 Prozent.\n\nKritiker werfen der Regierung vor, es gehe ihr in Wirklichkeit darum, Einfluss auf Programm und Personalentscheidungen zu nehmen. Für den 15. November hat die Organisation „Eine Million Augenblicke für Demokratie“ eine Großdemonstration gegen die umstrittenen Pläne der Regierung angekündigt.",
+      "title": "Proteste gegen umstrittene Medienreform in Tschechien",
+      "text": "Studenten und Lehrende verschiedener Universitäten sind gestern in Prag auf die Straße gegangen, um gegen geplante Änderungen bei der Finanzierung der öffentlich-rechtlichen Medien zu protestieren. Zu einer Abschlusskundgebung versammelten sich am Abend Hunderte Menschen auf dem Platz der Republik im Zentrum der tschechischen Hauptstadt.\n\nDie Teilnehmenden skandierten „Wir geben die Medien nicht auf!“. Sie trugen Schilder mit Aufschriften wie „Unabhängige Medien sind ein Pfeiler der Demokratie“. Mehr als 2.000 Studierende und Absolventen der Journalistik unterzeichneten einen offenen Brief, in dem sie ihre Sorgen um die künftige Unabhängigkeit des öffentlich-rechtlichen Rundfunks zum Ausdruck brachten.\n\nDie rechte Koalition unter dem Regierungschef und Milliardär Andrej Babis will den öffentlich-rechtlichen Rundfunk künftig nicht mehr über Gebühren, sondern direkt aus dem Budget finanzieren. Ein entsprechender Gesetzesentwurf passierte in erster Lesung das Abgeordnetenhaus des EU-Mitgliedsstaats. Geplant sind zudem Kürzungen der Mittel um mehr als 15 Prozent.\n\nKritiker werfen der Regierung vor, es gehe ihr in Wirklichkeit darum, Einfluss auf Programm und Personalentscheidungen zu nehmen. Für den 15. November hat die Organisation „Eine Million Augenblicke für Demokratie“ eine Großdemonstration gegen die umstrittenen Pläne der Regierung angekündigt.",
       "url": "https://orf.at/stories/3447835/",
       "published_at": 1794335344.0,
       "first_seen_at": 1794335910.112645,
@@ -1376,19 +1931,19 @@
       "rss_revision_at": 1794335344.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Studenten und Lehrende verschiedener Universitäten sind in Prag auf die Straße gegangen, um gegen geplante Änderungen bei der Finanzierung der öffentlich-rechtlichen Medien zu protestieren. Zu einer Abschlusskundgebung versammelten sich heute Abend Hunderte auf dem Platz der Republik im Zentrum der tschechischen Hauptstadt.\n\nDie Teilnehmenden skandierten „Wir geben die Medien nicht auf!“. Sie trugen Schilder mit Aufschriften wie „Unabhängige Medien sind ein Pfeiler der Demokratie“. Mehr als 2.000 Studierende und Absolventen der Journalistik unterzeichneten einen offenen Brief, in dem sie ihre Sorgen um die künftige Unabhängigkeit des öffentlich-rechtlichen Rundfunks zum Ausdruck brachten.\n\nDie rechte Koalition unter dem Regierungschef und Milliardär Andrej Babis will den öffentlich-rechtlichen Rundfunk künftig nicht mehr über Gebühren, sondern direkt aus dem Budget finanzieren. Ein entsprechender Gesetzesentwurf passierte in erster Lesung das Abgeordnetenhaus des EU-Mitgliedsstaats. Geplant sind zudem Kürzungen der Mittel um mehr als 15 Prozent.\n\nKritiker werfen der Regierung vor, es gehe ihr in Wirklichkeit darum, Einfluss auf Programm und Personalentscheidungen zu nehmen. Für den 15. November hat die Organisation „Eine Million Augenblicke für Demokratie“ eine Großdemonstration gegen die umstrittenen Pläne der Regierung angekündigt.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
-        "page_title": "Prag: Proteste gegen umstrittene Medienreform",
+        "page_title": "Proteste gegen umstrittene Medienreform in Tschechien",
         "canonical_url": "https://orf.at/stories/3447835/",
         "resolved_url": "https://orf.at/stories/3447835/",
         "requested_url": "https://orf.at/stories/3447835/",
-        "last_attempt_at": 1794335910.112645,
-        "rss_fingerprint": "a653b08741b614fbfcc0a9bab45e4d5bf442569c25cb08e7d4178ae3bf6f7931",
-        "fetched_at": 1794335910.112645,
-        "text_sha256": "1ce4e3cc3e85a18c3dade6613a39fbe4a219e35380072e4cfcdf334e1b69c200"
-      }
+        "last_attempt_at": 1794354399.513657,
+        "rss_fingerprint": "8e9674b02cab00f6acf421f061df76e43c4df086f018923f24ff3bb9e8c0d4df",
+        "fetched_at": 1794354399.513657,
+        "text_sha256": "b918a357fe2a662c6f979545aacdbb6220be19be9846e90b3ddc9d6c3c5b9260"
+      },
+      "article_text": "Studenten und Lehrende verschiedener Universitäten sind gestern in Prag auf die Straße gegangen, um gegen geplante Änderungen bei der Finanzierung der öffentlich-rechtlichen Medien zu protestieren. Zu einer Abschlusskundgebung versammelten sich am Abend Hunderte Menschen auf dem Platz der Republik im Zentrum der tschechischen Hauptstadt.\n\nDie Teilnehmenden skandierten „Wir geben die Medien nicht auf!“. Sie trugen Schilder mit Aufschriften wie „Unabhängige Medien sind ein Pfeiler der Demokratie“. Mehr als 2.000 Studierende und Absolventen der Journalistik unterzeichneten einen offenen Brief, in dem sie ihre Sorgen um die künftige Unabhängigkeit des öffentlich-rechtlichen Rundfunks zum Ausdruck brachten.\n\nDie rechte Koalition unter dem Regierungschef und Milliardär Andrej Babis will den öffentlich-rechtlichen Rundfunk künftig nicht mehr über Gebühren, sondern direkt aus dem Budget finanzieren. Ein entsprechender Gesetzesentwurf passierte in erster Lesung das Abgeordnetenhaus des EU-Mitgliedsstaats. Geplant sind zudem Kürzungen der Mittel um mehr als 15 Prozent.\n\nKritiker werfen der Regierung vor, es gehe ihr in Wirklichkeit darum, Einfluss auf Programm und Personalentscheidungen zu nehmen. Für den 15. November hat die Organisation „Eine Million Augenblicke für Demokratie“ eine Großdemonstration gegen die umstrittenen Pläne der Regierung angekündigt."
     },
     {
       "id": "f7fab6c7ab6ab3e76ac6a227",
@@ -1411,7 +1966,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348409/die-sorge-um-die-zahl-der-wehrdiener-vergisst-auf-den-pazifismus?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000348409/die-sorge-um-die-zahl-der-wehrdiener-vergisst-auf-den-pazifismus?ref=rss",
+        "last_attempt_at": 1794354399.513657,
         "rss_fingerprint": "a2e11b9a5ae15d3299617e0d69e9664af0674e32a773da39c05e63b466417356"
       }
     },
@@ -1452,7 +2010,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348554/weihnachtsmaerkte-starten-licht-an-fuer-den-herzerlbaum?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000348554/weihnachtsmaerkte-starten-licht-an-fuer-den-herzerlbaum?ref=rss",
+        "last_attempt_at": 1794354399.513657,
         "rss_fingerprint": "01337b00003457014097e749f92b8d9786451d485d2cec037babc74a04ae50d5"
       }
     },
@@ -1863,7 +2424,7 @@
     {
       "id": "f2021ed34bc962007b1967f0",
       "title": "50 Benko-Millionen in Liechtenstein gesichert",
-      "text": "Knalleffekt rund um die Ingbe-Stiftung der Benkos in Liechtenstein: Der Oberste Gerichtshof des Fürstentums hat für die Gläubiger des Milliardenpleitiers gut 50 Millionen Euro sichern lassen. Ein bahnbrechendes Urteil für den bis dato so diskreten Finanzplatz.",
+      "text": "Knalleffekt rund um die Ingbe-Stiftung der Benkos in Liechtenstein: Der Oberste Gerichtshof des Fürstentums hat für die Gläubiger des Milliardenpleitiers gut 50 Millionen Euro sichern lassen. Ein bahnbrechender Beschluss für den bis dato so diskreten Finanzplatz.",
       "url": "https://www.krone.at/4370778",
       "published_at": 1794332986.0,
       "first_seen_at": 1794335910.112645,
@@ -1888,8 +2449,8 @@
           "kind": "image"
         }
       ],
-      "rss_text": "Knalleffekt rund um die Ingbe-Stiftung der Benkos in Liechtenstein: Der Oberste Gerichtshof des Fürstentums hat für die Gläubiger des Milliardenpleitiers gut 50 Millionen Euro sichern lassen. Ein bahnbrechendes Urteil für den bis dato so diskreten Finanzplatz.",
-      "rss_revision_at": 1794336654.0,
+      "rss_text": "Knalleffekt rund um die Ingbe-Stiftung der Benkos in Liechtenstein: Der Oberste Gerichtshof des Fürstentums hat für die Gläubiger des Milliardenpleitiers gut 50 Millionen Euro sichern lassen. Ein bahnbrechender Beschluss für den bis dato so diskreten Finanzplatz.",
+      "rss_revision_at": 1794347704.0,
       "content_kind": "news",
       "text_origin": "rss"
     },
@@ -2030,7 +2591,7 @@
         }
       ],
       "rss_text": "„REIHE 2“- die Serie über Menschen, die mit viel Herz und Leidenschaft das Werkl am Laufen halten. Diesmal spricht Gerhard Saurer, seit 34 Jahren innovativer Obmann beim SV Wienerberg, über Vereins-Clubbings, Gogo-Tänzerinnen, die Stronach-Ära und eine Geld-zurück-Aktion.",
-      "rss_revision_at": 1794332427.0,
+      "rss_revision_at": 1794343116.0,
       "content_kind": "news",
       "text_origin": "rss"
     },
@@ -2178,15 +2739,15 @@
       ],
       "media": [
         {
-          "url": "https://img.kleinezeitung.at/public/kaernten/oberkaernten/rorzr-image-1jpg/alternates/BASE_LANDSCAPE/Image%201.jpg",
+          "url": "https://img.kleinezeitung.at/public/kaernten/oberkaernten/fiafju-image-1jpg/alternates/BASE_LANDSCAPE/Image%201.jpg",
           "kind": "image"
         },
         {
-          "url": "https://img.kleinezeitung.at/public/kaernten/oberkaernten/rorzr-image-1jpg/alternates/BASE_LANDSCAPE/Image%201.jpg",
+          "url": "https://img.kleinezeitung.at/public/kaernten/oberkaernten/fiafju-image-1jpg/alternates/BASE_LANDSCAPE/Image%201.jpg",
           "kind": "image"
         },
         {
-          "url": "https://img.kleinezeitung.at/public/kaernten/oberkaernten/rorzr-image-1jpg/alternates/BASE_LANDSCAPE/Image%201.jpg",
+          "url": "https://img.kleinezeitung.at/public/kaernten/oberkaernten/fiafju-image-1jpg/alternates/BASE_LANDSCAPE/Image%201.jpg",
           "kind": "image"
         }
       ],
@@ -3317,15 +3878,15 @@
       ],
       "media": [
         {
-          "url": "https://img.kleinezeitung.at/public/incoming/6l9d2v-voestalpinekindbergjpg/alternates/BASE_LANDSCAPE/voestalpine_kindberg.jpg",
+          "url": "https://img.kleinezeitung.at/public/incoming/heia28-voestalpinekindbergjpg/alternates/BASE_LANDSCAPE/voestalpine_kindberg.jpg",
           "kind": "image"
         },
         {
-          "url": "https://img.kleinezeitung.at/public/incoming/6l9d2v-voestalpinekindbergjpg/alternates/BASE_LANDSCAPE/voestalpine_kindberg.jpg",
+          "url": "https://img.kleinezeitung.at/public/incoming/heia28-voestalpinekindbergjpg/alternates/BASE_LANDSCAPE/voestalpine_kindberg.jpg",
           "kind": "image"
         },
         {
-          "url": "https://img.kleinezeitung.at/public/incoming/6l9d2v-voestalpinekindbergjpg/alternates/BASE_LANDSCAPE/voestalpine_kindberg.jpg",
+          "url": "https://img.kleinezeitung.at/public/incoming/heia28-voestalpinekindbergjpg/alternates/BASE_LANDSCAPE/voestalpine_kindberg.jpg",
           "kind": "image"
         }
       ],
@@ -13187,564 +13748,60 @@
       "rss_revision_at": 1794281423.0,
       "content_kind": "news",
       "text_origin": "rss"
-    },
-    {
-      "id": "3803445354adf859ee5fe0ce",
-      "title": "Trump: FBI ermittelt bei Affäre des Nvidia-Chefs",
-      "text": "Das FBI ermittelt nach Worten von US-Präsident Donald Trump im Fall der Affäre von Nvidia-Chef Jensen Huang mit einer möglichen chinesischen Spionin. Die US-Bundespolizei prüfe den Fall, sagte Trump auf einer Pressekonferenz im Weißen Haus. Ob sich die Ermittlungen auch gegen Huang direkt richten, ließ der Präsident offen.\n\nDer US-Chipriese Nvidia hatte zuvor nach Berichten, dass Firmenchef Huang zum Ziel ausländischer Spionageaktivitäten geworden sei, eine eigene Untersuchung eingeleitet. Die Untersuchung solle von Mitgliedern des Verwaltungsrates und externen Ermittlern geführt werden, hieß es.\n\nIn den vergangenen Tagen hatte es Medienberichte gegeben, wonach Huang ein Verhältnis zu einer Frau gehabt habe, die nach Vermutungen von US-Sicherheitskreisen vom chinesischen Geheimdienst angeworben worden sei. Huang bestätigte in einer E-Mail an die Nvidia-Beschäftigten, dass er eine Affäre gehabt habe. In den vergangenen Jahren hatte sich Huang ein enges Verhältnis zu Trump aufgebaut.",
-      "url": "https://orf.at/stories/3447744/",
-      "published_at": 1794267455.0,
-      "first_seen_at": 1794279588.450765,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1794267455.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_text": "Das FBI ermittelt nach Worten von US-Präsident Donald Trump im Fall der Affäre von Nvidia-Chef Jensen Huang mit einer möglichen chinesischen Spionin. Die US-Bundespolizei prüfe den Fall, sagte Trump auf einer Pressekonferenz im Weißen Haus. Ob sich die Ermittlungen auch gegen Huang direkt richten, ließ der Präsident offen.\n\nDer US-Chipriese Nvidia hatte zuvor nach Berichten, dass Firmenchef Huang zum Ziel ausländischer Spionageaktivitäten geworden sei, eine eigene Untersuchung eingeleitet. Die Untersuchung solle von Mitgliedern des Verwaltungsrates und externen Ermittlern geführt werden, hieß es.\n\nIn den vergangenen Tagen hatte es Medienberichte gegeben, wonach Huang ein Verhältnis zu einer Frau gehabt habe, die nach Vermutungen von US-Sicherheitskreisen vom chinesischen Geheimdienst angeworben worden sei. Huang bestätigte in einer E-Mail an die Nvidia-Beschäftigten, dass er eine Affäre gehabt habe. In den vergangenen Jahren hatte sich Huang ein enges Verhältnis zu Trump aufgebaut.",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "Trump: FBI ermittelt bei Affäre des Nvidia-Chefs",
-        "canonical_url": "https://orf.at/stories/3447744/",
-        "resolved_url": "https://orf.at/stories/3447744/",
-        "requested_url": "https://orf.at/stories/3447744/",
-        "last_attempt_at": 1794343958.184662,
-        "rss_fingerprint": "d5563fd1526fa1c9ec977fb3977374d2928d4297a5aff05f30303829cfa8ef0a",
-        "fetched_at": 1794343958.184662,
-        "text_sha256": "5371577586b69e4aa64c9ac316b4d62d8edf5d2671ff8b6b3273e16db507a701"
-      },
-      "broadcast_id": "20261110T044140Z",
-      "broadcast_position": 4
-    },
-    {
-      "id": "aaed7aebed5ceaa488e08fcc",
-      "title": "Booker-Literaturpreis geht an M. John Harrison",
-      "text": "Der Booker-Preis geht in diesem Jahr an den Autor M. John Harrison für seinen dystopischen Roman „The End of Everything“, wie die Jury gestern bekanntgab. Mit 81 Jahren ist der Engländer der bisher älteste Gewinner des renommierten Literaturpreises.\n\nIn dem dystopischen Roman geht es um eine nicht allzu ferne Zukunft, in der außerirdische Wesen namens „iGhetti“ Großbritannien angegriffen haben. Die deutsche Übersetzung mit dem Titel „Das Ende von allem“ erscheint am 22. April 2027 im Kanon Verlag.\n\nDer Schriftsteller veröffentlichte bereits mehr als zehn Romane. Zu seinen früheren Werken gehören unter anderem die auf Deutsch erschienenen Science-Fiction-Romane „Die Centauri-Maschine“ und die Trilogie „Licht“.\n\nDer Booker-Preis gilt als prestigeträchtigster Literaturpreis Großbritanniens und ist mit 50.000 Pfund (rund 60.000 Euro) dotiert. Der Preis wird seit 1969 vergeben und war bis 2013 Autoren aus dem Commonwealth und Irland vorbehalten, deren Romane in Großbritannien veröffentlicht wurden. Seit 2014 sind auch Autoren aus anderen englischsprachigen Ländern zugelassen.",
-      "url": "https://orf.at/stories/3447743/",
-      "published_at": 1794266142.0,
-      "first_seen_at": 1794279588.450765,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1794266142.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_text": "Der Booker-Preis geht in diesem Jahr an den Autor M. John Harrison für seinen dystopischen Roman „The End of Everything“, wie die Jury gestern bekanntgab. Mit 81 Jahren ist der Engländer der bisher älteste Gewinner des renommierten Literaturpreises.\n\nIn dem dystopischen Roman geht es um eine nicht allzu ferne Zukunft, in der außerirdische Wesen namens „iGhetti“ Großbritannien angegriffen haben. Die deutsche Übersetzung mit dem Titel „Das Ende von allem“ erscheint am 22. April 2027 im Kanon Verlag.\n\nDer Schriftsteller veröffentlichte bereits mehr als zehn Romane. Zu seinen früheren Werken gehören unter anderem die auf Deutsch erschienenen Science-Fiction-Romane „Die Centauri-Maschine“ und die Trilogie „Licht“.\n\nDer Booker-Preis gilt als prestigeträchtigster Literaturpreis Großbritanniens und ist mit 50.000 Pfund (rund 60.000 Euro) dotiert. Der Preis wird seit 1969 vergeben und war bis 2013 Autoren aus dem Commonwealth und Irland vorbehalten, deren Romane in Großbritannien veröffentlicht wurden. Seit 2014 sind auch Autoren aus anderen englischsprachigen Ländern zugelassen.",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "Booker-Literaturpreis geht an M. John Harrison",
-        "canonical_url": "https://orf.at/stories/3447743/",
-        "resolved_url": "https://orf.at/stories/3447743/",
-        "requested_url": "https://orf.at/stories/3447743/",
-        "last_attempt_at": 1794343958.184662,
-        "rss_fingerprint": "18acb9b16518ebbb3a209425a5575965181e32f2a7e1ec818b65b1ee7218a8e9",
-        "fetched_at": 1794343958.184662,
-        "text_sha256": "f2ace70f0d7d4a1d69204ef4dec94ca885ff16a93c63e0a922c22bc80b8c909f"
-      }
-    },
-    {
-      "id": "5d6a07dcb6eec873afab0cd0",
-      "title": "Standardrätsel D 11439",
-      "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
-      "url": "https://www.derstandard.at/story/3000000347078/standardraetsel-d-11439?ref=rss",
-      "published_at": 1794265260.0,
-      "first_seen_at": 1794279588.450765,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/eqM6Eg/rs:fill:150:0/plain/lido-images/2023/05/19/17b073a2-2297-406c-a459-faf4e5a469ef.png",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
-      "rss_revision_at": 1794265260.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "article_fetch": {
-        "status": "deferred",
-        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347078/standardraetsel-d-11439?ref=rss",
-        "requested_url": "https://www.derstandard.at/story/3000000347078/standardraetsel-d-11439?ref=rss",
-        "last_attempt_at": 1794279588.450765,
-        "rss_fingerprint": "067deb416f432bc238756fab49f7042de64853786ed9b52ef221f058e5a9a41b"
-      }
-    },
-    {
-      "id": "a20708da24c8db58c4fcf27c",
-      "title": "Männerduell um Lagardes Nachfolge",
-      "text": "Die Frage, wer auf Christine Lagarde an der Spitze der Europäischen Zentralbank (EZB) folgt, bleibt vorerst noch ungeklärt. Die Französin hatte Ende Oktober ihren vorzeitigen Rücktritt mit Februar 2027 angekündigt. Zwar berieten die Finanzminister der 21 Euro-Länder am Montag erstmals offiziell über die Nachfolge, eine Einigung erfolgte aber nicht. Es zeichnet sich ein Duell zwischen dem Niederländer Klaas Knot und dem Spanier Pablo Hernandez de Cos sowie eine weitere Reduktion des ohnehin schon geringen Frauenanteils im EZB-Rat ab.",
-      "url": "https://orf.at/stories/3447695/",
-      "published_at": 1794262495.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "Die Frage, wer auf Christine Lagarde an der Spitze der Europäischen Zentralbank (EZB) folgt, bleibt vorerst noch ungeklärt. Die Französin hatte Ende Oktober ihren vorzeitigen Rücktritt mit Februar 2027 angekündigt. Zwar berieten die Finanzminister der 21 Euro-Länder am Montag erstmals offiziell über die Nachfolge, eine Einigung erfolgte aber nicht. Es zeichnet sich ein Duell zwischen dem Niederländer Klaas Knot und dem Spanier Pablo Hernandez de Cos sowie eine weitere Reduktion des ohnehin schon geringen Frauenanteils im EZB-Rat ab.",
-      "rss_revision_at": 1794262495.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "broadcast_id": "20261109T222821Z",
-      "broadcast_position": 1
-    },
-    {
-      "id": "45f485e368199ad762323f86",
-      "title": "Affäre um Nvidia-Chef lässt Aktie fallen",
-      "text": "Wegen einer Affäre mit einer mutmaßlichen chinesischen Spionin steht der Gründer und Firmenchef des US-Chipkonzerns Nvidia schwer unter Druck. Jensen Huang gestand eine außereheliche Beziehung ein und entschuldigte sich bei seiner Familie und seinen Angestellten. Laut US-Präsident Donald Trump ermittelt das FBI in dem Fall. Der Aktienkurs von Nvidia gab Montag um gut vier Prozent nach.",
-      "url": "https://orf.at/stories/3447708/",
-      "published_at": 1794262494.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "Wegen einer Affäre mit einer mutmaßlichen chinesischen Spionin steht der Gründer und Firmenchef des US-Chipkonzerns Nvidia schwer unter Druck. Jensen Huang gestand eine außereheliche Beziehung ein und entschuldigte sich bei seiner Familie und seinen Angestellten. Laut US-Präsident Donald Trump ermittelt das FBI in dem Fall. Der Aktienkurs von Nvidia gab Montag um gut vier Prozent nach.",
-      "rss_revision_at": 1794262494.0,
-      "content_kind": "news",
-      "text_origin": "rss"
-    },
-    {
-      "id": "fc53a8ac0a8433a82bfc6369",
-      "title": "Strengere Regeln für Zigarettenmitnahme gestoppt",
-      "text": "Statt vier Stangen könnten Reisende künftig nur noch 200 Zigaretten aus anderen EU-Staaten mitbringen dürfen. Auch für E-Zigaretten-Liquids ist eine deutliche Verschärfung geplant. Doch die EU-Finanzminister sind sich noch uneinig.",
-      "url": "https://www.krone.at/4368566",
-      "published_at": 1794262445.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/3792668/vc7965e/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/3792668/vc7965e/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/3792668/vc7965e/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/3792668/vc7965e/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Statt vier Stangen könnten Reisende künftig nur noch 200 Zigaretten aus anderen EU-Staaten mitbringen dürfen. Auch für E-Zigaretten-Liquids ist eine deutliche Verschärfung geplant. Doch die EU-Finanzminister sind sich noch uneinig.",
-      "rss_revision_at": 1794266500.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "broadcast_id": "20261109T222821Z",
-      "broadcast_position": 2
-    },
-    {
-      "id": "bf6954ed4a3b6f861e9a5a64",
-      "title": "Andreas Gabalier geriet vor Auftritt ins Schwitzen",
-      "text": "Volks Rock ‘n‘ Roller Andreas Gabalier verriet der „Krone“ seine Geheimnisse über schweißtreibende Aktivitäten vor der Show in seiner Künstlergarderobe. Auch dem Publikum im Großen Festspielhaus in Salzburg wurde am Montag durchs viele Tanzen ganz schön heiß.",
-      "url": "https://www.krone.at/4369778",
-      "published_at": 1794262249.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4369780/v24cf42/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4369780/v24cf42/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4369780/v24cf42/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4369780/v24cf42/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Volks Rock ‘n‘ Roller Andreas Gabalier verriet der „Krone“ seine Geheimnisse über schweißtreibende Aktivitäten vor der Show in seiner Künstlergarderobe. Auch dem Publikum im Großen Festspielhaus in Salzburg wurde am Montag durchs viele Tanzen ganz schön heiß.",
-      "rss_revision_at": 1794262249.0,
-      "content_kind": "news",
-      "text_origin": "rss"
-    },
-    {
-      "id": "f14b5cd8ad7d1442c0881e13",
-      "title": "In den Alpen gibt‘s bald Fast Food an der Skipiste",
-      "text": "Neben Hüttenklassikern wie Käsespätzle, Kaiserschmarrn und Germknödel wird es auch bald Burger, Pommes und frittierte Hühnerkeulen neben Skipisten in den Alpen geben: Der Fast-Food-Riese Kentucky Fried Chicken eröffnet zwei Filialen auf 1700 und 2123 Metern Seehöhe.",
-      "url": "https://www.krone.at/4369769",
-      "published_at": 1794261934.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4369784/v8dd7ed/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4369784/v8dd7ed/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4369784/v8dd7ed/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4369784/v8dd7ed/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Neben Hüttenklassikern wie Käsespätzle, Kaiserschmarrn und Germknödel wird es auch bald Burger, Pommes und frittierte Hühnerkeulen neben Skipisten in den Alpen geben: Der Fast-Food-Riese Kentucky Fried Chicken eröffnet zwei Filialen auf 1700 und 2123 Metern Seehöhe.",
-      "rss_revision_at": 1794261934.0,
-      "content_kind": "news",
-      "text_origin": "rss"
-    },
-    {
-      "id": "7d87bc3186c1fbb62af09d6f",
-      "title": "Hameseder: „Müssen alles tun, um Run auf Zivildienst zu stoppen“",
-      "text": "Der Leiter der Heereskommission Erwin Hameseder fordert in der ZIB2 nachdrücklich eine sofortige Verlängerung der Dauer des Wehrersatzdienstes.",
-      "url": "https://www.kleinezeitung.at/artikel/41437739/hameseder-muessen-alles-tun-um-run-auf-zivildienst-zu-stoppen",
-      "published_at": 1794261452.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://www.kleinezeitung.at/rss/oesterreich"
-      ],
-      "media": [
-        {
-          "url": "https://img.kleinezeitung.at/public/service/newsticker/innenpolitik/ybl4sy-Erwin-Hameseder-leitet-die-neue-Kommission/alternates/BASE_LANDSCAPE/Erwin%20Hameseder%20leitet%20die%20neue%20Kommission",
-          "kind": "image"
-        },
-        {
-          "url": "https://img.kleinezeitung.at/public/service/newsticker/innenpolitik/ybl4sy-Erwin-Hameseder-leitet-die-neue-Kommission/alternates/BASE_LANDSCAPE/Erwin%20Hameseder%20leitet%20die%20neue%20Kommission",
-          "kind": "image"
-        },
-        {
-          "url": "https://img.kleinezeitung.at/public/service/newsticker/innenpolitik/ybl4sy-Erwin-Hameseder-leitet-die-neue-Kommission/alternates/BASE_LANDSCAPE/Erwin%20Hameseder%20leitet%20die%20neue%20Kommission",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Der Leiter der Heereskommission Erwin Hameseder fordert in der ZIB2 nachdrücklich eine sofortige Verlängerung der Dauer des Wehrersatzdienstes.",
-      "rss_revision_at": 1794261452.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "article_fetch": {
-        "status": "deferred",
-        "error_type": "TypeError",
-        "requested_url": "https://www.kleinezeitung.at/artikel/41437739/hameseder-muessen-alles-tun-um-run-auf-zivildienst-zu-stoppen",
-        "last_attempt_at": 1794279588.450765,
-        "rss_fingerprint": "fd9bb1cbe13643ef3b5884611a1a296b313abe809547cfc2ea1b080e9ae3408f"
-      },
-      "broadcast_id": "20261109T222821Z",
-      "broadcast_position": 3
-    },
-    {
-      "id": "24bbd4b60e23d9ed91c702ed",
-      "title": "Mayr-Melnhof Karton verkauft Mehrheit an Verpackungsgeschäft",
-      "text": "Das Unternehmen Mayr-Melnhof Karton hat sich mit KPS Capital Partners auf den Verkauf von 70 Prozent seines Packaging-Geschäfts geeinigt. Der Unternehmenswert beläuft sich auf 2,4 Mrd. Euro, teilte Mayr-Melnhof Karton gestern Abend in einer Aussendung mit. Die Aktionäre sollen eine Sonderdividende erhalten.\n\nDas Packaging-Geschäft wird an eine neu gegründete Holdinggesellschaft von KPS Capital Partners veräußert. Nach Vollzug des Verkaufes wird KPS Capital Partners 70 Prozent an der Holdinggesellschaft halten, Mayr-Melnhof Karton 30 Prozent. Das Packaging-Geschäft umfasst die Bereiche Food & Premium Packaging (ohne Iran und Tunesien) sowie Pharma & Healthcare Packaging.\n\nSollte das Unternehmen im kommenden Jahr wirtschaftlich schlechter abschneiden als vereinbart, könnte der Anteil des bisherigen Eigentümers auf mindestens 20 Prozent sinken. KPS Capital müsste dafür nichts zusätzlich bezahlen.\n\nZwischen 500 und 600 Mio. Euro sind für eine Sonderdividende vorgesehen. Die Mayr-Melnhof-Gruppe rechnet mit einer Nettoliquidität von rund 800 bis 900 Mio. Euro. Der Betrag soll für Schuldentilgung oder für strategische Opportunitäten verwendet werden. Mit einem Abschluss der Transaktion wird im ersten Halbjahr 2027 gerechnet.",
-      "url": "https://orf.at/stories/3447741/",
-      "published_at": 1794261334.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1794261334.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "Mayr-Melnhof Karton verkauft Mehrheit an Verpackungsgeschäft",
-        "canonical_url": "https://orf.at/stories/3447741/",
-        "resolved_url": "https://orf.at/stories/3447741/",
-        "requested_url": "https://orf.at/stories/3447741/",
-        "last_attempt_at": 1794343958.184662,
-        "rss_fingerprint": "4526675f62e8dc20cec7b54ffcdb32a77275b3506a8a7d6d13967af92dd6314c",
-        "fetched_at": 1794343958.184662,
-        "text_sha256": "3bc6055fac11c3fe89ca4456dd7d718dd14e10ebc164b59c6ed5a6a806ecd13c"
-      },
-      "article_text": "Das Unternehmen Mayr-Melnhof Karton hat sich mit KPS Capital Partners auf den Verkauf von 70 Prozent seines Packaging-Geschäfts geeinigt. Der Unternehmenswert beläuft sich auf 2,4 Mrd. Euro, teilte Mayr-Melnhof Karton gestern Abend in einer Aussendung mit. Die Aktionäre sollen eine Sonderdividende erhalten.\n\nDas Packaging-Geschäft wird an eine neu gegründete Holdinggesellschaft von KPS Capital Partners veräußert. Nach Vollzug des Verkaufes wird KPS Capital Partners 70 Prozent an der Holdinggesellschaft halten, Mayr-Melnhof Karton 30 Prozent. Das Packaging-Geschäft umfasst die Bereiche Food & Premium Packaging (ohne Iran und Tunesien) sowie Pharma & Healthcare Packaging.\n\nSollte das Unternehmen im kommenden Jahr wirtschaftlich schlechter abschneiden als vereinbart, könnte der Anteil des bisherigen Eigentümers auf mindestens 20 Prozent sinken. KPS Capital müsste dafür nichts zusätzlich bezahlen.\n\nZwischen 500 und 600 Mio. Euro sind für eine Sonderdividende vorgesehen. Die Mayr-Melnhof-Gruppe rechnet mit einer Nettoliquidität von rund 800 bis 900 Mio. Euro. Der Betrag soll für Schuldentilgung oder für strategische Opportunitäten verwendet werden. Mit einem Abschluss der Transaktion wird im ersten Halbjahr 2027 gerechnet."
-    },
-    {
-      "id": "f669dd8898efe21ba1493bd8",
-      "title": "Mayr-Melnhof verkauft Mehrheit an Packaging-Geschäft",
-      "text": "KPS Capital Partners erhält 70 Prozent bei einer Unternehmensbewertung von 2,4 Milliarden Euro",
-      "url": "https://www.derstandard.at/story/3000000348340/mayr-melnhof-verkauft-mehrheit-an-packaging-geschaeft?ref=rss",
-      "published_at": 1794260617.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/XreiYw/rs:fill:150:0/plain/lido-images/2026/11/09/2a03b401-bf63-4531-87db-26e845b961e7.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "KPS Capital Partners erhält 70 Prozent bei einer Unternehmensbewertung von 2,4 Milliarden Euro",
-      "rss_revision_at": 1794260617.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "article_fetch": {
-        "status": "deferred",
-        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348340/mayr-melnhof-verkauft-mehrheit-an-packaging-geschaeft?ref=rss",
-        "requested_url": "https://www.derstandard.at/story/3000000348340/mayr-melnhof-verkauft-mehrheit-an-packaging-geschaeft?ref=rss",
-        "last_attempt_at": 1794263268.426388,
-        "rss_fingerprint": "92e14de54b54114799bc388adb191c59673d799ddd2ef89bbc5246c7f722262e"
-      },
-      "broadcast_id": "20261109T222821Z",
-      "broadcast_position": 4
-    },
-    {
-      "id": "52c4d1c8ff49ff76646f717b",
-      "title": "Prozessbeginn um Tötung von Charlie Kirk laut Medienberichten Mitte 2028",
-      "text": "Die Tötung des rechten Aktivisten wird erst drei Jahre nach der Tat aufgerollt. Für das Verfahren sind etwa fünf Monate eingeplant",
-      "url": "https://www.derstandard.at/story/3000000348341/prozessbeginn-um-toetung-von-charlie-kirk-laut-medienberichten-mitte-2028?ref=rss",
-      "published_at": 1794260242.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/Iiz4yA/rs:fill:150:0/plain/lido-images/2026/11/09/6be3e399-3afe-4805-9507-d00c01d70838.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Die Tötung des rechten Aktivisten wird erst drei Jahre nach der Tat aufgerollt. Für das Verfahren sind etwa fünf Monate eingeplant",
-      "rss_revision_at": 1794260242.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "article_fetch": {
-        "status": "deferred",
-        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348341/prozessbeginn-um-toetung-von-charlie-kirk-laut-medienberichten-mitte-2028?ref=rss",
-        "requested_url": "https://www.derstandard.at/story/3000000348341/prozessbeginn-um-toetung-von-charlie-kirk-laut-medienberichten-mitte-2028?ref=rss",
-        "last_attempt_at": 1794263268.426388,
-        "rss_fingerprint": "8c3ecc0fc7755c8ff3752e9b273ad1273ca032764b0ce1ead51f45d7b767c9e4"
-      }
-    },
-    {
-      "id": "361035f14ddb4297c0e6a798",
-      "title": "Verfahren gegen Hegseth auf Weg gebracht",
-      "text": "Nach der Wahlniederlage der US-Republikaner von Präsident Donald Trump ist Verteidigungsminister Pete Hegseth mit einem möglichen Amtsenthebungsverfahren konfrontiert. Der Trump-kritische republikanische Kongressabgeordnete Thomas Massie brachte das Verfahren am Montag in Washington mit der Präsentation von Vorwürfen gegen Hegseth auf den Weg. Bereits am Mittwoch könnte das Repräsentantenhaus darüber abstimmen.",
-      "url": "https://orf.at/stories/3447735/",
-      "published_at": 1794258595.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "Nach der Wahlniederlage der US-Republikaner von Präsident Donald Trump ist Verteidigungsminister Pete Hegseth mit einem möglichen Amtsenthebungsverfahren konfrontiert. Der Trump-kritische republikanische Kongressabgeordnete Thomas Massie brachte das Verfahren am Montag in Washington mit der Präsentation von Vorwürfen gegen Hegseth auf den Weg. Bereits am Mittwoch könnte das Repräsentantenhaus darüber abstimmen.",
-      "rss_revision_at": 1794258595.0,
-      "content_kind": "news",
-      "text_origin": "rss"
-    },
-    {
-      "id": "dd66bc7aacbaa083e7f93f4f",
-      "title": "USA erteilen Österreichs Eishockey-Frauen eine Lehrstunde",
-      "text": "Österreicherinnen unterlagen dem Titelverteidiger 1:11 und fassten damit die dritte Niederlage im dritten Spiel beim A-WM-Debüt aus. Zum Gruppenabschluss geht es gegen die Schweiz",
-      "url": "https://www.derstandard.at/story/3000000348338/usa-erteilen-oesterreichs-eishockey-frauen-eine-lehrstunde?ref=rss",
-      "published_at": 1794258402.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/3Yfptg/rs:fill:150:0/plain/lido-images/2026/08/16/1174de5d-ffad-4a9e-a550-f0373252b941.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Österreicherinnen unterlagen dem Titelverteidiger 1:11 und fassten damit die dritte Niederlage im dritten Spiel beim A-WM-Debüt aus. Zum Gruppenabschluss geht es gegen die Schweiz",
-      "rss_revision_at": 1794258402.0,
-      "content_kind": "news",
-      "text_origin": "rss"
-    },
-    {
-      "id": "0b44c2ad5e34c51b411f98f0",
-      "title": "Krakau-Anschlag: Tusk und Nawrocki bei Trauermarsch",
-      "text": "Zahlreiche Menschen haben sich gestern Abend im Stadtzentrum von Krakau zu einer gemeinsamen Trauerkundgebung eingefunden. Bürgermeister Lukasz Gibala hatte zu einem „Marsch der Stille“ im Gedenken an die Opfer des Schussattentats vom Samstag eingeladen.\n\nSchon vor Beginn der offiziellen Kundgebung entzündeten viele Menschen am Ort des Verbrechens Kerzen und legten Blumen und Karten mit Botschaften des Mitgefühls nieder.\n\nAls seltenes Zeichen der Einigkeit in der sonst so zerstrittenen Politik Polens hatten sowohl Regierungschef Donald Tusk als auch Präsident Karol Nawrocki sofort ihre Teilnahme zugesagt und sogar gemeinsam Kerzen am Tatort angezündet.\n\nDie beiden mächtigsten Politiker Polens stehen sich derzeit in einem erbitterten Konflikt um das Verfassungsgericht gegenüber. Tusk hatte ebenfalls einen Aufruf zur Teilnahme veröffentlicht: „Seien wir heute um 20.00 Uhr in Krakau alle gemeinsam!“, schrieb der Ministerpräsident auf der Plattform X.\n\nAuf dem Hauptmarktplatz von Krakau hatte der 24-jährige Täter aus einem fahrenden Auto heraus das Feuer eröffnet. Sechs Menschen starben dabei, darunter auch eine Niederösterreicherin, ihr Mann wurde verletzt. Insgesamt 15 Menschen mussten mit teils lebensgefährlichen Verletzungen in Krankenhäusern behandelt werden.\n\nZudem wurden später die Leichen des Vaters, der Mutter und der Schwester des Täters in einem Wohnhaus in der Kleinstadt Ostrowiec Swietokryzskie gefunden. Es wird angenommen, dass sie ebenfalls von dem 24-Jährigen erschossen wurden. Gestern Früh starb auch der Attentäter selbst an den Verletzungen, die er bei einem Schusswechsel mit der Polizei erlitten hatte.",
-      "url": "https://orf.at/stories/3447738/",
-      "published_at": 1794258272.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1794258272.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_text": "Zahlreiche Menschen haben sich gestern Abend im Stadtzentrum von Krakau zu einer gemeinsamen Trauerkundgebung eingefunden. Bürgermeister Lukasz Gibala hatte zu einem „Marsch der Stille“ im Gedenken an die Opfer des Schussattentats vom Samstag eingeladen.\n\nSchon vor Beginn der offiziellen Kundgebung entzündeten viele Menschen am Ort des Verbrechens Kerzen und legten Blumen und Karten mit Botschaften des Mitgefühls nieder.\n\nAls seltenes Zeichen der Einigkeit in der sonst so zerstrittenen Politik Polens hatten sowohl Regierungschef Donald Tusk als auch Präsident Karol Nawrocki sofort ihre Teilnahme zugesagt und sogar gemeinsam Kerzen am Tatort angezündet.\n\nDie beiden mächtigsten Politiker Polens stehen sich derzeit in einem erbitterten Konflikt um das Verfassungsgericht gegenüber. Tusk hatte ebenfalls einen Aufruf zur Teilnahme veröffentlicht: „Seien wir heute um 20.00 Uhr in Krakau alle gemeinsam!“, schrieb der Ministerpräsident auf der Plattform X.\n\nAuf dem Hauptmarktplatz von Krakau hatte der 24-jährige Täter aus einem fahrenden Auto heraus das Feuer eröffnet. Sechs Menschen starben dabei, darunter auch eine Niederösterreicherin, ihr Mann wurde verletzt. Insgesamt 15 Menschen mussten mit teils lebensgefährlichen Verletzungen in Krankenhäusern behandelt werden.\n\nZudem wurden später die Leichen des Vaters, der Mutter und der Schwester des Täters in einem Wohnhaus in der Kleinstadt Ostrowiec Swietokryzskie gefunden. Es wird angenommen, dass sie ebenfalls von dem 24-Jährigen erschossen wurden. Gestern Früh starb auch der Attentäter selbst an den Verletzungen, die er bei einem Schusswechsel mit der Polizei erlitten hatte.",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "Krakau-Anschlag: Tusk und Nawrocki bei Trauermarsch",
-        "canonical_url": "https://orf.at/stories/3447738/",
-        "resolved_url": "https://orf.at/stories/3447738/",
-        "requested_url": "https://orf.at/stories/3447738/",
-        "last_attempt_at": 1794343958.184662,
-        "rss_fingerprint": "fd962ce2396d8137b6a364ba220fca12ba88f3e118f85a9e5f6736fbb7b66f59",
-        "fetched_at": 1794343958.184662,
-        "text_sha256": "0cc65bb00fbe8791f8e8cc1394c817f85adb5f6f39223d1edcd1af115f1d4cfa"
-      }
-    },
-    {
-      "id": "e05e094f04f4b9f2edc0ffbb",
-      "title": "Mega-Razzia in Berlin! Hells Angels im Visier",
-      "text": "Mega-Razzia in Berlin! Die Polizei hat einen großen Zugriff bei Wirkungsstätten der sogenannten Hells Angels durchgeführt – im Fokus steht dabei auch das Vereinsheim der brutalen Bikergang.",
-      "url": "https://www.krone.at/4369771",
-      "published_at": 1794258253.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4369776/v9ecb05/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4369776/v9ecb05/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4369776/v9ecb05/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4369776/v9ecb05/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Mega-Razzia in Berlin! Die Polizei hat einen großen Zugriff bei Wirkungsstätten der sogenannten Hells Angels durchgeführt – im Fokus steht dabei auch das Vereinsheim der brutalen Bikergang.",
-      "rss_revision_at": 1794258253.0,
-      "content_kind": "news",
-      "text_origin": "rss"
-    },
-    {
-      "id": "e887ee259bad783babe1fc65",
-      "title": "Durchsuchung bei \"Hells Angels\": Großeinsatz in Berlin",
-      "text": "300 Einsatzkräfte der Polizei sind beteiligt. Laut einem Polizeisprecher geht es um Schusswaffenkriminalität",
-      "url": "https://www.derstandard.at/story/3000000348339/durchsuchung-bei-hells-angels-grosseinsatz-in-berlin?ref=rss",
-      "published_at": 1794258239.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/oTC-mw/rs:fill:150:0/plain/lido-images/2026/11/09/ba177e91-d29d-4791-b8f2-d2ab04103825.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "300 Einsatzkräfte der Polizei sind beteiligt. Laut einem Polizeisprecher geht es um Schusswaffenkriminalität",
-      "rss_revision_at": 1794258239.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "article_fetch": {
-        "status": "deferred",
-        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348339/durchsuchung-bei-hells-angels-grosseinsatz-in-berlin?ref=rss",
-        "requested_url": "https://www.derstandard.at/story/3000000348339/durchsuchung-bei-hells-angels-grosseinsatz-in-berlin?ref=rss",
-        "last_attempt_at": 1794263268.426388,
-        "rss_fingerprint": "9cf71a25bea09c7079bf0070c8d35959327f77d257f00b41d8d54ac2b72342dc"
-      }
-    },
-    {
-      "id": "8d6e9a346b366effc6fe07ed",
-      "title": "Russland meldet nach Angriff zwei Tote in Region Belgorod",
-      "text": "In der russischen Grenzregion Belgorod sind nach Behördenangaben zwei Menschen bei einem ukrainischen Drohnenangriff getötet worden. Eine Drohne habe ein Auto im Kreis Borissowka attackiert. Zwei Männer darin seien ums Leben gekommen, teilte der regionale Zivilschutzstab gestern mit. Die Angaben lassen sich nicht unabhängig überprüfen.",
-      "url": "https://orf.at/stories/3447737/",
-      "published_at": 1794257964.0,
-      "first_seen_at": 1794263268.426388,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1794257964.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_text": "In der russischen Grenzregion Belgorod sind nach Behördenangaben zwei Menschen bei einem ukrainischen Drohnenangriff getötet worden. Eine Drohne habe ein Auto im Kreis Borissowka attackiert. Zwei Männer darin seien ums Leben gekommen, teilte der regionale Zivilschutzstab gestern mit. Die Angaben lassen sich nicht unabhängig überprüfen.",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "Russland meldet nach Angriff zwei Tote in Region Belgorod",
-        "canonical_url": "https://orf.at/stories/3447737/",
-        "resolved_url": "https://orf.at/stories/3447737/",
-        "requested_url": "https://orf.at/stories/3447737/",
-        "last_attempt_at": 1794343958.184662,
-        "rss_fingerprint": "14ce2e7765d89757e57e0ae06e367356f2b9fb48902dbc81acf6c167c7932fbb",
-        "fetched_at": 1794343958.184662,
-        "text_sha256": "630eb037277ec999ca92d3f660d488ee31fa96d4c0389e5b9f4d8b192629e874"
-      }
     }
   ],
   "feeds": [
     {
       "url": "https://www.derstandard.at/rss",
       "name": "derStandard.at | Nachrichten, Kommentare & Community",
-      "last_success_at": 1794343958.184662
+      "last_success_at": 1794354399.513657
     },
     {
       "url": "https://www.derstandard.at/rss/live",
       "name": "Live - derStandard.at",
-      "last_success_at": 1794343958.184662
+      "last_success_at": 1794354399.513657
     },
     {
       "url": "https://api.krone.at/v1/rss/rssfeed-nachrichten.html",
       "name": "krone.at - Nachrichten",
-      "last_success_at": 1794343958.184662
+      "last_success_at": 1794354399.513657
     },
     {
       "url": "https://rss.orf.at/news.xml",
       "name": "news.ORF.at",
-      "last_success_at": 1794343958.184662
+      "last_success_at": 1794354399.513657
     },
     {
       "url": "https://www.kleinezeitung.at/rss/steiermark",
       "name": "Kleine Zeitung - Steiermark",
-      "last_success_at": 1794343958.184662
+      "last_success_at": 1794354399.513657
     },
     {
       "url": "https://www.kleinezeitung.at/rss/oesterreich",
       "name": "Kleine Zeitung - Österreich",
-      "last_success_at": 1794343958.184662
+      "last_success_at": 1794354399.513657
     },
     {
       "url": "https://www.bmi.gv.at/rss/stmk_presse.xml",
       "name": "Polizei Steiermark - Presse",
-      "last_success_at": 1794343958.184662
+      "last_success_at": 1794354399.513657
     }
   ],
   "seen": {
     "7c706ee6b6bbaa8693415306": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1737119721.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "4807f8d9057ff8a6a8b77a73": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1791183600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3c5ad0f32fb65610d1280b97": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1790668800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "77b1be4efd411efa4866101a": {
       "first_seen_at": 1793270502.046248,
@@ -13789,87 +13846,87 @@
     "b789e80c677d9f614078b74f": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1767360314.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ed502645a02c7a73c13f5203": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1707476400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1fd555d23f457d617d75a9fd": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1693225268.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "bdf577ddd58926e0b96a36cc": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1725959420.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "75e4a1dc1a7445d30e26d491": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1697450400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c246dd820de025c46880df1b": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1647603118.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "b3353e121e29808f01a2145f": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1672920931.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c09ea03a3f9be76d9417dcfa": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1646380936.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3749055cf58f322afe3d4357": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1741262400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c8a77ad45c344c7e8ba39ba1": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1580984544.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "bb695989274d076c0caf94c8": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1652118267.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "b7ef7ef89a751e75bb2b9aad": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1731502832.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "02fd0f7957b1c503812a1b63": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1643902349.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "efb6e2bd86b608a759573d62": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1675776645.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "70368de1cdc233361d67ea31": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1725977784.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "93f52ae3a8d894dc0c4ca0fe": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1760088045.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "90944cc43119eaaa9517249c": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1636444370.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1183f5916451159656ce0bcf": {
       "first_seen_at": 1793270502.046248,
@@ -13906,11 +13963,6 @@
       "published_at": 1793282400.0,
       "last_seen_at": 1793878807.489532
     },
-    "c486e2d867e1c1ec85c430d8": {
-      "first_seen_at": 1793289752.872245,
-      "published_at": 1793284036.0,
-      "last_seen_at": 1793748521.847108
-    },
     "e45d7c473a50abfb71fbe205": {
       "first_seen_at": 1793289752.872245,
       "published_at": 1793280960.0,
@@ -13929,7 +13981,7 @@
     "e36702e62a40696925eb464c": {
       "first_seen_at": 1793342347.391874,
       "published_at": 1790151541.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a45c005c215fd7495717385b": {
       "first_seen_at": 1793342347.391874,
@@ -14079,7 +14131,7 @@
     "6a0c659da27d14017d22b56b": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793638855.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "0da6455d9d2f3dd61ce71b53": {
       "first_seen_at": 1793644153.788403,
@@ -14226,11 +14278,6 @@
       "published_at": 1793629063.0,
       "last_seen_at": 1793760093.283775
     },
-    "2b04d8e7733c71204ef728a3": {
-      "first_seen_at": 1793644153.788403,
-      "published_at": 1793628000.0,
-      "last_seen_at": 1793748521.847108
-    },
     "a5ce22e56c11981fac447f76": {
       "first_seen_at": 1793644153.788403,
       "published_at": 1793630520.0,
@@ -14301,11 +14348,6 @@
       "published_at": 1793617200.0,
       "last_seen_at": 1793835343.510217
     },
-    "bce0e3cda16c6dac6881dd91": {
-      "first_seen_at": 1793698777.495455,
-      "published_at": 1793692800.0,
-      "last_seen_at": 1793748521.847108
-    },
     "86b45d371e56d1550536c098": {
       "first_seen_at": 1793698777.495455,
       "published_at": 1793678400.0,
@@ -14356,11 +14398,6 @@
       "published_at": 1793638800.0,
       "last_seen_at": 1793786329.303307
     },
-    "03284d3def8d41d6ca7c2442": {
-      "first_seen_at": 1793698777.495455,
-      "published_at": 1793689151.0,
-      "last_seen_at": 1793745365.77206
-    },
     "7d0aab36c324441ef8c1c77a": {
       "first_seen_at": 1793698777.495455,
       "published_at": 1793689200.0,
@@ -14370,16 +14407,6 @@
       "first_seen_at": 1793698777.495455,
       "published_at": 1793689200.0,
       "last_seen_at": 1794178599.9694
-    },
-    "7d529031d691fc6caf79328d": {
-      "first_seen_at": 1793698777.495455,
-      "published_at": 1793692800.0,
-      "last_seen_at": 1793748521.847108
-    },
-    "50f1f23d06b0f268c86b6e52": {
-      "first_seen_at": 1793698777.495455,
-      "published_at": 1793692800.0,
-      "last_seen_at": 1793748521.847108
     },
     "d22d8cfad26074b89ea2592b": {
       "first_seen_at": 1793698777.495455,
@@ -14454,7 +14481,7 @@
     "3250bbf3bbab126ae8c5e3f3": {
       "first_seen_at": 1793698777.495455,
       "published_at": 1793688124.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f4a9621a4c99e9f5f63227e6": {
       "first_seen_at": 1793698777.495455,
@@ -14641,11 +14668,6 @@
       "published_at": 1793699181.0,
       "last_seen_at": 1793774111.191241
     },
-    "09d4a523d2c93a0fea20bfb0": {
-      "first_seen_at": 1793700034.899593,
-      "published_at": 1793699962.0,
-      "last_seen_at": 1793748521.847108
-    },
     "25aa0f99b31eb0b38ddfd169": {
       "first_seen_at": 1793700034.899593,
       "published_at": 1793693880.0,
@@ -14806,11 +14828,6 @@
       "published_at": 1793714400.0,
       "last_seen_at": 1793850185.178361
     },
-    "b16e510ffed01ad107fe64a3": {
-      "first_seen_at": 1793727981.073729,
-      "published_at": 1793717383.0,
-      "last_seen_at": 1793745365.77206
-    },
     "17551849309c6393b6be11a6": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793719291.0,
@@ -14840,11 +14857,6 @@
       "first_seen_at": 1793727981.073729,
       "published_at": 1793702988.0,
       "last_seen_at": 1793850185.178361
-    },
-    "e9a1d9b091dd7cd0146c222b": {
-      "first_seen_at": 1793727981.073729,
-      "published_at": 1793710449.0,
-      "last_seen_at": 1793745365.77206
     },
     "9b9a6c245b8923561bf575aa": {
       "first_seen_at": 1793727981.073729,
@@ -15006,15 +15018,10 @@
       "published_at": 1793725200.0,
       "last_seen_at": 1793806205.624658
     },
-    "6a6d263fe43bbf0aad6651a4": {
-      "first_seen_at": 1793727981.073729,
-      "published_at": 1793725200.0,
-      "last_seen_at": 1793748521.847108
-    },
     "186105a237ef501a08d935a7": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793706900.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "352610fda1d841e379e81d77": {
       "first_seen_at": 1793727981.073729,
@@ -15041,16 +15048,6 @@
       "published_at": 1793715990.0,
       "last_seen_at": 1793774111.191241
     },
-    "ae2daf9f557083e3794a98ab": {
-      "first_seen_at": 1793727981.073729,
-      "published_at": 1793711493.0,
-      "last_seen_at": 1793745365.77206
-    },
-    "521eafa13da71798827e125c": {
-      "first_seen_at": 1793727981.073729,
-      "published_at": 1793725409.0,
-      "last_seen_at": 1793748521.847108
-    },
     "016c9b169220e41cf2ceab9c": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793723455.0,
@@ -15065,11 +15062,6 @@
       "first_seen_at": 1793727981.073729,
       "published_at": 1793713337.0,
       "last_seen_at": 1793786329.303307
-    },
-    "385699ec2e7ece537ba67234": {
-      "first_seen_at": 1793727981.073729,
-      "published_at": 1793727038.0,
-      "last_seen_at": 1793748521.847108
     },
     "4fe2e525190cd59e8b24d387": {
       "first_seen_at": 1793727981.073729,
@@ -15170,11 +15162,6 @@
       "first_seen_at": 1793727981.073729,
       "published_at": 1793707783.0,
       "last_seen_at": 1793760093.283775
-    },
-    "3307a67e83668a9fd60a6ad4": {
-      "first_seen_at": 1793727981.073729,
-      "published_at": 1793707578.0,
-      "last_seen_at": 1793748521.847108
     },
     "f9969dba175a3d9f121b7e3a": {
       "first_seen_at": 1793727981.073729,
@@ -15851,16 +15838,6 @@
       "published_at": 1793737560.0,
       "last_seen_at": 1794343958.184662
     },
-    "e90ea9822d8ccb9e4a7ea794": {
-      "first_seen_at": 1793748521.847108,
-      "published_at": 1793610000.0,
-      "last_seen_at": 1793748521.847108
-    },
-    "703e78f20f5359d83b258dcb": {
-      "first_seen_at": 1793748521.847108,
-      "published_at": 1793613600.0,
-      "last_seen_at": 1793748521.847108
-    },
     "896a271586479f2be70f11ec": {
       "first_seen_at": 1793748521.847108,
       "published_at": 1793746860.0,
@@ -16029,7 +16006,7 @@
     "cd04f61d34b798b3945a96e6": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793769525.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1ef7f7658dc0eb25c10d2794": {
       "first_seen_at": 1793774111.191241,
@@ -16859,7 +16836,7 @@
     "169cfd3a73eca00a3251b33b": {
       "first_seen_at": 1793786329.303307,
       "published_at": 1793781180.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "caa8a4972e486437084c6d77": {
       "first_seen_at": 1793806205.624658,
@@ -17779,7 +17756,7 @@
     "8951cc93dd907c9dd00f7702": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793640115.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "fc8a103556cf293da30b8f2b": {
       "first_seen_at": 1793815071.652229,
@@ -18429,7 +18406,7 @@
     "9484fa4515c6428f2162e813": {
       "first_seen_at": 1793876654.131678,
       "published_at": 1793876137.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d5b16ca00e4a83a63c52d6e9": {
       "first_seen_at": 1793876654.131678,
@@ -19414,12 +19391,12 @@
     "c297e24ada4dbc89b646ee20": {
       "first_seen_at": 1793876654.131678,
       "published_at": 1793869740.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3a02d091997809b2fd8c4cad": {
       "first_seen_at": 1793876654.131678,
       "published_at": 1791961980.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c0a3913aaf5fd1b359c6f14f": {
       "first_seen_at": 1793878807.489532,
@@ -20524,7 +20501,7 @@
     "70d36b2e0e3ca984ae413688": {
       "first_seen_at": 1793904551.530854,
       "published_at": 1793895420.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "20736aa33a74317f672c1612": {
       "first_seen_at": 1793905502.508537,
@@ -20599,7 +20576,7 @@
     "96ad77f82e88762386cf8f3e": {
       "first_seen_at": 1793905502.508537,
       "published_at": 1793900400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "9e3ea128055c94c44fff14c4": {
       "first_seen_at": 1793924744.368113,
@@ -20664,7 +20641,7 @@
     "d1f81384e800e8fa3b5e946d": {
       "first_seen_at": 1793924744.368113,
       "published_at": 1779282449.0,
-      "last_seen_at": 1794285665.874083
+      "last_seen_at": 1794354399.513657
     },
     "8443cae8155bc7dae26e2392": {
       "first_seen_at": 1793924744.368113,
@@ -20839,7 +20816,7 @@
     "bbe0cbe8313ffc25e35cef24": {
       "first_seen_at": 1793924744.368113,
       "published_at": 1793908560.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "45a257d819520f80c649a328": {
       "first_seen_at": 1793948449.424465,
@@ -21274,7 +21251,7 @@
     "6d16b0f4645c37998b205ebb": {
       "first_seen_at": 1793948449.424465,
       "published_at": 1793942460.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "e627541f77455c343fc9ac8c": {
       "first_seen_at": 1793951920.670897,
@@ -21374,7 +21351,7 @@
     "c4aab55cd4b124f37ec00bf3": {
       "first_seen_at": 1793977085.243763,
       "published_at": 1793965475.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3072482ebb9275f42fb761f1": {
       "first_seen_at": 1793977085.243763,
@@ -21474,12 +21451,12 @@
     "f64835195bff7397b2d3c1f9": {
       "first_seen_at": 1793977085.243763,
       "published_at": 1793970000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "e3cb7afd0499ea13915ac150": {
       "first_seen_at": 1793977085.243763,
       "published_at": 1793965484.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ad4a884781c22a8928ac8ea5": {
       "first_seen_at": 1793977085.243763,
@@ -22354,7 +22331,7 @@
     "67a8cc7579005f1ad5aaff4b": {
       "first_seen_at": 1793977085.243763,
       "published_at": 1793950500.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5a5224ec0024ed271f69a6d6": {
       "first_seen_at": 1793980734.859821,
@@ -22619,7 +22596,7 @@
     "5fc574febdc945627202ae16": {
       "first_seen_at": 1793998251.833752,
       "published_at": 1793980800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a796e5c43df82e4a29b9d260": {
       "first_seen_at": 1793998251.833752,
@@ -23064,12 +23041,12 @@
     "486d2d4d180044bdb9eaf0a2": {
       "first_seen_at": 1793998251.833752,
       "published_at": 1793981640.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c0b4f7cba19d4b6715032b08": {
       "first_seen_at": 1793998251.833752,
       "published_at": 1793979540.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "2901c92e1e4bdb59bd18f76e": {
       "first_seen_at": 1794000853.871834,
@@ -23189,12 +23166,12 @@
     "b31c376105eb0ad8a12a8f38": {
       "first_seen_at": 1794033158.482276,
       "published_at": 1794031200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "e648b01f5ec0d40f8de0d3e3": {
       "first_seen_at": 1794033158.482276,
       "published_at": 1794027600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d23c453323ffd28345b590da": {
       "first_seen_at": 1794033158.482276,
@@ -23499,7 +23476,7 @@
     "a7abbf5b5083649d72cab471": {
       "first_seen_at": 1794041567.063634,
       "published_at": 1794036639.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "65257600837aff421a2944ca": {
       "first_seen_at": 1794041567.063634,
@@ -23734,12 +23711,12 @@
     "dcd19072dec5e28e1485587a": {
       "first_seen_at": 1794041567.063634,
       "published_at": 1794030420.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c1e0b022324b0785cb11df1e": {
       "first_seen_at": 1794041567.063634,
       "published_at": 1794027240.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ac3a755f692678c1c5e4dd49": {
       "first_seen_at": 1794058220.764691,
@@ -24284,7 +24261,7 @@
     "84e5e2fad00454e606dfc829": {
       "first_seen_at": 1794058220.764691,
       "published_at": 1794039240.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d5b0db4d26376d4ba4995dd3": {
       "first_seen_at": 1794066195.34453,
@@ -25454,7 +25431,7 @@
     "8475c3018a0104a9924b10f7": {
       "first_seen_at": 1794123287.106771,
       "published_at": 1794114660.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c489985649f07e18e17f8cea": {
       "first_seen_at": 1794144837.651535,
@@ -25479,7 +25456,7 @@
     "29db190e04ee5f3867cd4106": {
       "first_seen_at": 1794144837.651535,
       "published_at": 1794142713.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ab406fc3c08b9fade79ae387": {
       "first_seen_at": 1794144837.651535,
@@ -25499,7 +25476,7 @@
     "bce2023a2a06bae6fb00317d": {
       "first_seen_at": 1794144837.651535,
       "published_at": 1794124800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "70e2d79923ce3391886d4aaa": {
       "first_seen_at": 1794144837.651535,
@@ -25529,7 +25506,7 @@
     "88420780a89c793d54d6288f": {
       "first_seen_at": 1794144837.651535,
       "published_at": 1794141076.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f75fe45bab58a5ecc716eda0": {
       "first_seen_at": 1794144837.651535,
@@ -25619,7 +25596,7 @@
     "5087e5597c2d97c34ec865f2": {
       "first_seen_at": 1794144837.651535,
       "published_at": 1794141543.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "844350f89e5474e6bf620647": {
       "first_seen_at": 1794144837.651535,
@@ -25649,7 +25626,7 @@
     "e767386da3b233e5a8651e1d": {
       "first_seen_at": 1794144837.651535,
       "published_at": 1736688830.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "e9735704880db7aceb7e6fb4": {
       "first_seen_at": 1794144837.651535,
@@ -26019,7 +25996,7 @@
     "43efa32bfe65bee21668fee1": {
       "first_seen_at": 1794144837.651535,
       "published_at": 1794137220.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f4007f0d2dfc1ae1d57fe902": {
       "first_seen_at": 1794148292.565131,
@@ -26459,7 +26436,7 @@
     "6123700c12c8e7aebfafb06f": {
       "first_seen_at": 1794163963.300073,
       "published_at": 1794160039.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1b8961afbd21e898d988c389": {
       "first_seen_at": 1794163963.300073,
@@ -26799,12 +26776,12 @@
     "a0c99ab4f7ec1b4911fb48d5": {
       "first_seen_at": 1794218221.988503,
       "published_at": 1794211200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "03b6be89e9f2fe05bc82b006": {
       "first_seen_at": 1794218221.988503,
       "published_at": 1794205233.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1253cbd47bddbf41ce88cd6e": {
       "first_seen_at": 1794218221.988503,
@@ -26819,7 +26796,7 @@
     "0cee0f88ed7c8374d9e2fea1": {
       "first_seen_at": 1794218221.988503,
       "published_at": 1794196800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "fecf63bd110ca0db441ea5f7": {
       "first_seen_at": 1794218221.988503,
@@ -26859,7 +26836,7 @@
     "2a6f23879e697c6295442a5e": {
       "first_seen_at": 1794218221.988503,
       "published_at": 1794211200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "4c006f8c89c95786bfb4ed78": {
       "first_seen_at": 1794218221.988503,
@@ -26879,7 +26856,7 @@
     "ef4ff3b3a61e255089de82a8": {
       "first_seen_at": 1794218221.988503,
       "published_at": 1794207600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "eee08907a4a1bea136f5cb01": {
       "first_seen_at": 1794218221.988503,
@@ -27004,7 +26981,7 @@
     "bd2acff45aaee077dbde986b": {
       "first_seen_at": 1794218221.988503,
       "published_at": 1794211200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1262be55e552051854136edc": {
       "first_seen_at": 1794218221.988503,
@@ -27514,17 +27491,17 @@
     "3ed60177e3589a748efa4f31": {
       "first_seen_at": 1794218221.988503,
       "published_at": 1794212880.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "7016b20d8bd4afc44c54f762": {
       "first_seen_at": 1794218221.988503,
       "published_at": 1794209820.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "e016af51a7c69038f7670a44": {
       "first_seen_at": 1794218221.988503,
       "published_at": 1794201660.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c260ef78eb29e2aa98fdd039": {
       "first_seen_at": 1794224589.589205,
@@ -27554,7 +27531,7 @@
     "5d9d111700bfce2582b679f3": {
       "first_seen_at": 1794224589.589205,
       "published_at": 1794222000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "360dcfdd8d52534c20ac155e": {
       "first_seen_at": 1794224589.589205,
@@ -27574,7 +27551,7 @@
     "5e6f0c70c1c30588f70a5d77": {
       "first_seen_at": 1794224589.589205,
       "published_at": 1794222000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c171f30575f3063c7409f8e8": {
       "first_seen_at": 1794224589.589205,
@@ -27584,7 +27561,7 @@
     "68b45cd22f7c40561bf9e58a": {
       "first_seen_at": 1794224589.589205,
       "published_at": 1794222000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ea3b2f274037bb5fd3854c6e": {
       "first_seen_at": 1794224589.589205,
@@ -27614,7 +27591,7 @@
     "93b974878656eba2b37aa2f1": {
       "first_seen_at": 1794224589.589205,
       "published_at": 1794218580.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "704a8d2dc0c4e6bc8026c672": {
       "first_seen_at": 1794224589.589205,
@@ -27634,7 +27611,7 @@
     "0e4a666eecb3559ff88065eb": {
       "first_seen_at": 1794224589.589205,
       "published_at": 1794222655.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "0fb4a26339a98be976c840ba": {
       "first_seen_at": 1794224589.589205,
@@ -27899,17 +27876,17 @@
     "60a37b2746439fa40805476d": {
       "first_seen_at": 1794224589.589205,
       "published_at": 1794217380.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a6fc3d7056846309405f39eb": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794244396.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "0d2ab65b99b72d5417ccd519": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794244410.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "2742eeb1bb4b0d4e2e0265f9": {
       "first_seen_at": 1794256811.233106,
@@ -27924,12 +27901,12 @@
     "4828fb701881d3e2e4621ac4": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794254400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f9e2e54cdf043bed78527ffd": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794246294.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a2c451f51d8a9df3171211d0": {
       "first_seen_at": 1794256811.233106,
@@ -27939,7 +27916,7 @@
     "225f8a9e97e918b1c8520fd2": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794250560.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "88b81b52ee9cfc45cc4a1020": {
       "first_seen_at": 1794256811.233106,
@@ -27954,22 +27931,22 @@
     "a063b250fcd8e0ff5af79f9b": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794242982.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "dd2ecfc826373029b8e9a9fa": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794253455.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a4c564dd0500908cc7f22ed9": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794237123.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "cf3a6ec99c5bfe041b63bf3c": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794237960.0,
-      "last_seen_at": 1794335910.112645
+      "last_seen_at": 1794354399.513657
     },
     "83e4a4b7e571daa3d39cdd4b": {
       "first_seen_at": 1794256811.233106,
@@ -27999,7 +27976,7 @@
     "9e7d5d1968e3cca41b7ce78f": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794241554.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f0a33e5f6bbca59b282bd135": {
       "first_seen_at": 1794256811.233106,
@@ -28009,7 +27986,7 @@
     "d48bad2d49c0662cca5e11fd": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794232800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "29de1c79b4d48203080e534d": {
       "first_seen_at": 1794256811.233106,
@@ -28159,12 +28136,12 @@
     "643f73ed1e8ad3d3a6d58900": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794239330.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "0b49767aac2589c3e13552c4": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794229200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ddceed8f536db87f33e7a47f": {
       "first_seen_at": 1794256811.233106,
@@ -28234,12 +28211,12 @@
     "912abd344c553d7e4671dbd1": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794225600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "e76aa2a1eb9d47d9be743ae4": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794231420.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "bd3da00900baa6dd3ff6d2b5": {
       "first_seen_at": 1794256811.233106,
@@ -28524,132 +28501,132 @@
     "aab989578803c54685eaccb7": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794250800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "b9eb3653f1b63fe30eaf8bcb": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794248365.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "06ea285bf1b5ac6142cedddd": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794248270.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5fc09422a4d548986339e703": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794247200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "befc7779da48ff23533acebe": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794247200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "55fe65e4ae1d83f99700486b": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794243600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "114103cc6c39756cc7759e09": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794243600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5af97571dc5ff93a2a2b91ee": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794243600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "81924f72b8efbbf9450a2aff": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794243600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "7cb1149c5de44ad4ef19e36d": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794243300.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f601322982af460e592dcf0d": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794242849.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "67f765a4b20829d74099b594": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794241030.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "03df64f46082521b207e23f4": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794240000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a3508cb9f9463275c3a5dcb7": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794240000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "42103c3d81c25c480c30fcb4": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794239987.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ce23611ab8c659c0f29678d4": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794239319.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a6fadffb9c1facf5ecfbec2c": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794238869.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "8da6c5f11274a8da00231551": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794236822.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "16416885bc5f96f39e2f4dcf": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794236400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "528977ad45fa0bf6611f33a1": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794236400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1696f98ebb5d5ab54bcb8f5b": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794236400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1d4ffcb96e243eaba5c4234a": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794236100.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c2f494a6e14438f6e648a18a": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794235310.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "256052e12a077c44af1f361f": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794232800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f480048c1bbd5c0b6c622d86": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794232800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "b45207f0b5001a1dc58e55f0": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794232800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ba157b2e7ef2777acb482bfc": {
       "first_seen_at": 1794256811.233106,
@@ -28939,7 +28916,7 @@
     "f25617ca3be814c254a870de": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794227220.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "52c4d1c8ff49ff76646f717b": {
       "first_seen_at": 1794263268.426388,
@@ -29044,17 +29021,17 @@
     "b6e3ed3ab1c72d3b8c91adab": {
       "first_seen_at": 1794279588.450765,
       "published_at": 1794236400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a9a626be985d4bee476ee4ac": {
       "first_seen_at": 1794285665.874083,
       "published_at": 1794283200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "778e45ed2d81825dee59f40f": {
       "first_seen_at": 1794285665.874083,
       "published_at": 1794283200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "b3527633aa35bdbc40da14fb": {
       "first_seen_at": 1794285665.874083,
@@ -29064,7 +29041,7 @@
     "43fae43e10509a0a17f5e8ea": {
       "first_seen_at": 1794285665.874083,
       "published_at": 1794283200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ea4884565741acd3982cbb8b": {
       "first_seen_at": 1794285665.874083,
@@ -29109,32 +29086,32 @@
     "79c7c51539478cc7a723ddae": {
       "first_seen_at": 1794285665.874083,
       "published_at": 1794285000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "55215c3046d4c8f7428d6a01": {
       "first_seen_at": 1794285665.874083,
       "published_at": 1794285000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ddf8b648e39f9a110156a028": {
       "first_seen_at": 1794285665.874083,
       "published_at": 1794283200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ed75b5d91a2818318b7d6a6f": {
       "first_seen_at": 1794285665.874083,
       "published_at": 1794283200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "26e48640fe6e0467fc86b795": {
       "first_seen_at": 1794285665.874083,
       "published_at": 1794283200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "49a5179317249e52d716884d": {
       "first_seen_at": 1794285665.874083,
       "published_at": 1794283200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "2fca2729de2b21d04269c0e5": {
       "first_seen_at": 1794285665.874083,
@@ -29174,7 +29151,7 @@
     "815bb792359e299e8b28711c": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794297600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "97faa2cc959de07d18848c7e": {
       "first_seen_at": 1794308529.901885,
@@ -29189,17 +29166,17 @@
     "3f544706da376e0c6cd570e9": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794306042.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5925fdb910573bcbdecc7019": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794307224.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a1254ff671bd38a4ef47810d": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794303980.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "771f7f88751b4d85b793bcf6": {
       "first_seen_at": 1794308529.901885,
@@ -29209,12 +29186,12 @@
     "e333dc7ab9050a8b88e66189": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794308400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f5b1eb58a3885728588f0c82": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794286800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "8ae2aa8cab3973adb368d9f2": {
       "first_seen_at": 1794308529.901885,
@@ -29224,42 +29201,42 @@
     "d4d143aa633e9447007031af": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794290893.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "88fd0b2071a3c104469813c8": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794290876.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "849dee094a2e2421fc81774a": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794286308.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5580cbac8d1289b50a2f952c": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794305225.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c48767bf1423a08aa2c7275b": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794296781.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "8b0e07979bffa7736bf536d5": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794304800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "0a70ee315f557221713489cb": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794302700.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "bb5462d5deb36e6be9364342": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794286800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "6c3cc66f5190db9106abf023": {
       "first_seen_at": 1794308529.901885,
@@ -29269,37 +29246,37 @@
     "6b299ca2d00e063e7581ded5": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794297600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "17141b82c7d024043100d5ef": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794295114.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "961b8151bb0a740ec7549f7d": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794297600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "332927b01a591312638f513d": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794308400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f5c4a2c29f8a71df35ff5ab1": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794296640.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "68c58832ca06e6426dc76527": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794294000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "b768d2fe67f07502e4822894": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794296453.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1dfe4f398cfbe0cd4d31f630": {
       "first_seen_at": 1794308529.901885,
@@ -29314,7 +29291,7 @@
     "9f91abc4456d5f6ce2883b42": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794292447.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "dd092eac5a3f4828197479d0": {
       "first_seen_at": 1794308529.901885,
@@ -29344,12 +29321,12 @@
     "4e65a6c757d0e198dc34eee3": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794291464.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "23a23c40d2c7c1dc65a54e0d": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794307841.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "eabfcc0fc58ceede6c631bc0": {
       "first_seen_at": 1794308529.901885,
@@ -29359,12 +29336,12 @@
     "ebf1f2b1932a423666b83ebe": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794308320.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "2752eab169db687c6fd897e9": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794299802.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a7da610fb814fbf21f5652b2": {
       "first_seen_at": 1794308529.901885,
@@ -29384,12 +29361,12 @@
     "e7051c8e16527fe46e01355e": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794308400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "0fbc359c219485543dc0a0c5": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794303975.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "fd16cbf61f4c04d54acbc11d": {
       "first_seen_at": 1794308529.901885,
@@ -29419,32 +29396,32 @@
     "dc7fe0cfd78f5c09d10c9d32": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794308281.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a6568d58be223f4b7f32a3eb": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794308355.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1a5e3a6d94f9d554dcb9afc7": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794302620.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "64198a1a8ab76320b0fe2ee7": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794292774.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "05fd4c61ff92b5803814d964": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794287660.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ca6b7ad2babae8a9d073a30d": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794307342.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "eda85a7ae71210cc6923307f": {
       "first_seen_at": 1794308529.901885,
@@ -29459,22 +29436,22 @@
     "8db8b9edad59a0abd487d3d1": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794306255.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "af5020eab96ed08ff49bdc64": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794288600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "226afe6f2e094b505c06c9e3": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794301200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "823925c15e1d371013183601": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794290400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "cd3e7a310702cccb3098ecc6": {
       "first_seen_at": 1794308529.901885,
@@ -29514,17 +29491,17 @@
     "01c780ccba350666bdeaa69e": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794304834.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "4501a68f79437bcb7c4e051f": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794303420.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ed549bc448d6f2aeadf757f0": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794307742.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d799bf199274842e10f4e734": {
       "first_seen_at": 1794308529.901885,
@@ -29769,177 +29746,177 @@
     "8771e9cd322b21baca5e32bc": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794308400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "38767f53bf44bb26168d8748": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794308400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f21aab6c5d19cdc7710f8daa": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794308400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "aa7ef939e08271b170cbcad6": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794306771.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ff9716d8794d2099cdc9b9c9": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794306600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f1fccb3e4adbf2f886ac841a": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794306400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "2526c6fd9a1f5dc804ca486c": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794305084.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5676f811ca9b9c11c4970e75": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794304800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a7b85fcfaa1e316aa09c2fa2": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794304800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "b926ed7417affe77ec7d9b6e": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794304800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "0d128c158d3c58586d91e445": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794303049.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "6e37d3066ff10293c304e474": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794301369.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "06530d9e98d7d8cc9ed1e276": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794297600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "916426b61fb479f97a8e31d6": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794294000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "31f7d26321cdfd7e3eb362a8": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794294000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "7b25ed3c53e8bd3304159945": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794294000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f2be7783b30bfba8c14fe647": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794291220.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "32504d50ae60327fb20d68c8": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794290400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "bcc46977566f186acb6949bf": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794290400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "62a316c92b742b1507b96dc4": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794290400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "52075c8b9e5d92c1fda60fd0": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794288600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3259c83cfca683d14cd342c6": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794286800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a5751fe4499e1269133db22a": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794286800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5c5a118acbe3155e87cb6037": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794286800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d835909137822fafaec86bb1": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794286800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "57fc4099e3515e939647d2c3": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794286800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "9c2b181eea49cc30e9fe97a8": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794283500.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f11caeb21eba06abe47b6c8f": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794308400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "e063c9d242462e5662a35779": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794308400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "26f60b48b1f943861c3d316d": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794308193.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3ae93ef519b104f7e267b796": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794306140.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "557529347d668633d0a3671c": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794305648.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "0789716689d46e5c2345ea9b": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794305200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d6a51768201c5fb8a905cb8e": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794305102.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "15ccf495002a5d3deac195b1": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794305040.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a34dd5d1d8194a582b377f36": {
       "first_seen_at": 1794308529.901885,
@@ -30054,12 +30031,12 @@
     "caad125cca25b4f99763a480": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794313080.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c9b91d1a8347d2bb97280f9c": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794309274.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "6be3690d236aa907c285f102": {
       "first_seen_at": 1794317544.940286,
@@ -30069,17 +30046,17 @@
     "f9a41154c4e357a5a9eca640": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794316638.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "100fa595cf80ccc85e409867": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794315633.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "0aaeed70bc802c6ab70e76c9": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794316729.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ebdd35279f24ab2d2e334efc": {
       "first_seen_at": 1794317544.940286,
@@ -30089,7 +30066,7 @@
     "c2e9479df7fc2732b506368b": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794313066.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3b77cc4eb0e5f84adb8d692e": {
       "first_seen_at": 1794317544.940286,
@@ -30099,7 +30076,7 @@
     "f7d05f555f3acc0fb65ed0f2": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794314969.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "eb00eba587b69f112baf0971": {
       "first_seen_at": 1794317544.940286,
@@ -30134,7 +30111,7 @@
     "262dbe7b3919de651cba7a84": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794316703.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d1e600032f155b356967adcb": {
       "first_seen_at": 1794317544.940286,
@@ -30149,7 +30126,7 @@
     "150149dc7e95235982586927": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794313269.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5a63792505b2850c06b08907": {
       "first_seen_at": 1794317544.940286,
@@ -30159,7 +30136,7 @@
     "c439176b3eec1d554df3b5c0": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794312641.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "df5ae8a58bb9b1d2daae014a": {
       "first_seen_at": 1794317544.940286,
@@ -30179,7 +30156,7 @@
     "73f0da49f326bae0ab89a6d0": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794315060.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1378a4873ee9d53c4ec8924b": {
       "first_seen_at": 1794317544.940286,
@@ -30284,22 +30261,22 @@
     "db671942a68edddf4e47abef": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794316264.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "928ad987aa833ff285aa5df6": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794314627.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "19f75af38447fae67ba04fbb": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794314147.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ad340568f45530ead1c69bc9": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794313662.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "93f5d78f2cb5793142f95f12": {
       "first_seen_at": 1794317544.940286,
@@ -30339,32 +30316,32 @@
     "2109906f577298be150eac19": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794316235.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c32f206306d0398c9a37625e": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794315600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "cdd1c26fc29ee226da0d7d21": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794315600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "77aba3bc89bf1ae5adf2401b": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794315300.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "77e57c5a05ed73bfde1df962": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794313800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "60358e767ab694b3a8be32c3": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794313148.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "de14956fcafe64caf48f47f5": {
       "first_seen_at": 1794317544.940286,
@@ -30374,172 +30351,172 @@
     "9ebb13230eadebcbe1f0ba92": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794310666.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "e75d31554b1eeec76095a95d": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794316456.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a5db7ed1507092bb63f38335": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794316434.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5a154633680c8f54298c200c": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794315600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "2014ecdf4df15b9dc4664585": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794315556.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f72f209c36b3be7eb023a5c2": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794314266.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ea73a0785588b6870cc2bac6": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794313570.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ea24b66b6764c6198946c5c3": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794312048.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "9dc1c9f43d0c8dabb1f73b8d": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794312000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "bfb8ce70c9536f62ba35a236": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794310712.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "9cb501e4e16d72b3321553bb": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794308963.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5e69063438e4d585efc8b73a": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794330000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d4f89e07ea998decfbc4331b": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794328200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3a3851e3682aed56b4f747be": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794324689.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "05667c0822fb495fc319202f": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794330000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "dcbc29227fdb52bc81650a57": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794330000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "55ddb6938b7152c531abf505": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794324175.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d2871b7273bb7bdd9e3b4959": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794330000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "6a2c6eee2434d1638e9c4775": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794327660.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "67a16d86d5c47ea0d696f212": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794323627.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5fc89709b57a9ded6c6b4a3d": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794319800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d7d51b7e3164f9fe2c01bb4a": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794322313.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "aed63edcfbe898a30ad02a6f": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794333600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a7b5c8a77e967e07f509fcd7": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794332820.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "97bf68e376de85d6ee495372": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794331380.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a3c1d2927948716325286dd8": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794324443.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "90b2439a280169bdcbe152a2": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794323311.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "77db2041cb6de1756c109834": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794321037.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "0d007a1be70e14abdc79cbe1": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794319200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "2ccf8f68921581c2a6713000": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794322618.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c59617c8ede906038b3dc257": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794334191.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5c27f24a536f3488f304be9e": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794332871.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "9fb00117e35c03acb594cc8c": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794320677.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "88bee62b95977f1747a80ef8": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794320880.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "558278d937aa858d28470956": {
       "first_seen_at": 1794335910.112645,
@@ -30549,42 +30526,42 @@
     "092c3cd982c65727b25f6355": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794322783.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "68397e1b9eace52e3ac04bae": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794317994.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "747fe12f38de43639e12cab7": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794326520.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "79e44c0bf6bd29bd7fc0a029": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794324436.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "96d4fa0907238157ec90a8df": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794321287.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "b3437d656ba7b816f958a51b": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794324124.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "4533be883d5882ce23cdda21": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794324058.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "6eeb7a20f739290a5adacbdc": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794317583.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "bec439c557df38c69ee3caec": {
       "first_seen_at": 1794335910.112645,
@@ -30599,87 +30576,87 @@
     "eccc61d923262e708a455d56": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794325174.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "6ce911152d938c996edb4729": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794324180.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f931afbefb1baf67708ceda6": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794319805.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "efca301245a4880e78a8ed04": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794319779.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "4bb105f74a93c5183e567ed4": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794328658.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "4d1ab73ddafa550e5edef5de": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794317820.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f7fab6c7ab6ab3e76ac6a227": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794334980.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d2f3515f514d8e4cda335b50": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794323084.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "0771d03da5f0d855ecf7e3b5": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794318173.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c1968147a61027da2f2ebb90": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794317916.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "aaa477662ffedf938eeda284": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794327000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d565d18645ea8b37a7adc132": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794320820.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "55f9b9888741cdac7c3c055c": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794318300.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "991281ecdf24d00865f22321": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794333931.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "dc5aac81875014d0606089a0": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794330000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3212afb0cefc01946bfce008": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794330000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "091ce41b22813f8bfad0bef4": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794330000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "7933246edf98a794079a74a2": {
       "first_seen_at": 1794335910.112645,
@@ -30704,27 +30681,27 @@
     "b05713e55a936b2072240411": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794331545.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c3720c1f1bcff3c4b63ff3f5": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794333653.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "42a69748db59a99fcb5951ce": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794331033.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "8268aa8e0588e81acdb967c3": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794329824.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ad26633c198c502bb9931770": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794327493.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ae0dbc42583335717de2d1b3": {
       "first_seen_at": 1794335910.112645,
@@ -30734,22 +30711,22 @@
     "3fc75d191ac323c0c5ab01b5": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794335545.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "2dd7c9499ceab47ace4741c4": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794332048.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "2f05bb7a88386dd2aacb2aa6": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794326371.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3f98bb50c6052543bd696311": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794325869.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "bad5d7563a9688fa07c22519": {
       "first_seen_at": 1794335910.112645,
@@ -30764,12 +30741,12 @@
     "7c72774eb3e60993c7c6350d": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794332849.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f2021ed34bc962007b1967f0": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794332986.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "e5b770594e75c83ef929f739": {
       "first_seen_at": 1794335910.112645,
@@ -30784,12 +30761,12 @@
     "258d6041d8a03cec7f7eac6f": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794319968.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a7651ac1c60c30237650585d": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794332427.0,
-      "last_seen_at": 1794335910.112645
+      "last_seen_at": 1794354399.513657
     },
     "970a94227c088aa5931933fc": {
       "first_seen_at": 1794335910.112645,
@@ -30809,12 +30786,12 @@
     "fe4b05123c1b29131fba495a": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794333082.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "2ad417f5243aec192e454b97": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794332384.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "bb35d1dfb098f9af3d2506c9": {
       "first_seen_at": 1794335910.112645,
@@ -30839,202 +30816,202 @@
     "54716f155cf7e5fc4ae0e013": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794335344.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "cd26324cf9d38d9957365a70": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794334248.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ef72d1dedc621ff6f9c71f36": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794333783.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "7b42cd58ec3799e6b04444da": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794329172.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "53cfafdcbab4243252e4f017": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794324044.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3bf4b9c0388d60772a4bc800": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794323915.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "30c58b6383c40fe1c301b921": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794323371.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5edf90c664c8a0e179a9409c": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794322635.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "55fc27b679f55e64ec226fdb": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794320765.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "32a8b96f3ad7a43079b5ad07": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794320591.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f5e8b8b432381d12d63dbe4a": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794319357.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a7c2ae4797a922c60a4067fb": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794318300.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a689716d5a1935cf3daff839": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794333600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "77a797c9cc611ec6a08572a5": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794333600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "bc13ba74c72ad7ec6336e70c": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794333600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "459507b3b4ef582ed4a3ea47": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794330000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "b2dafc46c4110ae576b2f7ca": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794330000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "793b7104923447812a0912d6": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794330000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "52ce4da763bd09e146078e90": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794329989.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "2d26a209aed8890c151bf9b0": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794329460.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "178d57988d572b3560ba4880": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794328803.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d9b0334c99f7578805f0e9b7": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794326400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "9105f612ce0d0aef4938aeaa": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794326400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "4f016d6b658ddc80ceb3b9ef": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794326352.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "9b6f420b18c79c884d1b8d37": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794324600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "25fcbaf2f198697213eb7141": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794324600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "642a3edc65034f6662cf491b": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794322800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "519b00efb6df6bc2048cabde": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794322800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "b569e2e53e72a0b38bcb3c9e": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794322800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "6668ddc917f14d13bbbd51ff": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794322500.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3b79736f68e90c867393692b": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794321000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f5a9d069d49863c6455ee627": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794321000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a3de8cd2b48bf2f322b73071": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794319200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "e14bd4c9f8a07ef98cd5b5c4": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794319200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a740e3e5d486f3ca46066ada": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794319200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "aa1fdb47bd5183c475860588": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794317963.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "e5b8a2f00d5aa0bdd2ab2ac6": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794317728.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "6b3f934fa8966b1666670d1d": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794333600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "cc4db07caa54d866cef8a8b1": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794333600.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "84511df6a9827458f38ea844": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794333035.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "31d0a307d6343222fa0680c8": {
       "first_seen_at": 1794335910.112645,
@@ -31044,177 +31021,177 @@
     "744a9ad09e1ece81d30e1981": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794331800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "0da23bba2707fa206cb25491": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794330000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "4f717089d6310774f0eebab1": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794330000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d356057ca1507cabeaabc88a": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794330000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "813c8b2d25df8f6157581aad": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794329194.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "9c96ed6ee5bfbd725d2ebd2c": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794328721.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "44a7c159eb4b846de1d56bb9": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794328200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "feb73df8f5b9edb598b8e174": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794327021.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "9aa72100e5ccba02d949382e": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794326400.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "7529be7e74ed6ef683e771af": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794325240.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d9d1c96ab573cdabe41a34f5": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794323734.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d8304200d69e5c641f663330": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794322800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5c0475c1c74f761f8c847946": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794322800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "364e8c4685945b1f47f0946c": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794322246.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "e989270395499a62988dc3db": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794321000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3abd539408621f02b8dead09": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794319200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1cca9c2693ddee65497ecd18": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794319200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "9e09c716adf52417b90c2ff1": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794319200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c4bac6a21e56a63e4d4a4768": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794319050.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "4a645e4e3d8676d73f7042da": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794328440.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "cf741e149faab09e76c72355": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794340800.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ebe4f8dbeec25885fc8987d6": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794337200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "67c09a23a9cc512ac82dbfdf": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794342240.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "ee72d7a2ee1edee6715f0bed": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794339173.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "7580fdf3a06b0754b7ba6400": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794342275.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "7d007a41538bed68181f1b5f": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794340626.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3f00e3c3f1e36ac128350342": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794336333.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5918ce82ae476108509c5ad4": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794339554.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "8652ee9a035ca7eb2785a08a": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794340707.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "a3f58aaf777f26ae104d9ede": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794340933.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "59b3f0f84421d8195deb76d3": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794342615.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5834b935f3d51625c77bfe21": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794337451.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "c73cb0f455d82d74bae9afaf": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794342866.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "45870754f3e95ab9b893f28a": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794342608.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "bb72e9f162f1d890ff0a2930": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794330053.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "dd0f56f724aacc3c60e39d42": {
       "first_seen_at": 1794343958.184662,
@@ -31224,12 +31201,12 @@
     "99499259459f26fd627ca0cd": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794342752.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "945029207f7ce88865e3ad82": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794341392.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3152b8ac08e76d63a6e0c373": {
       "first_seen_at": 1794343958.184662,
@@ -31244,117 +31221,207 @@
     "c9cad31a86089816419021cd": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794340848.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "63cf477fd5095a3e285c02dd": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794340096.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "3c3a9d2d8460017f446f5cc5": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794338029.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "5f9c8c287fd277e157b47b77": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794337596.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "2bb4b1e2f3ec3f4b7f6392a5": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794343860.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "12b360193cba4f5167a2b8b7": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794343500.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1d444e3d2379f2bcd856d237": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794340285.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "e726725bc1e99948d726b1dd": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794339325.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "22db7f560884aa6a0154a39d": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794337200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "08f2712ce8600edd48de410d": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794337200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "671679ff1367440af6b6ff14": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794336938.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "90d2922718058a69cec55b97": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794343352.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "85cc43f9e163f4fda747381c": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794341689.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "65450e41757ee04bfa84bc5c": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794341540.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "2aea4260287cadbdd3959439": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794339000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1797414d71635e48a4e55157": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794338406.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "9547688549bd5f70a9ff3d9e": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794338150.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "f225592e1d2c09c6c41349c1": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794337200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "d39c3521a9377791dce5694a": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794337200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "668ab0790e8539b2de40046c": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794337200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "1719b712c9e76811f653e677": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794337200.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "2aeacadd88bf188b6b086240": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794337000.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
     },
     "75e88bb39117342a279276cd": {
       "first_seen_at": 1794343958.184662,
       "published_at": 1794336481.0,
-      "last_seen_at": 1794343958.184662
+      "last_seen_at": 1794354399.513657
+    },
+    "53d18dd6810ed703f21d298a": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794347072.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "eaaa61a8eb9a9872e0e1cf87": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794344597.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "c2b2e5d62657bfbf756c165c": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794343999.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "f403d2b010723c95f3066eee": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794351660.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "6c8b0c220d1371b5bc786b2e": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794349923.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "dc4198f08f257048d3760fb1": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794350092.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "7b28d4ad534ab2a6927c2582": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794347888.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "1269efea78e83f0ed4f8e4f8": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794351679.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "5926f792b65efac9e8db722e": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794344420.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "deaa894e724a3a24b6ddafa5": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794346219.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "7e25ebc8167956a8336f8541": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794351675.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "96976b0a504540a41a625825": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794351527.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "39c4595344156441f0590d7f": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794350958.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "a3a8f1bcfdcdf3aac17460ab": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794347362.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "b53e2639667c94bf7fc976c8": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794346911.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "c9939c3be599ff05928393fc": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794346558.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "3d998423e84fe1dde5a9e741": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794345473.0,
+      "last_seen_at": 1794354399.513657
+    },
+    "aba916be44e64e8e40101b35": {
+      "first_seen_at": 1794354399.513657,
+      "published_at": 1794344044.0,
+      "last_seen_at": 1794354399.513657
     }
   },
   "latest_broadcast": {
