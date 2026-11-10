@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261110T044140Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 10.11.2026 um 05:41 Uhr",
-      "created_at": 1794285700.423369,
-      "video": "broadcasts/20261110T044140Z.mp4",
-      "sources": [
-        {
-          "title": "So kommen Sie nun zu einer Wohnung in der Hofburg",
-          "url": "https://www.krone.at/4369222"
-        },
-        {
-          "title": "Max Thaller: „Wenn du sowas ablieferst, macht das was mit dir“",
-          "url": "https://www.kleinezeitung.at/artikel/41435595/max-thaller-wenn-du-sowas-ablieferst-macht-das-was-mit-dir"
-        },
-        {
-          "title": "Trumps Krieg im Iran bremst 2026 fossile Emissionen – trotzdem gibt es keinen Grund zum Feiern",
-          "url": "https://www.derstandard.at/story/3000000347905/trumps-krieg-im-iran-bremst-2026-fossile-emissionen-trotzdem-gibt-es-keinen-grund-zum-feiern?ref=rss"
-        },
-        {
-          "title": "Trump: FBI ermittelt bei Affäre des Nvidia-Chefs",
-          "url": "https://orf.at/stories/3447744/"
-        },
-        {
-          "title": "Zeugenaufruf: Hahn getötet",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261110T044140Z.txt",
-      "subtitles": "broadcasts/20261110T044140Z.vtt",
-      "subtitle_download": "broadcasts/20261110T044140Z.srt"
-    },
-    {
       "id": "20261110T133310Z",
       "kind": "broadcast",
       "title": "Nachrichten 10.11.2026 um 14:33 Uhr",
@@ -63,6 +31,38 @@
       "transcript": "broadcasts/20261110T133310Z.txt",
       "subtitles": "broadcasts/20261110T133310Z.vtt",
       "subtitle_download": "broadcasts/20261110T133310Z.srt"
+    },
+    {
+      "id": "20261110T205307Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 10.11.2026 um 21:53 Uhr",
+      "created_at": 1794343987.703686,
+      "video": "broadcasts/20261110T205307Z.mp4",
+      "sources": [
+        {
+          "title": "„Das große Backen Österreich“: Für Steirerin Liana wurde es eng",
+          "url": "https://www.kleinezeitung.at/artikel/41434764/das-grosse-backen-oesterreich-fuer-steirerin-liana-wurde-es-eng"
+        },
+        {
+          "title": "Rot-rot-grüne Koalition in Mecklenburg-Vorpommern",
+          "url": "https://www.krone.at/4370950"
+        },
+        {
+          "title": "Stora Enso baut 115 Stellen in Sägewerk im Waldviertel ab",
+          "url": "https://www.derstandard.at/story/3000000348615/stora-enso-baut-115-stellen-in-s228gewerk-im-waldviertel-ab?ref=rss"
+        },
+        {
+          "title": "US-Militärangehöriger unter Spionageverdacht für Russland",
+          "url": "https://orf.at/stories/3447846/"
+        },
+        {
+          "title": "Arbeitsunfall",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261110T205307Z.txt",
+      "subtitles": "broadcasts/20261110T205307Z.vtt",
+      "subtitle_download": "broadcasts/20261110T205307Z.srt"
     }
   ]
 }
