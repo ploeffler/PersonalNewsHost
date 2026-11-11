@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261111T011749Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 11.11.2026 um 02:17 Uhr",
-      "created_at": 1794359869.854989,
-      "video": "broadcasts/20261111T011749Z.mp4",
-      "sources": [
-        {
-          "title": "Verfahren gegen US-Kriegsminister gestoppt",
-          "url": "https://www.krone.at/4370991"
-        },
-        {
-          "title": "USA: Amtsenthebungsverfahren gegen Hegseth gestoppt",
-          "url": "https://orf.at/stories/3447855/"
-        },
-        {
-          "title": "Standardrätsel K 11440",
-          "url": "https://www.derstandard.at/story/3000000347079/standardraetsel-k-11440?ref=rss"
-        },
-        {
-          "title": "„Das große Backen Österreich“: Für Steirerin Liana wurde es eng",
-          "url": "https://www.kleinezeitung.at/artikel/41434764/das-grosse-backen-oesterreich-fuer-steirerin-liana-wurde-es-eng"
-        },
-        {
-          "title": "Arbeitsunfall",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261111T011749Z.txt",
-      "subtitles": "broadcasts/20261111T011749Z.vtt",
-      "subtitle_download": "broadcasts/20261111T011749Z.srt"
-    },
-    {
       "id": "20261111T075125Z",
       "kind": "broadcast",
       "title": "Nachrichten 11.11.2026 um 08:51 Uhr",
@@ -63,6 +31,42 @@
       "transcript": "broadcasts/20261111T075125Z.txt",
       "subtitles": "broadcasts/20261111T075125Z.vtt",
       "subtitle_download": "broadcasts/20261111T075125Z.srt"
+    },
+    {
+      "id": "20261111T225002Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 11.11.2026 um 23:50 Uhr",
+      "created_at": 1794437402.060739,
+      "video": "broadcasts/20261111T225002Z.mp4",
+      "sources": [
+        {
+          "title": "Bericht: Nvidia bereitet Huang-Entlassung vor",
+          "url": "https://orf.at/stories/3447951/"
+        },
+        {
+          "title": "Küchenbrand in Tirol - Frau mit Rauchgasvergiftung",
+          "url": "https://www.kleinezeitung.at/artikel/41443885/kuechenbrand-in-tirol-frau-mit-rauchgasvergiftung"
+        },
+        {
+          "title": "53 Prozent mehr Einbürgerungen in Wien",
+          "url": "https://www.krone.at/4371231"
+        },
+        {
+          "title": "Teheran droht mit Angriffen auch in Europa",
+          "url": "https://www.krone.at/4372249"
+        },
+        {
+          "title": "Teheran droht mit Angriffen auf US-Stützpunkte auch in Europa",
+          "url": "https://www.derstandard.at/story/3000000348822/iran-teheran-droht-mit-angriffen-auf-us-st252tzpunkte-auch-in-europa?ref=rss"
+        },
+        {
+          "title": "Radfahrerin mit Hund kollidiert",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261111T225002Z.txt",
+      "subtitles": "broadcasts/20261111T225002Z.vtt",
+      "subtitle_download": "broadcasts/20261111T225002Z.srt"
     }
   ]
 }
