@@ -4,6 +4,87 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
+    "pipeline_group_id": "658315cc644c1ae42dcdb964",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "15e6b6518e3091f5bdab9456",
+          "supported": true,
+          "quote": "Das US-Repräsentantenhaus stoppt den Vorstoß für ein Amtsenthebungsverfahren gegen Kriegsminister Pete Hegseth."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "15e6b6518e3091f5bdab9456",
+          "supported": true,
+          "quote": "Die republikanische Mehrheit verhinderte die Einleitung des sogenannten Impeachments und schob das Vorhaben rasch vom Tisch."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "75b6c3f77b68ee995a30e5f4",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "b1ffdefb78ce2871156db7bd",
+          "supported": true,
+          "quote": "Das US-Repräsentantenhaus hat ein drohendes Amtsenthebungsverfahren gegen Verteidigungsminister Pete Hegseth abgewendet."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "b1ffdefb78ce2871156db7bd",
+          "supported": true,
+          "quote": "Die Abgeordneten stimmten mit 211 zu 204 Stimmen dafür, die Vorwürfe an den Justizausschuss zu verweisen."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "872b531730097cbc686f92d5",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "f403d2b010723c95f3066eee",
+          "supported": true,
+          "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
     "pipeline_group_id": "7305b8418a8b0139905e5da2",
     "verification": {
       "status": "approved",
@@ -21,93 +102,6 @@
           "source_id": "2bb4b1e2f3ec3f4b7f6392a5",
           "supported": true,
           "quote": "Wie es ausging, erfahren Sie hier."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "b0633bb459503741f6518a9c",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "c73cb0f455d82d74bae9afaf",
-          "supported": true,
-          "quote": "SPD, Linke und Grüne haben im deutschen Bundesland Mecklenburg-Vorpommern die Verhandlungen über eine künftige Landesregierung abgeschlossen."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "c73cb0f455d82d74bae9afaf",
-          "supported": true,
-          "quote": "Das teilte Ministerpräsidentin und SPD-Landesvorsitzende Manuela Schwesig am Dienstag mit."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "a16b7c855b505bd500ff2ebd",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "7580fdf3a06b0754b7ba6400",
-          "supported": true,
-          "quote": "Eine der beiden Produktionslinien in Brand soll stillgelegt werden."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "7580fdf3a06b0754b7ba6400",
-          "supported": true,
-          "quote": "Europaweit sind 250 Stellen betroffen."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "4c5e36e60d7ea688f8a8deb7",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "c9cad31a86089816419021cd",
-          "supported": true,
-          "quote": "Die britische Anti-Terror-Behörde hat einen US-Militärangehörigen festgenommen, der für Russland spioniert haben soll."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "c9cad31a86089816419021cd",
-          "supported": true,
-          "quote": "Der 41-Jährige sei heute in der Nähe der Stadt Gloucester in Südwestengland aufgegriffen worden, teilte die Polizei mit."
         }
       ],
       "conflicts": [],
