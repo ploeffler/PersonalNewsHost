@@ -1,42 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261112T035303Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 12.11.2026 um 04:53 Uhr",
-      "created_at": 1794455583.549477,
-      "video": "broadcasts/20261112T035303Z.mp4",
-      "sources": [
-        {
-          "title": "PH Steiermark: Aufholjagd für Kinder mit Rechenschwäche",
-          "url": "https://www.kleinezeitung.at/artikel/41401189/ph-steiermark-aufholjagd-fuer-kinder-mit-rechenschwaeche"
-        },
-        {
-          "title": "Bob Dylan: Überraschendes Hochamt einer Legende",
-          "url": "https://www.krone.at/4372258"
-        },
-        {
-          "title": "Demokrat Colom gewinnt Senatssitz für Mississippi – den 55. für seine Partei",
-          "url": "https://www.derstandard.at/story/3000000348824/demokrat-colom-gewinnt-senatssitz-fuer-mississippi-den-55-fuer-seine-partei?ref=rss"
-        },
-        {
-          "title": "Demokrat erobert Senatssitz in Mississippi",
-          "url": "https://orf.at/stories/3447947/"
-        },
-        {
-          "title": "CNN-Prognose: Demokrat erobert Senatssitz in Mississippi",
-          "url": "https://orf.at/stories/3447949/"
-        },
-        {
-          "title": "Radfahrerin mit Hund kollidiert",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261112T035303Z.txt",
-      "subtitles": "broadcasts/20261112T035303Z.vtt",
-      "subtitle_download": "broadcasts/20261112T035303Z.srt"
-    },
-    {
       "id": "20261112T125115Z",
       "kind": "broadcast",
       "title": "Nachrichten 12.11.2026 um 13:51 Uhr",
@@ -71,6 +35,42 @@
       "transcript": "broadcasts/20261112T125115Z.txt",
       "subtitles": "broadcasts/20261112T125115Z.vtt",
       "subtitle_download": "broadcasts/20261112T125115Z.srt"
+    },
+    {
+      "id": "20261112T205351Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 12.11.2026 um 21:53 Uhr",
+      "created_at": 1794516831.993136,
+      "video": "broadcasts/20261112T205351Z.mp4",
+      "sources": [
+        {
+          "title": "Niederlande: Regierungskrise eskaliert",
+          "url": "https://orf.at/stories/3448042/"
+        },
+        {
+          "title": "Unbekannte montierten 15 Brückenschilder ab",
+          "url": "https://www.krone.at/4373502"
+        },
+        {
+          "title": "Leitring: Radfahrerin bei Kollision mit Rettungswagen schwer verletzt",
+          "url": "https://www.kleinezeitung.at/artikel/41446978/leitring-radfahrerin-bei-kollision-mit-rettungswagen-schwer-verletzt"
+        },
+        {
+          "title": "Insider: US-Handelsminister nach Nvidia-Spionageskandal unter Druck",
+          "url": "https://www.derstandard.at/story/3000000349044/insider-us-handelsminister-nach-nvidia-spionageskandal-unter-druck?ref=rss"
+        },
+        {
+          "title": "Nvidia: US-Handelsminister Lutnick unter Druck",
+          "url": "https://www.krone.at/4373497"
+        },
+        {
+          "title": "Schwere Mängel bei technischen Kontrollen",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261112T205351Z.txt",
+      "subtitles": "broadcasts/20261112T205351Z.vtt",
+      "subtitle_download": "broadcasts/20261112T205351Z.srt"
     }
   ]
 }

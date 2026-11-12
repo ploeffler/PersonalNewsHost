@@ -4,7 +4,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "d6d61af48c3a9d573603dd72",
+    "pipeline_group_id": "45cc22c54ff2a21f7956b6c0",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -12,15 +12,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "859f306ed8d8808f439d2805",
+          "source_id": "a61c6b25757278c24e30e7d7",
           "supported": true,
-          "quote": "Dramatische Szenen haben sich am Donnerstag in Michelhausen im Bezirk Tulln abgespielt: Nach einer Attacke auf Polizisten musste ein Beamter zur Schusswaffe greifen."
+          "quote": "Die Krise der niederländischen Minderheitsregierung hat sich heute weiter verschärft."
         },
         {
           "claim_index": 1,
-          "source_id": "da667a3a65971b8eb468cbf8",
+          "source_id": "a61c6b25757278c24e30e7d7",
           "supported": true,
-          "quote": "Nach einer Attacke auf Polizisten musste ein Beamter zur Schusswaffe greifen."
+          "quote": "Der Bruch des Drei-Parteien-Bündnisses nach nur knapp neun Monaten scheint unabwendbar, nach dem die Koalitionsparteien sich nicht auf die umstrittene Steuerreform einigen konnten."
         }
       ],
       "conflicts": [],
@@ -33,7 +33,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "3e51153906bd673fc8ab95a8",
+    "pipeline_group_id": "7816123cc77d89c98f56c013",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -41,15 +41,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "071f599930dda82c6db45d24",
+          "source_id": "f9dd333f68244a8ace859176",
           "supported": true,
-          "quote": "Der Mann hatte sich an Gleisanlage der Westbahn aufgehalten und soll trotz Pfefferspray-Einsatz renitent geblieben sein."
+          "quote": "Dreiste Diebe haben es in Osttirol auf Brückennamensschilder abgesehen!"
         },
         {
           "claim_index": 1,
-          "source_id": "071f599930dda82c6db45d24",
+          "source_id": "f9dd333f68244a8ace859176",
           "supported": true,
-          "quote": "Er befindet sich nach derzeitigem Stand außer Lebensgefahr."
+          "quote": "Gleich 15 Tafeln verschwanden entlang zweier Landesstraßen in Assling und Leisach."
         }
       ],
       "conflicts": [],
@@ -62,7 +62,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "ef3b58e9d13fb29b4d10d358",
+    "pipeline_group_id": "49321a332981d240ce2abe98",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -70,15 +70,44 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "e1d1d3fc5ddf409179e0269c",
+          "source_id": "f2da9000bfdcf1674739b917",
           "supported": true,
-          "quote": "Die EU-Außenbeauftragte Kaja Kallas würde Großbritannien gerne wieder in der EU sehen und spricht von einem „Trauma“ durch den Brexit."
+          "quote": "Die 53-Jährige dürfte am Donnerstagnachmittag ein Stoppschild missachtet haben."
         },
         {
           "claim_index": 1,
-          "source_id": "e1d1d3fc5ddf409179e0269c",
+          "source_id": "f2da9000bfdcf1674739b917",
           "supported": true,
-          "quote": "Sie würde sich „sehr wünschen, dass Großbritannien wieder Teil Europas wird“, sagte Kallas heute auf dem Gipfel der Europäischen Politischen Gemeinschaft (EPG) in der irischen Hauptstadt Dublin."
+          "quote": "Der Notfallsanitäter am Steuer konnte nicht mehr rechtzeitig ausweichen."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "83cc6404bea5d344b0a35e22",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "f6612de5069fa1fb556cdfed",
+          "supported": true,
+          "quote": "In den USA trifft die mutmaßliche Spionageaffäre rund um den Nvidia-CEO Jensen Huang nun auch die Spitzenpolitik."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "330162d3f5309e36d75dc290",
+          "supported": true,
+          "quote": "Am Donnerstag ist Jensen Huang als Vorstandschef des führenden KI-Chipentwicklers Nvidia zurückgetreten."
         }
       ],
       "conflicts": [],
@@ -108,35 +137,6 @@
           "source_id": "a0c8f88f7edb75cf49ea3707",
           "supported": true,
           "quote": "Vier Fahrzeugen mussten aus dem Verkehr gezogen werden."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "452171b156550a9e57a625b5",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "b9cead2e7bfe8892d37a456d",
-          "supported": true,
-          "quote": "VSV- und KAC-Fans gerieten nach dem Match am Mittwochabend aneinander."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "b9cead2e7bfe8892d37a456d",
-          "supported": true,
-          "quote": "Polizei ging dazwischen und verhinderte eine größere Auseinandersetzung."
         }
       ],
       "conflicts": [],

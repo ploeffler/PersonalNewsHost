@@ -1,18 +1,24 @@
 [
   {
-    "source": "https://www.krone.at/4372836",
+    "source": "https://orf.at/stories/3448042/",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
   },
   {
-    "source": "https://www.derstandard.at/story/3000000348959/mann-nach-attacke-in-n214-durch-schuss-von-polizei-verletzt?ref=rss",
+    "source": "https://www.krone.at/4373502",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
   },
   {
-    "source": "https://orf.at/stories/3448001/",
+    "source": "https://www.kleinezeitung.at/artikel/41446978/leitring-radfahrerin-bei-kollision-mit-rettungswagen-schwer-verletzt",
+    "image_origin": "article_metadata_or_rss",
+    "image_processing": "neural_fsrcnn_x2",
+    "original_media_retained": true
+  },
+  {
+    "source": "https://www.derstandard.at/story/3000000349044/insider-us-handelsminister-nach-nvidia-spionageskandal-unter-druck?ref=rss",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
@@ -20,11 +26,5 @@
   {
     "source": "",
     "image_origin": "article_metadata_or_rss"
-  },
-  {
-    "source": "https://www.kleinezeitung.at/artikel/41445498/polizeieinsatz-in-villacher-eishalle-mehr-als-20-anzeigen-nach-derby",
-    "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
-    "original_media_retained": true
   }
 ]
