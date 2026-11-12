@@ -650,6 +650,21 @@ def group_news_items(items, enabled=True):
     return [group[0] for group in groups], groups
 
 
+def card_credit(group, limit=48):
+    """All publishers of an event group for the on-screen credit, shortened to fit the card."""
+    from urllib.parse import urlparse
+    hosts = list(dict.fromkeys((urlparse(entry[2]).hostname or "").removeprefix("www.")
+                               for entry in group if entry[2]))
+    hosts = [host for host in hosts if host] or ["Quelle im Web"]
+    shown = []
+    for host in hosts:
+        if shown and len(", ".join(shown + [host])) > limit:
+            break
+        shown.append(host)
+    rest = len(hosts) - len(shown)
+    return ", ".join(shown)[:75] + (f" +{rest}" if rest else "")
+
+
 def news_section(entry, feed_url, settings):
     """Prefer explicit feed assignments, then bounded headline keywords."""
     sections = settings.get("sections", [])
@@ -1207,9 +1222,7 @@ def main():
                 headline_file.write_text("\n".join(wrapped), encoding="utf-8")
                 print(f"Headline {idx+1}/{story_count}: {start_time:.1f}-{end_time:.1f}s: {title[:65]}")
                 source_file = Path(tmp) / f"source_{idx}.txt"
-                from urllib.parse import urlparse
-                host = urlparse(selected[idx][2]).hostname or "Quelle im Web"
-                source_file.write_text(host[:75], encoding="utf-8")
+                source_file.write_text(card_credit(story_groups[idx]), encoding="utf-8")
                 source_label = f"source{idx}"
                 # Unified left-side editorial card, with media above the title.
                 card_x, card_w = 55, 635

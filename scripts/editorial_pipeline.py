@@ -37,12 +37,42 @@ def places(title):
     return {w.casefold() for w in matches if w.casefold() not in GENERIC|STOP|{'krankenhaus','untersuchungshaft'}}
 
 
+SUFFIXES=('ern','en','er','es','em','e','n','s')
+
+
+def stem(word):
+    """Light German suffix folding: Niederlande/Niederlanden, Packerl/Packerln."""
+    for suffix in SUFFIXES:
+        if word.endswith(suffix) and len(word)-len(suffix)>=4:return word[:-len(suffix)]
+    return word
+
+
+def stems(value):
+    return {stem(w) for w in words(value)}
+
+
+def lead(article):
+    units=sentence_units(article.get('text',''))
+    return units[0] if units else ''
+
+
 def same_event(first,second):
-    a,b=words(first['title']),words(second['title'])
+    """Conservative event match across publishers with differently worded headlines.
+
+    Either the headlines share at least three word stems with high overlap, or
+    they share at least half of the shorter headline and the opening sentences
+    clearly describe the same facts. Distinct places always keep stories apart.
+    """
+    a,b=stems(first['title']),stems(second['title'])
     overlap=len(a&b)
-    if overlap<3:return False
+    if overlap<2:return False
     containment=overlap/max(1,min(len(a),len(b)));jaccard=overlap/max(1,len(a|b))
-    if containment<.78 or jaccard<.55 or SequenceMatcher(None,first['title'].casefold(),second['title'].casefold()).ratio()<.58:return False
+    matched=overlap>=3 and containment>=.75 and jaccard>=.5
+    if not matched and containment>=.5:
+        la,lb=stems(first['title']+' '+lead(first)),stems(second['title']+' '+lead(second))
+        shared=len(la&lb)
+        matched=shared>=5 and shared/max(1,min(len(la),len(lb)))>=.4
+    if not matched:return False
     pa,pb=places(first['title']+'. '+first.get('text','')),places(second['title']+'. '+second.get('text',''))
     return not (pa and pb and not pa&pb)
 

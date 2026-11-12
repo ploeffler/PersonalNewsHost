@@ -70,5 +70,21 @@ class NewsSelectionTests(unittest.TestCase):
         self.assertEqual(len(groups), 2)
 
 
+
+
+class CardCreditTests(unittest.TestCase):
+    def test_on_screen_credit_lists_every_publisher_of_the_group(self):
+        group = [story("A", "www.orf.at", 1), story("B", "derstandard.at", 2), story("C", "orf.at", 3)]
+        self.assertEqual(news.card_credit(group), "orf.at, derstandard.at")
+
+    def test_single_source_and_overflow(self):
+        self.assertEqual(news.card_credit([story("A", "krone.at", 1)]), "krone.at")
+        hosts = ["derstandard.at", "kleinezeitung.at", "krone.at", "orf.at", "salzburg24.at", "heute.at"]
+        credit = news.card_credit([story("A", host, i) for i, host in enumerate(hosts)])
+        self.assertTrue(credit.startswith("derstandard.at, kleinezeitung.at"))
+        self.assertRegex(credit, r" \+\d$")
+        self.assertLessEqual(len(credit), 60)
+
+
 if __name__ == "__main__":
     unittest.main()

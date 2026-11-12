@@ -56,6 +56,32 @@ class EditorialPipelineTests(unittest.TestCase):
         self.assertFalse(p.same_event(a,b))
         self.assertFalse(p.same_event(article('a','Trump gewinnt die Wahl',''),article('b','Trump vor Gericht wegen Betrugsvorwurf','')))
 
+    def test_differently_worded_headlines_of_one_event_are_grouped(self):
+        # Observed 12.11.2026: ORF and DER STANDARD were broadcast with one source each.
+        pairs=[
+            (article('a','Niederlande: Regierungskrise eskaliert','Die Krise der niederländischen Minderheitsregierung hat sich heute weiter verschärft.','orf.at'),
+             article('b','Regierungskrise in den Niederlanden eskaliert','Minderheitsregierung könnte in die Brüche gehen, nachdem zwei der drei Parteien für eine Millionärssteuer stimmten.','derstandard.at')),
+            (article('a','Post stellt deutlich weniger Packerln zu','Die Post hat wegen der neuen Abgaben deutlich weniger Pakete aus Drittstaaten zugestellt.','orf.at'),
+             article('b','Folgen der neuen Abgaben: Post verschickt viel weniger Packerl','Wegen der neuen Abgaben verschickt die Post deutlich weniger Pakete aus Drittstaaten.','kleinezeitung.at')),
+            (article('a','Schüsse in Washington: Ein Toter, mehrere Verletzte','In Washington ist bei Schüssen ein Mensch getötet worden.','orf.at'),
+             article('b','Ein Toter bei Schüssen in Washington','Bei Schüssen in Washington ist ein Mensch getötet worden.','derstandard.at')),
+        ]
+        for a,b in pairs:
+            with self.subTest(a['title']):
+                self.assertTrue(p.same_event(a,b))
+                report=p.prepare(stored([a,b]),NOW)
+                self.assertEqual(len(report['groups']),1)
+
+    def test_shared_subject_with_different_events_stays_separate(self):
+        pairs=[
+            (article('a','Nvidia-Chef Huang tritt zurück','Jensen Huang ist als Vorstandschef von Nvidia zurückgetreten.'),
+             article('b','Nvidia: US-Handelsminister Lutnick unter Druck','Handelsminister Lutnick gerät wegen seiner Kontakte unter Druck.','second.org')),
+            (article('a','Hochwasser in Kärnten: Straßen gesperrt','In Kärnten sind mehrere Straßen nach Starkregen gesperrt.'),
+             article('b','Hochwasser in Tirol: Straßen gesperrt','In Tirol sind mehrere Straßen nach Starkregen gesperrt.','second.org')),
+        ]
+        for a,b in pairs:
+            with self.subTest(a['title']):self.assertFalse(p.same_event(a,b))
+
     def test_opposing_negation_and_uncertainty_are_not_deduplicated_into_certainty(self):
         for first,second,kind in [
             ('Die Polizei bestätigt eine Sperre der gesamten Bahnstrecke.', 'Die Polizei bestätigt keine Sperre der gesamten Bahnstrecke.','negation'),
