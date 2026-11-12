@@ -1,42 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261111T225002Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 11.11.2026 um 23:50 Uhr",
-      "created_at": 1794437402.060739,
-      "video": "broadcasts/20261111T225002Z.mp4",
-      "sources": [
-        {
-          "title": "Bericht: Nvidia bereitet Huang-Entlassung vor",
-          "url": "https://orf.at/stories/3447951/"
-        },
-        {
-          "title": "Küchenbrand in Tirol - Frau mit Rauchgasvergiftung",
-          "url": "https://www.kleinezeitung.at/artikel/41443885/kuechenbrand-in-tirol-frau-mit-rauchgasvergiftung"
-        },
-        {
-          "title": "53 Prozent mehr Einbürgerungen in Wien",
-          "url": "https://www.krone.at/4371231"
-        },
-        {
-          "title": "Teheran droht mit Angriffen auch in Europa",
-          "url": "https://www.krone.at/4372249"
-        },
-        {
-          "title": "Teheran droht mit Angriffen auf US-Stützpunkte auch in Europa",
-          "url": "https://www.derstandard.at/story/3000000348822/iran-teheran-droht-mit-angriffen-auf-us-st252tzpunkte-auch-in-europa?ref=rss"
-        },
-        {
-          "title": "Radfahrerin mit Hund kollidiert",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261111T225002Z.txt",
-      "subtitles": "broadcasts/20261111T225002Z.vtt",
-      "subtitle_download": "broadcasts/20261111T225002Z.srt"
-    },
-    {
       "id": "20261112T035303Z",
       "kind": "broadcast",
       "title": "Nachrichten 12.11.2026 um 04:53 Uhr",
@@ -71,6 +35,42 @@
       "transcript": "broadcasts/20261112T035303Z.txt",
       "subtitles": "broadcasts/20261112T035303Z.vtt",
       "subtitle_download": "broadcasts/20261112T035303Z.srt"
+    },
+    {
+      "id": "20261112T125115Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 12.11.2026 um 13:51 Uhr",
+      "created_at": 1794487875.346137,
+      "video": "broadcasts/20261112T125115Z.mp4",
+      "sources": [
+        {
+          "title": "Nach Attacke: Mann in NÖ von Polizei verletzt",
+          "url": "https://www.krone.at/4372836"
+        },
+        {
+          "title": "Nach Attacke: Mann in NÖ durch Schuss von Polizei verletzt",
+          "url": "https://www.kleinezeitung.at/artikel/41445478/mann-nach-attacke-in-noe-durch-polizei-schuss-verletzt"
+        },
+        {
+          "title": "Mann nach Attacke in Niederösterreich durch Schuss von Polizei verletzt",
+          "url": "https://www.derstandard.at/story/3000000348959/mann-nach-attacke-in-n214-durch-schuss-von-polizei-verletzt?ref=rss"
+        },
+        {
+          "title": "Kallas spricht von „Trauma“ durch Brexit",
+          "url": "https://orf.at/stories/3448001/"
+        },
+        {
+          "title": "Schwere Mängel bei technischen Kontrollen",
+          "url": ""
+        },
+        {
+          "title": "Polizeieinsatz in Villacher Eishalle: Mehr als 20 Anzeigen nach Derby",
+          "url": "https://www.kleinezeitung.at/artikel/41445498/polizeieinsatz-in-villacher-eishalle-mehr-als-20-anzeigen-nach-derby"
+        }
+      ],
+      "transcript": "broadcasts/20261112T125115Z.txt",
+      "subtitles": "broadcasts/20261112T125115Z.vtt",
+      "subtitle_download": "broadcasts/20261112T125115Z.srt"
     }
   ]
 }

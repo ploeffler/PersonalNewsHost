@@ -1,24 +1,18 @@
 [
   {
-    "source": "https://www.kleinezeitung.at/artikel/41401189/ph-steiermark-aufholjagd-fuer-kinder-mit-rechenschwaeche",
+    "source": "https://www.krone.at/4372836",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
   },
   {
-    "source": "https://www.krone.at/4372258",
+    "source": "https://www.derstandard.at/story/3000000348959/mann-nach-attacke-in-n214-durch-schuss-von-polizei-verletzt?ref=rss",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
   },
   {
-    "source": "https://www.derstandard.at/story/3000000348824/demokrat-colom-gewinnt-senatssitz-fuer-mississippi-den-55-fuer-seine-partei?ref=rss",
-    "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
-    "original_media_retained": true
-  },
-  {
-    "source": "https://orf.at/stories/3447947/",
+    "source": "https://orf.at/stories/3448001/",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
@@ -26,5 +20,11 @@
   {
     "source": "",
     "image_origin": "article_metadata_or_rss"
+  },
+  {
+    "source": "https://www.kleinezeitung.at/artikel/41445498/polizeieinsatz-in-villacher-eishalle-mehr-als-20-anzeigen-nach-derby",
+    "image_origin": "article_metadata_or_rss",
+    "image_processing": "neural_fsrcnn_x2",
+    "original_media_retained": true
   }
 ]
