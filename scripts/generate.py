@@ -756,7 +756,8 @@ def main():
             DOCS / "news-store.json", dt.datetime.now(dt.timezone.utc).timestamp(),
             max_sentences=int(CONFIG.get("editorial", {}).get("max_sentences", 2)),
             limit=int(CONFIG.get("max_items", 5)),
-            max_store_age_minutes=max(1, min(120, int(pipeline.get("max_store_age_minutes", 30)))))
+            max_store_age_minutes=max(1, min(120, int(pipeline.get("max_store_age_minutes", 30)))),
+            prefer_multi_source=bool(pipeline.get("prefer_multi_source", True)))
         story_groups = []
         entry_feeds = {}
         for prepared in ready:

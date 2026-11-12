@@ -82,6 +82,36 @@ class EditorialPipelineTests(unittest.TestCase):
         for a,b in pairs:
             with self.subTest(a['title']):self.assertFalse(p.same_event(a,b))
 
+    def test_every_publisher_contributes_to_the_combined_text(self):
+        title='Zugunglück in München: Zehn Menschen verletzt'
+        items=[article('a',title,'Bei dem Zugunglück wurden zehn Menschen verletzt. Die Polizei ermittelt zur Ursache.','orf.at'),
+               article('b',title+' – Strecke gesperrt','Die Bahnstrecke bleibt bis zum Abend gesperrt. Ersatzbusse sind im Einsatz.','krone.at'),
+               article('c',title,'Ein Sachverständiger untersucht die Weiche. Erste Ergebnisse werden am Freitag erwartet.','derstandard.at')]
+        group=p.prepare(stored(items),NOW)['groups'][0]
+        self.assertEqual(group['verification']['status'],'approved')
+        self.assertEqual(group['used_source_ids'],['a','b','c'])
+        self.assertTrue(group['draft']['text'].endswith('Quellen: orf.at, krone.at, derstandard.at.'))
+        self.assertEqual(len(group['draft']['claims']),3)
+
+    def test_single_source_keeps_configured_length(self):
+        item=article('a','Zugunglück in München','Satz eins zum Unglück in München. Satz zwei zur Strecke. Satz drei zur Ursache.')
+        self.assertEqual(len(p.prepare(stored([item]),NOW,max_sentences=2)['groups'][0]['draft']['claims']),2)
+
+    def test_widely_reported_events_are_selected_first(self):
+        titles=['Neue Brücke über die Mur eröffnet','Gemeinderat beschließt Budget für Schulen','Lawinengefahr im Gebirge steigt deutlich',
+                'Festival meldet Besucherrekord am Wochenende','Bahnhof erhält neue Fahrradgarage']
+        fresh=[article(f's{i}',t,f'Die Meldung lautet: {t}, berichtet der Sender.',f'h{i}.org',published=NOW-50) for i,t in enumerate(titles)]
+        older=[article('m1','Zugunglück in München: Zehn Menschen verletzt','Bei dem Zugunglück wurden zehn Menschen verletzt.','orf.at',published=NOW-5000),
+               article('m2','Zugunglück in München: Zehn Menschen verletzt','Die Bahnstrecke bleibt bis zum Abend gesperrt.','krone.at',published=NOW-5000)]
+        for item in older:item['first_seen_at']=NOW-5000
+        for item in fresh:item['first_seen_at']=NOW-50
+        report=p.prepare(stored(fresh+older),NOW)
+        chosen=p.select(report,5)
+        self.assertEqual(sorted(chosen[0]['member_ids']),['m1','m2'])
+        self.assertEqual(len(chosen),5)
+        report=p.prepare(stored(fresh+older),NOW)
+        self.assertNotIn('m1',[i for g in p.select(report,5,prefer_multi_source=False) for i in g['member_ids']])
+
     def test_opposing_negation_and_uncertainty_are_not_deduplicated_into_certainty(self):
         for first,second,kind in [
             ('Die Polizei bestätigt eine Sperre der gesamten Bahnstrecke.', 'Die Polizei bestätigt keine Sperre der gesamten Bahnstrecke.','negation'),

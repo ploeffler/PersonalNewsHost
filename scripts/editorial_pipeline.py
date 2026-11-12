@@ -130,7 +130,22 @@ def render_draft(draft,sources):
     return headline+'\n'+' '.join(c['text'] for c in draft['claims'])+'\n'+credit
 
 
+def repeats(sentence,old):
+    """True if a sentence only restates an already used one (also across publishers
+    with different quotation marks, pronouns or attribution wording)."""
+    plain=lambda v:re.sub(r'["„“”‚‘’»«\']','',v.casefold())
+    if SequenceMatcher(None,plain(sentence),plain(old)).ratio()>=.86:return True
+    a,b=stems(sentence),stems(old)
+    if not a or not b:return False
+    shared=len(a&b)
+    return shared/len(a|b)>=.82 or (shared>=5 and shared/min(len(a),len(b))>=.75)
+
+
 def formulate(members,sources,max_sentences=2):
+    # Every publisher of the event should contribute where it adds a new sentence,
+    # so the budget grows with the number of publishers (bounded by the 4-sentence cap).
+    publishers=len({sources[a['id']]['publisher'] for a in members if a['id'] in sources}) or 1
+    max_sentences=min(4,max(max_sentences,publishers))
     claims=[];used=[]
     candidates={a['id']:list(evidence_units(a)) for a in members}
     while len(claims)<max_sentences:
@@ -138,9 +153,8 @@ def formulate(members,sources,max_sentences=2):
         for article in members:
             units=candidates[article['id']]
             while units:
-                sentence=units.pop(0);terms=words(sentence)
-                if any(SequenceMatcher(None,sentence.casefold(),old.casefold()).ratio()>=.86 or
-                       (terms and len(terms&words(old))/max(1,len(terms|words(old)))>=.82) for old in used):continue
+                sentence=units.pop(0)
+                if any(repeats(sentence,old) for old in used):continue
                 claims.append({'text':sentence,'source_id':article['id'],'field':'text','quote':sentence})
                 used.append(sentence);progressed=True;break
             if len(claims)>=max_sentences:break
@@ -235,9 +249,17 @@ def prepare(store,now,max_sentences=2,writer=None):
             'max_sentences':max_sentences,'sources':sources,'groups':results,'excluded_articles':excluded}
 
 
-def select(report,limit):
-    ready=sorted((g for g in report['groups'] if g['verification']['status']=='approved'),
-                 key=lambda g:(-g['newest_at'],g['id']))
+def publisher_count(report,group):
+    return len({report['sources'][sid]['publisher'] for sid in group['member_ids']})
+
+
+def select(report,limit,prefer_multi_source=True):
+    """Pick approved groups: widely reported events first (capped at three
+    publishers so freshness still decides among them), then newest first."""
+    def rank(g):
+        coverage=min(3,publisher_count(report,g)) if prefer_multi_source else 1
+        return (-coverage,-g['newest_at'],g['id'])
+    ready=sorted((g for g in report['groups'] if g['verification']['status']=='approved'),key=rank)
     selected=[];represented=set()
     for group in ready:
         publishers={report['sources'][sid]['publisher'] for sid in group['member_ids']}
@@ -252,7 +274,7 @@ def select(report,limit):
     return selected
 
 
-def production_plan(path,now,max_sentences=2,limit=5,max_store_age_minutes=30):
+def production_plan(path,now,max_sentences=2,limit=5,max_store_age_minutes=30,prefer_multi_source=True):
     path=Path(path)
     if not path.is_file():raise RuntimeError('News store missing; run collect_news.py before production')
     store=json.loads(path.read_text(encoding='utf-8'))
@@ -260,7 +282,7 @@ def production_plan(path,now,max_sentences=2,limit=5,max_store_age_minutes=30):
     if not isinstance(updated,(int,float)) or not 0<=now-updated<=max_store_age_minutes*60:
         raise RuntimeError('News store stale; refresh stored messages before production')
     report=prepare(store,now,max_sentences=max(1,min(4,max_sentences)))
-    selected=select(report,max(1,min(10,limit)))
+    selected=select(report,max(1,min(10,limit)),prefer_multi_source)
     report['mode']='production'
     report['selected_ids']=[g['id'] for g in selected]
     output=path.parent/'editorial-report.json'
