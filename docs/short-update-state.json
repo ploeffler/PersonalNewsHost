@@ -1,6 +1,19 @@
 {
   "updates": [
     {
+      "title": "Mehrere Tote bei Angriff auf Krankenhaus in Gaza",
+      "url": "https://www.krone.at/4372349",
+      "source": "api.krone.at",
+      "published_at": 1794469812.0,
+      "id": "d41931028b8ef33ede6c4e49",
+      "created_at": 1794471307.247845,
+      "first_seen_at": 1794471307.247845,
+      "expires_at": 1794557707.247845,
+      "text": "Mehrere Tote bei Angriff auf Krankenhaus in Gaza.\nBei einem israelischen Angriff auf das Nasser Krankenhaus im Gazastreifen sind laut Medienberichten mehrere Menschen getötet worden. Nach Angaben der israelischen Armee galt der Angriff einem ranghohen Mitglied der islamistischen Terrororganisation Hamas.",
+      "audio": "short-update-audio/d41931028b8ef33ede6c4e49.wav",
+      "video": "short-update-video/d41931028b8ef33ede6c4e49.mp4"
+    },
+    {
       "title": "Schule evakuiert und Bahnsperre nach Granatenfund im Lavanttal",
       "url": "https://www.kleinezeitung.at/artikel/41441487/evakuierung-und-bahnsperre-nach-granatenfund-auf-acker-im-lavanttal",
       "source": "www.kleinezeitung.at",
@@ -15,11 +28,6 @@
     }
   ],
   "seen": {
-    "13b2104f30f85b77004527ac": {
-      "first_seen_at": 1793850179.711137,
-      "fingerprint": "48f5a7d87562d2d5670fa6ac637854fe8818659f9f6970504debe21c3cb9a805",
-      "published_at": 1793797132.0
-    },
     "98780b49f35515d3fb26c4ef": {
       "first_seen_at": 1793878797.677842,
       "fingerprint": "1b537b3cacfb228476c696fb70fd0debaf552b8f0c71d399c826b5431ebb8307",
@@ -5972,12 +5980,12 @@
     },
     "ee4b91e71b5caa422292cd00": {
       "first_seen_at": 1794445488.401153,
-      "fingerprint": "32f89c2e2dd76a7fa17ed06ba4a144675965b21809f58de8cd875431d884b000",
+      "fingerprint": "77ece30af3b8137c10681817a99099d7c4a9bd40b923762754312ac098a0ea8f",
       "published_at": 1794438943.0
     },
     "a86d4d48b6d7451350676382": {
       "first_seen_at": 1794445488.401153,
-      "fingerprint": "04b6035b7dbc66fd41766d4437a909e8d00d0a3dc6a219909e60c7d400199906",
+      "fingerprint": "1224cbd3f2f19b455c6d35082d290050ce067f3ebbed861a13760f660607bca5",
       "published_at": 1794436986.0
     },
     "edbf30e327f8c674e1e53e90": {
@@ -6172,8 +6180,313 @@
     },
     "e3b0c44298fc1c149afbf4c8": {
       "first_seen_at": 1794445488.401153,
-      "fingerprint": "b247220fd40770ed75705ec3f140f07b8c54ad4a017b040077abf2c9a2f17f23",
-      "published_at": 1794030420.0
+      "fingerprint": "4105b09c2259d052f1acacf37b7caa96dcbee9af6b1703deb2eac25f18042b38",
+      "published_at": 1794039240.0
+    },
+    "e8040aba811e922cc01dff56": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "6e89171b7ca603abdfacdd5b932316199f6268aaba8ac8f4c012e1bfdb74c0db",
+      "published_at": 1794470742.0
+    },
+    "555283c6bc493bdbb4809aa3": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "b8b7ffaed6242eacc2f272aaa811639f16220e4026e7a52547179a08f00b5872",
+      "published_at": 1794470648.0
+    },
+    "6ce62da6fa45d9d3cbd1fe51": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "5685914deac0917135c02f8584cfb83682885ed2749a47f0af6a4f0abbdd2639",
+      "published_at": 1794470590.0
+    },
+    "3316468969f3bcdc157e9a11": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "f999a0b7a7e33692224c31738187675ba6e3abf8812e964f6a9cfe700efe4748",
+      "published_at": 1794470523.0
+    },
+    "b8c748456da0e0e35ecd5f9d": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "2a36af1b5946645d51f249edb033f9c8c770aadb010521f140d720b3ca07d867",
+      "published_at": 1794470420.0
+    },
+    "fd0f066cbea4c469918b6d6e": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "e11dca79c7fc9bb089e146b7f3a8e295e978128aff332ce6d0e236a6960dcf6f",
+      "published_at": 1794470408.0
+    },
+    "9ccf8005df18953f6465b70e": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "840fda88484be2fd21acd8394d60d5a64da6f6fd38e78d58670b250c449d70c5",
+      "published_at": 1794470400.0
+    },
+    "e632088110f1138c0a4ab7f1": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "f1e7990352788ace40c176daa34975eea95213e53e0069bb6be4709cd47fd584",
+      "published_at": 1794470400.0
+    },
+    "674903e354d4827a23069b07": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "b8c747bb40c1a9fdf0c35516164a814e0b73a627a85e3d8293c0cd956ac7112b",
+      "published_at": 1794470400.0
+    },
+    "a9dcec422b2923eee6376b40": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "511556b14f26a6b50ee3122773ac881db828b99409b4e76a4dfaacf547aec7a9",
+      "published_at": 1794470400.0
+    },
+    "cbd8eedeecaa2e5dd848da81": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "8b7f1a06d178e6edeac49f05b02aedc916652e74a0362aee20a856e4c06e9e77",
+      "published_at": 1794470100.0
+    },
+    "d41931028b8ef33ede6c4e49": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "1406072985c2afe5b7a0ab0f6bdf032fb219f52288cabdde46912e0898a8e23b",
+      "published_at": 1794469812.0
+    },
+    "91f00aa75a0d7619b2625f37": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "e9418ef6b426f0d5d30b3610f34b79c02d0f6691136afe8df1d1974b312beab0",
+      "published_at": 1794469626.0
+    },
+    "ff0f81ab27b7a4ebdb17107d": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "22893e38a7510099c27a26836c75be71a11fdf429b45b7ee8b1d3821d6717d2e",
+      "published_at": 1794469052.0
+    },
+    "d1087074ee0c4cd77a5e5f79": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "608505ef33a4d705b0d22dcb9462e817497dbf286a46d5366b0568728a1b7475",
+      "published_at": 1794468926.0
+    },
+    "8f0c55b6effaf575784f4f35": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "466016ddeae0accba0ce34e1626f4f6f4871035e42e5b6e1a499e8618c6552d8",
+      "published_at": 1794468874.0
+    },
+    "74e2967c4029efe7d81ed184": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "4139fad6fa8d5195a38d91044eefaa6b28ea5ab2282da3bc27e490f5ecf1d422",
+      "published_at": 1794468653.0
+    },
+    "4ef210db645b4325f6f05cd4": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "2346e248ee0f866101578c617a0bb4af911f85cace380b5dda061bb35d426666",
+      "published_at": 1794468634.0
+    },
+    "d3d236107f8b5bd1d5d11c2a": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "9e41a827972a5eb3d6d46d8796afdcaad4824616e1fa0c0263bd02bc1167b0b9",
+      "published_at": 1794468383.0
+    },
+    "88988502ea956ff6b5887739": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "7b507c60249f61d0d5713114769fd71a05b257a45fe4278824b851b99205d4fb",
+      "published_at": 1794467853.0
+    },
+    "c6fba685b08b046bfd95164c": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "198f1df335cfe3a2cb6cb38e37481db7f7876af7263f995a3a0bf3f87ca53915",
+      "published_at": 1794467506.0
+    },
+    "9fb97e6e356847690202a2a6": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "1fb8713a285333d7ce6df71a0c556881564116f2b842a66dd2c800a76cdf0e71",
+      "published_at": 1794466800.0
+    },
+    "a1484833de34e77da466ab04": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "645138c9e74a2e2c2a00ab8403dd93f8759b55574c942b09b8efe7769436a2ea",
+      "published_at": 1794466800.0
+    },
+    "b3cb87178f3f10ab6b39de96": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "6e0c9e6a9e70acd25c09417dbc42766b45945e7de384e884640b78948a34a13c",
+      "published_at": 1794466800.0
+    },
+    "add1f8fbbe4e4d89a952380d": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "cdc45d8ac73541ec3ae17320b5f0ec40a97eccbdf1364db88b44f3bbd6a1532b",
+      "published_at": 1794466800.0
+    },
+    "fdc67455e6f574e29aee5d19": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "ed06851bacc9a30b8f6aeee488a6881940a8bbf185dac1985210ebda1bf73c46",
+      "published_at": 1794466800.0
+    },
+    "4a5f94edd903e33bac2316aa": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "31a3cd494b173b4cf431ccaccf64eb4dfd050476d2069699f690eb919af382d1",
+      "published_at": 1794466688.0
+    },
+    "83068fb8b6230ccd98431902": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "14d591bcc4db6b2ef8941d6436bc1782e192594aab437e7fd46e867ad8afa641",
+      "published_at": 1794466454.0
+    },
+    "7b4a836059e945e1b2185579": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "d7a7189f34b4523fd9de09f55f8c1dddfac2eba5457c6374dc6143ff4b0bb5f2",
+      "published_at": 1794466296.0
+    },
+    "cbceae9f2391108640a03539": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "edc23a2e66371eaa0e825c61a3e00de443e12f27f3bbda1f083040f66793c3f2",
+      "published_at": 1794466122.0
+    },
+    "e33da82b79f44dfd5b206dad": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "6defdccf27f42fdd58555681bf69a7ba34ccbee9a9708a888a53f81468deb8fb",
+      "published_at": 1794465770.0
+    },
+    "17f33866972fb99f104a7369": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "e86a998bbe232af6e777905c11289bee6d951f231ec31c593ce29f790417bb15",
+      "published_at": 1794465576.0
+    },
+    "2e239b4e1ddf661c4d5aa700": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "29579241def99c91d57d5242092a184314650a843503a87e9c9f37bc31c106a3",
+      "published_at": 1794465027.0
+    },
+    "5d3c634be87a3ff9d1f602e0": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "4a38743f93cfd0a3ab2e7e0db50f4a98e866974992358ae400f3a7796d902fb9",
+      "published_at": 1794463200.0
+    },
+    "9a9f9af4f9912542c5a4a614": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "33534044d8620569137d0567cd6aed56785398b72393b8d05b9142cc76a8b421",
+      "published_at": 1794463200.0
+    },
+    "d996cafa003aaf97f30dd5c6": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "d12ec54549626dd837ff7dc228c8635c0653fafd42a2b26452f613b929706e67",
+      "published_at": 1794463200.0
+    },
+    "7c9b201fb8afa4fe54d56419": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "1c4b3c4ac4fa245b81b015b4adcd97da3b9c4ee18be87a95f8b122d6c1ab1dc3",
+      "published_at": 1794463200.0
+    },
+    "554a4cadaa3e3f079ff35e73": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "43b74eb54dcf8265717a9ac4458bc9b24ac1339361ec8486de107ab831000c77",
+      "published_at": 1794463200.0
+    },
+    "f34ee83f73d03293c86870b3": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "58f728ab40c4322542c8b9a4704c424327891a356900c194ce5c9ae1159a99de",
+      "published_at": 1794462935.0
+    },
+    "a1cedd2b7ea8ee5bc56312e5": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "7f686e24b4a7fa816745186f4686ac9202546d139230c2cc970b34ac8acdd5a5",
+      "published_at": 1794462836.0
+    },
+    "a24e6077e834f39d91eb8932": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "475b9b60bcad3cdc6bf74d6ac62266793b616cca6e313adcb4bfefe1b9d7e972",
+      "published_at": 1794462569.0
+    },
+    "fa43256d0652e01b9df6963f": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "346b14c8a5e418ec7f3c19c210c57c452ee22a4a80dd709f4ccc33c8c5f6d574",
+      "published_at": 1794461966.0
+    },
+    "f461e90dbe489e47c84cf817": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "e99d380e2edcd6940b049696cb654b350b96cdd5b4d551d0c8e5231e52cc9070",
+      "published_at": 1794461535.0
+    },
+    "20746e5928cb82fbaa2b8ab7": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "d28af2ec72afe950249427b01b5913413a5eecb8f28ae8bb60999c0c903dad4b",
+      "published_at": 1794461400.0
+    },
+    "d0bbf9c244b5683d7ea8a657": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "967c408c46405f5c9dde998acc4ca4f57f40872180c69a660f76bb6b178da513",
+      "published_at": 1794461348.0
+    },
+    "c2829c856775e340185f1491": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "caeee0ab8af347dabd22405c0a64655397b258b3879ddcf9aa933d7ec1984b53",
+      "published_at": 1794461111.0
+    },
+    "3a1423206b4bcf89df21c32a": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "7655f4c86b6fee2024cead228601219764d5e5d8a978b3f6772c917ec37a0e66",
+      "published_at": 1794460340.0
+    },
+    "cd3dc8b86c89d2cf7d49bc26": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "3d2975a1c118bb3a8a121a5a77c9f8742ce3c3c1594c0106f2f42996b1811655",
+      "published_at": 1794460090.0
+    },
+    "620292f3c7edb10b9c0df52f": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "abb340848ece78591679e8b6588be2dea40b0055ddf057a0cc7cf1dc6aff7184",
+      "published_at": 1794459701.0
+    },
+    "e86ee5bf57bf56eada1f523d": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "d912e5378c432a8337fad3e4294a43c78d8603c8324ee9e9ccbc47299fe4246b",
+      "published_at": 1794459600.0
+    },
+    "312d74381fc01aaf807c0db6": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "9eeb18441f53966413aece7d894263ea7645876a4059c0867283e40e10eb0027",
+      "published_at": 1794459600.0
+    },
+    "da87df29c460e8f3a1440acb": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "43928ac13eaddcb96d5c8a90688ebaea14fee2af9b748b2bc99376b4aa9b6504",
+      "published_at": 1794459600.0
+    },
+    "5fce2e9cb3eba91540c3937e": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "66f85c9757db4bb9b6aca109ac2eb1690fe0064520223a6ca2be33fc84365e01",
+      "published_at": 1794459600.0
+    },
+    "425d357f720046813d1f96e1": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "7c8edbdf6d5e9c9e75bda5077deb4d0425c388469aeb8c1f8314705a981b80ba",
+      "published_at": 1794459600.0
+    },
+    "d9d88fcf0b6f1b94f811f0d5": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "dca4c773a8739779e90109837bdee932d29c4fc0a77059dd176f85261ca79a6b",
+      "published_at": 1794459600.0
+    },
+    "c8b28440f614aed57920aa32": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "4e88afab99730e24d35e1e32a38be6c08f074743136c301cc2fc08e229b73a06",
+      "published_at": 1794458664.0
+    },
+    "df1cabfa817d1604cffa6536": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "6e02cf2d95ab5fdd7b7e677ae967853d9586ca3337e47b17ee3838a216208a65",
+      "published_at": 1794457800.0
+    },
+    "ce31cdf3502f24ed37284f2d": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "be615bce260f1b055f0d1a5e805d04232bc1b7f102511d49c01dfac077147b9d",
+      "published_at": 1794456000.0
+    },
+    "d716d175d0aae37423647a8b": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "792bfe571ae7442a0b6b787de85c951b19bb19624da4a854bfd55d04e3a4dad9",
+      "published_at": 1794456000.0
+    },
+    "f1aaad50038a5a1100dc93ed": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "af7d05b505b8ba53ea12ad2c29ee14f31d6943882390916e11999cb650ad0dea",
+      "published_at": 1794430242.0
+    },
+    "814341b0c7a91aa057c7f01f": {
+      "first_seen_at": 1794471307.247845,
+      "fingerprint": "d0258ae4d2acca1148dd3b0ba1e5d7f88339624fabd028957f3307f51cc65198",
+      "published_at": 1752055200.0
     }
   }
 }
