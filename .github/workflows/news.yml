@@ -1,6 +1,12 @@
 name: Generate news video
 on:
   workflow_dispatch:
+    inputs:
+      trigger:
+        description: 'manual = always produce; schedule = external timer, produce only when a slot is due'
+        type: choice
+        options: [manual, schedule]
+        default: manual
   schedule:
     - cron: '17 * * * *'
 permissions:
@@ -43,6 +49,8 @@ jobs:
         run: python3 -m unittest discover -s tests
       - name: Check configured production schedule
         id: schedule
+        env:
+          PNH_TRIGGER: ${{ inputs.trigger }}
         run: python3 scripts/check_schedule.py
       - name: Restore cached Ubuntu packages
         if: steps.schedule.outputs.due == 'true'

@@ -84,6 +84,11 @@ def published_at(feed):
         return None
 
 
+def manual_start(event, trigger):
+    """Manual dispatches always produce; an external timer behaves like cron."""
+    return event == 'workflow_dispatch' and (trigger or 'manual').strip().lower() != 'schedule'
+
+
 def main():
     try:
         from .provider_registry import require_executable_version
@@ -98,7 +103,8 @@ def main():
     if published is not None and published > now:
         print('::warning::RSS publication date is in the future; ignoring it for scheduling')
     due, slot, reason = production_due(settings, now, published,
-                                      os.environ.get('GITHUB_EVENT_NAME') == 'workflow_dispatch')
+                                      manual_start(os.environ.get('GITHUB_EVENT_NAME'),
+                                                   os.environ.get('PNH_TRIGGER')))
     output = os.environ.get('GITHUB_OUTPUT')
     if output:
         with open(output, 'a', encoding='utf-8') as stream:

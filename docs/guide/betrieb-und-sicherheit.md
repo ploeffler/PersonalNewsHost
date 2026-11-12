@@ -9,7 +9,7 @@
 | Deutsche Sprachausgabe mit Piper `de_DE-thorsten-high` | Produktiv |
 | eSpeak-NG als Fallback bei fehlendem Piper-Modell | Produktiv |
 | MP4, Webseite, Transkript und Video-RSS | Produktiv |
-| Automatischer stündlicher GitHub-Actions-Lauf | Aktiv, best effort |
+| Automatischer stündlicher GitHub-Actions-Lauf | Aktiv, best effort; zuverlässiger mit externem Taktgeber (siehe unten) |
 | Konfigurierbares Portrait und Hintergrund | Standbilder produktiv; Hintergrunddatei optional |
 | RSS-Themenanalyse und vorsichtiges Clustering | Experimentell |
 | Sieben parallele Segmente: Intro, fünf Meldungen, Outro | Experimentell |
@@ -29,6 +29,55 @@
 - Automatische Übernahme fremder Fotos oder Videos ist nicht implementiert. Für Portraits, Bilder, Audio, RSS-Inhalte und verwendete Modelle sind Urheber-, Persönlichkeits- und Lizenzrechte zu prüfen.
 - Keine Zugangsdaten in `config.json` oder das öffentliche Repository schreiben. RSS-Inhalte sind fremde, nicht vertrauenswürdige Eingaben.
 - Für Inhalt, sachliche Richtigkeit und Veröffentlichung der Sendung bleibt der Betreiber verantwortlich.
+
+
+## Zuverlässiger Zeitplan mit externem Taktgeber (optional)
+
+GitHub startet Zeitplan-Läufe (`schedule`) nur nach Möglichkeit. Bei hoher Last werden viele Auslöser verzögert oder ganz ausgelassen. Im November 2026 lief der stündliche Sendungsworkflow so nur drei- bis fünfmal am Tag, der viertelstündliche Kurzupdate-Workflow teilweise nur viermal am Tag. Abhilfe schafft ein kostenloser externer Cron-Dienst, zum Beispiel [cron-job.org](https://cron-job.org), der die Workflows über die GitHub-API startet. Der GitHub-Zeitplan bleibt als Rückfallebene aktiv.
+
+**Doppelte Sendungen entstehen dabei nicht:** Der externe Taktgeber startet die Sendung mit `trigger=schedule`. Dann prüft `scripts/check_schedule.py` wie beim GitHub-Zeitplan, ob ein Zeitfenster fällig und noch nicht veröffentlicht ist. Ein manueller Start in der Actions-Oberfläche (Standard `trigger=manual`) produziert weiterhin immer. Kurzupdates erkennen bereits veröffentlichte Meldungen selbst; zusätzliche Läufe erzeugen keine Duplikate.
+
+### 1. Eingeschränkten GitHub-Token anlegen
+
+1. Auf GitHub **Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token** öffnen.
+2. **Repository access:** *Only select repositories* und ausschließlich das eigene PersonalNewsHost-Repository wählen.
+3. **Permissions → Repository permissions → Actions:** *Read and write*. Alle anderen Rechte bleiben auf *No access* (Metadata ist automatisch lesend).
+4. Ablaufdatum setzen (z. B. 1 Jahr) und sich daran erinnern, den Token rechtzeitig zu erneuern.
+
+Dieser Token kann nur Workflows starten, abbrechen oder Läufe verwalten. Er kann keinen Code ändern und keine Secrets lesen. Trotzdem gilt: nur beim Cron-Dienst hinterlegen, nie in das Repository, `config.json`, Issues oder Screenshots. Bei Verdacht auf Offenlegung auf GitHub widerrufen.
+
+### 2. Zwei Cron-Jobs anlegen
+
+Für beide Jobs gilt: Methode **POST**, Zeitzone beliebig, und diese HTTP-Header:
+
+```
+Accept: application/vnd.github+json
+Authorization: Bearer <TOKEN>
+X-GitHub-Api-Version: 2022-11-28
+Content-Type: application/json
+```
+
+| Job | URL | Body | Zeitplan |
+| --- | --- | --- | --- |
+| Sendung | `https://api.github.com/repos/<OWNER>/<REPO>/actions/workflows/news.yml/dispatches` | `{"ref":"main","inputs":{"trigger":"schedule"}}` | stündlich, Minute 17 |
+| Kurzupdates | `https://api.github.com/repos/<OWNER>/<REPO>/actions/workflows/short-updates.yml/dispatches` | `{"ref":"main"}` | Minute 7, 22, 37 und 52 |
+
+`<OWNER>/<REPO>` durch das eigene Repository ersetzen, z. B. `ploeffler/PersonalNewsHost`. GitHub antwortet bei Erfolg mit **HTTP 204** (ohne Inhalt). Den Job im Cron-Dienst so einstellen, dass er bei Fehlern benachrichtigt. Test von der Kommandozeile:
+
+```
+curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: Bearer <TOKEN>" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+  https://api.github.com/repos/<OWNER>/<REPO>/actions/workflows/news.yml/dispatches \
+  -d '{"ref":"main","inputs":{"trigger":"schedule"}}'
+```
+
+Im Log des Schritts „Check configured production schedule“ steht danach `Production enabled …` oder `Production skipped …: latest due slot already published`.
+
+### Grenzen
+
+- Beide Workflows teilen sich die Sperre `personalnewshost-publish`. GitHub hält je Sperre nur einen wartenden Lauf; kommt ein weiterer hinzu, wird der ältere wartende abgebrochen. Die versetzten Minuten (Sendung :17, Kurzupdates :07/:22/:37/:52) halten Überschneidungen gering. Eine ausgefallene Sendung holt der nächste Lauf nach.
+- Zusätzliche Läufe verbrauchen Actions-Minuten. Für öffentliche Repositories sind Standard-Runner kostenlos; private Forks verbrauchen ihr Freikontingent. Der Prüfschritt einer nicht fälligen Sendung dauert nur wenige Sekunden.
+- Der externe Dienst ist ein weiterer Anbieter mit eigenen Nutzungsbedingungen und Verfügbarkeit.
 
 
 ## Telegram für eigene Forks (optional)
