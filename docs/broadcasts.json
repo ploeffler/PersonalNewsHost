@@ -1,38 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261111T075125Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 11.11.2026 um 08:51 Uhr",
-      "created_at": 1794383485.316528,
-      "video": "broadcasts/20261111T075125Z.mp4",
-      "sources": [
-        {
-          "title": "Ungewöhnlich viel Lob für Biden in Trump-Brief",
-          "url": "https://www.krone.at/4371069"
-        },
-        {
-          "title": "Firmen dürfen nicht zu falscher Geschlechtszuschreibung zwingen",
-          "url": "https://www.kleinezeitung.at/artikel/41441019/firmen-duerfen-nicht-zu-falscher-geschlechtszuschreibung-zwingen"
-        },
-        {
-          "title": "Chat-Überwachung, Kopftuchverbot und Co: Stellen Sie VfGH-Präsident Grabenwarter Ihre Fragen",
-          "url": "https://www.derstandard.at/jetzt/livebericht/3000000346283/chat-ueberwachung-kopftuchverbot-und-co-stellen-sie-vfgh-praesident-grabenwarter-ihre-fragen?ref=rss"
-        },
-        {
-          "title": "Kennedy-Familie klagt gegen Trumps Triumphbogen",
-          "url": "https://orf.at/stories/3447866/"
-        },
-        {
-          "title": "Arbeitsunfall",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261111T075125Z.txt",
-      "subtitles": "broadcasts/20261111T075125Z.vtt",
-      "subtitle_download": "broadcasts/20261111T075125Z.srt"
-    },
-    {
       "id": "20261111T225002Z",
       "kind": "broadcast",
       "title": "Nachrichten 11.11.2026 um 23:50 Uhr",
@@ -67,6 +35,42 @@
       "transcript": "broadcasts/20261111T225002Z.txt",
       "subtitles": "broadcasts/20261111T225002Z.vtt",
       "subtitle_download": "broadcasts/20261111T225002Z.srt"
+    },
+    {
+      "id": "20261112T035303Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 12.11.2026 um 04:53 Uhr",
+      "created_at": 1794455583.549477,
+      "video": "broadcasts/20261112T035303Z.mp4",
+      "sources": [
+        {
+          "title": "PH Steiermark: Aufholjagd für Kinder mit Rechenschwäche",
+          "url": "https://www.kleinezeitung.at/artikel/41401189/ph-steiermark-aufholjagd-fuer-kinder-mit-rechenschwaeche"
+        },
+        {
+          "title": "Bob Dylan: Überraschendes Hochamt einer Legende",
+          "url": "https://www.krone.at/4372258"
+        },
+        {
+          "title": "Demokrat Colom gewinnt Senatssitz für Mississippi – den 55. für seine Partei",
+          "url": "https://www.derstandard.at/story/3000000348824/demokrat-colom-gewinnt-senatssitz-fuer-mississippi-den-55-fuer-seine-partei?ref=rss"
+        },
+        {
+          "title": "Demokrat erobert Senatssitz in Mississippi",
+          "url": "https://orf.at/stories/3447947/"
+        },
+        {
+          "title": "CNN-Prognose: Demokrat erobert Senatssitz in Mississippi",
+          "url": "https://orf.at/stories/3447949/"
+        },
+        {
+          "title": "Radfahrerin mit Hund kollidiert",
+          "url": ""
+        }
+      ],
+      "transcript": "broadcasts/20261112T035303Z.txt",
+      "subtitles": "broadcasts/20261112T035303Z.vtt",
+      "subtitle_download": "broadcasts/20261112T035303Z.srt"
     }
   ]
 }

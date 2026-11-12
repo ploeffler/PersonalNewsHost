@@ -1,14 +1,154 @@
 {
   "version": 1,
   "mode": "production",
-  "generated_at": 1794437398.546115,
-  "source_updated_at": 1794437377.794113,
-  "source_digest": "369436f2f91a75438374d0013a22f77099959910581f92ac4558de50d06e6a96",
+  "generated_at": 1794455581.270939,
+  "source_updated_at": 1794455551.234952,
+  "source_digest": "daeeb5edc048050ca72345fb3588cd80bbf23da51705588c191f01e0aff9ff58",
   "scope": "stored_source_support",
   "method": "local_extractive_multi_source",
   "independent_fact_check": false,
   "max_sentences": 2,
   "sources": {
+    "980692dccac8f2651f476f4b": {
+      "id": "980692dccac8f2651f476f4b",
+      "title": "PH Steiermark: Aufholjagd für Kinder mit Rechenschwäche",
+      "text": "Knapp ein Viertel verlässt die Volksschule mit einer Rechenschwäche. Die PH Steiermark bereitet Lehrkräfte in der nächsten Schulstufe auf die Konsequenzen vor.",
+      "url": "https://www.kleinezeitung.at/artikel/41401189/ph-steiermark-aufholjagd-fuer-kinder-mit-rechenschwaeche",
+      "published_at": 1794450060.0,
+      "first_seen_at": 1794455551.234952,
+      "feed_urls": [
+        "https://www.kleinezeitung.at/rss/oesterreich",
+        "https://www.kleinezeitung.at/rss/steiermark"
+      ],
+      "media": [
+        {
+          "url": "https://img.kleinezeitung.at/public/incoming/n2hud6-20photomichaelapucherandrea-kramermathevielfalt6-2025jpg/alternates/BASE_LANDSCAPE/20photomichaelapucher_Andrea%20Kramer_Mathevielfalt_6-2025.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://img.kleinezeitung.at/public/incoming/n2hud6-20photomichaelapucherandrea-kramermathevielfalt6-2025jpg/alternates/BASE_LANDSCAPE/20photomichaelapucher_Andrea%20Kramer_Mathevielfalt_6-2025.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://img.kleinezeitung.at/public/incoming/n2hud6-20photomichaelapucherandrea-kramermathevielfalt6-2025jpg/alternates/BASE_LANDSCAPE/20photomichaelapucher_Andrea%20Kramer_Mathevielfalt_6-2025.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Knapp ein Viertel verlässt die Volksschule mit einer Rechenschwäche. Die PH Steiermark bereitet Lehrkräfte in der nächsten Schulstufe auf die Konsequenzen vor.",
+      "rss_revision_at": 1794450060.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41401189/ph-steiermark-aufholjagd-fuer-kinder-mit-rechenschwaeche",
+        "last_attempt_at": 1794455551.234952,
+        "rss_fingerprint": "0f88ef1f0f44233552eff477f25e961d63d76c505f50ba05540aedfe109718b3"
+      },
+      "publisher": "kleinezeitung.at"
+    },
+    "4db0a13939b9a5eeeb5e6843": {
+      "id": "4db0a13939b9a5eeeb5e6843",
+      "title": "Bob Dylan: Überraschendes Hochamt einer Legende",
+      "text": "Vor rund 10.000 Fans in der fast ausverkauften Wiener Stadthalle zelebrierte Bob Dylan das erste seiner zwei „Krone“-Wien-Konzerte. Worte ans Publikum und Hits gab es keine, dafür einen gut aufgelegten Künstler, eine famose Band und ein begeistertes Publikum. Ein in dieser Form nicht erwarteter Triumph – für heute Abend (Wien) und 14. November (Salzburg) gibt es noch Restkarten.",
+      "url": "https://www.krone.at/4372258",
+      "published_at": 1794441481.0,
+      "first_seen_at": 1794445495.960021,
+      "feed_urls": [
+        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+      ],
+      "media": [
+        {
+          "url": "https://imgl.krone.at/scaled/4351253/va099cc/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4351253/va099cc/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4351253/va099cc/630x356.jpg",
+          "kind": "image"
+        },
+        {
+          "url": "https://imgl.krone.at/scaled/4351253/va099cc/630x356.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Vor rund 10.000 Fans in der fast ausverkauften Wiener Stadthalle zelebrierte Bob Dylan das erste seiner zwei „Krone“-Wien-Konzerte. Worte ans Publikum und Hits gab es keine, dafür einen gut aufgelegten Künstler, eine famose Band und ein begeistertes Publikum. Ein in dieser Form nicht erwarteter Triumph – für heute Abend (Wien) und 14. November (Salzburg) gibt es noch Restkarten.",
+      "rss_revision_at": 1794443944.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "krone.at"
+    },
+    "f7660a818cba8703b52a72c6": {
+      "id": "f7660a818cba8703b52a72c6",
+      "title": "Demokrat Colom gewinnt Senatssitz für Mississippi – den 55. für seine Partei",
+      "text": "Mit dem Sieg des Außenseiters im republikanisch dominierten Südstaat ist nur noch die Wahl um den Senatssitz in Alaska unentschieden. Auch dort ist die Demokratin Mary Peltola klar Favoritin",
+      "url": "https://www.derstandard.at/story/3000000348824/demokrat-colom-gewinnt-senatssitz-fuer-mississippi-den-55-fuer-seine-partei?ref=rss",
+      "published_at": 1794439849.0,
+      "first_seen_at": 1794445495.960021,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/fHTY9Q/rs:fill:150:0/plain/lido-images/2026/11/11/814ec91d-1d5b-4dad-bf32-2a04b64dd13e.jpg",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Mit dem Sieg des Außenseiters im republikanisch dominierten Südstaat ist nur noch die Wahl um den Senatssitz in Alaska unentschieden. Auch dort ist die Demokratin Mary Peltola klar Favoritin",
+      "rss_revision_at": 1794439849.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "derstandard.at"
+    },
+    "ee4b91e71b5caa422292cd00": {
+      "id": "ee4b91e71b5caa422292cd00",
+      "title": "Demokrat erobert Senatssitz in Mississippi",
+      "text": "Die republikanische US-Senatorin Cindy Hyde-Smith hat laut US-Medien das Senatsrennen im traditionell konservativen US-Bundesstaat Mississippi gegen den Demokraten Scott Colom verloren. Kurz nach dem Sender CNN erklärten am Mittwoch auch andere Medien – darunter der Sender NBC und die Nachrichtenagentur AP – Colom zum Sieger. Er wird demnach der erste demokratische Senator in über 40 Jahren sowie der erste schwarze Senator in dem Südstaat seit den 1880er Jahren. Das Rennen war bis zuletzt extrem eng.",
+      "url": "https://orf.at/stories/3447947/",
+      "published_at": 1794438943.0,
+      "first_seen_at": 1794445495.960021,
+      "feed_urls": [
+        "https://rss.orf.at/news.xml"
+      ],
+      "media": [],
+      "rss_text": "Die republikanische US-Senatorin Cindy Hyde-Smith hat laut US-Medien das Senatsrennen im traditionell konservativen US-Bundesstaat Mississippi gegen den Demokraten Scott Colom verloren. Kurz nach dem Sender CNN erklärten am Mittwoch auch andere Medien – darunter der Sender NBC und die Nachrichtenagentur AP – Colom zum Sieger. Er wird demnach der erste demokratische Senator in über 40 Jahren sowie der erste schwarze Senator in dem Südstaat seit den 1880er Jahren. Das Rennen war bis zuletzt extrem eng.",
+      "rss_revision_at": 1794438943.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "publisher": "orf.at"
+    },
+    "37bd7140c45bbcb69f112be1": {
+      "id": "37bd7140c45bbcb69f112be1",
+      "title": "Standardrätsel L 11441",
+      "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
+      "url": "https://www.derstandard.at/story/3000000347080/standardraetsel-l-11441?ref=rss",
+      "published_at": 1794438060.0,
+      "first_seen_at": 1794445495.960021,
+      "feed_urls": [
+        "https://www.derstandard.at/rss"
+      ],
+      "media": [
+        {
+          "url": "https://i.ds.at/eqM6Eg/rs:fill:150:0/plain/lido-images/2023/05/19/17b073a2-2297-406c-a459-faf4e5a469ef.png",
+          "kind": "image"
+        }
+      ],
+      "rss_text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
+      "rss_revision_at": 1794438060.0,
+      "content_kind": "news",
+      "text_origin": "rss",
+      "article_fetch": {
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347080/standardraetsel-l-11441?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000347080/standardraetsel-l-11441?ref=rss",
+        "last_attempt_at": 1794445495.960021,
+        "rss_fingerprint": "f9f21aca372692228ba5bf9bd8b6acdf012d28e94abe75a220029c59525ea0e5"
+      },
+      "publisher": "derstandard.at"
+    },
     "a86d4d48b6d7451350676382": {
       "id": "a86d4d48b6d7451350676382",
       "title": "Bericht: Nvidia bereitet Huang-Entlassung vor",
@@ -37,6 +177,8 @@
         "fetched_at": 1794437377.794113,
         "text_sha256": "84a74d9eb6c5334420ca278f5f20ffb357be5cd325cc3b2ef08aa484463443a1"
       },
+      "broadcast_id": "20261111T225002Z",
+      "broadcast_position": 1,
       "publisher": "orf.at"
     },
     "edbf30e327f8c674e1e53e90": {
@@ -88,9 +230,11 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41443885/kuechenbrand-in-tirol-frau-mit-rauchgasvergiftung",
-        "last_attempt_at": 1794437377.794113,
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "3f7e12a19e9d670b690623922e036a67b5d359656b0d0d867a66b31d31cc5ca9"
       },
+      "broadcast_id": "20261111T225002Z",
+      "broadcast_position": 2,
       "publisher": "kleinezeitung.at"
     },
     "910983ab2d1f252863a9f12d": {
@@ -143,7 +287,7 @@
     "4c4a809328df588706d3e7cf": {
       "id": "4c4a809328df588706d3e7cf",
       "title": "53 Prozent mehr Einbürgerungen in Wien",
-      "text": "Bereits 5037 Menschen in Wien haben 2026 ihren bisherigen Pass gegen einen rot-weiß-roten getauscht. Damit entfällt mehr ein Drittel aller Einbürgerungen von in Österreich lebenden Menschen auf die Bundeshauptstadt. Trotzdem zeigt ein Blick auf Details: Wien ist strenger als andere Bundesländer.",
+      "text": "Bereits 5037 Menschen in Wien haben 2026 ihren bisherigen Pass gegen einen rot-weiß-roten getauscht. Damit entfällt mehr als ein Drittel aller Einbürgerungen von in Österreich lebenden Menschen auf die Bundeshauptstadt. Trotzdem zeigt ein Blick auf Details: Wien ist strenger als andere Bundesländer.",
       "url": "https://www.krone.at/4371231",
       "published_at": 1794434397.0,
       "first_seen_at": 1794437377.794113,
@@ -168,10 +312,12 @@
           "kind": "image"
         }
       ],
-      "rss_text": "Bereits 5037 Menschen in Wien haben 2026 ihren bisherigen Pass gegen einen rot-weiß-roten getauscht. Damit entfällt mehr ein Drittel aller Einbürgerungen von in Österreich lebenden Menschen auf die Bundeshauptstadt. Trotzdem zeigt ein Blick auf Details: Wien ist strenger als andere Bundesländer.",
+      "rss_text": "Bereits 5037 Menschen in Wien haben 2026 ihren bisherigen Pass gegen einen rot-weiß-roten getauscht. Damit entfällt mehr als ein Drittel aller Einbürgerungen von in Österreich lebenden Menschen auf die Bundeshauptstadt. Trotzdem zeigt ein Blick auf Details: Wien ist strenger als andere Bundesländer.",
       "rss_revision_at": 1794434397.0,
       "content_kind": "news",
       "text_origin": "rss",
+      "broadcast_id": "20261111T225002Z",
+      "broadcast_position": 3,
       "publisher": "krone.at"
     },
     "e01ffd65cc38329035bbb60a": {
@@ -206,6 +352,8 @@
       "rss_revision_at": 1794434298.0,
       "content_kind": "news",
       "text_origin": "rss",
+      "broadcast_id": "20261111T225002Z",
+      "broadcast_position": 4,
       "publisher": "krone.at"
     },
     "f5977c3e7244271ebf49f1c9": {
@@ -269,6 +417,8 @@
         "last_attempt_at": 1794437377.794113,
         "rss_fingerprint": "a74c7c39ffe0d2a980d4d8cd571eb560a5c2984ded9c7609db2dd5e213593b70"
       },
+      "broadcast_id": "20261111T225002Z",
+      "broadcast_position": 4,
       "publisher": "derstandard.at"
     },
     "9273aa2730448085806e283e": {
@@ -326,7 +476,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41443802/oevp-verliert-buergermeister-in-kampfabstimmung-an-die-fpoe",
-        "last_attempt_at": 1794437377.794113,
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "a85d66b2ab76fa6b0dfc95b5b192f3628825110ef9f28e0e0a974c5218263b89"
       },
       "publisher": "kleinezeitung.at"
@@ -410,7 +560,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41443870/satirepreis-goldenes-brett-fuer-fpoe-mandatar-hauser",
-        "last_attempt_at": 1794437377.794113,
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "ee40df0a2a4617817bdc8e3d74ba9bc88b5d88a0552a8ed9816f53af89c56ba1"
       },
       "publisher": "kleinezeitung.at"
@@ -447,7 +597,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41443814/sporrer-zu-spionagegesetz-sind-verpflichtet-internationale-zu-schuetzen",
-        "last_attempt_at": 1794437377.794113,
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "1e644a6ac51defb25eb82400bccaaa31e4131350c2c85dd05248b2ba7d968bac"
       },
       "publisher": "kleinezeitung.at"
@@ -513,7 +663,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41442707/herzenssache-als-tv-spektakel-am-kaerntner-hof-fiel-die-wahl",
-        "last_attempt_at": 1794437377.794113,
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "2a471673f4f20220328f45f0841a12057d0b1a47f0f262bb25d8a3ac3aa2fe97"
       },
       "publisher": "kleinezeitung.at"
@@ -614,7 +764,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41443861/sporrer-verspricht-mehr-personal-fuer-staatsanwaelte",
-        "last_attempt_at": 1794437377.794113,
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "41b247b20abae8c8d4ad532c593b6d5b46b5f075d12eadaf923393e0c6c6023e"
       },
       "publisher": "kleinezeitung.at"
@@ -748,7 +898,7 @@
         "status": "fetch_error",
         "error_type": "TypeError",
         "requested_url": "https://www.kleinezeitung.at/artikel/41443305/fussballerische-reifepruefung-weinhandl-auf-den-spuren-von-alaba-und",
-        "last_attempt_at": 1794437377.794113,
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "fa911386283a40feb34a447018d7e70789509f975d830f959efc20276254a368"
       },
       "publisher": "kleinezeitung.at"
@@ -897,7 +1047,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41443824/prozess-um-toetung-von-38-jaehriger-startet-in-wiener-neustadt",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "74d76c1b34576cd3e6b66f5689ed70760927c3bee3e9e7decfb060a98fb08afc"
       },
       "publisher": "kleinezeitung.at"
@@ -987,7 +1140,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348819/eisenkot-warnt-netanyahu-vor-gef228hrlichen-schritten?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000348819/eisenkot-warnt-netanyahu-vor-gef228hrlichen-schritten?ref=rss",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "0042e6f017fb526c2ac02deed019bc59717959d80903f45a4856d27b84c8204c"
       },
       "publisher": "derstandard.at"
@@ -1167,7 +1323,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41443297/tod-einer-14-jaehrigen-prozess-gegen-kaerntner-arzt-wieder-vertagt",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "41c3a02154566811f1bab85ee58dfa46165baaa56ac1e0db0e7c273ff52e30b1"
       },
       "publisher": "kleinezeitung.at"
@@ -1201,7 +1360,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41443775/medien-laut-datenleak-mehr-als-400000-russen-gefallen",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "9ca87af64b5f3a39a71452d36e962f2d466fa633fff987dc65f5d51440cddb5a"
       },
       "publisher": "kleinezeitung.at"
@@ -1209,7 +1371,7 @@
     "5b01fa6e308599e1c7cbe6ef": {
       "id": "5b01fa6e308599e1c7cbe6ef",
       "title": "Kreml nimmt zwei polnische „Agenten“ fest",
-      "text": "Der russische Inlandsgeheimdienst FSB hat nach eigenen Angaben zwei „Agenten“ festgenommen. Sie sollen angeblich für Polen spioniert haben.",
+      "text": "Spionageskandal Kreml nimmt zwei polnische „Agenten“ fest Nach Angaben des FSB wurden Strafverfahren gegen die Männer eingeleitet. Der russische Inlandsgeheimdienst FSB hat nach eigenen Angaben zwei „Agenten“ festgenommen. Sie sollen angeblich für Polen spioniert haben. Die beiden Männer hätten Informationen über „Militärangehörige und Einrichtungen des russischen Verteidigungsministeriums“ für den polnischen Militär- und Inlandsgeheimdienst gesammelt, erklärte der FSB am Mittwoch. Sie seien in der an Polen angrenzenden russischen Exklave Kaliningrad gefasst worden. Später erklärte ein Gericht in Kaliningrad im Onlinedienst Telegram, die beiden Männer seien polnische Staatsbürger. Einer sei Ende Oktober festgenommen worden, der andere bereits Ende Juli. Die beiden Männer befänden sich in Untersuchungshaft. Hier ist die Verhaftung zu sehen: Weitere Personen wurden verwarnt Darüber hinaus teilte der FSB mit, es seien „offizielle Verwarnungen“ an sieben polnische und drei russische Staatsbürger ergangen, weil diese Kontakte zu polnischen Diensten gehabt hätten. Den Polen sei die Einreise nach Russland untersagt worden. Der Sprecher des polnischen Geheimdienstkoordinators, Jacek Dobrzynski, wertete die Festnahmen auf X als eine „weitere Provokation und ein weiteres Desinformationsmanöver“ der russischen Seite. Die diplomatischen Beziehungen zwischen Warschau und Moskau befinden sich seit dem Beginn der russischen Offensive in der Ukraine auf einem Tiefpunkt. Russland gibt regelmäßig Festnahmen von Menschen bekannt, die für westliche Länder spioniert haben sollen. In der vergangenen Woche meldeten die polnischen Behörden ihrerseits die Festnahmen von sechs Verdächtigen, die für Russland spioniert haben sollen. Loading... 00:00 / 00:00 Loading... 00:00 00:00 1.0x Geschwindigkeit Außenpolitik 11.11.2026 20:26 Ähnliche Themen Kreml Loading Newsletter ALLE NEWSLETTER",
       "url": "https://www.krone.at/4372191",
       "published_at": 1794425186.0,
       "first_seen_at": 1794437377.794113,
@@ -1237,11 +1399,20 @@
       "rss_text": "Der russische Inlandsgeheimdienst FSB hat nach eigenen Angaben zwei „Agenten“ festgenommen. Sie sollen angeblich für Polen spioniert haben.",
       "rss_revision_at": 1794425186.0,
       "content_kind": "news",
-      "text_origin": "rss",
+      "text_origin": "linked_article",
       "article_fetch": {
-        "status": "deferred",
-        "rss_fingerprint": "f997485d37c12c1f537a1428f067ff8b07c26e29e54ad4f33d1922e23d316921"
+        "status": "success",
+        "page_title": "Kreml nimmt zwei polnische „Agenten“ fest",
+        "canonical_url": "https://www.krone.at/4372191",
+        "resolved_url": "https://www.krone.at/4372191",
+        "method": "rdrr",
+        "requested_url": "https://www.krone.at/4372191",
+        "last_attempt_at": 1794455551.234952,
+        "rss_fingerprint": "f997485d37c12c1f537a1428f067ff8b07c26e29e54ad4f33d1922e23d316921",
+        "fetched_at": 1794455551.234952,
+        "text_sha256": "e870a6096d79359195112dabbe6fbd556de0707c3f152efee55df16e899a3251"
       },
+      "article_text": "Spionageskandal Kreml nimmt zwei polnische „Agenten“ fest Nach Angaben des FSB wurden Strafverfahren gegen die Männer eingeleitet. Der russische Inlandsgeheimdienst FSB hat nach eigenen Angaben zwei „Agenten“ festgenommen. Sie sollen angeblich für Polen spioniert haben. Die beiden Männer hätten Informationen über „Militärangehörige und Einrichtungen des russischen Verteidigungsministeriums“ für den polnischen Militär- und Inlandsgeheimdienst gesammelt, erklärte der FSB am Mittwoch. Sie seien in der an Polen angrenzenden russischen Exklave Kaliningrad gefasst worden. Später erklärte ein Gericht in Kaliningrad im Onlinedienst Telegram, die beiden Männer seien polnische Staatsbürger. Einer sei Ende Oktober festgenommen worden, der andere bereits Ende Juli. Die beiden Männer befänden sich in Untersuchungshaft. Hier ist die Verhaftung zu sehen: Weitere Personen wurden verwarnt Darüber hinaus teilte der FSB mit, es seien „offizielle Verwarnungen“ an sieben polnische und drei russische Staatsbürger ergangen, weil diese Kontakte zu polnischen Diensten gehabt hätten. Den Polen sei die Einreise nach Russland untersagt worden. Der Sprecher des polnischen Geheimdienstkoordinators, Jacek Dobrzynski, wertete die Festnahmen auf X als eine „weitere Provokation und ein weiteres Desinformationsmanöver“ der russischen Seite. Die diplomatischen Beziehungen zwischen Warschau und Moskau befinden sich seit dem Beginn der russischen Offensive in der Ukraine auf einem Tiefpunkt. Russland gibt regelmäßig Festnahmen von Menschen bekannt, die für westliche Länder spioniert haben sollen. In der vergangenen Woche meldeten die polnischen Behörden ihrerseits die Festnahmen von sechs Verdächtigen, die für Russland spioniert haben sollen. Loading... 00:00 / 00:00 Loading... 00:00 00:00 1.0x Geschwindigkeit Außenpolitik 11.11.2026 20:26 Ähnliche Themen Kreml Loading Newsletter ALLE NEWSLETTER",
       "publisher": "krone.at"
     },
     "ef32a3af6219f935fcc765fe": {
@@ -1274,7 +1445,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41443764/freilaufender-hund-brachte-e-bikerin-in-aich-zu-fall",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "42c71f32461bd9d529fbe8f7cd31c0ebe42c97c804649a0994854e6e106f20b1"
       },
       "publisher": "kleinezeitung.at"
@@ -1309,7 +1483,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41443564/motto-fuer-den-tuntenball-2027-in-graz-ist-enthuellt",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "7d6a2f931a82b9ee314fe155cc733fd05619b23f25c0b6827cc4a6533c7dd04b"
       },
       "publisher": "kleinezeitung.at"
@@ -1360,7 +1537,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41443748/aufschrecken-beim-einschlafen-wird-zu-wenig-ernst-genommen",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "d99e39f7e1c3f7bb9df095211c62928c5ac4c4c07a57bee7958654b69cddf927"
       },
       "publisher": "kleinezeitung.at"
@@ -1489,7 +1669,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41442128/mariatroster-sind-zur-bezirksversammlung-geladen",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "22fbd65d90cbdc0f7ef4892010242ba7ee1c23108fc0ce3e5a84735b04a5c4a1"
       },
       "publisher": "kleinezeitung.at"
@@ -1554,7 +1737,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41438552/bei-feldkirchner-weihnachtsbeleuchtung-muss-strom-gespart-werden",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "988b5538635003c8984f7b5bb2cc0654e76670da222f591e942dca913ddf6850"
       },
       "publisher": "kleinezeitung.at"
@@ -1718,7 +1904,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348696/vom-spesenbetrug-zum-spionageverdacht-die-spektakulaersten-skandale-der-tech-elite?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000348696/vom-spesenbetrug-zum-spionageverdacht-die-spektakulaersten-skandale-der-tech-elite?ref=rss",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "4fc885b48d76f18b02a54b3b80714f6a3cc6a5a3d350785325fa432cf8ae39e3"
       },
       "publisher": "derstandard.at"
@@ -1910,7 +2099,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41441799/ist-ein-handyverbot-bei-konzerten-gerechtfertigt",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "15c1d5ae793f1e8135d3667a0b2134487f7c63b70ddbc09028cd33d17a9e6dc7"
       },
       "publisher": "kleinezeitung.at"
@@ -1936,15 +2128,18 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348815/mehr-als-drei-millionen-menschen-bei-papst-messe-in-argentinien?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000348815/mehr-als-drei-millionen-menschen-bei-papst-messe-in-argentinien?ref=rss",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "945625588fbdcad863c1166629ea1d9493de10a24eaac3aa5ddfadabf93f5e31"
       },
       "publisher": "derstandard.at"
     },
     "2e6b1a4fa37bb0cba378f837": {
       "id": "2e6b1a4fa37bb0cba378f837",
-      "title": "Die Gewinnzahlen von Lotto „6 aus 45“",
-      "text": "Bei der heutigen Ziehung von Lotto „6 aus 45“ wurden folgende Gewinnzahlen ermittelt:\n\n8 12 30 37 39 42/Zusatzzahl: 16\n\nDie aktuellen LottoPlus-Zahlen lauten:\n\n6 24 25 33 35 39\n\nZweite Ziehung:\n\n4 9 16 39 44 45\n\nDie aktuelle Joker-Zahl lautet:\n\n6 4 0 4 1 0\n\nAlle Angaben ohne Gewähr",
+      "title": "Jackpot bei Lotto „6 aus 45“",
+      "text": "Bei der heutigen Ziehung von Lotto „6 aus 45“ hat niemand auf die sechs Richtigen getippt. Das bedeutet Jackpot. Im Topf liegen zusätzlich zum 1. Rang der nächsten Runde 648.370,36 Euro.\n\nEs wurden folgende Gewinnzahlen ermittelt:\n\n8 12 30 37 39 42/Zusatzzahl: 16\n\nDie aktuellen LottoPlus-Zahlen lauten:\n\n6 24 25 33 35 39\n\nZweite Ziehung:\n\n4 9 16 39 44 45\n\nDie aktuelle Joker-Zahl lautet:\n\n6 4 0 4 1 0\n\nAlle Angaben ohne Gewähr",
       "url": "https://orf.at/stories/3447933/",
       "published_at": 1794421632.0,
       "first_seen_at": 1794422769.937441,
@@ -1956,19 +2151,19 @@
       "rss_revision_at": 1794421632.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Bei der heutigen Ziehung von Lotto „6 aus 45“ wurden folgende Gewinnzahlen ermittelt:\n\n8 12 30 37 39 42/Zusatzzahl: 16\n\nDie aktuellen LottoPlus-Zahlen lauten:\n\n6 24 25 33 35 39\n\nZweite Ziehung:\n\n4 9 16 39 44 45\n\nDie aktuelle Joker-Zahl lautet:\n\n6 4 0 4 1 0\n\nAlle Angaben ohne Gewähr",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
-        "page_title": "Die Gewinnzahlen von Lotto „6 aus 45“",
+        "page_title": "Jackpot bei Lotto „6 aus 45“",
         "canonical_url": "https://orf.at/stories/3447933/",
         "resolved_url": "https://orf.at/stories/3447933/",
         "requested_url": "https://orf.at/stories/3447933/",
-        "last_attempt_at": 1794422769.937441,
-        "rss_fingerprint": "7073094f13f1bfcb4d3563beb928d4cd57bb3b72e1a8b5bef47f7b53b5da4f36",
-        "fetched_at": 1794422769.937441,
-        "text_sha256": "065a2dcdf0ab9288b19c84c5a0bc79ff39c1ffd292c1af17a191f7701ee3ff42"
+        "last_attempt_at": 1794445495.960021,
+        "rss_fingerprint": "86a0cf68289bb118ce1f731947aeea4b6334759bd2484735494782fcb02860d0",
+        "fetched_at": 1794445495.960021,
+        "text_sha256": "4d7f0a2cbf659d36e07808b2d7f8a60431489f15f35966b426a981d09679b63f"
       },
+      "article_text": "Bei der heutigen Ziehung von Lotto „6 aus 45“ hat niemand auf die sechs Richtigen getippt. Das bedeutet Jackpot. Im Topf liegen zusätzlich zum 1. Rang der nächsten Runde 648.370,36 Euro.\n\nEs wurden folgende Gewinnzahlen ermittelt:\n\n8 12 30 37 39 42/Zusatzzahl: 16\n\nDie aktuellen LottoPlus-Zahlen lauten:\n\n6 24 25 33 35 39\n\nZweite Ziehung:\n\n4 9 16 39 44 45\n\nDie aktuelle Joker-Zahl lautet:\n\n6 4 0 4 1 0\n\nAlle Angaben ohne Gewähr",
       "publisher": "orf.at"
     },
     "9c3bd419c4300a3f83f3b452": {
@@ -2088,6 +2283,8 @@
       "rss_revision_at": 1794420720.0,
       "content_kind": "news",
       "text_origin": "rss",
+      "broadcast_id": "20261111T225002Z",
+      "broadcast_position": 5,
       "publisher": "bmi.gv.at"
     },
     "15c0290975288c2364f7f20b": {
@@ -2167,7 +2364,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348664/familienurlaub-2027-hauptsache-bequem-sonnig-und-stressfrei?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000348664/familienurlaub-2027-hauptsache-bequem-sonnig-und-stressfrei?ref=rss",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "3a4d2d2977f32ad1824c3de1e8f8d7d8c5c26afd8bc18edb1d0a709720094622"
       },
       "publisher": "derstandard.at"
@@ -2235,7 +2435,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41443506/sie-sind-das-neue-prinzenpaar-in-bad-st-leonhard",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "80678a627d24926da8732d75634f20fed6a35ea6f9802de9fbcbfddd2e39bccb"
       },
       "publisher": "kleinezeitung.at"
@@ -2425,7 +2628,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348768/netanjahus-versuch-einer-spaltung-der-knesset-koennte-nach-hinten-losgehen?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000348768/netanjahus-versuch-einer-spaltung-der-knesset-koennte-nach-hinten-losgehen?ref=rss",
+        "last_attempt_at": 1794455551.234952,
         "rss_fingerprint": "932348189fb8e4d1bfd7a829c1aa693bfedc0b3ce188f46c1fe62983b1cb5a04"
       },
       "publisher": "derstandard.at"
@@ -2577,9 +2783,9 @@
         "canonical_url": "https://orf.at/stories/3447930/",
         "resolved_url": "https://orf.at/stories/3447930/",
         "requested_url": "https://orf.at/stories/3447930/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "64fcce9dfb4a5dfdaa098a330de128915ac813a9b296687841c8bec5802dfb7d",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "f9ad44452fb8fb4a5d80ed4feb87e0e68308accc9d9cad9b9a3071cce82734c0"
       },
       "publisher": "orf.at"
@@ -2621,7 +2827,7 @@
     "199dbd7ec5856b5fa9b72e83": {
       "id": "199dbd7ec5856b5fa9b72e83",
       "title": "UNO warnt vor Verzögerungen bei Gaza-Hilfen",
-      "text": "UNO-Nothilfekoordinator Tom Fletcher warnt angesichts der anhaltenden Lieferblockaden für Wintermaterial vor weiteren Todesopfern im Gazastreifen. Es dürfe keine Verzögerungen mehr geben, sagte er heute.\n\n„Beendet diese kollektive Bestrafung.“ Fletcher sagte weiter, erst habe es geheißen, man müsse die israelischen Wahlen abwarten – diese hatten Ende Oktober stattgefunden. Jetzt werde man bis zur Regierungsbildung dort vertröstet. „Falls jemand Zweifel am humanitären Völkerrecht haben sollte: Das ist keine akzeptable Rechtfertigung“, teilte Fletcher mit. Es stünden Menschenleben auf dem Spiel.\n\n„Was das Ganze noch ärgerlicher macht, ist, dass die Menschen diesem unnötigen Risiko durch das Wetter ausgesetzt sind, das keine Gefahr darstellt, solange angemessene Unterkünfte zur Verfügung stehen. Und es wäre auch keine solche Gefahr, hätten wir ihnen angemessene Zelte und die notwendige Winterausrüstung zur Verfügung stellen können.“\n\nFletcher appellierte an Regierungen, mehr Geld für die Versorgung der Palästinenser und Palästinenserinnen zur Verfügung zu stellen. „Beendet dieses vorhersehbare, vermeidbare Leid. Die Welt ist hier nicht machtlos.“\n\nIsrael kontrolliert, welche Güter in den Gazastreifen gelangen. Die Vereinten Nationen warten nach Angaben von Fletcher auf Liefergenehmigungen für warme Kleidung, Decken, Bettzeug, bessere Unterkünfte und Heizungen.\n\nEbenso müssten Generatoren, Benzin, Motoröl, Material für das Abpumpen von Wasser sowie Aufräumarbeiten endlich zugelassen werden. Bei Material begründet Israel die Verweigerung oft mit dem Argument, Terroristen könnten das zu Angriffen auf israelische Soldaten nutzen.\n\nZudem wäre die Lage besser, wenn die Palästinenser im Gazastreifen nicht auf einem schmalen Gebietsstreifen zusammengepfercht wären, sagte Fletcher. Das israelische Militär beansprucht mehr als 60 Prozent des rund 365 Quadratkilometer großen Gazastreifens als Sicherheitszone.\n\nNach UNO-Informationen soll diese auf 70 Prozent ausgeweitet werden. Der Leiter des UNO-Menschenrechtsbüros für die besetzten palästinensischen Gebiete, Adschit Sunghai, spricht von einem Kriegsverbrechen, weil Israel die Bevölkerung als Besatzungsmacht nicht vertreiben dürfe.",
+      "text": "UNO-Nothilfekoordinator Tom Fletcher warnt angesichts der anhaltenden Lieferblockaden für Wintermaterial vor weiteren Todesopfern im Gazastreifen. Es dürfe keine Verzögerungen mehr geben, sagte er gestern.\n\n„Beendet diese kollektive Bestrafung.“ Fletcher sagte weiter, erst habe es geheißen, man müsse die israelischen Wahlen abwarten – diese hatten Ende Oktober stattgefunden. Jetzt werde man bis zur Regierungsbildung dort vertröstet. „Falls jemand Zweifel am humanitären Völkerrecht haben sollte: Das ist keine akzeptable Rechtfertigung“, teilte Fletcher mit. Es stünden Menschenleben auf dem Spiel.\n\n„Was das Ganze noch ärgerlicher macht, ist, dass die Menschen diesem unnötigen Risiko durch das Wetter ausgesetzt sind, das keine Gefahr darstellt, solange angemessene Unterkünfte zur Verfügung stehen. Und es wäre auch keine solche Gefahr, hätten wir ihnen angemessene Zelte und die notwendige Winterausrüstung zur Verfügung stellen können.“\n\nFletcher appellierte an Regierungen, mehr Geld für die Versorgung der Palästinenser und Palästinenserinnen zur Verfügung zu stellen. „Beendet dieses vorhersehbare, vermeidbare Leid. Die Welt ist hier nicht machtlos.“\n\nIsrael kontrolliert, welche Güter in den Gazastreifen gelangen. Die Vereinten Nationen warten nach Angaben von Fletcher auf Liefergenehmigungen für warme Kleidung, Decken, Bettzeug, bessere Unterkünfte und Heizungen.\n\nEbenso müssten Generatoren, Benzin, Motoröl, Material für das Abpumpen von Wasser sowie Aufräumarbeiten endlich zugelassen werden. Bei Material begründet Israel die Verweigerung oft mit dem Argument, Terroristen könnten das zu Angriffen auf israelische Soldaten nutzen.\n\nZudem wäre die Lage besser, wenn die Palästinenser im Gazastreifen nicht auf einem schmalen Gebietsstreifen zusammengepfercht wären, sagte Fletcher. Das israelische Militär beansprucht mehr als 60 Prozent des rund 365 Quadratkilometer großen Gazastreifens als Sicherheitszone.\n\nNach UNO-Informationen soll diese auf 70 Prozent ausgeweitet werden. Der Leiter des UNO-Menschenrechtsbüros für die besetzten palästinensischen Gebiete, Adschit Sunghai, spricht von einem Kriegsverbrechen, weil Israel die Bevölkerung als Besatzungsmacht nicht vertreiben dürfe.",
       "url": "https://orf.at/stories/3447929/",
       "published_at": 1794418207.0,
       "first_seen_at": 1794422769.937441,
@@ -2633,7 +2839,7 @@
       "rss_revision_at": 1794418207.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "UNO-Nothilfekoordinator Tom Fletcher warnt angesichts der anhaltenden Lieferblockaden für Wintermaterial vor weiteren Todesopfern im Gazastreifen. Es dürfe keine Verzögerungen mehr geben, sagte er heute.\n\n„Beendet diese kollektive Bestrafung.“ Fletcher sagte weiter, erst habe es geheißen, man müsse die israelischen Wahlen abwarten – diese hatten Ende Oktober stattgefunden. Jetzt werde man bis zur Regierungsbildung dort vertröstet. „Falls jemand Zweifel am humanitären Völkerrecht haben sollte: Das ist keine akzeptable Rechtfertigung“, teilte Fletcher mit. Es stünden Menschenleben auf dem Spiel.\n\n„Was das Ganze noch ärgerlicher macht, ist, dass die Menschen diesem unnötigen Risiko durch das Wetter ausgesetzt sind, das keine Gefahr darstellt, solange angemessene Unterkünfte zur Verfügung stehen. Und es wäre auch keine solche Gefahr, hätten wir ihnen angemessene Zelte und die notwendige Winterausrüstung zur Verfügung stellen können.“\n\nFletcher appellierte an Regierungen, mehr Geld für die Versorgung der Palästinenser und Palästinenserinnen zur Verfügung zu stellen. „Beendet dieses vorhersehbare, vermeidbare Leid. Die Welt ist hier nicht machtlos.“\n\nIsrael kontrolliert, welche Güter in den Gazastreifen gelangen. Die Vereinten Nationen warten nach Angaben von Fletcher auf Liefergenehmigungen für warme Kleidung, Decken, Bettzeug, bessere Unterkünfte und Heizungen.\n\nEbenso müssten Generatoren, Benzin, Motoröl, Material für das Abpumpen von Wasser sowie Aufräumarbeiten endlich zugelassen werden. Bei Material begründet Israel die Verweigerung oft mit dem Argument, Terroristen könnten das zu Angriffen auf israelische Soldaten nutzen.\n\nZudem wäre die Lage besser, wenn die Palästinenser im Gazastreifen nicht auf einem schmalen Gebietsstreifen zusammengepfercht wären, sagte Fletcher. Das israelische Militär beansprucht mehr als 60 Prozent des rund 365 Quadratkilometer großen Gazastreifens als Sicherheitszone.\n\nNach UNO-Informationen soll diese auf 70 Prozent ausgeweitet werden. Der Leiter des UNO-Menschenrechtsbüros für die besetzten palästinensischen Gebiete, Adschit Sunghai, spricht von einem Kriegsverbrechen, weil Israel die Bevölkerung als Besatzungsmacht nicht vertreiben dürfe.",
+      "article_text": "UNO-Nothilfekoordinator Tom Fletcher warnt angesichts der anhaltenden Lieferblockaden für Wintermaterial vor weiteren Todesopfern im Gazastreifen. Es dürfe keine Verzögerungen mehr geben, sagte er gestern.\n\n„Beendet diese kollektive Bestrafung.“ Fletcher sagte weiter, erst habe es geheißen, man müsse die israelischen Wahlen abwarten – diese hatten Ende Oktober stattgefunden. Jetzt werde man bis zur Regierungsbildung dort vertröstet. „Falls jemand Zweifel am humanitären Völkerrecht haben sollte: Das ist keine akzeptable Rechtfertigung“, teilte Fletcher mit. Es stünden Menschenleben auf dem Spiel.\n\n„Was das Ganze noch ärgerlicher macht, ist, dass die Menschen diesem unnötigen Risiko durch das Wetter ausgesetzt sind, das keine Gefahr darstellt, solange angemessene Unterkünfte zur Verfügung stehen. Und es wäre auch keine solche Gefahr, hätten wir ihnen angemessene Zelte und die notwendige Winterausrüstung zur Verfügung stellen können.“\n\nFletcher appellierte an Regierungen, mehr Geld für die Versorgung der Palästinenser und Palästinenserinnen zur Verfügung zu stellen. „Beendet dieses vorhersehbare, vermeidbare Leid. Die Welt ist hier nicht machtlos.“\n\nIsrael kontrolliert, welche Güter in den Gazastreifen gelangen. Die Vereinten Nationen warten nach Angaben von Fletcher auf Liefergenehmigungen für warme Kleidung, Decken, Bettzeug, bessere Unterkünfte und Heizungen.\n\nEbenso müssten Generatoren, Benzin, Motoröl, Material für das Abpumpen von Wasser sowie Aufräumarbeiten endlich zugelassen werden. Bei Material begründet Israel die Verweigerung oft mit dem Argument, Terroristen könnten das zu Angriffen auf israelische Soldaten nutzen.\n\nZudem wäre die Lage besser, wenn die Palästinenser im Gazastreifen nicht auf einem schmalen Gebietsstreifen zusammengepfercht wären, sagte Fletcher. Das israelische Militär beansprucht mehr als 60 Prozent des rund 365 Quadratkilometer großen Gazastreifens als Sicherheitszone.\n\nNach UNO-Informationen soll diese auf 70 Prozent ausgeweitet werden. Der Leiter des UNO-Menschenrechtsbüros für die besetzten palästinensischen Gebiete, Adschit Sunghai, spricht von einem Kriegsverbrechen, weil Israel die Bevölkerung als Besatzungsmacht nicht vertreiben dürfe.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -2641,10 +2847,10 @@
         "canonical_url": "https://orf.at/stories/3447929/",
         "resolved_url": "https://orf.at/stories/3447929/",
         "requested_url": "https://orf.at/stories/3447929/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "722ceb5705cccb6f72e0c12db69cbb5d08e3976c3c930a987bf310a1c270ae20",
-        "fetched_at": 1794422769.937441,
-        "text_sha256": "a50e1b94b7fb2d16893414e9a18a871df20a051e662bdbf737c84fe1edbac85f"
+        "fetched_at": 1794445495.960021,
+        "text_sha256": "58e8c158e958e52c11d017847e8834b3fbc8b2a067fe5f5e253a20186ab6da66"
       },
       "publisher": "orf.at"
     },
@@ -2887,7 +3093,7 @@
     "7cb4797f5d05c66614d407de": {
       "id": "7cb4797f5d05c66614d407de",
       "title": "Russischer Botschafter in den USA gestorben",
-      "text": "Der russische Botschafter in den USA, Alexander Dartschiew, ist nach heutigen Angaben des Moskauer Außenministeriums gestorben. Der Karrierediplomat sei 66 Jahre alt geworden. Zur Todesursache und zu den Umständen wurden keine Angaben gemacht.\n\nDartschiew hatte den Posten in Washington erst im März 2025 angetreten, nachdem die USA und Russland ihre angespannten Beziehungen diplomatisch wieder hochgestuft hatten.\n\nVorher hatte die russische Botschaft in den USA ein halbes Jahr lang keinen Botschafter gehabt. Von 2014 bis 2021 war Dartschiew russischer Botschafter in Kanada.",
+      "text": "Der russische Botschafter in den USA, Alexander Dartschijew, ist nach gestrigen Angaben des Moskauer Außenministeriums gestorben. Der Karrierediplomat sei 66 Jahre alt geworden. Dartschijew sei in Moskau einer chronischen Krankheit erlegen, schrieb Ministeriumssprecherin Maria Sacharowa auf Telegram.\n\nDartschijew hatte den Posten in Washington erst im März 2025 angetreten, nachdem die USA und Russland ihre angespannten Beziehungen diplomatisch wieder hochgestuft hatten.\n\nVorher hatte die russische Botschaft in den USA ein halbes Jahr lang keinen Botschafter gehabt. Von 2014 bis 2021 war Dartschijew russischer Botschafter in Kanada.",
       "url": "https://orf.at/stories/3447927/",
       "published_at": 1794416654.0,
       "first_seen_at": 1794422769.937441,
@@ -2899,7 +3105,7 @@
       "rss_revision_at": 1794416654.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Der russische Botschafter in den USA, Alexander Dartschiew, ist nach heutigen Angaben des Moskauer Außenministeriums gestorben. Der Karrierediplomat sei 66 Jahre alt geworden. Zur Todesursache und zu den Umständen wurden keine Angaben gemacht.\n\nDartschiew hatte den Posten in Washington erst im März 2025 angetreten, nachdem die USA und Russland ihre angespannten Beziehungen diplomatisch wieder hochgestuft hatten.\n\nVorher hatte die russische Botschaft in den USA ein halbes Jahr lang keinen Botschafter gehabt. Von 2014 bis 2021 war Dartschiew russischer Botschafter in Kanada.",
+      "article_text": "Der russische Botschafter in den USA, Alexander Dartschijew, ist nach gestrigen Angaben des Moskauer Außenministeriums gestorben. Der Karrierediplomat sei 66 Jahre alt geworden. Dartschijew sei in Moskau einer chronischen Krankheit erlegen, schrieb Ministeriumssprecherin Maria Sacharowa auf Telegram.\n\nDartschijew hatte den Posten in Washington erst im März 2025 angetreten, nachdem die USA und Russland ihre angespannten Beziehungen diplomatisch wieder hochgestuft hatten.\n\nVorher hatte die russische Botschaft in den USA ein halbes Jahr lang keinen Botschafter gehabt. Von 2014 bis 2021 war Dartschijew russischer Botschafter in Kanada.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -2907,10 +3113,10 @@
         "canonical_url": "https://orf.at/stories/3447927/",
         "resolved_url": "https://orf.at/stories/3447927/",
         "requested_url": "https://orf.at/stories/3447927/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "cf90a08ecc751e71cbafa537c565342f0c229932b09dba1b8e4c4ad7a2f3a189",
-        "fetched_at": 1794422769.937441,
-        "text_sha256": "e82577ca3d82876907960fb2d31cfd67725c3b905c56bb07f098730d55e60516"
+        "fetched_at": 1794445495.960021,
+        "text_sha256": "3273e2dded3c6dea4fc49bafbae57075784d56f35f2af85ce4a79334c3896d2d"
       },
       "publisher": "orf.at"
     },
@@ -5331,9 +5537,9 @@
         "canonical_url": "https://orf.at/stories/3447919/",
         "resolved_url": "https://orf.at/stories/3447919/",
         "requested_url": "https://orf.at/stories/3447919/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "f7902aeec81e96869948ffd0f0d7a712796dedad289cafce59d79fbbc3d22842",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "8621d09f27e3e3267306223bf79e61c6a189254c19956fb9839e7b96a887c6c5"
       },
       "publisher": "orf.at"
@@ -5862,7 +6068,7 @@
     "f54e939d94797e29b9a9a070": {
       "id": "f54e939d94797e29b9a9a070",
       "title": "Impfen in Apotheken: Begutachtung zwischen Kritik und Lob",
-      "text": "Für das geplante Impfen in Apotheken ist heute die Begutachtungsfrist abgelaufen. Die Stellungnahmen bewegten sich entlang der bekannten Argumentationslinien: Ärzte und Ärztinnen großteils dagegen, Apotheker und Apothekerinnen dafür.\n\nAnregungen gab es darüber hinaus zur genauen Ausgestaltung der Regelungen, von den kommenden Verordnungen bis zur Ausgestaltung der Impfräume.\n\nKritik setzte es aber auch an der kurzen Begutachtungsfrist. Gerade einmal sieben Tage statt der eigentlich vorgesehenen sechs Wochen konnten Stellungnahmen abgegeben werden, wie etwa der Verfassungsdienst im Bundeskanzleramt bemängelte.\n\nDie Apothekerkammer begrüßte die vorgesehene gesetzliche Verankerung einer Impfberechtigung für ihre Mitglieder. Als „sachlich nicht gerechtfertigt“ kritisierte sie jedoch in ihrer Stellungnahme, dass die Impfberechtigung zusätzlich von der ausdrücklichen Aufnahme der jeweiligen Impfung per „Einzelzulassung“ per Verordnung abhängig gemacht werden solle.\n\nAuch der Apothekerverband sprach sich für klare berufsrechtliche Befugnisse, flexible räumliche Anforderungen, eine umsatzsteuerliche Gleichstellung sowie ein ausreichend breites Impfspektrum aus. Das Forum Pharmazie betonte, dass das Impfangebot in den Apotheken nicht von erwarteten Steigerungen der Durchimpfungsraten abhängen dürfe.\n\nDie Ärztekammer dagegen lehnte die mit dem Entwurf geplante Einführung einer Impfkompetenz für Apothekerinnen und Apotheker ab. Stattdessen brauche es eine Stärkung der bestehenden ärztlichen Impfstrukturen.\n\nDie Durchführung einer Impfung sei nicht auf die bloße Injektion zu reduzieren, sondern umfasse die medizinische Beurteilung, Beratung, Aufklärung und Nachbetreuung: „Eine Impfung ist mehr als nur ein Stich.“",
+      "text": "Für das geplante Impfen in Apotheken ist gestern die Begutachtungsfrist abgelaufen. Die Stellungnahmen bewegten sich entlang der bekannten Argumentationslinien: Ärzte und Ärztinnen großteils dagegen, Apotheker und Apothekerinnen dafür.\n\nAnregungen gab es darüber hinaus zur genauen Ausgestaltung der Regelungen, von den kommenden Verordnungen bis zur Ausgestaltung der Impfräume.\n\nKritik setzte es aber auch an der kurzen Begutachtungsfrist. Gerade einmal sieben Tage statt der eigentlich vorgesehenen sechs Wochen konnten Stellungnahmen abgegeben werden, wie etwa der Verfassungsdienst im Bundeskanzleramt bemängelte.\n\nDie Apothekerkammer begrüßte die vorgesehene gesetzliche Verankerung einer Impfberechtigung für ihre Mitglieder. Als „sachlich nicht gerechtfertigt“ kritisierte sie jedoch in ihrer Stellungnahme, dass die Impfberechtigung zusätzlich von der ausdrücklichen Aufnahme der jeweiligen Impfung per „Einzelzulassung“ per Verordnung abhängig gemacht werden solle.\n\nAuch der Apothekerverband sprach sich für klare berufsrechtliche Befugnisse, flexible räumliche Anforderungen, eine umsatzsteuerliche Gleichstellung sowie ein ausreichend breites Impfspektrum aus. Das Forum Pharmazie betonte, dass das Impfangebot in den Apotheken nicht von erwarteten Steigerungen der Durchimpfungsraten abhängen dürfe.\n\nDie Ärztekammer dagegen lehnte die mit dem Entwurf geplante Einführung einer Impfkompetenz für Apothekerinnen und Apotheker ab. Stattdessen brauche es eine Stärkung der bestehenden ärztlichen Impfstrukturen.\n\nDie Durchführung einer Impfung sei nicht auf die bloße Injektion zu reduzieren, sondern umfasse die medizinische Beurteilung, Beratung, Aufklärung und Nachbetreuung: „Eine Impfung ist mehr als nur ein Stich.“",
       "url": "https://orf.at/stories/3447912/",
       "published_at": 1794405355.0,
       "first_seen_at": 1794422769.937441,
@@ -5874,7 +6080,7 @@
       "rss_revision_at": 1794405355.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Für das geplante Impfen in Apotheken ist heute die Begutachtungsfrist abgelaufen. Die Stellungnahmen bewegten sich entlang der bekannten Argumentationslinien: Ärzte und Ärztinnen großteils dagegen, Apotheker und Apothekerinnen dafür.\n\nAnregungen gab es darüber hinaus zur genauen Ausgestaltung der Regelungen, von den kommenden Verordnungen bis zur Ausgestaltung der Impfräume.\n\nKritik setzte es aber auch an der kurzen Begutachtungsfrist. Gerade einmal sieben Tage statt der eigentlich vorgesehenen sechs Wochen konnten Stellungnahmen abgegeben werden, wie etwa der Verfassungsdienst im Bundeskanzleramt bemängelte.\n\nDie Apothekerkammer begrüßte die vorgesehene gesetzliche Verankerung einer Impfberechtigung für ihre Mitglieder. Als „sachlich nicht gerechtfertigt“ kritisierte sie jedoch in ihrer Stellungnahme, dass die Impfberechtigung zusätzlich von der ausdrücklichen Aufnahme der jeweiligen Impfung per „Einzelzulassung“ per Verordnung abhängig gemacht werden solle.\n\nAuch der Apothekerverband sprach sich für klare berufsrechtliche Befugnisse, flexible räumliche Anforderungen, eine umsatzsteuerliche Gleichstellung sowie ein ausreichend breites Impfspektrum aus. Das Forum Pharmazie betonte, dass das Impfangebot in den Apotheken nicht von erwarteten Steigerungen der Durchimpfungsraten abhängen dürfe.\n\nDie Ärztekammer dagegen lehnte die mit dem Entwurf geplante Einführung einer Impfkompetenz für Apothekerinnen und Apotheker ab. Stattdessen brauche es eine Stärkung der bestehenden ärztlichen Impfstrukturen.\n\nDie Durchführung einer Impfung sei nicht auf die bloße Injektion zu reduzieren, sondern umfasse die medizinische Beurteilung, Beratung, Aufklärung und Nachbetreuung: „Eine Impfung ist mehr als nur ein Stich.“",
+      "article_text": "Für das geplante Impfen in Apotheken ist gestern die Begutachtungsfrist abgelaufen. Die Stellungnahmen bewegten sich entlang der bekannten Argumentationslinien: Ärzte und Ärztinnen großteils dagegen, Apotheker und Apothekerinnen dafür.\n\nAnregungen gab es darüber hinaus zur genauen Ausgestaltung der Regelungen, von den kommenden Verordnungen bis zur Ausgestaltung der Impfräume.\n\nKritik setzte es aber auch an der kurzen Begutachtungsfrist. Gerade einmal sieben Tage statt der eigentlich vorgesehenen sechs Wochen konnten Stellungnahmen abgegeben werden, wie etwa der Verfassungsdienst im Bundeskanzleramt bemängelte.\n\nDie Apothekerkammer begrüßte die vorgesehene gesetzliche Verankerung einer Impfberechtigung für ihre Mitglieder. Als „sachlich nicht gerechtfertigt“ kritisierte sie jedoch in ihrer Stellungnahme, dass die Impfberechtigung zusätzlich von der ausdrücklichen Aufnahme der jeweiligen Impfung per „Einzelzulassung“ per Verordnung abhängig gemacht werden solle.\n\nAuch der Apothekerverband sprach sich für klare berufsrechtliche Befugnisse, flexible räumliche Anforderungen, eine umsatzsteuerliche Gleichstellung sowie ein ausreichend breites Impfspektrum aus. Das Forum Pharmazie betonte, dass das Impfangebot in den Apotheken nicht von erwarteten Steigerungen der Durchimpfungsraten abhängen dürfe.\n\nDie Ärztekammer dagegen lehnte die mit dem Entwurf geplante Einführung einer Impfkompetenz für Apothekerinnen und Apotheker ab. Stattdessen brauche es eine Stärkung der bestehenden ärztlichen Impfstrukturen.\n\nDie Durchführung einer Impfung sei nicht auf die bloße Injektion zu reduzieren, sondern umfasse die medizinische Beurteilung, Beratung, Aufklärung und Nachbetreuung: „Eine Impfung ist mehr als nur ein Stich.“",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -5882,10 +6088,10 @@
         "canonical_url": "https://orf.at/stories/3447912/",
         "resolved_url": "https://orf.at/stories/3447912/",
         "requested_url": "https://orf.at/stories/3447912/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "8fa233c1920b38dac7ef31dc226cb11dd4ec1459d5acc8b31f88e2b2f88faa14",
-        "fetched_at": 1794422769.937441,
-        "text_sha256": "6063e86eac31fe25d39c9766f1744f272b635fe1d7f53b8fcee11473b5d38b24"
+        "fetched_at": 1794445495.960021,
+        "text_sha256": "5a84fa9b7140e24d0ee60e85d144de2394ea6e2455d19e3e7d1eaa208a24654e"
       },
       "publisher": "orf.at"
     },
@@ -6723,9 +6929,9 @@
         "canonical_url": "https://orf.at/stories/3447902/",
         "resolved_url": "https://orf.at/stories/3447902/",
         "requested_url": "https://orf.at/stories/3447902/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "7cbd635101fe02b77b3c55103876afe120fc86c89077960bc1a0319b0ef8e19a",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "7fab29aea9b928319dd11722cb798872ecaac3d2d79889968dabf9b5ca555fbe"
       },
       "publisher": "orf.at"
@@ -7285,9 +7491,9 @@
         "canonical_url": "https://orf.at/stories/3447898/",
         "resolved_url": "https://orf.at/stories/3447898/",
         "requested_url": "https://orf.at/stories/3447898/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "c9ef3449374b9035d059bc5ac07eb8d6db0377d01f1375fff598fae24ecbb863",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "c88370f9310ed16aca925b1f3f1be2d6d6078e3bb2572ddbef0e36f391ef6f6a"
       },
       "publisher": "orf.at"
@@ -7479,9 +7685,9 @@
         "canonical_url": "https://orf.at/stories/3447896/",
         "resolved_url": "https://orf.at/stories/3447896/",
         "requested_url": "https://orf.at/stories/3447896/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "034bbc54c8f4d5e4aa915f8b503c98dad74163704e3b5c77fc5e5f6ab513b959",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "c45178a2e34c3a67f20adc66e9a99e5248f941ad33ea9895d31d4c2a863258b8"
       },
       "publisher": "orf.at"
@@ -7908,9 +8114,9 @@
         "canonical_url": "https://orf.at/stories/3447891/",
         "resolved_url": "https://orf.at/stories/3447891/",
         "requested_url": "https://orf.at/stories/3447891/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "d48acc033bb4a94a3ee5e6bc085a15ea560856ede2a91513ed8031d4f16c24ba",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "60096881dc52750af2579519e511744f60c8d863e52818ae6f4c4f194c1c0ad4"
       },
       "article_text": "Der zweite Verhandlungstag zwischen Vertretern Moskaus und Kiews in Abu Dhabi unter US-Vermittlung im Ringen um ein Ende des Ukraine-Krieges ist Medienberichten zufolge beendet. Das meldeten russische Staatsmedien und die ukrainische Nachrichtenagentur Interfax-Ukraine heute kurz vor Mittag.\n\nDie Fortsetzung der gestern begonnenen Gespräche dauerte laut Angaben der staatlichen russischen Nachrichtenagentur TASS weniger als zwei Stunden und war damit kürzer als der Auftakt am Vortag.\n\nMoskau und Kiew hätten nach russischen Angaben einen neuen großen Gefangenenaustausch vereinbart. Über die Zahl der Gefangenen und den Ablauf werde später informiert, sagte der russsische Verhandlungsführer Wladimir Medinski bei einer Pressekonferenz. Im Zentrum des Treffens standen laut Medinski Sicherheitsfragen.\n\nDer ukrainische Unterhändler Dawyd Arachamija sprach von „harten“ Verhandlungen. Auf der Suche nach einer Friedenslösung, seien Fortschritte erzielt worden, so Arachamija.\n\nDer ukrainische Verhandlungsführer und Auslandsgeheimdienstchef Rustem Umjerow hatte zuvor mitgeteilt, dass es zuerst ein Dreiergespräch der Delegationen aus der Ukraine, den USA und Russland gebe. Anschließend werde das Kiewer Team die europäischen Partner treffen.\n\nDem ukrainischen Präsidenten Wolodymyr Selenskyj zufolge sollte es heute um ein mögliches Dreiertreffen auf Präsidentenebene, Deeskalation bei gegenseitigen Angriffen auf den Energiebereich und im Schwarzen Meer sowie einen Gefangenenaustausch gehen.\n\nDie Teams aus Moskau und Kiew waren im Ringen um ein Ende des Ukraine-Krieges unter US-Vermittlung erstmals seit mehr als acht Monaten in Abu Dhabi zu direkten Gesprächen zusammengekommen.\n\nDie US-Gesandten Steve Witkoff und Jared Kushner reisen nach Angaben Kushners morgen zu Gesprächen mit dem russischen Präsidenten Wladimir Putin nach Moskau. „Steve und ich werden morgen nach Moskau reisen, um Präsident Putin zu treffen, um eine Bestandsaufnahme dessen zu machen, was heute besprochen wurde, und zu versuchen, Fortschritte zu erzielen“, sagte Kushner nach Abschluss der zweitägigen Gespräche in Abu Dhabi.\n\nDanach wolle er mit Witkoff auch Selenskyj in Dublin treffen, „um ihn zu briefen und einige der Ideen, die wir vorgebracht haben, zu vertiefen“. Die Verhandlungen in Abu Dhabi bezeichnete Kushner als einen „ersten guten Schritt“.",
@@ -8694,9 +8900,9 @@
         "canonical_url": "https://orf.at/stories/3447887/",
         "resolved_url": "https://orf.at/stories/3447887/",
         "requested_url": "https://orf.at/stories/3447887/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "a5a61eff7ec7f9e055d99745b314c879c5f0a8d121e3601fa076c3442e10d986",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "e44c2bb52fd116b2b7a91bd9da43263b824575c894b8faea1226ea3c2a0265e9"
       },
       "publisher": "orf.at"
@@ -8939,9 +9145,9 @@
         "canonical_url": "https://orf.at/stories/3447885/",
         "resolved_url": "https://orf.at/stories/3447885/",
         "requested_url": "https://orf.at/stories/3447885/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "f1f474d351c14a6a4a45055cc106431f7987f1856b5d348f34a961a00593ba75",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "dbafda8db94acb54a9a09c0b7f83d528c4ec1cf6c8a69c2241a1ba470b09039b"
       },
       "publisher": "orf.at"
@@ -9098,9 +9304,9 @@
         "canonical_url": "https://orf.at/stories/3447883/",
         "resolved_url": "https://orf.at/stories/3447883/",
         "requested_url": "https://orf.at/stories/3447883/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "62bc951f3ca301d47850f6346c75c75a285a79c2ce133994c14d88d0329e2c1c",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "900fa0a19582f8d9dcbad4e6b96f27af8465ec1292ade2f1327f84deccfb802b"
       },
       "publisher": "orf.at"
@@ -9292,9 +9498,9 @@
         "canonical_url": "https://orf.at/stories/3447881/",
         "resolved_url": "https://orf.at/stories/3447881/",
         "requested_url": "https://orf.at/stories/3447881/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "30e35b23b7b3a70263f9b9d9a3eebcc1125ab3c68e3da2c11b8f0ccd591355c8",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "11a5326c7aa2f8dec616ee5f6d6c6f75355fb418752d06acc14b8d62669d7c42"
       },
       "publisher": "orf.at"
@@ -9895,9 +10101,9 @@
         "canonical_url": "https://orf.at/stories/3447877/",
         "resolved_url": "https://orf.at/stories/3447877/",
         "requested_url": "https://orf.at/stories/3447877/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "3aa5df4829fb9001ffd8be73488ac6ba98f8051206c34dbb17957e55c9238bff",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "ef4ad95317919cf6e249314993063b68d22a62c1af488d0a679220491592be42"
       },
       "publisher": "orf.at"
@@ -11146,9 +11352,9 @@
         "canonical_url": "https://orf.at/stories/3447867/",
         "resolved_url": "https://orf.at/stories/3447867/",
         "requested_url": "https://orf.at/stories/3447867/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "a040e68d631b5ca2002372dee7eca36fad8992a9e82afdcec673f17deea51f7c",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "98e0277f3bb3a10348235c02907feeb167710a34f97885ed7afee3f873b1ee58"
       },
       "publisher": "orf.at"
@@ -11450,9 +11656,9 @@
         "canonical_url": "https://orf.at/stories/3447866/",
         "resolved_url": "https://orf.at/stories/3447866/",
         "requested_url": "https://orf.at/stories/3447866/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "4a5bfbda3073fc1b26d992a04e7afa953063ea1360aad3c912472b059c3c2d36",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "6960aa0afa363a31c85102c2b948dbcd34e7d3fd0c215733814246c3bb66b89b"
       },
       "broadcast_id": "20261111T075125Z",
@@ -11550,9 +11756,9 @@
         "canonical_url": "https://orf.at/stories/3447865/",
         "resolved_url": "https://orf.at/stories/3447865/",
         "requested_url": "https://orf.at/stories/3447865/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "88e5f3c680307d859d56588cdbd8725de6666caf9569dee89d65155273d1c235",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "09b6c539249a2d681a3a62a3b495040f3bf35855759ecb537c36607c0df145a2"
       },
       "publisher": "orf.at"
@@ -11722,9 +11928,9 @@
         "canonical_url": "https://orf.at/stories/3447862/",
         "resolved_url": "https://orf.at/stories/3447862/",
         "requested_url": "https://orf.at/stories/3447862/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "0ae1b0b7c907b53f280b0cc02b79810faf09acf720085e81b69b1ba6e7f3b13d",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "5520055937c8f7081548630f75698c1e37b0eea78f34ae9458518b0a286ff4cf"
       },
       "publisher": "orf.at"
@@ -12020,9 +12226,9 @@
         "canonical_url": "https://orf.at/stories/3447859/",
         "resolved_url": "https://orf.at/stories/3447859/",
         "requested_url": "https://orf.at/stories/3447859/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "6c4ac44e7514626ca58acf41bf3833bf9a3839dc6af5cfd7e61fb301f2f2e722",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "25c128f8fa01a791b10ee0af14e0e8fcea41e6444ef6c6002d19e2aec25b1b5e"
       },
       "publisher": "orf.at"
@@ -12294,9 +12500,9 @@
         "canonical_url": "https://orf.at/stories/3447858/",
         "resolved_url": "https://orf.at/stories/3447858/",
         "requested_url": "https://orf.at/stories/3447858/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "fa0e9e94344462f0c262aeb716ddc89785b665a88850a175bb83216d6fd92e28",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "3b43f45cd57ee763e6a313baa0c9586be926b2995b2029a4a0f6867261d07852"
       },
       "publisher": "orf.at"
@@ -12676,9 +12882,9 @@
         "canonical_url": "https://orf.at/stories/3447857/",
         "resolved_url": "https://orf.at/stories/3447857/",
         "requested_url": "https://orf.at/stories/3447857/",
-        "last_attempt_at": 1794422769.937441,
+        "last_attempt_at": 1794445495.960021,
         "rss_fingerprint": "9d7a6d907d856d09a6e4cfd8fccb91cd5fa6ea3bca9bbae2abef456bfce2ad5a",
-        "fetched_at": 1794422769.937441,
+        "fetched_at": 1794445495.960021,
         "text_sha256": "e0ad02fbe83b5b7f4b62d9ba29eb1a092f3847dcffaf1d5b0d47d5751e6dc3c2"
       },
       "publisher": "orf.at"
@@ -14262,193 +14468,289 @@
         "rss_fingerprint": "7fd951c86610b9ee31d7ae1c70646d23cde7a98ca5fc66d8ca16610e6a3b2830"
       },
       "publisher": "kleinezeitung.at"
-    },
-    "15e6b6518e3091f5bdab9456": {
-      "id": "15e6b6518e3091f5bdab9456",
-      "title": "Verfahren gegen US-Kriegsminister gestoppt",
-      "text": "Das US-Repräsentantenhaus stoppt den Vorstoß für ein Amtsenthebungsverfahren gegen Kriegsminister Pete Hegseth. Die republikanische Mehrheit verhinderte die Einleitung des sogenannten Impeachments und schob das Vorhaben rasch vom Tisch.",
-      "url": "https://www.krone.at/4370991",
-      "published_at": 1794357820.0,
-      "first_seen_at": 1794359844.000758,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4370992/v6adf97/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4370992/v6adf97/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4370992/v6adf97/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4370992/v6adf97/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Das US-Repräsentantenhaus stoppt den Vorstoß für ein Amtsenthebungsverfahren gegen Kriegsminister Pete Hegseth. Die republikanische Mehrheit verhinderte die Einleitung des sogenannten Impeachments und schob das Vorhaben rasch vom Tisch.",
-      "rss_revision_at": 1794357820.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "broadcast_id": "20261111T011749Z",
-      "broadcast_position": 1,
-      "publisher": "krone.at"
-    },
-    "b1ffdefb78ce2871156db7bd": {
-      "id": "b1ffdefb78ce2871156db7bd",
-      "title": "USA: Amtsenthebungsverfahren gegen Hegseth gestoppt",
-      "text": "Das US-Repräsentantenhaus hat ein drohendes Amtsenthebungsverfahren gegen Verteidigungsminister Pete Hegseth abgewendet. Die Abgeordneten stimmten mit 211 zu 204 Stimmen dafür, die Vorwürfe an den Justizausschuss zu verweisen. Da das Gremium von den Republikanern kontrolliert wird, ist der Vorstoß damit faktisch gestoppt.\n\nEingebracht worden war die Resolution von dem republikanischen Abgeordneten Thomas Massie aus Kentucky. Massie ist ein parteiinterner Kritiker von US-Präsident Donald Trump. Er war der einzige Republikaner, der gegen die Verweisung an den Ausschuss stimmte.\n\nHintergrund des Verfahrens ist der Unmut über den Krieg im Iran sowie ein US-Militäreinsatz in Venezuela im Jänner zum Sturz von Präsident Nicolas Maduro. Hegseth wies die Vorwürfe als Farce zurück. Mit der Abstimmung gewinnt Hegseth vorerst Zeit. Die Demokraten, die das Amtsenthebungsverfahren unterstützt hatten, übernehmen nach ihrem Sieg bei den Wahlen in der vergangenen Woche im kommenden Jahr die Kontrolle über den Kongress. Sie könnten dann einen neuen Versuch unternehmen.",
-      "url": "https://orf.at/stories/3447855/",
-      "published_at": 1794355041.0,
-      "first_seen_at": 1794359844.000758,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "",
-      "rss_revision_at": 1794355041.0,
-      "content_kind": "news",
-      "text_origin": "linked_article",
-      "article_text": "Das US-Repräsentantenhaus hat ein drohendes Amtsenthebungsverfahren gegen Verteidigungsminister Pete Hegseth abgewendet. Die Abgeordneten stimmten mit 211 zu 204 Stimmen dafür, die Vorwürfe an den Justizausschuss zu verweisen. Da das Gremium von den Republikanern kontrolliert wird, ist der Vorstoß damit faktisch gestoppt.\n\nEingebracht worden war die Resolution von dem republikanischen Abgeordneten Thomas Massie aus Kentucky. Massie ist ein parteiinterner Kritiker von US-Präsident Donald Trump. Er war der einzige Republikaner, der gegen die Verweisung an den Ausschuss stimmte.\n\nHintergrund des Verfahrens ist der Unmut über den Krieg im Iran sowie ein US-Militäreinsatz in Venezuela im Jänner zum Sturz von Präsident Nicolas Maduro. Hegseth wies die Vorwürfe als Farce zurück. Mit der Abstimmung gewinnt Hegseth vorerst Zeit. Die Demokraten, die das Amtsenthebungsverfahren unterstützt hatten, übernehmen nach ihrem Sieg bei den Wahlen in der vergangenen Woche im kommenden Jahr die Kontrolle über den Kongress. Sie könnten dann einen neuen Versuch unternehmen.",
-      "article_fetch": {
-        "status": "success",
-        "method": "orf_story_story",
-        "page_title": "USA: Amtsenthebungsverfahren gegen Hegseth gestoppt",
-        "canonical_url": "https://orf.at/stories/3447855/",
-        "resolved_url": "https://orf.at/stories/3447855/",
-        "requested_url": "https://orf.at/stories/3447855/",
-        "last_attempt_at": 1794437377.794113,
-        "rss_fingerprint": "60080ee009d915c6e1a816afe6f0fdef60470459403ce27cbe3cdc00785aa49a",
-        "fetched_at": 1794437377.794113,
-        "text_sha256": "982266ba4462efb61fb0dcb3946b1761b2d9009fcd3aa2d4fe28389f88c0f424"
-      },
-      "broadcast_id": "20261111T011749Z",
-      "broadcast_position": 2,
-      "publisher": "orf.at"
-    },
-    "1269efea78e83f0ed4f8e4f8": {
-      "id": "1269efea78e83f0ed4f8e4f8",
-      "title": "KI erkennt drohende Maschinenstillstände",
-      "text": "Der Spezialist für maßgeschneiderte Stahlprofile Welser Profile aus Gresten treibt die digitale Transformation im Unternehmen voran. Eine wichtige Rolle spielt dabei Künstliche Intelligenz.",
-      "url": "https://www.krone.at/4362327",
-      "published_at": 1794351679.0,
-      "first_seen_at": 1794354399.513657,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4362342/vb722a9/630x356",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4362342/vb722a9/630x356",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4362342/vb722a9/630x356",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4362342/vb722a9/630x356",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Der Spezialist für maßgeschneiderte Stahlprofile Welser Profile aus Gresten treibt die digitale Transformation im Unternehmen voran. Eine wichtige Rolle spielt dabei Künstliche Intelligenz.",
-      "rss_revision_at": 1794351679.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "krone.at"
-    },
-    "7e25ebc8167956a8336f8541": {
-      "id": "7e25ebc8167956a8336f8541",
-      "title": "Heute vorsorgen. Morgen Chancen schenken.",
-      "text": "Die erste eigene Wohnung, ein Studium oder der Führerschein: Kinder haben viele Träume. Wer frühzeitig finanziell vorsorgt, kann dazu beitragen, dass aus diesen Träumen später Wirklichkeit wird. Die Wiener Städtische unterstützt Familien mit ihrer neuen Kindervorsorge „sorgenfreies.zukunftsnest“.",
-      "url": "https://www.krone.at/4362394",
-      "published_at": 1794351675.0,
-      "first_seen_at": 1794354399.513657,
-      "feed_urls": [
-        "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-      ],
-      "media": [
-        {
-          "url": "https://imgl.krone.at/scaled/4333564/ve8e0f6/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4333564/ve8e0f6/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4333564/ve8e0f6/630x356.jpg",
-          "kind": "image"
-        },
-        {
-          "url": "https://imgl.krone.at/scaled/4333564/ve8e0f6/630x356.jpg",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Die erste eigene Wohnung, ein Studium oder der Führerschein: Kinder haben viele Träume. Wer frühzeitig finanziell vorsorgt, kann dazu beitragen, dass aus diesen Träumen später Wirklichkeit wird. Die Wiener Städtische unterstützt Familien mit ihrer neuen Kindervorsorge „sorgenfreies.zukunftsnest“.",
-      "rss_revision_at": 1794351675.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "krone.at"
-    },
-    "f403d2b010723c95f3066eee": {
-      "id": "f403d2b010723c95f3066eee",
-      "title": "Standardrätsel K 11440",
-      "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
-      "url": "https://www.derstandard.at/story/3000000347079/standardraetsel-k-11440?ref=rss",
-      "published_at": 1794351660.0,
-      "first_seen_at": 1794354399.513657,
-      "feed_urls": [
-        "https://www.derstandard.at/rss"
-      ],
-      "media": [
-        {
-          "url": "https://i.ds.at/eqM6Eg/rs:fill:150:0/plain/lido-images/2023/05/19/17b073a2-2297-406c-a459-faf4e5a469ef.png",
-          "kind": "image"
-        }
-      ],
-      "rss_text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD",
-      "rss_revision_at": 1794351660.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "article_fetch": {
-        "status": "deferred",
-        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000347079/standardraetsel-k-11440?ref=rss",
-        "requested_url": "https://www.derstandard.at/story/3000000347079/standardraetsel-k-11440?ref=rss",
-        "last_attempt_at": 1794354399.513657,
-        "rss_fingerprint": "d7ca89d27d76000639c4a23c278980a756efcf21bc1fb20fd152bc1e368e59dc"
-      },
-      "broadcast_id": "20261111T011749Z",
-      "broadcast_position": 3,
-      "publisher": "derstandard.at"
-    },
-    "96976b0a504540a41a625825": {
-      "id": "96976b0a504540a41a625825",
-      "title": "Kulturkampf um Krakauer Todesschützen",
-      "text": "Nach der erschütternden Bluttat mit neun Todesopfern in Krakau ist im politisch tief gespaltenen Polen ein Kulturkampf über die möglichen Motive des Schützen entbrannt – der sich über soziale Netzwerke in ganz Europa fortsetzt. Die erste Einschätzung einer mutmaßlich rechtsextremen Ideologie des Täters war wohl vorschnell. Im Gegenzug wird nun ventiliert, der Schütze sei eher dem linken Lager zuzuordnen – doch die Indizien sind wacklig und teilweise KI-generiert.",
-      "url": "https://orf.at/stories/3447766/",
-      "published_at": 1794351527.0,
-      "first_seen_at": 1794354399.513657,
-      "feed_urls": [
-        "https://rss.orf.at/news.xml"
-      ],
-      "media": [],
-      "rss_text": "Nach der erschütternden Bluttat mit neun Todesopfern in Krakau ist im politisch tief gespaltenen Polen ein Kulturkampf über die möglichen Motive des Schützen entbrannt – der sich über soziale Netzwerke in ganz Europa fortsetzt. Die erste Einschätzung einer mutmaßlich rechtsextremen Ideologie des Täters war wohl vorschnell. Im Gegenzug wird nun ventiliert, der Schütze sei eher dem linken Lager zuzuordnen – doch die Indizien sind wacklig und teilweise KI-generiert.",
-      "rss_revision_at": 1794351527.0,
-      "content_kind": "news",
-      "text_origin": "rss",
-      "publisher": "orf.at"
     }
   },
   "groups": [
+    {
+      "id": "c1a60adaee6f4e30a25a591c",
+      "member_ids": [
+        "980692dccac8f2651f476f4b"
+      ],
+      "newest_at": 1794450060.0,
+      "draft": {
+        "headline": "PH Steiermark: Aufholjagd für Kinder mit Rechenschwäche",
+        "headline_source_id": "980692dccac8f2651f476f4b",
+        "claims": [
+          {
+            "text": "Knapp ein Viertel verlässt die Volksschule mit einer Rechenschwäche.",
+            "source_id": "980692dccac8f2651f476f4b",
+            "field": "text",
+            "quote": "Knapp ein Viertel verlässt die Volksschule mit einer Rechenschwäche."
+          },
+          {
+            "text": "Die PH Steiermark bereitet Lehrkräfte in der nächsten Schulstufe auf die Konsequenzen vor.",
+            "source_id": "980692dccac8f2651f476f4b",
+            "field": "text",
+            "quote": "Die PH Steiermark bereitet Lehrkräfte in der nächsten Schulstufe auf die Konsequenzen vor."
+          }
+        ],
+        "text": "PH Steiermark: Aufholjagd für Kinder mit Rechenschwäche.\nKnapp ein Viertel verlässt die Volksschule mit einer Rechenschwäche. Die PH Steiermark bereitet Lehrkräfte in der nächsten Schulstufe auf die Konsequenzen vor.\nQuelle: kleinezeitung.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "980692dccac8f2651f476f4b",
+            "supported": true,
+            "quote": "Knapp ein Viertel verlässt die Volksschule mit einer Rechenschwäche."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "980692dccac8f2651f476f4b",
+            "supported": true,
+            "quote": "Die PH Steiermark bereitet Lehrkräfte in der nächsten Schulstufe auf die Konsequenzen vor."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "980692dccac8f2651f476f4b"
+      ]
+    },
+    {
+      "id": "ac764ad55ea96995f8eca47a",
+      "member_ids": [
+        "4db0a13939b9a5eeeb5e6843"
+      ],
+      "newest_at": 1794441481.0,
+      "draft": {
+        "headline": "Bob Dylan: Überraschendes Hochamt einer Legende",
+        "headline_source_id": "4db0a13939b9a5eeeb5e6843",
+        "claims": [
+          {
+            "text": "Vor rund 10.000 Fans in der fast ausverkauften Wiener Stadthalle zelebrierte Bob Dylan das erste seiner zwei „Krone“-Wien-Konzerte.",
+            "source_id": "4db0a13939b9a5eeeb5e6843",
+            "field": "text",
+            "quote": "Vor rund 10.000 Fans in der fast ausverkauften Wiener Stadthalle zelebrierte Bob Dylan das erste seiner zwei „Krone“-Wien-Konzerte."
+          },
+          {
+            "text": "Worte ans Publikum und Hits gab es keine, dafür einen gut aufgelegten Künstler, eine famose Band und ein begeistertes Publikum.",
+            "source_id": "4db0a13939b9a5eeeb5e6843",
+            "field": "text",
+            "quote": "Worte ans Publikum und Hits gab es keine, dafür einen gut aufgelegten Künstler, eine famose Band und ein begeistertes Publikum."
+          }
+        ],
+        "text": "Bob Dylan: Überraschendes Hochamt einer Legende.\nVor rund 10.000 Fans in der fast ausverkauften Wiener Stadthalle zelebrierte Bob Dylan das erste seiner zwei „Krone“-Wien-Konzerte. Worte ans Publikum und Hits gab es keine, dafür einen gut aufgelegten Künstler, eine famose Band und ein begeistertes Publikum.\nQuelle: krone.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "4db0a13939b9a5eeeb5e6843",
+            "supported": true,
+            "quote": "Vor rund 10.000 Fans in der fast ausverkauften Wiener Stadthalle zelebrierte Bob Dylan das erste seiner zwei „Krone“-Wien-Konzerte."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "4db0a13939b9a5eeeb5e6843",
+            "supported": true,
+            "quote": "Worte ans Publikum und Hits gab es keine, dafür einen gut aufgelegten Künstler, eine famose Band und ein begeistertes Publikum."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "4db0a13939b9a5eeeb5e6843"
+      ]
+    },
+    {
+      "id": "1b77f6ef02abf37ba5a0eb08",
+      "member_ids": [
+        "f7660a818cba8703b52a72c6"
+      ],
+      "newest_at": 1794439849.0,
+      "draft": {
+        "headline": "Demokrat Colom gewinnt Senatssitz für Mississippi – den 55. für seine Partei",
+        "headline_source_id": "f7660a818cba8703b52a72c6",
+        "claims": [
+          {
+            "text": "Mit dem Sieg des Außenseiters im republikanisch dominierten Südstaat ist nur noch die Wahl um den Senatssitz in Alaska unentschieden.",
+            "source_id": "f7660a818cba8703b52a72c6",
+            "field": "text",
+            "quote": "Mit dem Sieg des Außenseiters im republikanisch dominierten Südstaat ist nur noch die Wahl um den Senatssitz in Alaska unentschieden."
+          },
+          {
+            "text": "Auch dort ist die Demokratin Mary Peltola klar Favoritin.",
+            "source_id": "f7660a818cba8703b52a72c6",
+            "field": "text",
+            "quote": "Auch dort ist die Demokratin Mary Peltola klar Favoritin."
+          }
+        ],
+        "text": "Demokrat Colom gewinnt Senatssitz für Mississippi – den 55. für seine Partei.\nMit dem Sieg des Außenseiters im republikanisch dominierten Südstaat ist nur noch die Wahl um den Senatssitz in Alaska unentschieden. Auch dort ist die Demokratin Mary Peltola klar Favoritin.\nQuelle: derstandard.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "f7660a818cba8703b52a72c6",
+            "supported": true,
+            "quote": "Mit dem Sieg des Außenseiters im republikanisch dominierten Südstaat ist nur noch die Wahl um den Senatssitz in Alaska unentschieden."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "f7660a818cba8703b52a72c6",
+            "supported": true,
+            "quote": "Auch dort ist die Demokratin Mary Peltola klar Favoritin."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "f7660a818cba8703b52a72c6"
+      ]
+    },
+    {
+      "id": "329716ff3036be18880c3cd3",
+      "member_ids": [
+        "ee4b91e71b5caa422292cd00",
+        "edbf30e327f8c674e1e53e90"
+      ],
+      "newest_at": 1794438943.0,
+      "draft": {
+        "headline": "Demokrat erobert Senatssitz in Mississippi",
+        "headline_source_id": "ee4b91e71b5caa422292cd00",
+        "claims": [
+          {
+            "text": "Die republikanische US-Senatorin Cindy Hyde-Smith hat laut US-Medien das Senatsrennen im traditionell konservativen US-Bundesstaat Mississippi gegen den Demokraten Scott Colom verloren.",
+            "source_id": "ee4b91e71b5caa422292cd00",
+            "field": "text",
+            "quote": "Die republikanische US-Senatorin Cindy Hyde-Smith hat laut US-Medien das Senatsrennen im traditionell konservativen US-Bundesstaat Mississippi gegen den Demokraten Scott Colom verloren."
+          },
+          {
+            "text": "Das vermeldete der US-Sender heute.",
+            "source_id": "edbf30e327f8c674e1e53e90",
+            "field": "text",
+            "quote": "Das vermeldete der US-Sender heute."
+          }
+        ],
+        "text": "Demokrat erobert Senatssitz in Mississippi.\nDie republikanische US-Senatorin Cindy Hyde-Smith hat laut US-Medien das Senatsrennen im traditionell konservativen US-Bundesstaat Mississippi gegen den Demokraten Scott Colom verloren. Das vermeldete der US-Sender heute.\nQuelle: orf.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "ee4b91e71b5caa422292cd00",
+            "supported": true,
+            "quote": "Die republikanische US-Senatorin Cindy Hyde-Smith hat laut US-Medien das Senatsrennen im traditionell konservativen US-Bundesstaat Mississippi gegen den Demokraten Scott Colom verloren."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "edbf30e327f8c674e1e53e90",
+            "supported": true,
+            "quote": "Das vermeldete der US-Sender heute."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": true,
+      "used_source_ids": [
+        "edbf30e327f8c674e1e53e90",
+        "ee4b91e71b5caa422292cd00"
+      ]
+    },
+    {
+      "id": "ff8d683171723915818b0ef0",
+      "member_ids": [
+        "37bd7140c45bbcb69f112be1"
+      ],
+      "newest_at": 1794438060.0,
+      "draft": {
+        "headline": "Standardrätsel L 11441",
+        "headline_source_id": "37bd7140c45bbcb69f112be1",
+        "claims": [
+          {
+            "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.",
+            "source_id": "37bd7140c45bbcb69f112be1",
+            "field": "text",
+            "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
+          }
+        ],
+        "text": "Standardrätsel L 11441.\nTäglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.\nQuelle: derstandard.at."
+      },
+      "verification": {
+        "status": "approved",
+        "scope": "stored_source_support",
+        "issues": [],
+        "claims": [
+          {
+            "claim_index": 0,
+            "source_id": "37bd7140c45bbcb69f112be1",
+            "supported": true,
+            "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
+          }
+        ],
+        "conflicts": [],
+        "independent_fact_check": false,
+        "source_independence": "not_assessed"
+      },
+      "attempts": [
+        {
+          "status": "approved",
+          "issues": []
+        }
+      ],
+      "selected": false,
+      "used_source_ids": [
+        "37bd7140c45bbcb69f112be1"
+      ]
+    },
     {
       "id": "36d558be85ee25d371ece48d",
       "member_ids": [
@@ -14502,67 +14804,9 @@
           "issues": []
         }
       ],
-      "selected": true,
-      "used_source_ids": [
-        "a86d4d48b6d7451350676382"
-      ]
-    },
-    {
-      "id": "0d45b34cdfa02816f818f5ea",
-      "member_ids": [
-        "edbf30e327f8c674e1e53e90"
-      ],
-      "newest_at": 1794435850.0,
-      "draft": {
-        "headline": "CNN-Prognose: Demokrat erobert Senatssitz in Mississippi",
-        "headline_source_id": "edbf30e327f8c674e1e53e90",
-        "claims": [
-          {
-            "text": "Die republikanische US-Senatorin Cindy Hyde-Smith hat laut einer CNN-Prognose das Senatsrennen im traditionell konservativen US-Bundesstaat Mississippi gegen den Demokraten Scott Colom verloren.",
-            "source_id": "edbf30e327f8c674e1e53e90",
-            "field": "text",
-            "quote": "Die republikanische US-Senatorin Cindy Hyde-Smith hat laut einer CNN-Prognose das Senatsrennen im traditionell konservativen US-Bundesstaat Mississippi gegen den Demokraten Scott Colom verloren."
-          },
-          {
-            "text": "Das vermeldete der US-Sender heute.",
-            "source_id": "edbf30e327f8c674e1e53e90",
-            "field": "text",
-            "quote": "Das vermeldete der US-Sender heute."
-          }
-        ],
-        "text": "CNN-Prognose: Demokrat erobert Senatssitz in Mississippi.\nDie republikanische US-Senatorin Cindy Hyde-Smith hat laut einer CNN-Prognose das Senatsrennen im traditionell konservativen US-Bundesstaat Mississippi gegen den Demokraten Scott Colom verloren. Das vermeldete der US-Sender heute.\nQuelle: orf.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "edbf30e327f8c674e1e53e90",
-            "supported": true,
-            "quote": "Die republikanische US-Senatorin Cindy Hyde-Smith hat laut einer CNN-Prognose das Senatsrennen im traditionell konservativen US-Bundesstaat Mississippi gegen den Demokraten Scott Colom verloren."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "edbf30e327f8c674e1e53e90",
-            "supported": true,
-            "quote": "Das vermeldete der US-Sender heute."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
       "selected": false,
       "used_source_ids": [
-        "edbf30e327f8c674e1e53e90"
+        "a86d4d48b6d7451350676382"
       ]
     },
     {
@@ -14606,7 +14850,7 @@
           "issues": []
         }
       ],
-      "selected": true,
+      "selected": false,
       "used_source_ids": [
         "95410aab4b8cec90885c96ae"
       ]
@@ -14744,13 +14988,13 @@
             "quote": "Bereits 5037 Menschen in Wien haben 2026 ihren bisherigen Pass gegen einen rot-weiß-roten getauscht."
           },
           {
-            "text": "Damit entfällt mehr ein Drittel aller Einbürgerungen von in Österreich lebenden Menschen auf die Bundeshauptstadt.",
+            "text": "Damit entfällt mehr als ein Drittel aller Einbürgerungen von in Österreich lebenden Menschen auf die Bundeshauptstadt.",
             "source_id": "4c4a809328df588706d3e7cf",
             "field": "text",
-            "quote": "Damit entfällt mehr ein Drittel aller Einbürgerungen von in Österreich lebenden Menschen auf die Bundeshauptstadt."
+            "quote": "Damit entfällt mehr als ein Drittel aller Einbürgerungen von in Österreich lebenden Menschen auf die Bundeshauptstadt."
           }
         ],
-        "text": "53 Prozent mehr Einbürgerungen in Wien.\nBereits 5037 Menschen in Wien haben 2026 ihren bisherigen Pass gegen einen rot-weiß-roten getauscht. Damit entfällt mehr ein Drittel aller Einbürgerungen von in Österreich lebenden Menschen auf die Bundeshauptstadt.\nQuelle: krone.at."
+        "text": "53 Prozent mehr Einbürgerungen in Wien.\nBereits 5037 Menschen in Wien haben 2026 ihren bisherigen Pass gegen einen rot-weiß-roten getauscht. Damit entfällt mehr als ein Drittel aller Einbürgerungen von in Österreich lebenden Menschen auf die Bundeshauptstadt.\nQuelle: krone.at."
       },
       "verification": {
         "status": "approved",
@@ -14767,7 +15011,7 @@
             "claim_index": 1,
             "source_id": "4c4a809328df588706d3e7cf",
             "supported": true,
-            "quote": "Damit entfällt mehr ein Drittel aller Einbürgerungen von in Österreich lebenden Menschen auf die Bundeshauptstadt."
+            "quote": "Damit entfällt mehr als ein Drittel aller Einbürgerungen von in Österreich lebenden Menschen auf die Bundeshauptstadt."
           }
         ],
         "conflicts": [],
@@ -14780,7 +15024,7 @@
           "issues": []
         }
       ],
-      "selected": true,
+      "selected": false,
       "used_source_ids": [
         "4c4a809328df588706d3e7cf"
       ]
@@ -14839,7 +15083,7 @@
           "issues": []
         }
       ],
-      "selected": true,
+      "selected": false,
       "used_source_ids": [
         "27cd333193c687aeac2b6416",
         "e01ffd65cc38329035bbb60a"
@@ -16466,19 +16710,19 @@
         "headline_source_id": "5b01fa6e308599e1c7cbe6ef",
         "claims": [
           {
+            "text": "Spionageskandal Kreml nimmt zwei polnische „Agenten“ fest Nach Angaben des FSB wurden Strafverfahren gegen die Männer eingeleitet.",
+            "source_id": "5b01fa6e308599e1c7cbe6ef",
+            "field": "text",
+            "quote": "Spionageskandal Kreml nimmt zwei polnische „Agenten“ fest Nach Angaben des FSB wurden Strafverfahren gegen die Männer eingeleitet."
+          },
+          {
             "text": "Der russische Inlandsgeheimdienst FSB hat nach eigenen Angaben zwei „Agenten“ festgenommen.",
             "source_id": "5b01fa6e308599e1c7cbe6ef",
             "field": "text",
             "quote": "Der russische Inlandsgeheimdienst FSB hat nach eigenen Angaben zwei „Agenten“ festgenommen."
-          },
-          {
-            "text": "Sie sollen angeblich für Polen spioniert haben.",
-            "source_id": "5b01fa6e308599e1c7cbe6ef",
-            "field": "text",
-            "quote": "Sie sollen angeblich für Polen spioniert haben."
           }
         ],
-        "text": "Kreml nimmt zwei polnische „Agenten“ fest.\nDer russische Inlandsgeheimdienst FSB hat nach eigenen Angaben zwei „Agenten“ festgenommen. Sie sollen angeblich für Polen spioniert haben.\nQuelle: krone.at."
+        "text": "Kreml nimmt zwei polnische „Agenten“ fest.\nSpionageskandal Kreml nimmt zwei polnische „Agenten“ fest Nach Angaben des FSB wurden Strafverfahren gegen die Männer eingeleitet. Der russische Inlandsgeheimdienst FSB hat nach eigenen Angaben zwei „Agenten“ festgenommen.\nQuelle: krone.at."
       },
       "verification": {
         "status": "approved",
@@ -16489,13 +16733,13 @@
             "claim_index": 0,
             "source_id": "5b01fa6e308599e1c7cbe6ef",
             "supported": true,
-            "quote": "Der russische Inlandsgeheimdienst FSB hat nach eigenen Angaben zwei „Agenten“ festgenommen."
+            "quote": "Spionageskandal Kreml nimmt zwei polnische „Agenten“ fest Nach Angaben des FSB wurden Strafverfahren gegen die Männer eingeleitet."
           },
           {
             "claim_index": 1,
             "source_id": "5b01fa6e308599e1c7cbe6ef",
             "supported": true,
-            "quote": "Sie sollen angeblich für Polen spioniert haben."
+            "quote": "Der russische Inlandsgeheimdienst FSB hat nach eigenen Angaben zwei „Agenten“ festgenommen."
           }
         ],
         "conflicts": [],
@@ -17806,17 +18050,23 @@
       ],
       "newest_at": 1794421632.0,
       "draft": {
-        "headline": "Die Gewinnzahlen von Lotto „6 aus 45“",
+        "headline": "Jackpot bei Lotto „6 aus 45“",
         "headline_source_id": "2e6b1a4fa37bb0cba378f837",
         "claims": [
           {
-            "text": "Bei der heutigen Ziehung von Lotto „6 aus 45“ wurden folgende Gewinnzahlen ermittelt: 8 12 30 37 39 42/Zusatzzahl: 16 Die aktuellen LottoPlus-Zahlen lauten: 6 24 25 33 35 39 Zweite Ziehung: 4 9 16 39 44 45 Die aktuelle Joker-Zahl lautet: 6 4 0 4 1 0 Alle Angaben ohne Gewähr.",
+            "text": "Bei der heutigen Ziehung von Lotto „6 aus 45“ hat niemand auf die sechs Richtigen getippt.",
             "source_id": "2e6b1a4fa37bb0cba378f837",
             "field": "text",
-            "quote": "Bei der heutigen Ziehung von Lotto „6 aus 45“ wurden folgende Gewinnzahlen ermittelt: 8 12 30 37 39 42/Zusatzzahl: 16 Die aktuellen LottoPlus-Zahlen lauten: 6 24 25 33 35 39 Zweite Ziehung: 4 9 16 39 44 45 Die aktuelle Joker-Zahl lautet: 6 4 0 4 1 0 Alle Angaben ohne Gewähr."
+            "quote": "Bei der heutigen Ziehung von Lotto „6 aus 45“ hat niemand auf die sechs Richtigen getippt."
+          },
+          {
+            "text": "Das bedeutet Jackpot.",
+            "source_id": "2e6b1a4fa37bb0cba378f837",
+            "field": "text",
+            "quote": "Das bedeutet Jackpot."
           }
         ],
-        "text": "Die Gewinnzahlen von Lotto „6 aus 45“.\nBei der heutigen Ziehung von Lotto „6 aus 45“ wurden folgende Gewinnzahlen ermittelt: 8 12 30 37 39 42/Zusatzzahl: 16 Die aktuellen LottoPlus-Zahlen lauten: 6 24 25 33 35 39 Zweite Ziehung: 4 9 16 39 44 45 Die aktuelle Joker-Zahl lautet: 6 4 0 4 1 0 Alle Angaben ohne Gewähr.\nQuelle: orf.at."
+        "text": "Jackpot bei Lotto „6 aus 45“.\nBei der heutigen Ziehung von Lotto „6 aus 45“ hat niemand auf die sechs Richtigen getippt. Das bedeutet Jackpot.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -17827,7 +18077,13 @@
             "claim_index": 0,
             "source_id": "2e6b1a4fa37bb0cba378f837",
             "supported": true,
-            "quote": "Bei der heutigen Ziehung von Lotto „6 aus 45“ wurden folgende Gewinnzahlen ermittelt: 8 12 30 37 39 42/Zusatzzahl: 16 Die aktuellen LottoPlus-Zahlen lauten: 6 24 25 33 35 39 Zweite Ziehung: 4 9 16 39 44 45 Die aktuelle Joker-Zahl lautet: 6 4 0 4 1 0 Alle Angaben ohne Gewähr."
+            "quote": "Bei der heutigen Ziehung von Lotto „6 aus 45“ hat niemand auf die sechs Richtigen getippt."
+          },
+          {
+            "claim_index": 1,
+            "source_id": "2e6b1a4fa37bb0cba378f837",
+            "supported": true,
+            "quote": "Das bedeutet Jackpot."
           }
         ],
         "conflicts": [],
@@ -19044,13 +19300,13 @@
             "quote": "UNO-Nothilfekoordinator Tom Fletcher warnt angesichts der anhaltenden Lieferblockaden für Wintermaterial vor weiteren Todesopfern im Gazastreifen."
           },
           {
-            "text": "Es dürfe keine Verzögerungen mehr geben, sagte er heute.",
+            "text": "Es dürfe keine Verzögerungen mehr geben, sagte er gestern.",
             "source_id": "199dbd7ec5856b5fa9b72e83",
             "field": "text",
-            "quote": "Es dürfe keine Verzögerungen mehr geben, sagte er heute."
+            "quote": "Es dürfe keine Verzögerungen mehr geben, sagte er gestern."
           }
         ],
-        "text": "UNO warnt vor Verzögerungen bei Gaza-Hilfen.\nUNO-Nothilfekoordinator Tom Fletcher warnt angesichts der anhaltenden Lieferblockaden für Wintermaterial vor weiteren Todesopfern im Gazastreifen. Es dürfe keine Verzögerungen mehr geben, sagte er heute.\nQuelle: orf.at."
+        "text": "UNO warnt vor Verzögerungen bei Gaza-Hilfen.\nUNO-Nothilfekoordinator Tom Fletcher warnt angesichts der anhaltenden Lieferblockaden für Wintermaterial vor weiteren Todesopfern im Gazastreifen. Es dürfe keine Verzögerungen mehr geben, sagte er gestern.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -19067,7 +19323,7 @@
             "claim_index": 1,
             "source_id": "199dbd7ec5856b5fa9b72e83",
             "supported": true,
-            "quote": "Es dürfe keine Verzögerungen mehr geben, sagte er heute."
+            "quote": "Es dürfe keine Verzögerungen mehr geben, sagte er gestern."
           }
         ],
         "conflicts": [],
@@ -19478,10 +19734,10 @@
         "headline_source_id": "7cb4797f5d05c66614d407de",
         "claims": [
           {
-            "text": "Der russische Botschafter in den USA, Alexander Dartschiew, ist nach heutigen Angaben des Moskauer Außenministeriums gestorben.",
+            "text": "Der russische Botschafter in den USA, Alexander Dartschijew, ist nach gestrigen Angaben des Moskauer Außenministeriums gestorben.",
             "source_id": "7cb4797f5d05c66614d407de",
             "field": "text",
-            "quote": "Der russische Botschafter in den USA, Alexander Dartschiew, ist nach heutigen Angaben des Moskauer Außenministeriums gestorben."
+            "quote": "Der russische Botschafter in den USA, Alexander Dartschijew, ist nach gestrigen Angaben des Moskauer Außenministeriums gestorben."
           },
           {
             "text": "Der Karrierediplomat sei 66 Jahre alt geworden.",
@@ -19490,7 +19746,7 @@
             "quote": "Der Karrierediplomat sei 66 Jahre alt geworden."
           }
         ],
-        "text": "Russischer Botschafter in den USA gestorben.\nDer russische Botschafter in den USA, Alexander Dartschiew, ist nach heutigen Angaben des Moskauer Außenministeriums gestorben. Der Karrierediplomat sei 66 Jahre alt geworden.\nQuelle: orf.at."
+        "text": "Russischer Botschafter in den USA gestorben.\nDer russische Botschafter in den USA, Alexander Dartschijew, ist nach gestrigen Angaben des Moskauer Außenministeriums gestorben. Der Karrierediplomat sei 66 Jahre alt geworden.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -19501,7 +19757,7 @@
             "claim_index": 0,
             "source_id": "7cb4797f5d05c66614d407de",
             "supported": true,
-            "quote": "Der russische Botschafter in den USA, Alexander Dartschiew, ist nach heutigen Angaben des Moskauer Außenministeriums gestorben."
+            "quote": "Der russische Botschafter in den USA, Alexander Dartschijew, ist nach gestrigen Angaben des Moskauer Außenministeriums gestorben."
           },
           {
             "claim_index": 1,
@@ -24848,10 +25104,10 @@
         "headline_source_id": "f54e939d94797e29b9a9a070",
         "claims": [
           {
-            "text": "Für das geplante Impfen in Apotheken ist heute die Begutachtungsfrist abgelaufen.",
+            "text": "Für das geplante Impfen in Apotheken ist gestern die Begutachtungsfrist abgelaufen.",
             "source_id": "f54e939d94797e29b9a9a070",
             "field": "text",
-            "quote": "Für das geplante Impfen in Apotheken ist heute die Begutachtungsfrist abgelaufen."
+            "quote": "Für das geplante Impfen in Apotheken ist gestern die Begutachtungsfrist abgelaufen."
           },
           {
             "text": "Die Stellungnahmen bewegten sich entlang der bekannten Argumentationslinien: Ärzte und Ärztinnen großteils dagegen, Apotheker und Apothekerinnen dafür.",
@@ -24860,7 +25116,7 @@
             "quote": "Die Stellungnahmen bewegten sich entlang der bekannten Argumentationslinien: Ärzte und Ärztinnen großteils dagegen, Apotheker und Apothekerinnen dafür."
           }
         ],
-        "text": "Impfen in Apotheken: Begutachtung zwischen Kritik und Lob.\nFür das geplante Impfen in Apotheken ist heute die Begutachtungsfrist abgelaufen. Die Stellungnahmen bewegten sich entlang der bekannten Argumentationslinien: Ärzte und Ärztinnen großteils dagegen, Apotheker und Apothekerinnen dafür.\nQuelle: orf.at."
+        "text": "Impfen in Apotheken: Begutachtung zwischen Kritik und Lob.\nFür das geplante Impfen in Apotheken ist gestern die Begutachtungsfrist abgelaufen. Die Stellungnahmen bewegten sich entlang der bekannten Argumentationslinien: Ärzte und Ärztinnen großteils dagegen, Apotheker und Apothekerinnen dafür.\nQuelle: orf.at."
       },
       "verification": {
         "status": "approved",
@@ -24871,7 +25127,7 @@
             "claim_index": 0,
             "source_id": "f54e939d94797e29b9a9a070",
             "supported": true,
-            "quote": "Für das geplante Impfen in Apotheken ist heute die Begutachtungsfrist abgelaufen."
+            "quote": "Für das geplante Impfen in Apotheken ist gestern die Begutachtungsfrist abgelaufen."
           },
           {
             "claim_index": 1,
@@ -39886,342 +40142,6 @@
       "used_source_ids": [
         "cf3a344e451ba6d64c2d6c1b"
       ]
-    },
-    {
-      "id": "658315cc644c1ae42dcdb964",
-      "member_ids": [
-        "15e6b6518e3091f5bdab9456"
-      ],
-      "newest_at": 1794357820.0,
-      "draft": {
-        "headline": "Verfahren gegen US-Kriegsminister gestoppt",
-        "headline_source_id": "15e6b6518e3091f5bdab9456",
-        "claims": [
-          {
-            "text": "Das US-Repräsentantenhaus stoppt den Vorstoß für ein Amtsenthebungsverfahren gegen Kriegsminister Pete Hegseth.",
-            "source_id": "15e6b6518e3091f5bdab9456",
-            "field": "text",
-            "quote": "Das US-Repräsentantenhaus stoppt den Vorstoß für ein Amtsenthebungsverfahren gegen Kriegsminister Pete Hegseth."
-          },
-          {
-            "text": "Die republikanische Mehrheit verhinderte die Einleitung des sogenannten Impeachments und schob das Vorhaben rasch vom Tisch.",
-            "source_id": "15e6b6518e3091f5bdab9456",
-            "field": "text",
-            "quote": "Die republikanische Mehrheit verhinderte die Einleitung des sogenannten Impeachments und schob das Vorhaben rasch vom Tisch."
-          }
-        ],
-        "text": "Verfahren gegen US-Kriegsminister gestoppt.\nDas US-Repräsentantenhaus stoppt den Vorstoß für ein Amtsenthebungsverfahren gegen Kriegsminister Pete Hegseth. Die republikanische Mehrheit verhinderte die Einleitung des sogenannten Impeachments und schob das Vorhaben rasch vom Tisch.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "15e6b6518e3091f5bdab9456",
-            "supported": true,
-            "quote": "Das US-Repräsentantenhaus stoppt den Vorstoß für ein Amtsenthebungsverfahren gegen Kriegsminister Pete Hegseth."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "15e6b6518e3091f5bdab9456",
-            "supported": true,
-            "quote": "Die republikanische Mehrheit verhinderte die Einleitung des sogenannten Impeachments und schob das Vorhaben rasch vom Tisch."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "15e6b6518e3091f5bdab9456"
-      ]
-    },
-    {
-      "id": "75b6c3f77b68ee995a30e5f4",
-      "member_ids": [
-        "b1ffdefb78ce2871156db7bd"
-      ],
-      "newest_at": 1794355041.0,
-      "draft": {
-        "headline": "USA: Amtsenthebungsverfahren gegen Hegseth gestoppt",
-        "headline_source_id": "b1ffdefb78ce2871156db7bd",
-        "claims": [
-          {
-            "text": "Das US-Repräsentantenhaus hat ein drohendes Amtsenthebungsverfahren gegen Verteidigungsminister Pete Hegseth abgewendet.",
-            "source_id": "b1ffdefb78ce2871156db7bd",
-            "field": "text",
-            "quote": "Das US-Repräsentantenhaus hat ein drohendes Amtsenthebungsverfahren gegen Verteidigungsminister Pete Hegseth abgewendet."
-          },
-          {
-            "text": "Die Abgeordneten stimmten mit 211 zu 204 Stimmen dafür, die Vorwürfe an den Justizausschuss zu verweisen.",
-            "source_id": "b1ffdefb78ce2871156db7bd",
-            "field": "text",
-            "quote": "Die Abgeordneten stimmten mit 211 zu 204 Stimmen dafür, die Vorwürfe an den Justizausschuss zu verweisen."
-          }
-        ],
-        "text": "USA: Amtsenthebungsverfahren gegen Hegseth gestoppt.\nDas US-Repräsentantenhaus hat ein drohendes Amtsenthebungsverfahren gegen Verteidigungsminister Pete Hegseth abgewendet. Die Abgeordneten stimmten mit 211 zu 204 Stimmen dafür, die Vorwürfe an den Justizausschuss zu verweisen.\nQuelle: orf.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "b1ffdefb78ce2871156db7bd",
-            "supported": true,
-            "quote": "Das US-Repräsentantenhaus hat ein drohendes Amtsenthebungsverfahren gegen Verteidigungsminister Pete Hegseth abgewendet."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "b1ffdefb78ce2871156db7bd",
-            "supported": true,
-            "quote": "Die Abgeordneten stimmten mit 211 zu 204 Stimmen dafür, die Vorwürfe an den Justizausschuss zu verweisen."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "b1ffdefb78ce2871156db7bd"
-      ]
-    },
-    {
-      "id": "225d0e2d2e799f4f36875fe5",
-      "member_ids": [
-        "1269efea78e83f0ed4f8e4f8"
-      ],
-      "newest_at": 1794351679.0,
-      "draft": {
-        "headline": "KI erkennt drohende Maschinenstillstände",
-        "headline_source_id": "1269efea78e83f0ed4f8e4f8",
-        "claims": [
-          {
-            "text": "Der Spezialist für maßgeschneiderte Stahlprofile Welser Profile aus Gresten treibt die digitale Transformation im Unternehmen voran.",
-            "source_id": "1269efea78e83f0ed4f8e4f8",
-            "field": "text",
-            "quote": "Der Spezialist für maßgeschneiderte Stahlprofile Welser Profile aus Gresten treibt die digitale Transformation im Unternehmen voran."
-          },
-          {
-            "text": "Eine wichtige Rolle spielt dabei Künstliche Intelligenz.",
-            "source_id": "1269efea78e83f0ed4f8e4f8",
-            "field": "text",
-            "quote": "Eine wichtige Rolle spielt dabei Künstliche Intelligenz."
-          }
-        ],
-        "text": "KI erkennt drohende Maschinenstillstände.\nDer Spezialist für maßgeschneiderte Stahlprofile Welser Profile aus Gresten treibt die digitale Transformation im Unternehmen voran. Eine wichtige Rolle spielt dabei Künstliche Intelligenz.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "1269efea78e83f0ed4f8e4f8",
-            "supported": true,
-            "quote": "Der Spezialist für maßgeschneiderte Stahlprofile Welser Profile aus Gresten treibt die digitale Transformation im Unternehmen voran."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "1269efea78e83f0ed4f8e4f8",
-            "supported": true,
-            "quote": "Eine wichtige Rolle spielt dabei Künstliche Intelligenz."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "1269efea78e83f0ed4f8e4f8"
-      ]
-    },
-    {
-      "id": "92a29390eef6fa09635b68c4",
-      "member_ids": [
-        "7e25ebc8167956a8336f8541"
-      ],
-      "newest_at": 1794351675.0,
-      "draft": {
-        "headline": "Heute vorsorgen. Morgen Chancen schenken.",
-        "headline_source_id": "7e25ebc8167956a8336f8541",
-        "claims": [
-          {
-            "text": "Die erste eigene Wohnung, ein Studium oder der Führerschein: Kinder haben viele Träume.",
-            "source_id": "7e25ebc8167956a8336f8541",
-            "field": "text",
-            "quote": "Die erste eigene Wohnung, ein Studium oder der Führerschein: Kinder haben viele Träume."
-          },
-          {
-            "text": "Wer frühzeitig finanziell vorsorgt, kann dazu beitragen, dass aus diesen Träumen später Wirklichkeit wird.",
-            "source_id": "7e25ebc8167956a8336f8541",
-            "field": "text",
-            "quote": "Wer frühzeitig finanziell vorsorgt, kann dazu beitragen, dass aus diesen Träumen später Wirklichkeit wird."
-          }
-        ],
-        "text": "Heute vorsorgen. Morgen Chancen schenken.\nDie erste eigene Wohnung, ein Studium oder der Führerschein: Kinder haben viele Träume. Wer frühzeitig finanziell vorsorgt, kann dazu beitragen, dass aus diesen Träumen später Wirklichkeit wird.\nQuelle: krone.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "7e25ebc8167956a8336f8541",
-            "supported": true,
-            "quote": "Die erste eigene Wohnung, ein Studium oder der Führerschein: Kinder haben viele Träume."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "7e25ebc8167956a8336f8541",
-            "supported": true,
-            "quote": "Wer frühzeitig finanziell vorsorgt, kann dazu beitragen, dass aus diesen Träumen später Wirklichkeit wird."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "7e25ebc8167956a8336f8541"
-      ]
-    },
-    {
-      "id": "872b531730097cbc686f92d5",
-      "member_ids": [
-        "f403d2b010723c95f3066eee"
-      ],
-      "newest_at": 1794351660.0,
-      "draft": {
-        "headline": "Standardrätsel K 11440",
-        "headline_source_id": "f403d2b010723c95f3066eee",
-        "claims": [
-          {
-            "text": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.",
-            "source_id": "f403d2b010723c95f3066eee",
-            "field": "text",
-            "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
-          }
-        ],
-        "text": "Standardrätsel K 11440.\nTäglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.\nQuelle: derstandard.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "f403d2b010723c95f3066eee",
-            "supported": true,
-            "quote": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "f403d2b010723c95f3066eee"
-      ]
-    },
-    {
-      "id": "b65e36660a3bff61881cfc4a",
-      "member_ids": [
-        "96976b0a504540a41a625825"
-      ],
-      "newest_at": 1794351527.0,
-      "draft": {
-        "headline": "Kulturkampf um Krakauer Todesschützen",
-        "headline_source_id": "96976b0a504540a41a625825",
-        "claims": [
-          {
-            "text": "Nach der erschütternden Bluttat mit neun Todesopfern in Krakau ist im politisch tief gespaltenen Polen ein Kulturkampf über die möglichen Motive des Schützen entbrannt – der sich über soziale Netzwerke in ganz Europa fortsetzt.",
-            "source_id": "96976b0a504540a41a625825",
-            "field": "text",
-            "quote": "Nach der erschütternden Bluttat mit neun Todesopfern in Krakau ist im politisch tief gespaltenen Polen ein Kulturkampf über die möglichen Motive des Schützen entbrannt – der sich über soziale Netzwerke in ganz Europa fortsetzt."
-          },
-          {
-            "text": "Die erste Einschätzung einer mutmaßlich rechtsextremen Ideologie des Täters war wohl vorschnell.",
-            "source_id": "96976b0a504540a41a625825",
-            "field": "text",
-            "quote": "Die erste Einschätzung einer mutmaßlich rechtsextremen Ideologie des Täters war wohl vorschnell."
-          }
-        ],
-        "text": "Kulturkampf um Krakauer Todesschützen.\nNach der erschütternden Bluttat mit neun Todesopfern in Krakau ist im politisch tief gespaltenen Polen ein Kulturkampf über die möglichen Motive des Schützen entbrannt – der sich über soziale Netzwerke in ganz Europa fortsetzt. Die erste Einschätzung einer mutmaßlich rechtsextremen Ideologie des Täters war wohl vorschnell.\nQuelle: orf.at."
-      },
-      "verification": {
-        "status": "approved",
-        "scope": "stored_source_support",
-        "issues": [],
-        "claims": [
-          {
-            "claim_index": 0,
-            "source_id": "96976b0a504540a41a625825",
-            "supported": true,
-            "quote": "Nach der erschütternden Bluttat mit neun Todesopfern in Krakau ist im politisch tief gespaltenen Polen ein Kulturkampf über die möglichen Motive des Schützen entbrannt – der sich über soziale Netzwerke in ganz Europa fortsetzt."
-          },
-          {
-            "claim_index": 1,
-            "source_id": "96976b0a504540a41a625825",
-            "supported": true,
-            "quote": "Die erste Einschätzung einer mutmaßlich rechtsextremen Ideologie des Täters war wohl vorschnell."
-          }
-        ],
-        "conflicts": [],
-        "independent_fact_check": false,
-        "source_independence": "not_assessed"
-      },
-      "attempts": [
-        {
-          "status": "approved",
-          "issues": []
-        }
-      ],
-      "selected": false,
-      "used_source_ids": [
-        "96976b0a504540a41a625825"
-      ]
     }
   ],
   "excluded_articles": [
@@ -40245,10 +40165,10 @@
     }
   ],
   "selected_ids": [
-    "36d558be85ee25d371ece48d",
-    "6f4bb1be3625604e5a6f2a2e",
-    "5a2034c6a686a82f12fe564f",
-    "ef27ba0d95c4f76e379e5737",
+    "c1a60adaee6f4e30a25a591c",
+    "ac764ad55ea96995f8eca47a",
+    "1b77f6ef02abf37ba5a0eb08",
+    "329716ff3036be18880c3cd3",
     "f29291998cc74ebb62339c7e"
   ]
 }
