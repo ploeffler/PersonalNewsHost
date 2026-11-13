@@ -116,8 +116,10 @@ def main():
     say(f'## 1. Gruppierung: {len(sample)} Paare (12 die die Regeln zusammenlegen, 28 Grenzfälle mit ≥2 gemeinsamen Wortstämmen, die die Regeln trennen)', '')
     t0 = time.perf_counter(); rows = []; agree = 0
     for label, a, b in sample:
-        ans, dt = chat(SYS_SAME, f'Meldung A: {brief(p, a)}\n\nMeldung B: {brief(p, b)}\n\nDasselbe konkrete Ereignis?', SCHEMA_SAME, 40)
-        llm = ans.get('gleich')
+        ans, dt = chat(SYS_SAME + ' Antworte nur mit einem Wort: ja oder nein.',
+                       f'Meldung A: {brief(p, a)}\n\nMeldung B: {brief(p, b)}\n\nDasselbe konkrete Ereignis?', None, 4)
+        m = re.search(r'\b(ja|nein)\b', ans, re.I)
+        llm = m[1].lower() if m else '?(' + ans[:20] + ')'
         agree += (llm == 'ja') == label.endswith('gleich')
         rows.append(f"- {dt:4.1f}s · {label} · **LLM: {llm}** · {a['title']} ⟷ {b['title']}")
     t_group = time.perf_counter() - t0

@@ -25,14 +25,15 @@ jobs:
         uses: actions/cache@v4
         with:
           path: /tmp/llama
-          key: llama-cpp-cpu-v2
+          key: llama-cpp-native-v1
       - name: llama.cpp bereitstellen (fertige Version, sonst selbst bauen)
         run: |
           start=$(date +%s)
           mkdir -p /tmp/llama; cd /tmp/llama
           server=$(find /tmp/llama -name llama-server -type f | head -1)
           if [ -z "$server" ]; then
-            gh api "repos/ggml-org/llama.cpp/releases?per_page=40" \
+            : > pick.txt  # diesmal bewusst selbst bauen (für diese CPU optimiert)
+            false && gh api "repos/ggml-org/llama.cpp/releases?per_page=40" \
               --jq '.[] | .tag_name as $t | .assets[] | select(.name|test("(ubuntu|linux).*(x64|x86_64)";"i")) | select(.name|test("vulkan|cuda|rocm|sycl|openvino|arm|s390";"i")|not) | "\($t) \(.name)"' | head -1 > pick.txt || true
             cat pick.txt
             if [ -s pick.txt ]; then
@@ -43,7 +44,7 @@ jobs:
             else
               echo "Keine fertige Linux-Version gefunden – baue aus dem Quellcode"
               git clone --depth 1 https://github.com/ggml-org/llama.cpp src
-              cmake -S src -B build -DGGML_NATIVE=OFF -DLLAMA_CURL=OFF -DCMAKE_BUILD_TYPE=Release >/dev/null
+              cmake -S src -B build -DGGML_NATIVE=ON -DLLAMA_CURL=OFF -DCMAKE_BUILD_TYPE=Release >/dev/null
               cmake --build build --target llama-server -j 4 >/dev/null
               echo "llama.cpp $(git -C src rev-parse --short HEAD) (selbst gebaut)" > source.txt
             fi
@@ -89,4 +90,4 @@ jobs:
           python3 research/experiments/llm_test.py
       - name: Server-Log
         if: always()
-        run: grep -i -E 'system_info|n_threads|model size|error' /tmp/server.log | head -20 || true
+        run: grep -i -E 'system_info|CPU :|AVX|n_threads|model size|error' /tmp/server.log | head -20 || true
