@@ -62,6 +62,8 @@ class BreakingDetectionTest(unittest.TestCase):
         self.assertFalse(run(x, y)['updates'])
         self.assertFalse(m.serious('Zwei Tauben getötet'))
         self.assertTrue(m.serious('Mindestens zwei Tote bei Hauseinsturz'))
+        # A war merely mentioned as background is not breaking news (13.11.2026: oil supply report).
+        self.assertFalse(m.serious('Energieagentur: Ölversorgung erholt sich erstmals seit Iran-Krieg'))
 
     def test_top_office_change(self):
         x = article('x', 'Nvidia-Chef Huang tritt zurück', 'Jensen Huang tritt als Chef von Nvidia zurück.', 'orf.at')

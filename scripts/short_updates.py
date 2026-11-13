@@ -37,7 +37,7 @@ MARKED = re.compile(r'\b(eilmeldung|eil|breaking)\b|\+\+\+', re.I)
 DEATHS = re.compile(r'\bTote[nr]?\b|\bTodesopfer\b|\bgetötet\b|\bist tot\b|\btot aufgefunden\b|\btot gefunden\b|\btot in\b')
 SERIOUS = re.compile(r'\b(explosion\w*|explodiert|anschlag|attentat|terror\w*|erdbeben|tsunami|evakuiert|evakuierung|'
                      r'geiselnahme|absturz|abgestürzt|stürzt ab|amoklauf|schüsse|erschossen|großbrand|einsturz|'
-                     r'eingestürzt|krieg|waffenruhe|killed|dead|earthquake|explosion|attack|shooting)\b', re.I)
+                     r'eingestürzt|killed|dead|earthquake|explosion|attack|shooting)\b', re.I)
 ANIMALS = re.compile(r'\b(schwein\w*|rind\w*|kühe|kuh|tier\w*|fisch\w*|vögel|vogel\w*|hühner|hund\w*|katze\w*|'
                      r'tauben?|wölfe?|wolf|bär\w*|hahn|pferd\w*)\b', re.I)
 TOP_OFFICE = re.compile(r'\b(kanzler\w*|präsident\w*|minister\w*|regierung\w*|ceo|chef\w*|papst|bürgermeister\w*|'
