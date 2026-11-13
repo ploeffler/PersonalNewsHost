@@ -41,7 +41,14 @@ def chat(system, user, schema=None, max_tokens=200):
                   'pp': timings.get('prompt_per_second'), 'tg': timings.get('predicted_per_second')})
     text = data['choices'][0]['message']['content'].strip()
     text = re.sub(r'<think>.*?</think>', '', text, flags=re.S).strip()
-    return json.loads(text) if schema else text, dt
+    if not schema:
+        return text, dt
+    try:
+        return json.loads(text), dt
+    except json.JSONDecodeError:
+        m = re.search(r'\b(ja|nein)\b', text, re.I)
+        print('Rohantwort:', repr(text[:200]), data['choices'][0].get('finish_reason'), flush=True)
+        return {'gleich': m[1].lower() if m else '?'}, dt
 
 
 def brief(p, a, n=2):
@@ -109,7 +116,7 @@ def main():
     say(f'## 1. Gruppierung: {len(sample)} Paare (12 die die Regeln zusammenlegen, 28 Grenzfälle mit ≥2 gemeinsamen Wortstämmen, die die Regeln trennen)', '')
     t0 = time.perf_counter(); rows = []; agree = 0
     for label, a, b in sample:
-        ans, dt = chat(SYS_SAME, f'Meldung A: {brief(p, a)}\n\nMeldung B: {brief(p, b)}\n\nDasselbe konkrete Ereignis?', SCHEMA_SAME, 12)
+        ans, dt = chat(SYS_SAME, f'Meldung A: {brief(p, a)}\n\nMeldung B: {brief(p, b)}\n\nDasselbe konkrete Ereignis?', SCHEMA_SAME, 40)
         llm = ans.get('gleich')
         agree += (llm == 'ja') == label.endswith('gleich')
         rows.append(f"- {dt:4.1f}s · {label} · **LLM: {llm}** · {a['title']} ⟷ {b['title']}")
