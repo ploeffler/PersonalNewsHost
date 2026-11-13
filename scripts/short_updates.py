@@ -126,7 +126,8 @@ def select_breaking(store, state, now, settings, pipeline=None):
     updates = [u for u in state.get('updates', []) if now - 86400 < u['created_at'] <= now]
     events = [e for e in state.get('events', []) if now - 3 * 86400 < e['created_at'] <= now]
     covered = {i for e in events for i in e['article_ids']}
-    report = pipeline.prepare(store, now) if settings['enabled'] else {'groups': [], 'sources': {}}
+    decisions = pipeline.load_pair_decisions(ROOT / 'docs' / 'event-pairs.json')
+    report = pipeline.prepare(store, now, pair_decisions=decisions) if settings['enabled'] else {'groups': [], 'sources': {}}
     candidates = []
     for group in report['groups']:
         if group['verification']['status'] != 'approved' or not group['draft']['claims']:

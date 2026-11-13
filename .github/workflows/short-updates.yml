@@ -12,6 +12,7 @@ on:
       - scripts/collect_news.py
       - scripts/short_updates.py
       - scripts/editorial_pipeline.py
+      - scripts/llm_pair_judge.py
       - scripts/publish_short_updates_telegram.py
   schedule:
     - cron: '7,22,37,52 * * * *'
@@ -22,10 +23,12 @@ permissions:
 concurrency:
   group: personalnewshost-publish
   cancel-in-progress: false
+env:
+  LLAMA_CPP_TAG: b12340
 jobs:
   updates:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 20
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -47,11 +50,55 @@ jobs:
       - name: Test short update and Telegram rules
         run: |
           python3 -m unittest discover -s tests -p "test_short_updates*.py"
+          python3 -m unittest discover -s tests -p test_llm_pair_judge.py
           python3 -m unittest discover -s tests -p test_telegram.py
           python3 -m unittest discover -s tests -p test_collect_news.py
           python3 -m unittest discover -s tests -p test_article_enrichment.py
       - name: Store RSS messages from the last 24 hours
         run: python3 scripts/collect_news.py
+      - name: Plan language-model checks for borderline pairs
+        id: pairs
+        run: python3 scripts/llm_pair_judge.py --plan
+      - name: Identify runner CPU for the llama.cpp build cache
+        if: fromJSON(steps.pairs.outputs.pending || '0') > 0
+        id: cpu
+        run: echo "key=$(grep -m1 -E '^(model name|flags)' /proc/cpuinfo | sha256sum | cut -c1-12)" >> "$GITHUB_OUTPUT"
+      - name: Restore llama.cpp build
+        if: fromJSON(steps.pairs.outputs.pending || '0') > 0
+        uses: actions/cache@v4
+        with:
+          path: ~/llama
+          key: llama-cpp-${{ env.LLAMA_CPP_TAG }}-${{ steps.cpu.outputs.key }}
+      - name: Restore language model
+        if: fromJSON(steps.pairs.outputs.pending || '0') > 0
+        uses: actions/cache@v4
+        with:
+          path: ~/models
+          key: llm-qwen3-4b-instruct-2507-q4km-v1
+      - name: Start local language model
+        if: fromJSON(steps.pairs.outputs.pending || '0') > 0
+        id: llm
+        continue-on-error: true
+        timeout-minutes: 8
+        run: |
+          if [ ! -x ~/llama/build/bin/llama-server ]; then
+            git clone --depth 1 --branch "$LLAMA_CPP_TAG" https://github.com/ggml-org/llama.cpp ~/llama/src
+            cmake -S ~/llama/src -B ~/llama/build -DGGML_NATIVE=ON -DLLAMA_CURL=OFF -DCMAKE_BUILD_TYPE=Release > /dev/null
+            cmake --build ~/llama/build --target llama-server -j 4 > /dev/null
+          fi
+          model=~/models/Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf
+          if [ ! -s "$model" ]; then
+            python3 -m pip install --disable-pip-version-check -q huggingface_hub
+            python3 -c "from huggingface_hub import hf_hub_download as d; d('bartowski/Qwen_Qwen3-4B-Instruct-2507-GGUF','Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf',local_dir='$HOME/models')"
+          fi
+          nohup ~/llama/build/bin/llama-server -m "$model" -c 4096 -t 4 --jinja --port 8080 > /tmp/llama-server.log 2>&1 &
+          for i in $(seq 1 90); do curl -sf http://127.0.0.1:8080/health > /dev/null && exit 0; sleep 1; done
+          tail -20 /tmp/llama-server.log; exit 1
+      - name: Check borderline pairs with the language model
+        if: steps.llm.outcome == 'success'
+        continue-on-error: true
+        timeout-minutes: 5
+        run: python3 scripts/llm_pair_judge.py --judge
       - name: Detect breaking news and expire old updates
         id: detect
         run: python3 scripts/short_updates.py --detect
@@ -71,7 +118,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/news-store.json docs/short-updates.json docs/short-update-state.json docs/short-update-audio/ docs/short-update-video/
+          git add docs/news-store.json docs/event-pairs.json docs/short-updates.json docs/short-update-state.json docs/short-update-audio/ docs/short-update-video/
           if ! git diff --cached --quiet; then
             git commit -m 'Publish short news updates'
             git push
