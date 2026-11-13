@@ -25,9 +25,9 @@ jobs:
           start=$(date +%s)
           tag=$(gh release view --repo ggml-org/llama.cpp --json tagName -q .tagName)
           gh release view "$tag" --repo ggml-org/llama.cpp --json assets -q '.assets[].name' > /tmp/assets.txt
-          grep -i ubuntu /tmp/assets.txt || true
-          asset=$(grep -i -E 'ubuntu.*x64' /tmp/assets.txt | grep -v -i -E 'vulkan|cuda|rocm|sycl|openvino|arm' | head -1)
-          echo "Gewählt: $asset"
+          echo "Release $tag:"; cat /tmp/assets.txt
+          asset=$(grep -i -E '(ubuntu|linux).*(x64|x86_64|amd64)' /tmp/assets.txt | grep -v -i -E 'vulkan|cuda|rocm|sycl|openvino|arm' | head -1)
+          echo "Gewählt: $asset"; test -n "$asset"
           gh release download "$tag" --repo ggml-org/llama.cpp --pattern "$asset" --dir /tmp/llama
           cd /tmp/llama; case "$asset" in *.zip) unzip -q "$asset";; *) tar xf "$asset";; esac
           server=$(find /tmp/llama -name llama-server -type f | head -1)
