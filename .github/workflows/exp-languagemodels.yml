@@ -1,93 +1,59 @@
-name: Experiment lokales Sprachmodell
-on:
+name: Probe LLM-Grenzfallprüfung
+'on':
   push:
-    branches: [exp/languagemodels-vergleich]
+    branches:
+    - exp/languagemodels-vergleich
 permissions:
   contents: read
+env:
+  LLAMA_CPP_TAG: b12340
 jobs:
-  llm:
+  probe:
     runs-on: ubuntu-24.04
-    timeout-minutes: 40
-    env:
-      GH_TOKEN: ${{ github.token }}
+    timeout-minutes: 25
     steps:
-      - uses: actions/checkout@v5
-      - name: Aktuellen Nachrichtenspeicher von main holen
-        run: git fetch --depth=1 origin main && git checkout origin/main -- docs/news-store.json
-      - name: Modell-Cache wiederherstellen
-        id: cache
-        uses: actions/cache@v4
-        with:
-          path: ~/models
-          key: llm-qwen3-4b-instruct-q4km-v1
-      - name: llama.cpp-Cache wiederherstellen
-        id: llcache
-        uses: actions/cache@v4
-        with:
-          path: /tmp/llama
-          key: llama-cpp-native-v1
-      - name: llama.cpp bereitstellen (fertige Version, sonst selbst bauen)
-        run: |
-          start=$(date +%s)
-          mkdir -p /tmp/llama; cd /tmp/llama
-          server=$(find /tmp/llama -name llama-server -type f | head -1)
-          if [ -z "$server" ]; then
-            : > pick.txt  # diesmal bewusst selbst bauen (für diese CPU optimiert)
-            false && gh api "repos/ggml-org/llama.cpp/releases?per_page=40" \
-              --jq '.[] | .tag_name as $t | .assets[] | select(.name|test("(ubuntu|linux).*(x64|x86_64)";"i")) | select(.name|test("vulkan|cuda|rocm|sycl|openvino|arm|s390";"i")|not) | "\($t) \(.name)"' | head -1 > pick.txt || true
-            cat pick.txt
-            if [ -s pick.txt ]; then
-              read tag asset < pick.txt
-              gh release download "$tag" --repo ggml-org/llama.cpp --pattern "$asset"
-              case "$asset" in *.zip) unzip -q "$asset";; *) tar xf "$asset";; esac
-              echo "llama.cpp $tag (fertig)" > source.txt
-            else
-              echo "Keine fertige Linux-Version gefunden – baue aus dem Quellcode"
-              git clone --depth 1 https://github.com/ggml-org/llama.cpp src
-              cmake -S src -B build -DGGML_NATIVE=ON -DLLAMA_CURL=OFF -DCMAKE_BUILD_TYPE=Release >/dev/null
-              cmake --build build --target llama-server -j 4 >/dev/null
-              echo "llama.cpp $(git -C src rev-parse --short HEAD) (selbst gebaut)" > source.txt
-            fi
-            server=$(find /tmp/llama -name llama-server -type f | head -1)
-          fi
-          echo "LLAMA_SERVER=$server" >> $GITHUB_ENV
-          echo "LLAMA_DIR=$(dirname $server)" >> $GITHUB_ENV
-          echo "T_LLAMA=$(( $(date +%s) - start ))s $(cat /tmp/llama/source.txt) (Cache: ${{ steps.llcache.outputs.cache-hit }})" >> $GITHUB_ENV
-      - name: Modell herunterladen (nur ohne Cache)
-        run: |
-          start=$(date +%s)
-          pip install -q huggingface_hub
-          python3 - <<'PY'
-          import os, pathlib
-          from huggingface_hub import hf_hub_download
-          target = pathlib.Path.home() / 'models'; target.mkdir(exist_ok=True)
-          have = list(target.glob('*.gguf'))
-          if have:
-              print('Cache:', have[0]); path = have[0]
-          else:
-              for repo, name in [('bartowski/Qwen_Qwen3-4B-Instruct-2507-GGUF', 'Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf'),
-                                 ('unsloth/Qwen3-4B-Instruct-2507-GGUF', 'Qwen3-4B-Instruct-2507-Q4_K_M.gguf'),
-                                 ('Qwen/Qwen3-4B-GGUF', 'Qwen3-4B-Q4_K_M.gguf')]:
-                  try:
-                      path = hf_hub_download(repo, name, local_dir=target); print('Geladen:', repo, name); break
-                  except Exception as exc:
-                      print('nicht verfügbar:', repo, name, type(exc).__name__)
-          with open(os.environ['GITHUB_ENV'], 'a') as env:
-              env.write(f'LLM_MODEL={pathlib.Path(path).name}\n')
-          PY
-          echo "T_MODEL=$(( $(date +%s) - start ))s Modell (Cache: ${{ steps.cache.outputs.cache-hit }})" >> $GITHUB_ENV
-      - name: Server starten
-        run: |
-          start=$(date +%s)
-          export LD_LIBRARY_PATH=$LLAMA_DIR:$LD_LIBRARY_PATH
-          nohup $LLAMA_SERVER -m ~/models/$LLM_MODEL -c 8192 -t 4 --jinja --port 8080 > /tmp/server.log 2>&1 &
-          for i in $(seq 1 120); do curl -sf http://127.0.0.1:8080/health >/dev/null && break; sleep 1; done
-          curl -sf http://127.0.0.1:8080/health || (tail -50 /tmp/server.log; exit 1)
-          echo "T_SERVER=$(( $(date +%s) - start ))s Server-Start" >> $GITHUB_ENV
-      - name: Test ausführen
-        run: |
-          export LLM_TIMES="$T_LLAMA, $T_MODEL, $T_SERVER"
-          python3 research/experiments/llm_test.py
-      - name: Server-Log
-        if: always()
-        run: grep -i -E 'system_info|CPU :|AVX|n_threads|model size|error' /tmp/server.log | head -20 || true
+    - uses: actions/checkout@v5
+      with:
+        ref: feat/llm-pair-judge
+    - name: Aktuellen Nachrichtenspeicher von main holen
+      run: git fetch --depth=1 origin main && git checkout origin/main -- docs/news-store.json
+    - name: Plan language-model checks for borderline pairs
+      id: pairs
+      run: python3 scripts/llm_pair_judge.py --plan
+    - name: Identify runner CPU for the llama.cpp build cache
+      if: fromJSON(steps.pairs.outputs.pending || '0') > 0
+      id: cpu
+      run: echo "key=$(grep -m1 -E '^(model name|flags)' /proc/cpuinfo | sha256sum | cut -c1-12)" >> "$GITHUB_OUTPUT"
+    - name: Restore llama.cpp build
+      if: fromJSON(steps.pairs.outputs.pending || '0') > 0
+      uses: actions/cache@v4
+      with:
+        path: ~/llama
+        key: llama-cpp-${{ env.LLAMA_CPP_TAG }}-${{ steps.cpu.outputs.key }}
+    - name: Restore language model
+      if: fromJSON(steps.pairs.outputs.pending || '0') > 0
+      uses: actions/cache@v4
+      with:
+        path: ~/models
+        key: llm-qwen3-4b-instruct-2507-q4km-v1
+    - name: Start local language model
+      if: fromJSON(steps.pairs.outputs.pending || '0') > 0
+      id: llm
+      continue-on-error: true
+      timeout-minutes: 8
+      run: "if [ ! -x ~/llama/build/bin/llama-server ]; then\n  git clone --depth 1 --branch \"$LLAMA_CPP_TAG\" https://github.com/ggml-org/llama.cpp ~/llama/src\n  cmake -S ~/llama/src -B ~/llama/build\
+        \ -DGGML_NATIVE=ON -DLLAMA_CURL=OFF -DCMAKE_BUILD_TYPE=Release > /dev/null\n  cmake --build ~/llama/build --target llama-server -j 4 > /dev/null\nfi\nmodel=~/models/Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf\n\
+        if [ ! -s \"$model\" ]; then\n  python3 -m pip install --disable-pip-version-check -q huggingface_hub\n  python3 -c \"from huggingface_hub import hf_hub_download as d; d('bartowski/Qwen_Qwen3-4B-Instruct-2507-GGUF','Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf',local_dir='$HOME/models')\"\
+        \nfi\nnohup ~/llama/build/bin/llama-server -m \"$model\" -c 4096 -t 4 --jinja --port 8080 > /tmp/llama-server.log 2>&1 &\nfor i in $(seq 1 90); do curl -sf http://127.0.0.1:8080/health > /dev/null\
+        \ && exit 0; sleep 1; done\ntail -20 /tmp/llama-server.log; exit 1\n"
+    - name: Check borderline pairs with the language model
+      if: steps.llm.outcome == 'success'
+      continue-on-error: true
+      timeout-minutes: 5
+      run: python3 scripts/llm_pair_judge.py --judge
+    - name: Ergebnis
+      if: always()
+      run: "python3 - <<'PY'\nimport json,importlib.util,time\nspec=importlib.util.spec_from_file_location('ep','scripts/editorial_pipeline.py');p=importlib.util.module_from_spec(spec);spec.loader.exec_module(p)\n\
+        store=json.load(open('docs/news-store.json'));now=store['updated_at']\nd=p.load_pair_decisions('docs/event-pairs.json')\nprint('Entscheidungen:',len(d),'davon ja:',sum(d.values()))\nfor dec in (dict(),d):\n\
+        \    r=p.prepare(store,now,pair_decisions=dec)\n    print('Gruppen mit mehreren Medien:',sum(p.publisher_count(r,g)>1 for g in r['groups']))\nPY\ngrep -i -E 'error|system_info' /tmp/llama-server.log\
+        \ | head -5 || true"
