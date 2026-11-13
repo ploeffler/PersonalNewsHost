@@ -693,6 +693,18 @@ def prepare_sections(groups, feeds, settings):
     return planned
 
 
+SPOKEN_SOURCE_LINE = re.compile(
+    r"^(Quellen?:|Über dieses Ereignis berichten auch:|Im RSS-Beitrag werden als weitere Quellen genannt:"
+    r"|Auch .+ berichten über das Thema\.)")
+
+
+def spoken_text(text):
+    """Text for speech and subtitles: source credits are shown on screen, not read aloud."""
+    lines = [line for line in str(text).replace("\\n", "\n").split("\n")
+             if not SPOKEN_SOURCE_LINE.match(line.strip())]
+    return "\n".join(lines).strip()
+
+
 def subtitle_timestamp(milliseconds, separator="."):
     hours, remainder = divmod(milliseconds, 3600000)
     minutes, remainder = divmod(remainder, 60000)
@@ -893,6 +905,8 @@ def main():
     parts.append(outro_text)
     script = "\n\n".join(parts)
     (DOCS / "transcript.txt").write_text(script + "\n", encoding="utf-8")
+    # Sources stay in the transcript and on screen; speech and subtitles omit them.
+    spoken_parts = [spoken_text(part) for part in parts]
     with tempfile.TemporaryDirectory() as tmp:
         # Render each spoken segment independently, then concatenate losslessly.
         # The measured WAV sample counts become authoritative scene boundaries.
@@ -903,7 +917,7 @@ def main():
         speech_durations = []
         sample_params = None
         with wave.open(str(wav), "wb") as combined:
-            for idx, part in enumerate(parts):
+            for idx, part in enumerate(spoken_parts):
                 segment = Path(tmp) / f"segment_{idx:02d}.wav"
                 synthesize(part, segment)
                 segment_paths.append(segment)
@@ -931,7 +945,7 @@ def main():
         boundaries = [0.0]
         for seconds in segment_durations:
             boundaries.append(boundaries[-1] + seconds)
-        write_subtitles(parts, boundaries, DOCS, speech_durations)
+        write_subtitles(spoken_parts, boundaries, DOCS, speech_durations)
         timeline = {
             "version": 1,
             "segments": [

@@ -12,6 +12,11 @@ except ModuleNotFoundError:
     from video_branding import apply_branding
 
 
+def source_line(update):
+    names = [str(n) for n in update.get('sources') or [update.get('source', '')] if n]
+    return (('Quellen: ' if len(names) > 1 else 'Quelle: ') + ', '.join(names))[:100]
+
+
 def render_short_update(update, audio, output, root, config):
     audio, output = Path(audio), Path(output)
     if not audio.is_file():
@@ -20,7 +25,8 @@ def render_short_update(update, audio, output, root, config):
     with tempfile.TemporaryDirectory() as directory:
         tmp = Path(directory)
         headline = textwrap.wrap(update['title'], width=43)[:3]
-        body = update.get('text', '')
+        body = '\n'.join(line for line in update.get('text', '').split('\n')
+                          if not line.startswith(('Quelle:', 'Quellen:')))  # shown in the source line
         if body.startswith(update['title']):
             body = body[len(update['title']):].lstrip('.\n ')
         lines = textwrap.wrap(' '.join(body.split()), width=80)
@@ -29,7 +35,7 @@ def render_short_update(update, audio, output, root, config):
         stamp = dt.datetime.fromtimestamp(update['created_at'], dt.timezone.utc).strftime('%d.%m.%Y · %H:%M UTC')
         captions = [('headline', '\n'.join(headline), 42, 72, 160, 'white'),
                     ('body', '\n'.join(lines), 27, 72, 330, '0xd6e5f4'),
-                    ('source', 'Quelle: ' + str(update.get('source', ''))[:100], 20, 72, 650, '0x9fb7ce'),
+                    ('source', source_line(update), 20, 72, 650, '0x9fb7ce'),
                     ('time', stamp, 20, 72, 60, '0x9fb7ce')]
         args = ['ffmpeg', '-y', '-v', 'error', '-filter_complex_threads', '1',
                 '-f', 'lavfi', '-i', 'color=c=0x13243a:s=1280x720:r=5', '-i', str(audio)]

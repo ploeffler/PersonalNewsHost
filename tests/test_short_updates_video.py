@@ -38,6 +38,12 @@ class ShortUpdateVideoTests(unittest.TestCase):
             self.assertGreater(red,200)
             green=im.getpixel((1230,60));self.assertGreater(green[1],150)
 
+class ShortUpdateSourceLineTests(unittest.TestCase):
+    def test_all_sources_on_screen(self):
+        import short_update_video as v
+        self.assertEqual(v.source_line({'source': 'orf.at'}), 'Quelle: orf.at')
+        self.assertEqual(v.source_line({'source': 'orf.at', 'sources': ['krone.at', 'orf.at']}), 'Quellen: krone.at, orf.at')
+
 class ShortUpdateVideoRetentionTests(unittest.TestCase):
     def test_existing_audio_gets_one_video_and_expiry_removes_both(self):
         import time, types

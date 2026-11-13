@@ -15,7 +15,7 @@ Zusätzlich gilt: Die neueste Meldung des Ereignisses ist höchstens `freshness_
 
 Bei einer Prüfung mit den gespeicherten Meldungen vom 7. bis 13.11.2026 hätte die alte Schlagwortregel 37 Kurzupdates erzeugt, darunter viele Sportergebnisse und Sperren; die neue Regel 15, fast ausschließlich echte Eilmeldungen.
 
-Der Text ist der geprüfte, wörtliche Mehrquellen-Text der redaktionellen Pipeline (Überschrift, Sätze aus den Quellen, „Quellen: …“). Es werden keine Fakten ergänzt. Bei mehr als 110 Wörtern wird auf Überschrift, einen Satz und die Quellenangabe gekürzt.
+Der Text ist der geprüfte, wörtliche Mehrquellen-Text der redaktionellen Pipeline (Überschrift, Sätze aus den Quellen, „Quellen: …“). Es werden keine Fakten ergänzt. Die Quellen werden im Video eingeblendet, aber nicht vorgelesen. Bei mehr als 110 Wörtern wird auf Überschrift, einen Satz und die Quellenangabe gekürzt.
 
 **Laufzeit:** Sprachsynthese und Videowerkzeuge werden nur installiert, wenn ein neues Kurzupdate Ton oder Video braucht. Ein Lauf ohne Eilmeldung kommt ohne sie aus. Scheitert die Medienerzeugung, wird sie höchstens zweimal versucht; Text und Link bleiben verfügbar.
 
