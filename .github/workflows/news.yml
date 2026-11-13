@@ -8,7 +8,10 @@ on:
         options: [manual, schedule]
         default: manual
   schedule:
-    - cron: '17 * * * *'
+    # Rückfallebene: Den regulären Takt liefert ein externer Taktgeber
+    # (docs/guide/betrieb-und-sicherheit.md). GitHub startet zusätzlich um 7, 12 und 20 Uhr.
+    - cron: '5 7,12,20 * * *'
+      timezone: 'Europe/Vienna'
 permissions:
   contents: write
 concurrency:

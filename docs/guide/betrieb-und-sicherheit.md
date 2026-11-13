@@ -9,7 +9,7 @@
 | Deutsche Sprachausgabe mit Piper `de_DE-thorsten-high` | Produktiv |
 | eSpeak-NG als Fallback bei fehlendem Piper-Modell | Produktiv |
 | MP4, Webseite, Transkript und Video-RSS | Produktiv |
-| Automatischer stündlicher GitHub-Actions-Lauf | Aktiv, best effort; zuverlässiger mit externem Taktgeber (siehe unten) |
+| GitHub-Zeitplan (Rückfallebene) | Aktiv um 7:05, 12:05 und 20:05 Uhr (Europe/Vienna), best effort; regulärer Takt über externen Taktgeber (siehe unten) |
 | Konfigurierbares Portrait und Hintergrund | Standbilder produktiv; Hintergrunddatei optional |
 | RSS-Themenanalyse und vorsichtiges Clustering | Experimentell |
 | Sieben parallele Segmente: Intro, fünf Meldungen, Outro | Experimentell |
@@ -33,7 +33,7 @@
 
 ## Zuverlässiger Zeitplan mit externem Taktgeber (optional)
 
-GitHub startet Zeitplan-Läufe (`schedule`) nur nach Möglichkeit. Bei hoher Last werden viele Auslöser verzögert oder ganz ausgelassen. Im November 2026 lief der stündliche Sendungsworkflow so nur drei- bis fünfmal am Tag, der viertelstündliche Kurzupdate-Workflow teilweise nur viermal am Tag. Abhilfe schafft ein kostenloser externer Cron-Dienst, zum Beispiel [cron-job.org](https://cron-job.org), der die Workflows über die GitHub-API startet. Der GitHub-Zeitplan bleibt als Rückfallebene aktiv.
+GitHub startet Zeitplan-Läufe (`schedule`) nur nach Möglichkeit. Bei hoher Last werden viele Auslöser verzögert oder ganz ausgelassen. Im November 2026 lief der stündliche Sendungsworkflow so nur drei- bis fünfmal am Tag, der viertelstündliche Kurzupdate-Workflow teilweise nur viermal am Tag. Abhilfe schafft ein kostenloser externer Cron-Dienst, zum Beispiel [cron-job.org](https://cron-job.org), der die Workflows über die GitHub-API startet. Der GitHub-Zeitplan bleibt als Rückfallebene aktiv und startet beide Workflows zusätzlich um 7:05, 12:05 und 20:05 Uhr (Europe/Vienna). Fällt der externe Dienst aus, erscheinen so weiterhin bis zu drei Sendungen am Tag.
 
 **Doppelte Sendungen entstehen dabei nicht:** Der externe Taktgeber startet die Sendung mit `trigger=schedule`. Dann prüft `scripts/check_schedule.py` wie beim GitHub-Zeitplan, ob ein Zeitfenster fällig und noch nicht veröffentlicht ist. Ein manueller Start in der Actions-Oberfläche (Standard `trigger=manual`) produziert weiterhin immer. Kurzupdates erkennen bereits veröffentlichte Meldungen selbst; zusätzliche Läufe erzeugen keine Duplikate.
 

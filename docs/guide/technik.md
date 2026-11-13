@@ -51,7 +51,7 @@ Testworkflow: [Parallel broadcast with MuseTalk](https://github.com/ploeffler/Pe
 
 | Datei | Aufgabe |
 | --- | --- |
-| `.github/workflows/news.yml` | Stündliche Produktivveröffentlichung |
+| `.github/workflows/news.yml` | Produktivveröffentlichung (externer Taktgeber, Rückfall um 7, 12, 20 Uhr) |
 | `.github/workflows/analyze-rss-topics.yml` | Themenanalyse testen |
 | `.github/workflows/parallel-broadcast.yml` | Parallele Sendung ohne MuseTalk testen |
 | `.github/workflows/musetalk-piper-10fps.yml` | Lippenanimation einzeln testen |
