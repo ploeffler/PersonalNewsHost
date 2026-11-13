@@ -1,5 +1,5 @@
 {
- "generated_at": 1794585774.6381812,
+ "generated_at": 1794586317.4555779,
  "broadcast_at": 1794562766.576584,
  "broadcast_title": "Nachrichten 13.11.2026 um 10:39 Uhr",
  "events": [
@@ -32,6 +32,32 @@
      "publisher": "krone.at",
      "title": "Israel verbietet Politiker Mélenchon die Einreise",
      "url": "https://www.krone.at/4373605"
+    }
+   ]
+  },
+  {
+   "id": "3280a88ab0f8698629df5bbd",
+   "headline": "Soldat schreit Hegseth an, wird mit Orden belohnt",
+   "summary": "Ausgerechnet am Veteranentag wurden US-Verteidigungsminister Pete Hegseth und seine Begleiter an einem Kriegerdenkmal wegen lauten Lachens von einem Soldaten lautstark zurechtgewiesen. Eine Gruppe rund um den US-Verteidigungsminister war zuvor ausgerechnet am Veteranentag durch lautes Lachen aufgefallen und von dem Wachsoldaten streng ermahnt worden.",
+   "publishers": [
+    "derstandard.at",
+    "krone.at"
+   ],
+   "reports": 2,
+   "newest_at": 1794576701.0,
+   "status": "sendung",
+   "status_label": "In der Sendung (13.11. 10:39)",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Hegseth verlieh Soldat, der ihn anschrie, eine Medaille",
+     "url": "https://www.derstandard.at/story/3000000349067/hegseth-verlieh-soldat-der-ihn-anschrie-eine-medaille?ref=rss"
+    },
+    {
+     "publisher": "krone.at",
+     "title": "Soldat schreit Hegseth an, wird mit Orden belohnt",
+     "url": "https://www.krone.at/4374293"
     }
    ]
   },
@@ -88,32 +114,6 @@
    ]
   },
   {
-   "id": "04eae5c316d5f4cd0bde95da",
-   "headline": "Hegseth verlieh Soldat, der ihn anschrie, eine Medaille",
-   "summary": "Eine Gruppe rund um den US-Verteidigungsminister war zuvor ausgerechnet am Veteranentag durch lautes Lachen aufgefallen und von dem Wachsoldaten streng ermahnt worden. Nach dem Ordnungsruf gegen eine Gruppe um Verteidigungsminister Pete Hegseth hat dieser gestern den zuständigen Wachsoldaten ausgezeichnet.",
-   "publishers": [
-    "orf.at",
-    "derstandard.at"
-   ],
-   "reports": 2,
-   "newest_at": 1794555237.0,
-   "status": "sendung",
-   "status_label": "In der Sendung (13.11. 10:39)",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Hegseth ehrte Soldaten, der ihn zurechtwies",
-     "url": "https://orf.at/stories/3448045/"
-    },
-    {
-     "publisher": "derstandard.at",
-     "title": "Hegseth verlieh Soldat, der ihn anschrie, eine Medaille",
-     "url": "https://www.derstandard.at/story/3000000349067/hegseth-verlieh-soldat-der-ihn-anschrie-eine-medaille?ref=rss"
-    }
-   ]
-  },
-  {
    "id": "97964cc93b5f6e939de253e7",
    "headline": "Leitring: Radfahrerin bei Kollision mit Rettungswagen schwer verletzt",
    "summary": "Die 53-Jährige dürfte am Donnerstagnachmittag ein Stoppschild missachtet haben. Leitring im Bezirk Leibnitz: Donnerstagnachmittag, 12. November 2026, kam es zu einer Kollision zwischen einem Rettungswagen und einer Radfahrerin.",
@@ -140,6 +140,272 @@
    ]
   },
   {
+   "id": "560c427a9f780ece62f0d31d",
+   "headline": "Hegseth ehrte Soldaten, der ihn zurechtwies",
+   "summary": "Nach dem Ordnungsruf gegen eine Gruppe um Verteidigungsminister Pete Hegseth hat dieser gestern den zuständigen Wachsoldaten ausgezeichnet. Am Mittwoch hatte der Infanterist Hegseth und seine Gruppe am Denkmal für den unbekannten Soldaten nahe Washington wegen lauten Lachens zurechtgewiesen – ausgerechnet am Veteranentag.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794521755.0,
+   "status": "sendung",
+   "status_label": "In der Sendung (13.11. 10:39)",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Hegseth ehrte Soldaten, der ihn zurechtwies",
+     "url": "https://orf.at/stories/3448045/"
+    }
+   ]
+  },
+  {
+   "id": "235285a94908abb96e0db12e",
+   "headline": "US-Handelsminister Lutnick unter Druck",
+   "summary": "Nach dem Rückzug von Jensen Huang beim US-Chipkonzern Nvidia soll nun Finanzchefin Colette Kress kommissarisch Stabilität in das Unternehmen bringen. In den USA trifft die mutmaßliche Spionageaffäre rund um den Nvidia-CEO Jensen Huang nun auch die Spitzenpolitik.",
+   "publishers": [
+    "krone.at",
+    "derstandard.at",
+    "orf.at"
+   ],
+   "reports": 3,
+   "newest_at": 1794580836.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Nvidia: US-Handelsminister Lutnick unter Druck",
+     "url": "https://www.krone.at/4373497"
+    },
+    {
+     "publisher": "derstandard.at",
+     "title": "Insider: US-Handelsminister nach Nvidia-Spionageskandal unter Druck",
+     "url": "https://www.derstandard.at/story/3000000349044/insider-us-handelsminister-nach-nvidia-spionageskandal-unter-druck?ref=rss"
+    },
+    {
+     "publisher": "orf.at",
+     "title": "US-Handelsminister Lutnick unter Druck",
+     "url": "https://orf.at/stories/3448069/"
+    }
+   ]
+  },
+  {
+   "id": "b54e482511c1285e42a07c80",
+   "headline": "Hackerangriff auf Lern-App: Möglicherweise Schülerdaten gestohlen",
+   "summary": "Die App fintogo wird auch auf dem Marktplatz des Bildungsministeriums zur Verfügung gestellt. Laut Bildungsministerium gab es einen Cyberangriff auf Server des Anbieters von fintogo.",
+   "publishers": [
+    "orf.at",
+    "kleinezeitung.at",
+    "derstandard.at"
+   ],
+   "reports": 3,
+   "newest_at": 1794572151.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Hackerangriff auf Lern-App: Möglicherweise Daten gestohlen",
+     "url": "https://orf.at/stories/3448085/"
+    },
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Angriff auf Lern-App: Möglicherweise Schülerdaten gestohlen",
+     "url": "https://www.kleinezeitung.at/artikel/41448893/angriff-auf-lern-app-moeglicherweise-schuelerdaten-gestohlen"
+    },
+    {
+     "publisher": "derstandard.at",
+     "title": "Hackerangriff auf Lern-App: Möglicherweise Schülerdaten gestohlen",
+     "url": "https://www.derstandard.at/story/3000000349156/hackerangriff-auf-lern-app-m246glicherweise-sch252lerdaten-gestohlen?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "27480504128dccea4e5367da",
+   "headline": "Energieagentur: Ölversorgung erholt sich erstmals seit Iran-Krieg",
+   "summary": "Vorräte stiegen im Oktober um 52 Millionen Barrel. Die Internationale Energieagentur (IEA) sieht die weltweite Ölversorgung erstmals seit Ausbruch des Iran-Krieges auf Erholungskurs.",
+   "publishers": [
+    "orf.at",
+    "derstandard.at"
+   ],
+   "reports": 2,
+   "newest_at": 1794584626.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": 1794586272.205668,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "IEA: Ölversorgung erholt sich erstmals seit Iran-Krieg",
+     "url": "https://orf.at/stories/3448097/"
+    },
+    {
+     "publisher": "derstandard.at",
+     "title": "Energieagentur: Ölversorgung erholt sich erstmals seit Iran-Krieg",
+     "url": "https://www.derstandard.at/story/3000000349177/energieagentur-oelversorgung-erholt-sich-erstmals-seit-iran-krieg?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "99920c7268833e0e5930973a",
+   "headline": "Erzkomödiant rettet Nestroy in der Josefstadt",
+   "summary": "Robert Meyer setzt Nestroys „Mädl aus der Vorstadt“ in der Josefstadt die dringend nötigen Glanzlichter auf. Dominique Schnizers Neuinszenierung der Posse (1841) im Theater in der Josefstadt überzeugt mit Ausnahme eines teilweise pointierten Ensembles nicht.",
+   "publishers": [
+    "derstandard.at",
+    "kleinezeitung.at"
+   ],
+   "reports": 2,
+   "newest_at": 1794584596.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Der Nino aus Wien rettet Nestroys \"Das Mädl aus der Vorstadt\" nicht",
+     "url": "https://www.derstandard.at/story/3000000349010/der-nino-aus-wien-rettet-nestroys-das-maedl-aus-der-vorstadt-nicht?ref=rss"
+    },
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Erzkomödiant rettet Nestroy in der Josefstadt",
+     "url": "https://www.kleinezeitung.at/artikel/41449030/erzkomoediant-rettet-nestroy-in-der-josefstadt"
+    }
+   ]
+  },
+  {
+   "id": "13856624837acc68df9aea89",
+   "headline": "Auto von Ex-„Bild“-Chef Reichelt abgefackelt",
+   "summary": "In der Nacht auf Freitag ist das Auto des ehemaligen „Bild“-Chefredakteurs Julian Reichelt völlig ausgebrannt. Reichelt sieht einen \"Einschüchterungsversuch gegen freie Medien, die sich dem Linksextremismus entgegenstellen\".",
+   "publishers": [
+    "derstandard.at",
+    "krone.at"
+   ],
+   "reports": 2,
+   "newest_at": 1794583865.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Brandanschlag auf Auto von \"Nius\"-Chefredakteur Julian Reichelt",
+     "url": "https://www.derstandard.at/story/3000000349137/brandanschlag-auf-auto-von-nius-chefredakteur-julian-reichelt?ref=rss"
+    },
+    {
+     "publisher": "krone.at",
+     "title": "Auto von Ex-„Bild“-Chef Reichelt abgefackelt",
+     "url": "https://www.krone.at/4374700"
+    }
+   ]
+  },
+  {
+   "id": "4048e1b08054f751def13f76",
+   "headline": "ÖBB-Lok in Brand geraten: Zug der Aspangbahn evakuiert",
+   "summary": "Die Feuerwehr löschte die Flammen. Dramatische Szenen auf der Aspangbahn in Niederösterreich: Eine Diesellok ging in Flammen auf.",
+   "publishers": [
+    "krone.at",
+    "kleinezeitung.at"
+   ],
+   "reports": 2,
+   "newest_at": 1794581797.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": 1794567546.37944,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Aspangbahn: Lok in Brand, Personenzug evakuiert",
+     "url": "https://www.krone.at/4374057"
+    },
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "ÖBB-Lok in Brand geraten: Zug der Aspangbahn evakuiert",
+     "url": "https://www.kleinezeitung.at/artikel/41448176/oebb-lok-in-brand-geraten-zug-der-aspangbahn-evakuiert"
+    }
+   ]
+  },
+  {
+   "id": "7600b76b96b02789baca0856",
+   "headline": "Abschiebezentren: Innenminister beraten am Montag in Wien",
+   "summary": "Der Plan Österreichs und vier weiterer EU-Staaten für ein Rückkehrzentrum für abgelehnte Asylwerberinnen und -werber außerhalb der EU wird offenbar konkreter. Die Innenminister der „Gruppe der Umsetzer“ komme am Montag in Wien zu einem Treffen zusammen, bestätigte ein Sprecher von Innenminister Gerhard Karner (ÖVP) heute der APA.",
+   "publishers": [
+    "kleinezeitung.at",
+    "orf.at"
+   ],
+   "reports": 2,
+   "newest_at": 1794577236.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "\"Umsetzer\" beraten am Montag in Wien über Abschiebezentrum",
+     "url": "https://www.kleinezeitung.at/artikel/41449478/umsetzer-beraten-am-montag-in-wien-ueber-abschiebezentrum"
+    },
+    {
+     "publisher": "orf.at",
+     "title": "Abschiebezentren: Innenminister beraten am Montag in Wien",
+     "url": "https://orf.at/stories/3448101/"
+    }
+   ]
+  },
+  {
+   "id": "0c2a2f87cb194b5c570de265",
+   "headline": "Mutmaßlich ukrainische Geheimdienstler in Wien gegen Kaution von jeweils 3000 Euro enthaftet",
+   "summary": "Den beiden Verdächtigen wurde ein Gelöbnis abgenommen, das Land nicht zu verlassen und die laufenden Ermittlungen nicht zu erschweren. Zwei am 5. Oktober in Wien festgenommene spionageverdächtige mutmaßliche Mitglieder des ukrainischen Militärgeheimdienstes befinden sich wieder auf freiem...",
+   "publishers": [
+    "kleinezeitung.at",
+    "derstandard.at"
+   ],
+   "reports": 2,
+   "newest_at": 1794573929.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Mutmaßliche Spione in Wien gegen 3.000 Euro enthaftet",
+     "url": "https://www.kleinezeitung.at/artikel/41449140/mutmassliche-spione-in-wien-gegen-3000-euro-enthaftet"
+    },
+    {
+     "publisher": "derstandard.at",
+     "title": "Mutmaßlich ukrainische Geheimdienstler in Wien gegen Kaution von jeweils 3000 Euro enthaftet",
+     "url": "https://www.derstandard.at/story/3000000349132/mutmasslich-ukrainische-geheimdienstler-in-wien-gegen-kaution-von-je3000-euro-enthaftet?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "8987c5201d0bc4818e6bb742",
+   "headline": "Treffer in der Overtime: Österreichs Eishockey-Frauenteam bleibt erstklassig",
+   "summary": "Im WM-Relegationsspiel gelang in Herning ein 2:1 Sieg gegen Japan. Lange musste Österreich zittern, ehe Anna Meixner im WM-Relegationsspiel gegen Japan in der Overtime das Goldtor zum 2:1-Sieg nach Verlängerung erzielte.",
+   "publishers": [
+    "kleinezeitung.at",
+    "derstandard.at"
+   ],
+   "reports": 2,
+   "newest_at": 1794573510.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Eishockey-WM: Anna Meixner schießt Österreich gegen Japan zum Klassenerhalt",
+     "url": "https://www.kleinezeitung.at/artikel/41448192/gelingt-der-klassenerhalt-oesterreich-gegen-japan-im-liveticker"
+    },
+    {
+     "publisher": "derstandard.at",
+     "title": "Treffer in der Overtime: Österreichs Eishockey-Frauenteam bleibt erstklassig",
+     "url": "https://www.derstandard.at/story/3000000349159/eishockey-treffern-oeehv-frauenteam-bleibt-erstklassig?ref=rss"
+    }
+   ]
+  },
+  {
    "id": "a227e1bfea5437c69d132121",
    "headline": "\"Star Wars\"-Lichtschwert für Millionensumme versteigert",
    "summary": "Weltweit höchste jemals erzielte Wert für eine Requisite aus der Filmreihe. Ein Lichtschwert aus der „Star Wars“-Filmreihe ist gestern bei einer Auktion in den USA für fast fünf Millionen US-Dollar (rund 4,4 Mio. Euro) versteigert worden.",
@@ -162,6 +428,32 @@
      "publisher": "derstandard.at",
      "title": "\"Star Wars\"-Lichtschwert für Millionensumme versteigert",
      "url": "https://www.derstandard.at/story/3000000349140/star-wars-lichtschwert-fuer-millionensumme-versteigert?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "2cb0cf0241b56936022c0f67",
+   "headline": "Microsofts Outlook fällt aus und der Spott kommt nicht zu kurz",
+   "summary": "Seit Donnerstag kämpft Microsoft gegen eine weltweite Störung bei seinen wichtigsten Diensten Outlook und Teams. Während Microsoft-Techniker fieberhaft an der Behebung der Probleme beim Zugriff auf die Office-365-Dienste arbeiten, wachsen Ärger und wirtschaftlicher Schaden bei betroffenen Unternehmen weltweit, die teilweise gelähmt sind.",
+   "publishers": [
+    "krone.at",
+    "kleinezeitung.at"
+   ],
+   "reports": 2,
+   "newest_at": 1794566980.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Spott für Microsoft: „Auf Brieftauben umgestellt“",
+     "url": "https://www.krone.at/4373723"
+    },
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Microsofts Outlook fällt aus und der Spott kommt nicht zu kurz",
+     "url": "https://www.kleinezeitung.at/artikel/41448449/microsofts-outlook-faellt-aus-und-das-internet-findet-das-grossartig"
     }
    ]
   },
@@ -214,32 +506,6 @@
      "publisher": "krone.at",
      "title": "Venezuela erhält 12 Mrd. Dollar aus Ölgeschäften",
      "url": "https://www.krone.at/4373936"
-    }
-   ]
-  },
-  {
-   "id": "763424643fe9810b1bf6de66",
-   "headline": "Gelingt der Klassenerhalt? Österreich gegen Japan im Liveticker",
-   "summary": "Als Gruppenletzter spielt Österreichs Eishockey-Nationalteam der Frauen beim A-WM-Debüt gegen Japan um den Klassenerhalt. \"Wir müssen den Glauben an uns von Anfang an aufs Eis bringen\", fordert Stürmerin Theresa Schafzahl.",
-   "publishers": [
-    "derstandard.at",
-    "kleinezeitung.at"
-   ],
-   "reports": 2,
-   "newest_at": 1794563578.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Österreichs Eishockeyfrauen sehen sich vor dem \"Finale\" gegen Japan am aufsteigenden Ast",
-     "url": "https://www.derstandard.at/story/3000000348963/oesterreichs-eishockeyfrauen-sehen-sich-vor-dem-finale-gegen-japan-am-aufsteigenden-ast?ref=rss"
-    },
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Gelingt der Klassenerhalt? Österreich gegen Japan im Liveticker",
-     "url": "https://www.kleinezeitung.at/artikel/41448192/gelingt-der-klassenerhalt-oesterreich-gegen-japan-im-liveticker"
     }
    ]
   },
@@ -400,32 +666,6 @@
    ]
   },
   {
-   "id": "83cc6404bea5d344b0a35e22",
-   "headline": "Insider: US-Handelsminister nach Nvidia-Spionageskandal unter Druck",
-   "summary": "In den USA trifft die mutmaßliche Spionageaffäre rund um den Nvidia-CEO Jensen Huang nun auch die Spitzenpolitik. Am Donnerstag ist Jensen Huang als Vorstandschef des führenden KI-Chipentwicklers Nvidia zurückgetreten.",
-   "publishers": [
-    "krone.at",
-    "derstandard.at"
-   ],
-   "reports": 2,
-   "newest_at": 1794513850.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Nvidia: US-Handelsminister Lutnick unter Druck",
-     "url": "https://www.krone.at/4373497"
-    },
-    {
-     "publisher": "derstandard.at",
-     "title": "Insider: US-Handelsminister nach Nvidia-Spionageskandal unter Druck",
-     "url": "https://www.derstandard.at/story/3000000349044/insider-us-handelsminister-nach-nvidia-spionageskandal-unter-druck?ref=rss"
-    }
-   ]
-  },
-  {
    "id": "dcafe509ba8c7049cf63252d",
    "headline": "Papst mahnt Ende von „Macho-Mentalität“ ein",
    "summary": "Papst Leo XIV. hat in Peru ein Ende der „Macho-Mentalität“ in vielen Ländern Südamerikas eingemahnt. \"Machismo\" sei laut Papst Leo XIV. nicht mit dem christlichen Bild vereinbar.",
@@ -448,6 +688,2626 @@
      "publisher": "krone.at",
      "title": "Papst mahnt Ende von „Macho-Mentalität“ ein",
      "url": "https://www.krone.at/4373438"
+    }
+   ]
+  },
+  {
+   "id": "81f1541b2429e3ea22ec8e19",
+   "headline": "Mann tötete Hausverwalter nach Dauerstreit",
+   "summary": "Nach dem Schusswaffenvorfall mit einem Toten in Washington hat die Polizei weitere Details bekannt gegeben. Der Schütze sei ein Arzt für Notfallmedizin und habe seinen Hausverwalter getötet, sagte der örtliche Polizeichef Jeffery Carroll.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794585817.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Mann tötete Hausverwalter nach Dauerstreit",
+     "url": "https://www.krone.at/4374881"
+    }
+   ]
+  },
+  {
+   "id": "269762846a32f535efa3686d",
+   "headline": "Kanada, wir kommen! So haben Österreichs Eishockeyfrauen den Coup geschafft",
+   "summary": "\"Herzblut und Teamgeist\": Kapitänin Anna Meixner schoss das Team zum 2:1-Overtimesieg über Japan und zum Klassenerhalt. Entscheidendes spielte sich auch abseits der Eisfläche ab.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794585725.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Kanada, wir kommen! So haben Österreichs Eishockeyfrauen den Coup geschafft",
+     "url": "https://www.derstandard.at/story/3000000349166/kanada-wir-kommen-so-haben-oesterreichs-eishockeyfrauen-den-coup-geschafft?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "1bc96429dd571d45a3c45c1c",
+   "headline": "Wenn Russen angreifen, wäre NATO-Sieg nicht sicher",
+   "summary": "Eine Simulation zeichnet genau dieses Zukunftsszenario. Dabei kommen mehrere Schwachstellen von Regierungen und Militär ans Licht – und es wird deutlich, dass eine entschlossene NATO im Krieg noch keine Garantie für einen Sieg wäre.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794585669.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Wenn Russen angreifen, wäre NATO-Sieg nicht sicher",
+     "url": "https://www.krone.at/4374559"
+    }
+   ]
+  },
+  {
+   "id": "48468282c88e4fe616d08d7e",
+   "headline": "Der Saloberkopf zwischen den Jahreszeiten",
+   "summary": "Der Herbst hält sich am Hochtannberg noch hartnäckig, doch der Winter hat bereits erste Spuren hinterlassen. Zwischen goldbraunen Gräsern, kleinen Bergseen und vereinzelten Schneeflecken geht es auf den Saloberkopf.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794585658.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Der Saloberkopf zwischen den Jahreszeiten",
+     "url": "https://www.krone.at/4373939"
+    }
+   ]
+  },
+  {
+   "id": "696e9c0b6f8a67fab14bb096",
+   "headline": "Ein Besinnungsweg, für den man Puste benötigt",
+   "summary": "Wenn man sich besinnen soll, kann dies, wie bei diesem Themenweg, auch schon einmal anstrengend sein. Aber die Mühen lohnen sich, denn die Route beinhaltet einige Highlights.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794585647.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Ein Besinnungsweg, für den man Puste benötigt",
+     "url": "https://www.krone.at/4374249"
+    }
+   ]
+  },
+  {
+   "id": "670089fe4aa40cb1d33e4e43",
+   "headline": "Welche Folgen Microsoft-Ausfall an Börsen hat",
+   "summary": "Seit Donnerstag streiken die Server von Microsoft. Das ist auch an den Börsen spürbar – und zwar nicht unbedingt an stark schwankenden Aktienkursen.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794585637.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Welche Folgen Microsoft-Ausfall an Börsen hat",
+     "url": "https://www.krone.at/4374351"
+    }
+   ]
+  },
+  {
+   "id": "993ccba097d1313a538267f2",
+   "headline": "Achtung vor einer Abzocke bei Kirchenaustritten",
+   "summary": "Eigentlich ist der Austritt aus der Kirche in Österreich gratis. Doch ein Vermittlungsdienst aus den USA verlangt 90 Euro – nur für das Übermitteln der Daten.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794585622.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Achtung vor einer Abzocke bei Kirchenaustritten",
+     "url": "https://www.krone.at/4374702"
+    }
+   ]
+  },
+  {
+   "id": "7781f72ac8eedd6962120bb6",
+   "headline": "37-jähriger Drogenlenker mit Schrottauto erwischt",
+   "summary": "Ein massives Sicherheitsrisiko stellte ein 37-jähriger Albaner für andere Verkehrsteilnehmer am Donnerstag in der Stadt Salzburg dar. Der Mann wurde gegen 13 Uhr nicht nur beeinträchtigt durch Drogen erwischt, an seinem Fahrzeug wurden auch mehrere schwere Mängel festgestellt.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794585618.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "37-jähriger Drogenlenker mit Schrottauto erwischt",
+     "url": "https://www.krone.at/4374337"
+    }
+   ]
+  },
+  {
+   "id": "b34c8c9fe82997e45d9fb5f2",
+   "headline": "Nach wilder Abzocke wird Tankstelle nun abgerissen",
+   "summary": "Hunderte Verkehrsteilnehmer wurden dort zur Kasse gebeten, jetzt wird sie abgerissen. Die Arbeiten werden voraussichtlich bis März dauern.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794585614.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Nach wilder Abzocke wird Tankstelle nun abgerissen",
+     "url": "https://www.krone.at/4373333"
+    }
+   ]
+  },
+  {
+   "id": "d9ef4d600ba27371021509bb",
+   "headline": "Jugendrotkreuz Stainz und Leibnitz zu Besuch beim Landeshauptmann",
+   "summary": "Mario Kunasek empfing die engagierten Jugendlichen in der Grazer Burg und gratulierte ihnen zum Sieg beim Jugendrotkreuz-Bundesbewerb.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794585600.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Jugendrotkreuz Stainz und Leibnitz zu Besuch beim Landeshauptmann",
+     "url": "https://www.kleinezeitung.at/artikel/41448099/jugendrotkreuz-stainz-und-leibnitz-zu-besuch-beim-landeshauptmann"
+    }
+   ]
+  },
+  {
+   "id": "62cfd8b9bdb35e2800ac57e7",
+   "headline": "Traumjob am See? Villach sucht neuen Campingbad-Chef",
+   "summary": "Die Stadt Villach sucht eine neue Geschäftsführung für das Campingbad am Ossiacher See. Bewerbungen sind noch bis Sonntag möglich.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794585600.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Traumjob am See? Villach sucht neuen Campingbad-Chef",
+     "url": "https://www.kleinezeitung.at/artikel/41450152/traumjob-am-see-villach-sucht-neuen-campingbad-chef"
+    }
+   ]
+  },
+  {
+   "id": "2199891f314c6c8ce4dc4ac6",
+   "headline": "Obersteirische SPÖ-Frauen setzen gemeinsam Zeichen gegen Gewalt",
+   "summary": "Alljährlich wird mit einer 16-tägigen Kampagne gegen Gewalt an Frauen und Mädchen mobilisiert. Die obersteirischen SPÖ-Frauen nehmen mit verschiedenen Aktionen daran teil.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794585600.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Obersteirische SPÖ-Frauen setzen gemeinsam Zeichen gegen Gewalt",
+     "url": "https://www.kleinezeitung.at/artikel/41449317/obersteirische-spoe-frauen-setzen-gemeinsam-zeichen-gegen-gewalt"
+    }
+   ]
+  },
+  {
+   "id": "343e844917bc02ac02cffda1",
+   "headline": "Arnold Schwarzenegger zum \"heißesten Opa der Welt\" gekürt",
+   "summary": "Die Auszeichnung des US-Magazins nahm der 79-jährige Steirer mit Humor.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794585436.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Arnold Schwarzenegger zum \"heißesten Opa der Welt\" gekürt",
+     "url": "https://www.derstandard.at/story/3000000349172/arnold-schwarzenegger-zum-heissesten-opa-der-welt-gekuert?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "53d9571ff10d0b53f9b78637",
+   "headline": "Nach Missbrauchsvorwürfen: Studie soll Geschichte von SOS-Kinderdorf beleuchten",
+   "summary": "Die Wissenschaft soll nun Licht in die Organisationsgeschichte von SOS-Kinderdorf bringen. Eine Studie soll \"die Rolle Hermann Gmeiners und seines langjährigen Nachfolgers Helmut Kutin sowie deren Einfluss auf die Organisation untersuchen\".",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794585399.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Nach Missbrauchsvorwürfen: Studie soll Geschichte von SOS-Kinderdorf beleuchten",
+     "url": "https://www.kleinezeitung.at/artikel/41394143/nach-missbrauchsvorwuerfen-studie-soll-geschichte-von-sos-kinderdorf"
+    }
+   ]
+  },
+  {
+   "id": "124fadc2920ab95064c1e43b",
+   "headline": "Aus für umstrittenen Sponsoring-Deal mit Rheinmetall bei Borussia Dortmund",
+   "summary": "Es gibt keine Fortsetzung der Kooperation mit dem Rüstungskonzern. Ausschlaggebend war die anhaltende Kritik der BVB-Fans an der Partnerschaft.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794584940.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Aus für umstrittenen Sponsoring-Deal mit Rheinmetall bei Borussia Dortmund",
+     "url": "https://www.derstandard.at/story/3000000349192/aus-fuer-umstrittenen-sponsoring-deal-mit-rheinmetall-bei-borussia-dortmund?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "a3267a1fb5f8f319ec55bd0e",
+   "headline": "Chile: Mutter sah verloren geglaubte Söhne wieder",
+   "summary": "In Chile hat eine Mutter erstmals seit Jahrzehnten zwei ihrer drei verloren geglaubten Söhne wiedergetroffen. Sie waren ihr während der Militärdiktatur Augusto Pinochets zwei Tage nach der Geburt abgenommen worden.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794584557.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Chile: Mutter sah verloren geglaubte Söhne wieder",
+     "url": "https://www.krone.at/4374317"
+    }
+   ]
+  },
+  {
+   "id": "94515aad4011bd4949e18405",
+   "headline": "Trügerische Gemütlichkeit im Grazer Theater am Ortweinplatz",
+   "summary": "„Das große Verschwinden“ hinterfragt die Sehnsucht nach einem neuen Biedermeier.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794584437.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Trügerische Gemütlichkeit im Grazer Theater am Ortweinplatz",
+     "url": "https://www.kleinezeitung.at/artikel/41450218/truegerische-gemuetlichkeit-im-grazer-theater-am-ortweinplatz"
+    }
+   ]
+  },
+  {
+   "id": "2475d40a4987c3f069d436a1",
+   "headline": "Die EU-„Umsetzer“ verkünden, wohin abgeschoben werden soll",
+   "summary": "Im Anschluss an ein Innenminister-Treffen in Wien soll ein Drittstaat genannt werden, mit dem verhandelt wird. Ein Land gilt als wahrscheinlichster Kandidat.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794584207.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Die EU-„Umsetzer“ verkünden, wohin abgeschoben werden soll",
+     "url": "https://www.kleinezeitung.at/artikel/41448567/die-eu-umsetzer-verkuenden-wohin-abgeschoben-werden-soll"
+    }
+   ]
+  },
+  {
+   "id": "46d63d0b3e0663749e778d22",
+   "headline": "Karlau: Häftling stiftete Kollegen zu einer Lüge vor Gericht an",
+   "summary": "Ein Polster eines Justizwachebeamten verschwand und tauchte in einer Zelle wieder auf. Der Spaß endet spätestens beim Versuch, den Diebstahl zu vertuschen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794583800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Karlau: Häftling stiftete Kollegen zu einer Lüge vor Gericht an",
+     "url": "https://www.kleinezeitung.at/artikel/41449231/karlau-haeftling-stiftete-kollegen-zu-einer-luege-vor-gericht-an"
+    }
+   ]
+  },
+  {
+   "id": "853710dbc18c97db16d1fc37",
+   "headline": "Große Chancen für Kärntner Firmen in Serbien, Ungarn und Bulgarien",
+   "summary": "Die politischen Karten wurden in allen drei Ländern bei den jüngsten Wahlen neu gemischt. Vor allem in Ungarn entstehen durch 16 Milliarden Euro von der EU Potenziale.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794583800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Große Chancen für Kärntner Firmen in Serbien, Ungarn und Bulgarien",
+     "url": "https://www.kleinezeitung.at/artikel/41448517/grosse-chancen-fuer-kaerntner-firmen-in-serbien-ungarn-und-bulgarien"
+    }
+   ]
+  },
+  {
+   "id": "3c6719209c665424e5af41f9",
+   "headline": "Neue Medikamente gegen Herzkrankheiten überschätzt",
+   "summary": "Zwei neue Medikamente, von denen ein großer Nutzen im Kampf gegen Herzerkrankungen erwartet wurde, reduzieren das Risiko für Herzinfarkte und Schlaganfälle doch nicht. Zu diesem Ergebnis kamen jetzt mehrere große klinische Studien.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794583781.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Neue Medikamente gegen Herzkrankheiten überschätzt",
+     "url": "https://www.krone.at/4374678"
+    }
+   ]
+  },
+  {
+   "id": "09697bc7f8e70e692ad71adc",
+   "headline": "Durch Schuss von Polizist verletzt: Erste Einvernahme geplant",
+   "summary": "Ein 38-Jähriger wurde festgenommen und befindet sich weiterhin im Krankenhaus. Die Schussabgabe wird von der Ermittlungs- und Beschwerdestelle Misshandlungsvorwürfe untersucht.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794583756.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Durch Schuss von Polizist verletzt: Erste Einvernahme geplant",
+     "url": "https://www.derstandard.at/story/3000000349190/verletzter-nach-polizei-schuss-in-n214-erste-einvernahme-geplant?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "6cd0cfb1f060837b9e878155",
+   "headline": "Ein Schuss – und Kater „Balu“ blieb verschwunden",
+   "summary": "Quälende Ungewissheit um verschwundenen Kater „Balu“ aus dem Bezirk Tulln. Alles deutet darauf hin, dass die schöne Rassekatze womöglich von einem Jäger erschossen wurde ...",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794583627.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Ein Schuss – und Kater „Balu“ blieb verschwunden",
+     "url": "https://www.krone.at/4374666"
+    }
+   ]
+  },
+  {
+   "id": "aee191b3f77ede915c065dd6",
+   "headline": "US-Behörde rät 720.000 BMW-Fahrern wegen Brandgefahr im Freien zu parken",
+   "summary": "Die Autos waren bereits 2024 wegen eines Problems mit der Wasserpumpe zurückgerufen worden. Jetzt müssen sie erneut in die Werkstatt.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794583432.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "US-Behörde rät 720.000 BMW-Fahrern wegen Brandgefahr im Freien zu parken",
+     "url": "https://www.derstandard.at/story/3000000349189/us-beh246rde-bmw-fahrer-sollen-wegen-brandgefahr-drau223en-parken?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "dc3d3d4d6ac8339edbb8aba2",
+   "headline": "VW bietet Viertelmillion, damit Mitarbeiter gehen!",
+   "summary": "Der kriselnde Autobauer Volkswagen will in Deutschland massiv Stellen abbauen – und greift dafür tief in die Tasche. Mit einem neuen Abfindungsprogramm sollen Beschäftigte mit niedrigen und mittleren Gehältern zum freiwilligen Gehen bewegt werden.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794583383.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "VW bietet Viertelmillion, damit Mitarbeiter gehen!",
+     "url": "https://www.krone.at/4374361"
+    }
+   ]
+  },
+  {
+   "id": "f84aaa645bf16813b62a6e59",
+   "headline": "Im Grafenwörther \"Mini-Dubai\" kann man jetzt auch Mieten",
+   "summary": "Der Kauf ist für viele Interessenten laut den Projektbetreibern derzeit nicht möglich, deshalb wird auch auf Baurechtseigentum gesetzt.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794583303.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Im Grafenwörther \"Mini-Dubai\" kann man jetzt auch Mieten",
+     "url": "https://www.derstandard.at/story/3000000349179/im-grafenwoerther-mini-dubai-kann-man-jetzt-auch-mieten?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "c89ca23d971b3aa68cce3b5a",
+   "headline": "Flughafen Wien eröffnet erweitertes Terminal im Frühjahr 2027",
+   "summary": "Geplant sind 18 neue Gates, größere Loungebereiche und 10.000 Quadratmeter mehr für Shops und Gastronomie.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794583260.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Flughafen Wien eröffnet erweitertes Terminal im Frühjahr 2027",
+     "url": "https://www.derstandard.at/story/3000000349176/flughafen-wien-eroeffnet-erweitertes-terminal-im-fruehjahr-2027?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "96d2fff18fc960d33b69cb02",
+   "headline": "Konzert-Comeback: Der Junior übt schon den Hüftschwung",
+   "summary": "Peter Kraus (87) kehrt 2027 mit Sohn Mike (53) auf die Konzertbühne zurück. Erarbeitet wurde das Showprogramm im burgenländischen Wellnesshotel Larimar.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794583241.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Konzert-Comeback: Der Junior übt schon den Hüftschwung",
+     "url": "https://www.kleinezeitung.at/artikel/41446012/konzert-comeback-der-junior-uebt-schon-den-hueftschwung"
+    }
+   ]
+  },
+  {
+   "id": "dbb1680761cb3d157b306658",
+   "headline": "\"Das ist das Ende von Tesla\": Cybertruck-Fans kämpfen um ihren Lieblingsboliden",
+   "summary": "Die Fan-Community ist klein, aber laut. In den sozialen Medien richtet sie ihren Appell an Tesla-CEO Elon Musk, der sein Herz für das Anliegen zumindest ein bisschen erwärmt.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794583215.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "\"Das ist das Ende von Tesla\": Cybertruck-Fans kämpfen um ihren Lieblingsboliden",
+     "url": "https://www.derstandard.at/story/3000000349144/das-ist-das-ende-von-tesla-cybertruck-fans-kaempfen-um-ihren-lieblingsboliden?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "139186fc9cc106a7f53f1df1",
+   "headline": "USA dementieren: Iran meldet Angriff auf Radar in Bahrain",
+   "summary": "In der Straße von Hormus ist ein LNG-Tanker auf eine Seemine gelaufen.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794583178.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "USA dementieren: Iran meldet Angriff auf Radar in Bahrain",
+     "url": "https://www.derstandard.at/story/3000000349188/iran-meldet-angriff-auf-us-radar-in-bahrain?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "433790899843ea2a15acdda4",
+   "headline": "Verborgene Gefahr viraler Infektionen entdeckt",
+   "summary": "Impfstoffe können möglicherweise mehr bewirken, als Menschen vor den unmittelbaren Auswirkungen einer Virusinfektion zu schützen. Neueste Forschungsergebnisse deuten darauf hin, dass sie auch dazu beitragen könnten, dauerhafte Schäden am Immunsystem zu verhindern, die auch nach dem Verschwinden des Virus bestehen bleiben.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794582897.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Verborgene Gefahr viraler Infektionen entdeckt",
+     "url": "https://www.krone.at/4374609"
+    }
+   ]
+  },
+  {
+   "id": "5fe946b17dc1421e96dda207",
+   "headline": "Bus stieß mit Lastwagen zusammen: 23 Tote in Indien",
+   "summary": "Die Unfallursache ist unklar. Der Vorfall ereignete sich an einer Schnellstraße nahe des Kaziranga-Nationalparks.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794582877.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Bus stieß mit Lastwagen zusammen: 23 Tote in Indien",
+     "url": "https://www.derstandard.at/story/3000000349187/bus-stie223-mit-lastwagen-zusammen-23-tote-in-indien?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "cd25aa3ddd918cd68989aa38",
+   "headline": "Weniger Show, mehr Kontrolle: Colette Kress übernimmt vorerst Führung bei Nvidia",
+   "summary": "Nach Jensen Huangs tiefem Fall muss nun die bisherige Finanzchefin aufräumen, die seine wildesten KI-Wetten immer wieder bremste.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794582617.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Weniger Show, mehr Kontrolle: Colette Kress übernimmt vorerst Führung bei Nvidia",
+     "url": "https://www.derstandard.at/story/3000000349153/weniger-show-mehr-kontrolle-colette-kress-uebernimmt-vorerst-fuehrung-bei-nvidia?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "7a7a3cb4a47ae79324996fce",
+   "headline": "Das sind die sichersten und gefährlichsten Reiseziele 2027",
+   "summary": "Kanada, Australien und die Schweiz zählen zu den sichersten Reisezielen der Welt. Die neue Risikolandkarte liefert einen globalen Überblick.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794582382.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Das sind die sichersten und gefährlichsten Reiseziele 2027",
+     "url": "https://www.kleinezeitung.at/artikel/41441517/das-sind-die-sichersten-und-gefaehrlichsten-reiseziele-2027"
+    }
+   ]
+  },
+  {
+   "id": "f4ea340dea81767a78402d3b",
+   "headline": "Künftig zwei österreichische Forschende in ERC-Leitung, vier Grants nach Wien",
+   "summary": "Informatiker Thomas Henzinger wird Vizepräsident im Europäischen Forschungsrat, Physikerin Ulrike Diebold wird Mitglied. Fünf Fachleute an Wiener Institutionen erhalten \"Synergy Grants\".",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794582069.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Künftig zwei österreichische Forschende in ERC-Leitung, vier Grants nach Wien",
+     "url": "https://www.derstandard.at/story/3000000349097/kuenftig-zwei-oesterreichische-forschende-in-erc-leitung-vier-grants-nach-wien?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "d5f76f118dd52ac7d06b0bc1",
+   "headline": "Spieglein, Spieglein an der Wand. . .",
+   "summary": "Geburtstag feiert er am 12. Dezember. Zuvor macht sich der renommierte Glas- und Spiegelkünstler Arnulf Komposch selbst ein Geschenk und bittet zur Ausstellung in sein Klagenfurter Domizil.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794582019.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Spieglein, Spieglein an der Wand. . .",
+     "url": "https://www.krone.at/4372886"
+    }
+   ]
+  },
+  {
+   "id": "4d33d85496a8b50c12b1dbda",
+   "headline": "Performance beim Nachwuchsfestival Huggy Bears Days: Zur Hölle mit Elvis",
+   "summary": "Starker Auftakt mit Katarína Krupičková und Els van Houtert im Wuk.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794582014.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Performance beim Nachwuchsfestival Huggy Bears Days: Zur Hölle mit Elvis",
+     "url": "https://www.derstandard.at/story/3000000349091/performance-beim-nachwuchsfestival-huggy-bears-days-zur-hoelle-mit-elvis?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "ab37e99c3aa5efe6ae836839",
+   "headline": "Vor 20 Jahren wurde aus dem Weizer Stadtcafé das „Alibi“",
+   "summary": "Zwei Jahrzehnte ist es her, dass Markus und Rosi Kelz aus dem Stadtcafé in Weiz das „Alibi“ machten. Was eigentlich hinter dem Lokalnamen steckt und wie das Jubiläum gefeiert wird.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794582000.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Vor 20 Jahren wurde aus dem Weizer Stadtcafé das „Alibi“",
+     "url": "https://www.kleinezeitung.at/artikel/41448740/vor-20-jahren-wurde-aus-dem-weizer-stadtcafe-das-alibi"
+    }
+   ]
+  },
+  {
+   "id": "7c075616a39200cc842a0443",
+   "headline": "ORF: Pig muss rasch konkret werden",
+   "summary": "Spätestens bis Sonntag muss der neue ORF-Finanzplan vorliegen. Doch ganz so einfach ist das nicht, wie sich zeigt.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794582000.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "ORF: Pig muss rasch konkret werden",
+     "url": "https://www.kleinezeitung.at/artikel/41448783/orf-pig-muss-rasch-konkret-werden"
+    }
+   ]
+  },
+  {
+   "id": "49d25cfcdded5f7faf4f0f28",
+   "headline": "Elektrogeschäft Blödorn erweitert in Hartberg um „Smart Home Area“",
+   "summary": "Mit neuem Standort in der Ressavarstraße 1a lebt das Elektrofachgeschäft Blödorn in Hartberg weiter. Ergänzt um eine „Smart Home Area“, präsentiert man sich nun moderner.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794582000.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Elektrogeschäft Blödorn erweitert in Hartberg um „Smart Home Area“",
+     "url": "https://www.kleinezeitung.at/artikel/41447968/elektrogeschaeft-bloedorn-erweitert-in-hartberg-um-smart-home-area"
+    }
+   ]
+  },
+  {
+   "id": "ae8ad2608955e80c91a09f63",
+   "headline": "Kleine Zeitung-Büro in St. Veit lädt zum Adventkranz-Workshop",
+   "summary": "Einen Adventkranz selbst herstellen, darum geht es bei einem Workshop im Regionalbüro der Kleinen Zeitung am 17. November in St. Veit.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794582000.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Kleine Zeitung-Büro in St. Veit lädt zum Adventkranz-Workshop",
+     "url": "https://www.kleinezeitung.at/artikel/41448525/kleine-zeitung-buero-in-st-veit-laedt-zum-adventkranz-workshop"
+    }
+   ]
+  },
+  {
+   "id": "d083f2b6cd778d435bb526c3",
+   "headline": "Baggerfahrer übernimmt Gasthaus „Am Schauplatz“ in Vordernberg",
+   "summary": "Ovidiu Darabantiu hat beruflich einen neuen Weg eingeschlagen. Im Gasthaus „Am Schauplatz“ in Vordernberg setzt er zunächst auf das bewährte Konzept.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794582000.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Baggerfahrer übernimmt Gasthaus „Am Schauplatz“ in Vordernberg",
+     "url": "https://www.kleinezeitung.at/artikel/41441784/baggerfahrer-uebernimmt-gasthaus-am-schauplatz-in-vordernberg"
+    }
+   ]
+  },
+  {
+   "id": "5a5c896026e040a97e6bd211",
+   "headline": "Das Prinzenpaar für die Faschingszeit in Kühnsdorf steht fest",
+   "summary": "Beim Faschingswecken am 11. November 2026 wurde das neue Prinzenpaar präsentiert. Die ersten offiziellen Termine stehen bereits fest.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794582000.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Das Prinzenpaar für die Faschingszeit in Kühnsdorf steht fest",
+     "url": "https://www.kleinezeitung.at/artikel/41449916/das-prinzenpaar-fuer-die-faschingszeit-in-kuehnsdorf-steht-fest"
+    }
+   ]
+  },
+  {
+   "id": "7f4cc39e1f8a9f23e2b894d6",
+   "headline": "Der erste „City-Dorflodn“ hat im Herzen von Lienz eröffnet",
+   "summary": "Mit Bedienung und mit Produkten aller 80 Lieferanten aus Osttirol und Oberkärnten: Der Marinelli-Dorflodn in der Bezirkshauptstadt wartet mit neuem Konzept auf.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794582000.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Der erste „City-Dorflodn“ hat im Herzen von Lienz eröffnet",
+     "url": "https://www.kleinezeitung.at/artikel/41449095/der-erste-city-dorflodn-hat-im-herzen-von-lienz-eroeffnet"
+    }
+   ]
+  },
+  {
+   "id": "d887f3fcd67af65caba81314",
+   "headline": "Europäische Städte fordern von EU Verbot von Zigarettenfiltern",
+   "summary": "Laut einem Bericht der Plattform \"Politico\" argumentieren die Städte mit der Umweltverschmutzung. Sie und die WHO sehen in den Filtern auch keine gesundheitlichen Vorteile für Raucher.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794581987.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Europäische Städte fordern von EU Verbot von Zigarettenfiltern",
+     "url": "https://www.derstandard.at/story/3000000349180/europaeische-staedte-fordern-von-eu-verbot-von-zigarettenfiltern?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "03739ceff9e5493385660ece",
+   "headline": "J. D. Vance muss um seine Präsidentschaftskandidatur 2028 wohl bangen",
+   "summary": "US-Präsident Trump hat seine Drohung wahr gemacht und gibt seinem Vize die Schuld daran, dass mit dem Iran noch kein Friedensvertrag ausgehandelt ist.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794581837.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "J. D. Vance muss um seine Präsidentschaftskandidatur 2028 wohl bangen",
+     "url": "https://www.derstandard.at/story/3000000349108/j-d-vance-muss-um-seine-praesidentschaftskandidatur-2028-wohl-bangen?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "acd7ae97aa2f708869ae2a33",
+   "headline": "Warum ist Trumps irrster Krieger noch im Amt?",
+   "summary": "Trumps Minister fürs wirklich Grobe übersteht ein Misstrauensvotum im Kongress.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794581784.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Warum ist Trumps irrster Krieger noch im Amt?",
+     "url": "https://www.derstandard.at/story/3000000349130/warum-ist-trumps-irrster-krieger-noch-im-amt?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "b4511bd70bb7d64014bccf4b",
+   "headline": "Starshield gedrosselt: Laut Kiew „keine klare Erklärung“",
+   "summary": "Die Ukraine hat nach eigenen Angaben bisher keine klare Erklärung für die neuerlichen Einschränkungen des Satelliten-Kommunikationssystems Starshield für die ukrainische Armee erhalten. „Wir haben immer noch keine klaren Erklärungen“, sagte der ukrainische Präsident Wolodymyr Selenskyj heute mit Blick auf das für den Betrieb und die Abwehr von Drohnen sowie die Kommunikation an der Front wichtige System des US-Unternehmens SpaceX.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794581704.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Starshield gedrosselt: Laut Kiew „keine klare Erklärung“",
+     "url": "https://orf.at/stories/3448109/"
+    }
+   ]
+  },
+  {
+   "id": "7d6f3568c92f505631bb4c7a",
+   "headline": "Steirische Märchenerzählerinnen luden zu Abend nach Stübing",
+   "summary": "Die Autorinnen des Buches „Märchen hoch 7“ luden in das Freilichtmuseum Stübing. Auch die Weststeirerinnen Franziska Kren-Leitgeb und RoseMarie Popp waren dabei.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794581700.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Steirische Märchenerzählerinnen luden zu Abend nach Stübing",
+     "url": "https://www.kleinezeitung.at/artikel/41449662/steirische-maerchenerzaehlerinnen-luden-zu-abend-nach-stuebing"
+    }
+   ]
+  },
+  {
+   "id": "6bb1001051e5710834744775",
+   "headline": "Voitsberger Innenstadt: Dauer der Kurzparkzone könnte halbiert werden",
+   "summary": "Wirtschaftsbund ortet „falsches Signal und Schlag ins Gesicht der Innenstadtbetriebe“. Bürgermeister glaubt nicht an negativen Einfluss auf die Geschäfte.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794581382.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Voitsberger Innenstadt: Dauer der Kurzparkzone könnte halbiert werden",
+     "url": "https://www.kleinezeitung.at/artikel/41449918/voitsberger-innenstadt-dauer-der-kurzparkzone-koennte-halbiert-werden"
+    }
+   ]
+  },
+  {
+   "id": "039cb10e766089abef54a3b9",
+   "headline": "Lichtschwert ersteigert",
+   "summary": "Nächstes Jahr sind es 50 Jahre seit dem ersten „Star Wars“-Film.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794580667.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Lichtschwert ersteigert",
+     "url": "https://www.derstandard.at/story/3000000349169/lichtschwert-ersteigert?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "ebbebdb405256ca011174c59",
+   "headline": "Tankstellenmitarbeiterin in Kärnten unter Betrugsverdacht",
+   "summary": "Die Frau soll in den vergangenen eineinhalb Jahren Buchungen im Kassensystem gelöscht haben. Der Schaden beläuft sich auf Zehntausende Euro.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794580573.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Tankstellenmitarbeiterin in Kärnten unter Betrugsverdacht",
+     "url": "https://www.kleinezeitung.at/artikel/41449942/tankstellenmitarbeiterin-in-kaernten-unter-betrugsverdacht"
+    }
+   ]
+  },
+  {
+   "id": "5983a8f17fffbc3ea8d8e795",
+   "headline": "ORF-Stiftungsratschef schlägt ARD, ZDF, SRG gemeinsamen Kulturstreamer vor",
+   "summary": "ORF würde bei 3sat für Schweizer einspringen, versichert Stiftungsratschef. \"Bis zu 250 Beschäftigte\" würden den ORF \"bis 2029 verlassen\".",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794580552.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "ORF-Stiftungsratschef schlägt ARD, ZDF, SRG gemeinsamen Kulturstreamer vor",
+     "url": "https://www.derstandard.at/story/3000000349075/orf-stiftungsratschef-schlaegt-ard-zdf-srg-gemeinsamen-kulturstreamer-vor?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "3e9cdb4eb94ff52a773c81da",
+   "headline": "Schwere Fiaker-Unfälle in Wien: Tierschützer fordern Verbot",
+   "summary": "Nach zwei Vorfällen mit verletzten Pferden binnen kurzer Zeit fordern Tierschützer und Grüne erneut das Aus für Fiaker.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794580397.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Schwere Fiaker-Unfälle in Wien: Tierschützer fordern Verbot",
+     "url": "https://www.kleinezeitung.at/artikel/41449439/schwere-fiaker-unfaelle-in-wien-tierschuetzer-fordern-verbot"
+    }
+   ]
+  },
+  {
+   "id": "cef16160ea650bb2a27abfa3",
+   "headline": "77-Jähriger am Weg zur Toilette von Lkw erfasst",
+   "summary": "Am Weg zur Toilette wurde ein 77-jähriger Bulgare am Freitagmorgen auf der Raststation in Ansfelden in OÖ von einem Lkw-Fahrer übersehen und erfasst. Trotz sofort eingeleiteter Reanimationsmaßnahmen verstarb der Mann noch an Ort und Stelle.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794580325.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "77-Jähriger am Weg zur Toilette von Lkw erfasst",
+     "url": "https://www.krone.at/4374490"
+    }
+   ]
+  },
+  {
+   "id": "c4dcf9ef16984ad0f816d207",
+   "headline": "Europäer bei Ukraine-Gesprächen dabei, aber uneinig, wer sie vertritt",
+   "summary": "Keine Entscheidung beim Gipfel in Dublin: Ratspräsident und Favorit Costa soll in zwei Wochen Vorschläge zu Strategie und Finanzierung aus dem EU-Budget machen.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794580236.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Europäer bei Ukraine-Gesprächen dabei, aber uneinig, wer sie vertritt",
+     "url": "https://www.derstandard.at/story/3000000349068/europaeer-bei-ukraine-gespraechen-dabei-aber-uneinig-wer-sie-vertritt?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "8aa0fb00a03228302d76a921",
+   "headline": "Zadra zu Öffis: „Niemand kennt sich mehr aus“",
+   "summary": "Der Mobilitätssprecher der Oppositionspartei warnt eindringlich vor der Verkehrspolitik der Vorarlberger Landesregierung. Ein neues digitales Hilfsmittel soll nun Passagiere rechtzeitig über bevorstehende Ausfälle aufklären.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794580211.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Zadra zu Öffis: „Niemand kennt sich mehr aus“",
+     "url": "https://www.krone.at/4374336"
+    }
+   ]
+  },
+  {
+   "id": "fa332886a8818bdd8dc4cab2",
+   "headline": "„PCs für alle“: Wenn ausrangierte Laptops junge Leben verändern",
+   "summary": "Ein eigener Laptop ist für viele nicht leistbar. Der Verein „PCs für alle“ sammelt Geräte und verschenkt sie an Bedürftige – bald mit Standort in Graz.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794580200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "„PCs für alle“: Wenn ausrangierte Laptops junge Leben verändern",
+     "url": "https://www.kleinezeitung.at/artikel/41449428/pcs-fuer-alle-wenn-ausrangierte-laptops-junge-leben-veraendern"
+    }
+   ]
+  },
+  {
+   "id": "f1d069c9830eae7a0626c80c",
+   "headline": "Alles deutet auf europäische Abschiebezentren in Ruanda hin",
+   "summary": "Dass die ersten geplanten Return Hubs im ostafrikanischen Land errichtet werden sollen, dürfte am Montag in Wien bekannt gegeben werden.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794580169.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Alles deutet auf europäische Abschiebezentren in Ruanda hin",
+     "url": "https://www.derstandard.at/story/3000000348842/alles-deutet-auf-europaeische-abschiebezentren-in-ruanda-hin?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "920297af8fbe0d0549148b7a",
+   "headline": "Burgenländerin (35) wegen Verleumdung verurteilt",
+   "summary": "„Ich war nicht ich in dieser Zeit“, sagte die 35-Jährige, die ihren ehemaligen Lebensgefährten in einem Mail an die Staatsanwaltschaft schwer belastet hatte. Beim Prozess zog die Frau die Anschuldigungen zurück.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794579995.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Burgenländerin (35) wegen Verleumdung verurteilt",
+     "url": "https://www.krone.at/4374611"
+    }
+   ]
+  },
+  {
+   "id": "0bbc253f36862be9586bc25f",
+   "headline": "Länder knüpfen Reformbereitschaft an mehr Geld für die Spitäler",
+   "summary": "Die Länder zeigen sich bereit, mehr Verantwortung bei Gesundheitsreformen zu tragen, fordern allerdings ein stabil ausfinanziertes System.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794579981.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Länder knüpfen Reformbereitschaft an mehr Geld für die Spitäler",
+     "url": "https://www.derstandard.at/story/3000000349182/reformpartnerschaft-l228nder-wollen-mehr-geld-f252r-die-spit228ler?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "ccb5a3ee73606f9cbf1d3fba",
+   "headline": "49% Gehaltsplus und Extra-Prämien für Zoo-Direktor",
+   "summary": "Ein verheerendes Zeugnis stellt der Rechnungshof dem Schönbrunner Zoo und seinem Eigentümer, dem Wirtschaftsministerium, aus: Direktor Hering-Hagenbeck kann demnach nach Belieben schalten und walten, bekommt Luxus-Zulagen obenauf – und spart dafür bei Tieren, aber auch der Sicherheit der Besucher.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794579134.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "49% Gehaltsplus und Extra-Prämien für Zoo-Direktor",
+     "url": "https://www.krone.at/4374146"
+    }
+   ]
+  },
+  {
+   "id": "b25fc0a7a17c48846e208657",
+   "headline": "Vorwürfe gegen Pianist Fazil Say wegen Führungsstils",
+   "summary": "Geigerin zieht sich nach Vorwürfen gegen Fazıl Say aus Orchesterprojekt zurück.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794578716.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Vorwürfe gegen Pianist Fazil Say wegen Führungsstils",
+     "url": "https://www.derstandard.at/story/3000000349175/vorwuerfe-gegen-pianist-fazil-say-wegen-fuehrungsstils?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "a5e9d2de4beaaca2aa20aa35",
+   "headline": "SK Sturm: Kein Trainer, ein Neuzugang und zwei Verlängerungen",
+   "summary": "Trainer Fabio Ingolitsch ist erkrankt, fehlte beim Training. Araphat Mohammed wurde verpflichtet, Verträge mit Jonas Peinhart und Nils Donat verlängert.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794578685.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "SK Sturm: Kein Trainer, ein Neuzugang und zwei Verlängerungen",
+     "url": "https://www.kleinezeitung.at/artikel/41449561/sk-sturm-kein-trainer-ein-neuzugang-und-zwei-verlaengerungen"
+    }
+   ]
+  },
+  {
+   "id": "cc5c2a248d01e1f0193f6e90",
+   "headline": "Inder (35) aß Süßigkeit mit Sprengsatz und starb",
+   "summary": "In Indien hat ein Mann eine Süßigkeit erwischt, in der ein Sprengsatz versteckt war. Dieser explodierte im Mund des 35-Jährigen, der daraufhin schwere Verletzungen erlitt.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794578583.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Inder (35) aß Süßigkeit mit Sprengsatz und starb",
+     "url": "https://www.krone.at/4374589"
+    }
+   ]
+  },
+  {
+   "id": "66e39e1131ef0c7514c8a1ac",
+   "headline": "Nach Auszeit: Klagenfurterin startet mit „Genuss Salon“ an neuem Standort",
+   "summary": "Der „Genuss Salon Klagenfurt“ hat nach nur knapp einem Jahr einen Standortwechsel vollzogen. Das Projekt Café ist aber noch nicht ganz vom Tisch.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794578400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Nach Auszeit: Klagenfurterin startet mit „Genuss Salon“ an neuem Standort",
+     "url": "https://www.kleinezeitung.at/artikel/41448299/nach-auszeit-klagenfurterin-startet-mit-genuss-salon-an-neuem-standort"
+    }
+   ]
+  },
+  {
+   "id": "39075f1cd5dd631c139c0c79",
+   "headline": "Zwischen Kitsch und Kunst: Schenkung von Edgar Knoop an das MMKK",
+   "summary": "Licht und Farbe sind die zentralen Themen von Edgar Knoop. Unbekümmert ist sein Zugang zum Thema Kitsch, wie eine Schenkung an das MMKK zeigt.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794578400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Zwischen Kitsch und Kunst: Schenkung von Edgar Knoop an das MMKK",
+     "url": "https://www.kleinezeitung.at/artikel/41448999/zwischen-kitsch-und-kunst-schenkung-von-edgar-knoop-an-das-mmkk"
+    }
+   ]
+  },
+  {
+   "id": "6313b87df14de8c88f45885d",
+   "headline": "Volles Haus bei der Berufsinfo-Messe in Gleisdorf",
+   "summary": "Rund 65 Aussteller präsentierten im Forum Kloster in Gleisdorf regionale Ausbildungswege. Rund 1000 Besucher waren an zwei Tagen dabei.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794578400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Volles Haus bei der Berufsinfo-Messe in Gleisdorf",
+     "url": "https://www.kleinezeitung.at/artikel/41448868/volles-haus-bei-der-berufsinfo-messe-in-gleisdorf"
+    }
+   ]
+  },
+  {
+   "id": "8fd1a8a3a6490cfbce936d79",
+   "headline": "38 Meter und 360 Grad: Neue Plattform am Grazer Jakominiplatz",
+   "summary": "In den neuen „Media Tower“ auf dem Jakominiplatz hat das Grazer Unternehmen „Ankünder“ rund 500.000 Euro investiert. Was ab sofort über die hochauflösenden Bildschirme laufen wird.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794578400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "38 Meter und 360 Grad: Neue Plattform am Grazer Jakominiplatz",
+     "url": "https://www.kleinezeitung.at/artikel/41449101/38-meter-und-360-grad-neue-plattform-am-grazer-jakominiplatz"
+    }
+   ]
+  },
+  {
+   "id": "70d3bcbc996c1ee955ad2eff",
+   "headline": "Firmen pitchen: 150 Jobs für Studierende und Absolventen",
+   "summary": "„Meet Hidden Champions“: Am kommenden Dienstag machen sich 18 steirische Wachstumsunternehmen via Firmenkontaktmesse auf die Suche nach neuen Beschäftigten.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794578400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Firmen pitchen: 150 Jobs für Studierende und Absolventen",
+     "url": "https://www.kleinezeitung.at/artikel/41448411/firmen-pitchen-150-jobs-fuer-studierende-und-absolventen"
+    }
+   ]
+  },
+  {
+   "id": "1cd2fe6c8c85cf441b9a0902",
+   "headline": "Steirisches Skigebiet „gerettet“: Das sind die Pläne der Betreiber",
+   "summary": "Margret Kraischek und Michael Stoppacher haben die Veitscher Brunnalm übernommen. Die Vorbereitungen für den Winter laufen, auch der Plan für den Sommer steht.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794578400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Steirisches Skigebiet „gerettet“: Das sind die Pläne der Betreiber",
+     "url": "https://www.kleinezeitung.at/artikel/41417981/steirisches-skigebiet-gerettet-das-sind-die-plaene-der-betreiber"
+    }
+   ]
+  },
+  {
+   "id": "45397b936cd800b700baca2b",
+   "headline": "Quiz: Von Tralalero Tralala bis zur Dakar-Rallye",
+   "summary": "Testen Sie Ihr Wissen über Kultur, Sport und Lifestyle.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794578400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Quiz: Von Tralalero Tralala bis zur Dakar-Rallye",
+     "url": "https://www.derstandard.at/story/3000000348953/quiz-von-tralalero-tralala-bis-zur-dakar-rallye?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "52eaf6fa6feab5c0a564fc87",
+   "headline": "„Harte Männer“ gehen zur Vorsorge in das Krankenhaus Lienz",
+   "summary": "Movember Osttirol und das Krankenhaus Lienz drehten ein Instagram-Video, das Männer zur Vorsorgeuntersuchung animieren soll. Die Botschaft bleibt jedenfalls im Gedächtnis.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794578400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "„Harte Männer“ gehen zur Vorsorge in das Krankenhaus Lienz",
+     "url": "https://www.kleinezeitung.at/artikel/41449385/harte-maenner-gehen-zur-vorsorge-in-das-krankenhaus-lienz"
+    }
+   ]
+  },
+  {
+   "id": "e3c4a5cad0813d86b449a7db",
+   "headline": "Neuer Tourismusverband für Katschberg und Lieser-Maltatal",
+   "summary": "Der neue Tourismusverband umfasst fünf Gemeinden und hat seinen Vorstand gewählt. Mit 1. Jänner übernimmt die Struktur die touristischen Aufgaben in der Region.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794578400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Neuer Tourismusverband für Katschberg und Lieser-Maltatal",
+     "url": "https://www.kleinezeitung.at/artikel/41448758/neuer-tourismusverband-fuer-katschberg-und-lieser-maltatal"
+    }
+   ]
+  },
+  {
+   "id": "ce4f17b7558e21ad25c129d2",
+   "headline": "Julia Scheib ist verlobt: „Mein Traummann ist mein Verlobter“",
+   "summary": "Am kommenden Sonntag ist Julia Scheib zu Gast im „Frühstück bei mir“ auf Ö3. Dort verrät sie, dass sie verlobt ist.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794577922.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Julia Scheib ist verlobt: „Mein Traummann ist mein Verlobter“",
+     "url": "https://www.kleinezeitung.at/artikel/41449633/julia-scheib-ist-verlobt-mein-traummann-ist-mein-verlobter"
+    }
+   ]
+  },
+  {
+   "id": "dc5009fbda61686eade1e148",
+   "headline": "Netzkosten: Fellner protestiert, doch die Chancen sind gering",
+   "summary": "Das Land Kärnten will die für 2027 geplante Erhöhung im Begutachtungsverfahren der E-Control bekämpfen. LH Fellner verlangt die Offenlegung der Kostenbasis.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794577892.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Netzkosten: Fellner protestiert, doch die Chancen sind gering",
+     "url": "https://www.kleinezeitung.at/artikel/41449597/netzkosten-fellner-protestiert-doch-die-chancen-sind-gering"
+    }
+   ]
+  },
+  {
+   "id": "c5648235d488d84ed792e26a",
+   "headline": "Issa Remmo besucht Veranstaltung im Europaparlament und sorgt für Aufregung",
+   "summary": "Auf Einladung eines konservativen EVP-Politikers war ein Mitglied der Berliner Großfamilie Remmo in Brüssel zu Gast. Die EVP distanziert sich.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794577858.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Issa Remmo besucht Veranstaltung im Europaparlament und sorgt für Aufregung",
+     "url": "https://www.derstandard.at/story/3000000349171/issa-remmo-besucht-veranstaltung-im-europaparlament-und-sorgt-fuer-aufregung?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "52be29b32401c878abe2c84b",
+   "headline": "Auch deutscher Verlag stoppt Auslieferung der Bücher des Komikers Walliams",
+   "summary": "Nach Vorwürfen über mögliche sexuelle Bedrängung.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794577637.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Auch deutscher Verlag stoppt Auslieferung der Bücher des Komikers Walliams",
+     "url": "https://www.derstandard.at/story/3000000349173/auch-deutscher-verlag-stoppt-auslieferung-der-buecher-des-komikers-walliams?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "cdf9f95b6495a22cce98bd3d",
+   "headline": "Ärger wegen Iran-Krieg: Trump degradiert Vance",
+   "summary": "US-Präsident Donald Trump hat seinen Vize JD Vance in Bezug auf den Iran-Krieg öffentlich zurechtgewiesen. Vance solle seine vollständige und uneingeschränkte Aufmerksamkeit lieber auf die Kriminalität und Korruption in demokratisch regierten US-Städten richten als auf den Iran, schrieb Trump in den sozialen Medien.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794577304.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Ärger wegen Iran-Krieg: Trump degradiert Vance",
+     "url": "https://www.krone.at/4374480"
+    }
+   ]
+  },
+  {
+   "id": "8b6f540feb9256de312c9dfa",
+   "headline": "Landeslehrlinge belästigt: Diversion, Schuldspruch und neue Ermittlung",
+   "summary": "Lehrlingsbeauftragte im Kärntner Landesdienst verurteilt, weil sie trotz Meldung über sexuelle Belästigung untätig geblieben sein soll. Ausbilder nahm Diversion an.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794577172.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Landeslehrlinge belästigt: Diversion, Schuldspruch und neue Ermittlung",
+     "url": "https://www.kleinezeitung.at/artikel/41449558/landeslehrlinge-belaestigt-diversion-schuldspruch-und-neue-ermittlung"
+    }
+   ]
+  },
+  {
+   "id": "61ffd927dc210c89e172cd29",
+   "headline": "Drei Wochen im Folterkeller: Wie eine Oppositionelle Ugandas Regime überlebte",
+   "summary": "Jacklyn Tukamushabe erzählt von der harten Gangart des Langzeitpräsidenten und seines verrückten Generals gegen die Opposition. Trotzdem gehört Uganda zu jenen Ländern, in denen die EU die Einrichtung eines \"Return Hubs\" erwägt.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794577165.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Drei Wochen im Folterkeller: Wie eine Oppositionelle Ugandas Regime überlebte",
+     "url": "https://www.derstandard.at/story/3000000348845/drei-wochen-im-folterkeller-wie-eine-oppositionelle-ugandas-regime-ueberlebte?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "b23faca0085f1cedeb7e09fe",
+   "headline": "Quilae Wong: Newcomerin bricht alte Parteiblöcke in Neuseeland auf",
+   "summary": "Als Quereinsteigerin führt sie die zentristische Opportunity Party erstmals ins Parlament und könnte die Dominanz der Altparteien brechen.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794576637.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Quilae Wong: Newcomerin bricht alte Parteiblöcke in Neuseeland auf",
+     "url": "https://www.derstandard.at/story/3000000348799/quilae-wong-newcomerin-bricht-alte-parteibloecke-in-neuseeland-auf?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "7c0b0d34240135c797cb65d1",
+   "headline": "Spionage-Verdacht: Ukrainer wieder auf freiem Fuß",
+   "summary": "Zwei mutmaßliche ukrainische Agenten sind wieder auf freiem Fuß. Die Männer werden verdächtigt, Mitglieder des ukrainischen Militärgeheimdienstes zu sein.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794576358.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Spionage-Verdacht: Ukrainer wieder auf freiem Fuß",
+     "url": "https://www.krone.at/4374464"
+    }
+   ]
+  },
+  {
+   "id": "e1883be00006c06d8c454d4c",
+   "headline": "Stradivari im Einsatz für Blaulicht-Organisationen",
+   "summary": "Am 24. November spielt das Kazakh Philharmonic Chamber Orchestra bei der Jeunesse. Für Mitglieder von Blaulicht-Organisationen ist der Eintritt frei.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794575939.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Stradivari im Einsatz für Blaulicht-Organisationen",
+     "url": "https://www.kleinezeitung.at/artikel/41443536/stradivari-im-einsatz-fuer-blaulicht-organisationen"
+    }
+   ]
+  },
+  {
+   "id": "793642eb80e1dcec6a33773b",
+   "headline": "\"Arena muss bleiben\": Prominente protestieren gegen Förderkürzung der Wiener Stadtregierung",
+   "summary": "Das Ansinnen der Wiener Stadtregierung, dem Kulturzentrum Arena existenzbedrohend die Förderung zu kürzen, regt auf. Marco Pogo, Nenda und David Scheid melden sich zu Wort.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794575575.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "\"Arena muss bleiben\": Prominente protestieren gegen Förderkürzung der Wiener Stadtregierung",
+     "url": "https://www.derstandard.at/story/3000000349092/arena-muss-bleiben-prominente-protestieren-gegen-kuerzung-von-foerderung-d?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "37977a54bc822ea5e204b671",
+   "headline": "Nach Fällen in Kärnten soll Tierabnahme künftig früher möglich sein",
+   "summary": "Tierschutzreferentin Beate Prettner brachte bei Länderkonferenz entsprechenden Antrag ein und erhielt einstimmige Zustimmung. Bund muss jetzt Passus im Tierschutzgesetz prüfen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794575570.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Nach Fällen in Kärnten soll Tierabnahme künftig früher möglich sein",
+     "url": "https://www.kleinezeitung.at/artikel/41449380/nach-faellen-in-kaernten-soll-tierabnahme-kuenftig-frueher-moeglich"
+    }
+   ]
+  },
+  {
+   "id": "12083cee9a041218d0676528",
+   "headline": "Sechs Tote in Stade: Anklage gegen zwei Frauen",
+   "summary": "Nach den tödlichen Schüssen in einer Jugendhilfeeinrichtung in Stade im deutschen Bundesland Niedersachsen könnten zwei Frauen bald vor Gericht stehen. Viereinhalb Monate nach der Tat erhob die Staatsanwaltschaft Anklage, wie die Behörde heute mitteilte.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794575425.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Sechs Tote in Stade: Anklage gegen zwei Frauen",
+     "url": "https://orf.at/stories/3448096/"
+    }
+   ]
+  },
+  {
+   "id": "e419d4c6598916ebffd6c279",
+   "headline": "Zum 90. Geburtstag der großen italienischen Schriftstellerin Dacia Maraini",
+   "summary": "Am 22. November wird die Italienerin mit dem Ehrenpreis des Österreichischen Buchhandels für Toleranz im Denken und Handeln ausgezeichnet.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794575128.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Zum 90. Geburtstag der großen italienischen Schriftstellerin Dacia Maraini",
+     "url": "https://www.derstandard.at/story/3000000348434/zum-90-geburtstag-der-grossen-italienischen-schriftstellerin-dacia-maraini?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "29627c98af2506ea33a94411",
+   "headline": "Kongo: Ebola breitet sich in ländliche Gebiete aus",
+   "summary": "Die Weltgesundheitsorganisation sieht eine besorgniserregende Ausbreitung der lebensgefährlichen Ebola-Krankheit in der Demokratischen Republik Kongo in ländliche Gebiete. Die Gesundheitsagentur Africa CDC beklagt in diesem Zusammenhang die prekäre Sicherheitslage, die den Kampf gegen die Seuche enorm schwäche.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794575050.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Kongo: Ebola breitet sich in ländliche Gebiete aus",
+     "url": "https://www.krone.at/4374225"
+    }
+   ]
+  },
+  {
+   "id": "fd87e2fbe4366f129f7706f1",
+   "headline": "Die „KPop Demon Hunters“ kommen 2027 nach Wien",
+   "summary": "K-Pop-Fans dürfen sich auf ein besonderes Spektakel freuen! Der weltweite Netflix-Hit „KPop Demon Hunters“ geht 2027 erstmals auf große Welttournee und macht dabei auch in Österreich Halt.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794574848.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Die „KPop Demon Hunters“ kommen 2027 nach Wien",
+     "url": "https://www.krone.at/4374113"
+    }
+   ]
+  },
+  {
+   "id": "96b62eaa0558d62f184460e5",
+   "headline": "Wer führt Österreichs Nationalteam? Und braucht es überhaupt jemanden?",
+   "summary": "Nach Abschieden und Ausfällen ordnen sich die Hierarchien im Nationalteam neu. Mehrere Spieler rücken in den Vordergrund.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794574800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Wer führt Österreichs Nationalteam? Und braucht es überhaupt jemanden?",
+     "url": "https://www.derstandard.at/story/3000000348929/wer-fuehrt-oesterreichs-nationalteam-und-braucht-es-ueberhaupt-jemanden?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "d8bcd17536e903caf040e253",
+   "headline": "Microsoft-Ausfall: Sind wir eigenständig genug?",
+   "summary": "Ob Kommunikation, Datenverarbeitung, Arbeitsabläufe oder wichtige Dienstleistungen: viele Bereiche unseres täglichen Lebens sind mittlerweile von digitalen Systemen abhängig. Dabei stellt sich zunehmend die Frage, wie gut wir auf solche Ausfälle vorbereitet sind und ob wir überhaupt noch ausreichend unabhängig von großen Technologiekonzernen agieren können.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794574800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Microsoft-Ausfall: Sind wir eigenständig genug?",
+     "url": "https://www.krone.at/4374278"
+    }
+   ]
+  },
+  {
+   "id": "57223b69adbe73083fd2da82",
+   "headline": "Anni und Christoph: „Es war schon Druck da, als Kameras an waren“",
+   "summary": "Die weststeirischen Tänzer Anni Schwaiger (11) und Christoph Samide (12) besiegten am Wochenende in der TV-Show „Klein gegen Groß“ das Promitanzpaar Victoria Swarovski und Evgeny Vinokourov. Jetzt erzählen sie von dem Erlebnis.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794574800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Anni und Christoph: „Es war schon Druck da, als Kameras an waren“",
+     "url": "https://www.kleinezeitung.at/artikel/41446550/anni-und-christoph-es-war-schon-druck-da-als-kameras-an-waren"
+    }
+   ]
+  },
+  {
+   "id": "036ffd922e44caca38c77a42",
+   "headline": "Jugendliche backten aus 60 Kilo Äpfel 30 Meter Strudel",
+   "summary": "Den „Tag des Apfels“ nahmen Schülerinnen und Schüler der Fachschule Naas zum Anlass, 30 Meter Apfelstrudel zu backen. Diesen verkauften sie am Freitag in Weiz.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794574800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Jugendliche backten aus 60 Kilo Äpfel 30 Meter Strudel",
+     "url": "https://www.kleinezeitung.at/artikel/41448419/jugendliche-backten-aus-60-kilo-aepfel-30-meter-strudel"
+    }
+   ]
+  },
+  {
+   "id": "2ac476b54c27c08d3b779e29",
+   "headline": "Villach-Premiere: „Im Rausch“ läuft ein Vortrag aus dem Ruder",
+   "summary": "Am Villacher Peraugymnasium feierte „Im Rausch“ Premiere. Clemens Luderer beginnt mit einem Vortrag über Sucht und gewinnt die Klasse, als es persönlich wird.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794574800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Villach-Premiere: „Im Rausch“ läuft ein Vortrag aus dem Ruder",
+     "url": "https://www.kleinezeitung.at/artikel/41449262/villach-premiere-im-rausch-laeuft-ein-vortrag-aus-dem-ruder"
+    }
+   ]
+  },
+  {
+   "id": "8fdc98be6ba4bd5c2d71e5db",
+   "headline": "Ein Narr des Glücks. Zum 90. Geburtstag des Liedermachers und Autors Wolf Biermann",
+   "summary": "Am 15. November wird der widerständige, einst aus der DDR ausgewiesene Liedermacher Wolf Biermann 90 Jahre alt. Zwei neue Bücher zeigen ihn als Menschen – und als Künstler.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794574800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Ein Narr des Glücks. Zum 90. Geburtstag des Liedermachers und Autors Wolf Biermann",
+     "url": "https://www.derstandard.at/story/3000000347185/ein-narr-des-gluecks-zum-90-geburtstag-des-liedermachers-und-autors-wolf-biermann?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "d6633b645aaa9313f22d03c3",
+   "headline": "Buch „Sportberge rund um Leoben“ von Hans Mocharitsch ist da",
+   "summary": "Die aktualisierte und erweiterte Ausgabe vom Buch des Leobeners Hans Mocharitsch über die Mugel und das Mugelschutzhaus ist nun mit etwas Verzögerung im Buchhandel erhältlich.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794574800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Buch „Sportberge rund um Leoben“ von Hans Mocharitsch ist da",
+     "url": "https://www.kleinezeitung.at/artikel/41445655/buch-sportberge-rund-um-leoben-von-hans-mocharitsch-ist-da"
+    }
+   ]
+  },
+  {
+   "id": "4c4ddbc568b1c929c32f8b87",
+   "headline": "Pochettino neuer Trainer von Manchester United",
+   "summary": "Der Argentinier folgt bei den Red Devils Michael Carrick nach. Er übersiedelt vom US-Team zurück in die Premier League.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794574437.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Pochettino neuer Trainer von Manchester United",
+     "url": "https://www.derstandard.at/story/3000000349162/pochettino-neuer-trainer-von-manchester-united?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "588320f315f7545d50fc69ec",
+   "headline": "Budget: Stocker beharrt auf Kürzung des Gesamtvolumens",
+   "summary": "Bundeskanzler Christian Stocker (ÖVP) hat heute vor Beginn des informellen EU-Gipfels in Dublin sein klares Nein zu den aktuellen EU-Budgetvorschlägen wiederholt. „Wir brauchen einen neuen Vorschlag, der eine bessere Basis für eine Einigung bildet als bisher“, sagte er nach einem Treffen der Gruppe der Nettozahler, also jener Länder, die mehr in das EU-Budget einzahlen, als sie zurückbekommen.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794573916.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Budget: Stocker beharrt auf Kürzung des Gesamtvolumens",
+     "url": "https://orf.at/stories/3448093/"
+    }
+   ]
+  },
+  {
+   "id": "609c39d719fbc9d374f128ac",
+   "headline": "Propagandakrieg: Wie russische Desinformation die EU-Erweiterung verhindern soll",
+   "summary": "Desinformation ist \"eines der wirkungsvollsten Instrumente\" Moskaus, sagt die moldauische Vizepremierministerin für europäische Integration.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794573868.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Propagandakrieg: Wie russische Desinformation die EU-Erweiterung verhindern soll",
+     "url": "https://www.derstandard.at/story/3000000348781/propagandakrieg-wie-russische-desinformation-die-eu-erweiterung-verhindern-soll?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "2aca5aa63682a8045a2217e5",
+   "headline": "\"Lichtdurchflutet\", \"Bastlerhit\", \"ruhige Lage\"? Schluss mit Maklerprosa!",
+   "summary": "Immobilien-Inserate sind in einer besonderen Sprache verfasst. Dabei wird die Wirklichkeit kunstvoll verschleiert wie sonst nur im Theater, findet unser Autor.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794573562.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "\"Lichtdurchflutet\", \"Bastlerhit\", \"ruhige Lage\"? Schluss mit Maklerprosa!",
+     "url": "https://www.derstandard.at/story/3000000349021/lichtdurchflutet-bastlerhit-ruhige-lage-schluss-mit-maklerprosa?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "155443b69d8c333235ee4d82",
+   "headline": "Nach chemischer Reaktion: Gefahrguteinsatz in Spielberg",
+   "summary": "Chemische Reaktion löste einen Einsatz in der Murtaler Stadtgemeinde Spielberg aus. Feuerwehren, Polizei und das Rote Kreuz mussten ausrücken.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794573090.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Nach chemischer Reaktion: Gefahrguteinsatz in Spielberg",
+     "url": "https://www.kleinezeitung.at/artikel/41448620/gefahrenguteinsatz-am-freitag-den-13-in-spielberg"
+    }
+   ]
+  },
+  {
+   "id": "e5e696b59869b2bef4a36d54",
+   "headline": "Andreas Gabalier will sich nicht für die eigene Heimat schämen",
+   "summary": "Der Musiker beschwor in einem Interview abermals seine Verbundenheit zu Heimat und Tradition. Er hätte demnach zentrale Werte aus seiner Kindheit mitbekommen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794573000.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Andreas Gabalier will sich nicht für die eigene Heimat schämen",
+     "url": "https://www.kleinezeitung.at/artikel/41448102/andreas-gabalier-will-sich-nicht-fuer-die-eigene-heimat-schaemen"
+    }
+   ]
+  },
+  {
+   "id": "3e43a989012ca7661a104865",
+   "headline": "Medien, Politik und Co. suchten gemeinsame Nenner für Förderungen",
+   "summary": "Offenlegung von Eigentümern und Einnahmen, Verpflichtung zu Ethikstandards und Überprüfung, Fehlermanagement und Redaktionsstruktur als Kriterien vorgeschlagen.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794572954.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Medien, Politik und Co. suchten gemeinsame Nenner für Förderungen",
+     "url": "https://www.derstandard.at/story/3000000349062/medien-politik-und-co-suchten-gemeinsame-nenner-fuer-foerderungen?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "423ea4322c83edd7047cca93",
+   "headline": "Kinoempfehlungen für Kinder, István-Szabó- und Austro-Kino-Fans",
+   "summary": "Am Wochenende kommen István Szabó und Klaus Maria Brandauer in die Urania, das Kinderfilmfestival startet und die STANDARD-Edition \"Der Österreichische Film\" hat Neuzugänge.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794572100.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Kinoempfehlungen für Kinder, István-Szabó- und Austro-Kino-Fans",
+     "url": "https://www.derstandard.at/story/3000000348585/kinoempfehlungen-fuer-kinder-istvan-szabo-und-austro-kino-fans?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "eccd60b76037ee1f35787c19",
+   "headline": "Feuerprobe für Song Contest in Asien",
+   "summary": "Ein halbes Jahr nachdem der Song Contest im Mai in Wien seine 70. Ausgabe gefeiert hat, gibt es für den Bewerb eine Premiere: Mit Eurovision Asia geht am Samstag in Bangkok erstmals ein Ablegerformat für asiatische Länder über die Bühne.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794572080.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Feuerprobe für Song Contest in Asien",
+     "url": "https://orf.at/stories/3447882/"
+    }
+   ]
+  },
+  {
+   "id": "59e6a598a5283c884044d89d",
+   "headline": "Vorwürfe gegen Brau Union: Fall landet beim Europäischen Gerichtshof",
+   "summary": "Die Wettbewerbsbehörde wirft der Brau Union vor, ihre Marktmacht missbraucht zu haben. Deren Mutter Heineken beschwerte sich wegen mangelnder Akteneinsicht – nun liegt der Fall beim EU-Höchstgericht.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794571997.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Vorwürfe gegen Brau Union: Fall landet beim Europäischen Gerichtshof",
+     "url": "https://www.derstandard.at/story/3000000349146/vorwuerfe-gegen-brau-union-fall-landet-beim-europaeischen-gerichtshof?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "6e8b15031188be30a6cea231",
+   "headline": "Ebola breitet sich im Kongo in ländliche Gebiete aus",
+   "summary": "Die Sicherheitslage ist nach wie vor prekär. Sie wird erschwert durch Angriffe der islamistischen ADF-Miliz.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794571835.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Ebola breitet sich im Kongo in ländliche Gebiete aus",
+     "url": "https://www.derstandard.at/story/3000000349157/ebola-breitet-sich-im-kongo-in-l228ndliche-gebiete-aus?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "8ee210ce6d53feb20baaec69",
+   "headline": "Betrüger-Trio dichtete Kärntner eine schwere Straftat an",
+   "summary": "Die drei gaben sich als Polizist, Staatsanwalt und Buchhalterin aus und setzten den 85-Jährigen so unter Druck, dass er ihnen aus Angst Geld überwies.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794571695.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Betrüger-Trio dichtete Kärntner eine schwere Straftat an",
+     "url": "https://www.kleinezeitung.at/artikel/41448978/betrueger-tarnten-sich-als-polizist-staatsanwalt-und-buchhalterin"
+    }
+   ]
+  },
+  {
+   "id": "9caeb774cca4b885e9a24623",
+   "headline": "Unwetter in Italien: 19 Migranten in Ventimiglia aus Fluten gerettet",
+   "summary": "In mehreren Regionen kam es wegen heftiger Regenfälle zu schwierigen Situationen. In der Toskana waren ganze Ortschaften abgeschnitten.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794571596.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Unwetter in Italien: 19 Migranten in Ventimiglia aus Fluten gerettet",
+     "url": "https://www.derstandard.at/story/3000000349154/unwetter-in-italien-19-migranten-in-ventimiglia-aus-fluten-gerettet?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "664184f27328a0ca7db1606e",
+   "headline": "Südbahn-Ausbau: ÖBB-Mammutprojekt verändert Ehrenhausen grundlegend",
+   "summary": "Zwei Gleise, neuer Bahnhof, Tunnel: Ehrenhausen steht vor einem historischen Wandel.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794571200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Südbahn-Ausbau: ÖBB-Mammutprojekt verändert Ehrenhausen grundlegend",
+     "url": "https://www.kleinezeitung.at/artikel/41448637/suedbahn-ausbau-oebb-mammutprojekt-veraendert-ehrenhausen-grundlegend"
+    }
+   ]
+  },
+  {
+   "id": "e065817c6ad272cec88e08c8",
+   "headline": "Ist das die schönste Straßenbahnstrecke der Welt?",
+   "summary": "Die neue Kruunusillat-Linie in Helsinki kombiniert moderne Architektur, autofreie Brücken und eine Fahrt über die Ostsee.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794571200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Ist das die schönste Straßenbahnstrecke der Welt?",
+     "url": "https://www.derstandard.at/story/3000000348908/ist-das-die-schoenste-strassenbahnstrecke-der-welt?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "b7efa8a5a56532f4c171f9ce",
+   "headline": "„Bin überzeugt, dass es für Schreien immer einen Grund gibt“",
+   "summary": "Physiotherapeutin und Sportwissenschaftlerin Stephanie Schebath erklärt in ihrem neuen Ratgeber „Gesund von Anfang an“, warum es sich lohnt, auch auf körperliche Ursachen zu schauen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794571200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "„Bin überzeugt, dass es für Schreien immer einen Grund gibt“",
+     "url": "https://www.kleinezeitung.at/artikel/41448607/bin-ueberzeugt-dass-es-fuer-schreien-immer-einen-grund-gibt"
+    }
+   ]
+  },
+  {
+   "id": "3577ffd9d92562bf204fdc6c",
+   "headline": "Warum die Besitzer dieser oststeirischen Katze behördlich gesucht werden",
+   "summary": "Ende Oktober ist eine Katze in Bierbaum gefunden worden. Nun kursiert im Netz ein behördliches Schreiben, mit dem man die Besitzer sucht.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794571200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Warum die Besitzer dieser oststeirischen Katze behördlich gesucht werden",
+     "url": "https://www.kleinezeitung.at/artikel/41445553/warum-die-besitzer-dieser-oststeirischen-katze-behoerdlich-gesucht"
+    }
+   ]
+  },
+  {
+   "id": "3c841ae8138569010b4946f4",
+   "headline": "Endabrechnung bei Liebenfelser Bildungszentrum liegt vor",
+   "summary": "Bei der Liebenfelser Gemeinderatssitzung kam es zu Diskussionen über die Finanzierung des neuen Bildungszentrums. Außerdem: Örtliches Entwicklungskonzept wurde angenommen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794571200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Endabrechnung bei Liebenfelser Bildungszentrum liegt vor",
+     "url": "https://www.kleinezeitung.at/artikel/41447394/endabrechnung-bei-liebenfelser-bildungszentrum-liegt-vor"
+    }
+   ]
+  },
+  {
+   "id": "384c38e33be19c29f1175b33",
+   "headline": "E-Scooter-Lenkerin in Klagenfurt von Auto erfasst und verletzt",
+   "summary": "19-Jährige wollte in Klagenfurt mit ihrem Fahrzeug auf einem Schutzweg die Straße überqueren, als sie vom Pkw eines 64-Jährigen erfasst wurde.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794571193.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "E-Scooter-Lenkerin in Klagenfurt von Auto erfasst und verletzt",
+     "url": "https://www.kleinezeitung.at/artikel/41448934/e-scooter-lenkerin-am-schutzweg-von-auto-erfasst-und-verletzt"
+    }
+   ]
+  },
+  {
+   "id": "4b18dad3277d197ebbca1804",
+   "headline": "28-Jähriger drohte in Wien ganzer Familie mit Mord",
+   "summary": "Ein 28-Jähriger soll in der Nacht auf Freitag in Wien-Simmering seine eigene Familie mit dem Umbringen bedroht haben. Die Mutter, der Vater und die Schwester sollen dabei ins Visier des Mannes geraten sein.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794570973.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "28-Jähriger drohte in Wien ganzer Familie mit Mord",
+     "url": "https://www.krone.at/4374311"
+    }
+   ]
+  },
+  {
+   "id": "ad8ea2470d2e08b2f0a8fc00",
+   "headline": "Sexuelle Belästigung: Betriebsrat bei Holding Graz suspendiert",
+   "summary": "Ein Betriebsrat soll bei einer Firmenveranstaltung eine Kollegin sexuell belästigt haben. Er wurde dienstfreigestellt, als Betriebsrat ist er aber weiter aktiv.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794570457.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Sexuelle Belästigung: Betriebsrat bei Holding Graz suspendiert",
+     "url": "https://www.kleinezeitung.at/artikel/41448687/sexuelle-belaestigung-betriebsrat-bei-holding-graz-suspendiert"
+    }
+   ]
+  },
+  {
+   "id": "0e6dd6fce9c2cd27f99a4ab7",
+   "headline": "„Die Japaner haben mir den dritten Titel genommen“",
+   "summary": "Ostliga-Rekordtrainer Hans Kleer rüstet sich aktuell für neue Aufgaben, macht den Pro-Lizenz-Kurs. Beim Kaffetratsch mit der „Krone“ plauderte der 57-Jährige über seine zwei Meistertitel, die Insolvenz der Vienna und Streitigkeiten mit den Japanern in Horn ...",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794570201.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "„Die Japaner haben mir den dritten Titel genommen“",
+     "url": "https://www.krone.at/4373295"
+    }
+   ]
+  },
+  {
+   "id": "8fc9d1e81a38d3669a618a23",
+   "headline": "Aus für Ardo-Werk: Unternehmen will weitere Sozialplan-Gespräche",
+   "summary": "Das Unternehmen will einen \"fairen und ausgewogenen Vorschlag\" unterbreitet haben. Die Gewerkschaften planen nun einen Antrag bei der Schlichtungsstelle.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794569906.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Aus für Ardo-Werk: Unternehmen will weitere Sozialplan-Gespräche",
+     "url": "https://www.derstandard.at/story/3000000349151/aus-f252r-ardo-werk-unternehmen-will-weitere-sozialplan-gespr228che?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "2de92d76672bf021f268a3fc",
+   "headline": "Zinssorgen schicken Bitcoin auf Dreimonatstief",
+   "summary": "Der nachlassende Risikoappetit vieler Anleger hat der Kryptowährung zu schaffen gemacht.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794569820.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Zinssorgen schicken Bitcoin auf Dreimonatstief",
+     "url": "https://www.derstandard.at/story/3000000349142/zinssorgen-schicken-bitcoin-auf-drei-monats-tief?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "bb9b3090b907247ff21c9106",
+   "headline": "Während Klimakonferenz landen Privatjets in Massen",
+   "summary": "Während der Weltklimakonferenz im türkischen Antalya herrscht dort auffällig viel Privatjet-Verkehr. Seit vergangenen Samstag landeten dort 118 Privatjets – einer kam aus Österreich.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794569284.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Während Klimakonferenz landen Privatjets in Massen",
+     "url": "https://www.krone.at/4374155"
+    }
+   ]
+  },
+  {
+   "id": "9c7a83893b20043854ef88c8",
+   "headline": "Anrainer verzögern Bau von 80 Wohnungen in Wolfsberg um Jahre",
+   "summary": "Der Verwaltungsgerichtshof gab der Stadt Wolfsberg Recht, die Anrainer kämpfen weiter.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794569019.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Anrainer verzögern Bau von 80 Wohnungen in Wolfsberg um Jahre",
+     "url": "https://www.kleinezeitung.at/artikel/41446937/anrainer-verzoegern-bau-von-80-wohnungen-in-wolfsberg-um-jahre"
+    }
+   ]
+  },
+  {
+   "id": "279b9886978188b5b10cf863",
+   "headline": "Merz scheitert mit seinem Wunsch nach Senkung der Stromsteuer an der SPD",
+   "summary": "Die deutsche Koalition hat sich auf den Haushalt für 2027 geeinigt. Aber Kanzler Friedrich Merz kann sich mit Entlastungen nicht durchsetzen.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794568905.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Merz scheitert mit seinem Wunsch nach Senkung der Stromsteuer an der SPD",
+     "url": "https://www.derstandard.at/story/3000000349074/merz-scheitert-mit-seinem-wunsch-nach-senkung-der-stromsteuer-an-der-spd?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "940084c613a91e98f99f853c",
+   "headline": "Keine Mails, kein Stress: So feiert das Netz den Microsoft-Ausfall",
+   "summary": "Der Ausfall von Outlook sorgt bei vielen für eine unfreiwillige Arbeitspause. Ein Best-of der Reaktionen auf Social Media.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794568854.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Keine Mails, kein Stress: So feiert das Netz den Microsoft-Ausfall",
+     "url": "https://www.derstandard.at/story/3000000349119/keine-mails-kein-stress-so-feiert-das-netz-den-microsoft-ausfall?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "d1e1a088574b662fbc63f58d",
+   "headline": "Cyberangriff auf Drohnenhersteller: Bundeswehr lässt Flotte von Quantum Systems am Boden",
+   "summary": "Angreifer haben eine manipulierte Update-Datei auf einem Server des Unternehmens platziert.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794568791.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Cyberangriff auf Drohnenhersteller: Bundeswehr lässt Flotte von Quantum Systems am Boden",
+     "url": "https://www.derstandard.at/story/3000000349069/cyberangriff-auf-drohnenhersteller-bundeswehr-laesst-flotte-von-quantum-systems-am-boden?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "cf4e82c97fb39f465b70eacc",
+   "headline": "User verbrachten im Oktober 3,5 Millionen Stunden auf derStandard.at",
+   "summary": "Bei der Usetime pro Visit liegt der STANDARD mit durchschnittlich 7:25 Minuten (Einzelangebot) auch im Oktober 2026 auf Platz eins unter den Nachrichtenportalen.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794568785.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "User verbrachten im Oktober 3,5 Millionen Stunden auf derStandard.at",
+     "url": "https://www.derstandard.at/story/3000000349120/user-verbrachten-im-oktober-35-millionen-stunden-auf-derstandardat?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "71663bbc191c55fb8d717e65",
+   "headline": "Steirische Exportpreise: AT&S, AXIS und FIMA ausgezeichnet",
+   "summary": "Von der Abfallbehandlung in Nigeria über weltweit gefragte Flugsimulatoren bis hin zu Elektronikbauteilen für globale KI-Rechenzentren: Drei steirische Top-Betriebe wurden mit Exportpreisen prämiert.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794568395.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Steirische Exportpreise: AT&S, AXIS und FIMA ausgezeichnet",
+     "url": "https://www.kleinezeitung.at/artikel/41448454/steirische-exportpreise-at-and-s-axis-und-fima-ausgezeichnet"
+    }
+   ]
+  },
+  {
+   "id": "9d458542a6e19dd988fec798",
+   "headline": "Langsame Erholung bei Microsoft-Diensten",
+   "summary": "Microsoft hat auch am Freitag versucht, die seit Donnerstagabend aufgetretenen Ausfälle bei Diensten aus dem Cloud-Paket Microsoft 365 zu beheben. Es gebe weitere Fortschritte, hieß es am Nachmittag, nun arbeite man an der Stabilisierung und Erhöhung der Kapazitäten.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794568227.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Langsame Erholung bei Microsoft-Diensten",
+     "url": "https://orf.at/stories/3448080/"
+    }
+   ]
+  },
+  {
+   "id": "e7d3742067604fc24182d6ee",
+   "headline": "Durch blau-schwarze Reformpläne bröckelt der Altstadtschutz in Graz",
+   "summary": "Die steirische Landesregierung will den Altstadtschutz lockern. Dadurch ist auch der Status als Unesco-Weltkulturerbe in Gefahr, befürchten Kritiker.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794568200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Durch blau-schwarze Reformpläne bröckelt der Altstadtschutz in Graz",
+     "url": "https://www.derstandard.at/story/3000000348956/durch-blau-schwarze-reformplaene-broeckelt-der-altstadtschutz-in-graz?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "40e5ce88fc28a1034c5fd04f",
+   "headline": "Parteienförderung massiv kürzen: Dengler startet Volksbegehren",
+   "summary": "Dengler ist von den Neos geschieden, aber sein Sendungsbewusstsein ungebrochen. Nun legt er sich mit allen Parteien an und will die Parteienförderung aushebeln.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794568138.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Parteienförderung massiv kürzen: Dengler startet Volksbegehren",
+     "url": "https://www.kleinezeitung.at/artikel/41447209/parteienfoerderung-massiv-kuerzen-dengler-startet-volksbegehren"
     }
    ]
   },
@@ -493,8 +3353,8 @@
   },
   {
    "id": "862311bd982ee8c27d54af77",
-   "headline": "Nvidia: Wer folgt auf Jensen Huang?",
-   "summary": "Nach dem Rücktritt des langjährigen Bosses ist die große Suche nach einem Nachfolger oder einer Nachfolgerin losgegangen. Wer dabei derzeit die besten Chancen hat.",
+   "headline": "Nvidia nach Jensen Huang: Wer die besten Chancen auf die Nachfolge hat",
+   "summary": "Nach dem Rücktritt des langjährigen Bosses ist die große Suche losgegangen. Bis dahin soll die bisherige Finanzchefin Colette Kress den Schaden aufräumen.",
    "publishers": [
     "derstandard.at"
    ],
@@ -506,7 +3366,7 @@
    "links": [
     {
      "publisher": "derstandard.at",
-     "title": "Nvidia: Wer folgt auf Jensen Huang?",
+     "title": "Nvidia nach Jensen Huang: Wer die besten Chancen auf die Nachfolge hat",
      "url": "https://www.derstandard.at/story/3000000349131/nvidia-wer-folgt-auf-jensen-huang?ref=rss"
     }
    ]
@@ -754,7 +3614,7 @@
   {
    "id": "ca861f3120eaf47411c260a9",
    "headline": "Gesunkene Segelyacht Bayesian: Menschliches Versagen statt Baufehler",
-   "summary": "Die Yacht war 2024 vor Palermo gesunken. Sieben Menschen kamen ums Leben, darunter der britische Unternehmer und Jachtbesitzer Mike Lynch.",
+   "summary": "Die Yacht war 2024 vor Palermo gesunken. Sieben Menschen kamen ums Leben, darunter der britische Unternehmer und Yachtbesitzer Mike Lynch.",
    "publishers": [
     "derstandard.at"
    ],
@@ -794,7 +3654,7 @@
   {
    "id": "facab83f11e356eeb5f326b0",
    "headline": "„Schlichtweg beschämend“: Unternehmer attackiert PV-Förderpolitik",
-   "summary": "34.000 Antragsteller ohne Förderung, keine Regeln für 27: David Pirker von Green Solar fordert Übergangsregelung für alle, die bei letztem Call leer ausgingen.",
+   "summary": "34.000 Antragsteller ohne Förderung, keine Regeln für 2027: David Pirker von Green Solar fordert Übergangsregelung für alle, die bei letztem Call leer ausgingen.",
    "publishers": [
     "kleinezeitung.at"
    ],
@@ -832,29 +3692,9 @@
    ]
   },
   {
-   "id": "7a036fa89d4e8b4552509709",
-   "headline": "Microsofts Outlook fällt aus – und das Internet findet das großartig",
-   "summary": "Seit Donnerstag kämpft Microsoft gegen eine weltweite Störung bei seinen wichtigsten Diensten Outlook und Teams. Das Internet amüsiert sich allerdings prächtig.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794566980.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Microsofts Outlook fällt aus – und das Internet findet das großartig",
-     "url": "https://www.kleinezeitung.at/artikel/41448449/microsofts-outlook-faellt-aus-und-das-internet-findet-das-grossartig"
-    }
-   ]
-  },
-  {
    "id": "13a91fd5852e11dd9e3d1059",
-   "headline": "Rückkehr von Tormann nach tödlichem Zusammenstoß offen",
-   "summary": "Trainer sprach über emotionalen Zustand des FC-Andorra-Goalies. Ermittlungen wegen möglicher fahrlässiger Tötung wurden aufgenommen, ein Strafverfahren gilt als unwahrscheinlich.",
+   "headline": "Rückkehr von Andorra-Tormann nach tödlichem Zusammenstoß offen",
+   "summary": "Trainer sprach über emotionalen Zustand des Goalies. Ermittlungen wegen fahrlässiger Tötung wurden aufgenommen, ein Strafverfahren gilt als unwahrscheinlich.",
    "publishers": [
     "derstandard.at"
    ],
@@ -866,7 +3706,7 @@
    "links": [
     {
      "publisher": "derstandard.at",
-     "title": "Rückkehr von Tormann nach tödlichem Zusammenstoß offen",
+     "title": "Rückkehr von Andorra-Tormann nach tödlichem Zusammenstoß offen",
      "url": "https://www.derstandard.at/story/3000000349135/rueckkehr-von-tormann-nach-toedlichem-zusammenstoss-offen?ref=rss"
     }
    ]
@@ -894,7 +3734,7 @@
   {
    "id": "60fc31c9a62721effe5ee2ed",
    "headline": "Tiergarten Schönbrunn: Rechnungshof kritisiert mangelnde Abstimmung bei Bauprojekten",
-   "summary": "Positiv fiel dem Rechnungshof auf, dass sich der Zoo von einem Zuschussbetrieb zu einem gewinnbringenden Unternehmen wandelte.",
+   "summary": "Positiv fiel dem Rechnungshof auf, dass sich der Zoo von einem Zuschussbetrieb zu einem gewinnbringenden Unternehmen gewandelt hat.",
    "publishers": [
     "derstandard.at"
    ],
@@ -952,18 +3792,23 @@
    ]
   },
   {
-   "id": "8fcfaebbb6bd23fb2d461f3f",
-   "headline": "Gewalteskalation zwischen jungen Syrern in Graz mündet in einem Massenprozess vor Gericht",
+   "id": "1766d98021c53d4f7b877bef",
+   "headline": "Gewalteskalation zwischen jungen Syrern in Graz mündet in einen Massenprozess vor Gericht",
    "summary": "Über Monate lieferten sich zwei Gruppen junger Syrer in Graz blutige Straßenkämpfe. Über den Ursprung der Gewalt ist nichts bekannt.",
    "publishers": [
     "derstandard.at"
    ],
-   "reports": 1,
+   "reports": 2,
    "newest_at": 1794566117.0,
    "status": "nicht",
    "status_label": "Nicht in der Sendung",
    "breaking_at": null,
    "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Gewalteskalation zwischen jungen Syrern in Graz mündet in einen Massenprozess vor Gericht",
+     "url": "https://www.derstandard.at/story/3000000349073/gewalteskalation-zwischen-jungen-syrern-in-graz-muendet-in-einen-massenprozess-vor-gericht?ref=rss"
+    },
     {
      "publisher": "derstandard.at",
      "title": "Gewalteskalation zwischen jungen Syrern in Graz mündet in einem Massenprozess vor Gericht",
@@ -1092,26 +3937,6 @@
    ]
   },
   {
-   "id": "819142c5f9c5c8b4af4a68fd",
-   "headline": "Aspangbahn: Lok in Brand, Personenzug evakuiert",
-   "summary": "Dramatische Szenen auf der Aspangbahn in Niederösterreich: Eine Diesellok ging in Flammen auf. Die Feuerwehr kämpfte unter Atemschutz gegen das Feuer und evakuierte 17 Passagiere.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794564794.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": 1794567546.37944,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Aspangbahn: Lok in Brand, Personenzug evakuiert",
-     "url": "https://www.krone.at/4374057"
-    }
-   ]
-  },
-  {
    "id": "eb916063ed2e53fe7be097da",
    "headline": "Feuerteufel wollte mit Zeitschrift Wiese abfackeln",
    "summary": "Ein Feuerteufel trieb sein Unwesen in Nassereith im Tiroler Bezirk Imst am Donnerstag. Der Unbekannte steckte eine Zeitschrift in Brand und wollte damit eine Wiese abfackeln.",
@@ -1133,7 +3958,7 @@
   },
   {
    "id": "f6b97ff16316ae40f4cbc5a7",
-   "headline": "19-Jähriger in Pakistan während TikTok-Dreh von Löwin tödlich verletzt",
+   "headline": "19-jähriger Farmarbeiter in Pakistan bei TikTok-Dreh tödlich von Löwin verletzt",
    "summary": "Das Tier wurde laut Wildtierbehörde privat gehalten und für den Videodreh aus dem Käfig gelassen. Der Farmarbeiter wurde ins Krankenhaus gebracht, überlebte den Angriff aber nicht.",
    "publishers": [
     "derstandard.at"
@@ -1146,7 +3971,7 @@
    "links": [
     {
      "publisher": "derstandard.at",
-     "title": "19-Jähriger in Pakistan während TikTok-Dreh von Löwin tödlich verletzt",
+     "title": "19-jähriger Farmarbeiter in Pakistan bei TikTok-Dreh tödlich von Löwin verletzt",
      "url": "https://www.derstandard.at/story/3000000349117/19-jaehriger-in-pakistan-waehrend-tiktok-dreh-von-loewin-toedlich-verletzt?ref=rss"
     }
    ]
@@ -1333,7 +4158,7 @@
   },
   {
    "id": "c44d5fce4816e8b969138f37",
-   "headline": "„Teurer Spaß für nichts“: Kärntnerin muss Kasse komplett tauschen",
+   "headline": "„Teurer Spaß für nichts“: Neues Gesetz bringt Kärntnerin ans Limit",
    "summary": "Der vorgeschriebene Kartentausch bei Registrierkassen ist für Alexandra Pasterk aus Völkermarkt nicht möglich. Sie musste in ein neues System investieren und will nun andere Unternehmer wachrütteln.",
    "publishers": [
     "kleinezeitung.at"
@@ -1346,15 +4171,15 @@
    "links": [
     {
      "publisher": "kleinezeitung.at",
-     "title": "„Teurer Spaß für nichts“: Kärntnerin muss Kasse komplett tauschen",
+     "title": "„Teurer Spaß für nichts“: Neues Gesetz bringt Kärntnerin ans Limit",
      "url": "https://www.kleinezeitung.at/artikel/41445930/teurer-spass-fuer-nichts-kaerntnerin-muss-kasse-komplett-tauschen"
     }
    ]
   },
   {
    "id": "39a22129bca25b5201c44ced",
-   "headline": "Ehrenzeichen für Robert Wrazounik und Harald Tischhardt aus Leoben",
-   "summary": "Landeshauptmann Mario Kunasek verlieh dem ehemaligen Präsidenten des Landesgerichts Robert Wrezounik und dem Unternehmer Harald Tischhardt das große Ehrenzeichen des Landes Steiermark.",
+   "headline": "Ehrenzeichen für Robert Wrezounik und Harald Tischhardt aus Leoben",
+   "summary": "Landeshauptmann Mario Kunasek verlieh Robert Wrezounik, ehemaliger Präsident des Landesgerichts Leoben und Leobens Ex-Finanzstadtrat Harald Tischhardt das große Ehrenzeichen des Landes.",
    "publishers": [
     "kleinezeitung.at"
    ],
@@ -1366,7 +4191,7 @@
    "links": [
     {
      "publisher": "kleinezeitung.at",
-     "title": "Ehrenzeichen für Robert Wrazounik und Harald Tischhardt aus Leoben",
+     "title": "Ehrenzeichen für Robert Wrezounik und Harald Tischhardt aus Leoben",
      "url": "https://www.kleinezeitung.at/artikel/41441113/ehrenzeichen-fuer-robert-wrazounik-und-harald-tischhardt-aus-leoben"
     }
    ]
@@ -1954,7 +4779,7 @@
   {
    "id": "52b13975f144c354518bb460",
    "headline": "Eishockey: Russland droht WM-Gastgeber Deutschland",
-   "summary": "Schadenersatzforderungen sollen gestellt werden, wenn russisches Team nicht antreten darf. Putin: Grundsätze der Olympischen Charta missachtet.",
+   "summary": "Schadenersatzforderungen sollen gestellt werden, wenn das russische Team nicht antreten darf. Putin: Grundsätze der Olympischen Charta missachtet.",
    "publishers": [
     "derstandard.at"
    ],
@@ -1988,26 +4813,6 @@
      "publisher": "kleinezeitung.at",
      "title": "„Heimatleuchten“ nimmt das Salzkammergut unter die Lupe",
      "url": "https://www.kleinezeitung.at/artikel/41443274/heimatleuchten-nimmt-das-salzkammergut-unter-die-lupe"
-    }
-   ]
-  },
-  {
-   "id": "582a6ca0b618472fb95daa11",
-   "headline": "Spott für Microsoft: „Auf Brieftauben umgestellt“",
-   "summary": "Während Microsoft-Techniker fieberhaft an der Behebung der Probleme beim Zugriff auf die Office-365-Dienste arbeiten, wachsen Ärger und wirtschaftlicher Schaden bei betroffenen Unternehmen weltweit, die teilweise gelähmt sind. So mancher Angestellte sieht das aber durchaus positiv und freut sich schon auf ein „langes Wochenende“.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794559979.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Spott für Microsoft: „Auf Brieftauben umgestellt“",
-     "url": "https://www.krone.at/4373723"
     }
    ]
   },
@@ -2613,7 +5418,7 @@
   },
   {
    "id": "29ea9a120e16664b10700b01",
-   "headline": "Nach Schüssen in Washington: Schütze ist laut Polizei verärgerter Mieter",
+   "headline": "Tödliche Schüsse in Washington: Schütze ist laut Polizei verärgerter Mieter",
    "summary": "Der 55-Jährige stand offenbar in Dauerstreit mit der Eigentümergemeinschaft seines Wohnhauses. Er erschoss den 46-jährigen Hausverwalter und verletzte mehrere weitere Personen.",
    "publishers": [
     "derstandard.at"
@@ -2626,7 +5431,7 @@
    "links": [
     {
      "publisher": "derstandard.at",
-     "title": "Nach Schüssen in Washington: Schütze ist laut Polizei verärgerter Mieter",
+     "title": "Tödliche Schüsse in Washington: Schütze ist laut Polizei verärgerter Mieter",
      "url": "https://www.derstandard.at/story/3000000349072/nach-sch252ssen-in-washington-sch252tze-laut-polizei-ver228rgerter-mieter?ref=rss"
     }
    ]
@@ -2728,6 +5533,26 @@
      "publisher": "kleinezeitung.at",
      "title": "Holz brannte in Keller: Drei Feuerwehren in Voitsberg im Einsatz",
      "url": "https://www.kleinezeitung.at/artikel/41447130/holz-brannte-in-keller-drei-feuerwehren-in-voitsberg-im-einsatz"
+    }
+   ]
+  },
+  {
+   "id": "92561723bd7cfd5d73526f27",
+   "headline": "Viel Unmut über Sozialhilfe-Reform, laut AMS ist Start Anfang 2027 \"nicht möglich\"",
+   "summary": "Kürzungen für Großfamilien und Zuwanderer, aber verbindliche Mindestbeträge: Den einen ist die neue Sozialhilfe zu großzügig, andere prophezeien verschärfte Armut.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794553966.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Viel Unmut über Sozialhilfe-Reform, laut AMS ist Start Anfang 2027 \"nicht möglich\"",
+     "url": "https://www.derstandard.at/story/3000000349061/viel-unmut-ueber-sozialhilfe-reform-laut-ams-ist-start-anfang-2027-nicht-moeglich?ref=rss"
     }
    ]
   },
@@ -3094,7 +5919,7 @@
   {
    "id": "8c161130cea7f947dc1a3401",
    "headline": "Kushner: Putin bereit für Europäer am Verhandlungstisch",
-   "summary": "Am Freitag findet der EU-Gipfel im Zeichen der Ukraine-Verhandlungen statt. Donnerstagabend traf der ukrainische Präsident auf die beiden US-Sondergesandten, die zuvor im Kreml waren.",
+   "summary": "In Dublin findet ein EU-Gipfel im Zeichen der Ukraine-Verhandlungen statt. Der Kreml knüpft die Teilnahme Europas an Ukraine-Gesprächen unterdessen an eine Bedingung.",
    "publishers": [
     "derstandard.at"
    ],
@@ -3228,6 +6053,26 @@
      "publisher": "kleinezeitung.at",
      "title": "Wie man sich von seiner eigenen Partei abgrenzt",
      "url": "https://www.kleinezeitung.at/artikel/41446409/wie-man-sich-von-seiner-eigenen-partei-abgrenzt"
+    }
+   ]
+  },
+  {
+   "id": "b429697fbf9e34ce894894cb",
+   "headline": "Österreichs Eishockeyfrauen sehen sich vor dem \"Finale\" gegen Japan am aufsteigenden Ast",
+   "summary": "\"Wir müssen den Glauben an uns von Anfang an aufs Eis bringen\", fordert Stürmerin Theresa Schafzahl. Das Relegationsspiel steigt am Freitag (11 Uhr) live auf ORF 1.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794549600.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Österreichs Eishockeyfrauen sehen sich vor dem \"Finale\" gegen Japan am aufsteigenden Ast",
+     "url": "https://www.derstandard.at/story/3000000348963/oesterreichs-eishockeyfrauen-sehen-sich-vor-dem-finale-gegen-japan-am-aufsteigenden-ast?ref=rss"
     }
    ]
   },
@@ -3534,7 +6379,7 @@
   {
    "id": "3be9e9f26c06608fbc0dcf67",
    "headline": "Warum Österreichs Jugend in Englisch brilliert",
-   "summary": "Bei der jüngsten Kompetenzmessung an Mittelschulen und Gymnasien stachen die guten Englischergebnisse der 13- bis 14-Jährigen besonders hervor.",
+   "summary": "Bei der jüngsten Kompetenzmessung an Mittelschulen und Gymnasien stachen die guten Englischergebnisse der 13- bis 14-Jährigen hervor.",
    "publishers": [
     "derstandard.at"
    ],
@@ -4678,7 +7523,7 @@
   },
   {
    "id": "c414a86d1096a6be1cd68cc3",
-   "headline": "Weltweiter Ausfall von Microsoft-Diensten: Microsoft bekommt Probleme nur langsam in den Griff",
+   "headline": "Weltweiter Ausfall von Microsoft-Diensten: Lage erholt sich, versichert die Windows-Firma",
    "summary": "Am Donnerstag kam es zu einem massiven Ausfall von verschiedenen Microsoft-Diensten. Von der Störung sind auch sensible Regierungsbereiche betroffen.",
    "publishers": [
     "derstandard.at"
@@ -4691,7 +7536,7 @@
    "links": [
     {
      "publisher": "derstandard.at",
-     "title": "Weltweiter Ausfall von Microsoft-Diensten: Microsoft bekommt Probleme nur langsam in den Griff",
+     "title": "Weltweiter Ausfall von Microsoft-Diensten: Lage erholt sich, versichert die Windows-Firma",
      "url": "https://www.derstandard.at/story/3000000349041/ausfall-bei-microsoft-outlook-356-und-teams-tausende-nutzer-betroffen?ref=rss"
     }
    ]
@@ -5218,7 +8063,7 @@
   },
   {
    "id": "847b81a535b85ed2472f1c43",
-   "headline": "Wesentlich mehr Urlaubsanträge rund um Startdatum von Videospiel GTA VI",
+   "headline": "Wesentlich mehr Urlaubsanträge rund um Startdatum von Videospiel \"GTA VI\"",
    "summary": "Der Personalsoftware-Anbieter Personio hat interne Daten ausgewertet. Demnach wurden überdurchschnittlich viele Urlaubsanträge für 19. November und danach eingereicht.",
    "publishers": [
     "derstandard.at"
@@ -5231,7 +8076,7 @@
    "links": [
     {
      "publisher": "derstandard.at",
-     "title": "Wesentlich mehr Urlaubsanträge rund um Startdatum von Videospiel GTA VI",
+     "title": "Wesentlich mehr Urlaubsanträge rund um Startdatum von Videospiel \"GTA VI\"",
      "url": "https://www.derstandard.at/story/3000000349035/premiere-von-videospiel-gta-vi-treibt-urlaubsantr228ge-in-die-h246he?ref=rss"
     }
    ]
@@ -6013,106 +8858,6 @@
      "publisher": "krone.at",
      "title": "Ein Toter: Mann schießt in Washington wild um sich",
      "url": "https://www.krone.at/4372922"
-    }
-   ]
-  },
-  {
-   "id": "436cd072e2b8e0d29a84e858",
-   "headline": "Missbrauch in der Kirche als Teenage-Bodyhorrorshow: Netflix-Serie \"The Body\"",
-   "summary": "Was Sie heute streamen können: Die Schülerinnen einer katholischen Mädchenschule werden von unheiligen Begierden heimgesucht.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794499777.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Missbrauch in der Kirche als Teenage-Bodyhorrorshow: Netflix-Serie \"The Body\"",
-     "url": "https://www.derstandard.at/story/3000000348437/missbrauch-in-der-kirche-als-teenage-bodyhorrorshow-netflix-serie-the-body?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "b40f67ea40f631b09e5d73c4",
-   "headline": "Der gefallene KI-König Jensen Huang: Die Welt im Griff, sich selbst nicht",
-   "summary": "Huangs Rücktritt ist keine Privatsache. Er zeigt, wie sehr die KI-Strategie des Westens an wenigen unkontrollierten Konzernchefs hängt.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794499705.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Der gefallene KI-König Jensen Huang: Die Welt im Griff, sich selbst nicht",
-     "url": "https://www.derstandard.at/story/3000000349013/der-gefallene-ki-koenig-jensen-huang-die-welt-im-griff-sich-selbst-nicht?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "82ab55db8a75516d94f369d2",
-   "headline": "Streit um rotes Mascherl: „Wir wollen es zurück!“",
-   "summary": "Die Kult-Schleife von Popp & Kretschmer wurde wegen der strengen Auflagen der Stadt Wien hinter das Schaufenster verbannt. Viele Wiener sind untröstlich, zeigt eine „Krone“-Umfrage auf der Kärntner Straße.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794499658.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Streit um rotes Mascherl: „Wir wollen es zurück!“",
-     "url": "https://www.krone.at/4372468"
-    }
-   ]
-  },
-  {
-   "id": "75f3a3ab180cf38e86b6f607",
-   "headline": "Strom statt Öl und Gas: Türkei prescht bei COP vor",
-   "summary": "Staaten diskutieren bei der COP31 darüber, wie Autos, Heizungen und Fabriken elektrisch werden können. Das Gastgeberland Türkei prescht mit einem Vorschlag vor, der sogar aus österreichischer Sicht ambitioniert ist: 35 Prozent Elektrifizierung bis 2035.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794499409.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Strom statt Öl und Gas: Türkei prescht bei COP vor",
-     "url": "https://www.krone.at/4371929"
-    }
-   ]
-  },
-  {
-   "id": "6312a20f8b36d18631b3dd44",
-   "headline": "Putin schlägt neue begrenzte Waffenruhe vor",
-   "summary": "Der russische Präsident Wladimir Putin hat eine neue zeitlich begrenzte Waffenruhe in der Ukraine vorgeschlagen – diesmal für die umkämpfte Stadt Kostjantyniwka im Gebiet Donezk. Dort könnten Hunderte Menschen bei einer humanitären Aktion in Sicherheit gebracht werden, sagte er bei einem Treffen mit den US-Vermittlern Steve Witkoff und Jared Kushner.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794499405.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Putin schlägt neue begrenzte Waffenruhe vor",
-     "url": "https://www.krone.at/4373308"
     }
    ]
   },

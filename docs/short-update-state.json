@@ -1,6 +1,24 @@
 {
   "updates": [
     {
+      "id": "ad7f6a0d408e8bbbddb51179",
+      "title": "Energieagentur: Ölversorgung erholt sich erstmals seit Iran-Krieg",
+      "text": "Energieagentur: Ölversorgung erholt sich erstmals seit Iran-Krieg.\nVorräte stiegen im Oktober um 52 Millionen Barrel. Die Internationale Energieagentur (IEA) sieht die weltweite Ölversorgung erstmals seit Ausbruch des Iran-Krieges auf Erholungskurs.\nQuellen: derstandard.at, orf.at.",
+      "url": "https://www.derstandard.at/story/3000000349177/energieagentur-oelversorgung-erholt-sich-erstmals-seit-iran-krieg",
+      "source": "derstandard.at",
+      "sources": [
+        "derstandard.at",
+        "orf.at"
+      ],
+      "published_at": 1794576082.0,
+      "created_at": 1794586272.205668,
+      "expires_at": 1794672672.205668,
+      "reason": "Schwere",
+      "publishers": 2,
+      "audio": "short-update-audio/ad7f6a0d408e8bbbddb51179.wav",
+      "video": "short-update-video/ad7f6a0d408e8bbbddb51179.mp4"
+    },
+    {
       "id": "96d3dd093c9cbd6c14173c49",
       "title": "Aspangbahn: Lok in Brand, Personenzug evakuiert",
       "text": "Aspangbahn: Lok in Brand, Personenzug evakuiert.\nDramatische Szenen auf der Aspangbahn in Niederösterreich: Eine Diesellok ging in Flammen auf. Wie es zu dem Brand auf der Strecke der Aspangbahn kam, ist unklar.\nQuellen: krone.at, derstandard.at.",
@@ -28,6 +46,15 @@
       ],
       "reason": "Schwere",
       "title": "Aspangbahn: Lok in Brand, Personenzug evakuiert"
+    },
+    {
+      "created_at": 1794586272.205668,
+      "article_ids": [
+        "ad7f6a0d408e8bbbddb51179",
+        "35a2882a7f2146b0aa5c182d"
+      ],
+      "reason": "Schwere",
+      "title": "Energieagentur: Ölversorgung erholt sich erstmals seit Iran-Krieg"
     }
   ]
 }
