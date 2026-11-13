@@ -1,42 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261112T205351Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 12.11.2026 um 21:53 Uhr",
-      "created_at": 1794516831.993136,
-      "video": "broadcasts/20261112T205351Z.mp4",
-      "sources": [
-        {
-          "title": "Niederlande: Regierungskrise eskaliert",
-          "url": "https://orf.at/stories/3448042/"
-        },
-        {
-          "title": "Unbekannte montierten 15 Brückenschilder ab",
-          "url": "https://www.krone.at/4373502"
-        },
-        {
-          "title": "Leitring: Radfahrerin bei Kollision mit Rettungswagen schwer verletzt",
-          "url": "https://www.kleinezeitung.at/artikel/41446978/leitring-radfahrerin-bei-kollision-mit-rettungswagen-schwer-verletzt"
-        },
-        {
-          "title": "Insider: US-Handelsminister nach Nvidia-Spionageskandal unter Druck",
-          "url": "https://www.derstandard.at/story/3000000349044/insider-us-handelsminister-nach-nvidia-spionageskandal-unter-druck?ref=rss"
-        },
-        {
-          "title": "Nvidia: US-Handelsminister Lutnick unter Druck",
-          "url": "https://www.krone.at/4373497"
-        },
-        {
-          "title": "Schwere Mängel bei technischen Kontrollen",
-          "url": ""
-        }
-      ],
-      "transcript": "broadcasts/20261112T205351Z.txt",
-      "subtitles": "broadcasts/20261112T205351Z.vtt",
-      "subtitle_download": "broadcasts/20261112T205351Z.srt"
-    },
-    {
       "id": "20261113T015423Z",
       "kind": "broadcast",
       "title": "Nachrichten 13.11.2026 um 02:54 Uhr",
@@ -99,6 +63,62 @@
       "transcript": "broadcasts/20261113T015423Z.txt",
       "subtitles": "broadcasts/20261113T015423Z.vtt",
       "subtitle_download": "broadcasts/20261113T015423Z.srt"
+    },
+    {
+      "id": "20261113T093926Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 13.11.2026 um 10:39 Uhr",
+      "created_at": 1794562766.576584,
+      "video": "broadcasts/20261113T093926Z.mp4",
+      "sources": [
+        {
+          "title": "Israel verbietet Politiker Mélenchon die Einreise",
+          "url": "https://www.krone.at/4373605"
+        },
+        {
+          "title": "Israel verbietet französischem Präsidentschaftskandidaten Einreise",
+          "url": "https://www.derstandard.at/story/3000000349037/israel-verbietet-franz246sischem-pr228sidentschaftskandidaten-einreise?ref=rss"
+        },
+        {
+          "title": "Israel verbietet Melenchon Einreise",
+          "url": "https://orf.at/stories/3448036/"
+        },
+        {
+          "title": "Kritik an Integrationsgesetz und „Sozialhilfe Neu“",
+          "url": "https://www.krone.at/4373778"
+        },
+        {
+          "title": "Breite Kritik an \"Sozialhilfe NEU\" in den Stellungnahmen",
+          "url": "https://www.kleinezeitung.at/artikel/41447049/breite-kritik-an-sozialhilfe-neu-in-den-stellungnahmen"
+        },
+        {
+          "title": "Leitring: Radfahrerin bei Kollision mit Rettungswagen schwer verletzt",
+          "url": "https://www.kleinezeitung.at/artikel/41446978/leitring-radfahrerin-bei-kollision-mit-rettungswagen-schwer-verletzt"
+        },
+        {
+          "title": "Radfahrerin bei Kollision verletzt",
+          "url": ""
+        },
+        {
+          "title": "Fünf Preise: Rosalía räumt bei Latin Grammys ab",
+          "url": "https://www.derstandard.at/story/3000000349102/fuenf-preise-rosalia-raeumt-bei-latin-grammys-ab?ref=rss"
+        },
+        {
+          "title": "Rosalia räumt bei Latin Grammys ab",
+          "url": "https://orf.at/stories/3448068/"
+        },
+        {
+          "title": "Hegseth verlieh Soldat, der ihn anschrie, eine Medaille",
+          "url": "https://www.derstandard.at/story/3000000349067/hegseth-verlieh-soldat-der-ihn-anschrie-eine-medaille?ref=rss"
+        },
+        {
+          "title": "Hegseth ehrte Soldaten, der ihn zurechtwies",
+          "url": "https://orf.at/stories/3448045/"
+        }
+      ],
+      "transcript": "broadcasts/20261113T093926Z.txt",
+      "subtitles": "broadcasts/20261113T093926Z.vtt",
+      "subtitle_download": "broadcasts/20261113T093926Z.srt"
     }
   ]
 }
