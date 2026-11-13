@@ -1,20 +1,70 @@
-name: Experiment languagemodels-Vergleich
+name: Experiment lokales Sprachmodell
 on:
   push:
     branches: [exp/languagemodels-vergleich]
 permissions:
   contents: read
 jobs:
-  compare:
+  llm:
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 40
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v5
       - name: Aktuellen Nachrichtenspeicher von main holen
         run: git fetch --depth=1 origin main && git checkout origin/main -- docs/news-store.json
-      - uses: actions/cache@v4
+      - name: Modell-Cache wiederherstellen
+        id: cache
+        uses: actions/cache@v4
         with:
-          path: ~/.cache/huggingface
-          key: lm-multilingual-e5-small-v1
-      - run: pip install languagemodels numpy
-      - run: python3 research/experiments/compare_grouping.py
+          path: ~/models
+          key: llm-qwen3-4b-instruct-q4km-v1
+      - name: llama.cpp (fertige CPU-Version) herunterladen
+        run: |
+          start=$(date +%s)
+          tag=$(gh release view --repo ggml-org/llama.cpp --json tagName -q .tagName)
+          gh release download "$tag" --repo ggml-org/llama.cpp --pattern '*bin-ubuntu-x64.zip' --dir /tmp/llama
+          unzip -q /tmp/llama/*.zip -d /tmp/llama
+          server=$(find /tmp/llama -name llama-server -type f | head -1)
+          echo "LLAMA_SERVER=$server" >> $GITHUB_ENV
+          echo "LLAMA_DIR=$(dirname $server)" >> $GITHUB_ENV
+          echo "T_LLAMA=$(( $(date +%s) - start ))s llama.cpp $tag" >> $GITHUB_ENV
+      - name: Modell herunterladen (nur ohne Cache)
+        run: |
+          start=$(date +%s)
+          pip install -q huggingface_hub
+          python3 - <<'PY'
+          import os, pathlib
+          from huggingface_hub import hf_hub_download
+          target = pathlib.Path.home() / 'models'; target.mkdir(exist_ok=True)
+          have = list(target.glob('*.gguf'))
+          if have:
+              print('Cache:', have[0]); path = have[0]
+          else:
+              for repo, name in [('bartowski/Qwen_Qwen3-4B-Instruct-2507-GGUF', 'Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf'),
+                                 ('unsloth/Qwen3-4B-Instruct-2507-GGUF', 'Qwen3-4B-Instruct-2507-Q4_K_M.gguf'),
+                                 ('Qwen/Qwen3-4B-GGUF', 'Qwen3-4B-Q4_K_M.gguf')]:
+                  try:
+                      path = hf_hub_download(repo, name, local_dir=target); print('Geladen:', repo, name); break
+                  except Exception as exc:
+                      print('nicht verfügbar:', repo, name, type(exc).__name__)
+          with open(os.environ['GITHUB_ENV'], 'a') as env:
+              env.write(f'LLM_MODEL={pathlib.Path(path).name}\n')
+          PY
+          echo "T_MODEL=$(( $(date +%s) - start ))s Modell (Cache: ${{ steps.cache.outputs.cache-hit }})" >> $GITHUB_ENV
+      - name: Server starten
+        run: |
+          start=$(date +%s)
+          export LD_LIBRARY_PATH=$LLAMA_DIR:$LD_LIBRARY_PATH
+          nohup $LLAMA_SERVER -m ~/models/$LLM_MODEL -c 8192 -t 4 --jinja --port 8080 > /tmp/server.log 2>&1 &
+          for i in $(seq 1 120); do curl -sf http://127.0.0.1:8080/health >/dev/null && break; sleep 1; done
+          curl -sf http://127.0.0.1:8080/health || (tail -50 /tmp/server.log; exit 1)
+          echo "T_SERVER=$(( $(date +%s) - start ))s Server-Start" >> $GITHUB_ENV
+      - name: Test ausführen
+        run: |
+          export LLM_TIMES="$T_LLAMA, $T_MODEL, $T_SERVER"
+          python3 research/experiments/llm_test.py
+      - name: Server-Log
+        if: always()
+        run: grep -i -E 'system_info|n_threads|model size|error' /tmp/server.log | head -20 || true
