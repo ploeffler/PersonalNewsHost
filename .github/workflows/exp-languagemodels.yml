@@ -10,7 +10,7 @@ env:
 jobs:
   probe:
     runs-on: ubuntu-24.04
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
     - uses: actions/checkout@v5
       with:
@@ -46,10 +46,22 @@ jobs:
         if [ ! -s \"$model\" ]; then\n  python3 -m pip install --disable-pip-version-check -q huggingface_hub\n  python3 -c \"from huggingface_hub import hf_hub_download as d; d('bartowski/Qwen_Qwen3-4B-Instruct-2507-GGUF','Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf',local_dir='$HOME/models')\"\
         \nfi\nnohup ~/llama/build/bin/llama-server -m \"$model\" -c 4096 -t 4 --jinja --port 8080 > /tmp/llama-server.log 2>&1 &\nfor i in $(seq 1 90); do curl -sf http://127.0.0.1:8080/health > /dev/null\
         \ && exit 0; sleep 1; done\ntail -20 /tmp/llama-server.log; exit 1\n"
+    - name: 'Probe: größeres Zeitbudget'
+      run: 'python3 - <<''PY''
+
+        import json
+
+        c=json.load(open(''config.json''))
+
+        c[''editorial''][''pipeline''][''llm_pairs''][''time_budget_seconds'']=600
+
+        json.dump(c,open(''config.json'',''w''))
+
+        PY'
     - name: Check borderline pairs with the language model
       if: steps.llm.outcome == 'success'
       continue-on-error: true
-      timeout-minutes: 5
+      timeout-minutes: 12
       run: python3 scripts/llm_pair_judge.py --judge
     - name: Ergebnis
       if: always()
