@@ -1,0 +1,20 @@
+name: Experiment languagemodels-Vergleich
+on:
+  push:
+    branches: [exp/languagemodels-vergleich]
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - name: Aktuellen Nachrichtenspeicher von main holen
+        run: git fetch --depth=1 origin main && git checkout origin/main -- docs/news-store.json
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: lm-multilingual-e5-small-v1
+      - run: pip install languagemodels numpy
+      - run: python3 research/experiments/compare_grouping.py
