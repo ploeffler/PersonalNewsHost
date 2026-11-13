@@ -1,4 +1,33 @@
 {
-  "updates": [],
-  "events": []
+  "updates": [
+    {
+      "id": "96d3dd093c9cbd6c14173c49",
+      "title": "Aspangbahn: Lok in Brand, Personenzug evakuiert",
+      "text": "Aspangbahn: Lok in Brand, Personenzug evakuiert.\nDramatische Szenen auf der Aspangbahn in Niederösterreich: Eine Diesellok ging in Flammen auf. Wie es zu dem Brand auf der Strecke der Aspangbahn kam, ist unklar.\nQuellen: krone.at, derstandard.at.",
+      "url": "https://www.krone.at/4374057",
+      "source": "krone.at",
+      "sources": [
+        "derstandard.at",
+        "krone.at"
+      ],
+      "published_at": 1794563910.0,
+      "created_at": 1794567546.37944,
+      "expires_at": 1794653946.37944,
+      "reason": "Schwere",
+      "publishers": 2,
+      "audio": "short-update-audio/96d3dd093c9cbd6c14173c49.wav",
+      "video": "short-update-video/96d3dd093c9cbd6c14173c49.mp4"
+    }
+  ],
+  "events": [
+    {
+      "created_at": 1794567546.37944,
+      "article_ids": [
+        "96d3dd093c9cbd6c14173c49",
+        "5faf3236119557068fec99a0"
+      ],
+      "reason": "Schwere",
+      "title": "Aspangbahn: Lok in Brand, Personenzug evakuiert"
+    }
+  ]
 }
