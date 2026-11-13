@@ -8,7 +8,11 @@ on:
         options: [manual, schedule]
         default: manual
   schedule:
-    - cron: '17 * * * *'
+    # GitHub startet die Sendungsprüfung um 7, 12 und 20 Uhr (Wiener Zeit).
+    # Ein optionaler externer Taktgeber kann zusätzlich stündlich auslösen
+    # (docs/guide/betrieb-und-sicherheit.md).
+    - cron: '5 7,12,20 * * *'
+      timezone: 'Europe/Vienna'
 permissions:
   contents: write
 concurrency:
