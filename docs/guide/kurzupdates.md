@@ -2,7 +2,7 @@
 
 `short-updates.html` zeigt die letzten **höchstens fünf** Kurzupdates. Jeder Eintrag läuft **24 Stunden nach Erstellung** ab. Die Seite blendet abgelaufene Einträge auch ohne erfolgreichen neuen Workflow aus. Beim nächsten Lauf werden die alten Einträge und ihre Audiodateien gelöscht.
 
-Der Workflow `Create short news updates` prüft die konfigurierten Feeds viertelstündlich, ausgelöst durch einen [externen Taktgeber](betrieb-und-sicherheit.md#zuverlässiger-zeitplan-mit-externem-taktgeber-optional), und kann manuell gestartet werden. Der GitHub-Zeitplan startet ihn als Rückfallebene zusätzlich um 7:05, 12:05 und 20:05 Uhr (Europe/Vienna). Derselbe Veröffentlichungsschlüssel wie beim Sendungsworkflow verhindert gleichzeitige Schreibvorgänge. Die private Konfiguration wird aus `PERSONALNEWSHOST_CONFIG` geladen, falls vorhanden.
+Der Workflow `Create short news updates` prüft die konfigurierten Feeds viertelstündlich über den GitHub-Zeitplan und kann manuell gestartet werden. GitHub kann geplante Ausführungen verzögern oder auslassen; ein [externer Taktgeber](betrieb-und-sicherheit.md#zuverlässiger-zeitplan-mit-externem-taktgeber-optional) kann ihn zusätzlich auslösen. Derselbe Veröffentlichungsschlüssel wie beim Sendungsworkflow verhindert gleichzeitige Schreibvorgänge. Die private Konfiguration wird aus `PERSONALNEWSHOST_CONFIG` geladen, falls vorhanden.
 
 Neue Meldungen benötigen eine Veröffentlichungszeit innerhalb der letzten 60 Minuten, eine Beschreibung und ein Eil-/Entwicklungssignal im Titel. Atom-Änderungszeiten ersetzen keine fehlende Veröffentlichungszeit. Pro Lauf entsteht höchstens ein Update, zwischen Updates liegen mindestens 15 Minuten. Warnquellen benötigen weiterhin ihren eigenen Adapter.
 

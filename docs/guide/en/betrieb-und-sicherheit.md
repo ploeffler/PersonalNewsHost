@@ -34,7 +34,7 @@ Telegram integration should be tested with a real bot and destination before rel
 
 ## Reliable timing with an external scheduler (optional)
 
-GitHub runs `schedule` triggers on a best-effort basis and drops many of them under load. A free external cron service such as [cron-job.org](https://cron-job.org) can start the workflows through the GitHub API instead; the GitHub schedule stays active as a fallback and additionally starts both workflows at 07:05, 12:05 and 20:05 (Europe/Vienna).
+GitHub runs `schedule` triggers on a best-effort basis and drops many of them under load. A free external cron service such as [cron-job.org](https://cron-job.org) can start the workflows through the GitHub API instead; the GitHub schedule stays active: it starts the broadcast as a fallback at 07:05, 12:05 and 20:05 (Europe/Vienna) and keeps running the RSS/short-update workflow every 15 minutes.
 
 1. Create a **fine-grained personal access token** limited to your PersonalNewsHost repository with **Actions: Read and write** only. Store it only in the cron service.
 2. Create two POST jobs with the headers `Accept: application/vnd.github+json`, `Authorization: Bearer <TOKEN>`, `X-GitHub-Api-Version: 2022-11-28`:

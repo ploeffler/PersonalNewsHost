@@ -13,10 +13,9 @@ on:
       - scripts/short_updates.py
       - scripts/publish_short_updates_telegram.py
   schedule:
-    # Rückfallebene: Den regulären Takt liefert ein externer Taktgeber
-    # (docs/guide/betrieb-und-sicherheit.md). GitHub startet zusätzlich um 7, 12 und 20 Uhr.
-    - cron: '5 7,12,20 * * *'
-      timezone: 'Europe/Vienna'
+    # RSS-Lauf bleibt auf dem GitHub-Zeitplan (viertelstündlich); ein externer
+    # Taktgeber kann ihn zusätzlich auslösen.
+    - cron: '7,22,37,52 * * * *'
 permissions:
   contents: write
   pages: write
