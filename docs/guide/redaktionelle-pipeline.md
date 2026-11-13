@@ -25,3 +25,14 @@ Der Workflow erfasst RSS vor der Produktion und aktualisiert anschließend die Z
 `docs/editorial-report.json` enthält Quellenschnappschuss, Gruppen, Entwurf, Satzbelege, Prüfergebnisse, Korrekturversuche und Auswahl. Die Seite `editorial-pipeline.html` zeigt den Bericht lesbar. Ein als `preview` markierter Bericht ist noch keine produzierte Sendung. Der Workflow bietet den Bericht auch bei einer fehlgeschlagenen Produktion als Actions-Artefakt an; fehlgeschlagene Versuche ersetzen nicht den veröffentlichten Bericht.
 
 Die Konfiguration `editorial.pipeline.enabled` ist standardmäßig aktiv. Ein ausdrücklich deaktivierter Modus bleibt für bestehende Render-Fixtures/Legacy-Betrieb erhalten; er ist kein automatischer Rückfall bei Prüfproblemen.
+
+## Redaktionsübersicht
+
+`docs/redaktion.html` (verlinkt auf der Startseite und bei den Kurzupdates) listet alle Ereignisse der letzten 24 Stunden, wie die Pipeline sie gruppiert. Pro Ereignis stehen dort:
+
+- Überschrift und eine **Zwei-Satz-Zusammenfassung** – wörtliche Sätze aus den Quellen (bei freigegebenen Ereignissen die geprüften Sätze des Sendungstexts, sonst die ersten Sätze der neuesten Meldung); es wird nichts umformuliert;
+- die Medien mit Links, Zahl der Meldungen und Zeit der neuesten Meldung;
+- der **Status**: „In der Sendung“ (mit Zeit der letzten Ausgabe), „Nicht in der Sendung“ oder „Zurückgestellt“ mit Grund (z. B. abweichende Zahlen); zusätzlich „Eilmeldung“, wenn dazu ein Kurzupdate erschienen ist.
+
+Oben stehen die Ereignisse der Sendung, danach Ereignisse mit mehreren Medien; Einzelmeldungen sind aufklappbar. Die Seite wird bei jedem RSS-Lauf (viertelstündlich) und nach jeder Sendung neu erzeugt (`scripts/editorial_overview.py`); die Daten stehen auch maschinenlesbar in `docs/redaktion.json`. Die ausführliche Belegprüfung je Ereignis bleibt auf `editorial-pipeline.html`.
+

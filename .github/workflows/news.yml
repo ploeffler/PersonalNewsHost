@@ -177,6 +177,10 @@ jobs:
       - name: Mark the approved broadcast groups in the news store
         if: steps.schedule.outputs.due == 'true'
         run: python3 scripts/collect_news.py --annotations-only
+      - name: Update editorial overview
+        if: steps.schedule.outputs.due == 'true'
+        continue-on-error: true
+        run: python3 scripts/editorial_overview.py
       - name: Sync public configuration for settings page
         if: steps.schedule.outputs.due == 'true'
         env:
