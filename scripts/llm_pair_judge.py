@@ -4,7 +4,8 @@
 The rules in editorial_pipeline keep two reports apart unless their headlines
 clearly match. Pairs that share two or more headline word stems but are kept
 apart ("borderline") are asked to a small local model (llama.cpp server with
-Qwen3-4B-Instruct) once: "Same concrete event? ja/nein". Answers are stored in
+Qwen3-4B-Instruct) once, in both orders: "Same concrete event? ja/nein";
+only a consistent "ja" counts. Answers are stored in
 docs/event-pairs.json and used by the pipeline for the broadcast and for
 breaking-news detection. The model never writes broadcast text.
 
@@ -27,9 +28,12 @@ PAIRS = ROOT / 'docs' / 'event-pairs.json'
 DEFAULTS = {'enabled': True, 'max_pairs_per_run': 40, 'time_budget_seconds': 150,
             'server_url': 'http://127.0.0.1:8080'}
 MODEL = 'Qwen3-4B-Instruct-2507-Q4_K_M'
-SYSTEM = ('Du bist Nachrichtenredakteur. Entscheide, ob zwei Meldungen über dasselbe konkrete Ereignis '
-          'berichten (gleicher Vorfall, gleiche Entscheidung, gleiche Aussage). Meldungen zum selben großen '
-          'Thema, aber über verschiedene Teilereignisse oder Folgeentwicklungen, sind NICHT dasselbe Ereignis. '
+SYSTEM = ('Du bist Nachrichtenredakteur. Entscheide, ob zwei Meldungen dieselbe Nachricht über denselben konkreten '
+          'Vorfall melden. Antworte „ja“ nur, wenn beide im Kern dasselbe berichten (zum Beispiel beide den Rücktritt, '
+          'beide denselben Unfall, beide dieselbe Entscheidung). Antworte „nein“, wenn eine Meldung eine Folge, '
+          'Reaktion, Analyse, Vorgeschichte, ein Hintergrund oder eine andere Entwicklung zum selben Thema ist – zum '
+          'Beispiel Rücktritt und spätere Vorladung vor einen Ausschuss, Rücktritt und Vorschlag eines Nachfolgers, '
+          'Vorfall und spätere Ehrung, Ereignis und Kommentar dazu. Im Zweifel „nein“. '
           'Antworte nur mit einem Wort: ja oder nein.')
 
 
@@ -119,12 +123,14 @@ def main(argv=None):
                 print('Zeitbudget erreicht; restliche Paare im nächsten Lauf.')
                 break
             try:
-                verdict = ask(cfg['server_url'], p, a, b)
+                # Ask in both orders; only a consistent "ja" counts.
+                first, second = ask(cfg['server_url'], p, a, b), ask(cfg['server_url'], p, b, a)
             except OSError as exc:
                 print(f'Sprachmodell nicht erreichbar ({type(exc).__name__}); es gelten nur die Regeln.')
                 break
-            if verdict is None:
+            if first is None or second is None:
                 continue
+            verdict = first and second
             asked += 1; same += verdict
             data['pairs'][p.pair_key(a, b)] = {'same': verdict, 'decided_at': round(now)}
             print(f"{'ja  ' if verdict else 'nein'} · {a['title']} ⟷ {b['title']}")
