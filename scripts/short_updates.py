@@ -171,7 +171,8 @@ def produce_media(updates, media_dir, video_dir):
         audio = media_dir / (update['id'] + '.wav')
         if not update.get('audio') and len(update['text'].split()) <= 120:
             try:
-                news.synthesize(update['text'], audio)
+                spoken = getattr(news, 'spoken_text', lambda text: text)
+                news.synthesize(spoken(update['text']), audio)  # sources are shown, not read aloud
                 update['audio'] = 'short-update-audio/' + audio.name
             except Exception as exc:
                 print(f'Speech unavailable: {type(exc).__name__}')

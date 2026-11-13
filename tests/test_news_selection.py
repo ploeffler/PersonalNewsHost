@@ -92,5 +92,13 @@ class SentenceSplitTests(unittest.TestCase):
         text = news.edit_news("Papst in Peru", "Papst Leo XIV. hat in Lima gesprochen. Dafür wurden 2 Mio. Euro ausgegeben. Dritter Satz.", "classic", 2, 900)
         self.assertEqual(text, "Papst in Peru.\nPapst Leo XIV. hat in Lima gesprochen. Dafür wurden 2 Mio. Euro ausgegeben.")
 
+
+class SpokenTextTests(unittest.TestCase):
+    def test_source_credits_are_not_read_aloud(self):
+        self.assertEqual(news.spoken_text("Titel.\nSatz eins.\nQuellen: orf.at, krone.at."), "Titel.\nSatz eins.")
+        self.assertEqual(news.spoken_text("Titel.\nSatz.\nQuelle: orf.at."), "Titel.\nSatz.")
+        self.assertEqual(news.spoken_text("Titel.\nSatz.\\nÜber dieses Ereignis berichten auch: krone.at."), "Titel.\nSatz.")
+        self.assertEqual(news.spoken_text("Die Quellenlage ist unklar."), "Die Quellenlage ist unklar.")
+
 if __name__ == "__main__":
     unittest.main()

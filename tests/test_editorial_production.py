@@ -33,7 +33,10 @@ class EditorialProductionTests(unittest.TestCase):
                 generate.main()
             report=json.loads((root/'docs/editorial-report.json').read_text());selected=[g for g in report['groups'] if g['selected']]
             self.assertEqual(len(selected),1);self.assertEqual(selected[0]['used_source_ids'],['a','b'])
-            self.assertIn(selected[0]['draft']['text'],spoken)
+            text=selected[0]['draft']['text']
+            self.assertIn(generate.spoken_text(text),spoken)          # verified sentences are spoken unchanged
+            self.assertFalse(any('Quellen:' in part for part in spoken))  # credits are shown, not read aloud
+            self.assertIn(text,(root/'docs/transcript.txt').read_text())  # transcript keeps the credit
             self.assertGreater((root/'docs/latest.mp4').stat().st_size,1000)
             groups=json.loads((root/'docs/story-groups.json').read_text());self.assertEqual(groups[0]['editorial_text'],selected[0]['draft']['text']);self.assertEqual(len(groups[0]['sources']),2)
 
