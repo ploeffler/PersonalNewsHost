@@ -32,6 +32,18 @@ Retention and deletion are configured directly in the Telegram destination. Pers
 
 Telegram integration should be tested with a real bot and destination before relying on it.
 
+## Reliable timing with an external scheduler (optional)
+
+GitHub runs `schedule` triggers on a best-effort basis and drops many of them under load. A free external cron service such as [cron-job.org](https://cron-job.org) can start the workflows through the GitHub API instead; the GitHub schedule stays active as a fallback.
+
+1. Create a **fine-grained personal access token** limited to your PersonalNewsHost repository with **Actions: Read and write** only. Store it only in the cron service.
+2. Create two POST jobs with the headers `Accept: application/vnd.github+json`, `Authorization: Bearer <TOKEN>`, `X-GitHub-Api-Version: 2022-11-28`:
+   - `https://api.github.com/repos/<OWNER>/<REPO>/actions/workflows/news.yml/dispatches` with body `{"ref":"main","inputs":{"trigger":"schedule"}}`, hourly at minute 17.
+   - `https://api.github.com/repos/<OWNER>/<REPO>/actions/workflows/short-updates.yml/dispatches` with body `{"ref":"main"}`, at minutes 7, 22, 37 and 52.
+3. GitHub answers **HTTP 204** on success.
+
+With `trigger=schedule` the broadcast workflow applies the same due-slot check as the GitHub schedule, so no duplicate editions are produced. Manual starts from the Actions page (default `trigger=manual`) still always produce. Details: [German guide](../betrieb-und-sicherheit.md#zuverlässiger-zeitplan-mit-externem-taktgeber-optional).
+
 ## Troubleshooting
 
 1. Open [GitHub Actions](https://github.com/ploeffler/PersonalNewsHost/actions) and select the failed run.

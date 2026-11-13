@@ -7,7 +7,7 @@ import subprocess
 import sys
 import unittest
 from pathlib import Path
-from scripts.check_schedule import production_due, latest_slot, published_at
+from scripts.check_schedule import production_due, latest_slot, published_at, manual_start
 
 UTC = dt.timezone.utc
 
@@ -50,6 +50,15 @@ class ScheduleTests(unittest.TestCase):
         now = instant('2026-10-27T07:21:00+01:00')
         self.assertFalse(production_due(self.settings, now)[0])
         self.assertTrue(production_due(self.settings, now, manual=True)[0])
+
+    def test_external_timer_dispatch_respects_schedule(self):
+        self.assertTrue(manual_start('workflow_dispatch', None))
+        self.assertTrue(manual_start('workflow_dispatch', ''))
+        self.assertTrue(manual_start('workflow_dispatch', 'manual'))
+        self.assertFalse(manual_start('workflow_dispatch', 'schedule'))
+        self.assertFalse(manual_start('workflow_dispatch', ' Schedule '))
+        self.assertFalse(manual_start('schedule', None))
+        self.assertFalse(manual_start('schedule', 'manual'))
 
     def test_weekday_and_weekend_restrictions(self):
         for days, expected in (('weekdays', False), ('weekends', True)):
