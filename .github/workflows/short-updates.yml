@@ -11,6 +11,7 @@ on:
       - scripts/article_enrichment.py
       - scripts/collect_news.py
       - scripts/short_updates.py
+      - scripts/editorial_pipeline.py
       - scripts/publish_short_updates_telegram.py
   schedule:
     - cron: '7,22,37,52 * * * *'
@@ -43,20 +44,29 @@ jobs:
                   raise ValueError('Configuration must be an object')
               Path('config.json').write_text(json.dumps(config))
           PY
-      - name: Install speech and video tools
-        run: |
-          sudo apt-get update && sudo apt-get install -y espeak-ng ffmpeg
-          python3 -m pip install --disable-pip-version-check Pillow
       - name: Test short update and Telegram rules
         run: |
           python3 -m unittest discover -s tests -p "test_short_updates*.py"
           python3 -m unittest discover -s tests -p test_telegram.py
           python3 -m unittest discover -s tests -p test_collect_news.py
           python3 -m unittest discover -s tests -p test_article_enrichment.py
-      - name: Create updates and expire old entries
-        run: python3 scripts/short_updates.py
       - name: Store RSS messages from the last 24 hours
         run: python3 scripts/collect_news.py
+      - name: Detect breaking news and expire old updates
+        id: detect
+        run: python3 scripts/short_updates.py --detect
+      - name: Install speech and video tools (only for breaking news)
+        if: steps.detect.outputs.media_needed == 'true'
+        run: |
+          sudo apt-get update && sudo apt-get install -y espeak-ng ffmpeg
+          python3 -m pip install --disable-pip-version-check Pillow
+      - name: Produce speech and video for new short updates
+        if: steps.detect.outputs.media_needed == 'true'
+        run: |
+          python3 -m unittest discover -s tests -p "test_short_updates_video.py"
+          python3 scripts/short_updates.py --media
+      - name: Link short updates in the news store
+        run: python3 scripts/collect_news.py --annotations-only
       - name: Publish short updates
         run: |
           git config user.name 'github-actions[bot]'

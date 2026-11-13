@@ -133,7 +133,13 @@
   "short_updates": {
     "enabled": true,
     "freshness_minutes": 60,
-    "interval_minutes": 15
+    "window_minutes": 180,
+    "min_publishers": 2,
+    "max_per_day": 6,
+    "interval_minutes": 15,
+    "austria_rule": true,
+    "breaking_feeds": [],
+    "timezone": "Europe/Vienna"
   },
   "article_enrichment": {
     "enabled": true,
