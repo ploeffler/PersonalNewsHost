@@ -600,8 +600,11 @@ def edit_news(title, description, style, max_sentences, limit):
     months = "|".join((*GERMAN_MONTHS, "Januar", "Februar"))
     protected = re.sub(r"\b(\d{1,2})\.\s+(?=(?:" + months + r")\b)",
                        lambda match: match[1] + "\u2024 ", description)
+    protected = re.sub(r"\b(Dr|Prof|bzw|ca|Nr|Mio|Mrd|Tsd|St|Hl|Abs|Str|inkl|ggf|evtl|vgl)\.",
+                       lambda match: match[1] + "\u2024", protected)
+    # A German sentence never starts with a lowercase word ("Leo XIV. hat").
     sentences = [part.replace("\u2024", ".")
-                 for part in re.split(r"(?<=[.!?])\s+", protected)]
+                 for part in re.split(r"(?<=[.!?])\s+(?![a-zäöüß])", protected)]
     sentences = [x.strip() for x in sentences if x.strip() and x.strip()[-1] in ".!?"]
     sentences = [x for x in sentences if x.casefold().rstrip(".!?") != title.casefold().rstrip(".!?")]
     count = 1 if style == "brief" else max_sentences

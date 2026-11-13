@@ -87,9 +87,11 @@ def sentence_units(text):
     # Protect dates, decimals and common abbreviations before sentence splitting.
     text=re.sub(r'(?<=\d)\.(?=\d|\s+(?:Jänner|Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember))','\u2024',text)
     text=re.sub(r'\b(?:z\.\s*B|u\.\s*a|d\.\s*h)\.',lambda m:m[0].replace('.','\u2024'),text)
-    text=re.sub(r'\b(?:Dr|Prof|bzw|ca|Nr)\.',lambda m:m[0].replace('.','\u2024'),text)
+    text=re.sub(r'\b(?:Dr|Prof|bzw|ca|Nr|Mio|Mrd|Tsd|St|Hl|Abs|Str|Bd|inkl|ggf|evtl|vgl|Mag|Ing)\.',lambda m:m[0].replace('.','\u2024'),text)
     units=[]
-    for part in re.split(r'(?<=[.!?])\s+',text):
+    # A German sentence never starts with a lowercase word: "Papst Leo XIV. hat",
+    # "von 93,7 Mio. auf", "Von 11. bis 13. Dezember", "Taufpaten etc. zur".
+    for part in re.split(r'(?<=[.!?])\s+(?![a-zäöüß])',text):
         part=part.replace('\u2024','.').strip()
         if not part:continue
         if part[-1] not in '.!?':part+='.'

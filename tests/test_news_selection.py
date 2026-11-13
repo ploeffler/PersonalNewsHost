@@ -86,5 +86,11 @@ class CardCreditTests(unittest.TestCase):
         self.assertLessEqual(len(credit), 60)
 
 
+
+class SentenceSplitTests(unittest.TestCase):
+    def test_short_update_text_keeps_regnal_numbers_and_abbreviations(self):
+        text = news.edit_news("Papst in Peru", "Papst Leo XIV. hat in Lima gesprochen. Dafür wurden 2 Mio. Euro ausgegeben. Dritter Satz.", "classic", 2, 900)
+        self.assertEqual(text, "Papst in Peru.\nPapst Leo XIV. hat in Lima gesprochen. Dafür wurden 2 Mio. Euro ausgegeben.")
+
 if __name__ == "__main__":
     unittest.main()

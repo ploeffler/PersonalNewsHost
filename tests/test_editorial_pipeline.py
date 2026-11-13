@@ -112,6 +112,22 @@ class EditorialPipelineTests(unittest.TestCase):
         report=p.prepare(stored(fresh+older),NOW)
         self.assertNotIn('m1',[i for g in p.select(report,5,prefer_multi_source=False) for i in g['member_ids']])
 
+    def test_sentence_splitting_keeps_abbreviations_ordinals_and_regnal_numbers(self):
+        cases={
+            'Papst Leo XIV. hat in Peru ein Ende der Macho-Mentalität eingemahnt. Er sprach in Lima.':
+                ['Papst Leo XIV. hat in Peru ein Ende der Macho-Mentalität eingemahnt.','Er sprach in Lima.'],
+            'Heute wurden weitere 171 Mio. Euro freigegeben. Das Geld fließt in Leitungen.':
+                ['Heute wurden weitere 171 Mio. Euro freigegeben.','Das Geld fließt in Leitungen.'],
+            'Der Umsatz sank von 93,7 Mio. auf 81,9 Mio. Euro. Die Firma bleibt zuversichtlich.':
+                ['Der Umsatz sank von 93,7 Mio. auf 81,9 Mio. Euro.','Die Firma bleibt zuversichtlich.'],
+            'Von 11. bis 13. Dezember finden Vorträge statt. Der Eintritt ist frei.':
+                ['Von 11. bis 13. Dezember finden Vorträge statt.','Der Eintritt ist frei.'],
+            'Die Räumung beginnt in den St. Pöltner Bezirken. Die Stadt bittet um Geduld.':
+                ['Die Räumung beginnt in den St. Pöltner Bezirken.','Die Stadt bittet um Geduld.'],
+        }
+        for text,expected in cases.items():
+            with self.subTest(text):self.assertEqual(p.sentence_units(text),expected)
+
     def test_opposing_negation_and_uncertainty_are_not_deduplicated_into_certainty(self):
         for first,second,kind in [
             ('Die Polizei bestätigt eine Sperre der gesamten Bahnstrecke.', 'Die Polizei bestätigt keine Sperre der gesamten Bahnstrecke.','negation'),
