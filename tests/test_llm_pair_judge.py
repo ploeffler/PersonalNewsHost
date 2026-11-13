@@ -44,6 +44,9 @@ class PairJudgeTest(unittest.TestCase):
         t = article('t', 'Straßen gesperrt nach Hochwasser in Tirol', 'krone.at')
         P.use_pair_decisions({P.pair_key(k, t): True})
         self.assertFalse(P.same_event(k, t))          # different places always win
+        late = dict(WHY, published_at=NOW - 8 * 3600, first_seen_at=NOW - 8 * 3600)
+        P.use_pair_decisions({'a|b': True})
+        self.assertFalse(P.same_event(HUANG, late))   # more than 6 h apart: follow-up, not the same report
 
     def test_prepare_uses_stored_decisions(self):
         store = {'articles': [HUANG, WHY], 'feeds': []}

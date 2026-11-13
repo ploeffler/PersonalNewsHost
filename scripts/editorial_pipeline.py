@@ -94,9 +94,15 @@ def title_match(first,second):
     return matched
 
 
+PAIR_MAX_HOURS_APART=6
+
+
 def borderline(first,second):
-    """Pairs the rules keep apart although the headlines share two or more word stems."""
-    return len(stems(first['title'])&stems(second['title']))>=2 and not title_match(first,second)
+    """Pairs the rules keep apart although the headlines share two or more word
+    stems and were first reported within PAIR_MAX_HOURS_APART hours of each other.
+    Reports further apart are usually follow-ups of a running story."""
+    return (len(stems(first['title'])&stems(second['title']))>=2 and not title_match(first,second)
+            and abs(age(first)-age(second))<=PAIR_MAX_HOURS_APART*3600)
 
 
 def places_compatible(first,second):
