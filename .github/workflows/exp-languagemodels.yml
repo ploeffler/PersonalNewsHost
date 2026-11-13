@@ -24,8 +24,12 @@ jobs:
         run: |
           start=$(date +%s)
           tag=$(gh release view --repo ggml-org/llama.cpp --json tagName -q .tagName)
-          gh release download "$tag" --repo ggml-org/llama.cpp --pattern '*bin-ubuntu-x64.zip' --dir /tmp/llama
-          unzip -q /tmp/llama/*.zip -d /tmp/llama
+          gh release view "$tag" --repo ggml-org/llama.cpp --json assets -q '.assets[].name' > /tmp/assets.txt
+          grep -i ubuntu /tmp/assets.txt || true
+          asset=$(grep -i -E 'ubuntu.*x64' /tmp/assets.txt | grep -v -i -E 'vulkan|cuda|rocm|sycl|openvino|arm' | head -1)
+          echo "Gewählt: $asset"
+          gh release download "$tag" --repo ggml-org/llama.cpp --pattern "$asset" --dir /tmp/llama
+          cd /tmp/llama; case "$asset" in *.zip) unzip -q "$asset";; *) tar xf "$asset";; esac
           server=$(find /tmp/llama -name llama-server -type f | head -1)
           echo "LLAMA_SERVER=$server" >> $GITHUB_ENV
           echo "LLAMA_DIR=$(dirname $server)" >> $GITHUB_ENV
