@@ -4,7 +4,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "45cc22c54ff2a21f7956b6c0",
+    "pipeline_group_id": "f742d057fbb9e05738bbe348",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -12,15 +12,21 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "a61c6b25757278c24e30e7d7",
+          "source_id": "132f887ea8c62ba0de198fc2",
           "supported": true,
-          "quote": "Die Krise der niederländischen Minderheitsregierung hat sich heute weiter verschärft."
+          "quote": "Der Präsidentschaftskandidat der Linken in Frankreich, Jean-Luc Mélenchon, darf nicht mehr nach Israel einreisen."
         },
         {
           "claim_index": 1,
-          "source_id": "a61c6b25757278c24e30e7d7",
+          "source_id": "73fe39e632d01948bd49d18f",
           "supported": true,
-          "quote": "Der Bruch des Drei-Parteien-Bündnisses nach nur knapp neun Monaten scheint unabwendbar, nach dem die Koalitionsparteien sich nicht auf die umstrittene Steuerreform einigen konnten."
+          "quote": "Grund sei die \"extrem antiisraelische Haltung\" von Jean-Luc Mélenchon und seiner Partei La France Insoumise (LFI), wie Israels Außenminister Saar mitteilte."
+        },
+        {
+          "claim_index": 2,
+          "source_id": "2b62df6fd9dbd44db300bcb6",
+          "supported": true,
+          "quote": "Saar, der kürzlich auch zum Innenminister ernannt worden war, erklärte weiter, das Einreiseverbot gelte auch für die Fraktionsvorsitzende der LFI, Mathilde Panot."
         }
       ],
       "conflicts": [],
@@ -33,7 +39,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "7816123cc77d89c98f56c013",
+    "pipeline_group_id": "ebc1b5d83ed1a8bfac80ef9a",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -41,15 +47,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "f9dd333f68244a8ace859176",
+          "source_id": "9f2bb75b4d79f3ecf27d52c5",
           "supported": true,
-          "quote": "Dreiste Diebe haben es in Osttirol auf Brückennamensschilder abgesehen!"
+          "quote": "Die Paketabgaben der vergangenen Monate wirken sich deutlich auf das Versandvolumen der Österreichischen Post aus: Sendungen von außerhalb der EU seien gegenüber dem ersten Halbjahr 2026 um 30 Prozent zurückgegangen, die heimische Paketsteuer habe zu einem Minus von zehn Prozent geführt."
         },
         {
           "claim_index": 1,
-          "source_id": "f9dd333f68244a8ace859176",
+          "source_id": "ff0f81ab27b7a4ebdb17107d",
           "supported": true,
-          "quote": "Gleich 15 Tafeln verschwanden entlang zweier Landesstraßen in Assling und Leisach."
+          "quote": "Die Österreichische Post steigerte den Umsatz in den ersten neun Monaten des Jahres."
         }
       ],
       "conflicts": [],
@@ -62,7 +68,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "49321a332981d240ce2abe98",
+    "pipeline_group_id": "97964cc93b5f6e939de253e7",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -76,9 +82,9 @@
         },
         {
           "claim_index": 1,
-          "source_id": "f2da9000bfdcf1674739b917",
+          "source_id": "c2a197df9ee42643532191ba",
           "supported": true,
-          "quote": "Der Notfallsanitäter am Steuer konnte nicht mehr rechtzeitig ausweichen."
+          "quote": "Leitring im Bezirk Leibnitz: Donnerstagnachmittag, 12. November 2026, kam es zu einer Kollision zwischen einem Rettungswagen und einer Radfahrerin."
         }
       ],
       "conflicts": [],
@@ -91,7 +97,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "83cc6404bea5d344b0a35e22",
+    "pipeline_group_id": "f8902910fa7965e0332bf538",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -99,15 +105,21 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "f6612de5069fa1fb556cdfed",
+          "source_id": "eeab969f45144f7144234c51",
           "supported": true,
-          "quote": "In den USA trifft die mutmaßliche Spionageaffäre rund um den Nvidia-CEO Jensen Huang nun auch die Spitzenpolitik."
+          "quote": "Eine Besuchergruppe um US-Verteidigungsminister Pete Hegseth ist gestern (Ortszeit) auf dem Nationalfriedhof in Arlington wegen unangemessenen Verhaltens zur Ordnung gerufen worden – ausgerechnet am Veteranentag."
         },
         {
           "claim_index": 1,
-          "source_id": "330162d3f5309e36d75dc290",
+          "source_id": "4ef210db645b4325f6f05cd4",
           "supported": true,
-          "quote": "Am Donnerstag ist Jensen Huang als Vorstandschef des führenden KI-Chipentwicklers Nvidia zurückgetreten."
+          "quote": "Der viel kritisierte US-Verteidigungsminister Pete Hegseth kommt nicht zur Ruhe."
+        },
+        {
+          "claim_index": 2,
+          "source_id": "620292f3c7edb10b9c0df52f",
+          "supported": true,
+          "quote": "Auf einem Video ist lautstark zu hören, wie der Soldat auf dem Nationalfriedhof Arlington eine Besuchergruppe um Pete Hegseth zur Ordnung ruft."
         }
       ],
       "conflicts": [],
@@ -120,7 +132,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "3f11e80218882466787a5112",
+    "pipeline_group_id": "e9a46a50764af36a42f63890",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -128,15 +140,21 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "a0c8f88f7edb75cf49ea3707",
+          "source_id": "d41931028b8ef33ede6c4e49",
           "supported": true,
-          "quote": "Deutschlandsberg | Bei technischen Schwerpunktkontrollen am Mittwoch, 11. November 2026, stellten Polizei und Techniker des Landes zahlreiche teils schwerwiegende Fahrzeugmängel fest."
+          "quote": "Bei einem israelischen Angriff auf das Nasser Krankenhaus im Gazastreifen sind laut Medienberichten mehrere Menschen getötet worden."
         },
         {
           "claim_index": 1,
-          "source_id": "a0c8f88f7edb75cf49ea3707",
+          "source_id": "d0bbf9c244b5683d7ea8a657",
           "supported": true,
-          "quote": "Vier Fahrzeugen mussten aus dem Verkehr gezogen werden."
+          "quote": "Das israelische Nachrichtenportal ynet zitierte einen Sprecher des palästinensischen Zivilschutzes, der von mindestens sechs Toten sprach."
+        },
+        {
+          "claim_index": 2,
+          "source_id": "0fa2332ad3b8a98965db0e49",
+          "supported": true,
+          "quote": "Mindestens sechs Menschen wurden beim Angriff auf das Nasser-Krankenhaus getötet."
         }
       ],
       "conflicts": [],
