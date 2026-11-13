@@ -37,12 +37,42 @@ def places(title):
     return {w.casefold() for w in matches if w.casefold() not in GENERIC|STOP|{'krankenhaus','untersuchungshaft'}}
 
 
+SUFFIXES=('ern','en','er','es','em','e','n','s')
+
+
+def stem(word):
+    """Light German suffix folding: Niederlande/Niederlanden, Packerl/Packerln."""
+    for suffix in SUFFIXES:
+        if word.endswith(suffix) and len(word)-len(suffix)>=4:return word[:-len(suffix)]
+    return word
+
+
+def stems(value):
+    return {stem(w) for w in words(value)}
+
+
+def lead(article):
+    units=sentence_units(article.get('text',''))
+    return units[0] if units else ''
+
+
 def same_event(first,second):
-    a,b=words(first['title']),words(second['title'])
+    """Conservative event match across publishers with differently worded headlines.
+
+    Either the headlines share at least three word stems with high overlap, or
+    they share at least half of the shorter headline and the opening sentences
+    clearly describe the same facts. Distinct places always keep stories apart.
+    """
+    a,b=stems(first['title']),stems(second['title'])
     overlap=len(a&b)
-    if overlap<3:return False
+    if overlap<2:return False
     containment=overlap/max(1,min(len(a),len(b)));jaccard=overlap/max(1,len(a|b))
-    if containment<.78 or jaccard<.55 or SequenceMatcher(None,first['title'].casefold(),second['title'].casefold()).ratio()<.58:return False
+    matched=overlap>=3 and containment>=.75 and jaccard>=.5
+    if not matched and containment>=.5:
+        la,lb=stems(first['title']+' '+lead(first)),stems(second['title']+' '+lead(second))
+        shared=len(la&lb)
+        matched=shared>=5 and shared/max(1,min(len(la),len(lb)))>=.4
+    if not matched:return False
     pa,pb=places(first['title']+'. '+first.get('text','')),places(second['title']+'. '+second.get('text',''))
     return not (pa and pb and not pa&pb)
 
@@ -100,7 +130,22 @@ def render_draft(draft,sources):
     return headline+'\n'+' '.join(c['text'] for c in draft['claims'])+'\n'+credit
 
 
+def repeats(sentence,old):
+    """True if a sentence only restates an already used one (also across publishers
+    with different quotation marks, pronouns or attribution wording)."""
+    plain=lambda v:re.sub(r'["„“”‚‘’»«\']','',v.casefold())
+    if SequenceMatcher(None,plain(sentence),plain(old)).ratio()>=.86:return True
+    a,b=stems(sentence),stems(old)
+    if not a or not b:return False
+    shared=len(a&b)
+    return shared/len(a|b)>=.82 or (shared>=5 and shared/min(len(a),len(b))>=.75)
+
+
 def formulate(members,sources,max_sentences=2):
+    # Every publisher of the event should contribute where it adds a new sentence,
+    # so the budget grows with the number of publishers (bounded by the 4-sentence cap).
+    publishers=len({sources[a['id']]['publisher'] for a in members if a['id'] in sources}) or 1
+    max_sentences=min(4,max(max_sentences,publishers))
     claims=[];used=[]
     candidates={a['id']:list(evidence_units(a)) for a in members}
     while len(claims)<max_sentences:
@@ -108,9 +153,8 @@ def formulate(members,sources,max_sentences=2):
         for article in members:
             units=candidates[article['id']]
             while units:
-                sentence=units.pop(0);terms=words(sentence)
-                if any(SequenceMatcher(None,sentence.casefold(),old.casefold()).ratio()>=.86 or
-                       (terms and len(terms&words(old))/max(1,len(terms|words(old)))>=.82) for old in used):continue
+                sentence=units.pop(0)
+                if any(repeats(sentence,old) for old in used):continue
                 claims.append({'text':sentence,'source_id':article['id'],'field':'text','quote':sentence})
                 used.append(sentence);progressed=True;break
             if len(claims)>=max_sentences:break
@@ -205,9 +249,17 @@ def prepare(store,now,max_sentences=2,writer=None):
             'max_sentences':max_sentences,'sources':sources,'groups':results,'excluded_articles':excluded}
 
 
-def select(report,limit):
-    ready=sorted((g for g in report['groups'] if g['verification']['status']=='approved'),
-                 key=lambda g:(-g['newest_at'],g['id']))
+def publisher_count(report,group):
+    return len({report['sources'][sid]['publisher'] for sid in group['member_ids']})
+
+
+def select(report,limit,prefer_multi_source=True):
+    """Pick approved groups: widely reported events first (capped at three
+    publishers so freshness still decides among them), then newest first."""
+    def rank(g):
+        coverage=min(3,publisher_count(report,g)) if prefer_multi_source else 1
+        return (-coverage,-g['newest_at'],g['id'])
+    ready=sorted((g for g in report['groups'] if g['verification']['status']=='approved'),key=rank)
     selected=[];represented=set()
     for group in ready:
         publishers={report['sources'][sid]['publisher'] for sid in group['member_ids']}
@@ -222,7 +274,7 @@ def select(report,limit):
     return selected
 
 
-def production_plan(path,now,max_sentences=2,limit=5,max_store_age_minutes=30):
+def production_plan(path,now,max_sentences=2,limit=5,max_store_age_minutes=30,prefer_multi_source=True):
     path=Path(path)
     if not path.is_file():raise RuntimeError('News store missing; run collect_news.py before production')
     store=json.loads(path.read_text(encoding='utf-8'))
@@ -230,7 +282,7 @@ def production_plan(path,now,max_sentences=2,limit=5,max_store_age_minutes=30):
     if not isinstance(updated,(int,float)) or not 0<=now-updated<=max_store_age_minutes*60:
         raise RuntimeError('News store stale; refresh stored messages before production')
     report=prepare(store,now,max_sentences=max(1,min(4,max_sentences)))
-    selected=select(report,max(1,min(10,limit)))
+    selected=select(report,max(1,min(10,limit)),prefer_multi_source)
     report['mode']='production'
     report['selected_ids']=[g['id'] for g in selected]
     output=path.parent/'editorial-report.json'

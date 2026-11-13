@@ -56,6 +56,62 @@ class EditorialPipelineTests(unittest.TestCase):
         self.assertFalse(p.same_event(a,b))
         self.assertFalse(p.same_event(article('a','Trump gewinnt die Wahl',''),article('b','Trump vor Gericht wegen Betrugsvorwurf','')))
 
+    def test_differently_worded_headlines_of_one_event_are_grouped(self):
+        # Observed 12.11.2026: ORF and DER STANDARD were broadcast with one source each.
+        pairs=[
+            (article('a','Niederlande: Regierungskrise eskaliert','Die Krise der niederländischen Minderheitsregierung hat sich heute weiter verschärft.','orf.at'),
+             article('b','Regierungskrise in den Niederlanden eskaliert','Minderheitsregierung könnte in die Brüche gehen, nachdem zwei der drei Parteien für eine Millionärssteuer stimmten.','derstandard.at')),
+            (article('a','Post stellt deutlich weniger Packerln zu','Die Post hat wegen der neuen Abgaben deutlich weniger Pakete aus Drittstaaten zugestellt.','orf.at'),
+             article('b','Folgen der neuen Abgaben: Post verschickt viel weniger Packerl','Wegen der neuen Abgaben verschickt die Post deutlich weniger Pakete aus Drittstaaten.','kleinezeitung.at')),
+            (article('a','Schüsse in Washington: Ein Toter, mehrere Verletzte','In Washington ist bei Schüssen ein Mensch getötet worden.','orf.at'),
+             article('b','Ein Toter bei Schüssen in Washington','Bei Schüssen in Washington ist ein Mensch getötet worden.','derstandard.at')),
+        ]
+        for a,b in pairs:
+            with self.subTest(a['title']):
+                self.assertTrue(p.same_event(a,b))
+                report=p.prepare(stored([a,b]),NOW)
+                self.assertEqual(len(report['groups']),1)
+
+    def test_shared_subject_with_different_events_stays_separate(self):
+        pairs=[
+            (article('a','Nvidia-Chef Huang tritt zurück','Jensen Huang ist als Vorstandschef von Nvidia zurückgetreten.'),
+             article('b','Nvidia: US-Handelsminister Lutnick unter Druck','Handelsminister Lutnick gerät wegen seiner Kontakte unter Druck.','second.org')),
+            (article('a','Hochwasser in Kärnten: Straßen gesperrt','In Kärnten sind mehrere Straßen nach Starkregen gesperrt.'),
+             article('b','Hochwasser in Tirol: Straßen gesperrt','In Tirol sind mehrere Straßen nach Starkregen gesperrt.','second.org')),
+        ]
+        for a,b in pairs:
+            with self.subTest(a['title']):self.assertFalse(p.same_event(a,b))
+
+    def test_every_publisher_contributes_to_the_combined_text(self):
+        title='Zugunglück in München: Zehn Menschen verletzt'
+        items=[article('a',title,'Bei dem Zugunglück wurden zehn Menschen verletzt. Die Polizei ermittelt zur Ursache.','orf.at'),
+               article('b',title+' – Strecke gesperrt','Die Bahnstrecke bleibt bis zum Abend gesperrt. Ersatzbusse sind im Einsatz.','krone.at'),
+               article('c',title,'Ein Sachverständiger untersucht die Weiche. Erste Ergebnisse werden am Freitag erwartet.','derstandard.at')]
+        group=p.prepare(stored(items),NOW)['groups'][0]
+        self.assertEqual(group['verification']['status'],'approved')
+        self.assertEqual(group['used_source_ids'],['a','b','c'])
+        self.assertTrue(group['draft']['text'].endswith('Quellen: orf.at, krone.at, derstandard.at.'))
+        self.assertEqual(len(group['draft']['claims']),3)
+
+    def test_single_source_keeps_configured_length(self):
+        item=article('a','Zugunglück in München','Satz eins zum Unglück in München. Satz zwei zur Strecke. Satz drei zur Ursache.')
+        self.assertEqual(len(p.prepare(stored([item]),NOW,max_sentences=2)['groups'][0]['draft']['claims']),2)
+
+    def test_widely_reported_events_are_selected_first(self):
+        titles=['Neue Brücke über die Mur eröffnet','Gemeinderat beschließt Budget für Schulen','Lawinengefahr im Gebirge steigt deutlich',
+                'Festival meldet Besucherrekord am Wochenende','Bahnhof erhält neue Fahrradgarage']
+        fresh=[article(f's{i}',t,f'Die Meldung lautet: {t}, berichtet der Sender.',f'h{i}.org',published=NOW-50) for i,t in enumerate(titles)]
+        older=[article('m1','Zugunglück in München: Zehn Menschen verletzt','Bei dem Zugunglück wurden zehn Menschen verletzt.','orf.at',published=NOW-5000),
+               article('m2','Zugunglück in München: Zehn Menschen verletzt','Die Bahnstrecke bleibt bis zum Abend gesperrt.','krone.at',published=NOW-5000)]
+        for item in older:item['first_seen_at']=NOW-5000
+        for item in fresh:item['first_seen_at']=NOW-50
+        report=p.prepare(stored(fresh+older),NOW)
+        chosen=p.select(report,5)
+        self.assertEqual(sorted(chosen[0]['member_ids']),['m1','m2'])
+        self.assertEqual(len(chosen),5)
+        report=p.prepare(stored(fresh+older),NOW)
+        self.assertNotIn('m1',[i for g in p.select(report,5,prefer_multi_source=False) for i in g['member_ids']])
+
     def test_opposing_negation_and_uncertainty_are_not_deduplicated_into_certainty(self):
         for first,second,kind in [
             ('Die Polizei bestätigt eine Sperre der gesamten Bahnstrecke.', 'Die Polizei bestätigt keine Sperre der gesamten Bahnstrecke.','negation'),
