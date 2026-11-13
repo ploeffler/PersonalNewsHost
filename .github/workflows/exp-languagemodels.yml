@@ -20,20 +20,38 @@ jobs:
         with:
           path: ~/models
           key: llm-qwen3-4b-instruct-q4km-v1
-      - name: llama.cpp (fertige CPU-Version) herunterladen
+      - name: llama.cpp-Cache wiederherstellen
+        id: llcache
+        uses: actions/cache@v4
+        with:
+          path: /tmp/llama
+          key: llama-cpp-cpu-v2
+      - name: llama.cpp bereitstellen (fertige Version, sonst selbst bauen)
         run: |
           start=$(date +%s)
-          tag=$(gh release view --repo ggml-org/llama.cpp --json tagName -q .tagName)
-          gh release view "$tag" --repo ggml-org/llama.cpp --json assets -q '.assets[].name' > /tmp/assets.txt
-          echo "Release $tag:"; cat /tmp/assets.txt
-          asset=$(grep -i -E '(ubuntu|linux).*(x64|x86_64|amd64)' /tmp/assets.txt | grep -v -i -E 'vulkan|cuda|rocm|sycl|openvino|arm' | head -1)
-          echo "Gewählt: $asset"; test -n "$asset"
-          gh release download "$tag" --repo ggml-org/llama.cpp --pattern "$asset" --dir /tmp/llama
-          cd /tmp/llama; case "$asset" in *.zip) unzip -q "$asset";; *) tar xf "$asset";; esac
+          mkdir -p /tmp/llama; cd /tmp/llama
           server=$(find /tmp/llama -name llama-server -type f | head -1)
+          if [ -z "$server" ]; then
+            gh api "repos/ggml-org/llama.cpp/releases?per_page=40" \
+              --jq '.[] | .tag_name as $t | .assets[] | select(.name|test("(ubuntu|linux).*(x64|x86_64)";"i")) | select(.name|test("vulkan|cuda|rocm|sycl|openvino|arm|s390";"i")|not) | "\($t) \(.name)"' | head -1 > pick.txt || true
+            cat pick.txt
+            if [ -s pick.txt ]; then
+              read tag asset < pick.txt
+              gh release download "$tag" --repo ggml-org/llama.cpp --pattern "$asset"
+              case "$asset" in *.zip) unzip -q "$asset";; *) tar xf "$asset";; esac
+              echo "llama.cpp $tag (fertig)" > source.txt
+            else
+              echo "Keine fertige Linux-Version gefunden – baue aus dem Quellcode"
+              git clone --depth 1 https://github.com/ggml-org/llama.cpp src
+              cmake -S src -B build -DGGML_NATIVE=OFF -DLLAMA_CURL=OFF -DCMAKE_BUILD_TYPE=Release >/dev/null
+              cmake --build build --target llama-server -j 4 >/dev/null
+              echo "llama.cpp $(git -C src rev-parse --short HEAD) (selbst gebaut)" > source.txt
+            fi
+            server=$(find /tmp/llama -name llama-server -type f | head -1)
+          fi
           echo "LLAMA_SERVER=$server" >> $GITHUB_ENV
           echo "LLAMA_DIR=$(dirname $server)" >> $GITHUB_ENV
-          echo "T_LLAMA=$(( $(date +%s) - start ))s llama.cpp $tag" >> $GITHUB_ENV
+          echo "T_LLAMA=$(( $(date +%s) - start ))s $(cat /tmp/llama/source.txt) (Cache: ${{ steps.llcache.outputs.cache-hit }})" >> $GITHUB_ENV
       - name: Modell herunterladen (nur ohne Cache)
         run: |
           start=$(date +%s)
