@@ -129,7 +129,12 @@
       "enabled": true,
       "method": "local_extractive_multi_source",
       "max_store_age_minutes": 30,
-      "prefer_multi_source": true
+      "prefer_multi_source": true,
+      "llm_pairs": {
+        "enabled": true,
+        "max_pairs_per_run": 40,
+        "time_budget_seconds": 150
+      }
     }
   },
   "media": {

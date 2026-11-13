@@ -56,13 +56,32 @@ def lead(article):
     return units[0] if units else ''
 
 
-def same_event(first,second):
-    """Conservative event match across publishers with differently worded headlines.
+# Optional decisions of a local language model for borderline pairs
+# ("ja"/"nein", see scripts/llm_pair_judge.py), keyed by pair_key().
+PAIR_DECISIONS={}
 
-    Either the headlines share at least three word stems with high overlap, or
-    they share at least half of the shorter headline and the opening sentences
-    clearly describe the same facts. Distinct places always keep stories apart.
-    """
+
+def pair_key(first,second):
+    return '|'.join(sorted((first['id'],second['id'])))
+
+
+def use_pair_decisions(decisions):
+    """Install model decisions for borderline pairs: {pair_key: True/False}."""
+    global PAIR_DECISIONS
+    PAIR_DECISIONS={k:v for k,v in (decisions or {}).items() if isinstance(v,bool)}
+
+
+def load_pair_decisions(path):
+    try:
+        data=json.loads(Path(path).read_text(encoding='utf-8'))
+        return {k:v.get('same') for k,v in data.get('pairs',{}).items() if isinstance(v,dict)}
+    except (OSError,ValueError,AttributeError):
+        return {}
+
+
+def title_match(first,second):
+    """Rule-based headline match: at least three shared word stems with high
+    overlap, or half of the shorter headline plus clearly shared opening sentences."""
     a,b=stems(first['title']),stems(second['title'])
     overlap=len(a&b)
     if overlap<2:return False
@@ -72,9 +91,35 @@ def same_event(first,second):
         la,lb=stems(first['title']+' '+lead(first)),stems(second['title']+' '+lead(second))
         shared=len(la&lb)
         matched=shared>=5 and shared/max(1,min(len(la),len(lb)))>=.4
-    if not matched:return False
+    return matched
+
+
+PAIR_MAX_HOURS_APART=6
+
+
+def borderline(first,second):
+    """Pairs the rules keep apart although the headlines share two or more word
+    stems and were first reported within PAIR_MAX_HOURS_APART hours of each other.
+    Reports further apart are usually follow-ups of a running story."""
+    return (len(stems(first['title'])&stems(second['title']))>=2 and not title_match(first,second)
+            and abs(age(first)-age(second))<=PAIR_MAX_HOURS_APART*3600)
+
+
+def places_compatible(first,second):
     pa,pb=places(first['title']+'. '+first.get('text','')),places(second['title']+'. '+second.get('text',''))
     return not (pa and pb and not pa&pb)
+
+
+def same_event(first,second):
+    """Conservative event match across publishers with differently worded headlines.
+
+    Rules first (title_match). For borderline pairs a stored "ja" of the local
+    language model counts as a match. Distinct places always keep stories apart.
+    """
+    if not (title_match(first,second) or
+            (PAIR_DECISIONS.get(pair_key(first,second)) is True and borderline(first,second))):
+        return False
+    return places_compatible(first,second)
 
 
 def age(article):
@@ -229,7 +274,8 @@ def verify(draft,members,sources):
             'conflicts':conflicts,'independent_fact_check':False,'source_independence':'not_assessed'}
 
 
-def prepare(store,now,max_sentences=2,writer=None):
+def prepare(store,now,max_sentences=2,writer=None,pair_decisions=None):
+    if pair_decisions is not None:use_pair_decisions(pair_decisions)
     eligible=[dict(a) for a in store.get('articles',[]) if a.get('id') and a.get('title')
             and (a.get('published_at') or 0)<=now and now-86400<age(a)<=now]
     excluded=[{'id':a['id'],'title':a['title'],'url':a.get('url',''),'reason':a.get('exclusion_reason','non_news')} for a in eligible if a.get('content_kind')=='non_news']
@@ -283,7 +329,8 @@ def production_plan(path,now,max_sentences=2,limit=5,max_store_age_minutes=30,pr
     updated=store.get('updated_at',0)
     if not isinstance(updated,(int,float)) or not 0<=now-updated<=max_store_age_minutes*60:
         raise RuntimeError('News store stale; refresh stored messages before production')
-    report=prepare(store,now,max_sentences=max(1,min(4,max_sentences)))
+    report=prepare(store,now,max_sentences=max(1,min(4,max_sentences)),
+                   pair_decisions=load_pair_decisions(path.parent/'event-pairs.json'))
     selected=select(report,max(1,min(10,limit)),prefer_multi_source)
     report['mode']='production'
     report['selected_ids']=[g['id'] for g in selected]
