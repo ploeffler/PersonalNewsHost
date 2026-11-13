@@ -8,8 +8,8 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[2]
-T_EVENT = float(os.environ.get('T_EVENT', '0.90'))
-T_SENT = float(os.environ.get('T_SENT', '0.93'))
+T_EVENT = float(os.environ.get('T_EVENT', '0.95'))
+T_SENT = float(os.environ.get('T_SENT', '0.95'))
 LIMIT = 5
 
 
