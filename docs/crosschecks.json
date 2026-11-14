@@ -4,7 +4,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "4ad75f6d937229cc2ca29327",
+    "pipeline_group_id": "00580c0dca494accadb793ff",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -12,21 +12,27 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "e1ffe01913d2f3370081a44b",
+          "source_id": "0267197eefe284194dd4b198",
           "supported": true,
-          "quote": "Der Gesetzesentwurf zur „Sozialhilfe neu“ der Bundesregierung sieht sich in der Begutachtungsphase mit teils deutlicher Kritik konfrontiert."
+          "quote": "Die Zahl der außerordentlichen Schülerinnen und Schüler ist im heurigen Schuljahr österreichweit um mehr als 13 Prozent gesunken."
         },
         {
           "claim_index": 1,
-          "source_id": "ff3d67b0626dd7b0d36e10fc",
+          "source_id": "4afd552efb9a9eb14dc41cac",
           "supported": true,
-          "quote": "Die Pläne der Bundesregierung, sowohl das Sozialhilfe-, als auch das Integrationsgesetz auf neue Beine zu stellen, haben für heftige Kritik gesorgt – und das aus zahlreichen Richtungen."
+          "quote": "Es gab einen Rückgang um 6.300 Kinder und Jugendliche."
         },
         {
           "claim_index": 2,
-          "source_id": "e1ffe01913d2f3370081a44b",
+          "source_id": "fe5ef76540def96a51b64bad",
           "supported": true,
-          "quote": "In den bis Donnerstagabend eingetroffenen Dutzenden Schreiben werden neben dem Inhalt auch der kurze Begutachtungszeitraum und die kurze Frist bis zur Umsetzung Anfang 2027 kritisiert."
+          "quote": "Insgesamt verfügen 2026/27 40.148 Kinder und Jugendlichen über zu geringe Deutschkenntnisse, um dem Unterricht folgen zu können."
+        },
+        {
+          "claim_index": 3,
+          "source_id": "8a8f736567629f0b80b7e191",
+          "supported": true,
+          "quote": "Insgesamt verfügen 2026/27..."
         }
       ],
       "conflicts": [],
@@ -39,7 +45,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "b54e482511c1285e42a07c80",
+    "pipeline_group_id": "c6ce6f1cf3c7dc1205684946",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -47,21 +53,50 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "8d322dd1da3440099ec233ac",
+          "source_id": "c5784dc75e89806acbd55e73",
           "supported": true,
-          "quote": "Die App fintogo wird auch auf dem Marktplatz des Bildungsministeriums zur Verfügung gestellt."
+          "quote": "Seiersberg im Bezirk Graz-Umgebung: Freitagnachmittag, 13. November 2026, beabsichtigte ein 40-Jähriger Parfums aus einer Drogeriefiliale zu stehlen."
         },
         {
           "claim_index": 1,
-          "source_id": "a8e746dd49fd8ceeca453c10",
+          "source_id": "c5784dc75e89806acbd55e73",
           "supported": true,
-          "quote": "Laut Bildungsministerium gab es einen Cyberangriff auf Server des Anbieters von fintogo."
+          "quote": "Er wurde gefasst und angezeigt."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "0bd836c491724def658902b0",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "9171005fad58c0a381c3e1a3",
+          "supported": true,
+          "quote": "US-Präsident Donald Trump, Chinas Staatschef Xi Jinping und Russlands Machthaber Wladimir Putin werden kommende Woche zu einem Treffen in China zusammenkommen."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "883de0d1ecafd3bd910130e8",
+          "supported": true,
+          "quote": "Das historische Gespräch soll nächsten Donnerstag in China stattfinden."
         },
         {
           "claim_index": 2,
-          "source_id": "0331496a1e12121f4be78b4b",
+          "source_id": "3d713789e70e0a806317b5ec",
           "supported": true,
-          "quote": "Laut Ministerium sei es zu einem Cyberangriff auf Server des Anbieters gekommen."
+          "quote": "US-Präsident Donald Trump, Chinas Staatschef Xi Jinping und Kreml-Chef Wladimir Putin werden nach Angaben des Weißen Hauses in der nächsten Woche zu einem Dreiertreffen in China zusammenkommen."
         }
       ],
       "conflicts": [],
@@ -74,7 +109,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "4768e2435830855bf195260e",
+    "pipeline_group_id": "b54cab072c668d5b521b95a7",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -82,15 +117,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "6831425e406a1873702bde7e",
+          "source_id": "aebb96d23d2798537e408d59",
           "supported": true,
-          "quote": "Graz | Bezirk St. Leonhard."
+          "quote": "Der 55-jährige Vize-Ministerpräsident von Bayern war am Mittwoch vergangener Woche tot in seinem Hotelzimmer in Berlin entdeckt worden."
         },
         {
           "claim_index": 1,
-          "source_id": "6831425e406a1873702bde7e",
+          "source_id": "d20954244430d4c80e1dd38a",
           "supported": true,
-          "quote": "– Bislang unbekannte Täter brachen in der Nacht auf Freitag, 13. November 2026, in ein Juweliergeschäft ein."
+          "quote": "Unter großer öffentlicher Anteilnahme hat heute in München der Trauerstaatsakt für den plötzlich verstorbenen stellvertretenden bayrischen Ministerpräsidenten, Wirtschaftsminister und Freie-Wähler-Chef Hubert Aiwanger begonnen."
         }
       ],
       "conflicts": [],
@@ -103,7 +138,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "b44f40fad1d8e7b8effcae35",
+    "pipeline_group_id": "8227e9a3cbe1091da9ed4ff7",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -111,44 +146,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "e6c7f68ad9571f36a52204e3",
+          "source_id": "e9460040978c4afae1a18e96",
           "supported": true,
-          "quote": "In den USA hat die Luftfahrtbehörde FAA einen landesweiten Flugstopp verhängt – eine außergewöhnliche Maßnahme."
+          "quote": "Die Staatsanwaltschaft erhebt Anklage gegen die Eltern eines hautkranken, stark unterernährten siebenjährigen Mädchens."
         },
         {
           "claim_index": 1,
-          "source_id": "e4f99c62d6d098d3086f1b8e",
+          "source_id": "f6718379e5b3502db1362561",
           "supported": true,
-          "quote": "Grund seien Kommunikationsprobleme im Flugkontrollsystem, teilte Verkehrsminister Sean Duffy gestern (Ortszeit) auf der Plattform X mit."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "2fe0a8d95c90bf0b561c2591",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "1d81a897dcde221805be8c2b",
-          "supported": true,
-          "quote": "Bisher liegen keine Berichte über Verletzte vor."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "7ad37332082e710afdc6a757",
-          "supported": true,
-          "quote": "Nach dem Zusammenstoß zweier Schiffe auf dem Mississippi in New Orleans werden nach jetzigem Stand keine Passagiere mehr vermisst."
+          "quote": "Im Fall jenes Mädchens (7), das im April 2026 mit nur mehr elf Kilogramm in die Innsbrucker Klinik eingeliefert worden ist, müssen sich die Eltern Anfang 2027 vor Gericht verantworten."
         }
       ],
       "conflicts": [],
