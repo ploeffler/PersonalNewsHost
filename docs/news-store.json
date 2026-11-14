@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": 1794613356.495306,
+  "updated_at": 1794615542.248147,
   "articles": [
     {
       "id": "200bfef68e99e64c3300fcbc",
@@ -90,7 +90,9 @@
       "rss_text": "In den USA hat die Luftfahrtbehörde FAA einen landesweiten Flugstopp verhängt – eine außergewöhnliche Maßnahme. Noch in der Nacht ließ US-Heimatschutzminister Markwayne Mullin verlauten, dass es keine Hinweise auf eine Bedrohung oder eine Cyberattacke gebe.",
       "rss_revision_at": 1794610504.0,
       "content_kind": "news",
-      "text_origin": "rss"
+      "text_origin": "rss",
+      "broadcast_id": "20261114T001922Z",
+      "broadcast_position": 4
     },
     {
       "id": "010ad9fe17e73baf7f56612d",
@@ -314,9 +316,14 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000349207/tanker-bei-new-orleans-mit-passagierschiff-kollidiert?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000349207/tanker-bei-new-orleans-mit-passagierschiff-kollidiert?ref=rss",
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "6c7ca78df7bd32be39e0455bd3c2e79962925e70d5e9e613f69c77489ce6eee9"
-      }
+      },
+      "broadcast_id": "20261114T001922Z",
+      "broadcast_position": 5
     },
     {
       "id": "f5c1f767cad7c2b1a02254c6",
@@ -372,7 +379,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000349205/us-luftfahrtbehoerde-stoppt-landesweit-alle-fluege?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000349205/us-luftfahrtbehoerde-stoppt-landesweit-alle-fluege?ref=rss",
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "d6e3cba552d97313e7fabfed74617a88f2be3fed1029ca06e415a74632cbf26f"
       }
     },
@@ -406,7 +416,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41450893/graz99ers-gewinnen-beim-comeback-von-maxime-lagace-in-bozen",
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "f7754dafd3e116bcdca46d88af3edf3a7b2485c5957babf503b717821096fab5"
       }
     },
@@ -437,7 +450,9 @@
         "rss_fingerprint": "ff6fa0368368a27d7fdd3a13d9ed9929fe1961e57b5e44aef321b9c921ba23eb",
         "fetched_at": 1794613356.495306,
         "text_sha256": "ccb5a0b5e2e9a3ccdcffedf92482e7a78e56737af0018760678ed3b44843be47"
-      }
+      },
+      "broadcast_id": "20261114T001922Z",
+      "broadcast_position": 4
     },
     {
       "id": "5cbc97ac58ee7587e19f60e5",
@@ -468,14 +483,17 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41449355/christkindlmarkt-am-wiener-rathausplatz-hat-tore-geoeffnet",
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "b9eb0c79047b7afc9b098efba9ee4ffb17e14dccc11ae11c973622173dee9e9c"
       }
     },
     {
       "id": "1bbf5c7b17b28bb9d48df42d",
       "title": "Wer nimmt zum Jubiläum die Herkuleskeule mit?",
-      "text": "Der Klagenfurter Comedy Award HERKULES feiert sein 20-jähriges Bestehen. Am Samstagabend geht er in die nächste Runde – das Publikum entscheidet, wer gewinnt.",
+      "text": "Comedy Award Wer nimmt zum Jubiläum die Herkuleskeule mit? Schon im Vorjahr war die Veranstaltung ein Erfolg. Der Klagenfurter Comedy Award HERKULES feiert sein 20-jähriges Bestehen. Am Samstagabend geht er in die nächste Runde – das Publikum entscheidet, wer gewinnt. Sechs Acts, jeweils 15 Minuten Bühnenzeit und eine begehrte Trophäe: die Herkuleskeule. Vor 20 Jahren wurde der Kleinkunstpreis HERKULES von Mario Kuttnig ins Leben gerufen. 2022 übernahm das Humorkollektiv „Låch Amol“ das Ruder und entwickelte den „Klagenfurter Kleinkunstpreis“ zum „Comedy Award“ weiter. „Ich finde, nach 20 Jahren darf sich auch ein traditionsreicher Preis weiterentwickeln. Mit,Comedy Award’ bringen wir direkter auf den Punkt, was die Zuschauer erwartet, und hoffen, damit auch ein breiteres Publikum anzusprechen“, erklärt Carmen Kassekert von „Låch Amol“, die den Abend gemeinsam mit Gilbert Blechschmid veranstaltet. Wer sich am Ende die begehrte Herkuleskeule sichern darf, entscheidet das Publikum. Die gebürtige Villacherin Yana Thaler nimmt ebenfalls am Wettbewerb teil und rittert um die begehrte Trophäe. Mit Punktekarten werden die Zuschauer zur Jury und bewerten die Auftritte der sechs Kandidaten. „Wir glauben, gerade in schwierigen Zeiten brauchen wir Momente, in denen wir gemeinsam lachen können. Humor schafft Nähe, nimmt für einen Augenblick oder einen ganzen Abend den Druck und eröffnet manchmal einen ganz neuen Blick auf das, was uns beschäftigt“, so Kassekert. HERKULES Comedy Award: 14. Nov., 20 Uhr in der Eventhalle Droneberger (Klagenfurt). Infos unter: www.lachamol.at Loading... 00:00 / 00:00 Loading... 00:00 00:00 1.0x Geschwindigkeit Kärnten 13.11.2026 22:00 Loading Newsletter ALLE NEWSLETTER",
       "url": "https://www.krone.at/4372766",
       "published_at": 1794603645.0,
       "first_seen_at": 1794613356.495306,
@@ -503,11 +521,20 @@
       "rss_text": "Der Klagenfurter Comedy Award HERKULES feiert sein 20-jähriges Bestehen. Am Samstagabend geht er in die nächste Runde – das Publikum entscheidet, wer gewinnt.",
       "rss_revision_at": 1794603645.0,
       "content_kind": "news",
-      "text_origin": "rss",
+      "text_origin": "linked_article",
       "article_fetch": {
-        "status": "deferred",
-        "rss_fingerprint": "8fd4fdb21f579e8d5588443213266d6e6b066a11cb78fb76e316cdf268517b47"
-      }
+        "status": "success",
+        "page_title": "Wer nimmt zum Jubiläum die Herkuleskeule mit?",
+        "canonical_url": "https://www.krone.at/4372766",
+        "resolved_url": "https://www.krone.at/4372766",
+        "method": "rdrr",
+        "requested_url": "https://www.krone.at/4372766",
+        "last_attempt_at": 1794615542.248147,
+        "rss_fingerprint": "8fd4fdb21f579e8d5588443213266d6e6b066a11cb78fb76e316cdf268517b47",
+        "fetched_at": 1794615542.248147,
+        "text_sha256": "34becfe0bd57a18022b8776264b5a7de2f002363205b09f5dee7da4f0dee3b9e"
+      },
+      "article_text": "Comedy Award Wer nimmt zum Jubiläum die Herkuleskeule mit? Schon im Vorjahr war die Veranstaltung ein Erfolg. Der Klagenfurter Comedy Award HERKULES feiert sein 20-jähriges Bestehen. Am Samstagabend geht er in die nächste Runde – das Publikum entscheidet, wer gewinnt. Sechs Acts, jeweils 15 Minuten Bühnenzeit und eine begehrte Trophäe: die Herkuleskeule. Vor 20 Jahren wurde der Kleinkunstpreis HERKULES von Mario Kuttnig ins Leben gerufen. 2022 übernahm das Humorkollektiv „Låch Amol“ das Ruder und entwickelte den „Klagenfurter Kleinkunstpreis“ zum „Comedy Award“ weiter. „Ich finde, nach 20 Jahren darf sich auch ein traditionsreicher Preis weiterentwickeln. Mit,Comedy Award’ bringen wir direkter auf den Punkt, was die Zuschauer erwartet, und hoffen, damit auch ein breiteres Publikum anzusprechen“, erklärt Carmen Kassekert von „Låch Amol“, die den Abend gemeinsam mit Gilbert Blechschmid veranstaltet. Wer sich am Ende die begehrte Herkuleskeule sichern darf, entscheidet das Publikum. Die gebürtige Villacherin Yana Thaler nimmt ebenfalls am Wettbewerb teil und rittert um die begehrte Trophäe. Mit Punktekarten werden die Zuschauer zur Jury und bewerten die Auftritte der sechs Kandidaten. „Wir glauben, gerade in schwierigen Zeiten brauchen wir Momente, in denen wir gemeinsam lachen können. Humor schafft Nähe, nimmt für einen Augenblick oder einen ganzen Abend den Druck und eröffnet manchmal einen ganz neuen Blick auf das, was uns beschäftigt“, so Kassekert. HERKULES Comedy Award: 14. Nov., 20 Uhr in der Eventhalle Droneberger (Klagenfurt). Infos unter: www.lachamol.at Loading... 00:00 / 00:00 Loading... 00:00 00:00 1.0x Geschwindigkeit Kärnten 13.11.2026 22:00 Loading Newsletter ALLE NEWSLETTER"
     },
     {
       "id": "01f52342bef98657c1848faa",
@@ -538,7 +565,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41450360/wettlauf-mit-dem-brechreiz-auf-kaerntner-huette",
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "6e3962cdac435f1cb4e9abbdef1266474bdbcd4e984cd313df5a64878a29975b"
       }
     },
@@ -602,7 +632,9 @@
         "rss_fingerprint": "1469679e98a3c458ccecd06d95e1b147771cf5e00b8151ed4fdec479e6631bf1",
         "fetched_at": 1794613356.495306,
         "text_sha256": "73082400f05ebd8b646b058edcba94c8cea25926d5e1cc68993381a1d93ad699"
-      }
+      },
+      "broadcast_id": "20261114T001922Z",
+      "broadcast_position": 5
     },
     {
       "id": "de753167901c5f395f2c15b5",
@@ -625,7 +657,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000349203/fu223ball-vienna-d228mpfte-titelhoffnungen-von-sturm-graz-in-frauenliga?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000349203/fu223ball-vienna-d228mpfte-titelhoffnungen-von-sturm-graz-in-frauenliga?ref=rss",
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "a04ae646b9a402e4fe9fe8c96b18b7238aeb9e010fec2bcdcb1b993ae442038d"
       }
     },
@@ -687,7 +722,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41450853/gruenes-spitzenduo-in-wien-stellt-sich-der-wiederwahl",
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "937e2ac2b74be8cdc636a9185ec3d288b65cfa43605c2414ef0ef64c72fba737"
       }
     },
@@ -811,7 +849,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000349170/der-gewaltsame-tod-eines-32-jaehrigen-spitalspatienten-schockiert-ganz-kroatien?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000349170/der-gewaltsame-tod-eines-32-jaehrigen-spitalspatienten-schockiert-ganz-kroatien?ref=rss",
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "1c89fd9dcb73c4653a8ce7dc30d3242e862cbcd3d76d8d84811e7585425f21c2"
       }
     },
@@ -836,7 +877,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000349081/ein-erdnaher-asteroid-beschleunigt-auf-mysterioese-weise?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000349081/ein-erdnaher-asteroid-beschleunigt-auf-mysterioese-weise?ref=rss",
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "446b1df133e47d825cc3362e91ef4a44f6c7180d093556635d904b10ad46be80"
       }
     },
@@ -898,7 +942,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41450804/klein-lkw-kippt-nach-kollision-auf-b-317-um-kind-4-verletzt",
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "981593f7b7e71b608d1c1143868a00112e169f5f7452f9e398ff1ebe3f08f30b"
       }
     },
@@ -997,7 +1044,7 @@
     {
       "id": "35c72feca55e346772658e5b",
       "title": "Russische Oligarchen-Jacht verlässt Triest",
-      "text": "Nach viereinhalb Jahren vor Anker im Golf von Triest steht die Abfahrt der russischen Segeljacht „A“ unmittelbar bevor.",
+      "text": "Nach viereinhalb Jahren vor Anker im Golf von Triest steht die Abfahrt der russischen Segeljacht „A“ unmittelbar bevor.\n\nDas 143 Meter lange Schiff soll in den kommenden Tagen den Adria-Hafen Ancona anlaufen, wo zunächst umfangreiche Wartungs- und Modernisierungsarbeiten zur Erneuerung der Klassifizierung vorgesehen sind. Der Transfer könnte bereits am Dienstag erfolgen. Begleitet wird die Jacht von Einheiten der italienischen Polizei.\n\nDie Luxusjacht wird dem russischen Unternehmer und Oligarchen Andrej Melnitschenko zugerechnet. Ihr geschätzter Wert liegt bei rund 530 Millionen Euro. Seit 2022 liegt das futuristisch gestaltete Dreimastschiff im Golf von Triest vor Anker.\n\nNach dem russischen Angriff auf die Ukraine hatte der italienische Ausschuss für Finanzsicherheit im März 2022 die Konfiszierung des Schiffes angeordnet. Die Maßnahme erfolgte im Rahmen der Sanktionen gegen Personen, die den russischen Machthabern nahestehen sollen.\n\nErster Teil der Arbeiten soll sechs Monate dauernUrsprünglich waren für die anstehenden Arbeiten verschiedene Standorte im Gespräch. So wurde auch Genua als möglicher Werftenstandort geprüft. Ein Transport an die ligurische Küste erwies sich jedoch als wirtschaftlich zu aufwendig. Daraufhin fiel die Entscheidung zugunsten von Ancona.\n\nDie Arbeiten wurden zwischen dem italienischen Staat, dem Eigner und einer in Dubai ansässigen Verwaltungsgesellschaft vereinbart. Der erste Abschnitt der geplanten Eingriffe soll rund sechs Monate dauern. Hintergrund ist die vorgeschriebene Erneuerung der Klassifizierung, die alle fünf Jahre vorgenommen werden muss. Die letzte entsprechende Überprüfung fand im Jahr 2022 statt, unmittelbar vor der Konfiszierung des Schiffes.\n\nDie Verlegung nach Ancona ist für die Werftindustrie in Triest ein Rückschlag. Aufgrund der außergewöhnlichen Dimensionen und der technischen Ausstattung der Jacht hatten die Wartungsarbeiten ein erhebliches wirtschaftliches Potenzial. Die Kosten der anstehenden Eingriffe dürften mehrere Millionen Euro betragen.\n\nRückkehr in die Adriastadt möglichEine endgültige Abkehr von Triest bedeutet die Abfahrt der Jacht allerdings nicht zwangsläufig. Nach Abschluss der ersten Arbeiten in Ancona steht eine zweite, umfassendere Renovierungsphase an. Dabei sollen insbesondere die Maschinenanlagen und die Innenausstattung grundlegend überprüft und erneuert werden. Dieser zweite Arbeitsabschnitt wird in einem weiteren Hafen an der Adria stattfinden. Welcher Standort dafür vorgesehen ist, steht bisher nicht fest.\n\nDamit bleibt eine Rückkehr der „A“ nach Triest im Laufe des kommenden Jahres möglich. Für die Stadt wäre es ein Wiedersehen mit einem Schiff, das in den vergangenen viereinhalb Jahren zu einem festen Bestandteil des Hafenpanoramas geworden ist.\n\nHinweis in eigener Sache: Das krone.at-Forum präsentiert sich ab sofort in neuem Design! Wir freuen uns über konstruktives Feedback. Damit die Diskussionen in den Kommentarbereichen beim jeweiligen Thema bleiben, können Sie uns Rückmeldungen hier hinterlassen.\n\nUser-Beiträge geben nicht notwendigerweise die Meinung des Betreibers/der Redaktion bzw. von Krone Multimedia (KMM) wieder. In diesem Sinne distanziert sich die Redaktion/der Betreiber von den Inhalten in diesem Diskussionsforum. KMM behält sich insbesondere vor, gegen geltendes Recht verstoßende, den guten Sitten oder der Netiquette widersprechende bzw. dem Ansehen von KMM zuwiderlaufende Beiträge zu löschen, diesbezüglichen Schadenersatz gegenüber dem betreffenden User geltend zu machen, die Nutzer-Daten zu Zwecken der Rechtsverfolgung zu verwenden und strafrechtlich relevante Beiträge zur Anzeige zu bringen (siehe auch AGB). Hier können Sie das Community-Team via unserer Melde- und Abhilfestelle kontaktieren.",
       "url": "https://www.krone.at/4375103",
       "published_at": 1794598047.0,
       "first_seen_at": 1794613356.495306,
@@ -1025,11 +1072,20 @@
       "rss_text": "Nach viereinhalb Jahren vor Anker im Golf von Triest steht die Abfahrt der russischen Segeljacht „A“ unmittelbar bevor.",
       "rss_revision_at": 1794598047.0,
       "content_kind": "news",
-      "text_origin": "rss",
+      "text_origin": "linked_article",
       "article_fetch": {
-        "status": "deferred",
-        "rss_fingerprint": "a427b107f5cbfe6c14e3c3b7e21d76e6bf2b2171f52c88878585b69d21e2b3c0"
-      }
+        "status": "success",
+        "method": "article_dom",
+        "page_title": "Russische Oligarchen-Jacht verlässt Triest",
+        "canonical_url": "https://www.krone.at/4375103",
+        "resolved_url": "https://www.krone.at/4375103",
+        "requested_url": "https://www.krone.at/4375103",
+        "last_attempt_at": 1794615542.248147,
+        "rss_fingerprint": "a427b107f5cbfe6c14e3c3b7e21d76e6bf2b2171f52c88878585b69d21e2b3c0",
+        "fetched_at": 1794615542.248147,
+        "text_sha256": "76ab903006aa051124f94cc0b815210fe6b57a757d21c1f17bd342b97f018773"
+      },
+      "article_text": "Nach viereinhalb Jahren vor Anker im Golf von Triest steht die Abfahrt der russischen Segeljacht „A“ unmittelbar bevor.\n\nDas 143 Meter lange Schiff soll in den kommenden Tagen den Adria-Hafen Ancona anlaufen, wo zunächst umfangreiche Wartungs- und Modernisierungsarbeiten zur Erneuerung der Klassifizierung vorgesehen sind. Der Transfer könnte bereits am Dienstag erfolgen. Begleitet wird die Jacht von Einheiten der italienischen Polizei.\n\nDie Luxusjacht wird dem russischen Unternehmer und Oligarchen Andrej Melnitschenko zugerechnet. Ihr geschätzter Wert liegt bei rund 530 Millionen Euro. Seit 2022 liegt das futuristisch gestaltete Dreimastschiff im Golf von Triest vor Anker.\n\nNach dem russischen Angriff auf die Ukraine hatte der italienische Ausschuss für Finanzsicherheit im März 2022 die Konfiszierung des Schiffes angeordnet. Die Maßnahme erfolgte im Rahmen der Sanktionen gegen Personen, die den russischen Machthabern nahestehen sollen.\n\nErster Teil der Arbeiten soll sechs Monate dauernUrsprünglich waren für die anstehenden Arbeiten verschiedene Standorte im Gespräch. So wurde auch Genua als möglicher Werftenstandort geprüft. Ein Transport an die ligurische Küste erwies sich jedoch als wirtschaftlich zu aufwendig. Daraufhin fiel die Entscheidung zugunsten von Ancona.\n\nDie Arbeiten wurden zwischen dem italienischen Staat, dem Eigner und einer in Dubai ansässigen Verwaltungsgesellschaft vereinbart. Der erste Abschnitt der geplanten Eingriffe soll rund sechs Monate dauern. Hintergrund ist die vorgeschriebene Erneuerung der Klassifizierung, die alle fünf Jahre vorgenommen werden muss. Die letzte entsprechende Überprüfung fand im Jahr 2022 statt, unmittelbar vor der Konfiszierung des Schiffes.\n\nDie Verlegung nach Ancona ist für die Werftindustrie in Triest ein Rückschlag. Aufgrund der außergewöhnlichen Dimensionen und der technischen Ausstattung der Jacht hatten die Wartungsarbeiten ein erhebliches wirtschaftliches Potenzial. Die Kosten der anstehenden Eingriffe dürften mehrere Millionen Euro betragen.\n\nRückkehr in die Adriastadt möglichEine endgültige Abkehr von Triest bedeutet die Abfahrt der Jacht allerdings nicht zwangsläufig. Nach Abschluss der ersten Arbeiten in Ancona steht eine zweite, umfassendere Renovierungsphase an. Dabei sollen insbesondere die Maschinenanlagen und die Innenausstattung grundlegend überprüft und erneuert werden. Dieser zweite Arbeitsabschnitt wird in einem weiteren Hafen an der Adria stattfinden. Welcher Standort dafür vorgesehen ist, steht bisher nicht fest.\n\nDamit bleibt eine Rückkehr der „A“ nach Triest im Laufe des kommenden Jahres möglich. Für die Stadt wäre es ein Wiedersehen mit einem Schiff, das in den vergangenen viereinhalb Jahren zu einem festen Bestandteil des Hafenpanoramas geworden ist.\n\nHinweis in eigener Sache: Das krone.at-Forum präsentiert sich ab sofort in neuem Design! Wir freuen uns über konstruktives Feedback. Damit die Diskussionen in den Kommentarbereichen beim jeweiligen Thema bleiben, können Sie uns Rückmeldungen hier hinterlassen.\n\nUser-Beiträge geben nicht notwendigerweise die Meinung des Betreibers/der Redaktion bzw. von Krone Multimedia (KMM) wieder. In diesem Sinne distanziert sich die Redaktion/der Betreiber von den Inhalten in diesem Diskussionsforum. KMM behält sich insbesondere vor, gegen geltendes Recht verstoßende, den guten Sitten oder der Netiquette widersprechende bzw. dem Ansehen von KMM zuwiderlaufende Beiträge zu löschen, diesbezüglichen Schadenersatz gegenüber dem betreffenden User geltend zu machen, die Nutzer-Daten zu Zwecken der Rechtsverfolgung zu verwenden und strafrechtlich relevante Beiträge zur Anzeige zu bringen (siehe auch AGB). Hier können Sie das Community-Team via unserer Melde- und Abhilfestelle kontaktieren."
     },
     {
       "id": "f33d56ee404749a536dcc0ae",
@@ -1090,7 +1146,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41450706/schienenlose-strassenbahn-in-sloweniens-hauptstadt-im-test",
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "254e1a97de4ae139f106d3becec0e85d0a023c877bef4d5e6ac2bc17d8b10515"
       }
     },
@@ -1156,7 +1215,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "fetch_error",
+        "error_type": "TypeError",
+        "requested_url": "https://www.kleinezeitung.at/artikel/41450248/feierliche-freyung-laeutet-den-nikolomarkt-in-voelkermarkt-ein",
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "e4a2505d9814b63791513124f6d1a3d99d52753337a5f0e17fd1d06c9054cd71"
       }
     },
@@ -1280,7 +1342,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000349202/nach-5000-waldbr228nden-brasilianischer-staat-rief-umweltnotstand-aus?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000349202/nach-5000-waldbr228nden-brasilianischer-staat-rief-umweltnotstand-aus?ref=rss",
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "a1641d42aa06e656adbdccb940ecbafc224096217760d21a7f5388d0db51a4c1"
       }
     },
@@ -1305,7 +1370,10 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "deferred",
+        "status": "consent_or_login",
+        "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000349201/russische-luxusjacht-a-verl228sst-triest-nach-viereinhalb-jahren?ref=rss",
+        "requested_url": "https://www.derstandard.at/story/3000000349201/russische-luxusjacht-a-verl228sst-triest-nach-viereinhalb-jahren?ref=rss",
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "ab966441db612aa8c877e6168805104ebc683751a1aaa9bb1fff0aa47034ef5a"
       }
     },
@@ -1636,7 +1704,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348933/wo-grosse-windraeder-keinen-platz-haben-soll-diese-mini-windturbine-helfen?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348933/wo-grosse-windraeder-keinen-platz-haben-soll-diese-mini-windturbine-helfen?ref=rss",
         "last_attempt_at": 1794593771.423708,
@@ -1853,7 +1921,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000349200/s228ngerin-avril-lavigne-ist-mutter-geworden?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000349200/s228ngerin-avril-lavigne-ist-mutter-geworden?ref=rss",
         "last_attempt_at": 1794593771.423708,
@@ -1883,16 +1951,16 @@
         "canonical_url": "https://orf.at/stories/3448118/",
         "resolved_url": "https://orf.at/stories/3448118/",
         "requested_url": "https://orf.at/stories/3448118/",
-        "last_attempt_at": 1794593771.423708,
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "fb23d521502417148368011a31f111cc72bcbb02f824d218a072d6d60d9a1e14",
-        "fetched_at": 1794593771.423708,
+        "fetched_at": 1794615542.248147,
         "text_sha256": "434f0998b48dc57985e72d6ca885421cebc99190d6298a54e8c14715b2537eac"
       }
     },
     {
       "id": "9a1cbc3f9abda1c7c8c9d34c",
       "title": "Polizei ermittelt gegen „Little Britain“-Star Walliams",
-      "text": "Die Londoner Polizei ermittelt gegen den Comedian und Kinderbuchautor David Walliams wegen Vorwürfen schwerer sexueller Übergriffe. Das geht aus einer Mitteilung der Metropolitan Police hervor.\n\nLaut dieser erhielten die Ermittler Hinweise über mutmaßliche Vorfälle, die sich bereits vor geraumer Zeit ereignet haben sollen. Es gehe dabei nicht um dieselben Vorwürfe, die kürzlich von der Zeitung „The Guardian“ und dem TV-Sender ITV berichtet wurden, so die Mitteilung der Polizei. Diese würden aber auch geprüft, um zu sehen, ob es darin Hinweise auf Straftaten gebe, wurde erläutert.\n\nDem „Guardian“ zufolge soll Walliams über Jahre hinweg Frauen sexuell belästigt und seinen Prominentenstatus ausgenutzt haben, um sich jungen Frauen und Mädchen anzunähern. Unter anderem werfen ihm zwei Frauen vor, sie gezielt für sexuelle Zwecke umworben zu haben. In einer Stellungnahme, die der „Guardian“ veröffentlichte, wies Walliams die Vorwürfe zurück, nachdem er vergeblich versucht hatte, die Veröffentlichung per Gericht zu verhindern.\n\n„Ich bin kein sexueller Ausbeuter“, heißt es in dem Statement. Rückblickend realisiere er, „dass ich mich gegenüber anderen Menschen, mit denen ich gelegentliche sexuelle Beziehungen hatte, manchmal gedankenlos verhalten habe“. Ein Machtungleichgewicht sei „unvermeidlich“, wenn eine der beteiligten Personen berühmt sei. Der Missbrauch dieser Macht sei jedoch „etwas ganz anderes, und das habe ich niemals getan“.\n\nIm britischen Ausland ist der 55-Jährige vor allem durch die gesellschaftskritische Parodie „Little Britain“ bekannt. Britischen Medien zufolge gilt er mit Büchern wie „The Boy in the Dress“ und „Gangsta Granny“ auch als einer der erfolgreichsten Kinderbuchautoren Großbritanniens. Walliams veröffentlichte bereits mehr als 40 Bücher in mehreren Sprachen, manche davon wurden als TV-Filme adaptiert.\n\nNach Bekanntwerden der Vorwürfe kündigte die BBC an, einige Sendungen, darunter „Little Britain“, vorerst von ihren Plattformen zu entfernen. Zugleich überprüfe der Sender sämtliche Inhalte, in denen Walliams auftritt oder an denen er als Autor beteiligt war. Die Regierungspartei Labour suspendierte zudem den Komiker nach Informationen der Nachrichtenagentur PA als Parteimitglied. Sein Verlag HarperCollins UK kündigte an, keine neuen Bücher von ihm mehr zu veröffentlichen.",
+      "text": "Die Londoner Polizei ermittelt gegen den Comedian und Kinderbuchautor David Walliams wegen Vorwürfen schwerer sexueller Übergriffe. Das geht aus einer Mitteilung der Metropolitan Police hervor, die gestern veröffentlicht wurde.\n\nLaut dieser erhielten die Ermittler Hinweise über mutmaßliche Vorfälle, die sich bereits vor geraumer Zeit ereignet haben sollen. Es gehe dabei nicht um dieselben Vorwürfe, die kürzlich von der Zeitung „The Guardian“ und dem TV-Sender ITV berichtet wurden, so die Mitteilung der Polizei. Diese würden aber auch geprüft, um zu sehen, ob es darin Hinweise auf Straftaten gebe, wurde erläutert.\n\nDem „Guardian“ zufolge soll Walliams über Jahre hinweg Frauen sexuell belästigt und seinen Prominentenstatus ausgenutzt haben, um sich jungen Frauen und Mädchen anzunähern. Unter anderem werfen ihm zwei Frauen vor, sie gezielt für sexuelle Zwecke umworben zu haben. In einer Stellungnahme, die der „Guardian“ veröffentlichte, wies Walliams die Vorwürfe zurück, nachdem er vergeblich versucht hatte, die Veröffentlichung per Gericht zu verhindern.\n\n„Ich bin kein sexueller Ausbeuter“, heißt es in dem Statement. Rückblickend realisiere er, „dass ich mich gegenüber anderen Menschen, mit denen ich gelegentliche sexuelle Beziehungen hatte, manchmal gedankenlos verhalten habe“. Ein Machtungleichgewicht sei „unvermeidlich“, wenn eine der beteiligten Personen berühmt sei. Der Missbrauch dieser Macht sei jedoch „etwas ganz anderes, und das habe ich niemals getan“.\n\nIm britischen Ausland ist der 55-Jährige vor allem durch die gesellschaftskritische Parodie „Little Britain“ bekannt. Britischen Medien zufolge gilt er mit Büchern wie „The Boy in the Dress“ und „Gangsta Granny“ auch als einer der erfolgreichsten Kinderbuchautoren Großbritanniens. Walliams veröffentlichte bereits mehr als 40 Bücher in mehreren Sprachen, manche davon wurden als TV-Filme adaptiert.\n\nNach Bekanntwerden der Vorwürfe kündigte die BBC an, einige Sendungen, darunter „Little Britain“, vorerst von ihren Plattformen zu entfernen. Zugleich überprüfe der Sender sämtliche Inhalte, in denen Walliams auftritt oder an denen er als Autor beteiligt war. Die Regierungspartei Labour suspendierte zudem den Komiker nach Informationen der Nachrichtenagentur PA als Parteimitglied. Sein Verlag HarperCollins UK kündigte an, keine neuen Bücher von ihm mehr zu veröffentlichen.",
       "url": "https://orf.at/stories/3448117/",
       "published_at": 1794591998.0,
       "first_seen_at": 1794593771.423708,
@@ -1904,7 +1972,7 @@
       "rss_revision_at": 1794591998.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Die Londoner Polizei ermittelt gegen den Comedian und Kinderbuchautor David Walliams wegen Vorwürfen schwerer sexueller Übergriffe. Das geht aus einer Mitteilung der Metropolitan Police hervor.\n\nLaut dieser erhielten die Ermittler Hinweise über mutmaßliche Vorfälle, die sich bereits vor geraumer Zeit ereignet haben sollen. Es gehe dabei nicht um dieselben Vorwürfe, die kürzlich von der Zeitung „The Guardian“ und dem TV-Sender ITV berichtet wurden, so die Mitteilung der Polizei. Diese würden aber auch geprüft, um zu sehen, ob es darin Hinweise auf Straftaten gebe, wurde erläutert.\n\nDem „Guardian“ zufolge soll Walliams über Jahre hinweg Frauen sexuell belästigt und seinen Prominentenstatus ausgenutzt haben, um sich jungen Frauen und Mädchen anzunähern. Unter anderem werfen ihm zwei Frauen vor, sie gezielt für sexuelle Zwecke umworben zu haben. In einer Stellungnahme, die der „Guardian“ veröffentlichte, wies Walliams die Vorwürfe zurück, nachdem er vergeblich versucht hatte, die Veröffentlichung per Gericht zu verhindern.\n\n„Ich bin kein sexueller Ausbeuter“, heißt es in dem Statement. Rückblickend realisiere er, „dass ich mich gegenüber anderen Menschen, mit denen ich gelegentliche sexuelle Beziehungen hatte, manchmal gedankenlos verhalten habe“. Ein Machtungleichgewicht sei „unvermeidlich“, wenn eine der beteiligten Personen berühmt sei. Der Missbrauch dieser Macht sei jedoch „etwas ganz anderes, und das habe ich niemals getan“.\n\nIm britischen Ausland ist der 55-Jährige vor allem durch die gesellschaftskritische Parodie „Little Britain“ bekannt. Britischen Medien zufolge gilt er mit Büchern wie „The Boy in the Dress“ und „Gangsta Granny“ auch als einer der erfolgreichsten Kinderbuchautoren Großbritanniens. Walliams veröffentlichte bereits mehr als 40 Bücher in mehreren Sprachen, manche davon wurden als TV-Filme adaptiert.\n\nNach Bekanntwerden der Vorwürfe kündigte die BBC an, einige Sendungen, darunter „Little Britain“, vorerst von ihren Plattformen zu entfernen. Zugleich überprüfe der Sender sämtliche Inhalte, in denen Walliams auftritt oder an denen er als Autor beteiligt war. Die Regierungspartei Labour suspendierte zudem den Komiker nach Informationen der Nachrichtenagentur PA als Parteimitglied. Sein Verlag HarperCollins UK kündigte an, keine neuen Bücher von ihm mehr zu veröffentlichen.",
+      "article_text": "Die Londoner Polizei ermittelt gegen den Comedian und Kinderbuchautor David Walliams wegen Vorwürfen schwerer sexueller Übergriffe. Das geht aus einer Mitteilung der Metropolitan Police hervor, die gestern veröffentlicht wurde.\n\nLaut dieser erhielten die Ermittler Hinweise über mutmaßliche Vorfälle, die sich bereits vor geraumer Zeit ereignet haben sollen. Es gehe dabei nicht um dieselben Vorwürfe, die kürzlich von der Zeitung „The Guardian“ und dem TV-Sender ITV berichtet wurden, so die Mitteilung der Polizei. Diese würden aber auch geprüft, um zu sehen, ob es darin Hinweise auf Straftaten gebe, wurde erläutert.\n\nDem „Guardian“ zufolge soll Walliams über Jahre hinweg Frauen sexuell belästigt und seinen Prominentenstatus ausgenutzt haben, um sich jungen Frauen und Mädchen anzunähern. Unter anderem werfen ihm zwei Frauen vor, sie gezielt für sexuelle Zwecke umworben zu haben. In einer Stellungnahme, die der „Guardian“ veröffentlichte, wies Walliams die Vorwürfe zurück, nachdem er vergeblich versucht hatte, die Veröffentlichung per Gericht zu verhindern.\n\n„Ich bin kein sexueller Ausbeuter“, heißt es in dem Statement. Rückblickend realisiere er, „dass ich mich gegenüber anderen Menschen, mit denen ich gelegentliche sexuelle Beziehungen hatte, manchmal gedankenlos verhalten habe“. Ein Machtungleichgewicht sei „unvermeidlich“, wenn eine der beteiligten Personen berühmt sei. Der Missbrauch dieser Macht sei jedoch „etwas ganz anderes, und das habe ich niemals getan“.\n\nIm britischen Ausland ist der 55-Jährige vor allem durch die gesellschaftskritische Parodie „Little Britain“ bekannt. Britischen Medien zufolge gilt er mit Büchern wie „The Boy in the Dress“ und „Gangsta Granny“ auch als einer der erfolgreichsten Kinderbuchautoren Großbritanniens. Walliams veröffentlichte bereits mehr als 40 Bücher in mehreren Sprachen, manche davon wurden als TV-Filme adaptiert.\n\nNach Bekanntwerden der Vorwürfe kündigte die BBC an, einige Sendungen, darunter „Little Britain“, vorerst von ihren Plattformen zu entfernen. Zugleich überprüfe der Sender sämtliche Inhalte, in denen Walliams auftritt oder an denen er als Autor beteiligt war. Die Regierungspartei Labour suspendierte zudem den Komiker nach Informationen der Nachrichtenagentur PA als Parteimitglied. Sein Verlag HarperCollins UK kündigte an, keine neuen Bücher von ihm mehr zu veröffentlichen.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -1912,10 +1980,10 @@
         "canonical_url": "https://orf.at/stories/3448117/",
         "resolved_url": "https://orf.at/stories/3448117/",
         "requested_url": "https://orf.at/stories/3448117/",
-        "last_attempt_at": 1794593771.423708,
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "3b677e3dee5d06395bc6a96d3b0862c50f0a5517dc8827832ffd3463d38b2e28",
-        "fetched_at": 1794593771.423708,
-        "text_sha256": "c69934f63941be753e86cd94a2e9d5fd6186aeeb8239383681e6044df8fbeaad"
+        "fetched_at": 1794615542.248147,
+        "text_sha256": "addef546e185af7fc18aba862e77ff707145a207cba007485ca6160b5e0245c6"
       }
     },
     {
@@ -2246,7 +2314,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000349027/deutschland-zustimmung-zur-demokratie-auf-niedrigsten-niveau?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000349027/deutschland-zustimmung-zur-demokratie-auf-niedrigsten-niveau?ref=rss",
         "last_attempt_at": 1794593771.423708,
@@ -2407,7 +2475,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "paywall",
+        "status": "deferred",
         "resolved_url": "https://www.krone.at/4374830",
         "canonical_url": "https://www.krone.at/4374830",
         "requested_url": "https://www.krone.at/4374830",
@@ -2589,7 +2657,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348304/squiggly-sudoku-s6434b?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348304/squiggly-sudoku-s6434b?ref=rss",
-        "last_attempt_at": 1794593771.423708,
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "f8159d3da2d2cdd9ea87ca403c27c390573be7fb4fbbdd2d0ffcea33b8a982b9"
       }
     },
@@ -2617,7 +2685,7 @@
         "status": "consent_or_login",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000348303/sudoku-sschwierig-6434a?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000348303/sudoku-sschwierig-6434a?ref=rss",
-        "last_attempt_at": 1794593771.423708,
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "e1a402ffc122a7d2244ebb3e166ac714a96c4fe6b21c1e2dae7c9b38c205f09a"
       }
     },
@@ -2854,7 +2922,7 @@
       "content_kind": "news",
       "text_origin": "rss",
       "article_fetch": {
-        "status": "consent_or_login",
+        "status": "deferred",
         "resolved_url": "https://www.derstandard.at/consent/tcf/story/3000000349165/hinter-der-nvidia-affaere-steht-trumps-groesster-verrat?ref=rss",
         "requested_url": "https://www.derstandard.at/story/3000000349165/hinter-der-nvidia-affaere-steht-trumps-groesster-verrat?ref=rss",
         "last_attempt_at": 1794593771.423708,
@@ -3022,7 +3090,9 @@
       "rss_text": "Der Gesetzesentwurf zur „Sozialhilfe neu“ der Bundesregierung sieht sich in der Begutachtungsphase mit teils deutlicher Kritik konfrontiert. In den bis Donnerstagabend eingetroffenen Dutzenden Schreiben werden neben dem Inhalt auch der kurze Begutachtungszeitraum und die kurze Frist bis zur Umsetzung Anfang 2027 kritisiert.",
       "rss_revision_at": 1794587901.0,
       "content_kind": "news",
-      "text_origin": "rss"
+      "text_origin": "rss",
+      "broadcast_id": "20261114T001922Z",
+      "broadcast_position": 1
     },
     {
       "id": "312f80d1629ac90934fc4a84",
@@ -6858,7 +6928,9 @@
       "article_fetch": {
         "status": "deferred",
         "rss_fingerprint": "0fdc8b57d9ffbfe1a6c136cb8a5451ce6124faa50f55c4da627e287448af3f2d"
-      }
+      },
+      "broadcast_id": "20261114T001922Z",
+      "broadcast_position": 2
     },
     {
       "id": "8ca713bcd533474fa24ab7d7",
@@ -7003,7 +7075,9 @@
       "rss_text": "Laut Bildungsministerium gab es einen Cyberangriff auf Server des Anbieters von fintogo. Passwörter, die sowohl für die App als auch anderswo genutzt wurden, sollen vorsorglich geändert werden.",
       "rss_revision_at": 1794571652.0,
       "content_kind": "news",
-      "text_origin": "rss"
+      "text_origin": "rss",
+      "broadcast_id": "20261114T001922Z",
+      "broadcast_position": 2
     },
     {
       "id": "4c00e87e6b819e44595ad6cf",
@@ -7384,7 +7458,9 @@
         "rss_fingerprint": "db1243197a37a78c880eb4f0208b24b38ffa6983032334ecde7dfc9d9d327f28",
         "fetched_at": 1794613356.495306,
         "text_sha256": "af5fdf797cea652bb37044eb97d8f3069e0d70cc6910088deddce90dbb38b1c2"
-      }
+      },
+      "broadcast_id": "20261114T001922Z",
+      "broadcast_position": 2
     },
     {
       "id": "32fb7e38709c1c3ebbb8136e",
@@ -7702,7 +7778,7 @@
         }
       ],
       "rss_text": "Es sollte laut Elon Musk ein historischer Doppelfang werden. Doch beim 15. Testflug der Riesenrakete Starship am Freitag ging schon der erste Teil gewaltig schief: Der „Super-Heavy-Booster“ wurde nicht vom Startturm aufgefangen, er landete im Meer. Die Oberstufe ist aber weiter im All – der spektakulärste Teil soll erst noch folgen.",
-      "rss_revision_at": 1794613035.0,
+      "rss_revision_at": 1794613429.0,
       "content_kind": "news",
       "text_origin": "rss"
     },
@@ -7878,9 +7954,9 @@
         "canonical_url": "https://orf.at/stories/3448084/",
         "resolved_url": "https://orf.at/stories/3448084/",
         "requested_url": "https://orf.at/stories/3448084/",
-        "last_attempt_at": 1794593771.423708,
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "1e760b2831f2081d5d0776db093a0bc8efc902c8ce5711a82441d5fac8a6c652",
-        "fetched_at": 1794593771.423708,
+        "fetched_at": 1794615542.248147,
         "text_sha256": "b3b3414c05e6dcf5881728882b0a2ddbb855b36c612573d64200e9dc62dfbc67"
       }
     },
@@ -8360,9 +8436,9 @@
         "canonical_url": "https://orf.at/stories/3448082/",
         "resolved_url": "https://orf.at/stories/3448082/",
         "requested_url": "https://orf.at/stories/3448082/",
-        "last_attempt_at": 1794593771.423708,
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "b69f47c48ae1aa30ba91bb451f7260e41aff44603385176df547cd80b77ed87d",
-        "fetched_at": 1794593771.423708,
+        "fetched_at": 1794615542.248147,
         "text_sha256": "39a4b84cc7a00aedbd1a5bf6dd2699d9a61252996fc9fde6874c425d4d88e002"
       }
     },
@@ -8451,7 +8527,7 @@
     {
       "id": "967052e98c27f726870eb9c0",
       "title": "SOS Balkanroute: Polizeigewalt an Kroatiens Grenze",
-      "text": "Bei einem kroatischen Polizeieinsatz an der bosnischen Grenze sind laut Angaben von SOS Balkanroute mehrere Migranten bzw. Flüchtlinge verletzt worden.\n\n„Fünf Menschen mussten mit Bein- und Armbrüchen sowie Kopfverletzungen von der Rettung abtransportiert werden. Zwölf weitere, darunter neun Verletzte, brachte SOS Balkanroute per Taxi ins Camp Lipa“, teilte die Hilfsorganisation heute in einer Aussendung mit. Es sei „einer der brutalsten Fälle von Grenzgewalt“ der vergangenen Monate.\n\nInsgesamt sollen am Mittwoch 53 Menschen nach Bosnien-Herzegowina zurückgedrängt worden sein. Zurückweisungen von Schutzsuchenden an den Außengrenzen – Pushbacks – sind nach internationalem Recht in so gut wie allen Fällen illegal.\n\n„Rund 15 maskierte kroatische Polizisten sollen auf alles eingeschlagen haben, was sich bewegt“, so die österreichische NGO. Ein mobiles Team, das SOS Balkanroute gemeinsam mit dem Roten Kreuz betreibt, habe 40 Betroffene in sechs Gruppen angetroffen. Sie stammten aus Bangladesch, dem Sudan, Pakistan, Indien und Nepal. Unter ihnen seien drei Frauen und zwei Minderjährige gewesen.\n\n„Das ist kein Einzelfall und kein Ausrutscher einzelner Beamter“, betonte SOS-Balkanroute-Gründer Petar Rosandic, der eine unabhängige Untersuchung des Vorfalls forderte. Das mobile Team von SOS Balkanroute und dem Roten Kreuz registriere tagtäglich Pushbacks und sehe dabei Spuren von Gewalt.",
+      "text": "Bei einem kroatischen Polizeieinsatz an der bosnischen Grenze sind laut Angaben von SOS Balkanroute mehrere Migranten bzw. Flüchtlinge verletzt worden.\n\n„Fünf Menschen mussten mit Bein- und Armbrüchen sowie Kopfverletzungen von der Rettung abtransportiert werden. Zwölf weitere, darunter neun Verletzte, brachte SOS Balkanroute per Taxi ins Camp Lipa“, teilte die Hilfsorganisation gestern in einer Aussendung mit. Es sei „einer der brutalsten Fälle von Grenzgewalt“ der vergangenen Monate.\n\nInsgesamt sollen am Mittwoch 53 Menschen nach Bosnien-Herzegowina zurückgedrängt worden sein. Zurückweisungen von Schutzsuchenden an den Außengrenzen – Pushbacks – sind nach internationalem Recht in so gut wie allen Fällen illegal.\n\n„Rund 15 maskierte kroatische Polizisten sollen auf alles eingeschlagen haben, was sich bewegt“, so die österreichische NGO. Ein mobiles Team, das SOS Balkanroute gemeinsam mit dem Roten Kreuz betreibt, habe 40 Betroffene in sechs Gruppen angetroffen. Sie stammten aus Bangladesch, dem Sudan, Pakistan, Indien und Nepal. Unter ihnen seien drei Frauen und zwei Minderjährige gewesen.\n\n„Das ist kein Einzelfall und kein Ausrutscher einzelner Beamter“, betonte SOS-Balkanroute-Gründer Petar Rosandic, der eine unabhängige Untersuchung des Vorfalls forderte. Das mobile Team von SOS Balkanroute und dem Roten Kreuz registriere tagtäglich Pushbacks und sehe dabei Spuren von Gewalt.",
       "url": "https://orf.at/stories/3448081/",
       "published_at": 1794566140.0,
       "first_seen_at": 1794567053.728232,
@@ -8463,7 +8539,7 @@
       "rss_revision_at": 1794566140.0,
       "content_kind": "news",
       "text_origin": "linked_article",
-      "article_text": "Bei einem kroatischen Polizeieinsatz an der bosnischen Grenze sind laut Angaben von SOS Balkanroute mehrere Migranten bzw. Flüchtlinge verletzt worden.\n\n„Fünf Menschen mussten mit Bein- und Armbrüchen sowie Kopfverletzungen von der Rettung abtransportiert werden. Zwölf weitere, darunter neun Verletzte, brachte SOS Balkanroute per Taxi ins Camp Lipa“, teilte die Hilfsorganisation heute in einer Aussendung mit. Es sei „einer der brutalsten Fälle von Grenzgewalt“ der vergangenen Monate.\n\nInsgesamt sollen am Mittwoch 53 Menschen nach Bosnien-Herzegowina zurückgedrängt worden sein. Zurückweisungen von Schutzsuchenden an den Außengrenzen – Pushbacks – sind nach internationalem Recht in so gut wie allen Fällen illegal.\n\n„Rund 15 maskierte kroatische Polizisten sollen auf alles eingeschlagen haben, was sich bewegt“, so die österreichische NGO. Ein mobiles Team, das SOS Balkanroute gemeinsam mit dem Roten Kreuz betreibt, habe 40 Betroffene in sechs Gruppen angetroffen. Sie stammten aus Bangladesch, dem Sudan, Pakistan, Indien und Nepal. Unter ihnen seien drei Frauen und zwei Minderjährige gewesen.\n\n„Das ist kein Einzelfall und kein Ausrutscher einzelner Beamter“, betonte SOS-Balkanroute-Gründer Petar Rosandic, der eine unabhängige Untersuchung des Vorfalls forderte. Das mobile Team von SOS Balkanroute und dem Roten Kreuz registriere tagtäglich Pushbacks und sehe dabei Spuren von Gewalt.",
+      "article_text": "Bei einem kroatischen Polizeieinsatz an der bosnischen Grenze sind laut Angaben von SOS Balkanroute mehrere Migranten bzw. Flüchtlinge verletzt worden.\n\n„Fünf Menschen mussten mit Bein- und Armbrüchen sowie Kopfverletzungen von der Rettung abtransportiert werden. Zwölf weitere, darunter neun Verletzte, brachte SOS Balkanroute per Taxi ins Camp Lipa“, teilte die Hilfsorganisation gestern in einer Aussendung mit. Es sei „einer der brutalsten Fälle von Grenzgewalt“ der vergangenen Monate.\n\nInsgesamt sollen am Mittwoch 53 Menschen nach Bosnien-Herzegowina zurückgedrängt worden sein. Zurückweisungen von Schutzsuchenden an den Außengrenzen – Pushbacks – sind nach internationalem Recht in so gut wie allen Fällen illegal.\n\n„Rund 15 maskierte kroatische Polizisten sollen auf alles eingeschlagen haben, was sich bewegt“, so die österreichische NGO. Ein mobiles Team, das SOS Balkanroute gemeinsam mit dem Roten Kreuz betreibt, habe 40 Betroffene in sechs Gruppen angetroffen. Sie stammten aus Bangladesch, dem Sudan, Pakistan, Indien und Nepal. Unter ihnen seien drei Frauen und zwei Minderjährige gewesen.\n\n„Das ist kein Einzelfall und kein Ausrutscher einzelner Beamter“, betonte SOS-Balkanroute-Gründer Petar Rosandic, der eine unabhängige Untersuchung des Vorfalls forderte. Das mobile Team von SOS Balkanroute und dem Roten Kreuz registriere tagtäglich Pushbacks und sehe dabei Spuren von Gewalt.",
       "article_fetch": {
         "status": "success",
         "method": "orf_story_story",
@@ -8471,10 +8547,10 @@
         "canonical_url": "https://orf.at/stories/3448081/",
         "resolved_url": "https://orf.at/stories/3448081/",
         "requested_url": "https://orf.at/stories/3448081/",
-        "last_attempt_at": 1794593771.423708,
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "99d452180f484a796beaaba61c8ed503bdb4b5a7ab28ed72435a6376022ae438",
-        "fetched_at": 1794593771.423708,
-        "text_sha256": "93ed57c02cf476f64ff563adb9768cf7e9f77c3ba8ae5912be314dd21751f78a"
+        "fetched_at": 1794615542.248147,
+        "text_sha256": "cb429abf8dc53cff318ae2500bb9f2e799715044a65b2c3d4795d8e0cd3dd677"
       }
     },
     {
@@ -9008,9 +9084,9 @@
         "canonical_url": "https://orf.at/stories/3448077/",
         "resolved_url": "https://orf.at/stories/3448077/",
         "requested_url": "https://orf.at/stories/3448077/",
-        "last_attempt_at": 1794593771.423708,
+        "last_attempt_at": 1794615542.248147,
         "rss_fingerprint": "ec3cdffcde41d65d95beaeff710e6fe6b6f29f639660efd9e78aa32316fef65e",
-        "fetched_at": 1794593771.423708,
+        "fetched_at": 1794615542.248147,
         "text_sha256": "e302ac39e580a3d454028c9d8423ba9abd07b1848665d017226af4d6e3f5f070"
       }
     },
@@ -10565,7 +10641,9 @@
       "rss_text": "Graz | Bezirk St. Leonhard. – Bislang unbekannte Täter brachen in der Nacht auf Freitag, 13. November 2026, in ein Juweliergeschäft ein. Sie stahlen Schmuck im bislang unbekannten Wert und flüchteten unerkannt. Die Ermittlungen laufen. Gegen 2:20 Uhr wurde die Polizei durch einen Einbruchsalarm verständigt. Als eine Polizeistreife kurz darauf beim Juweliergeschäft in der Leonhardstraße eintraf, stellten die Polizisten eine eingeschlagene Glasscheibe an der Eingangstür sowie Glasscherben vor dem Geschäft fest. Bei der anschließenden Durchsuchung des Geschäfts konnten keine Personen mehr angetroffen werden. Auch eine Fahndung in der Umgebung des Tatortes verlief vorerst ohne Erfolg. Ermittlungen laufen Das Kriminalreferat des Stadtpolizeikommandos Graz nahm in der Folge die Ermittlungen auf. Am Tatort wurde eine Spurensicherung veranlasst. Zudem werden vorhandene Videoaufzeichnungen ausgewertet. Nach bisherigen Erkenntnissen dürften die Täter eine Vitrine eingeschlagen und daraus Schmuckstücke gestohlen haben. Die genaue Höhe des entstandenen Schadens ist derzeit noch nicht bekannt.",
       "rss_revision_at": 1794558900.0,
       "content_kind": "news",
-      "text_origin": "rss"
+      "text_origin": "rss",
+      "broadcast_id": "20261114T001922Z",
+      "broadcast_position": 3
     },
     {
       "id": "b008e58f6e49ab4734a0b682",
@@ -11286,8 +11364,8 @@
       "rss_revision_at": 1794555293.0,
       "content_kind": "news",
       "text_origin": "rss",
-      "broadcast_id": "20261113T093926Z",
-      "broadcast_position": 2
+      "broadcast_id": "20261114T001922Z",
+      "broadcast_position": 1
     },
     {
       "id": "e3710a0413f6e9fcf88c91b1",
@@ -13392,8 +13470,8 @@
         "status": "deferred",
         "rss_fingerprint": "140bb64db492494983c35763de5abf3468fe67b9d0d28fe869eb052d6bbf9791"
       },
-      "broadcast_id": "20261113T093926Z",
-      "broadcast_position": 2
+      "broadcast_id": "20261114T001922Z",
+      "broadcast_position": 1
     },
     {
       "id": "bdfcb978b742c121a6494dd4",
@@ -13764,54 +13842,54 @@
     {
       "url": "https://www.derstandard.at/rss",
       "name": "derStandard.at | Nachrichten, Kommentare & Community",
-      "last_success_at": 1794613356.495306
+      "last_success_at": 1794615542.248147
     },
     {
       "url": "https://www.derstandard.at/rss/live",
       "name": "Live - derStandard.at",
-      "last_success_at": 1794613356.495306
+      "last_success_at": 1794615542.248147
     },
     {
       "url": "https://api.krone.at/v1/rss/rssfeed-nachrichten.html",
       "name": "krone.at - Nachrichten",
-      "last_success_at": 1794613356.495306
+      "last_success_at": 1794615542.248147
     },
     {
       "url": "https://rss.orf.at/news.xml",
       "name": "news.ORF.at",
-      "last_success_at": 1794613356.495306
+      "last_success_at": 1794615542.248147
     },
     {
       "url": "https://www.kleinezeitung.at/rss/steiermark",
       "name": "Kleine Zeitung - Steiermark",
-      "last_success_at": 1794613356.495306
+      "last_success_at": 1794615542.248147
     },
     {
       "url": "https://www.kleinezeitung.at/rss/oesterreich",
       "name": "Kleine Zeitung - Österreich",
-      "last_success_at": 1794613356.495306
+      "last_success_at": 1794615542.248147
     },
     {
       "url": "https://www.bmi.gv.at/rss/stmk_presse.xml",
       "name": "Polizei Steiermark - Presse",
-      "last_success_at": 1794613356.495306
+      "last_success_at": 1794615542.248147
     }
   ],
   "seen": {
     "7c706ee6b6bbaa8693415306": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1737119721.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "4807f8d9057ff8a6a8b77a73": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1791183600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "3c5ad0f32fb65610d1280b97": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1790668800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "88ad8bd68b22d57bc4263aef": {
       "first_seen_at": 1793270502.046248,
@@ -13831,92 +13909,92 @@
     "b789e80c677d9f614078b74f": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1767360314.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ed502645a02c7a73c13f5203": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1707476400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1fd555d23f457d617d75a9fd": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1693225268.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "bdf577ddd58926e0b96a36cc": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1725959420.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "75e4a1dc1a7445d30e26d491": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1697450400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c246dd820de025c46880df1b": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1647603118.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b3353e121e29808f01a2145f": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1672920931.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c09ea03a3f9be76d9417dcfa": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1646380936.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "3749055cf58f322afe3d4357": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1741262400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c8a77ad45c344c7e8ba39ba1": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1580984544.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "bb695989274d076c0caf94c8": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1652118267.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b7ef7ef89a751e75bb2b9aad": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1731502832.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "02fd0f7957b1c503812a1b63": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1643902349.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "efb6e2bd86b608a759573d62": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1675776645.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "70368de1cdc233361d67ea31": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1725977784.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "93f52ae3a8d894dc0c4ca0fe": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1760088045.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "90944cc43119eaaa9517249c": {
       "first_seen_at": 1793270502.046248,
       "published_at": 1636444370.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e36702e62a40696925eb464c": {
       "first_seen_at": 1793342347.391874,
       "published_at": 1790151541.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "7637e3b7e7460e10f8bb515d": {
       "first_seen_at": 1793435629.922773,
@@ -14051,7 +14129,7 @@
     "186105a237ef501a08d935a7": {
       "first_seen_at": 1793727981.073729,
       "published_at": 1793706900.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8fa3295006adf6c5c73c197b": {
       "first_seen_at": 1793727981.073729,
@@ -14101,7 +14179,7 @@
     "cd04f61d34b798b3945a96e6": {
       "first_seen_at": 1793774111.191241,
       "published_at": 1793769525.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "9346811262e40ec69eab56d3": {
       "first_seen_at": 1793786329.303307,
@@ -14146,7 +14224,7 @@
     "8951cc93dd907c9dd00f7702": {
       "first_seen_at": 1793815071.652229,
       "published_at": 1793640115.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "f9ef9b4fbbf10505241daafd": {
       "first_seen_at": 1793829392.520771,
@@ -14161,7 +14239,7 @@
     "9484fa4515c6428f2162e813": {
       "first_seen_at": 1793876654.131678,
       "published_at": 1793876137.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d5b16ca00e4a83a63c52d6e9": {
       "first_seen_at": 1793876654.131678,
@@ -14311,7 +14389,7 @@
     "510df02169ac5ec61cb03709": {
       "first_seen_at": 1793904551.530854,
       "published_at": 1793900607.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "5097c12491ee90a13f70ac9a": {
       "first_seen_at": 1793904551.530854,
@@ -14396,7 +14474,7 @@
     "d1f81384e800e8fa3b5e946d": {
       "first_seen_at": 1793924744.368113,
       "published_at": 1779282449.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "420fc0dd3cdf51b7662e851b": {
       "first_seen_at": 1793924744.368113,
@@ -14651,7 +14729,7 @@
     "c4aab55cd4b124f37ec00bf3": {
       "first_seen_at": 1793977085.243763,
       "published_at": 1793965475.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "3072482ebb9275f42fb761f1": {
       "first_seen_at": 1793977085.243763,
@@ -14751,7 +14829,7 @@
     "e3cb7afd0499ea13915ac150": {
       "first_seen_at": 1793977085.243763,
       "published_at": 1793965484.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ad4a884781c22a8928ac8ea5": {
       "first_seen_at": 1793977085.243763,
@@ -16046,7 +16124,7 @@
     "e648b01f5ec0d40f8de0d3e3": {
       "first_seen_at": 1794033158.482276,
       "published_at": 1794027600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d23c453323ffd28345b590da": {
       "first_seen_at": 1794033158.482276,
@@ -16321,7 +16399,7 @@
     "8c720d2919fde18c6fdf7c64": {
       "first_seen_at": 1794033158.482276,
       "published_at": 1794024000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "0129d9fa5a93af19ac7ac653": {
       "first_seen_at": 1794041567.063634,
@@ -16586,12 +16664,12 @@
     "dcd19072dec5e28e1485587a": {
       "first_seen_at": 1794041567.063634,
       "published_at": 1794030420.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c1e0b022324b0785cb11df1e": {
       "first_seen_at": 1794041567.063634,
       "published_at": 1794027240.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ac3a755f692678c1c5e4dd49": {
       "first_seen_at": 1794058220.764691,
@@ -17136,7 +17214,7 @@
     "84e5e2fad00454e606dfc829": {
       "first_seen_at": 1794058220.764691,
       "published_at": 1794039240.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d5b0db4d26376d4ba4995dd3": {
       "first_seen_at": 1794066195.34453,
@@ -18306,7 +18384,7 @@
     "8475c3018a0104a9924b10f7": {
       "first_seen_at": 1794123287.106771,
       "published_at": 1794114660.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c489985649f07e18e17f8cea": {
       "first_seen_at": 1794144837.651535,
@@ -18501,7 +18579,7 @@
     "e767386da3b233e5a8651e1d": {
       "first_seen_at": 1794144837.651535,
       "published_at": 1736688830.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e9735704880db7aceb7e6fb4": {
       "first_seen_at": 1794144837.651535,
@@ -18871,7 +18949,7 @@
     "43efa32bfe65bee21668fee1": {
       "first_seen_at": 1794144837.651535,
       "published_at": 1794137220.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "f4007f0d2dfc1ae1d57fe902": {
       "first_seen_at": 1794148292.565131,
@@ -19656,7 +19734,7 @@
     "03b6be89e9f2fe05bc82b006": {
       "first_seen_at": 1794218221.988503,
       "published_at": 1794205233.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1253cbd47bddbf41ce88cd6e": {
       "first_seen_at": 1794218221.988503,
@@ -20366,17 +20444,17 @@
     "3ed60177e3589a748efa4f31": {
       "first_seen_at": 1794218221.988503,
       "published_at": 1794212880.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "7016b20d8bd4afc44c54f762": {
       "first_seen_at": 1794218221.988503,
       "published_at": 1794209820.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e016af51a7c69038f7670a44": {
       "first_seen_at": 1794218221.988503,
       "published_at": 1794201660.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c260ef78eb29e2aa98fdd039": {
       "first_seen_at": 1794224589.589205,
@@ -20751,7 +20829,7 @@
     "60a37b2746439fa40805476d": {
       "first_seen_at": 1794224589.589205,
       "published_at": 1794217380.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "a6fc3d7056846309405f39eb": {
       "first_seen_at": 1794256811.233106,
@@ -20761,7 +20839,7 @@
     "0d2ab65b99b72d5417ccd519": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794244410.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "2742eeb1bb4b0d4e2e0265f9": {
       "first_seen_at": 1794256811.233106,
@@ -21086,7 +21164,7 @@
     "912abd344c553d7e4671dbd1": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794225600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e76aa2a1eb9d47d9be743ae4": {
       "first_seen_at": 1794256811.233106,
@@ -21791,7 +21869,7 @@
     "f25617ca3be814c254a870de": {
       "first_seen_at": 1794256811.233106,
       "published_at": 1794227220.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "52c4d1c8ff49ff76646f717b": {
       "first_seen_at": 1794263268.426388,
@@ -22026,7 +22104,7 @@
     "815bb792359e299e8b28711c": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794297600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "97faa2cc959de07d18848c7e": {
       "first_seen_at": 1794308529.901885,
@@ -22061,7 +22139,7 @@
     "e333dc7ab9050a8b88e66189": {
       "first_seen_at": 1794308529.901885,
       "published_at": 1794308400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "f5b1eb58a3885728588f0c82": {
       "first_seen_at": 1794308529.901885,
@@ -22926,7 +23004,7 @@
     "100fa595cf80ccc85e409867": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794315633.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "0aaeed70bc802c6ab70e76c9": {
       "first_seen_at": 1794317544.940286,
@@ -23031,7 +23109,7 @@
     "73f0da49f326bae0ab89a6d0": {
       "first_seen_at": 1794317544.940286,
       "published_at": 1794315060.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1378a4873ee9d53c4ec8924b": {
       "first_seen_at": 1794317544.940286,
@@ -23321,7 +23399,7 @@
     "67a16d86d5c47ea0d696f212": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794323627.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "5fc89709b57a9ded6c6b4a3d": {
       "first_seen_at": 1794335910.112645,
@@ -23516,7 +23594,7 @@
     "991281ecdf24d00865f22321": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794333931.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "dc5aac81875014d0606089a0": {
       "first_seen_at": 1794335910.112645,
@@ -23991,7 +24069,7 @@
     "4a645e4e3d8676d73f7042da": {
       "first_seen_at": 1794335910.112645,
       "published_at": 1794328440.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "cf741e149faab09e76c72355": {
       "first_seen_at": 1794343958.184662,
@@ -24351,12 +24429,12 @@
     "3bee96af573d5b767da363e8": {
       "first_seen_at": 1794383456.560568,
       "published_at": 1794373200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "928295dda6d0a97ec25b8f01": {
       "first_seen_at": 1794383456.560568,
       "published_at": 1794372031.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "31d04e59212d640e76945268": {
       "first_seen_at": 1794383456.560568,
@@ -24366,7 +24444,7 @@
     "9b895be3383f70b6d470f742": {
       "first_seen_at": 1794383456.560568,
       "published_at": 1794382774.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e4f897b67bdd78f74b01747d": {
       "first_seen_at": 1794383456.560568,
@@ -24841,7 +24919,7 @@
     "23d6a377e17b235edcc4a983": {
       "first_seen_at": 1794395621.895007,
       "published_at": 1794394800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "4f0803d1a38eab5f6ee80a5a": {
       "first_seen_at": 1794395621.895007,
@@ -24856,7 +24934,7 @@
     "cfcea16b620785a92acd9aab": {
       "first_seen_at": 1794395621.895007,
       "published_at": 1794394800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "0525b95a3c7b0d61823ad748": {
       "first_seen_at": 1794395621.895007,
@@ -24896,12 +24974,12 @@
     "51b0e6481663145764033e64": {
       "first_seen_at": 1794395621.895007,
       "published_at": 1794384000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "95e73f6826b1127051dfd70a": {
       "first_seen_at": 1794395621.895007,
       "published_at": 1794384000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "498148e2c5df11e03acb5b41": {
       "first_seen_at": 1794395621.895007,
@@ -24921,7 +24999,7 @@
     "83b4c36d0b25d1885cc701f6": {
       "first_seen_at": 1794395621.895007,
       "published_at": 1794394800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "39bec31bc1eac174b00c302f": {
       "first_seen_at": 1794395621.895007,
@@ -25466,7 +25544,7 @@
     "75dd0ffa27cba0aebf98f18f": {
       "first_seen_at": 1794422769.937441,
       "published_at": 1794405305.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b38e668f21f9927606b82f08": {
       "first_seen_at": 1794422769.937441,
@@ -26431,17 +26509,17 @@
     "4b72e714ce4ab1a5a4182e0b": {
       "first_seen_at": 1794422769.937441,
       "published_at": 1794402660.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "be2f7dc69b2c24dde2cace04": {
       "first_seen_at": 1794422769.937441,
       "published_at": 1794395280.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "65c38220ae22473194153385": {
       "first_seen_at": 1794422769.937441,
       "published_at": 1794394560.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1676af379a07f4f501a95f2f": {
       "first_seen_at": 1794437377.794113,
@@ -26721,7 +26799,7 @@
     "31de2dc4b35d8c7f5eb08f14": {
       "first_seen_at": 1794437377.794113,
       "published_at": 1794420720.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "f7660a818cba8703b52a72c6": {
       "first_seen_at": 1794445495.960021,
@@ -26791,7 +26869,7 @@
     "e86ee5bf57bf56eada1f523d": {
       "first_seen_at": 1794471315.970087,
       "published_at": 1794459600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "814341b0c7a91aa057c7f01f": {
       "first_seen_at": 1794471315.970087,
@@ -26806,12 +26884,12 @@
     "9fb97e6e356847690202a2a6": {
       "first_seen_at": 1794471315.970087,
       "published_at": 1794466800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8f0c55b6effaf575784f4f35": {
       "first_seen_at": 1794471315.970087,
       "published_at": 1794468874.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "9a9f9af4f9912542c5a4a614": {
       "first_seen_at": 1794471315.970087,
@@ -26836,7 +26914,7 @@
     "8a4fb7cbb47ec11ee91d0b33": {
       "first_seen_at": 1794471315.970087,
       "published_at": 1794466800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "0c92e5fb350ac26e5df9d8db": {
       "first_seen_at": 1794471315.970087,
@@ -26856,7 +26934,7 @@
     "812975a06f1deba11f28190f": {
       "first_seen_at": 1794471315.970087,
       "published_at": 1794466800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "23b8cad811b0708e08044924": {
       "first_seen_at": 1794471315.970087,
@@ -26866,7 +26944,7 @@
     "18f14d2fe5bff3b70682d818": {
       "first_seen_at": 1794471315.970087,
       "published_at": 1794304800.0,
-      "last_seen_at": 1794586526.889248
+      "last_seen_at": 1794615542.248147
     },
     "641877d0febd218ea3835910": {
       "first_seen_at": 1794471315.970087,
@@ -27321,7 +27399,7 @@
     "a0c8f88f7edb75cf49ea3707": {
       "first_seen_at": 1794471315.970087,
       "published_at": 1794461640.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "7ac5bbee3143d3b76fb3a6d1": {
       "first_seen_at": 1794487843.230664,
@@ -27351,12 +27429,12 @@
     "9f49405ff7ee508d8ec1a516": {
       "first_seen_at": 1794487843.230664,
       "published_at": 1794483475.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "96c4bbcf9ecc1e98ab3bea59": {
       "first_seen_at": 1794487843.230664,
       "published_at": 1794481200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "a41e6430d8221662eb380f2a": {
       "first_seen_at": 1794487843.230664,
@@ -27401,7 +27479,7 @@
     "a79e4f5c9cfc1d95a5fba706": {
       "first_seen_at": 1794487843.230664,
       "published_at": 1794481200.0,
-      "last_seen_at": 1794586526.889248
+      "last_seen_at": 1794615542.248147
     },
     "d0a7e5d255bb0ef616379b31": {
       "first_seen_at": 1794487843.230664,
@@ -27411,7 +27489,7 @@
     "f014c3057106ac8ad6e43654": {
       "first_seen_at": 1794487843.230664,
       "published_at": 1794479653.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8fc05ca500aedf1f616333f7": {
       "first_seen_at": 1794487843.230664,
@@ -28016,7 +28094,7 @@
     "305a3ab5fdd05e1b2b88231b": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794499705.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1027256f8dd2d4cd51dc100b": {
       "first_seen_at": 1794502501.156626,
@@ -28036,12 +28114,12 @@
     "213d5a921b8bdb41614cb757": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794494022.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b3baec2bf83401b669e9a82c": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794499200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "0889a25adf6785702be2b5b2": {
       "first_seen_at": 1794502501.156626,
@@ -28051,7 +28129,7 @@
     "b3ccc1a872b7b3828efdc416": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794493308.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "3db10c5dcfa8b929d038bcb5": {
       "first_seen_at": 1794502501.156626,
@@ -28061,12 +28139,12 @@
     "4d2df0f1c7755b1ad6152b80": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794498714.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "f069bee96aca2f4b28cc35e4": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794497160.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "4d45c3d2778346bd72aabe10": {
       "first_seen_at": 1794502501.156626,
@@ -28076,7 +28154,7 @@
     "77b0aa609352c0f4e7eaa632": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794492000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "f3ef8a97d57474a98b2e63f9": {
       "first_seen_at": 1794502501.156626,
@@ -28086,22 +28164,22 @@
     "5c4b1412e76713c8724321c3": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794479868.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1c000fd362bfea4dd69a8615": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794496804.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "4b242593922b34ae5ab023ed": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794492000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e0a9aee134c610b189370b6d": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794490543.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e10c33493d8adafe3d0e8cbc": {
       "first_seen_at": 1794502501.156626,
@@ -28191,7 +28269,7 @@
     "dc6efdd21219e8f63636cff6": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794501000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ac9051067135b64f31e6929f": {
       "first_seen_at": 1794502501.156626,
@@ -28441,97 +28519,97 @@
     "7aba014ac947a40dd18f6570": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794501979.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "9e7a8a1c8dcfacafd0e7e925": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794501000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d420a738a6fcc68a327b3ba1": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794499200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c79d8fa68437cab9701025ff": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794499200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e01c0e65a1c59a5fd1254481": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794499200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "fdebe791124b402376bdb512": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794499200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "58c86959d761fb365235a7a2": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794497400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1defc1d2aac23aed6437d29b": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794497400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "57ddf7663261e2e4d29e6ef3": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794495600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "7e5cdaa04d4420133bbf33b9": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794495600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "09c4d4671991f9a953a0651b": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794495600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "41972bd658ec7df71e9f50d8": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794493800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "11cdfb9fc7e51f197f7d9dba": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794492000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "20326fc01740bc86f6b07e1e": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794492000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "15b837d896dda9a71db2b8d4": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794491700.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e7dad3a5242c75150540adf9": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794490991.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "7281118c4b4166d5111c1cb7": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794490200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d1160ee85893fd1d848e8216": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794489976.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "47ae4837d323c5d6420536c4": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794488576.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c08cb0e02a003d9af12ec4a9": {
       "first_seen_at": 1794502501.156626,
@@ -28541,7 +28619,7 @@
     "775436e45d536cdc937b3a4c": {
       "first_seen_at": 1794502501.156626,
       "published_at": 1794488400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "a9c216f27d3e8d7c9d2eb570": {
       "first_seen_at": 1794502501.156626,
@@ -28681,32 +28759,32 @@
     "f37db9c52b95d0ecce8caec3": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794491738.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c4b0ab8fa529293d6f6bd323": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794502800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "df83e7daca2fe7a5c000e945": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794510000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "dbce6c84e47f18ed9b5c91f2": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794513600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c7da3802dc89124698f24b70": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794512255.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8b8b98c4cc603d596579135f": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794502603.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1ad54bfb545143e371442194": {
       "first_seen_at": 1794516808.005342,
@@ -28751,7 +28829,7 @@
     "b5ccf3f4ea85d064c9c223e4": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794505816.0,
-      "last_seen_at": 1794586526.889248
+      "last_seen_at": 1794615542.248147
     },
     "4e5b054991f27c05b32a90e1": {
       "first_seen_at": 1794516808.005342,
@@ -28921,72 +28999,72 @@
     "f2da9000bfdcf1674739b917": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794515419.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "65727d7cf9f2e297bfaec472": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794513727.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "7a450619b9acee6cca0063bb": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794510000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1e94dfbb2ad4ab0ca2800bd8": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794510000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "5cb2a933feaaece8b13db837": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794506400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "a88703fd32449aa2ea281234": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794506400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "04c20c868eb00c0ce2f16ad3": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794506400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "198984da8ec9bc1fd8e3840a": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794506400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8e946d31794086804413106f": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794504600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "71d112ce9e73879fed57a68b": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794502800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "bd7a40c2e3c387951d1fa8b5": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794502800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "db95abf97249cc6f6f4d98a9": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794502800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "54ae2b252ad1a200186d8732": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794502800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b57e02ff59b4dfa36d790e6c": {
       "first_seen_at": 1794516808.005342,
       "published_at": 1794502500.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b524299a178fa67597a80365": {
       "first_seen_at": 1794516808.005342,
@@ -29071,7 +29149,7 @@
     "d6ed52d985cc2b94d438f16b": {
       "first_seen_at": 1794523314.781694,
       "published_at": 1794518121.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "07ecd8b5c8372366bc98e4dc": {
       "first_seen_at": 1794523314.781694,
@@ -29131,12 +29209,12 @@
     "87979ffc82746c3b16b2e277": {
       "first_seen_at": 1794523314.781694,
       "published_at": 1794517621.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c2a197df9ee42643532191ba": {
       "first_seen_at": 1794523314.781694,
       "published_at": 1794514380.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8450aac2879c5a4ca99c276b": {
       "first_seen_at": 1794534836.740523,
@@ -29166,7 +29244,7 @@
     "2425003af75a116706de3aa0": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794556800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1a93cab32b59c9b4616d6e62": {
       "first_seen_at": 1794560735.763668,
@@ -29181,27 +29259,27 @@
     "e6b87971651d0a498f78c4e1": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794553312.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "aaee883ac9a3ba220716306c": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794556800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "fb4df0f9d7f81cf10b8478c4": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794553200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "6abde3cbc7e175d82ec8968b": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794546000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "7ef9fdc013eb073194bc1365": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794550415.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8f32aeb2c9f2df57d42a5375": {
       "first_seen_at": 1794560735.763668,
@@ -29226,7 +29304,7 @@
     "77929996e4377fa907250f12": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794553200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "867abd7e5854fb06f3bed48e": {
       "first_seen_at": 1794560735.763668,
@@ -29236,42 +29314,42 @@
     "e341015f8ad239f370615dce": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794560400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "a432a99c3d8f9721b0307699": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794542400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8659a35717cd18df3b8b934f": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794556800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "df461fbdb5d4082d7206c05f": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794556800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "fce77a8c9a9592dfefebce35": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794549600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d41f84a94ae8ff886d0b8ed0": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794542400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "cf09e0f37566c25b953e2fe3": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794542400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8937ea27b2c42b320675496b": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794560400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "a2c68d7658619b18774a816b": {
       "first_seen_at": 1794560735.763668,
@@ -29281,12 +29359,12 @@
     "904e9efff73faa59b091f66f": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794542400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "565b88dba7e3bbaa0b400865": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794546000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "79bf1f8dcc0ff5966025353a": {
       "first_seen_at": 1794560735.763668,
@@ -29331,7 +29409,7 @@
     "14c683628cb07e224c38e2fc": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794555794.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "f92e3b149afc90794948e899": {
       "first_seen_at": 1794560735.763668,
@@ -29341,22 +29419,22 @@
     "efb60bcf8214236fa958613e": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794560238.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e5ce94d142cf67fb7eb3fad2": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794559879.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "561bcb9f8d919804dc0c9a53": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794560400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c1d6000e331540dd73947b34": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794549600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "66678a9576b64c64b1a61b5f": {
       "first_seen_at": 1794560735.763668,
@@ -29561,97 +29639,97 @@
     "8c934788a53ebcb430e90da4": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794560400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "79e7115ed8d9d6ee97c289a9": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794559980.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e98f973e70581eef0480eb75": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794557035.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "77884940355095630b52dc27": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794556800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "175924d9feed1c2de17da3d6": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794556800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "f45342d2b8d3f6ec42fd9c91": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794554659.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ce3c2d34ad36d1243447fb4a": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794553200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d43c3a1b9f872d736a3f3244": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794552089.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d7c9d3ec995de7b372a03cf6": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794549600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ea4e3991a0d963ea6e13ec1b": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794546000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "6872499388c439df244c1cd1": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794546000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "92e9609d89bbe15613095a62": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794546000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "6d6143ca1bdb7d040cb4e39c": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794546000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "11ae6511a4e3f3985915fb07": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794546000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "98887f1020e3a23b99498aec": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794546000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "6b0d9aecd9c00f0a23c7237c": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794544200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "cdabeab964b5f5a069f66380": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794542400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "2aa752465faef57e439cff3f": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794542400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b9b1215364ec543148d654fb": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794542400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "a19444af4cf1cfc20d7429a2": {
       "first_seen_at": 1794560735.763668,
@@ -29806,17 +29884,17 @@
     "accff2453a94c01811a496a7": {
       "first_seen_at": 1794560735.763668,
       "published_at": 1794546600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "508a525832da773566e598b5": {
       "first_seen_at": 1794562745.876387,
       "published_at": 1794561300.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c98ab7868c56686af3a123ec": {
       "first_seen_at": 1794562745.876387,
       "published_at": 1794562200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "6308176d005dda6333cbcb95": {
       "first_seen_at": 1794562745.876387,
@@ -29891,7 +29969,7 @@
     "2ce5f39f772617ff812c68f1": {
       "first_seen_at": 1794567053.728232,
       "published_at": 1794564938.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "55cfcbf4a916b4e51fef84e4": {
       "first_seen_at": 1794567053.728232,
@@ -29916,7 +29994,7 @@
     "649fd786366f5cb92b2ed293": {
       "first_seen_at": 1794567053.728232,
       "published_at": 1794566349.0,
-      "last_seen_at": 1794593771.423708
+      "last_seen_at": 1794615542.248147
     },
     "6ade2d8a151a0b2ac4d6d317": {
       "first_seen_at": 1794567053.728232,
@@ -30041,37 +30119,37 @@
     "6fefc593a439e7f8433d2fe2": {
       "first_seen_at": 1794567053.728232,
       "published_at": 1794564413.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "207ef47b6eed62a8ec5fd414": {
       "first_seen_at": 1794567053.728232,
       "published_at": 1794564026.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d46b787c032582cc77e0fcec": {
       "first_seen_at": 1794567053.728232,
       "published_at": 1794564000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "6f6b6b25c7e3902afcbd4f3c": {
       "first_seen_at": 1794567053.728232,
       "published_at": 1794564000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b95e59b25075c8100512c974": {
       "first_seen_at": 1794567053.728232,
       "published_at": 1794560400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "9c6f7379f5698d1b5f64ade3": {
       "first_seen_at": 1794567053.728232,
       "published_at": 1794565800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "2a71d0a167d67936b7369270": {
       "first_seen_at": 1794567053.728232,
       "published_at": 1794564443.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "922210cb22e33c7f21fb794c": {
       "first_seen_at": 1794567053.728232,
@@ -30091,7 +30169,7 @@
     "93a5bb29de4edae245635b9d": {
       "first_seen_at": 1794567053.728232,
       "published_at": 1794563578.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e540344e5b00f4fd2fce7ba7": {
       "first_seen_at": 1794567053.728232,
@@ -30101,42 +30179,42 @@
     "6831425e406a1873702bde7e": {
       "first_seen_at": 1794567053.728232,
       "published_at": 1794558900.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "4d04085e62d4302905306f2e": {
       "first_seen_at": 1794567173.003498,
       "published_at": 1794566986.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "bd96b18b52d4279e247c6882": {
       "first_seen_at": 1794567173.003498,
       "published_at": 1794566980.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b545aa5d65dffb7b725c541e": {
       "first_seen_at": 1794568026.089439,
       "published_at": 1794567665.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "0a7395f6bec9ae6c597029bc": {
       "first_seen_at": 1794568026.089439,
       "published_at": 1794567600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "00455c485b2a5f2eed22d12a": {
       "first_seen_at": 1794568026.089439,
       "published_at": 1794567600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "08cbf93cb0c5c2a6d7276cab": {
       "first_seen_at": 1794568026.089439,
       "published_at": 1794513600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "da53acfb5bf1beedf4333832": {
       "first_seen_at": 1794568026.089439,
       "published_at": 1794567600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b5c60c4b119ad4c244e38c79": {
       "first_seen_at": 1794568026.089439,
@@ -30146,7 +30224,7 @@
     "4fdf82c03ac9d425f8d0eaa5": {
       "first_seen_at": 1794568026.089439,
       "published_at": 1794567563.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "77557359d2442fe13de75f19": {
       "first_seen_at": 1794568026.089439,
@@ -30166,7 +30244,7 @@
     "34d8112089b0ee9a1551177e": {
       "first_seen_at": 1794568026.089439,
       "published_at": 1794567983.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c294c8dcfca50f6ba1c0e2c8": {
       "first_seen_at": 1794568026.089439,
@@ -30181,42 +30259,42 @@
     "9244d0b7302b93e543048a4f": {
       "first_seen_at": 1794568026.089439,
       "published_at": 1794567640.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b2fb3becb2520ac1e5596446": {
       "first_seen_at": 1794568026.089439,
       "published_at": 1794567660.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "175888a9662c891c5dee4a3b": {
       "first_seen_at": 1794568026.089439,
       "published_at": 1794567600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d4e666de2f1988cdaaca2ad7": {
       "first_seen_at": 1794568026.089439,
       "published_at": 1794567600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "162a0164a9cffa67a25756e3": {
       "first_seen_at": 1794568026.089439,
       "published_at": 1794567600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "9e6687b6ea4825c4bd241b8d": {
       "first_seen_at": 1794568026.089439,
       "published_at": 1794567600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "7fb7f763c0557ee2d071f698": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794580169.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "20940023a663790c5e7ca5f8": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794577165.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "282bc77a5772e433917f1da6": {
       "first_seen_at": 1794585956.2526,
@@ -30226,67 +30304,67 @@
     "23f83633649a3cab93966f16": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794581837.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "6c478be3142decd84a7281b1": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794582617.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1a0cf0dac93e5c784c5a9199": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794575575.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "3389c64588d1fb19a9d9a6d5": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794553966.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "a9e38ecf3abdadd8a28518e3": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794581987.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "28bd0e90a0c44de0e1e4ba5f": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794566117.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c2165bc9286bfb22e13ab82f": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794580667.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "9ce873bb4ddc050855f850ee": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794573868.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "049faf636a624147ac4915c1": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794574800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "3d215bc5aafe75f051793da4": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794568854.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1ff684588a9c4a499da7b2fc": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794573929.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "2fbdc9b195a75aa20963f0d4": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794581784.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d1bfba516bd761c9ce316041": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794578400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "47c26195cc46fec02d87fcd8": {
       "first_seen_at": 1794585956.2526,
@@ -30296,17 +30374,17 @@
     "077cbf03d0267d617b570dc5": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794575128.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "343c9b45a784dd9abbf240e9": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794579981.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "96564fa0a4cbef68c11533d6": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794577858.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c15a0e9b133c0f2016c19fa1": {
       "first_seen_at": 1794585956.2526,
@@ -30326,12 +30404,12 @@
     "b3b7def2c06246126ae76697": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794583756.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "2f2e97dd2cab9f817b17adf9": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794582877.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "4c00e87e6b819e44595ad6cf": {
       "first_seen_at": 1794585956.2526,
@@ -30341,57 +30419,57 @@
     "b62bd8cd78b77d3a50b0335b": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794571997.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ad7f6a0d408e8bbbddb51179": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794584626.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b08439a1a466dcc3fa91f60d": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794569906.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "80de9c04ae33660c3ec54874": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794583432.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "907ae44e63046f32317946a8": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794569820.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ae7ac31d176389bedd53b347": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794568905.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e4bac0a1850201253324e9f6": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794583215.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "63ea29c8a9a79ac5dab9d43a": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794568791.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8d322dd1da3440099ec233ac": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794572151.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "baa14553f11dcbbefd4f43cf": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794585725.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "5a747f76c38ac95b13efc7c9": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794584940.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c9cb097cb2547b07456bd8f8": {
       "first_seen_at": 1794585956.2526,
@@ -30401,27 +30479,27 @@
     "b30ddaefd9279c367e2969d8": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794574437.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c0aa8aec54e9c12e2f7ea287": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794583260.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "88102bab4e353e0db54df512": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794585436.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "6ea73b4624530d2c91b22ce0": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794571200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "514c0afcc8d7ca474075a536": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794580806.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e94561c5a6d2a137297bc114": {
       "first_seen_at": 1794585956.2526,
@@ -30436,12 +30514,12 @@
     "1ae1e4233459d00978377cb5": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794577637.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "beba208e024c4c2c508a6a65": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794574800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8ca713bcd533474fa24ab7d7": {
       "first_seen_at": 1794585956.2526,
@@ -30451,42 +30529,42 @@
     "6836ee82d71d6a5387f2569b": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794580552.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "32fb7e38709c1c3ebbb8136e": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794569330.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "826fcd2318a9f3293fc752a7": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794572954.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "52063f7528397961f962bc4f": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794568785.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ff872a1088b9bb6481d2ab83": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794582069.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "785bcb0579c10cc3e7a585d0": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794583303.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "f3f31014c6babe2d34d841f1": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794573562.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "667ade124e155c70003969e1": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794568200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "21a2d1f1240526b9aa3d72b2": {
       "first_seen_at": 1794585956.2526,
@@ -30536,7 +30614,7 @@
     "c17c4240e2cd0714a02e86aa": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794585669.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "0cd0d922cf04df05c2322b57": {
       "first_seen_at": 1794585956.2526,
@@ -30576,12 +30654,12 @@
     "c32831c08439425337215f5c": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794583781.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "58350303a4352287c54acd72": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794582897.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "887a1f9b93fc3c1d6f17036e": {
       "first_seen_at": 1794585956.2526,
@@ -30636,417 +30714,417 @@
     "621d36ea1ba57f0fc4f3e6b6": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794581704.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "6aee0ed247452fc220222d68": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794580836.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c49d2df56090d89911cf1405": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794577236.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "35a2882a7f2146b0aa5c182d": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794576082.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "0f6a787a8abea0004424de66": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794575425.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "a08b17c845d21bec415e3a9a": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794573916.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d9c5650223fee02de1db9d02": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794572080.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "0331496a1e12121f4be78b4b": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794569723.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ae443ece9232d16fd11d5a29": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794568227.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "78b3c35955d64c837f695caf": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794585600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "31799d10bd56af2fbdd16baa": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794585600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "4dccd06c8db6306184fadfd6": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794584437.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "91e3562016533e26e2a110c0": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794583800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "110d21acef2cca14014d14ef": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794582000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ad5e266b61b406eeff3d9df7": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794582000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "4f04592c8490740bd559cad5": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794582000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b34f7d444ac1561b7f71b987": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794581700.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ab102c692f88067abef4cc2f": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794581382.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "63a73899d81e7474e9ec4700": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794580200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "80fb4dab993217edb2180bd0": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794578685.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "929c37568f23aaa6bf82dab5": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794578400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "7712b1040e6a4171e94d1647": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794578400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "834d958c6d4e7f603e6c493d": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794578400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "4625d517f2f7372bb193d26b": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794578400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "bed1e495ba08c44cf0630804": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794577922.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "5629757865593e9a955a17bb": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794574800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "56c415c45526ebbc70a56204": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794574800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "eef61e7c8cb418db169662a7": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794574800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8f51a42a5609df405163e164": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794573090.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "4041d3b8b501ac9b934c747a": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794573000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b5b96571bbdd397cf0122818": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794571200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "083e395a74d458afa40cb2cb": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794571200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "7c9646fa25965e9854a9c9bd": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794571200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "6b1e29bee2124aa820a64b06": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794570457.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "da3820bb2487f1d8da0e0f30": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794568395.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "4ac92f2412c04bd81adbec05": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794585600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "53fc501c645dacb0f7a991ef": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794585399.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "a399f333620c9c96926f5e01": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794584596.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "87201c116e74df04dfebf94a": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794584207.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b06cdd878b4efeb8e79c19a0": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794583800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "a20efdc4b41ea65266c544a8": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794583241.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "bd6afb8286da17e1293b54d8": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794582382.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b3f276d5b8a77e6d18ce7d88": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794582000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "413fa7c9f6570d720fb242ea": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794582000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "be2278493d9caeb2ab99b52c": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794582000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "5ef789c9974337dd328f45f9": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794582000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "cf08223239048ee6fb9c2bfd": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794581797.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "be230ae9a47ca9a9965b974d": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794580573.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "5ab344622c5a57fb48369c5f": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794580397.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1c90f1141efdc8e766095e31": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794578400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1dc43dbd40a955426c957f1f": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794578400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "dd451ad94d1eaee273b94327": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794578400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e2eacb175dbb380402c9c421": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794578400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "f22f6440c686993227d47eeb": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794577892.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "5da4dbb19e999af440486400": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794577172.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "88e17c7b5edef47a1dbeb560": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794576420.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e907f7337edb831ea835eccc": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794575939.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "adab1f581f61cf6a478e522c": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794575570.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8472ac2418077462c5294d94": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794574800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "90a955719cb56d625c81d680": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794573415.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "3936e118da1edf14affe3abb": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794571695.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "a8e746dd49fd8ceeca453c10": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794571652.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "bb2f283daedb1f7cf0782a28": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794571200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "bf53511faba360fb3c9d95a7": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794571193.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e8b159b2cbb908744687271d": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794569019.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "31b688b7e3dd7961a7d96bd3": {
       "first_seen_at": 1794585956.2526,
       "published_at": 1794568138.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "3792e5b349a5d936cef4f31a": {
       "first_seen_at": 1794586526.889248,
       "published_at": 1794585867.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d520c5d3b7c8fa628ba216b6": {
       "first_seen_at": 1794586526.889248,
       "published_at": 1794586007.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8c98cc1da30eb12818e84ab6": {
       "first_seen_at": 1794586526.889248,
       "published_at": 1794585896.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1c2df115093e89c4bbddab42": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589180.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "419275c7f1ec651ad0b4eeed": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589197.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "df6df5542fe91621c6df9510": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794580236.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "dbf794bfa699a0bdd5b88281": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589388.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8e4191d8637b761d5aba8e4c": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589244.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "610a90a7b4ae054cf4383f41": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794590027.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "7823c3c26e7576fdc7cfac21": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794592800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "56c11d12023f11e0aea4bd16": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794590077.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "eee932f69947ede388d7efe7": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794587043.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b705aa1eb5de6787bc9bb573": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794587411.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "6668cd481820a7022f987bf8": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794592736.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "bb32d450aa51d7aca53ccf62": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "3e50efa3317f78f8c5fb2c8c": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "3e927fb67214c4c7a6ccbfde": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "657741b30859af3a1125d014": {
       "first_seen_at": 1794593771.423708,
@@ -31076,12 +31154,12 @@
     "c8a1b7d01776247d4f4666b3": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794593031.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "0ed108a5873bf32047924cab": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589815.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "312f80d1629ac90934fc4a84": {
       "first_seen_at": 1794593771.423708,
@@ -31096,17 +31174,17 @@
     "143d0b1a440bca8462daccd1": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794593352.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "aef08242bf5f2842f84e6925": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589085.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "4a9e9f072c290dab4cb006b7": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794591502.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "bc3a07207e03649994c40886": {
       "first_seen_at": 1794593771.423708,
@@ -31116,7 +31194,7 @@
     "c7f323f58b5fa02e2c33364f": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794591028.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "818d72c52b88521a04f7d265": {
       "first_seen_at": 1794593771.423708,
@@ -31131,17 +31209,17 @@
     "cd49f4e374c3944420d98e66": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794593151.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "14ea716df51563bff5d25023": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589201.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "01e66f94bb051eddbdbb94d6": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794587426.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "45b6c19f86aa0943de65168a": {
       "first_seen_at": 1794593771.423708,
@@ -31156,407 +31234,387 @@
     "1a63002a2a44e79e22eca527": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794590700.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "0ca2ca5d501f0aded656fe70": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794592652.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "9a1cbc3f9abda1c7c8c9d34c": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794591998.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e1ffe01913d2f3370081a44b": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794587901.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "f9158fd228250b8e2de5bd72": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794592975.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "bfa8fdc694ac3fadf93ba6c4": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794592800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "fa170f91375e1562c1e5cf8a": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794591000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "184961f1e25b95f572c18c75": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d08d16e7fb2a1a7f8598c17c": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "29a9a16283fc88c12044696c": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "3e102e7097301b4fd5a7e905": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794588919.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "d7a11e13dcf3ffaeda362ba0": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794588720.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "facec79a81f933ae5136d1bd": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794592800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "2d6c284bb41e20e15510a19e": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794592800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "212922767f59be26fc35d7ac": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794592800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "fe0b11aba261718304fea65a": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794592800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "27b33264cf03338e0b378c9f": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794592800.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "db3bb952542ca240d43b318b": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794591900.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "53b57f19e979e8ea1ee8c05d": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794590969.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1b288cb6e05520e3093ff6b8": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "5e63a3ab778c7469a6df2cc1": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "2f6ee6c84ca99b3e31b1950c": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794589200.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "700e0ce64f8d61b7d17a250c": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794587400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "cd972a89c4f007829b5944cc": {
       "first_seen_at": 1794593771.423708,
       "published_at": 1794587400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "2c5fdfade58db89471690834": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794605301.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ebfd68ee6ecd26d845fbb670": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794600900.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e173b799b150e35588d37553": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794607309.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "dc2a501029aed92e8a79efc1": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794593965.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "055681b7e9d370f6a766cfb1": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794607926.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "dff2a074f0dd37ea2e4362f7": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794606166.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "0ef629c4e53feb3d05c4921b": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794600000.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1d81a897dcde221805be8c2b": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794605812.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "459434a6556dd5bd9643c65f": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794594883.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ae9752e0912761e1fab675c6": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794595357.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "de753167901c5f395f2c15b5": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794603230.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "63fd4b41cfe367a9f78c9437": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794610860.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b44bee216107bd04291ec32c": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794603399.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "6409b50d5ad7dfee5416e1da": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794601993.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "f97e622c1abbe2610ff789c7": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794601552.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8e869c9b353623f23d755200": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794596428.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e6c7f68ad9571f36a52204e3": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794610504.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "308f59e90e5cbe0bfbf3d6e8": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794607696.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "35c72feca55e346772658e5b": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794598047.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "197de0c1035c3e05bcbc2325": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794598388.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "559e32515b448a40d294ca3f": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794596114.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8de7a36d22c17472f0a1d612": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794606085.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1feef84b66331ef04794c0f2": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794606173.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "c0be660e37744fc1aa658e9d": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794596260.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "cbb652152e9c6659e1ebea58": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794595803.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "8044101aa10b0420fbbd5f17": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794594458.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "f5c1f767cad7c2b1a02254c6": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794605464.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "1bbf5c7b17b28bb9d48df42d": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794603645.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "b241992bb5560e4e4528f015": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794602057.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "200bfef68e99e64c3300fcbc": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794612287.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "010ad9fe17e73baf7f56612d": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794610082.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "637520013f1e25a593882490": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794609252.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "e4f99c62d6d098d3086f1b8e": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794604599.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "7ad37332082e710afdc6a757": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794603259.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "ffd76eef1a0d717fdf93c438": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794602331.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "86bd2b18fdd46f6f9df00ef2": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794599555.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "5edf966e6141e85c84567962": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794598275.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "f33d56ee404749a536dcc0ae": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794597525.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "912130db85631e30d58dd8a1": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794594602.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "cab7ceeb7e0e0b766bff4086": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794604742.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "021d68cb471041628a93160a": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794598720.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "48df113ed503c63830ed31d3": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794596475.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "2435eb3fd9878a82543d292a": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794594600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "5cbc97ac58ee7587e19f60e5": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794604346.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "01f52342bef98657c1848faa": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794603600.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "4baf572ee1d72af140ecc159": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794602081.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "84eed7f0ca223deffe9d57a8": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794599285.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     },
     "cf713ddc958c6d9e4e62d157": {
       "first_seen_at": 1794613356.495306,
       "published_at": 1794596400.0,
-      "last_seen_at": 1794613356.495306
+      "last_seen_at": 1794615542.248147
     }
   },
   "latest_broadcast": {
-    "id": "20261113T093926Z",
-    "created_at": 1794562766.576584,
+    "id": "20261114T001922Z",
+    "created_at": 1794615562.653481,
     "article_ids": [
-      "132f887ea8c62ba0de198fc2",
-      "73fe39e632d01948bd49d18f",
-      "2b62df6fd9dbd44db300bcb6",
+      "e1ffe01913d2f3370081a44b",
       "ff3d67b0626dd7b0d36e10fc",
       "8ddeb15979a715216aa659a2",
-      "f2da9000bfdcf1674739b917",
-      "c2a197df9ee42643532191ba",
-      "48860b60cb2444544a18b0da",
-      "fbdfb2a23518bb28f04d343f",
-      "e3710a0413f6e9fcf88c91b1",
-      "a1f79ddd9fe1adec3024976d"
+      "8d322dd1da3440099ec233ac",
+      "a8e746dd49fd8ceeca453c10",
+      "0331496a1e12121f4be78b4b",
+      "6831425e406a1873702bde7e",
+      "e6c7f68ad9571f36a52204e3",
+      "e4f99c62d6d098d3086f1b8e",
+      "1d81a897dcde221805be8c2b",
+      "7ad37332082e710afdc6a757"
     ],
     "records": [
       {
-        "id": "132f887ea8c62ba0de198fc2",
-        "title": "Israel verbietet Politiker Mélenchon die Einreise",
-        "url": "https://www.krone.at/4373605",
-        "published_at": 1794519571.0,
-        "first_seen_at": 1794523314.781694,
-        "feed_urls": [
-          "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
-        ]
-      },
-      {
-        "id": "73fe39e632d01948bd49d18f",
-        "title": "Israel verbietet französischem Präsidentschaftskandidaten Einreise",
-        "url": "https://www.derstandard.at/story/3000000349037/israel-verbietet-franz246sischem-pr228sidentschaftskandidaten-einreise?ref=rss",
-        "published_at": 1794506749.0,
-        "first_seen_at": 1794516808.005342,
-        "feed_urls": [
-          "https://www.derstandard.at/rss"
-        ]
-      },
-      {
-        "id": "2b62df6fd9dbd44db300bcb6",
-        "title": "Israel verbietet Melenchon Einreise",
-        "url": "https://orf.at/stories/3448036/",
-        "published_at": 1794506557.0,
-        "first_seen_at": 1794516808.005342,
+        "id": "e1ffe01913d2f3370081a44b",
+        "title": "Geharnischte Kritik an „Sozialhilfe neu“",
+        "url": "https://orf.at/stories/3448078/",
+        "published_at": 1794587901.0,
+        "first_seen_at": 1794593771.423708,
         "feed_urls": [
           "https://rss.orf.at/news.xml"
         ]
@@ -31582,61 +31640,81 @@
         ]
       },
       {
-        "id": "f2da9000bfdcf1674739b917",
-        "title": "Leitring: Radfahrerin bei Kollision mit Rettungswagen schwer verletzt",
-        "url": "https://www.kleinezeitung.at/artikel/41446978/leitring-radfahrerin-bei-kollision-mit-rettungswagen-schwer-verletzt",
-        "published_at": 1794515419.0,
-        "first_seen_at": 1794516808.005342,
-        "feed_urls": [
-          "https://www.kleinezeitung.at/rss/steiermark"
-        ]
-      },
-      {
-        "id": "c2a197df9ee42643532191ba",
-        "title": "Radfahrerin bei Kollision verletzt",
-        "url": "",
-        "published_at": 1794514380.0,
-        "first_seen_at": 1794523314.781694,
-        "feed_urls": [
-          "https://www.bmi.gv.at/rss/stmk_presse.xml"
-        ]
-      },
-      {
-        "id": "48860b60cb2444544a18b0da",
-        "title": "Fünf Preise: Rosalía räumt bei Latin Grammys ab",
-        "url": "https://www.derstandard.at/story/3000000349102/fuenf-preise-rosalia-raeumt-bei-latin-grammys-ab?ref=rss",
-        "published_at": 1794562469.0,
-        "first_seen_at": 1794562745.876387,
+        "id": "8d322dd1da3440099ec233ac",
+        "title": "Hackerangriff auf Lern-App: Möglicherweise Schülerdaten gestohlen",
+        "url": "https://www.derstandard.at/story/3000000349156/hackerangriff-auf-lern-app-m246glicherweise-sch252lerdaten-gestohlen?ref=rss",
+        "published_at": 1794572151.0,
+        "first_seen_at": 1794585956.2526,
         "feed_urls": [
           "https://www.derstandard.at/rss"
         ]
       },
       {
-        "id": "fbdfb2a23518bb28f04d343f",
-        "title": "Rosalia räumt bei Latin Grammys ab",
-        "url": "https://orf.at/stories/3448068/",
-        "published_at": 1794560079.0,
-        "first_seen_at": 1794560735.763668,
+        "id": "a8e746dd49fd8ceeca453c10",
+        "title": "Angriff auf Lern-App: Möglicherweise Schülerdaten gestohlen",
+        "url": "https://www.kleinezeitung.at/artikel/41448893/angriff-auf-lern-app-moeglicherweise-schuelerdaten-gestohlen",
+        "published_at": 1794571652.0,
+        "first_seen_at": 1794585956.2526,
+        "feed_urls": [
+          "https://www.kleinezeitung.at/rss/oesterreich"
+        ]
+      },
+      {
+        "id": "0331496a1e12121f4be78b4b",
+        "title": "Hackerangriff auf Lern-App: Möglicherweise Daten gestohlen",
+        "url": "https://orf.at/stories/3448085/",
+        "published_at": 1794569723.0,
+        "first_seen_at": 1794585956.2526,
         "feed_urls": [
           "https://rss.orf.at/news.xml"
         ]
       },
       {
-        "id": "e3710a0413f6e9fcf88c91b1",
-        "title": "Hegseth verlieh Soldat, der ihn anschrie, eine Medaille",
-        "url": "https://www.derstandard.at/story/3000000349067/hegseth-verlieh-soldat-der-ihn-anschrie-eine-medaille?ref=rss",
-        "published_at": 1794555237.0,
-        "first_seen_at": 1794560735.763668,
+        "id": "6831425e406a1873702bde7e",
+        "title": "Einbruch in Juweliergeschäft",
+        "url": "",
+        "published_at": 1794558900.0,
+        "first_seen_at": 1794567053.728232,
+        "feed_urls": [
+          "https://www.bmi.gv.at/rss/stmk_presse.xml"
+        ]
+      },
+      {
+        "id": "e6c7f68ad9571f36a52204e3",
+        "title": "Alarm in USA: Landesweiter Flugstopp verhängt",
+        "url": "https://www.krone.at/4375281",
+        "published_at": 1794610504.0,
+        "first_seen_at": 1794613356.495306,
+        "feed_urls": [
+          "https://api.krone.at/v1/rss/rssfeed-nachrichten.html"
+        ]
+      },
+      {
+        "id": "e4f99c62d6d098d3086f1b8e",
+        "title": "US-Luftfahrtbehörde verhängt landesweiten Flugstopp",
+        "url": "https://orf.at/stories/3448132/",
+        "published_at": 1794604599.0,
+        "first_seen_at": 1794613356.495306,
+        "feed_urls": [
+          "https://rss.orf.at/news.xml"
+        ]
+      },
+      {
+        "id": "1d81a897dcde221805be8c2b",
+        "title": "Tanker bei New Orleans mit Passagierschiff kollidiert",
+        "url": "https://www.derstandard.at/story/3000000349207/tanker-bei-new-orleans-mit-passagierschiff-kollidiert?ref=rss",
+        "published_at": 1794605812.0,
+        "first_seen_at": 1794613356.495306,
         "feed_urls": [
           "https://www.derstandard.at/rss"
         ]
       },
       {
-        "id": "a1f79ddd9fe1adec3024976d",
-        "title": "Hegseth ehrte Soldaten, der ihn zurechtwies",
-        "url": "https://orf.at/stories/3448045/",
-        "published_at": 1794521755.0,
-        "first_seen_at": 1794523314.781694,
+        "id": "7ad37332082e710afdc6a757",
+        "title": "Keine Vermissten nach Schiffsunglück in New Orleans",
+        "url": "https://orf.at/stories/3448130/",
+        "published_at": 1794603259.0,
+        "first_seen_at": 1794613356.495306,
         "feed_urls": [
           "https://rss.orf.at/news.xml"
         ]

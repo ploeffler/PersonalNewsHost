@@ -1,70 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261113T015423Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 13.11.2026 um 02:54 Uhr",
-      "created_at": 1794534863.151608,
-      "video": "broadcasts/20261113T015423Z.mp4",
-      "sources": [
-        {
-          "title": "Israel verbietet Politiker Mélenchon die Einreise",
-          "url": "https://www.krone.at/4373605"
-        },
-        {
-          "title": "Israel verbietet französischem Präsidentschaftskandidaten Einreise",
-          "url": "https://www.derstandard.at/story/3000000349037/israel-verbietet-franz246sischem-pr228sidentschaftskandidaten-einreise?ref=rss"
-        },
-        {
-          "title": "Israel verbietet Melenchon Einreise",
-          "url": "https://orf.at/stories/3448036/"
-        },
-        {
-          "title": "Post stellt deutlich weniger Packerln zu",
-          "url": "https://orf.at/stories/3448007/"
-        },
-        {
-          "title": "Folgen der neuen Abgaben: Post verschickt viel weniger Packerl",
-          "url": "https://www.kleinezeitung.at/artikel/41444073/post-verzeichnet-anstieg-bei-paketen-und-rueckgang-bei-briefen"
-        },
-        {
-          "title": "Leitring: Radfahrerin bei Kollision mit Rettungswagen schwer verletzt",
-          "url": "https://www.kleinezeitung.at/artikel/41446978/leitring-radfahrerin-bei-kollision-mit-rettungswagen-schwer-verletzt"
-        },
-        {
-          "title": "Radfahrerin bei Kollision verletzt",
-          "url": ""
-        },
-        {
-          "title": "Lautes Lachen bei Denkmal: Soldat rügt Gruppe um Hegseth",
-          "url": "https://orf.at/stories/3447989/"
-        },
-        {
-          "title": "Lachen am Denkmal: Soldat rügt Gruppe um Hegseth",
-          "url": "https://www.krone.at/4372343"
-        },
-        {
-          "title": "Laut am Friedhof gelacht: Soldat weist Gruppe um US-Verteidigungsminister Hegseth zurecht",
-          "url": "https://www.derstandard.at/story/3000000348828/lautes-lachen-am-denkmal-soldat-r252gt-gruppe-um-hegseth?ref=rss"
-        },
-        {
-          "title": "Mehrere Tote bei Angriff auf Krankenhaus in Gaza",
-          "url": "https://www.krone.at/4372349"
-        },
-        {
-          "title": "Bericht: Mehrere Tote bei Angriff auf Spital in Gaza",
-          "url": "https://orf.at/stories/3447953/"
-        },
-        {
-          "title": "Mehrere Tote gemeldet: Israel griff Krankenhaus in Gaza an",
-          "url": "https://www.derstandard.at/story/3000000348830/nahost-mehrere-tote-bei-angriff-auf-krankenhaus-in-gaza?ref=rss"
-        }
-      ],
-      "transcript": "broadcasts/20261113T015423Z.txt",
-      "subtitles": "broadcasts/20261113T015423Z.vtt",
-      "subtitle_download": "broadcasts/20261113T015423Z.srt"
-    },
-    {
       "id": "20261113T093926Z",
       "kind": "broadcast",
       "title": "Nachrichten 13.11.2026 um 10:39 Uhr",
@@ -119,6 +55,62 @@
       "transcript": "broadcasts/20261113T093926Z.txt",
       "subtitles": "broadcasts/20261113T093926Z.vtt",
       "subtitle_download": "broadcasts/20261113T093926Z.srt"
+    },
+    {
+      "id": "20261114T001922Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 14.11.2026 um 01:19 Uhr",
+      "created_at": 1794615562.653481,
+      "video": "broadcasts/20261114T001922Z.mp4",
+      "sources": [
+        {
+          "title": "Geharnischte Kritik an „Sozialhilfe neu“",
+          "url": "https://orf.at/stories/3448078/"
+        },
+        {
+          "title": "Kritik an Integrationsgesetz und „Sozialhilfe Neu“",
+          "url": "https://www.krone.at/4373778"
+        },
+        {
+          "title": "Breite Kritik an \"Sozialhilfe NEU\" in den Stellungnahmen",
+          "url": "https://www.kleinezeitung.at/artikel/41447049/breite-kritik-an-sozialhilfe-neu-in-den-stellungnahmen"
+        },
+        {
+          "title": "Hackerangriff auf Lern-App: Möglicherweise Schülerdaten gestohlen",
+          "url": "https://www.derstandard.at/story/3000000349156/hackerangriff-auf-lern-app-m246glicherweise-sch252lerdaten-gestohlen?ref=rss"
+        },
+        {
+          "title": "Angriff auf Lern-App: Möglicherweise Schülerdaten gestohlen",
+          "url": "https://www.kleinezeitung.at/artikel/41448893/angriff-auf-lern-app-moeglicherweise-schuelerdaten-gestohlen"
+        },
+        {
+          "title": "Hackerangriff auf Lern-App: Möglicherweise Daten gestohlen",
+          "url": "https://orf.at/stories/3448085/"
+        },
+        {
+          "title": "Einbruch in Juweliergeschäft",
+          "url": ""
+        },
+        {
+          "title": "Alarm in USA: Landesweiter Flugstopp verhängt",
+          "url": "https://www.krone.at/4375281"
+        },
+        {
+          "title": "US-Luftfahrtbehörde verhängt landesweiten Flugstopp",
+          "url": "https://orf.at/stories/3448132/"
+        },
+        {
+          "title": "Tanker bei New Orleans mit Passagierschiff kollidiert",
+          "url": "https://www.derstandard.at/story/3000000349207/tanker-bei-new-orleans-mit-passagierschiff-kollidiert?ref=rss"
+        },
+        {
+          "title": "Keine Vermissten nach Schiffsunglück in New Orleans",
+          "url": "https://orf.at/stories/3448130/"
+        }
+      ],
+      "transcript": "broadcasts/20261114T001922Z.txt",
+      "subtitles": "broadcasts/20261114T001922Z.vtt",
+      "subtitle_download": "broadcasts/20261114T001922Z.srt"
     }
   ]
 }
