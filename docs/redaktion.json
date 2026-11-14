@@ -1,5 +1,5 @@
 {
- "generated_at": 1794615687.0849097,
+ "generated_at": 1794627527.3905,
  "broadcast_at": 1794615562.653481,
  "broadcast_title": "Nachrichten 14.11.2026 um 01:19 Uhr",
  "events": [
@@ -68,32 +68,6 @@
    ]
   },
   {
-   "id": "b44f40fad1d8e7b8effcae35",
-   "headline": "Alarm in USA: Landesweiter Flugstopp verhängt",
-   "summary": "In den USA hat die Luftfahrtbehörde FAA einen landesweiten Flugstopp verhängt – eine außergewöhnliche Maßnahme. Grund seien Kommunikationsprobleme im Flugkontrollsystem, teilte Verkehrsminister Sean Duffy gestern (Ortszeit) auf der Plattform X mit.",
-   "publishers": [
-    "orf.at",
-    "krone.at"
-   ],
-   "reports": 2,
-   "newest_at": 1794610504.0,
-   "status": "sendung",
-   "status_label": "In der Sendung (14.11. 01:19)",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "US-Luftfahrtbehörde verhängt landesweiten Flugstopp",
-     "url": "https://orf.at/stories/3448132/"
-    },
-    {
-     "publisher": "krone.at",
-     "title": "Alarm in USA: Landesweiter Flugstopp verhängt",
-     "url": "https://www.krone.at/4375281"
-    }
-   ]
-  },
-  {
    "id": "2fe0a8d95c90bf0b561c2591",
    "headline": "Tanker bei New Orleans mit Passagierschiff kollidiert",
    "summary": "Bisher liegen keine Berichte über Verletzte vor. Nach dem Zusammenstoß zweier Schiffe auf dem Mississippi in New Orleans werden nach jetzigem Stand keine Passagiere mehr vermisst.",
@@ -116,6 +90,46 @@
      "publisher": "derstandard.at",
      "title": "Tanker bei New Orleans mit Passagierschiff kollidiert",
      "url": "https://www.derstandard.at/story/3000000349207/tanker-bei-new-orleans-mit-passagierschiff-kollidiert?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "a0c46aba05e8a552357b00fa",
+   "headline": "Alarm in USA: Landesweiter Flugstopp verhängt",
+   "summary": "In den USA hat die Luftfahrtbehörde FAA einen landesweiten Flugstopp verhängt – eine außergewöhnliche Maßnahme. Noch in der Nacht ließ US-Heimatschutzminister Markwayne Mullin verlauten, dass es keine Hinweise auf eine Bedrohung oder eine Cyberattacke gebe.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794610504.0,
+   "status": "sendung",
+   "status_label": "In der Sendung (14.11. 01:19)",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Alarm in USA: Landesweiter Flugstopp verhängt",
+     "url": "https://www.krone.at/4375281"
+    }
+   ]
+  },
+  {
+   "id": "e055d5caaef727a646e4a3a2",
+   "headline": "Starts an US-Flughäfen wieder erlaubt",
+   "summary": "Die US-Luftfahrtaufsichtsbehörde hat den landesweiten Stopp für Starts an Flughäfen wieder aufgehoben. Das teilte die Federal Aviation Administration (FAA) auf ihrer Webseite mit.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794604599.0,
+   "status": "sendung",
+   "status_label": "In der Sendung (14.11. 01:19)",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Starts an US-Flughäfen wieder erlaubt",
+     "url": "https://orf.at/stories/3448132/"
     }
    ]
   },
