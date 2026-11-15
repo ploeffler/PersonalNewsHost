@@ -1,10 +1,6 @@
 {
  "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
  "pairs": {
-  "0708b14b244cd6bd128d0deb|1c3bf8e76eff75c35e9edef8": {
-   "decided_at": 1794675635,
-   "same": true
-  },
   "1c9b9daca0350c212cf7e548|cf9122eeb85695e7475f9927": {
    "decided_at": 1794757035,
    "same": true
@@ -43,10 +39,6 @@
   },
   "8f8edbcbc73a02dbf63c12bd|ad81bee621f8223f2dbf2261": {
    "decided_at": 1794757035,
-   "same": false
-  },
-  "e8eec37bebb520536b2f7c51|f81e92171d9d512d5dda773b": {
-   "decided_at": 1794691475,
    "same": false
   }
  },
