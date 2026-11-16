@@ -30,14 +30,18 @@ def fit_lines(draw, text, font, width, limit):
     return lines
 
 
+def load_style(root):
+    template = Path(root) / 'assets/motion/news-card.json'
+    if not template.is_file():
+        template = Path(__file__).resolve().parents[1] / 'assets/motion/news-card.json'
+    return json.loads(template.read_text())
+
+
 def add_news_card(args, filters, current, root, tmp, index, title, source,
                   section, start, end, has_media, font):
     if end <= start:
         return current
-    template = Path(root) / 'assets/motion/news-card.json'
-    if not template.is_file():
-        template = Path(__file__).resolve().parents[1] / 'assets/motion/news-card.json'
-    style = json.loads(template.read_text())
+    style = load_style(root)
     width, padding = style['width'], style['padding']
     height, y = (200, 425) if has_media else (325, 195)
     image = Image.new('RGBA', (width, height), style['background'])
@@ -67,5 +71,48 @@ def add_news_card(args, filters, current, root, tmp, index, title, source,
         f'setpts=PTS-STARTPTS+{start:.6f}/TB[{card}]')
     filters.append(
         f"[{current}][{card}]overlay=x=55:y={y}:eof_action=pass:"
+        f"enable='gte(t,{start:.6f})*lt(t,{end:.6f})'[{output}]")
+    return output
+
+
+def section_transition_end(section_ids, index, start, end, enabled, seconds):
+    """A bumper shares the current story's time; it never delays narration."""
+    if (not enabled or end <= start or
+            (index > 0 and section_ids[index] == section_ids[index - 1])):
+        return start
+    return min(end, start + max(0, seconds))
+
+
+def add_section_transition(args, filters, current, root, tmp, index,
+                           section, start, end, font):
+    if end <= start:
+        return current
+    style = load_style(root)
+    width, padding = style['width'], style['padding']
+    image = Image.new('RGBA', (width, 100), style['background'])
+    draw = ImageDraw.Draw(image)
+    draw.rectangle((0, 0, 6, 99), fill=style['accent'])
+    small = ImageFont.truetype(font, 16)
+    large = ImageFont.truetype(font, 32)
+    draw.text((padding, 12), 'RUBRIK', font=small, fill=style['accent'])
+    title = fit_lines(draw, section, large, width - padding * 2, 1)
+    draw.text((padding, 38), '\n'.join(title), font=large, fill=style['text'])
+    path = Path(tmp) / f'section_transition_{index}.png'
+    image.save(path)
+    input_index = args.count('-i')
+    args += ['-loop', '1', '-framerate', '20', '-i', str(path)]
+    duration = end - start
+    fade = min(style['fade_seconds'], duration / 3)
+    card, output = f'sectioncard{index}', f'sectionstory{index}'
+    filters.append(
+        f'[{input_index}:v]format=rgba,trim=duration={duration:.6f},'
+        f'fade=t=in:st=0:d={fade:.6f}:alpha=1,'
+        f'fade=t=out:st={duration-fade:.6f}:d={fade:.6f}:alpha=1,'
+        f'setpts=PTS-STARTPTS+{start:.6f}/TB[{card}]')
+    # Cubic ease-out: starts outside the canvas and settles at the safe margin.
+    progress = f'min(1,max(0,(t-{start:.6f})/{fade:.6f}))'
+    x = f'55-({width}+55)*pow(1-{progress},3)'
+    filters.append(
+        f"[{current}][{card}]overlay=x='{x}':y=60:eof_action=pass:"
         f"enable='gte(t,{start:.6f})*lt(t,{end:.6f})'[{output}]")
     return output

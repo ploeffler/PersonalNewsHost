@@ -43,3 +43,29 @@ class MotionGraphicsTests(unittest.TestCase):
                                       '', '', '', 1, 1, True, FONT), 'base')
         self.assertEqual(args, [])
         self.assertEqual(filters, [])
+
+    def test_section_transition_only_on_changes_and_within_story(self):
+        from scripts.motion_graphics import section_transition_end
+        sections = ['regional', 'regional', 'sport']
+        self.assertEqual(section_transition_end(sections, 0, 2, 6, True, 1.6), 3.6)
+        self.assertEqual(section_transition_end(sections, 1, 6, 8, True, 1.6), 6)
+        self.assertEqual(section_transition_end(sections, 2, 8, 8.2, True, 1.6), 8.2)
+        self.assertEqual(section_transition_end(sections, 0, 2, 6, False, 1.6), 2)
+
+    def test_section_transition_renders_and_disappears(self):
+        from scripts.motion_graphics import add_section_transition
+        with tempfile.TemporaryDirectory() as tmp:
+            args = ['ffmpeg', '-v', 'error', '-y', '-filter_complex_threads', '1',
+                    '-f', 'lavfi', '-i', 'color=black:s=1280x720:r=20:d=2']
+            filters = []
+            current = add_section_transition(args, filters, '0:v', ROOT, tmp, 0,
+                                             'Österreich', .25, 1.5, FONT)
+            args += ['-filter_complex', ';'.join(filters), '-map', f'[{current}]',
+                     '-t', '2', '-threads', '1', str(Path(tmp) / 'frame-%02d.png')]
+            subprocess.run(args, check=True, capture_output=True)
+            def pixel(frame):
+                with Image.open(Path(tmp) / f'frame-{frame:02d}.png') as image:
+                    return sum(image.getpixel((57, 80))[:3])
+            self.assertEqual(pixel(1), 0)
+            self.assertGreater(pixel(20), 100)
+            self.assertEqual(pixel(36), 0)

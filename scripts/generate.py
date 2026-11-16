@@ -1325,14 +1325,20 @@ def _generate():
                 end_time = boundaries[idx + 3]
                 from urllib.parse import urlparse
                 try:
-                    from scripts.motion_graphics import add_news_card
+                    from scripts.motion_graphics import add_news_card, add_section_transition, section_transition_end, load_style
                 except ModuleNotFoundError:
-                    from motion_graphics import add_news_card
+                    from motion_graphics import add_news_card, add_section_transition, section_transition_end, load_style
                 source = urlparse(selected[idx][2]).hostname or "Quelle im Web"
                 section = section_labels.get(section_ids[idx], "Allgemein")
                 current = add_news_card(
                     args, filters, current, ROOT, tmp, idx, title, source,
                     section, start_time, end_time, story_media[idx] is not None, font)
+                transition_end = section_transition_end(
+                    section_ids, idx, start_time, end_time,
+                    section_settings.get("enabled", False), load_style(ROOT).get("section_seconds", 1.6))
+                current = add_section_transition(
+                    args, filters, current, ROOT, tmp, idx, section,
+                    start_time, transition_end, font)
         # Render source credits on top of every earlier story layer.
         # Use the configured RSS URLs rather than the article landing-page URLs.
         outro_media = Path(tmp) / "outro_media.txt"
