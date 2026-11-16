@@ -1323,51 +1323,16 @@ def _generate():
             for idx, (title, _, _, _) in enumerate(selected):
                 start_time = boundaries[idx + 2]
                 end_time = boundaries[idx + 3]
-                headline_file = Path(tmp) / f"headline_{idx}.txt"
-                # Wrap text to fit the 1280px canvas.
-                import textwrap
-                wrapped = textwrap.wrap(title, width=34, break_long_words=True)
-                if len(wrapped) > 3:
-                    wrapped = wrapped[:3]
-                    wrapped[-1] = wrapped[-1].rstrip(" .") + "…"
-                headline_file.write_text("\n".join(wrapped), encoding="utf-8")
-                print(f"Headline {idx+1}/{story_count}: {start_time:.1f}-{end_time:.1f}s: {title[:65]}")
-                source_file = Path(tmp) / f"source_{idx}.txt"
                 from urllib.parse import urlparse
-                host = urlparse(selected[idx][2]).hostname or "Quelle im Web"
-                source_file.write_text(host[:75], encoding="utf-8")
-                source_label = f"source{idx}"
-                # Unified left-side editorial card, with media above the title.
-                card_x, card_w = 55, 635
-                has_media = story_media[idx] is not None
-                card_y = 425 if has_media else 195
-                card_h = 200 if has_media else 325
-                filters.append(
-                    f"[{current}]drawbox=x={card_x}:y={card_y}:w={card_w}:h={card_h}:"
-                    f"color=0x07182b@0.91:t=fill:"
-                    f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[card{idx}]"
-                )
-                current = f"card{idx}"
-                filters.append(
-                    f"[{current}]drawbox=x={card_x}:y={card_y}:w=7:h={card_h}:"
-                    f"color=0x35d9ff@0.98:t=fill:"
-                    f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[stripe{idx}]"
-                )
-                current = f"stripe{idx}"
-                filters.append(
-                    f"[{current}]drawtext=fontfile={font}:textfile={source_file}:"
-                    f"fontcolor=0x67dfff:fontsize=21:x={card_x + 24}:y={card_y + card_h - 38}:"
-                    f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[credit{idx}]"
-                )
-                current = f"credit{idx}"
-                next_label = "v" if idx == story_count - 1 else f"story{idx}"
-                filters.append(
-                    f"[{current}]drawtext=fontfile={font}:"
-                    f"textfile={headline_file}:fontcolor=white:fontsize={28 if has_media else 34}:"
-                    f"line_spacing=8:x={card_x + 24}:y={card_y + 22}:"
-                    f"enable='gte(t,{start_time:.3f})*lt(t,{end_time:.3f})'[{next_label}]"
-                )
-                current = next_label
+                try:
+                    from scripts.motion_graphics import add_news_card
+                except ModuleNotFoundError:
+                    from motion_graphics import add_news_card
+                source = urlparse(selected[idx][2]).hostname or "Quelle im Web"
+                section = section_labels.get(section_ids[idx], "Allgemein")
+                current = add_news_card(
+                    args, filters, current, ROOT, tmp, idx, title, source,
+                    section, start_time, end_time, story_media[idx] is not None, font)
         # Render source credits on top of every earlier story layer.
         # Use the configured RSS URLs rather than the article landing-page URLs.
         outro_media = Path(tmp) / "outro_media.txt"
