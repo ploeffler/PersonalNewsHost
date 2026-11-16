@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 136,
+  "revision": 137,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -598,7 +598,7 @@
       "id": "T061",
       "epic": "E6",
       "title": "Grafikbausteine (Einblendungen)",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T011"
       ],
@@ -612,7 +612,17 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A09",
-      "lease": null,
+      "lease": {
+        "client": "codex-motion",
+        "token": "264bdad9211e4f91862a757e87f0e15c",
+        "expires_at": 1794856412.8581069,
+        "files": [
+          "assets/motion/",
+          "scripts/generate.py",
+          "scripts/motion_graphics.py",
+          "tests/test_motion_graphics.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -7296,6 +7306,15 @@
       "client": "human-approved-20261105",
       "at": 1793902012.1757617,
       "note": "Explicit human acceptance in project chat on 2026-11-05: abgenommen. Applies to submitted commit b2906bbba9277e1c44aacf08a2ba4977ac5e3a99 and its documented test evidence and limitations. Recorded by Codex on behalf of the human; no claim of an additional independent agent review. Task acceptance only, no version 0.2 release."
+    },
+    {
+      "operation_id": "8a414274ee5b4da7ae1b8cf68496d6fd",
+      "revision": 137,
+      "action": "claim",
+      "task": "T061",
+      "client": "codex-motion",
+      "at": 1794852812.8581069,
+      "note": ""
     }
   ]
 }
