@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 139,
+  "revision": 140,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -625,8 +625,8 @@
       },
       "review": {
         "author": "codex-motion",
-        "commit": "602c829b558c4f0d552f8beec192405dbe74de6c",
-        "checks": "15 tests passed: motion_graphics 3, video_smoke 5, render_load 1, render_progress 6; py_compile and git diff --check passed; rendered 5-second preview visually inspected. First scope: animated category/headline/source cards; existing branding retained. No iart runtime or paid service added.",
+        "commit": "07667253d56b2187df94b4f9d1447fff38272769",
+        "checks": "17 tests passed: motion_graphics 5 including rendered section timing, video_smoke 5, render_load 1, render_progress 6. py_compile and diff --check passed. Nine-second three-story preview visually checked. Section bumpers only on enabled section changes, capped to story duration; no extra runtime service. Independent review pending.",
         "files": [
           "assets/motion/",
           "scripts/generate.py",
@@ -7342,6 +7342,15 @@
       "task": "T061",
       "client": "codex-motion",
       "at": 1794853160.7870436,
+      "note": ""
+    },
+    {
+      "operation_id": "428e0d3527234ddf8a42290eb312e1a0",
+      "revision": 140,
+      "action": "submit",
+      "task": "T061",
+      "client": "codex-motion",
+      "at": 1794853285.3617504,
       "note": ""
     }
   ]
