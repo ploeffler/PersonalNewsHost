@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 137,
+  "revision": 138,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -598,7 +598,7 @@
       "id": "T061",
       "epic": "E6",
       "title": "Grafikbausteine (Einblendungen)",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T011"
       ],
@@ -623,7 +623,17 @@
           "tests/test_motion_graphics.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "codex-motion",
+        "commit": "602c829b558c4f0d552f8beec192405dbe74de6c",
+        "checks": "15 tests passed: motion_graphics 3, video_smoke 5, render_load 1, render_progress 6; py_compile and git diff --check passed; rendered 5-second preview visually inspected. First scope: animated category/headline/source cards; existing branding retained. No iart runtime or paid service added.",
+        "files": [
+          "assets/motion/",
+          "scripts/generate.py",
+          "scripts/motion_graphics.py",
+          "tests/test_motion_graphics.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7314,6 +7324,15 @@
       "task": "T061",
       "client": "codex-motion",
       "at": 1794852812.8581069,
+      "note": ""
+    },
+    {
+      "operation_id": "c797953986e949788081679bef305747",
+      "revision": 138,
+      "action": "submit",
+      "task": "T061",
+      "client": "codex-motion",
+      "at": 1794853032.301862,
       "note": ""
     }
   ]
