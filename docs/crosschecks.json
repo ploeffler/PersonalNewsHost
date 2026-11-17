@@ -4,6 +4,140 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
+    "pipeline_group_id": "6ba4833f42b479a2f56f5a78",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "9f1083454f6acf882aa048c8",
+          "supported": true,
+          "quote": "Die EU plant nach den Hackerattacken auf Kühlsysteme von Supermarktketten neue Sanktionen gegen den Iran."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "ca816cc030160e26e6141c5d",
+          "supported": true,
+          "quote": "Frankreich macht den Iran für die Angriffe verantwortlich."
+        },
+        {
+          "claim_index": 2,
+          "source_id": "29ea253be6e69ab94f51fa38",
+          "supported": true,
+          "quote": "Die jüngsten Cyberangriffe hätten gezeigt, dass europäische Länder nicht außerhalb der Reichweite Teherans liegen, sagte die EU-Chefdiplomatin Kaja Kallas heute nach einem Außenministertreffen in Brüssel."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "119e04e18b6ef888d78a2021",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "54976e4b130484e3d3df2b7a",
+          "supported": true,
+          "quote": "Österreich will die frühere Außenministerin Karin Kneissl ihren Aussagen zufolge ausbürgern."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "4feaafa25634ea9151872479",
+          "supported": true,
+          "quote": "Jetzt ist es offiziell: Karin Kneissl könnte ihren österreichischen Pass verlieren."
+        },
+        {
+          "claim_index": 2,
+          "source_id": "fba2121cc358b45b3303ea8e",
+          "supported": true,
+          "quote": "Die Wiener MA 35 prüft den Entzug der Staatsbürgerschaft der ehemaligen Außenministerin Karin Kneissl."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "248eaf8cd314d46f6aa15249",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "82fa7169dceba944459149a3",
+          "supported": true,
+          "quote": "Mariazell im Bezirk Bruck-Mürzzuschlag: Bislang unbekannte Tatverdächtige gaben sich am Telefon als Polizisten aus und veranlassten eine 86-Jährige zur Herausgabe von Gold und Bargeld."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "82fa7169dceba944459149a3",
+          "supported": true,
+          "quote": "Die Polizei hat die Ermittlungen aufgenommen."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "27f8e0d75cfc170582f6afb9",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "a3eaabd3548f3ffd4d0db481",
+          "supported": true,
+          "quote": "Der US-Elektrobaukonzern Tesla will seinen Standort Grünheide im deutschen Bundesland Brandenburg ausbauen und hat heute dafür weitere Investitionen für rund drei Milliarden Euro angekündigt."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "acf3936aabdff29c18c78877",
+          "supported": true,
+          "quote": "Der US-Elektroautobauer Tesla will ein neues Produktionsgebäude in Grünheide bei Berlin errichten, um dort sogenannte „Cybercabs“ zu produzieren."
+        },
+        {
+          "claim_index": 2,
+          "source_id": "bb0e76af8ae97756d62d3e5f",
+          "supported": true,
+          "quote": "Das Werk soll Kapazitäten für bis zu einer Million \"Cybercabs\" haben."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
     "pipeline_group_id": "1a743a19b78924f288e9e925",
     "verification": {
       "status": "approved",
@@ -33,122 +167,6 @@
           "source_id": "1b0464e3584bf2b82fe5a64c",
           "supported": true,
           "quote": "Die Verschmelzung der beiden Handelsmarken wird damit konkreter."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "065fefdf23cbeeec132c8023",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "4c8fa9a7847dedeb8cf1f35b",
-          "supported": true,
-          "quote": "Stainach-Pürgg im Bezirk Liezen: Blitzeis dürfte Montagfrüh, 16. November 2026, einen Verkehrsunfall mit vier beteiligten Fahrzeugen verursacht haben."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "4c8fa9a7847dedeb8cf1f35b",
-          "supported": true,
-          "quote": "Drei Personen wurden leicht verletzt."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "b2e4bf704399e98339522b4c",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "13ee477d271be55b64efd17c",
-          "supported": true,
-          "quote": "Österreich und vier weitere EU-Staaten haben sich mit Ruanda auf die Umsetzung eines Abschiebezentrums in dem ostafrikanischen Staat geeinigt."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "079f5ce2c5bc52fa1d1f1af8",
-          "supported": true,
-          "quote": "Gemeinsam mit vier weiteren Staaten will Österreich ein Abschiebezentrum in einem Drittstaat errichten – bei diesem soll es sich wohl um Ruanda handeln."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "0bea57ecefaf0cde9e0e9636",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "ffe81c8a41e953b6d2d64c89",
-          "supported": true,
-          "quote": "Der britische Schauspieler Robert Pattinson wird der neue James Bond."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "9644850b4d1987dae92e5d57",
-          "supported": true,
-          "quote": "Es sei die Ehre seines Lebens, so der britische Schauspieler."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "96ae92581ba84dbda033e865",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "9f54234c868fca9e7466b1fb",
-          "supported": true,
-          "quote": "Seit mehreren Monaten sind französische Soldatinnen und Soldaten in der Ukraine tätig."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "4914959087bbde0196b185b2",
-          "supported": true,
-          "quote": "Die Mission namens „Volia“ werde von einem französischen General geleitet und habe eine „leichte und anpassungsfähige Struktur“, meldete der Sender RFI."
         }
       ],
       "conflicts": [],

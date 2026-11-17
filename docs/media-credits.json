@@ -1,6 +1,12 @@
 [
   {
-    "source": "https://www.krone.at/4377270",
+    "source": "https://www.krone.at/4378486",
+    "image_origin": "article_metadata_or_rss",
+    "image_processing": "neural_fsrcnn_x2",
+    "original_media_retained": true
+  },
+  {
+    "source": "https://orf.at/stories/3448374/",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
@@ -10,19 +16,13 @@
     "image_origin": "article_metadata_or_rss"
   },
   {
-    "source": "https://orf.at/stories/3448356/",
+    "source": "https://orf.at/stories/3448378/",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
   },
   {
-    "source": "https://orf.at/stories/3448367/",
-    "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
-    "original_media_retained": true
-  },
-  {
-    "source": "https://www.krone.at/4378081",
+    "source": "https://www.krone.at/4377270",
     "image_origin": "article_metadata_or_rss",
     "image_processing": "neural_fsrcnn_x2",
     "original_media_retained": true
