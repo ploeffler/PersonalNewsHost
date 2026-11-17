@@ -4,6 +4,41 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
+    "pipeline_group_id": "c21c673968d185bbea684cdc",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "17ad8a9a8f82556bacd70d1e",
+          "supported": true,
+          "quote": "Wien liegt bei der Luftqualität nicht im europäischen Spitzenfeld."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "c7f76e66e54a54698c13474c",
+          "supported": true,
+          "quote": "Wien erreicht nur Platz neun mit großem Abstand zu den Siegern."
+        },
+        {
+          "claim_index": 2,
+          "source_id": "eb42b72e1a0eed0cb29f1752",
+          "supported": true,
+          "quote": "In einer aktuellen Studie zur Luftqualität in 40 europäischen Großstädten belegte die..."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
     "pipeline_group_id": "6ba4833f42b479a2f56f5a78",
     "verification": {
       "status": "approved",
@@ -39,7 +74,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "119e04e18b6ef888d78a2021",
+    "pipeline_group_id": "08c565a9a75863707c479c46",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -47,21 +82,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "54976e4b130484e3d3df2b7a",
+          "source_id": "7836df1bf1b6e8ee96e64177",
           "supported": true,
-          "quote": "Österreich will die frühere Außenministerin Karin Kneissl ihren Aussagen zufolge ausbürgern."
+          "quote": "Steiermark | Ein Einbruch im Mai 2026 brachte Ermittler des Landeskriminalamtes (LKA) Steiermark auf die Spur einer Tätergruppe, die in wechselnder Zusammensetzung zahlreiche schwere Straftaten begangen haben soll."
         },
         {
           "claim_index": 1,
-          "source_id": "4feaafa25634ea9151872479",
+          "source_id": "7836df1bf1b6e8ee96e64177",
           "supported": true,
-          "quote": "Jetzt ist es offiziell: Karin Kneissl könnte ihren österreichischen Pass verlieren."
-        },
-        {
-          "claim_index": 2,
-          "source_id": "fba2121cc358b45b3303ea8e",
-          "supported": true,
-          "quote": "Die Wiener MA 35 prüft den Entzug der Staatsbürgerschaft der ehemaligen Außenministerin Karin Kneissl."
+          "quote": "Insgesamt wurden zehn Tatverdächtige festgenommen."
         }
       ],
       "conflicts": [],
@@ -74,7 +103,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "248eaf8cd314d46f6aa15249",
+    "pipeline_group_id": "ad5652533c72f2bb2c64751c",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -82,15 +111,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "82fa7169dceba944459149a3",
+          "source_id": "3cb3558778f8f3351b20dd12",
           "supported": true,
-          "quote": "Mariazell im Bezirk Bruck-Mürzzuschlag: Bislang unbekannte Tatverdächtige gaben sich am Telefon als Polizisten aus und veranlassten eine 86-Jährige zur Herausgabe von Gold und Bargeld."
+          "quote": "Johannes Hörl zog am Dienstagnachmittag seine Bewerbung zur Geschäftsführung am Salzburger Flughafen nach Kritik der FPÖ zurück."
         },
         {
           "claim_index": 1,
-          "source_id": "82fa7169dceba944459149a3",
+          "source_id": "589f8da80dde3b821cabb78f",
           "supported": true,
-          "quote": "Die Polizei hat die Ermittlungen aufgenommen."
+          "quote": "FPÖ wollte der Bestellung von Johannes Hörl nicht zustimmen."
         }
       ],
       "conflicts": [],
@@ -103,7 +132,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "27f8e0d75cfc170582f6afb9",
+    "pipeline_group_id": "eec389e1ed49ba8b75d12d0a",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -111,62 +140,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "a3eaabd3548f3ffd4d0db481",
+          "source_id": "168c576587e82e8d15912a05",
           "supported": true,
-          "quote": "Der US-Elektrobaukonzern Tesla will seinen Standort Grünheide im deutschen Bundesland Brandenburg ausbauen und hat heute dafür weitere Investitionen für rund drei Milliarden Euro angekündigt."
+          "quote": "Mit nur weniger als 100 Stimmen Vorsprung konnte sich das Nagetier gegen seine Konkurrenten durchsetzen – und landete vor dem Steinmarder und dem Biber auf Platz eins."
         },
         {
           "claim_index": 1,
-          "source_id": "acf3936aabdff29c18c78877",
+          "source_id": "91909062bf7bd5ed1f4e4023",
           "supported": true,
-          "quote": "Der US-Elektroautobauer Tesla will ein neues Produktionsgebäude in Grünheide bei Berlin errichten, um dort sogenannte „Cybercabs“ zu produzieren."
-        },
-        {
-          "claim_index": 2,
-          "source_id": "bb0e76af8ae97756d62d3e5f",
-          "supported": true,
-          "quote": "Das Werk soll Kapazitäten für bis zu einer Million \"Cybercabs\" haben."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "1a743a19b78924f288e9e925",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "a7ed9826ce7fc20e63109185",
-          "supported": true,
-          "quote": "Der Libro-Webshop ist schon Geschichte, wie angekündigt, folgen auch die Filialen bald."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "530a8186c74a3a5f65e70866",
-          "supported": true,
-          "quote": "Die bereits angekündigte schrittweise Verschmelzung von Libro und Pagro und das Verschwinden der bekannten österreichischen Handelsmarke wird zeitlich konkreter."
-        },
-        {
-          "claim_index": 2,
-          "source_id": "84a6ac87b4fd8870d1f685d4",
-          "supported": true,
-          "quote": "Derzeit gibt es noch 117 Libro-Filialen und 157 Pagro-Standorte."
-        },
-        {
-          "claim_index": 3,
-          "source_id": "1b0464e3584bf2b82fe5a64c",
-          "supported": true,
-          "quote": "Die Verschmelzung der beiden Handelsmarken wird damit konkreter."
+          "quote": "Das kleine Nagetier landete mit nur weniger als 100 Stimmen Vorsprung auf Platz eins, wie der Naturschutzbund Österreich am Dienstag bekanntgab."
         }
       ],
       "conflicts": [],
