@@ -1,8 +1,40 @@
 {
- "generated_at": 1795020440.367062,
+ "generated_at": 1795043569.7011163,
  "broadcast_at": 1794930917.271927,
  "broadcast_title": "Nachrichten 17.11.2026 um 16:55 Uhr",
  "events": [
+  {
+   "id": "f1527f8e70d969cb9df8e2dd",
+   "headline": "Eisenbahner bekommen 38,5-Stunden-Woche",
+   "summary": "In der fünften Runde gab es die Einigung auf einen neuen Kollektivvertrag für die Eisenbahnerinnen und Eisenbahner. Der Eisenbahner-Kollektivvertrag für 55.000 Beschäftigte in 98 Firmen steht.",
+   "publishers": [
+    "orf.at",
+    "derstandard.at",
+    "krone.at"
+   ],
+   "reports": 3,
+   "newest_at": 1795025200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "KV-Abschluss: 38,5-Stunden-Woche für alle Eisenbahner",
+     "url": "https://orf.at/stories/3448597/"
+    },
+    {
+     "publisher": "derstandard.at",
+     "title": "Eisenbahner bekommen ab September 2027 alle 38,5-Stunden-Woche",
+     "url": "https://www.derstandard.at/story/3000000349922/eisenbahner-bekommen-ab-september-2027-alle-385-stunden-woche?ref=rss"
+    },
+    {
+     "publisher": "krone.at",
+     "title": "Eisenbahner bekommen 38,5-Stunden-Woche",
+     "url": "https://www.krone.at/4381092"
+    }
+   ]
+  },
   {
    "id": "49eb8d72d338354af0258622",
    "headline": "\"Zu lange zugeschaut\": Österreich und Deutschland wollen \"Europäisierung\" von TikTok",
@@ -100,6 +132,110 @@
    ]
   },
   {
+   "id": "c3a771baa1b62ebc69690eb0",
+   "headline": "Russe spähte Datenanalysefirma im Silicon Valley aus",
+   "summary": "Laut US-Behörden wurde der Mann von Russland angeworben, angeleitet und bezahlt. Ein russischer Staatsbürger hat nach Erkenntnissen von US-Behörden im Auftrag Moskaus Beschäftigte einer Datenanalysefirma im Silicon Valley ausgespäht.",
+   "publishers": [
+    "orf.at",
+    "derstandard.at"
+   ],
+   "reports": 2,
+   "newest_at": 1795041585.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Ermittler: Spionage bei Datenanalysefirma im Silicon Valley",
+     "url": "https://orf.at/stories/3448612/"
+    },
+    {
+     "publisher": "derstandard.at",
+     "title": "Russe spähte Datenanalysefirma im Silicon Valley aus",
+     "url": "https://www.derstandard.at/story/3000000349933/ermittler-russe-sp228hte-datenanalysefirma-im-silicon-valley-aus?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "2b7580e108b7da8a18545dd8",
+   "headline": "USA und Venezuela wollen militärisch zusammenarbeiten",
+   "summary": "Hegseth unterzeichnete ein entsprechendes Abkommen in Caracas. US-Verteidigungsminister Pete Hegseth hat gestern bei einem überraschenden Besuch in Caracas nach eigenen Angaben eine Vereinbarung zur militärischen Zusammenarbeit mit Venezuela unterzeichnet.",
+   "publishers": [
+    "orf.at",
+    "derstandard.at"
+   ],
+   "reports": 2,
+   "newest_at": 1795029578.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "USA und Venezuela wollen militärisch zusammenarbeiten",
+     "url": "https://orf.at/stories/3448607/"
+    },
+    {
+     "publisher": "derstandard.at",
+     "title": "USA und Venezuela wollen militärisch zusammenarbeiten",
+     "url": "https://www.derstandard.at/story/3000000349928/usa-und-venezuela-wollen-milit228risch-zusammenarbeiten?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "83cb4473a6d17f572f686bba",
+   "headline": "Afroamerikaner Jeffries soll US-Repräsentantenhaus vorsitzen",
+   "summary": "Erstmals in der amerikanischen Geschichte soll ein afroamerikanischer Politiker im US-Kongress den Vorsitz des Repräsentantenhauses übernehmen. Die Demokraten nominierten den Abgeordneten Hakeem Jeffries am Mittwoch in einer nicht öffentlichen Sitzung für den Posten.",
+   "publishers": [
+    "krone.at",
+    "orf.at"
+   ],
+   "reports": 2,
+   "newest_at": 1795026163.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Jeffries soll Chef des Repräsentantenhauses werden",
+     "url": "https://www.krone.at/4381110"
+    },
+    {
+     "publisher": "orf.at",
+     "title": "Afroamerikaner Jeffries soll US-Repräsentantenhaus vorsitzen",
+     "url": "https://orf.at/stories/3448600/"
+    }
+   ]
+  },
+  {
+   "id": "212455c25175241b527574ce",
+   "headline": "Erneut Politikverbot für Erdogan-Kontrahenten",
+   "summary": "Gegen den inhaftierten Istanbuler Ex-Bürgermeister Ekrem İmamoğlu ist vor Gericht erneut ein Politikverbot erlassen worden, das seine Präsidentschaftskandidatur gefährdet. Das Verbot gefährdet Imamoglus Präsidentschaftskandidatur.",
+   "publishers": [
+    "derstandard.at",
+    "krone.at"
+   ],
+   "reports": 2,
+   "newest_at": 1795024995.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Istanbuls Ex-Bürgermeister Imamoglu erneut mit Politikverbot belegt",
+     "url": "https://www.derstandard.at/story/3000000349926/istanbuls-ex-b252rgermeister-imamoglu-erneut-mit-politikverbot-belegt?ref=rss"
+    },
+    {
+     "publisher": "krone.at",
+     "title": "Erneut Politikverbot für Erdogan-Kontrahenten",
+     "url": "https://www.krone.at/4381084"
+    }
+   ]
+  },
+  {
    "id": "db45ce63baa8409c11f80f8b",
    "headline": "Deutsche Paketdienste GLS und DPD wollen fusionieren",
    "summary": "In Deutschland möchte sich der Paketdienst GLS mit dem Konkurrenten DPD zusammenschließen. Die Marke DPD soll in Deutschland verschwinden, der GLS-Eigentümer 80 Prozent am Joint Venture halten.",
@@ -128,7 +264,7 @@
   {
    "id": "6e5d7afed23e5a2346dcf1dc",
    "headline": "Israelische Panzer rücken im Gazastreifen vor",
-   "summary": "Israelische Panzer sind heute im zentralen Gazastreifen vorgerückt. Bei einem Luftangriff wurde Sanitätern zufolge ein Mensch getötet.",
+   "summary": "Israelische Panzer sind gestern im zentralen Gazastreifen vorgerückt. Bei einem Luftangriff wurde Sanitätern zufolge ein Mensch getötet.",
    "publishers": [
     "derstandard.at",
     "orf.at"
@@ -464,32 +600,6 @@
    ]
   },
   {
-   "id": "cc27da328a15a22cac921ee3",
-   "headline": "Abgängiger (48) nach Suchaktion tot aufgefunden",
-   "summary": "Leider kein gutes Ende nahm eine großangelegte Suchaktion nach einem Steirer am Dienstag: Bei einem Videotelefonat mit seiner Lebensgefährtin erlitt der Mann offenbar einen medizinischen Notfall. Mann aus dem Murtal hatte mitten im Videotelefonat mit seiner Partnerin einen medizinischen Notfall erlitten.",
-   "publishers": [
-    "kleinezeitung.at",
-    "krone.at"
-   ],
-   "reports": 2,
-   "newest_at": 1794986566.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Langenwang: Abgängiger (48) nach Suchaktion tot aufgefunden",
-     "url": "https://www.kleinezeitung.at/artikel/41464668/langenwang-abgaengiger-48-konnte-nur-mehr-tot-gefunden-werden"
-    },
-    {
-     "publisher": "krone.at",
-     "title": "Abgängiger (48) nach Suchaktion tot aufgefunden",
-     "url": "https://www.krone.at/4380127"
-    }
-   ]
-  },
-  {
    "id": "50f607a3bdaca15066a13e99",
    "headline": "Demokratin holt Senatssitz in Alaska",
    "summary": "Zwei Wochen nach den Wahlen zum US-Kongress haben die Demokraten den letzten noch offenen Senatssitz im Bundesstaat Alaska errungen. Damit sind alle Rennen um den US-Senat entschieden.",
@@ -646,106 +756,1722 @@
    ]
   },
   {
-   "id": "44e896b365bc02b0aed62632",
-   "headline": "Israel – Österreich: Die ÖFB-Spieler in der Einzelkritik",
-   "summary": "Österreichs Fußball-Nationalteam beendete die Nations-League-Gruppe B3 dank eines 1:1 gegen Israel ungeschlagen. Nach einem Peretz-Traumtor gelang dem ÖFB-Team trotz langer Feldüberlegenheit nur mehr der Ausgleich.",
+   "id": "6b432c759caa9520b2f03d3f",
+   "headline": "Commerzbank-Übernahme: Berlin und Unicredit einig",
+   "summary": "Die deutsche Regierung und die italienische Großbank UniCredit haben sich auf die Bedingungen für eine Übernahme der Commerzbank geeinigt. Deutschlands Finanzminister Lars Klingbeil sagte heute der Nachrichtenagentur Reuters nach Gesprächen mit UniCredit-Chef Andrea Orcel: „Wir haben eine gemeinsame Basis gefunden.“ UniCredit habe klare Zusagen zum Standort Deutschland und zu den Rechten der Beschäftigten gemacht.",
    "publishers": [
-    "derstandard.at",
-    "kleinezeitung.at"
-   ],
-   "reports": 2,
-   "newest_at": 1794954334.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Überlegenes ÖFB-Team erreicht zum Abschluss der Nations League nur 1:1 gegen Israel",
-     "url": "https://www.derstandard.at/story/3000000349748/ueberlegenes-oefb-team-erreicht-zum-abschluss-der-nations-league-nur-11-gegen-israel?ref=rss"
-    },
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Israel – Österreich: Die ÖFB-Spieler in der Einzelkritik",
-     "url": "https://www.kleinezeitung.at/artikel/41464739/israel-oesterreich-die-oefb-spieler-in-der-einzelkritik"
-    }
-   ]
-  },
-  {
-   "id": "379369729dc996f3804fef2c",
-   "headline": "Doskozil fordert Rückzug Bablers auch als Minister",
-   "summary": "Burgenlands Landeshauptmann Hans Peter Doskozil (SPÖ) fordert den vollständigen Rückzug von Bundesparteichef Andreas Babler. „Zur personellen Neuaufstellung gehört auch, dass Andreas Babler aus allen Regierungsämtern gehen muss“, sagte Doskozil gegenüber „Heute“.",
-   "publishers": [
-    "kleinezeitung.at",
     "orf.at"
    ],
-   "reports": 2,
-   "newest_at": 1794952335.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Doskozil fordert Rückzug Bablers auch als Minister",
-     "url": "https://www.kleinezeitung.at/artikel/41464642/doskozil-fordert-rueckzug-bablers-auch-als-minister"
-    },
-    {
-     "publisher": "orf.at",
-     "title": "Doskozil fordert Rückzug Bablers auch als Minister",
-     "url": "https://orf.at/stories/3448510/"
-    }
-   ]
-  },
-  {
-   "id": "168eb100cc9a55b483c67dc2",
-   "headline": "Internes Kommunikationsnetz des US-Geheimdienstes NSA ausgefallen",
-   "summary": "Auch beim iPhone-Hersteller Apple gab es am Dienstag Probleme. Das interne Kommunikationsnetzwerk des US-Geheimdienstes NSA ist nach Informationen des US-Senders CNN von Störungen betroffen.",
-   "publishers": [
-    "orf.at",
-    "derstandard.at"
-   ],
-   "reports": 2,
-   "newest_at": 1794942915.0,
+   "reports": 1,
+   "newest_at": 1795043062.0,
    "status": "nicht",
    "status_label": "Nicht in der Sendung",
    "breaking_at": null,
    "links": [
     {
      "publisher": "orf.at",
-     "title": "Internes Kommunikationsnetz der NSA gestört",
-     "url": "https://orf.at/stories/3448500/"
-    },
-    {
-     "publisher": "derstandard.at",
-     "title": "Internes Kommunikationsnetz des US-Geheimdienstes NSA ausgefallen",
-     "url": "https://www.derstandard.at/story/3000000349745/internes-kommunikationsnetz-des-us-geheimdienstes-nsa-ausgefallen?ref=rss"
+     "title": "Commerzbank-Übernahme: Berlin und Unicredit einig",
+     "url": "https://orf.at/stories/3448616/"
     }
    ]
   },
   {
-   "id": "9787d0de70ae99819fa143f5",
-   "headline": "Handels-KV: Keine Einigung, Betriebsversammlungen geplant",
-   "summary": "Die dritte Runde der Kollektivvertragsverhandlungen für die 420.000 Angestellten und 19.000 Lehrlinge im Handel ist gestern ergebnislos geblieben. Eine Einigung galt bereits im Vorfeld als unwahrscheinlich.",
+   "id": "ea01f3533663d1b3b855d03c",
+   "headline": "KI-Euphorie trifft Angst vor „Blase“",
+   "summary": "Mit Anthropic will am Donnerstag erstmals eines der größten KI-Unternehmen an die Börse. Die Erwartungen an den Entwickler des KI-Modells Claude sind riesig: Im Vorfeld des Börsengangs wurden laut Bloomberg rund sechsmal mehr Aktien „bestellt“, als angeboten werden.",
    "publishers": [
-    "krone.at",
     "orf.at"
    ],
-   "reports": 2,
-   "newest_at": 1794937001.0,
+   "reports": 1,
+   "newest_at": 1795042910.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "KI-Euphorie trifft Angst vor „Blase“",
+     "url": "https://orf.at/stories/3448322/"
+    }
+   ]
+  },
+  {
+   "id": "aae365f3619e0d4e5771a8c4",
+   "headline": "Erneut Angriff auf Krim-Brücke",
+   "summary": "Die von Russland erbaute Brücke zur annektierten Halbinsel Krim ist erneut gestern Abend erneut unter Beschuss geraten. Der Verkehr wurde vorübergehend eingestellt, wie Sergei Aksjonow, der von Russland eingesetzte Gouverneur der Krim, via Telegram mitteilte.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795042906.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Erneut Angriff auf Krim-Brücke",
+     "url": "https://orf.at/stories/3448615/"
+    }
+   ]
+  },
+  {
+   "id": "45b3c989b292d36e8c9edf54",
+   "headline": "Künstliche Befruchtung: Das zahlt Ihnen der Staat",
+   "summary": "Viele Paare wissen es nicht: Wer in Österreich eine künstliche Befruchtung benötigt, muss die hohen Behandlungskosten nicht allein tragen. Unter bestimmten Voraussetzungen übernimmt der Staat einen Großteil der Ausgaben.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795042882.0,
    "status": "nicht",
    "status_label": "Nicht in der Sendung",
    "breaking_at": null,
    "links": [
     {
      "publisher": "krone.at",
-     "title": "Einigung im Handel in weiter Ferne, Streik droht",
-     "url": "https://www.krone.at/4379704"
-    },
+     "title": "Künstliche Befruchtung: Das zahlt Ihnen der Staat",
+     "url": "https://www.krone.at/4378605"
+    }
+   ]
+  },
+  {
+   "id": "d16e4b7195ac6fa7e457fa25",
+   "headline": "Brau Union Bierkulturbericht: Wir trinken regional",
+   "summary": "Bier begleitet uns in Österreich das ganze Jahr: vom Gastro-Besuch bis zum Anstoßen an Festtagen. Der neue Bierkulturbericht der Brau Union zeigt, wie sich der heimische Biergenuss verändert.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795042882.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Brau Union Bierkulturbericht: Wir trinken regional",
+     "url": "https://www.krone.at/4379276"
+    }
+   ]
+  },
+  {
+   "id": "9e5849e96cdb76bf53bc9a3f",
+   "headline": "Standardrätsel C 11447",
+   "summary": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795042860.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Standardrätsel C 11447",
+     "url": "https://www.derstandard.at/story/3000000348191/standardraetsel-c-11447?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "622557710167b98ef6723059",
+   "headline": "Iran meldet Explosionen an drei Schiffen bei Straße von Hormus",
+   "summary": "Die Besatzungen der Tanker hätten Warnungen der Revolutionsgarden ignoriert. Die Schiffe sind manövrierunfähig, über mögliche Opfer ist nichts bekannt.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795040573.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Iran meldet Explosionen an drei Schiffen bei Straße von Hormus",
+     "url": "https://www.derstandard.at/story/3000000349932/iran-meldet-explosionen-an-drei-schiffen-bei-stra223e-von-hormuz?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "73032991920cbb8fe8382631",
+   "headline": "Brand in Holzbetrieb forderte die Einsatzkräfte",
+   "summary": "Eine weithin sichtbare Rauchsäule stieg Mittwochabend vom Gelände eines Holzverarbeitungsbetriebes in Fügen im Tiroler Zillertal auf. Ein Brand war auf dem Firmengelände ausgebrochen.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795040162.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Brand in Holzbetrieb forderte die Einsatzkräfte",
+     "url": "https://www.krone.at/4381196"
+    }
+   ]
+  },
+  {
+   "id": "93c563dab0a8e1987959584f",
+   "headline": "Studie: Russland setzte verbotenes Tränengas ein",
+   "summary": "Russland soll 2024 im Krieg verbotenes Tränengas gegen ukrainische Truppen eingesetzt haben. Das ergab eine von der Ukraine mit Unterstützung der internationalen Chemiewaffenkontrollbehörde OPCW durchgeführte Untersuchung, über welche die Nachrichtenagentur AP am Dienstag berichtete.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795040107.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
     {
      "publisher": "orf.at",
-     "title": "Handels-KV: Keine Einigung, Betriebsversammlungen geplant",
-     "url": "https://orf.at/stories/3448497/"
+     "title": "Studie: Russland setzte verbotenes Tränengas ein",
+     "url": "https://orf.at/stories/3448614/"
+    }
+   ]
+  },
+  {
+   "id": "96efba1125d8fd250e85dd35",
+   "headline": "Yannick Shetty in „ZiB 2“: „Opposition hat jetzt auch eine Verantwortung“",
+   "summary": "Der Neos-Klubobmann hofft auf die Zustimmung der Opposition bei Wehrdienstreform und der Bundesstaatsanwaltschaft. Es werde „noch weitere Gespräche brauchen“.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795038958.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Yannick Shetty in „ZiB 2“: „Opposition hat jetzt auch eine Verantwortung“",
+     "url": "https://www.kleinezeitung.at/artikel/41467835/yannick-shetty-in-zib-2-opposition-hat-jetzt-auch-eine-verantwortung"
+    }
+   ]
+  },
+  {
+   "id": "360f41928bda784baad44ec3",
+   "headline": "Alcaraz steht bei ATP Finals im Halbfinale",
+   "summary": "Der Spanier ist nach einem glatten Sieg gegen Medwedew nun bereits elf Partien unbesiegt. Im Abendspiel setzte sich Tiafoe gegen Cobolli durch.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795037967.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Alcaraz steht bei ATP Finals im Halbfinale",
+     "url": "https://www.derstandard.at/story/3000000349931/alcaraz-steht-bei-atp-finals-im-halbfinale?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "c2870bd1fefcb5e5a7294f24",
+   "headline": "Anthropic setzt Ausgabepreis laut Insidern auf 83 US-Dollar je Aktie hoch",
+   "summary": "Ursprünglich war eine Spanne von 70 bis 78 Dollar vorgesehen gewesen. Das Unternehmen steuert auf einen der größten Börsengänge der Geschichte zu.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795037880.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Anthropic setzt Ausgabepreis laut Insidern auf 83 US-Dollar je Aktie hoch",
+     "url": "https://www.derstandard.at/story/3000000349930/anthropic-setzt-ausgabepreis-laut-insidern-auf-83-us-dollar-je-aktie-hoch?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "7f7ec4ea55bcc0ee2b94e42e",
+   "headline": "500 Millionen weniger: FPÖ-Sparplan für den ORF",
+   "summary": "Scharfe Kritik bei „Brennpunkt Medien“ mit Jana Pasching: FPÖ-General Christian Hafenecker nimmt den ORF ins Visier und rechnet mit dem „Privilegienstadl“ am Küniglberg ab. Er fordert das radikale Aus für die Haushaltsabgabe, will das Milliarden-Budget halbieren und den Sparstift gezielt bei den Spitzenverdienern ansetzen.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795037744.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "500 Millionen weniger: FPÖ-Sparplan für den ORF",
+     "url": "https://www.krone.at/4378097"
+    }
+   ]
+  },
+  {
+   "id": "98f50836a4787647cf635293",
+   "headline": "Straße von Hormus: Iran meldet Explosionen an Schiffen",
+   "summary": "Die iranische Revolutionsgarde hat erneut Explosionen an Schiffen östlich der Straße von Hormus gemeldet. Drei weitere Öltanker seien auf Minen gefahren und in Brand geraten, berichteten gestern mehrere iranische Staatsmedien unter Berufung auf die Revolutionsgarde.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795037621.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Straße von Hormus: Iran meldet Explosionen an Schiffen",
+     "url": "https://orf.at/stories/3448611/"
+    }
+   ]
+  },
+  {
+   "id": "670a92bd77cc9fc2823d98c6",
+   "headline": "Bei Kärntner Bauer „zwitschern die Vögel und läuten die Glocken“",
+   "summary": "Bauer Thomas aus dem Bezirk Völkermarkt schwebt mit seiner Selina im siebenten Himmel. Am Kärntner Hof ist mittlerweile auch die Romantik eingezogen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795037400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Bei Kärntner Bauer „zwitschern die Vögel und läuten die Glocken“",
+     "url": "https://www.kleinezeitung.at/artikel/41467307/bei-kaerntner-bauer-zwitschern-die-voegel-und-laeuten-die-glocken"
+    }
+   ]
+  },
+  {
+   "id": "0ce5606df839501c0f4a2861",
+   "headline": "Extremwetter: Weinproduktion nahe Rekordtief",
+   "summary": "Die globale Weinproduktion blieb 2026 nahe an den Rekordtiefs. Damit war die Erzeugung das vierte Jahr in Folge unterdurchschnittlich, da Hitze, Dürre und Frost die Erträge in wichtigen Anbauregionen schmälern, teilte die Internationale Organisation für Rebe und Wein (OIV) am Mittwoch mit.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795036201.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Extremwetter: Weinproduktion nahe Rekordtief",
+     "url": "https://www.krone.at/4381223"
+    }
+   ]
+  },
+  {
+   "id": "aa772a3ec4a83778789851e1",
+   "headline": "Wechselbad der Erwartungen",
+   "summary": "Nach einem freundlichen Auftakt zum Gipfel der Asiatisch-Pazifischen Wirtschaftsgemeinschaft (APEC) am Mittwoch kommt es am Donnerstag zum historischen Dreiergipfel der Präsidenten Donald Trump, Xi Jinping und Wladimir Putin. Themen gäbe es bei dem Treffen im chinesischen Shenzhen genügend, doch ob und welche Ergebnisse zu erwarten sind, darüber gibt es unterschiedliche Ansichten.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795035777.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Wechselbad der Erwartungen",
+     "url": "https://orf.at/stories/3448605/"
+    }
+   ]
+  },
+  {
+   "id": "d00e5759fa286f02411d428a",
+   "headline": "Obfrau: „Wir wollen unbedingt in die 2. Liga“",
+   "summary": "Bergheim setzte sich in der Salzburger Frauenliga mit einem 6:0 gegen Eugendorf die Winterkrone auf. Der Klub plant den Aufstieg.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795035693.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Obfrau: „Wir wollen unbedingt in die 2. Liga“",
+     "url": "https://www.krone.at/4381230"
+    }
+   ]
+  },
+  {
+   "id": "16c4bcbb4469d3b0a6f7ddbc",
+   "headline": "Topscorer beim Debüt: Cassius Stanley führte die Bulls zum Sieg",
+   "summary": "In der ENBL fuhren die Kapfenberger gegen BC CIU einen 96:86-Sieg ein. Cassius Stanley war beim Debüt der Topscorer.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795034932.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Topscorer beim Debüt: Cassius Stanley führte die Bulls zum Sieg",
+     "url": "https://www.kleinezeitung.at/artikel/41467792/topscorer-beim-debuet-cassius-stanley-fuehrte-die-bulls-zum-sieg"
+    }
+   ]
+  },
+  {
+   "id": "377e2b4151c9291ec9200f95",
+   "headline": "ORF trennt sich von TV-Regisseur: „Ihr habt echt Klasse, Hut ab“",
+   "summary": "Axel Hoffmann arbeitete 22 Jahre lang mit dem ORF zusammen. Über das plötzliche Ende zeigt er sich auf Instagram empört.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795034666.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "ORF trennt sich von TV-Regisseur: „Ihr habt echt Klasse, Hut ab“",
+     "url": "https://www.kleinezeitung.at/artikel/41467812/orf-trennt-sich-von-tv-regisseur-ihr-habt-echt-klasse-hut-ab"
+    }
+   ]
+  },
+  {
+   "id": "a1d3d39e6ceac5a643233301",
+   "headline": "Neuer Wels-Boss arbeitet parallel bei Blau-Weiß",
+   "summary": "Ein Mann, zwei Klubs! Kuriose Konstellation derzeit um Ronald Riepl: Der 46-Jährige ist bei Zweitliga-Leader Blau-Weiß als Teammanager angestellt – und parallel bei Liga-Konkurrent FC Hertha Wels neuer Geschäftsführer.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795033845.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Neuer Wels-Boss arbeitet parallel bei Blau-Weiß",
+     "url": "https://www.krone.at/4380649"
+    }
+   ]
+  },
+  {
+   "id": "27d649d32882cb2bbb374c64",
+   "headline": "Ein Riesenrad mitten auf einem Weihnachtsmarkt",
+   "summary": "Es ist durchaus ungewöhnlich und wohl einzigartig in ganz Tirol: Ein 35 (!) Meter hohes Riesenrad ist eine der Attraktionen des Kitzbüheler Advent – mit voll verglasten, beheizten Gondeln und Rundumsicht inklusive. Seit Mittwochnachmittag ist es in Betrieb, die „Krone“ hat es getestet.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795033754.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Ein Riesenrad mitten auf einem Weihnachtsmarkt",
+     "url": "https://www.krone.at/4380519"
+    }
+   ]
+  },
+  {
+   "id": "60656cbe71f73b7cd71ec226",
+   "headline": "Villa von ukrainischem Milliardär beschlagnahmt",
+   "summary": "Kostjantyn Zhevago zählt zu den reichsten Männern der Ukraine. Der Geschäftsmann wird im eigenen Land wegen Veruntreuung von 113 Millionen Euro und Geldwäsche gesucht.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795033224.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Villa von ukrainischem Milliardär beschlagnahmt",
+     "url": "https://www.krone.at/4381182"
+    }
+   ]
+  },
+  {
+   "id": "11acd8396bb3584b3942b588",
+   "headline": "Grenzkontrolle endete für Vorarlberger teuer",
+   "summary": "Drei Fahndungstreffer in zwei Tagen landete die deutsche Bundespolizei zu Wochenbeginn an der Grenze bei Hörbranz, darunter ein in Vorarlberg lebender Mann, der zur Fahndung ausgeschrieben war. Der 31-Jährige hatte in Deutschland noch eine Geldstrafe wegen Diebstahls offen.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795033194.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Grenzkontrolle endete für Vorarlberger teuer",
+     "url": "https://www.krone.at/4380807"
+    }
+   ]
+  },
+  {
+   "id": "b1807d12a7556d4e1a5ef5c4",
+   "headline": "Auto in Flammen: Steirerin konnte noch entkommen",
+   "summary": "Horrorvorstellung für jeden Autofahrer: Am Mittwoch begann der Pkw einer 24-jährigen Steirerin während der Fahrt plötzlich zu brennen. Die junge Frau konnte noch rechtzeitig anhalten und mit ihren beiden Hunden flüchten, bevor der Wagen komplett ausbrannte.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795033078.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Auto in Flammen: Steirerin konnte noch entkommen",
+     "url": "https://www.krone.at/4381176"
+    }
+   ]
+  },
+  {
+   "id": "94f4384715c3a81ede97ebb8",
+   "headline": "Semriach: 24-Jährige rettete sich mit Hunden aus brennendem Auto",
+   "summary": "Fahrzeug hatte während der Fahrt plötzlich zu brennen begonnen. Verletzt wurde niemand.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795033031.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Semriach: 24-Jährige rettete sich mit Hunden aus brennendem Auto",
+     "url": "https://www.kleinezeitung.at/artikel/41467823/semriach-24-jaehrige-rettete-sich-mit-hunden-aus-brennendem-auto"
+    }
+   ]
+  },
+  {
+   "id": "8893b6916f6cd723943f4405",
+   "headline": "London: Speck-Chips und „Lemon Curd“ bleiben",
+   "summary": "Vor dem EU-Großbritannien-Gipfel am Freitag in Brüssel hat die britische Regierung versucht, einigen „Mythen“ über die Verhandlungen entgegenzutreten: London werde Kartoffelchips mit Geschmack nach Räucherspeck nicht verbieten müssen, betonte London. Die traditionelle britische Zitronencreme werde ihre eigene Bezeichnung behalten können.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795032657.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "London: Speck-Chips und „Lemon Curd“ bleiben",
+     "url": "https://www.krone.at/4381170"
+    }
+   ]
+  },
+  {
+   "id": "6f07098656d7219e6f1bf0dc",
+   "headline": "ÖBB zogen gleich zwei Mitarbeiter aus Verkehr",
+   "summary": "Großer Ärger bei Fahrgästen in Niederösterreich: Mögliche „Fehlhandlungen“ hatten wohl Auswirkung auf die Sicherheit im Bahnverkehr, längere Wartezeiten waren die Folge. Während die Züge stillstanden, wurden die Fahrgäste über die Ursache im Dunkeln gelassen.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795032523.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "ÖBB zogen gleich zwei Mitarbeiter aus Verkehr",
+     "url": "https://www.krone.at/4380796"
+    }
+   ]
+  },
+  {
+   "id": "2312e261c8ba299ad40a7e8e",
+   "headline": "Auto wurde von S-Bahn erfasst: Weststeirerin blieb unverletzt",
+   "summary": "Ein Unfall auf einer unbeschrankten Eisenbahnkreuzung in Bärnbach ging am Mittwochabend glimpflich aus. 58-Jährige hatte Rotlicht übersehen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795032471.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Auto wurde von S-Bahn erfasst: Weststeirerin blieb unverletzt",
+     "url": "https://www.kleinezeitung.at/artikel/41467817/auto-wurde-von-s-bahn-erfasst-weststeirerin-blieb-unverletzt"
+    }
+   ]
+  },
+  {
+   "id": "60a6e0704cb222edfd9b807e",
+   "headline": "NEOS-Klubobmann Shetty zu Gast",
+   "summary": "Die Bundesregierung will in den nächsten Wochen mehrere Vorhaben auf den Weg bringen. Doch noch wird etwa über die Wehrdienstreform und die Bundesstaatsanwaltschaft verhandelt.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795032400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "NEOS-Klubobmann Shetty zu Gast",
+     "url": "https://orf.at/stories/3448610/"
+    }
+   ]
+  },
+  {
+   "id": "cc7000f4f0508fd096d02c92",
+   "headline": "Gesundheitszentrum in Wolfsberg kurz vor Öffnung",
+   "summary": "Lose Kabel, Staub und werkelnde Bauarbeiter – die Arbeiten im entstehenden Wolfsberger Primärversorgungszentrum laufen auf Hochtouren. Ein Besuch auf der Baustelle verrät Näheres.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795032004.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Gesundheitszentrum in Wolfsberg kurz vor Öffnung",
+     "url": "https://www.krone.at/4380942"
+    }
+   ]
+  },
+  {
+   "id": "599fa2310643972df65cdb11",
+   "headline": "Jüngste Spuren des Homo erectus stellen Theorien zu seinem Aussterben infrage",
+   "summary": "Forscherinnen und Forscher entdeckten in chinesischen Höhlen unerwartet junge Spuren von Homo erectus, aus dem sich unter anderem der Homo sapiens entwickelte.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795032000.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Jüngste Spuren des Homo erectus stellen Theorien zu seinem Aussterben infrage",
+     "url": "https://www.derstandard.at/story/3000000349836/juengste-spuren-des-homo-erectus-stellen-theorien-zu-seinem-aussterben-infrage?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "468a885727e02c16b48a3662",
+   "headline": "Kollision zwischen Pkw und Zug",
+   "summary": "Voitsberg | Bärnbach – Mittwochnachmittag, 18. November 2026, kam es an einem unbeschrankten Bahnübergang zu einer Kollision zwischen einem Pkw und einem Zug. Verletzt wurde niemand.",
+   "publishers": [
+    "bmi.gv.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795031700.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "bmi.gv.at",
+     "title": "Kollision zwischen Pkw und Zug",
+     "url": ""
+    }
+   ]
+  },
+  {
+   "id": "5971f1dd0b6959ed91b3aa8c",
+   "headline": "Weiter Uneinigkeit bei Insolvenzentgeltfonds",
+   "summary": "In der Regierung ist man weiter uneins, wie mit der Finanzierungslücke im Insolvenzentgeltfonds (IEF) umgegangen werden soll. Das zeigte gestern eine Debatte im Nationalrat zu einem Rechnungshofbericht zum IEF.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795031394.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Weiter Uneinigkeit bei Insolvenzentgeltfonds",
+     "url": "https://orf.at/stories/3448609/"
+    }
+   ]
+  },
+  {
+   "id": "5781692cdc141863dabe7014",
+   "headline": "Premierentor für 16-Jährigen, Niederlage für den VSV",
+   "summary": "Nach zuletzt zwei Siegen in Folge ging der VSV in der Ice Hockey League am Mittwoch als Verlierer vom Eis – 3:7 in Budapest. Walford nach Bandencheck verletzt.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795031235.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Premierentor für 16-Jährigen, Niederlage für den VSV",
+     "url": "https://www.kleinezeitung.at/artikel/41465163/gelingt-dem-vsv-der-dritte-sieg-in-serie"
+    }
+   ]
+  },
+  {
+   "id": "9512875f93033ff1f0286fd9",
+   "headline": "Forscher klärte das Schicksal Tausender Soldaten",
+   "summary": "Historiker Stefan Karner klärte das Schicksal Tausender vermisster österreichischer Soldaten. Der Wissenschafter hatte dafür Zugang zu geheimen sowjetischen Archiven – ein seltenes Privileg.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795030232.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Forscher klärte das Schicksal Tausender Soldaten",
+     "url": "https://www.krone.at/4381073"
+    }
+   ]
+  },
+  {
+   "id": "7c0c9b81cf46e3c0fba29883",
+   "headline": "Pkw vollständig ausgebrannt",
+   "summary": "Graz-Umgebung | Semriach – Mittwochnachmittag, 18. November 2026, geriet ein Pkw in Brand. Die 24-jährige Lenkerin konnte das Fahrzeug rechtzeitig verlassen und blieb unverletzt.",
+   "publishers": [
+    "bmi.gv.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795030080.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "bmi.gv.at",
+     "title": "Pkw vollständig ausgebrannt",
+     "url": ""
+    }
+   ]
+  },
+  {
+   "id": "258d0525566bae1d1605bfa4",
+   "headline": "Die Volkspartei sucht den Weg aus der Dauerkrise",
+   "summary": "Was für ein Schlamassel! Die Salzburger ÖVP stolpert von einer Causa in die nächste.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795028445.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Die Volkspartei sucht den Weg aus der Dauerkrise",
+     "url": "https://www.krone.at/4381010"
+    }
+   ]
+  },
+  {
+   "id": "4401885c2a5cf89e17265aae",
+   "headline": "Der Ortstafel-Dieb von Gundersdorf bekommt eine „Gnadenfrist“",
+   "summary": "Gemeinde St. Stefan gibt der „verantwortlichen Person“ noch eine Woche Zeit, die Ortstafel zurückzubringen. In den letzten Monaten gab es ähnliche Diebstähle auch in anderen steirischen Orten.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795028442.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Der Ortstafel-Dieb von Gundersdorf bekommt eine „Gnadenfrist“",
+     "url": "https://www.kleinezeitung.at/artikel/41467795/der-ortstafel-dieb-von-gundersdorf-bekommt-eine-gnadenfrist"
+    }
+   ]
+  },
+  {
+   "id": "de10e2abac37457a9d4c1c81",
+   "headline": "Die Obersteiermark droht bei der Bevölkerung auszurinnen",
+   "summary": "Die ÖROK-Prognose zeichnet für die steirische Bevölkerungsentwicklung ein klares Bild: Graz und das Umland wachsen, die Ober- und die Südoststeiermark dünnen aus. Starke Verluste in Murau und im Murtal.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795028400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Die Obersteiermark droht bei der Bevölkerung auszurinnen",
+     "url": "https://www.kleinezeitung.at/artikel/41467203/die-obersteiermark-droht-bei-der-bevoelkerung-auszurinnen"
+    }
+   ]
+  },
+  {
+   "id": "c276c5d4cc098582f0dbb606",
+   "headline": "Designerinnen: „Wir sitzen eigentlich zu viel“",
+   "summary": "Wir haben mit den deutschen Designerinnen Lisa Ertel und Anne-Sophie Oberkrome von Studio Œ über Arbeiten am Laptop und ihren ersten Loungechair gesprochen.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795028400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Designerinnen: „Wir sitzen eigentlich zu viel“",
+     "url": "https://www.derstandard.at/story/3000000331401/designerinnen-wir-sitzen-eigentlich-zu-viel?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "9080160b421ca29e2602145f",
+   "headline": "Gegen Gewalt: Polizei und Novum bündeln Kräfte in Murau",
+   "summary": "Gemeinsam gegen Gewalt im Bezirk Murau: Mit einer neuen Sicherheitspartnerschaft stärken die Polizei und der Verein Novum ihre Zusammenarbeit in der Gewaltprävention.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795028400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Gegen Gewalt: Polizei und Novum bündeln Kräfte in Murau",
+     "url": "https://www.kleinezeitung.at/artikel/41465794/gegen-gewalt-polizei-und-novum-buendeln-kraefte-in-murau"
+    }
+   ]
+  },
+  {
+   "id": "f415f1cf11ec5a0bc5b92044",
+   "headline": "Im Bus masturbiert: Angeklagter „droht“ dem Richter mit lebenslanger Haft",
+   "summary": "Ein 28-Jähriger soll im Bus vor zwei jungen Frauen masturbiert haben. Im Verhandlungssaal des Bezirksgerichts Weiz macht er einen sehr wirren Eindruck.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795028400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Im Bus masturbiert: Angeklagter „droht“ dem Richter mit lebenslanger Haft",
+     "url": "https://www.kleinezeitung.at/artikel/41466721/im-bus-masturbiert-angeklagter-droht-dem-richter-mit-lebenslanger-haft"
+    }
+   ]
+  },
+  {
+   "id": "cef09b58f98194b2c1707592",
+   "headline": "Von Anti-Slapp bis Zivildiener: 30 neue Anträge im Nationalrat",
+   "summary": "Viele Initiativen sind noch nicht fertig verhandelt, sie mussten aber trotzdem wegen parlamentarischer Fristen am Mittwoch eingebracht werden.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795028400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Von Anti-Slapp bis Zivildiener: 30 neue Anträge im Nationalrat",
+     "url": "https://www.kleinezeitung.at/artikel/41467584/von-anti-slapp-bis-zivildiener-30-neue-antraege-im-nationalrat"
+    }
+   ]
+  },
+  {
+   "id": "ca8268246516a0c1ddf8141b",
+   "headline": "Trump und Putin planen in China ein Zweiergespräch",
+   "summary": "Am Donnerstag kommen Trump, Putin und Xi erstmals bei einem Dreiergipfel zusammen. Zusätzlich soll es in China auch ein Vieraugengespräch zwischen dem US-Präsidenten und Putin geben.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795028037.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Trump und Putin planen in China ein Zweiergespräch",
+     "url": "https://www.krone.at/4381142"
+    }
+   ]
+  },
+  {
+   "id": "8c41301a1434b56acd818afe",
+   "headline": "Strafantrag gegen Stadtwerke-Chefs: Wer zieht nun wirklich Konsequenzen?",
+   "summary": "Die Vorstände der Stadtwerke Klagenfurt müssen sich vor Gericht verantworten. Politik und Aufsichtsrat sollten Entschlossenheit demonstrieren, um den Ruf des Unternehmens zu schützen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795027101.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Strafantrag gegen Stadtwerke-Chefs: Wer zieht nun wirklich Konsequenzen?",
+     "url": "https://www.kleinezeitung.at/artikel/41466177/strafantrag-gegen-stadtwerke-chefs-wer-zieht-nun-wirklich-konsequenzen"
+    }
+   ]
+  },
+  {
+   "id": "511bc56a09e4b7e0502e4977",
+   "headline": "Friedhof verbietet Senioren, Grab zurückzugeben",
+   "summary": "Eva Kaiser kann die Ruhestätte ihrer Schwiegereltern am Wiener Zentralfriedhof nicht mehr pflegen und möchte sie vorzeitig zurückgeben. Geld will sie keines zurück.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795026860.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Friedhof verbietet Senioren, Grab zurückzugeben",
+     "url": "https://www.krone.at/4380467"
+    }
+   ]
+  },
+  {
+   "id": "8119f9217728280efa3dc83e",
+   "headline": "Streit über verletzte Einsatzkräfte",
+   "summary": "Seit Beginn der Proteste in Frankreich vor zwei Monaten sind laut Innenministerium über 1.500 Sicherheitskräfte verletzt worden. Diese Zahl wird von Minister Laurent Nunez angeführt, um das Vorgehen der Sicherheitskräfte zu rechtfertigen.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795026690.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Streit über verletzte Einsatzkräfte",
+     "url": "https://orf.at/stories/3448573/"
+    }
+   ]
+  },
+  {
+   "id": "23c9c44301adf8231706e889",
+   "headline": "Österreich, Norwegen und Kasachstan als Vorsitz: Dreiervorschlag soll OSZE-Patt lösen",
+   "summary": "Die OSZE hat für 2027 noch keinen Vorsitz. Nun will die Schweiz einen neuen Vorschlag einbringen, der auch Russlands Zustimmung bekommen könnte.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795026653.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Österreich, Norwegen und Kasachstan als Vorsitz: Dreiervorschlag soll OSZE-Patt lösen",
+     "url": "https://www.derstandard.at/story/3000000349927/oesterreich-norwegen-und-kasachstan-als-v-dreiervorschlag-soll-osze-patt-loesen?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "19896b5b2a879a80263e595e",
+   "headline": "Das „Magdas“ feiert 10 Jahre – mit einer Chefin, die sich für nichts zu schade ist",
+   "summary": "Das Lokal der Caritas feiert seinen 10. Und hat mit Gudrun Lopan eine Vollblut-Gastronomin, die schon weltweit tätig war.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795026600.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Das „Magdas“ feiert 10 Jahre – mit einer Chefin, die sich für nichts zu schade ist",
+     "url": "https://www.kleinezeitung.at/artikel/41467015/das-magdas-feiert-10-jahre-mit-einer-chefin-die-sich-fuer-nichts-zu-ist"
+    }
+   ]
+  },
+  {
+   "id": "b20a1f9746338f4fc6af8aa5",
+   "headline": "Rennradfahrer im Rosental nach Kollision mit Pkw schwer verletzt",
+   "summary": "Ein 49-Jähriger musste mit dem Rettungshubschrauber ins UKH geflogen werden. Er wurde in Ledenitzen von einem Pkw zu Boden gestoßen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795026358.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Rennradfahrer im Rosental nach Kollision mit Pkw schwer verletzt",
+     "url": "https://www.kleinezeitung.at/artikel/41467764/rennradfahrer-im-rosental-nach-kollision-mit-pkw-schwer-verletzt"
+    }
+   ]
+  },
+  {
+   "id": "c0938e01da92df739eaff733",
+   "headline": "Lebhafte Debatte um Sportbudget in der Steiermark",
+   "summary": "Patrick Schnabl vom Sportreferat verteidigte gegenüber dem organisierten Sport die Reduktion des Sportbudgets.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795026091.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Lebhafte Debatte um Sportbudget in der Steiermark",
+     "url": "https://www.kleinezeitung.at/artikel/41467513/lebhafte-debatte-um-sportbudget-ein-budget-ist-eine-bewertung"
+    }
+   ]
+  },
+  {
+   "id": "bb1a06a26295bd3ed9ebc645",
+   "headline": "Weihnachtsstädte: Hier leuchten die Lichter 2026 und 2027 am hellsten",
+   "summary": "Wels trägt 2026 den Titel „European City of Christmas“. Für 2027 stehen die Nachfolger bereits fest: Basel, Baia Mare und Omiš werden Europas Weihnachtsstädte.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795026080.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Weihnachtsstädte: Hier leuchten die Lichter 2026 und 2027 am hellsten",
+     "url": "https://www.kleinezeitung.at/artikel/41467681/weihnachtsstaedte-hier-leuchten-die-lichter-2026-und-2027-am-hellsten"
+    }
+   ]
+  },
+  {
+   "id": "ee1c0cdf73c5bf9c28121bdb",
+   "headline": "Helmut Lanz ist tot: Trauer um „Feuerwehrmann aus Leidenschaft“",
+   "summary": "Der langjährige Kommandant des Feuerwehrbereichs Deutschlandsberg ist im 72. Lebensjahr verstorben.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795026024.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Helmut Lanz ist tot: Trauer um „Feuerwehrmann aus Leidenschaft“",
+     "url": "https://www.kleinezeitung.at/artikel/41467751/helmut-lanz-ist-tot-trauer-um-feuerwehrmann-aus-leidenschaft"
+    }
+   ]
+  },
+  {
+   "id": "04e142c279f5765797de3137",
+   "headline": "Österreicher so unzufrieden mit dem Job wie nie",
+   "summary": "Der Arbeitsklima-Index der AK ist fast auf einem 30-Jahre-Tief: Österreicher klagen über Zeitdruck und aufreibende Arbeit. Sie haben im Beruf oft „keine Zeit zum Verschnaufen“.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795025624.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Österreicher so unzufrieden mit dem Job wie nie",
+     "url": "https://www.krone.at/4380821"
+    }
+   ]
+  },
+  {
+   "id": "025cc9a67dd8a654bff18ed5",
+   "headline": "Kärntnerin verlor Zehntausende Euro mit „Investition“ in Kryptowährungen",
+   "summary": "Über eine Suchmaschine wurde eine 47-Jährige auf Investitionsmöglichkeiten aufmerksam. Statt am Ende Geld zu erhalten, überwies sie immer mehr.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795025559.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Kärntnerin verlor Zehntausende Euro mit „Investition“ in Kryptowährungen",
+     "url": "https://www.kleinezeitung.at/artikel/41467747/kaerntnerin-verlor-zehntausende-euro-mit-investition-in"
+    }
+   ]
+  },
+  {
+   "id": "aaeb26e421788c146b4ffa70",
+   "headline": "Grazer Schauspiel-Fusion: Notwendige Veränderung oder Rotstiftmaßnahme?",
+   "summary": "Schauspiel-Intendantin Andrea Vilter zieht den Abgang einer Wiederbewerbung in Graz vor. Das zeigt nicht zuletzt Bruchlinien durch Sparzwang und Strukturreform auf.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795025302.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Grazer Schauspiel-Fusion: Notwendige Veränderung oder Rotstiftmaßnahme?",
+     "url": "https://www.kleinezeitung.at/artikel/41466842/grazer-schauspiel-fusion-notwendige-veraenderung-oder-rotstiftmassnahme"
+    }
+   ]
+  },
+  {
+   "id": "539e7125ec1d6ca49b411598",
+   "headline": "Kein Fan von Adventmärkten? Villach könnte Sie heuer umstimmen",
+   "summary": "Der Villacher Advent könnte Sie heuer umstimmen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795024800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Kein Fan von Adventmärkten? Villach könnte Sie heuer umstimmen",
+     "url": "https://www.kleinezeitung.at/artikel/41466160/kein-fan-von-adventmaerkten-villach-koennte-sie-heuer-umstimmen"
+    }
+   ]
+  },
+  {
+   "id": "926222bc725a32ec0c2e7e23",
+   "headline": "Schulbeurteilung: Vernebelter Bildungskompass",
+   "summary": "Das Bildungsministerium will für mehr Transparenz sorgen. Das ist richtig und gut, aber nicht so.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795024800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Schulbeurteilung: Vernebelter Bildungskompass",
+     "url": "https://www.kleinezeitung.at/artikel/41466748/schulbeurteilung-vernebelter-bildungskompass"
+    }
+   ]
+  },
+  {
+   "id": "845c5311f0b8c5beec39f89a",
+   "headline": "Hoffnung im Autoradio: Mit \"GTA 6\" klingt die Zukunft plötzlich wieder besser",
+   "summary": "In keinem anderen Videospiel spielt Musik eine so große Rolle wie in Grand Theft Auto. Aus den Radios dröhnt ein Soundtrack, der neue Zuversicht aufkommen lässt.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795024800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Hoffnung im Autoradio: Mit \"GTA 6\" klingt die Zukunft plötzlich wieder besser",
+     "url": "https://www.derstandard.at/story/3000000349840/hoffnung-im-autoradio-mit-gta-6-klingt-die-zukunft-ploetzlich-wieder-besser?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "9e182a40fefe76570abe9c19",
+   "headline": "Sparefroh wird nun Aktionär: ein überfälliger Kurswechsel",
+   "summary": "Die Treue zum Sparbuch kostete Generationen Geld. Das Zukunftsdepot bietet einen Gegenentwurf, verlangt aber Nerven und einen Staat, der sich Geldgeschenke spart.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795024800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Sparefroh wird nun Aktionär: ein überfälliger Kurswechsel",
+     "url": "https://www.kleinezeitung.at/artikel/41467131/sparefroh-wird-nun-aktionaer-ein-ueberfaelliger-kurswechsel"
+    }
+   ]
+  },
+  {
+   "id": "095a91d9b6f435977f773c80",
+   "headline": "Benefiz-Dinner in Straden sammelte für krebskranken Vater",
+   "summary": "Mehr als 100 Gäste folgten der Einladung zum Benefizabend beim Bulldogwirt in Hof bei Straden, um Familie Tinnacher mit Spenden zu unterstützen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795024800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Benefiz-Dinner in Straden sammelte für krebskranken Vater",
+     "url": "https://www.kleinezeitung.at/artikel/41467027/benefiz-dinner-in-straden-sammelte-fuer-krebskranken-vater"
+    }
+   ]
+  },
+  {
+   "id": "cae6eb70d3bdf38fc596b513",
+   "headline": "Solosechser bei Lotto „6 aus 45“",
+   "summary": "Einen Solosechser zu 1.200.000 Euro hat die gestrige Ziehung von Lotto „6 aus 45“ gebracht. Folgende Gewinnzahlen wurden ermittelt: 3 16 17 18 23 44/Zusatzzahl: 40 Keine der beiden Ziehungen von LottoPlus brachten einen Sechser.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795024513.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Solosechser bei Lotto „6 aus 45“",
+     "url": "https://orf.at/stories/3448598/"
+    }
+   ]
+  },
+  {
+   "id": "a2a7f38b18857e63ea196457",
+   "headline": "Wie das Flugzeug-Essen wirklich an Bord kommt",
+   "summary": "Vom Großeinkauf bis zum Genuss in 10.000 Meter Höhe. Die „Krone“ begleitet auf zehn Etappen die Entstehung eines Bordmenüs.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795023845.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Wie das Flugzeug-Essen wirklich an Bord kommt",
+     "url": "https://www.krone.at/4343371"
+    }
+   ]
+  },
+  {
+   "id": "deeb2713deeb4ca804b8700e",
+   "headline": "Nordkorea baut laut UN-Atomwächtern Nuklearprogramm weiter aus",
+   "summary": "Pjöngjang wies die Forderung nach einer Abrüstung zuletzt zurück. Inspektoren der IAEA werden seit Jahren nicht mehr ins Land gelassen.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795023610.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Nordkorea baut laut UN-Atomwächtern Nuklearprogramm weiter aus",
+     "url": "https://www.derstandard.at/story/3000000349925/nordkorea-baut-laut-uno-atomw228chtern-nuklearprogramm-weiter-aus?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "37ef254c9a6001cf54c9dac0",
+   "headline": "Bahn-KV: 3,3 Prozent mehr Lohn, 38,5-Stunden-Woche für alle",
+   "summary": "Zwei-Jahres-Abschluss: KV-Erhöhung im Bereich von 3,3 Prozent, nächstes Jahr Erhöhung auf Basis der rollierenden Inflation. Ab September 2027 bekommen alle 55.000 Beschäftigten eine Wochenarbeitszeit von 38,5 Stunden.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795023096.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Bahn-KV: 3,3 Prozent mehr Lohn, 38,5-Stunden-Woche für alle",
+     "url": "https://www.kleinezeitung.at/artikel/41467484/bahn-kv-3-3-prozent-mehr-lohn-38-5-stunden-woche-fuer-alle"
+    }
+   ]
+  },
+  {
+   "id": "7a7f58752d079f477c355e7f",
+   "headline": "Wörtherslay: So will Michael Buchinger Klagenfurt bunter machen",
+   "summary": "Vom Lindwurm als Dragqueen bis zum „Wörtherslay“: Der Autor und Kabarettist Michael Buchinger präsentiert humorvolle Ideen für ein queeres Klagenfurt. Sein Video erreichte bereits 118.000 Zugriffe.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795023000.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Wörtherslay: So will Michael Buchinger Klagenfurt bunter machen",
+     "url": "https://www.kleinezeitung.at/artikel/41466542/woertherslay-so-will-michael-buchinger-klagenfurt-bunter-machen"
+    }
+   ]
+  },
+  {
+   "id": "f455b988a8001827a2e8da7e",
+   "headline": "Istanbuls Ex-Bürgermeister mit Politikverbot belegt",
+   "summary": "Gegen den inhaftierten ehemaligen Istanbuler Bürgermeister Ekrem Imamoglu ist vor Gericht ein weiteres Mal ein Politikverbot erlassen worden, das seine Präsidentschaftskandidatur gefährdet. Im Prozess wegen mutmaßlicher Verfahrensverstöße auf dem 38.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795022965.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Istanbuls Ex-Bürgermeister mit Politikverbot belegt",
+     "url": "https://orf.at/stories/3448596/"
+    }
+   ]
+  },
+  {
+   "id": "c8dd5acc225296f4fd6faa59",
+   "headline": "FPÖ wirft Grünen „Heuchelei“ bei Datencentern vor",
+   "summary": "Die Freiheitlichen beschuldigen die Grünen der „Doppelmoral“ in Bezug auf Rechenzentren. In Wien sei man dagegen, im Burgenland dafür.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795022080.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "FPÖ wirft Grünen „Heuchelei“ bei Datencentern vor",
+     "url": "https://www.krone.at/4380996"
+    }
+   ]
+  },
+  {
+   "id": "cac7d26ca51ab94147643b37",
+   "headline": "Englisch lernen unter Palmen: Was bringt eine teure Sprachreise wirklich?",
+   "summary": "Roland will sich auf sein Studium vorbereiten, Brigitte aufs Reisen in der Pension. Auf der mediterranen Insel Malta lernen die beiden Englisch.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795021578.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Englisch lernen unter Palmen: Was bringt eine teure Sprachreise wirklich?",
+     "url": "https://www.derstandard.at/story/3000000349103/englisch-lernen-unter-palmen-was-bringt-eine-teure-sprachreise-wirklich?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "49ac6773fb79fe637d25dc6a",
+   "headline": "Junge Wilde, alte Hasen und ein Herbstmärchen",
+   "summary": "Die burgenländische Landesliga verabschiedet sich in die Winterpause. Zwei „Oldie“-Torjäger und ein Erfolgsarchitekt prägten eine ereignisreiche Hinrunde voller Überraschungen.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795021249.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Junge Wilde, alte Hasen und ein Herbstmärchen",
+     "url": "https://www.krone.at/4380900"
+    }
+   ]
+  },
+  {
+   "id": "f25ec4924e2e2f5e324fa28e",
+   "headline": "Geheimdienste: Russland plante Massaker in Polen",
+   "summary": "Die polnischen Behörden haben einen perfiden Plan aufgedeckt: Offenbar wollte der russische Geheimdienst nahe der Grenze ein Blutbad in dem NATO-Land anrichten – und die Schuld dafür der Ukraine geben.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795021214.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Geheimdienste: Russland plante Massaker in Polen",
+     "url": "https://www.krone.at/4380353"
+    }
+   ]
+  },
+  {
+   "id": "6e5974566756b8f325b8bcbe",
+   "headline": "Steirer schloss seine Radwerkstätte und entsorgte E-Bike von Kundin",
+   "summary": "Weil eine Kundin ihr E-Bike, das sie bei einer Fahrradwerkstätte abgegeben hatte, nach deren Schließung nicht wiederbekam, wurde der ehemalige Unternehmer wegen Veruntreuung angeklagt.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795021200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Steirer schloss seine Radwerkstätte und entsorgte E-Bike von Kundin",
+     "url": "https://www.kleinezeitung.at/artikel/41463825/steirer-schloss-seine-radwerkstaette-und-entsorgte-e-bike-von-kundin"
+    }
+   ]
+  },
+  {
+   "id": "9b3a9e6f0e0c4095915dcfe5",
+   "headline": "Mit jedem Tag ohne Regen wird Lage in Mittelkärnten dramatischer",
+   "summary": "Dass das heurige Jahr trocken war, ist bekannt. Die Folgen der Trockenheit sind dramatisch.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795021200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Mit jedem Tag ohne Regen wird Lage in Mittelkärnten dramatischer",
+     "url": "https://www.kleinezeitung.at/artikel/41465527/mit-jedem-tag-ohne-regen-wird-lage-in-mittelkaernten-dramatischer"
+    }
+   ]
+  },
+  {
+   "id": "77d026e5989f444e21d36910",
+   "headline": "Heizen, Handy, Hund: Welche Zuschüsse zur Sozialhilfe dazukommen",
+   "summary": "Wer Sozialhilfe bezieht, erhält meist auch weitere Förderungen. Ein Blick auf das Sozial-Milliardenkarussell von Bund, Land, Gemeinden und Kassen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795021200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Heizen, Handy, Hund: Welche Zuschüsse zur Sozialhilfe dazukommen",
+     "url": "https://www.kleinezeitung.at/artikel/41466857/heizen-handy-hund-welche-zuschuesse-zur-sozialhilfe-dazukommen"
+    }
+   ]
+  },
+  {
+   "id": "af597716bdc47966a622e497",
+   "headline": "Anfang Dezember ist Tempo 100 im Ortsgebiet von Schladming Geschichte",
+   "summary": "Nachdem Einspruch einer Schnellfahrerin das 40-km/h-Tempolimit im Ortsgebiet gekippt hatte, ist BH nun kurz vor der Wiedereinführung. Zahl der Anfechtungen nahm zu.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795021200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Anfang Dezember ist Tempo 100 im Ortsgebiet von Schladming Geschichte",
+     "url": "https://www.kleinezeitung.at/artikel/41463420/anfang-dezember-ist-tempo-100-im-ortsgebiet-von-schladming-geschichte"
+    }
+   ]
+  },
+  {
+   "id": "bf3222bca4440cbcb60b386d",
+   "headline": "Mega-Stromleitung in Oberkärnten wirft Sicherheitsfragen auf",
+   "summary": "Die Bürgerinitiative Baldramsdorf fordert eine Prüfung möglicher Sicherheitsrisiken und Alternativen für den „Netzraum Kärnten“. Die APG verweist auf Fachbeitrag zur Resilienz des Projekts.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795021200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Mega-Stromleitung in Oberkärnten wirft Sicherheitsfragen auf",
+     "url": "https://www.kleinezeitung.at/artikel/41466031/mega-stromleitung-in-oberkaernten-wirft-sicherheitsfragen-auf"
+    }
+   ]
+  },
+  {
+   "id": "22c3e1ac292de7fbc067fe0a",
+   "headline": "KI hat keine Meinung, ist aber trotzdem nicht neutral",
+   "summary": "KI birgt große Chancen, ist aber oft von ökonomischen Interessen geprägt. Vorsicht ist dort geboten, wo soziale Vorurteile reproduziert werden.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795021200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "KI hat keine Meinung, ist aber trotzdem nicht neutral",
+     "url": "https://www.derstandard.at/story/3000000346481/ki-hat-keine-meinung-ist-aber-trotzdem-nicht-neutral?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "e62af04ebb6bc2177b7ee6dd",
+   "headline": "Grazer Murpromenade bekommt neue Anlegestelle für Kajak und Co",
+   "summary": "Dass sich derzeit eine Baggerschaufel mit riesigen Steinen spielt, hat einen Grund: Die Grazer Murpromenade erhält eine neue öffentliche Bootsanlegestelle mitten in der Stadt.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795021200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Grazer Murpromenade bekommt neue Anlegestelle für Kajak und Co",
+     "url": "https://www.kleinezeitung.at/artikel/41466628/grazer-murpromenade-bekommt-neue-anlegestelle-fuer-kajak-und-co"
+    }
+   ]
+  },
+  {
+   "id": "ca7643ee3ede4460892247fc",
+   "headline": "Glühwein & Punsch: So viel kosten die Getränke auf den Christkindlmärkten",
+   "summary": "Die Preise für Glühwein und Punsch gehen in Klagenfurt auseinander. Am Alten Platz steigen die Preise an Veranstaltungsabenden sogar an.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795021200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Glühwein & Punsch: So viel kosten die Getränke auf den Christkindlmärkten",
+     "url": "https://www.kleinezeitung.at/artikel/41459598/gluehwein-and-punsch-so-viel-kosten-die-getraenke-auf-den"
+    }
+   ]
+  },
+  {
+   "id": "308956447de75962a74ad69d",
+   "headline": "Tourismusreform: Was für Kärnten-Gäste wirklich zählt",
+   "summary": "Seit 1. November zahlen Urlauber in Kärnten mehr pro Nacht. Dass sie dafür gratis mit den Öffis fahren können, dürfte nicht allen Gästen reichen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795021200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Tourismusreform: Was für Kärnten-Gäste wirklich zählt",
+     "url": "https://www.kleinezeitung.at/artikel/41467141/tourismusreform-was-fuer-kaernten-gaeste-wirklich-zaehlt"
+    }
+   ]
+  },
+  {
+   "id": "200e982e16d56040ff79f66c",
+   "headline": "Eröffnung für Wolfsberger Primärversorgungszentrum steht fest",
+   "summary": "In einem ehemaligen Supermarkt in der St. Johanner Straße entsteht auf knapp 500 Quadratmetern um rund 3,3 Millionen Euro ein kassenärztliches Gesundheitszentrum.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795021200.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Eröffnung für Wolfsberger Primärversorgungszentrum steht fest",
+     "url": "https://www.kleinezeitung.at/artikel/41465808/eroeffnung-fuer-wolfsberger-primaerversorgungszentrum-steht-fest"
+    }
+   ]
+  },
+  {
+   "id": "980584ad9e7623fec62e221c",
+   "headline": "Stadt Wien muss auch für 2027 ein Sparpaket schnüren",
+   "summary": "Sozialorganisationen befürchten Einschnitte, Öffi-Tickets werden teurer, Förderungen reduziert. Kommende Woche wird das Budget präsentiert.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795021020.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Stadt Wien muss auch für 2027 ein Sparpaket schnüren",
+     "url": "https://www.derstandard.at/story/3000000349711/stadt-wien-muss-auch-fuer-2027-ein-sparpaket-schnueren?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "960dda29d85ca30d6f6b870c",
+   "headline": "Wieso die aktuellen IT-Ausfälle nur Vorboten viel größerer Probleme sind",
+   "summary": "Die aktuellen Vorfälle mögen keinen Zusammenhang haben, sie zeigen aber, wie sehr jahrzehntelang zu wenig in die IT-Infrastruktur investiert wurde. Das dürfte sich angesichts immer mächtigere KI-Systeme bald rächen.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795020949.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Wieso die aktuellen IT-Ausfälle nur Vorboten viel größerer Probleme sind",
+     "url": "https://www.derstandard.at/story/3000000349901/wieso-die-aktuellen-it-ausfaelle-nur-vorboten-viel-groesserer-probleme-sind?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "1eb400c6c92ed9bbd3a4021e",
+   "headline": "Strom: Kärnten führt als erstes Bundesland neue Netztarife ein",
+   "summary": "Ab 1. Juli 2027 zählt bei den Netzkosten der KNG nicht mehr nur, wie viel Strom man verbraucht, sondern auch, wie stark man das Netz auf einmal beansprucht.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795020772.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Strom: Kärnten führt als erstes Bundesland neue Netztarife ein",
+     "url": "https://www.kleinezeitung.at/artikel/41467664/strom-kaernten-fuehrt-als-erstes-bundesland-neue-netztarife-ein"
+    }
+   ]
+  },
+  {
+   "id": "e30001f9206ba18e0e912125",
+   "headline": "Epstein und ICE: Demokraten nehmen Trumps Team ins Visier",
+   "summary": "Nach ihrem Erfolg bei den Parlamentswahlen bereiten die Demokraten Untersuchungen zu den Aktivitäten der US-Regierung und der Familie des Präsidenten vor.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795020319.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Epstein und ICE: Demokraten nehmen Trumps Team ins Visier",
+     "url": "https://www.derstandard.at/story/3000000349920/epstein-und-ice-demokraten-nehmen-trumps-team-ins-visier?ref=rss"
     }
    ]
   },
@@ -850,23 +2576,18 @@
    ]
   },
   {
-   "id": "0ea69b4dc560eee46c9c78ff",
+   "id": "2ea826fd6f3bd2cb05b4e657",
    "headline": "„Christkindl“-Paket: Hält der Plan der Regierung?",
-   "summary": "Ganze 50 neue Gesetze möchte die Regierung noch bis Jahresende beschließen. Die Regierung will bis Jahresende 50 neue Gesetze beschließen – krone.at berichtete.",
+   "summary": "Ganze 50 neue Gesetze möchte die Regierung noch bis Jahresende beschließen. Weil aber jede Partei unbedingt ihr eigenes Prestige-Projekt in diesem Paket sehen möchte, sind Diskussionen vorprogrammiert.",
    "publishers": [
     "krone.at"
    ],
-   "reports": 2,
+   "reports": 1,
    "newest_at": 1795018638.0,
    "status": "nicht",
    "status_label": "Nicht in der Sendung",
    "breaking_at": null,
    "links": [
-    {
-     "publisher": "krone.at",
-     "title": "So schnürte die Regierung ihr „Christkindl-Paket“",
-     "url": "https://www.krone.at/4379676"
-    },
     {
      "publisher": "krone.at",
      "title": "„Christkindl“-Paket: Hält der Plan der Regierung?",
@@ -1157,7 +2878,7 @@
   {
    "id": "629c8691a34644cd0d55db49",
    "headline": "Deutsche Regierung ringt sich zu Stromsteuersenkung durch",
-   "summary": "Auf Drängen von Bundeskanzler Friedrich Merz (CDU) hat sich die deutsche Koalition auf die Senkung der Strompreise für alle Verbraucher und Unternehmen geeinigt – aber nur befristet für 2027. Die Finanzierung darüber hinaus blieb nach mehr als achtstündigen Verhandlungen im Kanzleramt bis tief in die Nacht unklar, und auch für das kommende Jahr ist sie wackelig.",
+   "summary": "Auf Drängen des deutschen Kanzlers Friedrich Merz (CDU) hat sich die deutsche Koalition auf die Senkung der Strompreise für alle Verbraucher und Unternehmen geeinigt – aber nur befristet für 2027. Die Finanzierung darüber hinaus blieb nach mehr als achtstündigen Verhandlungen im Kanzleramt bis tief in die Nacht unklar, und auch für das kommende Jahr ist sie wackelig.",
    "publishers": [
     "orf.at"
    ],
@@ -3300,6 +5021,26 @@
    ]
   },
   {
+   "id": "8e90786de5654aa980e1ef79",
+   "headline": "Investiert ihr Geld bei Crowdfunding Plattformen?",
+   "summary": "Mein Forum: Diskutieren Sie dieses Thema mit der STANDARD-Community.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794999600.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Investiert ihr Geld bei Crowdfunding Plattformen?",
+     "url": "https://www.derstandard.at/story/3000000349720/investiert-ihr-geld-bei-crowdfunding-plattformen?ref=rss"
+    }
+   ]
+  },
+  {
    "id": "21d7c938460186e15507bba4",
    "headline": "Ein Jahr nach Arnulf Rainers Tod: Die Albertina entdeckt ihn leider nicht neu",
    "summary": "Das Museum richtet dem \"Übermaler\" eine Hommage aus. Chronologisch kann man die Entwicklung des bedeutenden Malers nachvollziehen.",
@@ -4641,6 +6382,26 @@
      "publisher": "orf.at",
      "title": "Deutschland will Spritpreisdeckel mit Jänner aktivieren",
      "url": "https://orf.at/stories/3448535/"
+    }
+   ]
+  },
+  {
+   "id": "ba3374fc4d1004aab43aafca",
+   "headline": "Abgängiger (48) nach Suchaktion tot aufgefunden",
+   "summary": "Leider kein gutes Ende nahm eine großangelegte Suchaktion nach einem Steirer am Dienstag: Bei einem Videotelefonat mit seiner Lebensgefährtin erlitt der Mann offenbar einen medizinischen Notfall. Nach Stunden wurde er tot aufgefunden.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1794986566.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Abgängiger (48) nach Suchaktion tot aufgefunden",
+     "url": "https://www.krone.at/4380127"
     }
    ]
   },
@@ -6365,2202 +8126,22 @@
    ]
   },
   {
-   "id": "54f779b60c40c0c84865108e",
-   "headline": "Kaputt? Reparieren lohnt sich",
-   "summary": "Ob Kaffeemaschine, Waschmaschine oder Staubsauger: Wenn ein Gerät nicht mehr funktioniert, muss es nicht gleich im Müll landen. Wer repariert statt neu kauft, kann Geld sparen und gleichzeitig die Umwelt schonen.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794956493.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Kaputt? Reparieren lohnt sich",
-     "url": "https://www.krone.at/4361884"
-    }
-   ]
-  },
-  {
-   "id": "b57e43eebc4c5bdb54468be4",
-   "headline": "Standardrätsel E 11446",
-   "summary": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.",
+   "id": "02a6616775c04f01166d2b7e",
+   "headline": "Squiggly Sudoku mittel 6575b",
+   "summary": "",
    "publishers": [
     "derstandard.at"
    ],
    "reports": 1,
-   "newest_at": 1794956460.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
+   "newest_at": 1795021200.0,
+   "status": "zurueckgestellt",
+   "status_label": "Zurückgestellt: kein verwertbarer Text in der Quelle",
    "breaking_at": null,
    "links": [
     {
      "publisher": "derstandard.at",
-     "title": "Standardrätsel E 11446",
-     "url": "https://www.derstandard.at/story/3000000348190/standardraetsel-e-11446?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "4a6bf4a306a115b91a4402b5",
-   "headline": "Wenn Lesen gefährlich wird",
-   "summary": "Kulturelle und künstlerische Initiativen arbeiten in repressiven politischen Umfeldern oft unter schwierigsten Bedingungen. Die zweitägige Konferenz „In Touch“ im Wiener MuseumsQuartier brachte mehrere solcher Projekte zusammen – zu Gast waren die Gründerin eines geheimen Lesezirkels in Afghanistan, der den Taliban trotzt, sowie der russische Starregisseur Kirill Serebrennikow.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794955884.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Wenn Lesen gefährlich wird",
-     "url": "https://orf.at/stories/3447994/"
-    }
-   ]
-  },
-  {
-   "id": "77bacb40603083bf251df3c8",
-   "headline": "Zverev nach Sieg über Shelton im Halbfinale der ATP Finals",
-   "summary": "Der Weltranglistenerste bezwang den US-Amerikaner 6:2,7:6(4). Fils besiegte Jodar.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794954762.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Zverev nach Sieg über Shelton im Halbfinale der ATP Finals",
-     "url": "https://www.derstandard.at/story/3000000349751/zverev-nach-sieg-ueber-shelton-im-halbfinale-der-atp-finals?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "9aec62307b0f5041f18aaf5b",
-   "headline": "Österreich beendete die Nations League ungeschlagen",
-   "summary": "Dor Peretz (36.) für Israel bzw. Sasa Kalajdzic (62.) für Österreich trafen in Debrecen.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794954085.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Österreich beendete die Nations League ungeschlagen",
-     "url": "https://www.kleinezeitung.at/artikel/41464357/mit-luca-weinhandl-oefb-startelf-gegen-israel-mit-vielen-neuen"
-    }
-   ]
-  },
-  {
-   "id": "c44608bfb7d72099fb3bb3f6",
-   "headline": "Norwegen zieht dank Haaland ins Viertelfinale der Nations League ein",
-   "summary": "Der Superstar traf in Kopenhagen in 96. Minute per Elfmeter zum 3:2, Dänemark lag nach 14 Minuten schon 2:0 voran.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794953883.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Norwegen zieht dank Haaland ins Viertelfinale der Nations League ein",
-     "url": "https://www.derstandard.at/story/3000000349750/fu223ball-dank-haaland-elfer-norwegen-im-nations-league-viertelfinale?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "caa31338c91f7bdfd88d8748",
-   "headline": "Bahrain und Kuwait wehrten Drohnenangriffe ab",
-   "summary": "Wenige Stunden nach einem US-Angriff auf die iranische Insel Keschm in der Straße von Hormus hat Bahrain neue iranische Angriffe auf sein Staatsgebiet gemeldet. Die Armee des Golfstaats teilte heute mit, dass ihre Luftabwehr iranische Angriffe abgewehrt habe.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794953812.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Bahrain und Kuwait wehrten Drohnenangriffe ab",
-     "url": "https://orf.at/stories/3448513/"
-    }
-   ]
-  },
-  {
-   "id": "5c1da3169cf1a891089093e0",
-   "headline": "Nvidia-Skandal lässt Weißes Haus nicht los",
-   "summary": "Der Nvidia-Skandal um mögliche chinesische Spionage bei dem US-Chipentwickler dürfte so bald nicht abebben. US-Präsident Donald Trump scheint die Affäre beiseiteschieben zu wollen, sodass in der Öffentlichkeit gar Rätselraten über dessen sorglosen Umgang damit herrscht.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794953482.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Nvidia-Skandal lässt Weißes Haus nicht los",
-     "url": "https://orf.at/stories/3448436/"
-    }
-   ]
-  },
-  {
-   "id": "6602c80136946d3fe8d4bcf6",
-   "headline": "Internes Netzwerk von US-Geheimdienst NSA gestört",
-   "summary": "Nach einer Reihe von technischen Störungen in den USA ist nun auch das interne Kommunikationsnetz des US-Geheimdienstes NSA betroffen. Das hochgeheime Netzwerk mit dem Namen „NSA Net“, über das Mitarbeiter vertrauliche Informationen austauschen, funktioniere nur eingeschränkt, berichteten mehrere US-Medien unter Berufung auf mit der Angelegenheit vertraute Personen.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794953176.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Internes Netzwerk von US-Geheimdienst NSA gestört",
-     "url": "https://www.krone.at/4379870"
-    }
-   ]
-  },
-  {
-   "id": "e198e6fdfea83fe99e13d7b8",
-   "headline": "Migrationsexperte Knaus: „In Ruanda finden bereits Asylverfahren statt“",
-   "summary": "Migrationsexperte Gerald Knaus bezog zu dem geplanten Abschiebezentrum der „Gruppe der Umsetzer“ in Ruanda in der ZiB2 Stellung.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794952442.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Migrationsexperte Knaus: „In Ruanda finden bereits Asylverfahren statt“",
-     "url": "https://www.kleinezeitung.at/artikel/41464637/migrationsexperte-knaus-in-ruanda-finden-bereits-asylverfahren-statt"
-    }
-   ]
-  },
-  {
-   "id": "32c32275b60b374b70467913",
-   "headline": "Nvidia verdoppelt im Jahresvergleich Umsatz und Gewinn",
-   "summary": "Der Chip-Konzern ist es dritten Quartal erneut rasant gewachsen, die Aktie legt zu.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794952061.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Nvidia verdoppelt im Jahresvergleich Umsatz und Gewinn",
-     "url": "https://www.derstandard.at/story/3000000349749/nvidia-verdoppelt-umsatz-und-gewinn?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "c6e9b763533c1303a02f6b8c",
-   "headline": "Eisenkot-Vertrauter wird neuer Parlamentspräsident",
-   "summary": "Das israelische Parlament hat einen Vertrauten des bisherigen Oppositionsführers Gadi Eisenkot an seine Spitze gewählt. Für Matan Kahana als Parlamentspräsidenten votierten am Dienstagabend 66 Abgeordnete.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794952018.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Eisenkot-Vertrauter wird neuer Parlamentspräsident",
-     "url": "https://www.krone.at/4379975"
-    }
-   ]
-  },
-  {
-   "id": "ce8f6963e3dc3ba8134484ab",
-   "headline": "Nvidia verdoppelt erneut Umsatz und Gewinn",
-   "summary": "Das Geschäft des Chipkonzerns Nvidia ist im letzten Quartal mit dem zurückgetretenen Firmengründer Jensen Huang an der Spitze abermals rasant gewachsen. Der Umsatz verdoppelte sich im Jahresvergleich auf 115,8 Milliarden Dollar (105,2 Mrd. Euro).",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794951721.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Nvidia verdoppelt erneut Umsatz und Gewinn",
-     "url": "https://orf.at/stories/3448509/"
-    }
-   ]
-  },
-  {
-   "id": "6ba2e4d887e7f23b485e8cc2",
-   "headline": "Israels Opposition übernimmt Parlamentsvorsitz",
-   "summary": "Drei Wochen nach der Parlamentswahl in Israel ist der Opposition mit der Wahl eines neuen Parlamentspräsidenten aus den eigenen Reihen ein wichtiger Schritt nach vorn gelungen. 66 von 120 Abgeordneten stimmten gestern für den früheren Minister Matan Kahana.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794951593.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Israels Opposition übernimmt Parlamentsvorsitz",
-     "url": "https://orf.at/stories/3448508/"
-    }
-   ]
-  },
-  {
-   "id": "253f29d242c0cff492becd97",
-   "headline": "Rekorde für Max Oppenheimer und Alfons Walde im Dorotheum",
-   "summary": "Im Wiener Auktionshaus Dorotheum sind am Dienstagabend zwei Weltrekorde für die Künstler Max Oppenheimer und Alfons Walde erzielt worden.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794950564.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Rekorde für Max Oppenheimer und Alfons Walde im Dorotheum",
-     "url": "https://www.kleinezeitung.at/artikel/41464711/rekorde-fuer-max-oppenheimer-und-alfons-walde-im-dorotheum"
-    }
-   ]
-  },
-  {
-   "id": "53f31dfeeafc604ef4f217c5",
-   "headline": "Feuerwehr befreite Paketfahrer von abgelegenem Weg",
-   "summary": "Weder manövrieren noch zurückfahren konnte am Dienstagabend ein Paketfahrer auf einem abgelegenen Weg im Adneter Ortsteil Spumberg. Gegen 17 Uhr ging deshalb sogar ein Alarm bei der Freiwilligen Feuerwehr ein.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794950177.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Feuerwehr befreite Paketfahrer von abgelegenem Weg",
-     "url": "https://www.krone.at/4379920"
-    }
-   ]
-  },
-  {
-   "id": "90132fea965b9e71976700fe",
-   "headline": "Zehntausende protestieren in Bratislava gegen Fico",
-   "summary": "Rund 25.000 gedachten des Sturzes der kommunistischen Diktatur und forderten mehr Unterstützung für die Ukraine.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794949752.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Zehntausende protestieren in Bratislava gegen Fico",
-     "url": "https://www.derstandard.at/story/3000000349746/zehntausende-protestieren-in-bratislava-gegen-fico?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "8e49a25fb370dd828b0c0251",
-   "headline": "Mehrere Personen bei Verkehrsunfall verletzt",
-   "summary": "Graz, Bezirk Gries im Bezirk Graz: Bei einem Verkehrsunfall am Dienstagnachmittag, 17. November 2026, wurden zwei Personen leicht und zwei Personen schwer verletzt. Gegen 15:30 Uhr war eine 46-Jährige aus dem Bezirk Leibnitz mit ihrem Pkw auf der Kärntner Straße auf dem linken Fahrstreifen in südliche Richtung unterwegs.",
-   "publishers": [
-    "bmi.gv.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794949620.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "bmi.gv.at",
-     "title": "Mehrere Personen bei Verkehrsunfall verletzt",
-     "url": ""
-    }
-   ]
-  },
-  {
-   "id": "4093192939582408e4a8dccf",
-   "headline": "Polen: Streit über Verfassungsgericht scheint entschieden",
-   "summary": "Der Streit über das Verfassungsgericht in Polen scheint entschieden: Das Gericht teilte gestern Abend mit, man wolle heute über die Entscheidung der Anträge der Staatsanwaltschaft informieren. Die Generalversammlung der Verfassungsrichter war zusammengekommen, um darüber zu beraten, ob der Schutz vor Strafverfolgung für den suspendierten Gerichtschef Bogdan Swieczkowski und seinen Vize außer Kraft gesetzt werden soll.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794949105.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Polen: Streit über Verfassungsgericht scheint entschieden",
-     "url": "https://orf.at/stories/3448507/"
-    }
-   ]
-  },
-  {
-   "id": "7d454b4cb79b82b60c75058e",
-   "headline": "Soll Waschmaschinentür offen oder zu sein?",
-   "summary": "Es schimmelt und mufft – bei falschem Gebrauch kann das Reinigungsgerät schnell einen gegenteiligen Effekt haben. Nicht außer Acht zu lassen ist dabei auch das Waschmittelfach.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794948606.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Soll Waschmaschinentür offen oder zu sein?",
-     "url": "https://www.krone.at/4379790"
-    }
-   ]
-  },
-  {
-   "id": "9d304ea9533372ca11b3cffb",
-   "headline": "„Das große Backen Österreich“: Muss eine Steirerin gehen?",
-   "summary": "Folge 4 von „Das große Backen Österreich“ war „salzig und herzhaft“: In der Puls 4- und Joyn-Show waren noch zwei Steirerinnen dabei.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794948600.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "„Das große Backen Österreich“: Muss eine Steirerin gehen?",
-     "url": "https://www.kleinezeitung.at/artikel/41463719/das-grosse-backen-oesterreich-muss-eine-steirerin-gehen"
-    }
-   ]
-  },
-  {
-   "id": "cd66a5bbc8de2154274094bf",
-   "headline": "E-Scooter-Seriendieb im Pflichtschulalter gefasst",
-   "summary": "Eine mysteriöse Diebstahlserie beschäftigte seit Anfang September die Tiroler Polizei. Vor dem Bahnhof Fritzens-Wattens verschwanden seither insgesamt sechs E-Scooter.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794947844.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "E-Scooter-Seriendieb im Pflichtschulalter gefasst",
-     "url": "https://www.krone.at/4379808"
-    }
-   ]
-  },
-  {
-   "id": "0282b73108249fad5a1a8925",
-   "headline": "Nationalrat beschließt Medienpaket",
-   "summary": "Der Nationalrat beschließt am Mittwoch eine neue Vertriebsförderung für Print-Medien. Die Zustellung abonnierter Tages- und Wochenzeitungen soll künftig mit...",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794947739.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Nationalrat beschließt Medienpaket",
-     "url": "https://www.kleinezeitung.at/artikel/41464682/nationalrat-beschliesst-medienpaket"
-    }
-   ]
-  },
-  {
-   "id": "21b8b46f8fb46940c9c47e14",
-   "headline": "Prozessstart in Graz gegen Jugendlichen wegen Mordes",
-   "summary": "Ein erst 17-Jähriger hat im April ein betagtes Ehepaar im steirischen St. Peter am Ottersbach in deren Haus mit einem Messer attackiert, den Mann getötet und...",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794947739.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Prozessstart in Graz gegen Jugendlichen wegen Mordes",
-     "url": "https://www.kleinezeitung.at/artikel/41464678/prozessstart-in-graz-gegen-jugendlichen-wegen-mordes"
-    }
-   ]
-  },
-  {
-   "id": "2b1585c9380740faf6c41938",
-   "headline": "Großbrand durch Silvesterrakete: Zwei Monate bedingte Haft",
-   "summary": "Die Bilder des Brandes in Traun gingen damals als Fake-News um die Welt. Der Angeklagte bekannte sich schuldig.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794947739.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Großbrand durch Silvesterrakete: Zwei Monate bedingte Haft",
-     "url": "https://www.kleinezeitung.at/artikel/41464676/grossbrand-durch-silvesterrakete-23-jaehriger-vor-gericht"
-    }
-   ]
-  },
-  {
-   "id": "060e580c38a337e09680def1",
-   "headline": "Suchaktion nach abgängiger Person",
-   "summary": "Langenwang, Bezirk Bruck-Mürzzuschlag im Bezirk Bruck-Mürzzuschlag: Dienstagmittag, 17. November 2026, kam es im Gemeindegebiet von Langenwang zu einer großangelegten Suchaktion nach einem abgängigen 48-Jährigen aus dem Bezirk Murtal. Der Mann konnte nur mehr tot aufgefunden werden.",
-   "publishers": [
-    "bmi.gv.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794946140.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "bmi.gv.at",
-     "title": "Suchaktion nach abgängiger Person",
-     "url": ""
-    }
-   ]
-  },
-  {
-   "id": "6a59e69545d13d4117bf2acd",
-   "headline": "Hobbymaxxing: Wenn die Selbstoptimierung nie Feierabend hat",
-   "summary": "Der Social-Media-Trend verspricht ein erfüllteres Leben durch maximale Freizeitnutzung. Doch aus Spaß werden schnell Erwartungen und Leistungsdruck.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794945600.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Hobbymaxxing: Wenn die Selbstoptimierung nie Feierabend hat",
-     "url": "https://www.derstandard.at/story/3000000349608/hobbymaxxing-wenn-die-selbstoptimierung-nie-feierabend-hat?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "9756508485ecfbea8a38ae6f",
-   "headline": "\"Dark Magic Mushrooms\" überraschen mit unbekanntem Chemie-Cocktail",
-   "summary": "Ein winziger brauner Pilz aus Floridas Feuchtgebieten vereint zwei bisher nie gemeinsam gefundene Stoffe: das halluzinogene Psilocybin und hochgiftige Amatoxine.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794945600.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "\"Dark Magic Mushrooms\" überraschen mit unbekanntem Chemie-Cocktail",
-     "url": "https://www.derstandard.at/story/3000000349532/dark-magic-mushrooms-ueberraschen-mit-unbekanntem-chemie-cocktail?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "a69572e9761ec31996ec2d69",
-   "headline": "U21-EM in Kärnten? KFV-Präsident hat Hoffnung!",
-   "summary": "Das Wörthersee-Stadion war bei der Bewerbung für die U21-Fußball-Europameisterschaft 2029 ursprünglich nicht dabei, will’s nun aber sein. ÖFB-Generalsekretär Thomas Hollerer und Kärntens Verbandspräsident Martin Mutz erklären der „Krone“ die Sachlage.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794945424.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "U21-EM in Kärnten? KFV-Präsident hat Hoffnung!",
-     "url": "https://www.krone.at/4379675"
-    }
-   ]
-  },
-  {
-   "id": "d71f4e54794298afb7245aa7",
-   "headline": "Bruck-Mürzzuschlag: Mann (73) verletzt aus Waldstück gerettet",
-   "summary": "Der 73-Jährige war allein in dem Waldstück im Hüttengraben unterwegs, als er ausrutschte. Er wurde von der Bergrettung geborgen und ins Krankenhaus gebracht.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794945318.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Bruck-Mürzzuschlag: Mann (73) verletzt aus Waldstück gerettet",
-     "url": "https://www.kleinezeitung.at/artikel/41464649/bruck-muerzzuschlag-mann-73-verletzt-aus-waldstueck-gerettet"
-    }
-   ]
-  },
-  {
-   "id": "354aa67c01fdd0bfd038ff8b",
-   "headline": "Die Huthis stehen erneut vor Aden",
-   "summary": "Saudi-Arabien wollte mit seiner Offensive die international anerkannte jemenitische Regierung nach Sanaa zurückbringen. Dieser Plan ist gescheitert.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794944700.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Die Huthis stehen erneut vor Aden",
-     "url": "https://www.derstandard.at/story/3000000349661/die-huthis-stehen-erneut-vor-aden?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "46da564e1659c7fd8fbafe8b",
-   "headline": "Raubkunstverdacht: Einigung vor Van-Gogh-Auktion in New York",
-   "summary": "Ein auf rund 180 Millionen US-Dollar geschätztes Gemälde des Malers Vincent van Gogh soll heute in New York unter den Hammer kommen – obwohl seine Vergangenheit während der NS-Zeit zuletzt für Streit gesorgt hatte. Einen Tag vor der geplanten Auktion verkündete das Auktionshaus Sotheby’s eine Einigung zwischen den derzeitigen Eigentümern und den früheren Besitzern.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794944656.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Raubkunstverdacht: Einigung vor Van-Gogh-Auktion in New York",
-     "url": "https://orf.at/stories/3448505/"
-    }
-   ]
-  },
-  {
-   "id": "48e765a5239801409a971793",
-   "headline": "Flugzeug stürzt in Russland ab: Alle Insassen tot",
-   "summary": "Beim Absturz einer Militärmaschine sind in der russischen Region Kemerowo in Sibirien 19 Menschen ums Leben gekommen. Das meldeten russische Agenturen unter Berufung auf das Verteidigungsministerium in Moskau.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794944551.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Flugzeug stürzt in Russland ab: Alle Insassen tot",
-     "url": "https://www.krone.at/4379750"
-    }
-   ]
-  },
-  {
-   "id": "21bf4feef1a6cec80bfc1a6c",
-   "headline": "Alpinunfall: 73-Jähriger gerettet",
-   "summary": "Tragöss-Sankt Katharein, Bezirk Bruck-Mürzzuschlag im Bezirk Bruck-Mürzzuschlag: Dienstagvormittag, 17. November 2026, geriet ein 73-Jähriger im Waldgelände im Hüttengraben in eine alpine Notlage. Er wurde ins LKH Hochsteiermark eingeliefert.",
-   "publishers": [
-    "bmi.gv.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794944520.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "bmi.gv.at",
-     "title": "Alpinunfall: 73-Jähriger gerettet",
-     "url": ""
-    }
-   ]
-  },
-  {
-   "id": "c6bf85857298fdd53b6e8bea",
-   "headline": "Nehmen Sie den Hocker und stellen Sie ihn auf das Sofa! Möbelrücken im Mumok",
-   "summary": "Die neue Ausstellung \"Push and Pull\" lädt das Publikum zur Interaktion ein. Objekte dürfen verändert und berührt werden.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794943800.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Nehmen Sie den Hocker und stellen Sie ihn auf das Sofa! Möbelrücken im Mumok",
-     "url": "https://www.derstandard.at/story/3000000349145/nehmen-sie-den-hocker-und-stellen-sie-ihn-auf-das-sofa-moebelruecken-im-mumok?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "b1b9fd4896cddb5e14d45a2b",
-   "headline": "Zehntausende protestieren in Slowakei gegen Regierung",
-   "summary": "Jahrestag der „Samtenen Revolution“ vom November 1989 gegen die kommunistische Führung haben gestern Abend in der Slowakei Zehntausende Menschen gegen die Regierung des linksnationalen Ministerpräsidenten Robert Fico demonstriert. Aufgerufen hatten dazu mehrere Oppositionsparteien und Nichtregierungsorganisationen.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794943712.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Zehntausende protestieren in Slowakei gegen Regierung",
-     "url": "https://orf.at/stories/3448504/"
-    }
-   ]
-  },
-  {
-   "id": "2a55fe854da62980bba240a0",
-   "headline": "Werkstatt geriet in Brand",
-   "summary": "Weiz im Bezirk Weiz: Dienstagnachmittag, 17. November 2026, brach in einer Werkstatt ein Brand aus. Ein 47-Jähriger wurde mit Verdacht auf Rauchgasvergiftung ins Krankenhaus gebracht.",
-   "publishers": [
-    "bmi.gv.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794943260.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "bmi.gv.at",
-     "title": "Werkstatt geriet in Brand",
-     "url": ""
-    }
-   ]
-  },
-  {
-   "id": "3dc3418c27c3c05e6b79d700",
-   "headline": "Rückruf für Jurassic Dino-Shooter: Erstickungsgefahr",
-   "summary": "Die Fun Tading GmbH ruft den Jurassic Dino-Shooter, der ab Juni 2025 verkauft wurde, zurück.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794943081.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Rückruf für Jurassic Dino-Shooter: Erstickungsgefahr",
-     "url": "https://www.kleinezeitung.at/artikel/41464621/rueckruf-fuer-jurassic-dino-shooter-erstickungsgefahr"
-    }
-   ]
-  },
-  {
-   "id": "7de09dc02ce2389992a6ddeb",
-   "headline": "Neun Tage ohne Spur! Eltern durchleben Albtraum",
-   "summary": "Jeder Anruf lässt hoffen, jede Stunde erhöht die Angst: Seit neun Tagen ist der 14-jährige Claudiu aus dem Bezirk Linz-Land verschwunden. Seine Eltern durchleben seelische Höllenqualen und bitten nun dringend um Hinweise.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794942928.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Neun Tage ohne Spur! Eltern durchleben Albtraum",
-     "url": "https://www.krone.at/4379196"
-    }
-   ]
-  },
-  {
-   "id": "34ac43418dc92439a96a30ea",
-   "headline": "Geld für wichtige Investitionen fehlt",
-   "summary": "Vor einem „Investitionsstau“ haben Städte- und Gemeindebund am Dienstag auf einer gemeinsamen Pressekonferenz gewarnt. Aufgrund des Spardrucks würden viele Kommunen nötige Investitionen verschieben.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794942200.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Geld für wichtige Investitionen fehlt",
-     "url": "https://orf.at/stories/3448457/"
-    }
-   ]
-  },
-  {
-   "id": "90541feb6ec4b6fa8973a3bf",
-   "headline": "Jetzt fahren Russen „mit Vollgas“ um ihr Leben",
-   "summary": "Die Krim-Brücke ist schwer beschädigt, der einzige Ausweg führt durch ein Kriegsgebiet. In Chats berichten Russen von brennenden Fahrzeugen, Minen und tödlichen Drohnenangriffen.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794942053.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Jetzt fahren Russen „mit Vollgas“ um ihr Leben",
-     "url": "https://www.krone.at/4379664"
-    }
-   ]
-  },
-  {
-   "id": "1c9ca57f65eb1f78b25ec093",
-   "headline": "Was Frauen Männern tatsächlich voraus haben",
-   "summary": "Männer wollen Leistung bringen, Frauen können oft besser loslassen. Zumindest beobachtet das Yogalehrer Nicholas Köberl.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794942047.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Was Frauen Männern tatsächlich voraus haben",
-     "url": "https://www.krone.at/4379585"
-    }
-   ]
-  },
-  {
-   "id": "461eb70a5abfc2b3345cefcc",
-   "headline": "Zu Gast: Migrationsexperte Knaus",
-   "summary": "Das Vorhaben von Österreich und vier anderen EU-Ländern, in Ruanda ein Abschiebezentrum zu errichten, wird nicht nur wegen Menschenrechtsfragen von vielen Seiten kritisiert. Die Regierung hat sich auf einen gemeinsamen Entwurf für eine unabhängige Bundesstaatsanwaltschaft geeinigt.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794942041.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Zu Gast: Migrationsexperte Knaus",
-     "url": "https://orf.at/stories/3448501/"
-    }
-   ]
-  },
-  {
-   "id": "002a1213b01b0a76144b864d",
-   "headline": "Feuerwehrmann wird 100 Jahre alt: „Ziel erreicht!“",
-   "summary": "Die Liebe zur Feuerwehr ist bei Rudolf Payerhuber besonders groß. Eines seiner großen Lebensziele hat er erreicht: 100 Jahre zu werden und das mit seinen Kameraden zu feiern.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794942037.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Feuerwehrmann wird 100 Jahre alt: „Ziel erreicht!“",
-     "url": "https://www.krone.at/4379424"
-    }
-   ]
-  },
-  {
-   "id": "bd3d2ba2837c04fde6b8a298",
-   "headline": "Richter zu Angeklagtem: „Wissen Sie was der Braten ist?“",
-   "summary": "Firmenanbote soll ein steirischer Unternehmer gefälscht haben, um EU-Fördergelder zu erhalten. Bei der Verhandlung am Landesgericht für Strafsachen in Graz bekannte er sich nicht schuldig.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794942000.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Richter zu Angeklagtem: „Wissen Sie was der Braten ist?“",
-     "url": "https://www.kleinezeitung.at/artikel/41462225/richter-zu-angeklagtem-wissen-sie-was-der-braten-ist"
-    }
-   ]
-  },
-  {
-   "id": "2f627c62c8624169a303fce8",
-   "headline": "Schauspiel-Chefin Vilter: „Werde mich nicht wieder bewerben“",
-   "summary": "Nach Opernintendant Ulrich Lenz verlieren die Bühnen Graz auch Schauspiel-Intendantin Andrea Vilter nach nur einer Funktionsperiode.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794942000.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Schauspiel-Chefin Vilter: „Werde mich nicht wieder bewerben“",
-     "url": "https://www.kleinezeitung.at/artikel/41464548/werde-mich-nicht-wieder-bewerben"
-    }
-   ]
-  },
-  {
-   "id": "1585753cb9847bd4112d440c",
-   "headline": "Unternehmerin startet mit zwei Standbeinen in Völkermarkt durch",
-   "summary": "Die selbstständige Buchhalterin und Kinesiologin Tanja Zechner hat ihre Praxis Lebenswellen in Völkermarkt eröffnet, nimmt an Völkermarkter Wirtschaftsmesse teil.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794942000.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Unternehmerin startet mit zwei Standbeinen in Völkermarkt durch",
-     "url": "https://www.kleinezeitung.at/artikel/41460632/unternehmerin-startet-mit-zwei-standbeinen-in-voelkermarkt-durch"
-    }
-   ]
-  },
-  {
-   "id": "7e4ab23f326e8cc5dabd550a",
-   "headline": "Rohrbruch in Villach: Bahnhofstraße ab morgen gesperrt",
-   "summary": "Aufgrund eines Rohrbruchs im Fernwärmenetz kommt es ab morgen, Mittwoch, zu einer Totalsperre der Bahnhofstraße.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794942000.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Rohrbruch in Villach: Bahnhofstraße ab morgen gesperrt",
-     "url": "https://www.kleinezeitung.at/artikel/41464417/rohrbruch-in-villach-bahnhofstrasse-ab-morgen-gesperrt"
-    }
-   ]
-  },
-  {
-   "id": "120d592ac9036eb381f1828b",
-   "headline": "Mission Volia: Was es mit der französischen Geheimtruppe in der Ukraine auf sich hat",
-   "summary": "In der Ukraine ist eine Sondereinheit der französischen Armee aktiv.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794942000.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Mission Volia: Was es mit der französischen Geheimtruppe in der Ukraine auf sich hat",
-     "url": "https://www.derstandard.at/story/3000000349736/mission-volia-was-es-mit-der-franzoesischen-geheimtruppe-in-der-ukraine-auf-sich-hat?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "a07ea29c7fdba857a1225bcd",
-   "headline": "Red Week: Auch in Murtal und Murau werden Gebäude rot beleuchtet",
-   "summary": "Mit der Red Week wird auf die Verfolgung von Christen aufmerksam gemacht, indem Gebäude rot beleuchtet werden.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794942000.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Red Week: Auch in Murtal und Murau werden Gebäude rot beleuchtet",
-     "url": "https://www.kleinezeitung.at/artikel/41462841/red-week-auch-in-murtal-und-murau-werden-gebaeude-rot-beleuchtet"
-    }
-   ]
-  },
-  {
-   "id": "3caaa042635378f63b9a30e8",
-   "headline": "Garage fing in Weiz Feuer: 47-Jähriger erlitt Rauchgasvergiftung",
-   "summary": "Am Dienstagnachmittag dürften sich in der Garage Gase entzündet haben, als der Mann an einem Oldtimer arbeitete. Er versuchte das Feuer selbst zu löschen.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794941353.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Garage fing in Weiz Feuer: 47-Jähriger erlitt Rauchgasvergiftung",
-     "url": "https://www.kleinezeitung.at/artikel/41464628/garage-fing-in-weiz-feuer-47-jaehriger-erlitt-rauchgasvergiftung"
-    }
-   ]
-  },
-  {
-   "id": "50c68b6e9e0fcc06b48806e2",
-   "headline": "Österreichs U19 zerlegte England in der EM-Qualifikation mit 4:1",
-   "summary": "Das ÖFB-Team belegte in der Gruppe damit Platz zwei und fixierte den Aufstieg in die nächste Qualifikationsphase.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794940688.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Österreichs U19 zerlegte England in der EM-Qualifikation mit 4:1",
-     "url": "https://www.kleinezeitung.at/artikel/41464615/oesterreichs-u19-zerlegte-england-in-der-em-qualifikation-mit-4-1"
-    }
-   ]
-  },
-  {
-   "id": "10c7d18c189ca7a3150bb40a",
-   "headline": "„ÖVP kann Hörl danken, dass er ihr Gesicht wahrte“",
-   "summary": "So schnell kann’s gehen! ÖVP-Mann Johannes Hörl hat seine Ambitionen trotz Erstreihung um den Flughafen-Chef zurückgezogen.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794940216.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "„ÖVP kann Hörl danken, dass er ihr Gesicht wahrte“",
-     "url": "https://www.krone.at/4379643"
-    }
-   ]
-  },
-  {
-   "id": "dd9525e6862b9a069d97a969",
-   "headline": "Britischer Premier Burnham will den Brexit korrigieren",
-   "summary": "In einer Rede am Montagabend sprach Andy Burnham von einer \"Dekade von Schlendrian und Spaltung\" und nannte die Ukraine-Politik als Beispiel für gute europäische Zusammenarbeit.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794940200.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Britischer Premier Burnham will den Brexit korrigieren",
-     "url": "https://www.derstandard.at/story/3000000349726/britischer-premier-burnham-will-den-brexit-korrigieren?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "34d32dde59af5455da27fa74",
-   "headline": "„Diese Kriminellen denken in Möglichkeiten, nicht in Delikten“",
-   "summary": "Steirischer Polizei gelang Schlag gegen eine zehnköpfige Tätergruppe. Im Zentrum standen ein kokainsüchtiger Steirer (26) und ein geflohener tschetschenischer Häftling (23).",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794940200.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "„Diese Kriminellen denken in Möglichkeiten, nicht in Delikten“",
-     "url": "https://www.kleinezeitung.at/artikel/41463250/diese-kriminellen-denken-in-moeglichkeiten-nicht-in-delikten"
-    }
-   ]
-  },
-  {
-   "id": "b4108024ddeed9c219799f6b",
-   "headline": "Österreichs Motorsport-Talent Felbermayr fährt auch 2027 wieder für Audi in der F1 Academy",
-   "summary": "Es ist die dritte Saison für die 19-Jährige. Aktuell ist sie in der Serie Gesamtdritte, die Saison endet am Wochenende in Las Vegas.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794940167.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Österreichs Motorsport-Talent Felbermayr fährt auch 2027 wieder für Audi in der F1 Academy",
-     "url": "https://www.derstandard.at/story/3000000349743/oesterreichs-motorsport-talent-felbermayr-faehrt-auch-2027-wieder-fuer-audi-in-der-f1-academy?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "a52500e120bd6ea2b009a8be",
-   "headline": "Strafmündigkeit: FPÖ fordert in offenem Brief Verschärfung",
-   "summary": "Die FPÖ hat gestern in einem offenen Brief an die Bundesregierung erneut den strengeren Umgang mit minderjährigen Straftätern und Straftäterinnen gefordert. Die Regierung müsse umgehend die gesetzlichen Grundlagen schaffen, damit Gerichte bei schwerwiegenden Delikten von unter 14-Jährigen im Einzelfall über strafrechtliche Konsequenzen entscheiden könnten, hieß es in dem von FPÖ-Generalsekretär Michael Schnedlitz, Justizsprecher Harald Stefan und den Landesparteiobmännern Christof Bitschi (Vorarlberg) und Dominik Nepp (Wien) unterzeichneten Brief.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794939811.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Strafmündigkeit: FPÖ fordert in offenem Brief Verschärfung",
-     "url": "https://orf.at/stories/3448499/"
-    }
-   ]
-  },
-  {
-   "id": "e69fe7264ee69a001d149350",
-   "headline": "Salzburg bekommt eine eigene Monopoly-Edition",
-   "summary": "Alle Monopoly-Fans aufgepasst! Jetzt bekommt die Stadt Salzburg eine ganz eigene Monopoly-Version – und das pünktlich in der Vorweihnachtszeit.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794939666.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Salzburg bekommt eine eigene Monopoly-Edition",
-     "url": "https://www.krone.at/4379171"
-    }
-   ]
-  },
-  {
-   "id": "2f4c44cfa993a72e99f96f39",
-   "headline": "Distanz zu Julius L. Meinl, Klartext zur Bank: Gutachter zerpflückt das Institut",
-   "summary": "Eine Rechtsanwaltskanzlei distanziert sich von Julius Lindbergh Meinl, ein von der WKStA beauftragter Gutachter hat die Meinl Bank und ihre Transaktionen in ihre Einzelteile zerlegt.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794939300.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Distanz zu Julius L. Meinl, Klartext zur Bank: Gutachter zerpflückt das Institut",
-     "url": "https://www.derstandard.at/story/3000000349725/distanz-zu-julius-l-meinl-klartext-zur-bank-gutachter-zerpflueckt-das-institut?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "024bf169a4e6fe4ad37c9784",
-   "headline": "Kärntner Tourismustag: Reform soll Betrieben Buchungen einbringen",
-   "summary": "Im Casineum Velden traf sich die Tourismusbranche, um einen Blick in Kärntens Zukunft zu werfen. Erster Auftritt für die neuen Vorstände der Tourismusverbände.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794939222.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Kärntner Tourismustag: Reform soll Betrieben Buchungen einbringen",
-     "url": "https://www.kleinezeitung.at/artikel/41464380/kaerntner-tourismustag-reform-soll-betrieben-buchungen-einbringen"
-    }
-   ]
-  },
-  {
-   "id": "c0e7511602359c5700bf3858",
-   "headline": "USA kritisieren ukrainische Angriffe auf frontferne Ziele",
-   "summary": "Die USA kritisieren die Zielauswahl der ukrainischen Militärführung. „Während sich die öffentliche Debatte auf die Angriffe weit hinter der Front konzentriert, die darauf abzielen, der russischen Bevölkerung Leid zuzufügen, kommen wir zu der Einschätzung, dass solche Angriffe weder dazu beigetragen haben, ein Ende des Krieges herbeizuführen, noch dazu, den russischen Vormarsch an der Front aufzuhalten“, sagte Verteidigungsstaatssekretär Elbridge Colby.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794938767.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "USA kritisieren ukrainische Angriffe auf frontferne Ziele",
-     "url": "https://orf.at/stories/3448498/"
-    }
-   ]
-  },
-  {
-   "id": "de09d91e399dd83938342188",
-   "headline": "Streitbarer Ortskaiser übergibt an 24-Jährigen",
-   "summary": "Mit der SPÖ im Dauerclinch, mit der Pfarre über Kreuz und mit dem Land vor Gericht: Bernd Strobl sorgte als Bürgermeister von Ollersdorf regelmäßig für Zündstoff. Sein möglicher Nachfolger Maximilian Toth (24) will einen anderen Weg einschlagen, in politischen Positionen aber standhaft bleiben.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794938449.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Streitbarer Ortskaiser übergibt an 24-Jährigen",
-     "url": "https://www.krone.at/4379470"
-    }
-   ]
-  },
-  {
-   "id": "f9d76bbe2681adf35bf008f1",
-   "headline": "Trotz Morddrohung neue Chance auf Diversion",
-   "summary": "Wer nicht hören will, muss fühlen. Und manchmal eben auch mehr bezahlen!",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794938416.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Trotz Morddrohung neue Chance auf Diversion",
-     "url": "https://www.krone.at/4379202"
-    }
-   ]
-  },
-  {
-   "id": "67dde49e200830b2858e4cde",
-   "headline": "Scherben kitten nach gescheiterter TVB-Ehe",
-   "summary": "Wenn eine Verhandlung platzt, sind die anderen schuld – so klingt nun auch die Aufarbeitung zwischen den Touristikern in Kirchberg und Kitz. Die Vision einer gemeinsamen Zukunft ist ad acta gelegt.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794938415.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Scherben kitten nach gescheiterter TVB-Ehe",
-     "url": "https://www.krone.at/4379679"
-    }
-   ]
-  },
-  {
-   "id": "9c8b85e687e6dca184959f58",
-   "headline": "Doppelstockzüge erfreuen sich großer Beliebtheit",
-   "summary": "Verspätungen und Zugausfälle sorgen oft für Ärger – doch diesmal gibt es erfreuliche Nachrichten von den ÖBB, was eine aktuelle Umfrage unter 600 Fahrgästen bestätigt: Die neuen Cityjet-Doppelstockzüge auf der Südstrecke begeistern.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794938415.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Doppelstockzüge erfreuen sich großer Beliebtheit",
-     "url": "https://www.krone.at/4378022"
-    }
-   ]
-  },
-  {
-   "id": "e6b3ed38b547776de1a26432",
-   "headline": "Quereinsteigerin eröffnet in Feldbach Hunde- und Katzenfriseur",
-   "summary": "Die 33-jährige Franziska Kocbek geht nach Stationen in Gastro und Reinigung ihrer Leidenschaft nach und bietet mit „Amaneo“ Fellpflege für Hunde und Katzen an.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794938400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Quereinsteigerin eröffnet in Feldbach Hunde- und Katzenfriseur",
-     "url": "https://www.kleinezeitung.at/artikel/41460806/quereinsteigerin-eroeffnet-in-feldbach-hunde-und-katzenfriseur"
-    }
-   ]
-  },
-  {
-   "id": "94c5fb9c599a2c1862435e06",
-   "headline": "Goldener Bär für Villacher Imker: Landessieg geht nach Landskron",
-   "summary": "Bei der Kärntner Honigprämierung holte Arnold Huber den „Goldenen Bären“ in der Kategorie Honigtauhonig. Ein Erfolg, der auch auf guter Nachbarschaft basiert.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794938400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Goldener Bär für Villacher Imker: Landessieg geht nach Landskron",
-     "url": "https://www.kleinezeitung.at/artikel/41462380/goldener-baer-fuer-villacher-imker-landessieg-geht-nach-landskron"
-    }
-   ]
-  },
-  {
-   "id": "72899fd7718849226fd35bbe",
-   "headline": "Sexistisch, woke, weich oder weird? So könnte der neue Bond werden",
-   "summary": "Mit Robert Pattinson schlüpft ausgerechnet der Star der Stunde in die Rolle des Geheimagenten. Das ist nicht das einzig Ungewöhnliche an dieser Wahl.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794938400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Sexistisch, woke, weich oder weird? So könnte der neue Bond werden",
-     "url": "https://www.derstandard.at/story/3000000349585/sexistisch-woke-weich-oder-weird-so-koennte-der-neue-bond-werden?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "61ed217097dcc166cd22d25b",
-   "headline": "2500 ÖBB-Lokführer warten seit elf Monaten auf versprochene Lohnerhöhung",
-   "summary": "Während Arbeitgeber und Gewerkschaft um den Kollektivvertrag ringen, warten zahlreiche ÖBB-Beschäftigte auf eine nachträgliche Erhöhung. Zinsen für die späte Auszahlung soll es nicht geben.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794938400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "2500 ÖBB-Lokführer warten seit elf Monaten auf versprochene Lohnerhöhung",
-     "url": "https://www.derstandard.at/story/3000000349389/2500-oebb-lokfuehrer-warten-seit-elf-monaten-auf-versprochene-lohnerhoehung?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "dfbf1cd2f1ab388fc55a0bba",
-   "headline": "Leoben-Schladnitz bekommt heuer erstmals eigenen Christkindlmarkt",
-   "summary": "Gemeinsam mit Claudia Kottar organisiert Veranstalter Hannes Kaufmann aus Leoben das erste Mal einen eigenen Christkindlmarkt in Schladnitz: Dabei legen sie Wert auf traditionelles Kunsthandwerk.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794938400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Leoben-Schladnitz bekommt heuer erstmals eigenen Christkindlmarkt",
-     "url": "https://www.kleinezeitung.at/artikel/41459388/leoben-schladnitz-bekommt-heuer-erstmals-eigenen-christkindlmarkt"
-    }
-   ]
-  },
-  {
-   "id": "1ce48475a487834097e32b15",
-   "headline": "„Abschiebezentren sollen Migrationswende bringen“",
-   "summary": "Die geplanten Abschiebezentren für abgelehnte Asylwerber sollen eine Migrationswende in der EU bringen. Sie bleiben aber vorerst Sache der Mitgliedsstaaten.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794938275.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "„Abschiebezentren sollen Migrationswende bringen“",
-     "url": "https://www.krone.at/4379713"
-    }
-   ]
-  },
-  {
-   "id": "aae0cd148532a1e55ba477fd",
-   "headline": "12 Spiele Sperre! „Gleich danach wurde ich Schiri“",
-   "summary": "„REIHE 2“ – die Serie über Persönlichkeiten im Sport, die mit Herz und Leidenschaft das Werkl am Laufen halten. Diesmal Admir Hasanovic, der seit 23 Jahren als Referee im Unterhaus pfeift.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794937591.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "12 Spiele Sperre! „Gleich danach wurde ich Schiri“",
-     "url": "https://www.krone.at/4376093"
-    }
-   ]
-  },
-  {
-   "id": "58b3cdb70a4b766b8af5f2b2",
-   "headline": "Warum Österreich so viele Frauenmorde verzeichnet",
-   "summary": "Österreich hat einen auffallend hohen Anteil an Frauenmorden – und die Zahlen halten sich seit Jahren konstant. Ein prominent besetztes Podium diskutierte am Montagabend an der Uni Graz darüber, wie man die Gewaltspirale stoppen kann.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794937587.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Warum Österreich so viele Frauenmorde verzeichnet",
-     "url": "https://www.krone.at/4377872"
-    }
-   ]
-  },
-  {
-   "id": "b50311e69bc11d2858c1738d",
-   "headline": "Vor Xi-Trump-Putin-Treffen beschwichtigt Trump noch seine Partner",
-   "summary": "Zwei Jahre lang gab es gar kein Treffen von \"Asiens Nato\", der Quad. Am Vorabend des historischen Dreiertreffens in China macht der US-Präsident noch einen Stopp in Manila.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794937172.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Vor Xi-Trump-Putin-Treffen beschwichtigt Trump noch seine Partner",
-     "url": "https://www.derstandard.at/story/3000000349583/vor-xi-trump-putin-treffen-beschwichtigt-trump-noch-seine-partner?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "50e852ca33a77491a38690d7",
-   "headline": "Weltcup-Ort erhöht Preisgeld für Ski-Prinzessin!",
-   "summary": "Die bestprämierte Weltcup-Station der Ski-Damen wird um ein Flutlicht-Rennen leichter. Den Titel der „Snow Space Salzburg Princess“ müssen sich die Fahrerinnen ab 2027 aber neu verdienen.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794936832.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Weltcup-Ort erhöht Preisgeld für Ski-Prinzessin!",
-     "url": "https://www.krone.at/4379649"
-    }
-   ]
-  },
-  {
-   "id": "983c45bef4d1079b00b8e963",
-   "headline": "Welche Luxusmarken dürfen den neuen Bond ausstatten?",
-   "summary": "Robert Pattinsons Besetzung heizt den Wettbewerb um Bond-Kooperationen an.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794936769.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Welche Luxusmarken dürfen den neuen Bond ausstatten?",
-     "url": "https://www.derstandard.at/story/3000000349737/welche-luxusmarken-duerfen-den-neuen-bond-ausstatten?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "d2eb05dd5d0d4134e912b49f",
-   "headline": "Handels-KV: Dritte Runde ergebnislos, Streik droht",
-   "summary": "Dritte Verhandlungsrunde wurde ergebnislos unterbrochen. Österreichweit folgen Betriebsversammlungen.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794936664.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Handels-KV: Dritte Runde ergebnislos, Streik droht",
-     "url": "https://www.kleinezeitung.at/artikel/41464535/handels-kv-dritte-runde-ergebnislos-streik-droht"
-    }
-   ]
-  },
-  {
-   "id": "3d8cba602b2c68901d20abbd",
-   "headline": "Düstere Aussicht: Wiens Zukunft kann kein Deutsch",
-   "summary": "Fast jedes zweite Kind startet sprachlich überfordert in die Volksschule, knapp 60 Prozent davon kamen in Österreich zur Welt. Bildungsstadträtin Bettina Emmerling (Neos) spricht von einem Erfolg bei sinkenden Gesamtzahlen, die ÖVP wirft den Neos jedoch Versagen vor.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794936614.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Düstere Aussicht: Wiens Zukunft kann kein Deutsch",
-     "url": "https://www.krone.at/4379238"
-    }
-   ]
-  },
-  {
-   "id": "e0b16c9b45b7f186b547b707",
-   "headline": "Nächster Prozess gegen zwei Prügelpolizisten oder Verleumdungsopfer",
-   "summary": "Zwei Wiener Beamte sollen einen Minderjährigen schikaniert, geschlagen und bedroht haben. Sie beteuern ihre Unschuld, die Zeugenaussagen sind widersprüchlich.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794936600.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Nächster Prozess gegen zwei Prügelpolizisten oder Verleumdungsopfer",
-     "url": "https://www.derstandard.at/story/3000000349676/naechster-prozess-gegen-zwei-pruegelpolizisten-oder-verleumdungsopfer?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "291cb0aeedc768485c475479",
-   "headline": "Schul-Beurteilung auf neuer Homepage empört steirische Direktoren",
-   "summary": "Ministerium stuft Schulen auf neuem Portal nach Lernstand der Schüler ein. Doch viele Pädagogen trauen ihren Augen nicht: Trotz guter Ergebnisse setzt es schlechte Bewertungen.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794936600.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Schul-Beurteilung auf neuer Homepage empört steirische Direktoren",
-     "url": "https://www.kleinezeitung.at/artikel/41460605/schul-beurteilung-auf-neuer-homepage-empoert-steirische-direktoren"
-    }
-   ]
-  },
-  {
-   "id": "a9968178ee5e188ab747e070",
-   "headline": "Google deckt erste komplett mit KI automatisierte Cyberangriffe auf",
-   "summary": "Von der Entdeckung von Sicherheitslücken bis zum Schreiben eines Exploits bis zur Verbreitung im Netzwerk passierte alles ohne menschliche Interaktion. Die Täter dürften in Russland stecken, das Ziel waren unter anderem französische Medien.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794936542.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Google deckt erste komplett mit KI automatisierte Cyberangriffe auf",
-     "url": "https://www.derstandard.at/story/3000000349714/google-deckt-erste-komplett-mit-ki-automatisierte-cyberangriffe-auf?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "13391ec384583450949083b3",
-   "headline": "Handels-KV-Verhandlungen: GPA kündigt Betriebsversammlungen mit Streikbeschlüssen an",
-   "summary": "Vor neuem Gesprächstermin am 30. November und dem Weihnachtsgeschäft erhöht die Gewerkschaft den Druck.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794936206.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Handels-KV-Verhandlungen: GPA kündigt Betriebsversammlungen mit Streikbeschlüssen an",
-     "url": "https://www.derstandard.at/story/3000000349738/-kv-handel-3-runde-ergebnislos-gpa-k252ndigt-betriebsversammlungen-an?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "5f26e79124107ca1ec4a7c70",
-   "headline": "Lebenslang und Einweisung für 47-Jährigen in Prozess um Femizid in Niederösterreich",
-   "summary": "Der Mann soll am Ostersonntag seine Ehefrau getötet haben, er wird in ein forensisch-therapeutisches Zentrum eingewiesen. Ein 45-jähriger Mitangeklagter wurde freigesprochen.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794936138.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Lebenslang und Einweisung für 47-Jährigen in Prozess um Femizid in Niederösterreich",
-     "url": "https://www.derstandard.at/story/3000000349740/lebenslang-und-einweisung-f252r-47-j228hrigen-in-prozess-um-femizid-in-n214?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "4a8ab4b10bab7d97c78ce19b",
-   "headline": "Polarlichter vom Bett aus: Das sind Europas beste Glasiglus",
-   "summary": "Ein neues Ranking zeigt, in welchen Unterkünften die Chancen auf das spektakuläre Himmelsschauspiel am größten sind.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794936120.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Polarlichter vom Bett aus: Das sind Europas beste Glasiglus",
-     "url": "https://www.derstandard.at/story/3000000349674/polarlichter-vom-bett-aus-das-sind-europas-beste-glasiglus?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "ae2e4b770df7f9d00e57b0e1",
-   "headline": "Mongolischer Präsident Khurelsukh tritt zurück",
-   "summary": "Nach Korruptionsvorwürfen kündigte Ukhnaa Khurelsukh am Dienstag seinen Rücktritt an. Die oppositionellen Demokratische Partei hatte den Präsidenten am Montag der Bestechung bezichtigt.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794935759.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Mongolischer Präsident Khurelsukh tritt zurück",
-     "url": "https://www.derstandard.at/story/3000000349739/mongolischer-pr228sident-khurelsukh-tritt-zur252ck?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "77af991f6da8eb650320ba65",
-   "headline": "Vier Kindern die Mama genommen: Lebenslang!",
-   "summary": "Es fließen Tränen im Gerichtssaal in Wiener Neustadt (NÖ). Im Zuschauerraum und bei der Zeugin, als sie über Maria spricht: „So eine Mutter wünschen sich alle Kinder.“ David O. lässt das kalt – von Reue keine Spur.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794935311.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Vier Kindern die Mama genommen: Lebenslang!",
-     "url": "https://www.krone.at/4379135"
-    }
-   ]
-  },
-  {
-   "id": "4459cdee0a8dcc290483c9b2",
-   "headline": "Öfen in Hartberg-Fürstenfeld glühen für „Steirer helfen Steirern“",
-   "summary": "In der Fachschule Vorau und zu Hause bei den Bezirksbäuerinnen wird schon fleißig gebacken, und zwar für den Keksverkauf zugunsten von „Steirer helfen Steirern“.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794935261.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Öfen in Hartberg-Fürstenfeld glühen für „Steirer helfen Steirern“",
-     "url": "https://www.kleinezeitung.at/artikel/41464418/oefen-in-hartberg-fuerstenfeld-gluehen-fuer-steirer-helfen-steirern"
-    }
-   ]
-  },
-  {
-   "id": "724bd708b2a307f2d9d422f3",
-   "headline": "FPÖ: Ex-Skirennläufer Brunner folgt Nemeth als Mandatar",
-   "summary": "Nach dem Ableben des stellvertretenden Klubobmanns der FPÖ, Norbert Nemeth, hat der freiheitliche Parlamentsklub heute über die Nachfolge entschieden. Als Mandatar zieht der niederösterreichische Ex-Skirennläufer Manuel Brunner statt Nemeth ins Parlament ein.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794935130.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "FPÖ: Ex-Skirennläufer Brunner folgt Nemeth als Mandatar",
-     "url": "https://orf.at/stories/3448493/"
-    }
-   ]
-  },
-  {
-   "id": "212869ee5a07be56abaf29e0",
-   "headline": "Kaum Details, viel Kritik an Ruanda-Plan",
-   "summary": "Österreich und vier weitere EU-Staaten haben sich am Montag mit Ruanda auf Verhandlungen über ein Abschiebezentrum in dem afrikanischen Staat geeinigt. Details zu Kosten und Umfang der geplanten Abschiebungen blieben bei der Präsentation offen.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934933.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Kaum Details, viel Kritik an Ruanda-Plan",
-     "url": "https://orf.at/stories/3448435/"
-    }
-   ]
-  },
-  {
-   "id": "f62a0d33d8b7fa9759da0727",
-   "headline": "Wie der Ukraine der große Schlag gegen Putins Krimbrücke gelang",
-   "summary": "Bis zu zehn Flamingo-Marschflugkörper sollen die massive Kertschbrücke getroffen haben. Der Operation gingen umfangreiche Vorbereitungen voraus – und auch ein US-Flugzeug half mit.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934883.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Wie der Ukraine der große Schlag gegen Putins Krimbrücke gelang",
-     "url": "https://www.derstandard.at/story/3000000349659/wie-der-ukraine-der-grosse-schlag-gegen-putins-krimbruecke-gelang?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "ff618e5208d7a8ec265929a8",
-   "headline": "Vom Elfer-Krimi zum Jubel 26 Sekunden vor Schluss",
-   "summary": "Im KFV-Kelag-Connect-Cup ging es um den Einzug ins Halbfinale! Ein Weitschuss sorgt im Studio für eine hitzige Diskussion, in Lendorf müssen die Elfer entscheiden.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934881.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Vom Elfer-Krimi zum Jubel 26 Sekunden vor Schluss",
-     "url": "https://www.krone.at/4379275"
-    }
-   ]
-  },
-  {
-   "id": "2d818645aa63250cc723c0fb",
-   "headline": "Thalersee-Sperrstunde: Debatte um Gastro-Konzept und Pachthöhe",
-   "summary": "Neuerliche Insolvenz führt zur Diskussion über die Ausrichtung des Restaurants und über die Pacht – samt Hinweis, das alte Lokal sei jahrzehntelang gut gelaufen. So reagieren Holding-Chef und Thaler Bürgermeister.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934821.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Thalersee-Sperrstunde: Debatte um Gastro-Konzept und Pachthöhe",
-     "url": "https://www.kleinezeitung.at/artikel/41462113/thalersee-sperrstunde-debatte-um-gastro-konzept-und-pachthoehe"
-    }
-   ]
-  },
-  {
-   "id": "78d007196f68bafba05cb09f",
-   "headline": "„Terrormieter“ kehrte kurz in alte Wohnung zurück",
-   "summary": "Ein 60-Jähriger, der jahrelang seine Mitbewohner terrorisiert hatte, stattete seiner alten Wohnung kürzlich wieder einen verwirrten Besuch ab. Vor Ort ist die Verunsicherung nun wieder groß.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934819.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "„Terrormieter“ kehrte kurz in alte Wohnung zurück",
-     "url": "https://www.krone.at/4379430"
-    }
-   ]
-  },
-  {
-   "id": "cfb1878196e2cad0e4cc041b",
-   "headline": "„Wegen ein paar Trotteln“: Perchten-Fans empört",
-   "summary": "Zwei Männer attackierten nach einem Perchtenlauf in Schörfling am Attersee Polizisten. Nun überlegt der Veranstalter, das Spektakel einzustellen.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934818.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "„Wegen ein paar Trotteln“: Perchten-Fans empört",
-     "url": "https://www.krone.at/4379155"
-    }
-   ]
-  },
-  {
-   "id": "883c716f01d38c8ce6c5eca1",
-   "headline": "Tiroler Bäcker und Konditoren sind am Limit!",
-   "summary": "Bäcker, Konditor und Metzger haben eines gemeinsam: Ihre Betriebe am Leben zu halten, wird zunehmend schwieriger. Überbordende Bürokratie, hohe Energiepreise und steigende Lohnkosten setzen das heimische Handwerk unter Druck.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934816.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Tiroler Bäcker und Konditoren sind am Limit!",
-     "url": "https://www.krone.at/4379450"
-    }
-   ]
-  },
-  {
-   "id": "b0667cf86fabf9b175cc0e5a",
-   "headline": "Betrunken im Dienst? Gegen Polizistin wird ermittelt",
-   "summary": "Bei einer Amtshandlung im Lavanttal sei die Polizeibeamtin durch ihre „Fahne“ aufgeflogen.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934800.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Betrunken im Dienst? Gegen Polizistin wird ermittelt",
-     "url": "https://www.kleinezeitung.at/artikel/41463050/betrunken-im-dienst-gegen-polizistin-wird-ermittelt"
-    }
-   ]
-  },
-  {
-   "id": "03e16349e0b2986063333120",
-   "headline": "Worüber man am Wörthersee diskutierte, als GTA 5 erschien",
-   "summary": "Am 19. November erscheint GTA 6. Im September 2013 schrieb schon der Vorgänger, GTA 5, die Videospielgeschichte neu.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934800.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Worüber man am Wörthersee diskutierte, als GTA 5 erschien",
-     "url": "https://www.kleinezeitung.at/artikel/41460023/worueber-man-am-woerthersee-diskutierte-als-gta-5-erschien"
-    }
-   ]
-  },
-  {
-   "id": "4fe639ae794477aefc4487df",
-   "headline": "Wird Karin Kneissl die Staatsbürgerschaft entzogen?",
-   "summary": "Die Neos hatten eine Anzeige eingebracht, nun prüft die Behörde in Wien. Ein Kuriosum des Gesetzes könnte der Ex-Außenministerin zum Verhängnis werden.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934800.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Wird Karin Kneissl die Staatsbürgerschaft entzogen?",
-     "url": "https://www.kleinezeitung.at/artikel/41463170/wird-karin-kneissl-die-staatsbuergerschaft-entzogen"
-    }
-   ]
-  },
-  {
-   "id": "411ed7b80f39cf227712733c",
-   "headline": "Haustiere zum Abgewöhnen",
-   "summary": "Süß, lieb, traurig. Das Forum Stadtpark lädt zur „Haustiermesse“ und untersucht das Verhältnis von Tier und Mensch.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934800.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Haustiere zum Abgewöhnen",
-     "url": "https://www.kleinezeitung.at/artikel/41462909/haustiere-zum-abgewoehnen"
-    }
-   ]
-  },
-  {
-   "id": "1a50b6b0e609bd3365a7a64a",
-   "headline": "Den Sportgeschäften in Mittelkärnten geht die Luft aus",
-   "summary": "Immer mehr Sportgeschäfte ziehen sich zurück. In der Bezirksstadt St. Veit findet man keinen klassischen Vollsortimenter im Sporthandel, in Feldkirchen hält man an Hervis fest.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934800.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Den Sportgeschäften in Mittelkärnten geht die Luft aus",
-     "url": "https://www.kleinezeitung.at/artikel/41460309/den-sportgeschaeften-in-mittelkaernten-geht-die-luft-aus"
-    }
-   ]
-  },
-  {
-   "id": "29b4696246378000932b2d98",
-   "headline": "190 Jahre Rappl in Gröbming: „Wär nix, wenn‘s den neama geben tat“",
-   "summary": "1836 gegründet, ist er mehrere Generationen später immer noch in Familienhand: „der Rappl“ in Gröbming. Was das Kaufhaus so besonders macht und wie es weitergehen soll.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934800.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "190 Jahre Rappl in Gröbming: „Wär nix, wenn‘s den neama geben tat“",
-     "url": "https://www.kleinezeitung.at/artikel/41440061/190-jahre-rappl-in-groebming-waer-nix-wenns-den-neama-geben-tat"
-    }
-   ]
-  },
-  {
-   "id": "4110aeb09e3fe57961358a6e",
-   "headline": "Die Fröhlichkeit des Gastwirts aus Oberkärnten wird fehlen",
-   "summary": "Alois Sattlegger (79) führte im Gitschtal ein Gasthaus und eine Pferdezucht. Der Reitlehrer und Kutschenfahrer war legendär und besaß die Gabe, Menschen zusammenzuführen.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934800.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Die Fröhlichkeit des Gastwirts aus Oberkärnten wird fehlen",
-     "url": "https://www.kleinezeitung.at/artikel/41462576/die-froehlichkeit-des-gastwirts-aus-oberkaernten-wird-fehlen"
-    }
-   ]
-  },
-  {
-   "id": "63159c6b8c3ca2ffaca20c59",
-   "headline": "New Adits in Klagenfurt: „Ein herausforderndes Programm“",
-   "summary": "Von 18. bis 21. November holt New Adits experimentelle Musik in die Villa For Forest. Ingrid Schmoliner freut sich auf ein „nicht eingrenzbares“ Festival.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934800.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "New Adits in Klagenfurt: „Ein herausforderndes Programm“",
-     "url": "https://www.kleinezeitung.at/artikel/41449310/new-adits-in-klagenfurt-ein-herausforderndes-programm"
-    }
-   ]
-  },
-  {
-   "id": "fce7cf370673403cbe79b43e",
-   "headline": "Der Feind im eigenen Haus: Norwegen unter deutscher Besatzung",
-   "summary": "Hunderttausende deutsche und österreichische Soldaten hielten Norwegen im Zweiten Weltkrieg besetzt. Die Historikerin Maria Fritsche beleuchtet die Grauzonen zwischen Widerstand und Kollaboration.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934792.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Der Feind im eigenen Haus: Norwegen unter deutscher Besatzung",
-     "url": "https://www.derstandard.at/story/3000000349495/der-feind-im-eigenen-haus-norwegen-unter-deutscher-besatzung?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "edcc57aafb9bee51ddcbad74",
-   "headline": "Novelle: Ein Viertel weniger Naturschutz-Verfahren",
-   "summary": "Die Mitglieder der schwarz-blauen Vorarlberger Landesregierung haben am Dienstag die umstrittene Gesetzesvorlage zur Novelle des Gesetzes über Naturschutz und Landschaftsentwicklung (GNL) einstimmig auf den Weg gebracht. Als Nächstes muss das Vorhaben noch den Landtag passieren.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934559.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Novelle: Ein Viertel weniger Naturschutz-Verfahren",
-     "url": "https://www.krone.at/4379584"
-    }
-   ]
-  },
-  {
-   "id": "a4d6f6eba25f09aa1fded46e",
-   "headline": "Mittelschule Köflach widmet sich eine Woche lang dem Apfel",
-   "summary": "Um die Schüler auf heimische und gesunde Lebensmittel aufmerksam zu machen, sponsern die steirischen Obstbauern jeden Tag Äpfel für die Kinder.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934500.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Mittelschule Köflach widmet sich eine Woche lang dem Apfel",
-     "url": "https://www.kleinezeitung.at/artikel/41463595/mittelschule-koeflach-widmet-sich-eine-woche-lang-dem-apfel"
-    }
-   ]
-  },
-  {
-   "id": "e6a2ac362bbd535864b66913",
-   "headline": "Kunasek zu Wechsel nach Wien: „Sag niemals nie!“",
-   "summary": "Seit knapp zwei Jahren steht Mario Kunasek an der Spitze der Steiermark. Die FPÖ liegt im Umfragehoch, doch die politischen Herausforderungen sind groß: ein angespanntes Budget, die Krise der Autoindustrie und der Streit um die Sozialhilfereform beschäftigen das Land.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934282.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Kunasek zu Wechsel nach Wien: „Sag niemals nie!“",
-     "url": "https://www.krone.at/4379345"
-    }
-   ]
-  },
-  {
-   "id": "b1c72903ea26552e8e2ace86",
-   "headline": "Offiziell: USA nicht mehr masernfrei",
-   "summary": "Die USA haben nach 26 Jahren ihren Status als masernfreies Land verloren. Die Panamerikanische Gesundheitsorganisation (PAHI) bestätigte gestern offiziell ihre Entscheidung.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934127.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Offiziell: USA nicht mehr masernfrei",
-     "url": "https://orf.at/stories/3448491/"
-    }
-   ]
-  },
-  {
-   "id": "175b06503f5e393289a56ec4",
-   "headline": "Jugendliche Täter bringen Polizisten vor Gericht",
-   "summary": "Es ist schier unglaublich. Eine Jugendbande mit amtsbekannten, aber strafunmündigen Jungtätern beschuldigte Beamte einer Polizeiinspektion in Wien, dass diese sie geschlagen, an den Ohren gezogen oder im Wald ausgesetzt hätten.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934098.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Jugendliche Täter bringen Polizisten vor Gericht",
-     "url": "https://www.krone.at/4379142"
-    }
-   ]
-  },
-  {
-   "id": "0361a563a4f2bca87d011558",
-   "headline": "Brenner-Basistunnel: Schwere Vorwürfe der Arbeiter",
-   "summary": "Zeitdruck, lasche Sicherheitsvorkehrungen und Hektik – Dinge, die auf einer Großbaustelle tödlich enden können. Die Arbeiter im Brenner-Basistunnel erheben nun genau diese Vorwürfe, nachdem einer ihrer Kollegen von einem Betonteil getroffen wurde und später seinen Verletzungen erlegen war.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934065.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Brenner-Basistunnel: Schwere Vorwürfe der Arbeiter",
-     "url": "https://www.krone.at/4379618"
+     "title": "Squiggly Sudoku mittel 6575b",
+     "url": "https://www.derstandard.at/story/3000000348313/squiggly-sudoku-s6434b?ref=rss"
     }
    ]
   },
@@ -8581,26 +8162,6 @@
      "publisher": "derstandard.at",
      "title": "\"Neue Weltordnung\"",
      "url": "https://www.derstandard.at/story/3000000349871/neue-weltordnung?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "c7334f1bc7955f1f2a02760c",
-   "headline": "XSudoku schwierig 6574b",
-   "summary": "",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1794934800.0,
-   "status": "zurueckgestellt",
-   "status_label": "Zurückgestellt: kein verwertbarer Text in der Quelle",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "XSudoku schwierig 6574b",
-     "url": "https://www.derstandard.at/story/3000000348311/xsudoku-schwierig-6574b?ref=rss"
     }
    ]
   }
