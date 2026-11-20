@@ -40,6 +40,8 @@ jobs:
         env:
           CHROME_PATH: /usr/bin/google-chrome
         run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory docs >/tmp/http.log 2>&1 &
+          sleep 1
           for f in tests/*.cjs; do
             echo "::group::$f"
             node "$f"
