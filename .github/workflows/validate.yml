@@ -1,0 +1,49 @@
+name: validate
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  python-tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python3 -m pip install --disable-pip-version-check Pillow
+      - name: Compile scripts
+        run: python3 -m compileall -q scripts tests
+      - name: Unit tests
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 -m unittest discover -s tests -v
+  browser-tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright (uses system Chrome)
+        run: npm install --no-save --no-audit --no-fund playwright
+      - name: Browser tests
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory docs >/tmp/http.log 2>&1 &
+          sleep 1
+          for f in tests/*.cjs; do
+            echo "::group::$f"
+            node "$f"
+            echo "::endgroup::"
+          done
