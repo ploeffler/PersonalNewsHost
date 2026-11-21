@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 175,
+  "revision": 176,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -229,7 +229,7 @@
       "id": "T020",
       "epic": "E2",
       "title": "Statische Artikelseiten pro Meldung",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T011"
       ],
@@ -245,11 +245,10 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A05",
-      "lease": null,
-      "review": {
-        "author": "claude-chillyconcane",
-        "commit": "2cb85a114fc6a7093e9d0260ee0e4c3f8edd0145",
-        "checks": "451 Python-Tests grün (python3 -m unittest discover -s tests), davon 7 in tests/test_article_pages.py inkl. End-to-End-Lauf von generate.main() mit FFmpeg: jede Meldung hat eine Seite, Startseite verlinkt sie, verlinktes Archivvideo existiert, Startzeit > 0. test_documentation_release grün, git diff --check sauber. Seite per Playwright bei 1100 px (hell) und 390 px (dunkel) visuell geprüft; keine externen Ressourcen. Grenze: produce_show.py erzeugt noch keine Artikelseiten.",
+      "lease": {
+        "client": "claude-chillyconcane",
+        "token": "5204dc7a6cf74b2481221ebc9cf5efe7",
+        "expires_at": 1795264169.8009303,
         "files": [
           "config.example.json",
           "docs/guide/artikelseiten.md",
@@ -257,10 +256,9 @@
           "scripts/article_pages.py",
           "scripts/generate.py",
           "tests/test_article_pages.py"
-        ],
-        "reviewer": "ploeffler-vorlaeufig",
-        "rejected": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
+        ]
       },
+      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7768,6 +7766,15 @@
       "client": "ploeffler-vorlaeufig",
       "at": 1795260566.6447098,
       "note": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
+    },
+    {
+      "operation_id": "ad6955ebedf4461d8e341e02ed3dfaf9",
+      "revision": 176,
+      "action": "claim",
+      "task": "T020",
+      "client": "claude-chillyconcane",
+      "at": 1795260569.8009303,
+      "note": ""
     }
   ]
 }
