@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 156,
+  "revision": 157,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -771,7 +771,7 @@
       "id": "T070",
       "epic": "E7",
       "title": "Planung und Laufzeitbudget in Workflows",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T010"
       ],
@@ -787,10 +787,11 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A04",
-      "lease": {
-        "client": "claude-chillyconcane",
-        "token": "9431d6bd8ddf47fe9a09d42b46ec60e2",
-        "expires_at": 1795266938.916423,
+      "lease": null,
+      "review": {
+        "author": "claude-chillyconcane",
+        "commit": "6172b9f525d9116edf0a1afd52bf46e5af732156",
+        "checks": "Übernahme der seit 31.10. abgelaufenen Sperre von codex-scheduling (keine Commits von dort vorhanden). 507 Python-Tests grün, davon 13 in tests/test_show_schedule.py: Cron-Zählung, Ausgaben/Monat, Timeouts+Concurrency aller Routine-Workflows, news.yml prüft Sendeplan vor Install/Tests, short-updates ohne Tests bei schedule, Budget-Summe in Doku = Berechnung, privates Profil 1890 < 2000 min, crontab je Show mit Sperren, Feed-Wiederverwendung. Parser ohne YAML-Abhängigkeit, gegen yaml.safe_load für alle Workflows abgeglichen. Laufzeiten aus Actions-Historie gemessen (news 100 Läufe/26 d, short-updates 100/23 d). Öffentliches Repo: Standard-Runner kostenlos (GitHub-Doku); geschätzt 8151 min/Monat bei 15-min-Kurzupdates.",
         "files": [
           ".github/workflows/foundation-ci.yml",
           ".github/workflows/linux-install-smoke.yml",
@@ -807,7 +808,6 @@
           "tests/test_show_schedule.py"
         ]
       },
-      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7597,6 +7597,15 @@
       "task": "T070",
       "client": "claude-chillyconcane",
       "at": 1795259738.916423,
+      "note": ""
+    },
+    {
+      "operation_id": "d58ca92dbd48437e90d780c84f1091e6",
+      "revision": 157,
+      "action": "submit",
+      "task": "T070",
+      "client": "claude-chillyconcane",
+      "at": 1795260062.0630398,
       "note": ""
     }
   ]
