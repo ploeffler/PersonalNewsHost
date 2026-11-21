@@ -65,6 +65,22 @@ class TaskStateTests(unittest.TestCase):
         data,item=transition(data,'complete','T001','reviewer',note='checked',now=102)
         self.assertEqual(item['status'],'done');self.assertIsNone(item['lease'])
 
+    def test_submit_releases_scope_for_other_tasks(self):
+        data,item=transition(board(),'claim','T001','one',files=['a.py'],ttl=7200,now=100)
+        token=item['lease']['token']
+        data,item=transition(data,'submit','T001','one',token=token,proof={'commit':'a'*40,'checks':'passed'},now=101)
+        self.assertEqual(item['status'],'review');self.assertIsNone(item['lease'])
+        self.assertEqual(item['review']['files'],['a.py'])
+        data,other=transition(data,'claim','T002','two',files=['a.py'],now=102)
+        self.assertEqual(other['lease']['client'],'two')
+        with self.assertRaises(Conflict):transition(data,'heartbeat','T001','one',token=token,now=103)
+
+    def test_legacy_lease_on_review_task_does_not_block(self):
+        data,item=transition(board(),'claim','T001','one',files=['a.py'],ttl=7200,now=100)
+        data['tasks'][0]['status']='review'  # board written by an older client: lease kept on submit
+        data,other=transition(data,'claim','T002','two',files=['a.py'],now=101)
+        self.assertEqual(other['lease']['client'],'two')
+
     def test_unsafe_or_empty_scopes_rejected(self):
         for files in [[],['../outside'],['/outside'],['.git/config'],['scripts/*'],['.']]:
             with self.subTest(files=files),self.assertRaises(Conflict):transition(board(),'claim','T001','one',files=files)

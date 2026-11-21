@@ -102,7 +102,7 @@
   ],
   "current_warning": "T100 and other unfinished 0.1 tasks contain local pending work. Example claim is a template and will be blocked until reconciliation.",
   "atomicity": "Task state commits modify only planning/task-board.json. Competing pushes are rejected by Git; client refetches and revalidates up to four times. No shared unlocked JSON file and no force push.",
-  "leases": "Tokens fence expired workers; explicit file paths or directory paths ending slash are required. Lease expiry does not cancel a running OS process. Clients must stop stale work themselves.",
+  "leases": "Tokens fence expired workers; explicit file paths or directory paths ending slash are required. Lease expiry does not cancel a running OS process. Clients must stop stale work themselves. Submit ends the lease: the declared scope is kept in the review record and no longer blocks other claims. Leases left on review tasks by older client versions are ignored.",
   "conflict_recovery": "On failure do not assume ownership; refetch board. New cache clones stay under ignored .test-tmp/task-clients and do not change working checkout.",
   "security": "No secrets in tasks/check evidence. A client ID is not verified identity. Direct Git writers can bypass protocol, so all collaborating clients must follow it.",
   "github_issue_view": {

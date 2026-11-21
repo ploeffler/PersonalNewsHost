@@ -73,7 +73,9 @@ def transition(board,action,task_id,client,*,token=None,files=(),ttl=3600,note='
         if type(ttl) is not int or not 60<=ttl<=14400:raise Conflict('Lease must be 60–14400 seconds')
         for other in result['tasks']:
             active=other.get('lease')
-            if other['id']!=task_id and active and active['expires_at']>now and any(overlap(a,b) for a in files for b in active['files']):
+            # Only work in progress holds a write scope; submitted tasks wait for review without one.
+            if (other['id']!=task_id and other['status']=='in_progress' and active and active['expires_at']>now
+                    and any(overlap(a,b) for a in files for b in active['files'])):
                 raise Conflict('Write scope conflicts with another active task')
         task.update(status='in_progress',review=None,lease={'client':client,'token':uuid.uuid4().hex,'expires_at':now+ttl,'files':files})
     elif action in {'heartbeat','release','submit'}:
@@ -84,7 +86,8 @@ def transition(board,action,task_id,client,*,token=None,files=(),ttl=3600,note='
         elif action=='release':task.update(status='todo',lease=None,review=None)
         else:
             if not proof or not proof.get('commit') or not proof.get('checks'):raise Conflict('Submit requires committed work and check evidence')
-            task.update(status='review',review={'author':client,'commit':proof['commit'],'checks':proof['checks'],'files':lease['files']})
+            # Submitting ends the lease: the scope is recorded in the review and released for other tasks.
+            task.update(status='review',lease=None,review={'author':client,'commit':proof['commit'],'checks':proof['checks'],'files':lease['files']})
     elif action in {'complete','reject'}:
         review=task.get('review')
         if task['status']!='review' or not review or review['author']==client:raise Conflict('An independent client must review submitted work')
