@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 165,
+  "revision": 166,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -739,7 +739,7 @@
       "id": "T063",
       "epic": "E6",
       "title": "Untertitel verbessern",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T001"
       ],
@@ -765,10 +765,15 @@
           "scripts/generate.py",
           "scripts/subtitle_alignment.py",
           "tests/test_subtitle_alignment.py"
-        ]
+        ],
+        "reviewer": "ploeffler-vorlaeufig",
+        "decision": "VORLÄUFIG bestanden auf ausdrückliche Anweisung des Benutzers ploeffler (21.11.2026). Keine unabhängige Prüfung erfolgt – inhaltliche Prüfung durch einen anderen Client steht noch aus."
       },
       "local_work_pending": false,
-      "evidence": [],
+      "evidence": [
+        "611848deccea596fb26a36ae1cbc4b243e865b0d",
+        "Erneut eingereicht auf aktuellem Stand: 507 Python-Tests grün auf 8ce20fc (Code unverändert seit Stand der Einzelnachweise; spätere Aufgaben haben gemeinsame Dateien angepasst)."
+      ],
       "implementation_note": "",
       "coordination_note": ""
     },
@@ -7689,6 +7694,15 @@
       "client": "claude-chillyconcane",
       "at": 1795260535.3219109,
       "note": ""
+    },
+    {
+      "operation_id": "74f9245adbb542a093e0690a1aa99edd",
+      "revision": 166,
+      "action": "complete",
+      "task": "T063",
+      "client": "ploeffler-vorlaeufig",
+      "at": 1795260537.944769,
+      "note": "VORLÄUFIG bestanden auf ausdrückliche Anweisung des Benutzers ploeffler (21.11.2026). Keine unabhängige Prüfung erfolgt – inhaltliche Prüfung durch einen anderen Client steht noch aus."
     }
   ]
 }
