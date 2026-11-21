@@ -26,3 +26,4 @@ Willkommen in der Wissensbasis zu PersonalNewsHost.
 
 - [Artikelseiten pro Meldung](artikelseiten.md)
 - [Eilmeldungs-Modus](eilmeldungen.md)
+- [Feed-Fehler: Wiederholung und Benachrichtigung](feed-fehlerbehandlung.md)

@@ -419,7 +419,12 @@ def select_balanced_groups(groups, limit):
 
 
 def items_from_feed(url):
-    root = ET.fromstring(fetch(url))
+    try:
+        from scripts.feed_resilience import load_feed
+    except ModuleNotFoundError:
+        from feed_resilience import load_feed
+    # Retries transient errors and falls back to the last valid copy (T071).
+    root = load_feed(url, lambda: fetch(url), ET.fromstring, CONFIG, ROOT)
     result = []
     for node in root.findall(".//item")[:15]:
         title = clean(node.findtext("title"))

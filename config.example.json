@@ -147,6 +147,17 @@
       "timezone": "Europe/Vienna"
     }
   },
+  "feed_resilience": {
+    "attempts": 3,
+    "backoff_seconds": [2, 6],
+    "cache_max_age_hours": 48,
+    "failure_threshold": 3,
+    "notify_interval_hours": 24,
+    "notify": {
+      "telegram": true,
+      "github_issue": false
+    }
+  },
   "article_enrichment": {
     "enabled": true,
     "max_fetches_per_run": 24

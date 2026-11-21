@@ -10,6 +10,10 @@ import re
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+try:
+    from scripts.feed_resilience import load_feed
+except ModuleNotFoundError:
+    from feed_resilience import load_feed
 
 ROOT=Path(__file__).resolve().parents[1]
 ATOM='{http://www.w3.org/2005/Atom}'
@@ -130,12 +134,15 @@ def collect(root,fetch=None,now=None,article_fetch=None):
     for url in dict.fromkeys(config.get('feeds',[])):
         source={'url':url,'name':old_feeds.get(url,{}).get('name',urllib.parse.urlsplit(url).hostname)}
         try:
-            if fetch:data=fetch(url)
+            if fetch:source['name'],items=parse_feed(fetch(url),url,now)
             else:
                 if not url.startswith(('http://','https://')):raise ValueError('Invalid feed URL')
-                request=urllib.request.Request(url,headers={'User-Agent':'PersonalNewsHost/1.0 RSS archive'})
-                with urllib.request.urlopen(request,timeout=12) as response:data=response.read(2000000)
-            source['name'],items=parse_feed(data,url,now);incoming.extend(items);source['last_success_at']=now
+                def download(url=url):
+                    request=urllib.request.Request(url,headers={'User-Agent':'PersonalNewsHost/1.0 RSS archive'})
+                    with urllib.request.urlopen(request,timeout=12) as response:return response.read(2000000)
+                # Retry with backoff, last valid copy as fallback, health record per feed (T071).
+                source['name'],items=load_feed(url,download,lambda data,url=url:parse_feed(data,url,now),config,root,now)
+            incoming.extend(items);source['last_success_at']=now
         except Exception as exc:
             print('RSS archive source unavailable: '+type(exc).__name__)
         feeds.append(source)
