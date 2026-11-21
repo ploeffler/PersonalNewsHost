@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 147,
+  "revision": 148,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -719,7 +719,7 @@
       "id": "T063",
       "epic": "E6",
       "title": "Untertitel verbessern",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T001"
       ],
@@ -734,7 +734,18 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A09",
-      "lease": null,
+      "lease": {
+        "client": "claude-chillyconcane",
+        "token": "de91cd5df1cc4f57852991826781b75a",
+        "expires_at": 1795257546.062804,
+        "files": [
+          "docs/guide/index.md",
+          "docs/guide/untertitel.md",
+          "scripts/generate.py",
+          "scripts/subtitle_alignment.py",
+          "tests/test_subtitle_alignment.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -7481,6 +7492,15 @@
       "task": "T071",
       "client": "claude-chillyconcane",
       "at": 1795249313.1101112,
+      "note": ""
+    },
+    {
+      "operation_id": "9e2fa041cfc14b5397eca678891846f9",
+      "revision": 148,
+      "action": "claim",
+      "task": "T063",
+      "client": "claude-chillyconcane",
+      "at": 1795250346.062804,
       "note": ""
     }
   ]
