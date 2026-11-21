@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 172,
+  "revision": 173,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -180,7 +180,7 @@
       "id": "T013",
       "epic": "E1",
       "title": "Eilmeldungs-Modus (Breaking News)",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T010",
         "T012"
@@ -197,10 +197,11 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A06",
-      "lease": {
-        "client": "claude-chillyconcane",
-        "token": "7832bba606c347419a82ece6712f330e",
-        "expires_at": 1795264158.5728948,
+      "lease": null,
+      "review": {
+        "author": "claude-chillyconcane",
+        "commit": "b0596536bce605dcde3651b8b680f61e9681c398",
+        "checks": "Erneut eingereicht auf aktuellem Stand: 507 Python-Tests grün auf 8ce20fc (Code unverändert seit Stand der Einzelnachweise; spätere Aufgaben haben gemeinsame Dateien angepasst).",
         "files": [
           ".github/workflows/short-updates.yml",
           "config.example.json",
@@ -214,7 +215,6 @@
           "tests/test_breaking_news.py"
         ]
       },
-      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7745,6 +7745,15 @@
       "task": "T013",
       "client": "claude-chillyconcane",
       "at": 1795260558.5728948,
+      "note": ""
+    },
+    {
+      "operation_id": "910170d499184b2e989fd5fcb07309f0",
+      "revision": 173,
+      "action": "submit",
+      "task": "T013",
+      "client": "claude-chillyconcane",
+      "at": 1795260561.4769027,
       "note": ""
     }
   ]
