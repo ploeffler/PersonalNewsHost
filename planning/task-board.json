@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 160,
+  "revision": 161,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -628,7 +628,7 @@
       "id": "T060",
       "epic": "E6",
       "title": "Mehrere Moderatoren und Studio-Varianten",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T010"
       ],
@@ -643,10 +643,11 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A09",
-      "lease": {
-        "client": "claude-chillyconcane",
-        "token": "d3177e00901f48d7a564d04a7fe8a24a",
-        "expires_at": 1795264120.2981489,
+      "lease": null,
+      "review": {
+        "author": "claude-chillyconcane",
+        "commit": "12f9043f423000f523f4cd60ff941e2e1348ae94",
+        "checks": "Erneut eingereicht auf aktuellem Stand: 507 Python-Tests grün auf 8ce20fc (Code unverändert seit Stand der Einzelnachweise; spätere Aufgaben haben gemeinsame Dateien angepasst).",
         "files": [
           "config.schema.json",
           "config.shows.example.json",
@@ -659,7 +660,6 @@
           "tests/test_hosts_studios.py"
         ]
       },
-      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7638,6 +7638,15 @@
       "task": "T060",
       "client": "claude-chillyconcane",
       "at": 1795260520.2981489,
+      "note": ""
+    },
+    {
+      "operation_id": "c1d9a84a72854875825bf6b92af3d9fb",
+      "revision": 161,
+      "action": "submit",
+      "task": "T060",
+      "client": "claude-chillyconcane",
+      "at": 1795260523.3502016,
       "note": ""
     }
   ]
