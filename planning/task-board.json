@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 144,
+  "revision": 145,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -180,7 +180,7 @@
       "id": "T013",
       "epic": "E1",
       "title": "Eilmeldungs-Modus (Breaking News)",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T010",
         "T012"
@@ -214,7 +214,23 @@
           "tests/test_breaking_news.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "claude-chillyconcane",
+        "commit": "fcd10d54d258fd3afe28c64a803f80dc12672dde",
+        "checks": "464 Python-Tests grün (unittest discover -s tests), davon 13 in tests/test_breaking_news.py: Testfeed mit Stichwort erzeugt Kurzclip <= 60 s, Eintrag in feed.xml und Band-Platzhalter; ohne Treffer weder Sprachausgabe noch Video; --plan meldet media=false/true ohne docs/ zu verändern; 70-s-Audio wird auf 60 s begrenzt; Stichwort-Platzhalter, Ausschlusswörter, Eilmeldungsquellen, min_sources, Tageslimit, Feed-Merge idempotent. tests/test_offline_outputs.py: breaking-banner.js als Deployment-Asset in die Fixture aufgenommen; docs/short-updates.js setzt Anker update-<ID>. Node: test_playlist.cjs, test_news_list.cjs grün; Band per Playwright geprüft; security_checks OK; Workflow-YAML gültig.",
+        "files": [
+          ".github/workflows/short-updates.yml",
+          "config.example.json",
+          "docs/breaking-banner.js",
+          "docs/guide/eilmeldungen.md",
+          "docs/guide/index.md",
+          "scripts/breaking_news.py",
+          "scripts/generate.py",
+          "scripts/short_update_video.py",
+          "scripts/short_updates.py",
+          "tests/test_breaking_news.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7422,6 +7438,15 @@
       "task": "T013",
       "client": "claude-chillyconcane",
       "at": 1795247110.2357,
+      "note": ""
+    },
+    {
+      "operation_id": "75277e7808944d48a36031db1ead7728",
+      "revision": 145,
+      "action": "submit",
+      "task": "T013",
+      "client": "claude-chillyconcane",
+      "at": 1795247451.2464693,
       "note": ""
     }
   ]
