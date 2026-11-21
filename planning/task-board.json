@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 158,
+  "revision": 159,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -628,7 +628,7 @@
       "id": "T060",
       "epic": "E6",
       "title": "Mehrere Moderatoren und Studio-Varianten",
-      "status": "review",
+      "status": "todo",
       "depends_on": [
         "T010"
       ],
@@ -658,7 +658,9 @@
           "scripts/produce_show.py",
           "scripts/shows.py",
           "tests/test_hosts_studios.py"
-        ]
+        ],
+        "reviewer": "ploeffler-vorlaeufig",
+        "rejected": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
       },
       "local_work_pending": false,
       "evidence": [],
@@ -7621,6 +7623,15 @@
       "client": "ploeffler-vorlaeufig",
       "at": 1795260513.557913,
       "note": "VORLÄUFIG bestanden auf ausdrückliche Anweisung des Benutzers ploeffler (21.11.2026). Keine unabhängige Prüfung erfolgt – inhaltliche Prüfung durch einen anderen Client steht noch aus."
+    },
+    {
+      "operation_id": "7ee9a7c8f4784cd1b14f725ee0f7b87c",
+      "revision": 159,
+      "action": "reject",
+      "task": "T060",
+      "client": "ploeffler-vorlaeufig",
+      "at": 1795260516.859339,
+      "note": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
     }
   ]
 }
