@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 159,
+  "revision": 160,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -628,7 +628,7 @@
       "id": "T060",
       "epic": "E6",
       "title": "Mehrere Moderatoren und Studio-Varianten",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T010"
       ],
@@ -643,11 +643,10 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A09",
-      "lease": null,
-      "review": {
-        "author": "claude-chillyconcane",
-        "commit": "923d6b8de1ead4addcb18613cc595d291d3627a3",
-        "checks": "495 Python-Tests grün, davon 8 in tests/test_hosts_studios.py: Beispielkonfiguration mit zwei Shows löst unterschiedliche Moderatoren (Portrait, Name, Tonhöhe, Stimme) und Studios (Szenenfarbe) auf; explizite Show-Felder haben Vorrang; unbekannte IDs/Felder abgelehnt; Altkonfiguration unverändert; Wechselmoderation abwechselnd pro Meldung; Piper-Stimme mit Rückfall und Namensprüfung; eSpeak nutzt Profilstimme/-tonhöhe; produce() beider Shows mit FFmpeg erzeugt Videos, show.json nennt host_id/studio_id, Tech-Show spricht Meldungen abwechselnd. validate_config für beide Beispielkonfigurationen grün (Schema um hosts/studios/host_id/studio_id/co_host_id erweitert; Umfang per release/claim um config.schema.json ergänzt). Einzelbilder beider Shows geprüft. Hinweis: Beispiel nutzt vorhandene Assets (presenter.png vs. host.png ähneln sich), sichtbar verschiedene Studios brauchen eigene Bilder.",
+      "lease": {
+        "client": "claude-chillyconcane",
+        "token": "d3177e00901f48d7a564d04a7fe8a24a",
+        "expires_at": 1795264120.2981489,
         "files": [
           "config.schema.json",
           "config.shows.example.json",
@@ -658,10 +657,9 @@
           "scripts/produce_show.py",
           "scripts/shows.py",
           "tests/test_hosts_studios.py"
-        ],
-        "reviewer": "ploeffler-vorlaeufig",
-        "rejected": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
+        ]
       },
+      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7632,6 +7630,15 @@
       "client": "ploeffler-vorlaeufig",
       "at": 1795260516.859339,
       "note": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
+    },
+    {
+      "operation_id": "958cf5b8019e4cd8b8c05f4c8fc1934a",
+      "revision": 160,
+      "action": "claim",
+      "task": "T060",
+      "client": "claude-chillyconcane",
+      "at": 1795260520.2981489,
+      "note": ""
     }
   ]
 }
