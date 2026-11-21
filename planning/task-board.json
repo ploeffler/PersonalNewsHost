@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 142,
+  "revision": 143,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -208,7 +208,7 @@
       "id": "T020",
       "epic": "E2",
       "title": "Statische Artikelseiten pro Meldung",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T011"
       ],
@@ -237,7 +237,19 @@
           "tests/test_article_pages.py"
         ]
       },
-      "review": null,
+      "review": {
+        "author": "claude-chillyconcane",
+        "commit": "2cb85a114fc6a7093e9d0260ee0e4c3f8edd0145",
+        "checks": "451 Python-Tests grün (python3 -m unittest discover -s tests), davon 7 in tests/test_article_pages.py inkl. End-to-End-Lauf von generate.main() mit FFmpeg: jede Meldung hat eine Seite, Startseite verlinkt sie, verlinktes Archivvideo existiert, Startzeit > 0. test_documentation_release grün, git diff --check sauber. Seite per Playwright bei 1100 px (hell) und 390 px (dunkel) visuell geprüft; keine externen Ressourcen. Grenze: produce_show.py erzeugt noch keine Artikelseiten.",
+        "files": [
+          "config.example.json",
+          "docs/guide/artikelseiten.md",
+          "docs/guide/index.md",
+          "scripts/article_pages.py",
+          "scripts/generate.py",
+          "tests/test_article_pages.py"
+        ]
+      },
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7376,6 +7388,15 @@
       "task": "T020",
       "client": "claude-chillyconcane",
       "at": 1795225876.2275705,
+      "note": ""
+    },
+    {
+      "operation_id": "75a83d0008044180be2db796efc4ca2b",
+      "revision": 143,
+      "action": "submit",
+      "task": "T020",
+      "client": "claude-chillyconcane",
+      "at": 1795226121.5213814,
       "note": ""
     }
   ]
