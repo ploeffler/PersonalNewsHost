@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 166,
+  "revision": 167,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -832,7 +832,7 @@
       "id": "T071",
       "epic": "E7",
       "title": "Fehlerbehandlung, Wiederholung und Benachrichtigung",
-      "status": "review",
+      "status": "todo",
       "depends_on": [
         "T051"
       ],
@@ -862,7 +862,9 @@
           "scripts/feed_resilience.py",
           "scripts/generate.py",
           "tests/test_feed_resilience.py"
-        ]
+        ],
+        "reviewer": "ploeffler-vorlaeufig",
+        "rejected": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
       },
       "local_work_pending": false,
       "evidence": [],
@@ -7703,6 +7705,15 @@
       "client": "ploeffler-vorlaeufig",
       "at": 1795260537.944769,
       "note": "VORLÄUFIG bestanden auf ausdrückliche Anweisung des Benutzers ploeffler (21.11.2026). Keine unabhängige Prüfung erfolgt – inhaltliche Prüfung durch einen anderen Client steht noch aus."
+    },
+    {
+      "operation_id": "eb4a9a4b660d49319a65a8495516d6f1",
+      "revision": 167,
+      "action": "reject",
+      "task": "T071",
+      "client": "ploeffler-vorlaeufig",
+      "at": 1795260543.382185,
+      "note": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
     }
   ]
 }
