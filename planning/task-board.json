@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 178,
+  "revision": 179,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -273,7 +273,7 @@
       "id": "T021",
       "epic": "E2",
       "title": "Startseite im Redaktionslayout",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T013",
         "T020"
@@ -290,7 +290,26 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A06",
-      "lease": null,
+      "lease": {
+        "client": "claude-chillyconcane",
+        "token": "d897abfe0b4146bd8097e5c78058a886",
+        "expires_at": 1795267929.828168,
+        "files": [
+          ".github/workflows/foundation-ci.yml",
+          "docs/guide/index.md",
+          "docs/guide/startseite.md",
+          "docs/news-list.css",
+          "docs/playlist.css",
+          "docs/site.css",
+          "scripts/broadcast_archive.py",
+          "scripts/collect_news.py",
+          "scripts/generate.py",
+          "scripts/homepage.py",
+          "tests/test_homepage.py",
+          "tests/test_homepage_a11y_browser.cjs",
+          "tests/test_offline_outputs.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -7798,6 +7817,15 @@
       "client": "ploeffler-vorlaeufig",
       "at": 1795260575.2314222,
       "note": "VORLÄUFIG bestanden auf ausdrückliche Anweisung des Benutzers ploeffler (21.11.2026). Keine unabhängige Prüfung erfolgt – inhaltliche Prüfung durch einen anderen Client steht noch aus."
+    },
+    {
+      "operation_id": "5cda5bb0f1e4413f80d07675e8636f06",
+      "revision": 179,
+      "action": "claim",
+      "task": "T021",
+      "client": "claude-chillyconcane",
+      "at": 1795260729.828168,
+      "note": ""
     }
   ]
 }
