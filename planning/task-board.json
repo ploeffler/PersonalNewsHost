@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 174,
+  "revision": 175,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -229,7 +229,7 @@
       "id": "T020",
       "epic": "E2",
       "title": "Statische Artikelseiten pro Meldung",
-      "status": "review",
+      "status": "todo",
       "depends_on": [
         "T011"
       ],
@@ -245,19 +245,7 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A05",
-      "lease": {
-        "client": "claude-chillyconcane",
-        "token": "e0e02328cfb14eee890f05ddb09d6113",
-        "expires_at": 1795233076.2275705,
-        "files": [
-          "config.example.json",
-          "docs/guide/artikelseiten.md",
-          "docs/guide/index.md",
-          "scripts/article_pages.py",
-          "scripts/generate.py",
-          "tests/test_article_pages.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "claude-chillyconcane",
         "commit": "2cb85a114fc6a7093e9d0260ee0e4c3f8edd0145",
@@ -269,7 +257,9 @@
           "scripts/article_pages.py",
           "scripts/generate.py",
           "tests/test_article_pages.py"
-        ]
+        ],
+        "reviewer": "ploeffler-vorlaeufig",
+        "rejected": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
       },
       "local_work_pending": false,
       "evidence": [],
@@ -7769,6 +7759,15 @@
       "client": "ploeffler-vorlaeufig",
       "at": 1795260563.8991303,
       "note": "VORLÄUFIG bestanden auf ausdrückliche Anweisung des Benutzers ploeffler (21.11.2026). Keine unabhängige Prüfung erfolgt – inhaltliche Prüfung durch einen anderen Client steht noch aus."
+    },
+    {
+      "operation_id": "1fbdcde858344f6297a6870c0363b8c6",
+      "revision": 175,
+      "action": "reject",
+      "task": "T020",
+      "client": "ploeffler-vorlaeufig",
+      "at": 1795260566.6447098,
+      "note": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
     }
   ]
 }
