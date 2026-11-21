@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 176,
+  "revision": 177,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -229,7 +229,7 @@
       "id": "T020",
       "epic": "E2",
       "title": "Statische Artikelseiten pro Meldung",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T011"
       ],
@@ -245,10 +245,11 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A05",
-      "lease": {
-        "client": "claude-chillyconcane",
-        "token": "5204dc7a6cf74b2481221ebc9cf5efe7",
-        "expires_at": 1795264169.8009303,
+      "lease": null,
+      "review": {
+        "author": "claude-chillyconcane",
+        "commit": "9368a112ab745d72eada1019c6d31d976863b260",
+        "checks": "Erneut eingereicht auf aktuellem Stand: 507 Python-Tests grün auf 8ce20fc (Code unverändert seit Stand der Einzelnachweise; spätere Aufgaben haben gemeinsame Dateien angepasst).",
         "files": [
           "config.example.json",
           "docs/guide/artikelseiten.md",
@@ -258,7 +259,6 @@
           "tests/test_article_pages.py"
         ]
       },
-      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7774,6 +7774,15 @@
       "task": "T020",
       "client": "claude-chillyconcane",
       "at": 1795260569.8009303,
+      "note": ""
+    },
+    {
+      "operation_id": "40a4b118746a4b0da07f6a90063646ad",
+      "revision": 177,
+      "action": "submit",
+      "task": "T020",
+      "client": "claude-chillyconcane",
+      "at": 1795260572.6894152,
       "note": ""
     }
   ]
