@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 146,
+  "revision": 147,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -782,7 +782,7 @@
       "id": "T071",
       "epic": "E7",
       "title": "Fehlerbehandlung, Wiederholung und Benachrichtigung",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T051"
       ],
@@ -796,10 +796,11 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A04",
-      "lease": {
-        "client": "claude-chillyconcane",
-        "token": "04fea0be623247349664a6589fa4a594",
-        "expires_at": 1795256235.0607448,
+      "lease": null,
+      "review": {
+        "author": "claude-chillyconcane",
+        "commit": "26e1f0ad7959b1815b2f45da9d05024591f2c1c5",
+        "checks": "479 Python-Tests grün (unittest discover -s tests), davon 13 in tests/test_feed_resilience.py: Einstufung vorübergehender Fehler, Backoff 2/6 s, keine Wiederholung bei 404, Ersatzkopie inkl. Altersgrenze und kaputtem XML, Zählung pro Lauf, Telegram-Text mit Host, Issue ohne Adresse/Host, Intervall, Opt-in, ohne Secrets kein Versand; End-to-End generate.main() mit einem ausgefallenen und einem funktionierenden Feed erzeugt die Sendung. Workflow-YAML gültig, Action-Pins wie action-pins.json, security_checks OK, test_documentation_release grün.",
         "files": [
           ".github/workflows/news.yml",
           ".github/workflows/short-updates.yml",
@@ -813,7 +814,6 @@
           "tests/test_feed_resilience.py"
         ]
       },
-      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7472,6 +7472,15 @@
       "task": "T071",
       "client": "claude-chillyconcane",
       "at": 1795249035.0607448,
+      "note": ""
+    },
+    {
+      "operation_id": "219b2e9de8e44ebcb398cfd4c267b12a",
+      "revision": 147,
+      "action": "submit",
+      "task": "T071",
+      "client": "claude-chillyconcane",
+      "at": 1795249313.1101112,
       "note": ""
     }
   ]
