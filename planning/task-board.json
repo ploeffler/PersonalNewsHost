@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 141,
+  "revision": 142,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -208,7 +208,7 @@
       "id": "T020",
       "epic": "E2",
       "title": "Statische Artikelseiten pro Meldung",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T011"
       ],
@@ -224,7 +224,19 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A05",
-      "lease": null,
+      "lease": {
+        "client": "claude-chillyconcane",
+        "token": "e0e02328cfb14eee890f05ddb09d6113",
+        "expires_at": 1795233076.2275705,
+        "files": [
+          "config.example.json",
+          "docs/guide/artikelseiten.md",
+          "docs/guide/index.md",
+          "scripts/article_pages.py",
+          "scripts/generate.py",
+          "tests/test_article_pages.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -7356,6 +7368,15 @@
       "client": "claude-chillyconcane",
       "at": 1795225748.023353,
       "note": "Unabhängige Prüfung 21.11.2026: Dateiumfang seit 0766725 unverändert. 444 Tests grün (u. a. motion_graphics 5, video_smoke, render_load, render_progress), Einzelbild mit Rubrik-Einblendung und Meldungskarte (Rubrik + Quelle, Umbruch mit Auslassung) visuell geprüft. Abnahmekriterium erfüllt. Nachtrag: Zeit/Datum-Einblendung im Video fehlt noch; Eilmeldungsband existiert nur als AKTUELL-Label in Kurzupdates (gehört zu T013)."
+    },
+    {
+      "operation_id": "b4c889bbf352487aa2c0e505ae8140d1",
+      "revision": 142,
+      "action": "claim",
+      "task": "T020",
+      "client": "claude-chillyconcane",
+      "at": 1795225876.2275705,
+      "note": ""
     }
   ]
 }
