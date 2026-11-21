@@ -47,7 +47,8 @@ def produce(config, show_id, output_root, base_url=None):
     destination.mkdir(parents=True, exist_ok=True)
     # Local production links stay relative unless deployment explicitly supplies a URL.
     url = base_url.rstrip('/') + '/' if base_url else './'
-    with show_context(show['config'], destination, url):
+    # The archive files productions by show (archive/YYYY/MM/DD/<show_id>/...).
+    with show_context({**show['config'], 'show_id': show_id}, destination, url):
         generate.main()
     (destination / 'show.json').write_text(json.dumps({
         'show_id': show_id, 'title': show['title'], 'status': 'produced',

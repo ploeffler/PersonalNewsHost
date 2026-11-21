@@ -1463,7 +1463,7 @@ def _generate():
     lines = ["<!doctype html><html lang='de'><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>",
              "<title>PersonalNewsHost</title><style>body{font:1.1rem system-ui;background:#13243a;color:white;max-width:900px;margin:3rem auto;padding:1rem}a{color:#8ed6ff}video{width:100%}.site-logo{display:block;width:min(320px,75vw);height:auto;margin:0 auto 1.2rem}.logo-link{display:block;text-align:center}</style>",
              "<a class='logo-link' href='" + BASE + "' aria-label='Zur Nachrichtenseite'><img class='site-logo' src='https://raw.githubusercontent.com/ploeffler/PersonalNewsHost/main/assets/logo.png' alt='PersonalNewsHost Logo'></a><h1>PersonalNewsHost</h1><p>Stand: " + html.escape(timestamp) + "</p>",
-             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'><track kind='subtitles' src='subtitles.de.vtt?v=" + now.strftime("%Y%m%d%H%M%S") + "' srclang='de' label='Deutsch' default></video><p><a href='subtitles.de.srt' download>Untertitel (SRT)</a> · <a href='short-updates.html'>Kurzupdates</a> · <a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='settings.html'>Konfiguration (Beta)</a> · <a href='browser-studio.html'>Browser-Studio (Beta)</a></p><h2>Quellen</h2><ul>"]
+             "<video controls src='latest.mp4?v=" + now.strftime("%Y%m%d%H%M%S") + "'><track kind='subtitles' src='subtitles.de.vtt?v=" + now.strftime("%Y%m%d%H%M%S") + "' srclang='de' label='Deutsch' default></video><p><a href='subtitles.de.srt' download>Untertitel (SRT)</a> · <a href='short-updates.html'>Kurzupdates</a> · <a href='feed.xml'>Video-RSS abonnieren</a> · <a href='transcript.txt'>Transkript</a> · <a href='archive.html'>Archiv</a> · <a href='settings.html'>Konfiguration (Beta)</a> · <a href='browser-studio.html'>Browser-Studio (Beta)</a></p><h2>Quellen</h2><ul>"]
     for story_idx, (title, _, link, _) in enumerate(selected):
         safe = link if link.startswith(("https://", "http://")) else "#"
         lines.append("<li><a rel='noopener noreferrer' href='" + html.escape(safe, quote=True) + "'>" + html.escape(title) + "</a>")
@@ -1549,6 +1549,12 @@ def main():
             _generate()
             report = check_edition(candidate, CONFIG)
             (candidate / 'production-quality.json').write_text(json.dumps(report, indent=2) + '\n')
+            # Archive index and, if configured, the permanent copy; a failure keeps the last edition (T030).
+            try:
+                from .archive_store import persist_edition
+            except ImportError:
+                from archive_store import persist_edition
+            persist_edition(candidate, CONFIG)
     except QualityError as error:
         print('Production rejected: ' + str(error))
         raise
