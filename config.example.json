@@ -129,6 +129,9 @@
     "prefer_article_images": true
   },
   "fork_config_initialized": false,
+  "article_pages": {
+    "enabled": true
+  },
   "short_updates": {
     "enabled": true,
     "freshness_minutes": 60,

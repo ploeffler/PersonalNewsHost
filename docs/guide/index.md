@@ -21,3 +21,7 @@ Willkommen in der Wissensbasis zu PersonalNewsHost.
 - [Provider, Mocks und Budgets](provider-runtime.md)
 - [Historisches Inventar vom 29.10.2026](inventar-0.1.md)
 - [Datenschutz und Impressumsvorlage](datenschutz.md)
+
+## Newsoutlet 0.2 – in Arbeit
+
+- [Artikelseiten pro Meldung](artikelseiten.md)

@@ -1451,8 +1451,23 @@ def _generate():
         from broadcast_archive import archive_broadcast, decorate_homepage
     archive_broadcast(DOCS, now.timestamp(), "Nachrichten " + timestamp,
                       [{"title": item[0], "url": item[2]} for group in story_groups for item in group])
+    try:
+        from scripts.article_pages import build_article_pages, link_articles_on_homepage
+    except ModuleNotFoundError:
+        from article_pages import build_article_pages, link_articles_on_homepage
+    articles_enabled = CONFIG.get("article_pages", {}).get("enabled", True)
+    article_links = build_article_pages(DOCS, [
+        {"title": group[0][0], "summary": parts[idx + 2],
+         "category": category(group[0], entry_feeds.get((group[0][0], group[0][2]), ""), CONFIG),
+         "section": section_ids[idx], "section_label": section_labels.get(section_ids[idx]),
+         "start": boundaries[idx + 2], "end": boundaries[idx + 3],
+         "sources": [{"title": item[0], "url": item[2]} for item in group]}
+        for idx, group in enumerate(story_groups)], now.timestamp(), str(CONFIG["title"]),
+        enabled=articles_enabled)
     home = DOCS / "index.html"
-    home.write_text(decorate_homepage(home.read_text(encoding="utf-8")), encoding="utf-8")
+    home.write_text(link_articles_on_homepage(decorate_homepage(home.read_text(encoding="utf-8")),
+                                              [group[0][0] for group in story_groups], article_links),
+                    encoding="utf-8")
     print(f"Generated {len(selected)} stories; video size {(DOCS / 'latest.mp4').stat().st_size} bytes")
 
 def main():
