@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 177,
+  "revision": 178,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -229,7 +229,7 @@
       "id": "T020",
       "epic": "E2",
       "title": "Statische Artikelseiten pro Meldung",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T011"
       ],
@@ -257,10 +257,15 @@
           "scripts/article_pages.py",
           "scripts/generate.py",
           "tests/test_article_pages.py"
-        ]
+        ],
+        "reviewer": "ploeffler-vorlaeufig",
+        "decision": "VORLÄUFIG bestanden auf ausdrückliche Anweisung des Benutzers ploeffler (21.11.2026). Keine unabhängige Prüfung erfolgt – inhaltliche Prüfung durch einen anderen Client steht noch aus."
       },
       "local_work_pending": false,
-      "evidence": [],
+      "evidence": [
+        "9368a112ab745d72eada1019c6d31d976863b260",
+        "Erneut eingereicht auf aktuellem Stand: 507 Python-Tests grün auf 8ce20fc (Code unverändert seit Stand der Einzelnachweise; spätere Aufgaben haben gemeinsame Dateien angepasst)."
+      ],
       "implementation_note": "",
       "coordination_note": ""
     },
@@ -7784,6 +7789,15 @@
       "client": "claude-chillyconcane",
       "at": 1795260572.6894152,
       "note": ""
+    },
+    {
+      "operation_id": "209a4a80a8f64797a5596a3315d5a7f9",
+      "revision": 178,
+      "action": "complete",
+      "task": "T020",
+      "client": "ploeffler-vorlaeufig",
+      "at": 1795260575.2314222,
+      "note": "VORLÄUFIG bestanden auf ausdrückliche Anweisung des Benutzers ploeffler (21.11.2026). Keine unabhängige Prüfung erfolgt – inhaltliche Prüfung durch einen anderen Client steht noch aus."
     }
   ]
 }
