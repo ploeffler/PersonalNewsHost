@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 155,
+  "revision": 156,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -771,7 +771,7 @@
       "id": "T070",
       "epic": "E7",
       "title": "Planung und Laufzeitbudget in Workflows",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T010"
       ],
@@ -787,7 +787,26 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A04",
-      "lease": null,
+      "lease": {
+        "client": "claude-chillyconcane",
+        "token": "9431d6bd8ddf47fe9a09d42b46ec60e2",
+        "expires_at": 1795266938.916423,
+        "files": [
+          ".github/workflows/foundation-ci.yml",
+          ".github/workflows/linux-install-smoke.yml",
+          ".github/workflows/news.yml",
+          ".github/workflows/short-updates.yml",
+          ".github/workflows/wiki-sync.yml",
+          "config.example.json",
+          "docs/guide/index.md",
+          "docs/guide/show-planung.md",
+          "planning/workflow-minutes.json",
+          "scripts/feed_resilience.py",
+          "scripts/show_schedule.py",
+          "tests/test_feed_resilience.py",
+          "tests/test_show_schedule.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -7570,6 +7589,15 @@
       "client": "claude-chillyconcane",
       "at": 1795259736.2464907,
       "note": "Umfang erweitert um news.yml, short-updates.yml, feed_resilience"
+    },
+    {
+      "operation_id": "b5c2855c08ca44958471bb5da3692522",
+      "revision": 156,
+      "action": "claim",
+      "task": "T070",
+      "client": "claude-chillyconcane",
+      "at": 1795259738.916423,
+      "note": ""
     }
   ]
 }
