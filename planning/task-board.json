@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 153,
+  "revision": 154,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -788,12 +788,16 @@
       "version": "0.2",
       "package": "A04",
       "lease": {
-        "client": "codex-scheduling",
-        "token": "048fdfbeda90400c95b1d05db924fe2f",
-        "expires_at": 1793551534.4454868,
+        "client": "claude-chillyconcane",
+        "token": "fe55053cd9e947febec08eddd7265225",
+        "expires_at": 1795266841.9486854,
         "files": [
-          ".github/workflows/show-planning.yml",
+          ".github/workflows/foundation-ci.yml",
+          ".github/workflows/linux-install-smoke.yml",
+          ".github/workflows/wiki-sync.yml",
+          "docs/guide/index.md",
           "docs/guide/show-planung.md",
+          "planning/workflow-minutes.json",
           "scripts/show_schedule.py",
           "tests/test_show_schedule.py"
         ]
@@ -7561,6 +7565,15 @@
       "task": "T060",
       "client": "claude-chillyconcane",
       "at": 1795258860.226271,
+      "note": ""
+    },
+    {
+      "operation_id": "082145d9c056432b90a01ea8370147a1",
+      "revision": 154,
+      "action": "claim",
+      "task": "T070",
+      "client": "claude-chillyconcane",
+      "at": 1795259641.9486854,
       "note": ""
     }
   ]
