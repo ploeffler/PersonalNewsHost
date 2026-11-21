@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 171,
+  "revision": 172,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -180,7 +180,7 @@
       "id": "T013",
       "epic": "E1",
       "title": "Eilmeldungs-Modus (Breaking News)",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T010",
         "T012"
@@ -197,11 +197,10 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A06",
-      "lease": null,
-      "review": {
-        "author": "claude-chillyconcane",
-        "commit": "fcd10d54d258fd3afe28c64a803f80dc12672dde",
-        "checks": "464 Python-Tests grün (unittest discover -s tests), davon 13 in tests/test_breaking_news.py: Testfeed mit Stichwort erzeugt Kurzclip <= 60 s, Eintrag in feed.xml und Band-Platzhalter; ohne Treffer weder Sprachausgabe noch Video; --plan meldet media=false/true ohne docs/ zu verändern; 70-s-Audio wird auf 60 s begrenzt; Stichwort-Platzhalter, Ausschlusswörter, Eilmeldungsquellen, min_sources, Tageslimit, Feed-Merge idempotent. tests/test_offline_outputs.py: breaking-banner.js als Deployment-Asset in die Fixture aufgenommen; docs/short-updates.js setzt Anker update-<ID>. Node: test_playlist.cjs, test_news_list.cjs grün; Band per Playwright geprüft; security_checks OK; Workflow-YAML gültig.",
+      "lease": {
+        "client": "claude-chillyconcane",
+        "token": "7832bba606c347419a82ece6712f330e",
+        "expires_at": 1795264158.5728948,
         "files": [
           ".github/workflows/short-updates.yml",
           "config.example.json",
@@ -213,10 +212,9 @@
           "scripts/short_update_video.py",
           "scripts/short_updates.py",
           "tests/test_breaking_news.py"
-        ],
-        "reviewer": "ploeffler-vorlaeufig",
-        "rejected": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
+        ]
       },
+      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7739,6 +7737,15 @@
       "client": "ploeffler-vorlaeufig",
       "at": 1795260555.379674,
       "note": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
+    },
+    {
+      "operation_id": "ba7940871be547f088223beaca0a8b43",
+      "revision": 172,
+      "action": "claim",
+      "task": "T013",
+      "client": "claude-chillyconcane",
+      "at": 1795260558.5728948,
+      "note": ""
     }
   ]
 }
