@@ -1,0 +1,31 @@
+{
+  "measured_at": "2026-11-21",
+  "source": "GitHub Actions run history of ploeffler/PersonalNewsHost: main (news.yml 100 runs over 26 days, short-updates.yml 100 runs over 23 days) and Full-featured-Newsoutlet (push workflows, 7 days). Wall-clock minutes per run; billing rounds every job up to whole minutes.",
+  "quota": {
+    "public_repository": null,
+    "private_free_plan_minutes": 2000,
+    "note": "Standard GitHub-hosted runners are free in public repositories. Private repositories on GitHub Free include 2000 Linux minutes per month."
+  },
+  "show_run_minutes": 4.8,
+  "workflows": {
+    "news.yml": {
+      "kind": "schedule_gated",
+      "idle_minutes": 0.7,
+      "due_minutes": 4.8,
+      "note": "Hourly trigger; check_schedule.py stops early unless an edition is due (automation in config.json)."
+    },
+    "short-updates.yml": {
+      "kind": "schedule",
+      "minutes": 1.45,
+      "media_runs_per_month": 60,
+      "media_minutes": 4.1,
+      "note": "Speech and video tools are only installed when a breaking-news clip is due (T013)."
+    },
+    "fork-sync.yml": {"kind": "schedule", "minutes": 0.5, "jobs": 2},
+    "foundation-ci.yml": {"kind": "push", "runs_per_month": 100, "minutes": 2.2},
+    "linux-install-smoke.yml": {"kind": "push", "runs_per_month": 35, "minutes": 1.1},
+    "task-sync.yml": {"kind": "push", "runs_per_month": 75, "minutes": 0.5},
+    "wiki-sync.yml": {"kind": "push", "runs_per_month": 2, "minutes": 1.0},
+    "example-newsshow.yml": {"kind": "push", "runs_per_month": 4, "minutes": 6.0}
+  }
+}

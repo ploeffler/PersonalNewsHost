@@ -29,3 +29,4 @@ Willkommen in der Wissensbasis zu PersonalNewsHost.
 - [Feed-Fehler: Wiederholung und Benachrichtigung](feed-fehlerbehandlung.md)
 - [Untertitel](untertitel.md)
 - [Moderatoren und Studio-Varianten](moderatoren-studios.md)
+- [Planung und Laufzeitbudget](show-planung.md)

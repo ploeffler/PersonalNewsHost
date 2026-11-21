@@ -47,7 +47,9 @@ jobs:
                   raise ValueError('Configuration must be an object')
               Path('config.json').write_text(json.dumps(config))
           PY
+      # Scheduled runs skip the tests; they run on every push (foundation-ci) and on manual starts.
       - name: Test short update and Telegram rules
+        if: github.event_name != 'schedule'
         run: |
           python3 -m unittest discover -s tests -p "test_short_updates*.py"
           python3 -m unittest discover -s tests -p test_breaking_news.py

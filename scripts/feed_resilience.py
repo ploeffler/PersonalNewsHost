@@ -6,6 +6,8 @@
 * The last successfully parsed body of every feed is kept in ``.cache/feeds/``.
   This directory is git-ignored and carried between workflow runs with
   ``actions/cache``; third-party feed content never lands in the public repo.
+* A copy younger than ``reuse_seconds`` (default 300) is used without a new
+  download, so the scripts of one workflow run fetch every feed only once.
 * Health state is stored per feed under a hash key, so the private feed list
   never appears in logs, issues or the repository.
 * ``--notify`` reports feeds that failed ``failure_threshold`` runs in a row:
@@ -26,7 +28,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-DEFAULTS = {'attempts': 3, 'backoff_seconds': [2, 6], 'cache_max_age_hours': 48,
+DEFAULTS = {'attempts': 3, 'backoff_seconds': [2, 6], 'cache_max_age_hours': 48, 'reuse_seconds': 300,
             'failure_threshold': 3, 'notify_interval_hours': 24,
             'notify': {'telegram': True, 'github_issue': False}}
 CACHE_DIR = Path('.cache') / 'feeds'
@@ -48,6 +50,7 @@ def settings_from(config):
     notify = {**DEFAULTS['notify'], **(raw.get('notify') if isinstance(raw.get('notify'), dict) else {})}
     return {'attempts': number('attempts', 1, 5), 'backoff_seconds': [min(60.0, max(0.0, float(v))) for v in backoff],
             'cache_max_age_hours': number('cache_max_age_hours', 0, 24 * 14),
+            'reuse_seconds': number('reuse_seconds', 0, 3600),
             'failure_threshold': number('failure_threshold', 1, 100),
             'notify_interval_hours': number('notify_interval_hours', 1, 24 * 7),
             'notify': {'telegram': bool(notify['telegram']), 'github_issue': bool(notify['github_issue'])}}
@@ -143,6 +146,14 @@ def load_feed(url, fetch, parse, config, root, now=None, sleep=None):
     settings = settings_from(config)
     state = FeedState(root)
     now = time.time() if now is None else now
+    # Several scripts in one workflow run read the same feeds; a copy fetched
+    # moments ago is reused instead of downloading again (T070, saves minutes).
+    fresh = state.cached(url, settings['reuse_seconds'], now) if settings['reuse_seconds'] else None
+    if fresh is not None:
+        try:
+            return parse(fresh)
+        except Exception:
+            pass
     try:
         body = fetch_with_retry(fetch, settings, sleep)
         document = parse(body)

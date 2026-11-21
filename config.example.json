@@ -151,6 +151,7 @@
     "attempts": 3,
     "backoff_seconds": [2, 6],
     "cache_max_age_hours": 48,
+    "reuse_seconds": 300,
     "failure_threshold": 3,
     "notify_interval_hours": 24,
     "notify": {
