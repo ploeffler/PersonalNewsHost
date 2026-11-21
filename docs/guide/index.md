@@ -25,3 +25,4 @@ Willkommen in der Wissensbasis zu PersonalNewsHost.
 ## Newsoutlet 0.2 – in Arbeit
 
 - [Artikelseiten pro Meldung](artikelseiten.md)
+- [Eilmeldungs-Modus](eilmeldungen.md)

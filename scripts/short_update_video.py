@@ -12,7 +12,12 @@ except ModuleNotFoundError:
     from video_branding import apply_branding
 
 
-def render_short_update(update, audio, output, root, config):
+MAX_SECONDS = 60
+
+
+def render_short_update(update, audio, output, root, config, max_seconds=MAX_SECONDS):
+    """Render the clip; it never runs longer than ``max_seconds`` (at most 60)."""
+    max_seconds = min(MAX_SECONDS, max(1, float(max_seconds)))
     audio, output = Path(audio), Path(output)
     if not audio.is_file():
         raise FileNotFoundError('Short-update audio missing')
@@ -50,7 +55,7 @@ def render_short_update(update, audio, output, root, config):
             subprocess.run(args + ['-filter_complex', ';'.join(filters), '-map', f'[{current}]', '-map', '1:a',
                                    '-c:v', 'libx264', '-preset', 'ultrafast', '-tune', 'stillimage',
                                    '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '96k', '-shortest',
-                                   '-movflags', '+faststart', str(temporary)], check=True, timeout=180,
+                                   '-t', f'{max_seconds:.3f}', '-movflags', '+faststart', str(temporary)], check=True, timeout=180,
                            stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
             temporary.replace(output)
         finally:

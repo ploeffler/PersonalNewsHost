@@ -46,18 +46,24 @@ jobs:
                   raise ValueError('Configuration must be an object')
               Path('config.json').write_text(json.dumps(config))
           PY
-      - name: Install speech and video tools
-        run: |
-          sudo apt-get update && sudo apt-get install -y espeak-ng ffmpeg
-          python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check Pillow
       - name: Test short update and Telegram rules
         run: |
           python3 -m unittest discover -s tests -p "test_short_updates*.py"
+          python3 -m unittest discover -s tests -p test_breaking_news.py
           python3 -m unittest discover -s tests -p test_telegram.py
           python3 -m unittest discover -s tests -p test_collect_news.py
           python3 -m unittest discover -s tests -p test_article_enrichment.py
+      - name: Check feeds for breaking news
+        id: breaking
+        run: python3 scripts/short_updates.py --plan "$RUNNER_TEMP/breaking-plan.json"
+      # Speech and video tools are only installed when a breaking-news clip is due.
+      - name: Install speech and video tools
+        if: ${{ steps.breaking.outputs.media == 'true' }}
+        run: |
+          sudo apt-get update && sudo apt-get install -y espeak-ng ffmpeg
+          python3 -m pip install -c requirements-constraints.txt --disable-pip-version-check Pillow
       - name: Create updates and expire old entries
-        run: python3 scripts/short_updates.py
+        run: python3 scripts/short_updates.py --from-plan "$RUNNER_TEMP/breaking-plan.json"
       - name: Store RSS messages from the last 24 hours
         run: python3 scripts/collect_news.py
       - name: Publish short updates
@@ -65,7 +71,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           python3 scripts/security_checks.py --outputs docs/
-          git add docs/news-store.json docs/short-updates.json docs/short-update-state.json docs/short-update-audio/ docs/short-update-video/
+          git add docs/feed.xml docs/index.html docs/news-store.json docs/short-updates.json docs/short-update-state.json docs/short-update-audio/ docs/short-update-video/
           if ! git diff --cached --quiet; then
             git commit -m 'Publish short news updates'
             git push

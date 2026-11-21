@@ -25,7 +25,7 @@ class OfflineOutputTests(unittest.TestCase):
             # by the bulletin. Keep them local and explicit in this fixture site.
             for name in ['short-updates.html','settings.html','browser-studio.html','editorial-pipeline.html']:
                 (docs/name).write_text('<!doctype html><title>Local fixture route</title>')
-            for name in ['playlist.js','playlist.css','news-list.js','news-list.css']:
+            for name in ['playlist.js','playlist.css','news-list.js','news-list.css','breaking-banner.js']:
                 shutil.copyfile(ROOT/'docs'/name,docs/name)
             cfg = copy.deepcopy(generate.CONFIG)
             cfg.pop('shows',None)

@@ -1444,6 +1444,16 @@ def _generate():
             '<description>Aktuelle Ausgabe; Quellen auf der Webseite.</description>'
             '<enclosure url="' + BASE + 'latest.mp4" length="' + str((DOCS / "latest.mp4").stat().st_size) + '" type="video/mp4"/>'
             '</item></channel></rss>')
+    try:
+        from scripts import breaking_news
+    except ModuleNotFoundError:
+        import breaking_news
+    breaking_settings = breaking_news.settings_from(CONFIG)
+    try:
+        current_breaking = json.loads((DOCS / "short-updates.json").read_text(encoding="utf-8")).get("updates", [])
+    except (OSError, ValueError):
+        current_breaking = []
+    feed = breaking_news.merge_into_feed(feed, [u for u in current_breaking if isinstance(u, dict) and u.get("id")], BASE)
     (DOCS / "feed.xml").write_text(feed, encoding="utf-8")
     try:
         from scripts.broadcast_archive import archive_broadcast, decorate_homepage
@@ -1465,9 +1475,10 @@ def _generate():
         for idx, group in enumerate(story_groups)], now.timestamp(), str(CONFIG["title"]),
         enabled=articles_enabled)
     home = DOCS / "index.html"
-    home.write_text(link_articles_on_homepage(decorate_homepage(home.read_text(encoding="utf-8")),
-                                              [group[0][0] for group in story_groups], article_links),
-                    encoding="utf-8")
+    home.write_text(breaking_news.inject_banner(
+        link_articles_on_homepage(decorate_homepage(home.read_text(encoding="utf-8")),
+                                  [group[0][0] for group in story_groups], article_links),
+        breaking_settings["banner_hours"]), encoding="utf-8")
     print(f"Generated {len(selected)} stories; video size {(DOCS / 'latest.mp4').stat().st_size} bytes")
 
 def main():

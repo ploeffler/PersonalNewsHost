@@ -135,7 +135,17 @@
   "short_updates": {
     "enabled": true,
     "freshness_minutes": 60,
-    "interval_minutes": 15
+    "interval_minutes": 15,
+    "breaking": {
+      "keywords": ["eilmeldung", "breaking", "+++", "soeben", "beschlossen", "entscheidet", "zurückgetreten", "rücktritt", "tritt zurück", "gewinnt", "bestätigt", "abgesagt", "gesperrt", "evakuiert", "angriff", "earthquake", "resigns", "announces", "confirms", "cancelled", "evacuated"],
+      "exclude_keywords": [],
+      "sources": [],
+      "min_sources": 1,
+      "max_per_day": 6,
+      "max_clip_seconds": 60,
+      "banner_hours": 3,
+      "timezone": "Europe/Vienna"
+    }
   },
   "article_enrichment": {
     "enabled": true,

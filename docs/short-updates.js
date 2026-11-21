@@ -13,6 +13,7 @@ function render() {
   if (!current.length) { container.textContent = 'Keine aktuellen Kurzupdates.'; return; }
   for (const u of current) {
     const article = document.createElement('article');
+    if (/^[a-f0-9]{24}$/.test(u.id || '')) article.id = 'update-' + u.id;
     const title = document.createElement('h2'); title.textContent = u.title;
     const text = document.createElement('p'); text.textContent = u.text || u.title;
     const time = document.createElement('p');
