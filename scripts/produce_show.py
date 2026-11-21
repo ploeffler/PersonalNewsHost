@@ -51,6 +51,7 @@ def produce(config, show_id, output_root, base_url=None):
         generate.main()
     (destination / 'show.json').write_text(json.dumps({
         'show_id': show_id, 'title': show['title'], 'status': 'produced',
+        **{key: show['config'][key] for key in ('host_id', 'co_host_id', 'studio_id') if key in show['config']},
         'publication_requested': False,
     }, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     return destination

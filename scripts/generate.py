@@ -521,11 +521,11 @@ def run_render(args, titles, boundaries):
         print('[Render] Rendering abgeschlossen.', flush=True)
 
 
-def adjust_voice_pitch(wav):
+def adjust_voice_pitch(wav, profile=None):
     """Lower or raise voice pitch with FFmpeg while preserving speech duration."""
     import math
     import wave
-    semitones = float(CONFIG.get("voice_pitch_semitones", 0))
+    semitones = float((profile or {}).get("voice_pitch_semitones", CONFIG.get("voice_pitch_semitones", 0)))
     if not math.isfinite(semitones) or not -6 <= semitones <= 6:
         raise ValueError("voice_pitch_semitones must be between -6 and 6")
     if abs(semitones) < 0.01:
@@ -545,29 +545,55 @@ def adjust_voice_pitch(wav):
     finally:
         target.unlink(missing_ok=True)
 
-def synthesize(script, wav):
+DEFAULT_PIPER_MODEL = "de_DE-thorsten-high"
+
+
+def piper_model(profile=None):
+    """Configured Piper voice (``models/<name>.onnx``); missing voices fall back to the default."""
+    import re
+    name = (profile or {}).get("voice_model") or CONFIG.get("presenter_settings", {}).get("voice_model") or DEFAULT_PIPER_MODEL
+    if not re.fullmatch(r"[A-Za-z]{2}_[A-Za-z]{2}-[A-Za-z0-9_]+-(x_low|low|medium|high)", str(name)):
+        print("voice_model is not a Piper voice name; using " + DEFAULT_PIPER_MODEL)
+        name = DEFAULT_PIPER_MODEL
+    model = ROOT / "models" / f"{name}.onnx"
+    if name != DEFAULT_PIPER_MODEL and not model.is_file():
+        print(f"Piper voice {name} not installed; using {DEFAULT_PIPER_MODEL}")
+        name, model = DEFAULT_PIPER_MODEL, ROOT / "models" / f"{DEFAULT_PIPER_MODEL}.onnx"
+    return name, model
+
+
+def segment_voice(index, count):
+    """Voice profile for spoken part ``index``: stories alternate when a co-host is configured."""
+    profiles = CONFIG.get("voice_profiles") or []
+    if len(profiles) < 2 or index < 2 or index >= count - 1:
+        return None
+    return profiles[(index - 2) % len(profiles)]
+
+
+def synthesize(script, wav, profile=None):
     """Use local Piper neural TTS if available; retain eSpeak as safe fallback."""
     import os
-    model = ROOT / "models" / "de_DE-thorsten-high.onnx"
+    profile = profile or {}
+    name, model = piper_model(profile)
     engine = CONFIG.get("tts_engine", "piper")
     if engine not in ("piper", "espeak"):
         raise ValueError("Unsupported tts_engine")
     if engine == "piper" and model.is_file():
         try:
             subprocess.run(
-                ["piper", "--model", str(model), "--length_scale", str(CONFIG.get("piper_length_scale", 1.13)), "--sentence_silence", "0.38", "--output_file", str(wav)],
+                ["piper", "--model", str(model), "--length_scale", str(profile.get("piper_length_scale", CONFIG.get("piper_length_scale", 1.13))), "--sentence_silence", "0.38", "--output_file", str(wav)],
                 input=script, text=True, check=True, timeout=180,
                 stdout=subprocess.DEVNULL
             )
             if wav.is_file() and wav.stat().st_size > 44:
-                print("Speech engine: Piper (de_DE-thorsten-high)")
-                adjust_voice_pitch(wav)
+                print(f"Speech engine: Piper ({name})")
+                adjust_voice_pitch(wav, profile)
                 return
         except (OSError, subprocess.SubprocessError) as exc:
             print(f"Piper failed; falling back to eSpeak-NG: {exc}")
-    run(["espeak-ng", "-v", CONFIG.get("voice", "de"), "-s", "145", "-w", str(wav), script])
+    run(["espeak-ng", "-v", profile.get("voice", CONFIG.get("voice", "de")), "-s", "145", "-w", str(wav), script])
     print("Speech engine: eSpeak-NG fallback")
-    adjust_voice_pitch(wav)
+    adjust_voice_pitch(wav, profile)
 
 def referenced_sources(text):
     """Find explicitly attributed third-party sources in RSS text.
@@ -1023,7 +1049,11 @@ def _generate():
         def synthesize_segment(indexed_part):
             idx, part = indexed_part
             segment = Path(tmp) / f"segment_{idx:02d}.wav"
-            synthesize(part, segment)
+            voice = segment_voice(idx, len(parts))
+            if voice:
+                synthesize(part, segment, voice)
+            else:
+                synthesize(part, segment)
             return segment
 
         segment_paths = parallel_map(synthesize_segment, enumerate(parts), "Speech")

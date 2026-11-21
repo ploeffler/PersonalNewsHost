@@ -23,7 +23,7 @@ Links im Feed sind standardmäßig relativ (`./`). Mit `--base-url https://beisp
 ## Einstellungen und Grenzen
 
 - `title`, `feeds`, `max_items`, Sprache, Stimme, Medien- und Redaktionsparameter können pro Show überschrieben werden.
-- `presenter` und `studio` sind in dieser ersten Stufe bestehende lokale Bildpfade für Portrait bzw. Hintergrund; Avatar-/Studio-IDs folgen mit deren Verwaltung.
+- `presenter` und `studio` sind lokale Bildpfade für Portrait bzw. Hintergrund. Für wiederverwendbare Moderatoren (Aussehen, Stimme) und Studios gibt es `host_id`, `studio_id` und optional `co_host_id` – siehe [Moderatoren und Studio-Varianten](moderatoren-studios.md).
 - `schedule` übernimmt das bisherige `automation`-Format. Dieser Produktionsaufruf startet eine Show ausdrücklich; automatische Mehrshow-Zeitplanung folgt später.
 - `target_duration_seconds` wird validiert und übernommen. Das bestehende Rendering garantiert damit noch keine exakte Zielzeit.
 - Der gespeicherte Redaktionspfad erwartet seine Eingabedatei `news-store.json` im jeweiligen Showverzeichnis. Eingänge werden absichtlich nicht automatisch zwischen Shows kopiert. Das Beispiel verwendet deshalb den bisherigen RSS-Pfad (`editorial.pipeline.enabled: false`).

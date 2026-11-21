@@ -141,13 +141,52 @@
   "production": {
     "parallel_workers": 2
   },
+  "hosts": {
+    "newshost": {
+      "name": "NewsHost",
+      "gender": "custom",
+      "portrait": "assets/presenter.png",
+      "voice_model": "de_DE-thorsten-high",
+      "voice": "de",
+      "voice_pitch_semitones": -1.5,
+      "piper_length_scale": 1.06
+    },
+    "tech": {
+      "name": "TechHost",
+      "gender": "custom",
+      "portrait": "assets/host.png",
+      "voice_model": "de_DE-thorsten-high",
+      "voice": "de+m3",
+      "voice_pitch_semitones": 1.0,
+      "piper_length_scale": 0.98
+    }
+  },
+  "studios": {
+    "classic": {
+      "background": "assets/background.jpg",
+      "desk_foreground": "assets/desk_foreground.png",
+      "scenes": {
+        "intro_static_color": "#13243a"
+      }
+    },
+    "tech": {
+      "background": "assets/background.jpg",
+      "scenes": {
+        "intro_mode": "static",
+        "intro_static_type": "color",
+        "intro_static_color": "#0f3b2e"
+      }
+    }
+  },
   "shows": [
     {
       "id": "main",
       "title": "Newsshow",
       "schedule": {
         "enabled": false
-      }
+      },
+      "host_id": "newshost",
+      "studio_id": "classic"
     },
     {
       "id": "technology",
@@ -157,11 +196,9 @@
       "schedule": {
         "enabled": false
       },
-      "presenter_settings": {
-        "scenes": {
-          "intro_mode": "static"
-        }
-      }
+      "host_id": "tech",
+      "co_host_id": "newshost",
+      "studio_id": "tech"
     }
   ],
   "feed_categories": {},

@@ -857,6 +857,18 @@
                 "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,63}$"
               }
             }
+          },
+          "host_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+          },
+          "co_host_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+          },
+          "studio_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
           }
         },
         "additionalProperties": false
@@ -1046,6 +1058,139 @@
         "headline": {
           "type": "string",
           "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,63}$"
+        }
+      }
+    },
+    "hosts": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string"
+          },
+          "portrait": {
+            "type": "string"
+          },
+          "voice_model": {
+            "type": "string",
+            "pattern": "^[A-Za-z]{2}_[A-Za-z]{2}-[A-Za-z0-9_]+-(x_low|low|medium|high)$"
+          },
+          "voice": {
+            "type": "string"
+          },
+          "voice_pitch_semitones": {
+            "type": "number",
+            "minimum": -6,
+            "maximum": 6
+          },
+          "piper_length_scale": {
+            "type": "number",
+            "minimum": 0.1,
+            "maximum": 5
+          },
+          "lip_sync": {
+            "type": "object",
+            "properties": {
+              "enabled": {
+                "type": "boolean"
+              },
+              "engine": {
+                "type": "string"
+              },
+              "fallback": {
+                "type": "string"
+              },
+              "mouth": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "number"
+                  },
+                  "y": {
+                    "type": "number"
+                  },
+                  "width": {
+                    "type": "number"
+                  },
+                  "height": {
+                    "type": "number"
+                  }
+                },
+                "additionalProperties": true
+              },
+              "note": {
+                "type": "string"
+              },
+              "fps": {
+                "type": "integer"
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "studios": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "background": {
+            "type": "string"
+          },
+          "desk_foreground": {
+            "type": "string"
+          },
+          "scenes": {
+            "type": "object",
+            "properties": {
+              "show_headlines": {
+                "type": "boolean"
+              },
+              "intro_mode": {
+                "type": "string",
+                "enum": [
+                  "avatar",
+                  "static"
+                ]
+              },
+              "intro_text": {
+                "type": "string"
+              },
+              "outro_text": {
+                "type": "string"
+              },
+              "intro_static_type": {
+                "type": "string",
+                "enum": [
+                  "color",
+                  "image"
+                ]
+              },
+              "intro_static_color": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "intro_static_image": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
         }
       }
     }
