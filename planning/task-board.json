@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 170,
+  "revision": 171,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -180,7 +180,7 @@
       "id": "T013",
       "epic": "E1",
       "title": "Eilmeldungs-Modus (Breaking News)",
-      "status": "review",
+      "status": "todo",
       "depends_on": [
         "T010",
         "T012"
@@ -197,23 +197,7 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A06",
-      "lease": {
-        "client": "claude-chillyconcane",
-        "token": "97f8aec8868d4e16a7533cae148cd4a7",
-        "expires_at": 1795254310.2357,
-        "files": [
-          ".github/workflows/short-updates.yml",
-          "config.example.json",
-          "docs/breaking-banner.js",
-          "docs/guide/eilmeldungen.md",
-          "docs/guide/index.md",
-          "scripts/breaking_news.py",
-          "scripts/generate.py",
-          "scripts/short_update_video.py",
-          "scripts/short_updates.py",
-          "tests/test_breaking_news.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "claude-chillyconcane",
         "commit": "fcd10d54d258fd3afe28c64a803f80dc12672dde",
@@ -229,7 +213,9 @@
           "scripts/short_update_video.py",
           "scripts/short_updates.py",
           "tests/test_breaking_news.py"
-        ]
+        ],
+        "reviewer": "ploeffler-vorlaeufig",
+        "rejected": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
       },
       "local_work_pending": false,
       "evidence": [],
@@ -7744,6 +7730,15 @@
       "client": "ploeffler-vorlaeufig",
       "at": 1795260552.2668853,
       "note": "VORLÄUFIG bestanden auf ausdrückliche Anweisung des Benutzers ploeffler (21.11.2026). Keine unabhängige Prüfung erfolgt – inhaltliche Prüfung durch einen anderen Client steht noch aus."
+    },
+    {
+      "operation_id": "4245c2c16bcf49bbbc4ad282931fbc13",
+      "revision": 171,
+      "action": "reject",
+      "task": "T013",
+      "client": "ploeffler-vorlaeufig",
+      "at": 1795260555.379674,
+      "note": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
     }
   ]
 }
