@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 157,
+  "revision": 158,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -771,7 +771,7 @@
       "id": "T070",
       "epic": "E7",
       "title": "Planung und Laufzeitbudget in Workflows",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T010"
       ],
@@ -806,10 +806,15 @@
           "scripts/show_schedule.py",
           "tests/test_feed_resilience.py",
           "tests/test_show_schedule.py"
-        ]
+        ],
+        "reviewer": "ploeffler-vorlaeufig",
+        "decision": "VORLÄUFIG bestanden auf ausdrückliche Anweisung des Benutzers ploeffler (21.11.2026). Keine unabhängige Prüfung erfolgt – inhaltliche Prüfung durch einen anderen Client steht noch aus."
       },
       "local_work_pending": false,
-      "evidence": [],
+      "evidence": [
+        "6172b9f525d9116edf0a1afd52bf46e5af732156",
+        "Übernahme der seit 31.10. abgelaufenen Sperre von codex-scheduling (keine Commits von dort vorhanden). 507 Python-Tests grün, davon 13 in tests/test_show_schedule.py: Cron-Zählung, Ausgaben/Monat, Timeouts+Concurrency aller Routine-Workflows, news.yml prüft Sendeplan vor Install/Tests, short-updates ohne Tests bei schedule, Budget-Summe in Doku = Berechnung, privates Profil 1890 < 2000 min, crontab je Show mit Sperren, Feed-Wiederverwendung. Parser ohne YAML-Abhängigkeit, gegen yaml.safe_load für alle Workflows abgeglichen. Laufzeiten aus Actions-Historie gemessen (news 100 Läufe/26 d, short-updates 100/23 d). Öffentliches Repo: Standard-Runner kostenlos (GitHub-Doku); geschätzt 8151 min/Monat bei 15-min-Kurzupdates."
+      ],
       "implementation_note": "",
       "coordination_note": ""
     },
@@ -7607,6 +7612,15 @@
       "client": "claude-chillyconcane",
       "at": 1795260062.0630398,
       "note": ""
+    },
+    {
+      "operation_id": "54fa90594f7344cdbe6d5bcc85abdbc9",
+      "revision": 158,
+      "action": "complete",
+      "task": "T070",
+      "client": "ploeffler-vorlaeufig",
+      "at": 1795260513.557913,
+      "note": "VORLÄUFIG bestanden auf ausdrückliche Anweisung des Benutzers ploeffler (21.11.2026). Keine unabhängige Prüfung erfolgt – inhaltliche Prüfung durch einen anderen Client steht noch aus."
     }
   ]
 }
