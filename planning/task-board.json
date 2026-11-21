@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 164,
+  "revision": 165,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -739,7 +739,7 @@
       "id": "T063",
       "epic": "E6",
       "title": "Untertitel verbessern",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T001"
       ],
@@ -754,10 +754,11 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A09",
-      "lease": {
-        "client": "claude-chillyconcane",
-        "token": "ede9ae462f234f4ea50ef980152dcd9d",
-        "expires_at": 1795264132.2827158,
+      "lease": null,
+      "review": {
+        "author": "claude-chillyconcane",
+        "commit": "611848deccea596fb26a36ae1cbc4b243e865b0d",
+        "checks": "Erneut eingereicht auf aktuellem Stand: 507 Python-Tests grün auf 8ce20fc (Code unverändert seit Stand der Einzelnachweise; spätere Aufgaben haben gemeinsame Dateien angepasst).",
         "files": [
           "docs/guide/index.md",
           "docs/guide/untertitel.md",
@@ -766,7 +767,6 @@
           "tests/test_subtitle_alignment.py"
         ]
       },
-      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7679,6 +7679,15 @@
       "task": "T063",
       "client": "claude-chillyconcane",
       "at": 1795260532.2827158,
+      "note": ""
+    },
+    {
+      "operation_id": "8cda1b1332674f06944c9249ba67925d",
+      "revision": 165,
+      "action": "submit",
+      "task": "T063",
+      "client": "claude-chillyconcane",
+      "at": 1795260535.3219109,
       "note": ""
     }
   ]
