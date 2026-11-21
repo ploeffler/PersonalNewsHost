@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 152,
+  "revision": 153,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -628,7 +628,7 @@
       "id": "T060",
       "epic": "E6",
       "title": "Mehrere Moderatoren und Studio-Varianten",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T010"
       ],
@@ -643,10 +643,11 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A09",
-      "lease": {
-        "client": "claude-chillyconcane",
-        "token": "7bc763b8f79c491ba83775e9ccba8c3a",
-        "expires_at": 1795265830.7003388,
+      "lease": null,
+      "review": {
+        "author": "claude-chillyconcane",
+        "commit": "923d6b8de1ead4addcb18613cc595d291d3627a3",
+        "checks": "495 Python-Tests grün, davon 8 in tests/test_hosts_studios.py: Beispielkonfiguration mit zwei Shows löst unterschiedliche Moderatoren (Portrait, Name, Tonhöhe, Stimme) und Studios (Szenenfarbe) auf; explizite Show-Felder haben Vorrang; unbekannte IDs/Felder abgelehnt; Altkonfiguration unverändert; Wechselmoderation abwechselnd pro Meldung; Piper-Stimme mit Rückfall und Namensprüfung; eSpeak nutzt Profilstimme/-tonhöhe; produce() beider Shows mit FFmpeg erzeugt Videos, show.json nennt host_id/studio_id, Tech-Show spricht Meldungen abwechselnd. validate_config für beide Beispielkonfigurationen grün (Schema um hosts/studios/host_id/studio_id/co_host_id erweitert; Umfang per release/claim um config.schema.json ergänzt). Einzelbilder beider Shows geprüft. Hinweis: Beispiel nutzt vorhandene Assets (presenter.png vs. host.png ähneln sich), sichtbar verschiedene Studios brauchen eigene Bilder.",
         "files": [
           "config.schema.json",
           "config.shows.example.json",
@@ -659,7 +660,6 @@
           "tests/test_hosts_studios.py"
         ]
       },
-      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7552,6 +7552,15 @@
       "task": "T060",
       "client": "claude-chillyconcane",
       "at": 1795258630.7003388,
+      "note": ""
+    },
+    {
+      "operation_id": "de7cac315a6048e9b368c69f43f3f31e",
+      "revision": 153,
+      "action": "submit",
+      "task": "T060",
+      "client": "claude-chillyconcane",
+      "at": 1795258860.226271,
       "note": ""
     }
   ]
