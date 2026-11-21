@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 180,
+  "revision": 181,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -346,7 +346,7 @@
       "id": "T030",
       "epic": "E3",
       "title": "Archiv mit Aufbewahrungsregeln",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T020"
       ],
@@ -362,7 +362,21 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A07",
-      "lease": null,
+      "lease": {
+        "client": "claude-chillyconcane",
+        "token": "8cb54a2a806c41edbcd7c7bddf976623",
+        "expires_at": 1795270949.1252472,
+        "files": [
+          "config.example.json",
+          "docs/guide/archiv.md",
+          "docs/guide/index.md",
+          "docs/site.css",
+          "scripts/archive_store.py",
+          "scripts/generate.py",
+          "scripts/produce_show.py",
+          "tests/test_archive_store.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -7834,6 +7848,15 @@
       "task": "T021",
       "client": "claude-chillyconcane",
       "at": 1795261217.091567,
+      "note": ""
+    },
+    {
+      "operation_id": "b53c9c4263e54595b33f0180ac4a85db",
+      "revision": 181,
+      "action": "claim",
+      "task": "T030",
+      "client": "claude-chillyconcane",
+      "at": 1795263749.1252472,
       "note": ""
     }
   ]
