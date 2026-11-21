@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 167,
+  "revision": 168,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -832,7 +832,7 @@
       "id": "T071",
       "epic": "E7",
       "title": "Fehlerbehandlung, Wiederholung und Benachrichtigung",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T051"
       ],
@@ -846,11 +846,10 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A04",
-      "lease": null,
-      "review": {
-        "author": "claude-chillyconcane",
-        "commit": "26e1f0ad7959b1815b2f45da9d05024591f2c1c5",
-        "checks": "479 Python-Tests grün (unittest discover -s tests), davon 13 in tests/test_feed_resilience.py: Einstufung vorübergehender Fehler, Backoff 2/6 s, keine Wiederholung bei 404, Ersatzkopie inkl. Altersgrenze und kaputtem XML, Zählung pro Lauf, Telegram-Text mit Host, Issue ohne Adresse/Host, Intervall, Opt-in, ohne Secrets kein Versand; End-to-End generate.main() mit einem ausgefallenen und einem funktionierenden Feed erzeugt die Sendung. Workflow-YAML gültig, Action-Pins wie action-pins.json, security_checks OK, test_documentation_release grün.",
+      "lease": {
+        "client": "claude-chillyconcane",
+        "token": "54ae559651284e14a129ef0769cfd32f",
+        "expires_at": 1795264146.708993,
         "files": [
           ".github/workflows/news.yml",
           ".github/workflows/short-updates.yml",
@@ -862,10 +861,9 @@
           "scripts/feed_resilience.py",
           "scripts/generate.py",
           "tests/test_feed_resilience.py"
-        ],
-        "reviewer": "ploeffler-vorlaeufig",
-        "rejected": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
+        ]
       },
+      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7714,6 +7712,15 @@
       "client": "ploeffler-vorlaeufig",
       "at": 1795260543.382185,
       "note": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
+    },
+    {
+      "operation_id": "2646c74b1d7f47faad8a4bf57e628c41",
+      "revision": 168,
+      "action": "claim",
+      "task": "T071",
+      "client": "claude-chillyconcane",
+      "at": 1795260546.708993,
+      "note": ""
     }
   ]
 }
