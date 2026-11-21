@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 163,
+  "revision": 164,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -739,7 +739,7 @@
       "id": "T063",
       "epic": "E6",
       "title": "Untertitel verbessern",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T001"
       ],
@@ -754,21 +754,19 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A09",
-      "lease": null,
-      "review": {
-        "author": "claude-chillyconcane",
-        "commit": "9cfc0b6e32fee4602e7efd82c42d76a891a19880",
-        "checks": "487 Python-Tests grün (mit espeak-ng, keine übersprungen), davon 8 in tests/test_subtitle_alignment.py: Satzgrenzen in synthetischer Sprache < 0,05 s, Kommapausen nicht als Satzende, Untertitel nie über Satzgrenzen, Rückfall ohne Pausen, stille Datei, write_subtitles mit Audio (VTT+SRT) und Rückfall bei fehlender WAV; eSpeak-Stichprobe < 0,5 s (gemessen max 0,044 s, Mittel 0,015 s; bisheriges Verfahren max 1,06 s). Manueller generate.main()-Lauf mit eSpeak: VTT-Cues pro Satz plausibel. WebVTT war bereits vorhanden. test_documentation_release grün.",
+      "lease": {
+        "client": "claude-chillyconcane",
+        "token": "ede9ae462f234f4ea50ef980152dcd9d",
+        "expires_at": 1795264132.2827158,
         "files": [
           "docs/guide/index.md",
           "docs/guide/untertitel.md",
           "scripts/generate.py",
           "scripts/subtitle_alignment.py",
           "tests/test_subtitle_alignment.py"
-        ],
-        "reviewer": "ploeffler-vorlaeufig",
-        "rejected": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
+        ]
       },
+      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7673,6 +7671,15 @@
       "client": "ploeffler-vorlaeufig",
       "at": 1795260528.9545026,
       "note": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
+    },
+    {
+      "operation_id": "14883b1b0c5d4e3cb31cbe32d98175a9",
+      "revision": 164,
+      "action": "claim",
+      "task": "T063",
+      "client": "claude-chillyconcane",
+      "at": 1795260532.2827158,
+      "note": ""
     }
   ]
 }
