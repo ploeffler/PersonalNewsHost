@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 148,
+  "revision": 149,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -719,7 +719,7 @@
       "id": "T063",
       "epic": "E6",
       "title": "Untertitel verbessern",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T001"
       ],
@@ -734,10 +734,11 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A09",
-      "lease": {
-        "client": "claude-chillyconcane",
-        "token": "de91cd5df1cc4f57852991826781b75a",
-        "expires_at": 1795257546.062804,
+      "lease": null,
+      "review": {
+        "author": "claude-chillyconcane",
+        "commit": "9cfc0b6e32fee4602e7efd82c42d76a891a19880",
+        "checks": "487 Python-Tests grün (mit espeak-ng, keine übersprungen), davon 8 in tests/test_subtitle_alignment.py: Satzgrenzen in synthetischer Sprache < 0,05 s, Kommapausen nicht als Satzende, Untertitel nie über Satzgrenzen, Rückfall ohne Pausen, stille Datei, write_subtitles mit Audio (VTT+SRT) und Rückfall bei fehlender WAV; eSpeak-Stichprobe < 0,5 s (gemessen max 0,044 s, Mittel 0,015 s; bisheriges Verfahren max 1,06 s). Manueller generate.main()-Lauf mit eSpeak: VTT-Cues pro Satz plausibel. WebVTT war bereits vorhanden. test_documentation_release grün.",
         "files": [
           "docs/guide/index.md",
           "docs/guide/untertitel.md",
@@ -746,7 +747,6 @@
           "tests/test_subtitle_alignment.py"
         ]
       },
-      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7501,6 +7501,15 @@
       "task": "T063",
       "client": "claude-chillyconcane",
       "at": 1795250346.062804,
+      "note": ""
+    },
+    {
+      "operation_id": "0301e9cbd3b04fc9b91127259865190a",
+      "revision": 149,
+      "action": "submit",
+      "task": "T063",
+      "client": "claude-chillyconcane",
+      "at": 1795250567.6117167,
       "note": ""
     }
   ]
