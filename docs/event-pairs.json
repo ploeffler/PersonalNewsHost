@@ -1,10 +1,6 @@
 {
  "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
  "pairs": {
-  "03d75db5bbac3dade1038864|e39691576da2402189167d14": {
-   "decided_at": 1795200833,
-   "same": true
-  },
   "04e5bc4b0b463ce026f366c1|175ad56fb48eabbf483022ff": {
    "decided_at": 1795200833,
    "same": false
@@ -17,17 +13,9 @@
    "decided_at": 1795200833,
    "same": true
   },
-  "0671f72f3d4d50191c5aeb24|14503ed7a716e3dcf6ede4c5": {
-   "decided_at": 1795200833,
-   "same": false
-  },
   "0e8e1ab883b3dc7db0a55eea|11470d57a872aab4eefb2869": {
    "decided_at": 1795200833,
    "same": false
-  },
-  "102258913b613f79ee7bbc5d|53f5d1034ccbd31254650eb1": {
-   "decided_at": 1795200833,
-   "same": true
   },
   "175ad56fb48eabbf483022ff|73218fe13e2932faf4fde5dd": {
    "decided_at": 1795200833,
@@ -37,39 +25,11 @@
    "decided_at": 1795200833,
    "same": false
   },
-  "1bcbc114d55f64b9800a9b79|2c95c056ce2d6f2b877e08a9": {
-   "decided_at": 1795200833,
-   "same": true
-  },
-  "2c95c056ce2d6f2b877e08a9|39d40526ce5ce20994f07a7c": {
-   "decided_at": 1795200833,
-   "same": false
-  },
-  "68fe94c039d70dbf5a9ecf35|bf4d3b95c3a7aadd5a541e9a": {
-   "decided_at": 1795200833,
-   "same": true
-  },
   "6d09097714576b9fe5a3c2f0|7ea8d9799e2517d0ffef7f58": {
    "decided_at": 1795222044,
    "same": true
   },
-  "6e8757413638665feaee94c8|db401e8bf884a3e76a58e38c": {
-   "decided_at": 1795200833,
-   "same": true
-  },
   "73218fe13e2932faf4fde5dd|ad0463663f1620d92b988243": {
-   "decided_at": 1795200833,
-   "same": true
-  },
-  "854397bac406716526cebc47|96cf533d779c3adfe54168cc": {
-   "decided_at": 1795171119,
-   "same": true
-  },
-  "90faadae1aa56f1631344a43|db401e8bf884a3e76a58e38c": {
-   "decided_at": 1795200833,
-   "same": false
-  },
-  "cbac188859495264ac19ba0b|d3cf05e896c216006b59b5d1": {
    "decided_at": 1795200833,
    "same": true
   }
