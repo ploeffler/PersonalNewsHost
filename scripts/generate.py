@@ -782,13 +782,19 @@ def append_silence(output, seconds, channels, sample_width, sample_rate):
     return frames / sample_rate
 
 
-def write_subtitles(parts, boundaries, directory, speech_durations=None):
-    """Use measured speech boundaries; estimate cue timing within each segment.
+def write_subtitles(parts, boundaries, directory, speech_durations=None, segment_audio=None):
+    """Use measured speech boundaries; align cues inside each segment to its audio.
 
-    No speech recognition is needed. Text is the exact input to synthesis;
-    within-segment timing is proportional to character counts, not word alignment.
+    No speech recognition is needed. Text is the exact input to synthesis.
+    With ``segment_audio`` (one WAV per part) sentence boundaries are located
+    from the pauses in the speech (scripts/subtitle_alignment.py); without it,
+    or if alignment fails, timing is proportional to character counts.
     """
     import textwrap
+    try:
+        from scripts.subtitle_alignment import aligned_cues
+    except ModuleNotFoundError:
+        from subtitle_alignment import aligned_cues
     if len(boundaries) != len(parts) + 1:
         raise ValueError("Subtitle text and speech boundaries must match")
     cues = []
@@ -797,6 +803,15 @@ def write_subtitles(parts, boundaries, directory, speech_durations=None):
         end = round((boundaries[index] + speech_durations[index]) * 1000) if speech_durations is not None else round(boundaries[index + 1] * 1000)
         if end <= start:
             continue
+        if segment_audio is not None:
+            try:
+                aligned = aligned_cues(part, segment_audio[index], boundaries[index], end / 1000)
+            except (OSError, EOFError, ValueError) as exc:
+                print(f"Subtitle alignment unavailable ({type(exc).__name__}); using proportional timing")
+                aligned = []
+            if aligned:
+                cues.extend(aligned)
+                continue
         lines = textwrap.wrap(" ".join(part.split()), width=42,
                               break_long_words=False, break_on_hyphens=False)
         chunks = ["\n".join(lines[i:i + 2]) for i in range(0, len(lines), 2)]
@@ -1038,7 +1053,7 @@ def _generate():
         boundaries = [0.0]
         for seconds in segment_durations:
             boundaries.append(boundaries[-1] + seconds)
-        write_subtitles(parts, boundaries, DOCS, speech_durations)
+        write_subtitles(parts, boundaries, DOCS, speech_durations, segment_paths)
         timeline = {
             "version": 1,
             "segments": [
