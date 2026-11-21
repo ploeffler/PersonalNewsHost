@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 149,
+  "revision": 150,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -628,7 +628,7 @@
       "id": "T060",
       "epic": "E6",
       "title": "Mehrere Moderatoren und Studio-Varianten",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T010"
       ],
@@ -643,7 +643,21 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A09",
-      "lease": null,
+      "lease": {
+        "client": "claude-chillyconcane",
+        "token": "89decf4e5ad6413c8f5dd6aa7071eb6e",
+        "expires_at": 1795265651.110164,
+        "files": [
+          "config.shows.example.json",
+          "docs/guide/index.md",
+          "docs/guide/moderatoren-studios.md",
+          "docs/guide/shows.md",
+          "scripts/generate.py",
+          "scripts/produce_show.py",
+          "scripts/shows.py",
+          "tests/test_hosts_studios.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -7510,6 +7524,15 @@
       "task": "T063",
       "client": "claude-chillyconcane",
       "at": 1795250567.6117167,
+      "note": ""
+    },
+    {
+      "operation_id": "3f8dd0f213064d6ea296713599b29278",
+      "revision": 150,
+      "action": "claim",
+      "task": "T060",
+      "client": "claude-chillyconcane",
+      "at": 1795258451.110164,
       "note": ""
     }
   ]
