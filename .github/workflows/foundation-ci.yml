@@ -59,3 +59,9 @@ jobs:
             node tests/test_playlist.cjs
             for file in docs/*.js tests/*.cjs; do node --check "$file"; done
           '
+      - name: Start page accessibility (axe-core, light and dark mode)
+        run: |
+          npm install --no-save --no-audit --no-fund --prefix="$RUNNER_TEMP/a11y" axe-core@4.10.3 playwright-core@1.56.1
+          cp -r docs "$RUNNER_TEMP/site"
+          .ci-venv/bin/python scripts/homepage.py --refresh "$RUNNER_TEMP/site"
+          SITE_DIR="$RUNNER_TEMP/site" NODE_PATH="$RUNNER_TEMP/a11y/node_modules" node tests/test_homepage_a11y_browser.cjs

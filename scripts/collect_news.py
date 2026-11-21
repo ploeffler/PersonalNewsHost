@@ -192,3 +192,9 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--annotations-only',action='store_true')
     args=parser.parse_args()
     refresh_annotations(ROOT) if args.annotations_only else collect(ROOT)
+    try:
+        from scripts.homepage import update_homepage
+    except ModuleNotFoundError:
+        from homepage import update_homepage
+    # Rubriken and newest posts on the start page follow every RSS run (T021).
+    update_homepage(ROOT/'docs',read(ROOT/'config.json',{}))

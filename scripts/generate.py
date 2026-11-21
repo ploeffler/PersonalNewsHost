@@ -1529,6 +1529,11 @@ def _generate():
         link_articles_on_homepage(decorate_homepage(home.read_text(encoding="utf-8")),
                                   [group[0][0] for group in story_groups], article_links),
         breaking_settings["banner_hours"]), encoding="utf-8")
+    try:
+        from scripts.homepage import update_homepage
+    except ModuleNotFoundError:
+        from homepage import update_homepage
+    update_homepage(DOCS, CONFIG)
     print(f"Generated {len(selected)} stories; video size {(DOCS / 'latest.mp4').stat().st_size} bytes")
 
 def main():

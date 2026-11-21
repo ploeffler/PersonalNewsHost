@@ -30,3 +30,4 @@ Willkommen in der Wissensbasis zu PersonalNewsHost.
 - [Untertitel](untertitel.md)
 - [Moderatoren und Studio-Varianten](moderatoren-studios.md)
 - [Planung und Laufzeitbudget](show-planung.md)
+- [Startseite im Redaktionslayout](startseite.md)
