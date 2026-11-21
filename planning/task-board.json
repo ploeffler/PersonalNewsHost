@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 162,
+  "revision": 163,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -739,7 +739,7 @@
       "id": "T063",
       "epic": "E6",
       "title": "Untertitel verbessern",
-      "status": "review",
+      "status": "todo",
       "depends_on": [
         "T001"
       ],
@@ -765,7 +765,9 @@
           "scripts/generate.py",
           "scripts/subtitle_alignment.py",
           "tests/test_subtitle_alignment.py"
-        ]
+        ],
+        "reviewer": "ploeffler-vorlaeufig",
+        "rejected": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
       },
       "local_work_pending": false,
       "evidence": [],
@@ -7662,6 +7664,15 @@
       "client": "ploeffler-vorlaeufig",
       "at": 1795260526.1272917,
       "note": "VORLÄUFIG bestanden auf ausdrückliche Anweisung des Benutzers ploeffler (21.11.2026). Keine unabhängige Prüfung erfolgt – inhaltliche Prüfung durch einen anderen Client steht noch aus."
+    },
+    {
+      "operation_id": "2943d600e4f64ad99da35143617351dc",
+      "revision": 163,
+      "action": "reject",
+      "task": "T063",
+      "client": "ploeffler-vorlaeufig",
+      "at": 1795260528.9545026,
+      "note": "Formal: Dateien nach dem Nachweis-Commit geändert; erneute Einreichung auf aktuellem Stand."
     }
   ]
 }
