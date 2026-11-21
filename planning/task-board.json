@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 140,
+  "revision": 141,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -598,7 +598,7 @@
       "id": "T061",
       "epic": "E6",
       "title": "Grafikbausteine (Einblendungen)",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T011"
       ],
@@ -612,17 +612,7 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A09",
-      "lease": {
-        "client": "codex-motion",
-        "token": "264bdad9211e4f91862a757e87f0e15c",
-        "expires_at": 1794856760.7870436,
-        "files": [
-          "assets/motion/",
-          "scripts/generate.py",
-          "scripts/motion_graphics.py",
-          "tests/test_motion_graphics.py"
-        ]
-      },
+      "lease": null,
       "review": {
         "author": "codex-motion",
         "commit": "07667253d56b2187df94b4f9d1447fff38272769",
@@ -632,10 +622,15 @@
           "scripts/generate.py",
           "scripts/motion_graphics.py",
           "tests/test_motion_graphics.py"
-        ]
+        ],
+        "reviewer": "claude-chillyconcane",
+        "decision": "Unabhängige Prüfung 21.11.2026: Dateiumfang seit 0766725 unverändert. 444 Tests grün (u. a. motion_graphics 5, video_smoke, render_load, render_progress), Einzelbild mit Rubrik-Einblendung und Meldungskarte (Rubrik + Quelle, Umbruch mit Auslassung) visuell geprüft. Abnahmekriterium erfüllt. Nachtrag: Zeit/Datum-Einblendung im Video fehlt noch; Eilmeldungsband existiert nur als AKTUELL-Label in Kurzupdates (gehört zu T013)."
       },
       "local_work_pending": false,
-      "evidence": [],
+      "evidence": [
+        "07667253d56b2187df94b4f9d1447fff38272769",
+        "17 tests passed: motion_graphics 5 including rendered section timing, video_smoke 5, render_load 1, render_progress 6. py_compile and diff --check passed. Nine-second three-story preview visually checked. Section bumpers only on enabled section changes, capped to story duration; no extra runtime service. Independent review pending."
+      ],
       "implementation_note": "",
       "coordination_note": ""
     },
@@ -7352,6 +7347,15 @@
       "client": "codex-motion",
       "at": 1794853285.3617504,
       "note": ""
+    },
+    {
+      "operation_id": "7920e3332b8e4e58b23c65ba1a5fc689",
+      "revision": 141,
+      "action": "complete",
+      "task": "T061",
+      "client": "claude-chillyconcane",
+      "at": 1795225748.023353,
+      "note": "Unabhängige Prüfung 21.11.2026: Dateiumfang seit 0766725 unverändert. 444 Tests grün (u. a. motion_graphics 5, video_smoke, render_load, render_progress), Einzelbild mit Rubrik-Einblendung und Meldungskarte (Rubrik + Quelle, Umbruch mit Auslassung) visuell geprüft. Abnahmekriterium erfüllt. Nachtrag: Zeit/Datum-Einblendung im Video fehlt noch; Eilmeldungsband existiert nur als AKTUELL-Label in Kurzupdates (gehört zu T013)."
     }
   ]
 }
