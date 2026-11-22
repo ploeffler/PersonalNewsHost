@@ -120,11 +120,10 @@
     "mode": "images_and_videos",
     "max_download_mb": 12,
     "web_image_fallback": true,
-    "enhancement": "ai",
+    "enhancement": "balanced",
     "enhancement_modes": [
       "off",
-      "balanced",
-      "ai"
+      "balanced"
     ],
     "prefer_article_images": true
   },
