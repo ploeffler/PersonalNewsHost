@@ -98,7 +98,7 @@ Die automatische Produktion ist in der ausgelieferten Standardkonfiguration deak
 
 `scripts/provider_registry.py` definiert austauschbare Verträge für Nachrichten-, Sprach-, Avatar- und Videodienste. `plan(config)` validiert Anbieter und Euro-Budgets rein lokal, ohne Netzwerkzugriffe oder Gebühren. `require_executable_version(config)` lässt aktuell nur 1.0 zu; 2.0 bleibt auch mit ausdrücklicher Zustimmung gesperrt, solange belastbare Abrechnungskontrollen und Adapter fehlen. Die Produktionsprüfung nutzt dieselbe Validierung.
 
-Tests: `python3 -m unittest discover -s tests`. Der Produktionsworkflow führt diese Tests vor der eigentlichen Verarbeitung aus. Die Provider-Verträge sind eine technische Vorbereitung, noch keine funktionierende kostenpflichtige Pipeline.
+Tests: `python3 -m unittest discover -s tests` oder parallel je Modul mit Laufzeiten `python3 scripts/run_tests.py`. Die Prüfung `validate` wählt im Pull Request nur die Tests zu den geänderten Dateien aus (`scripts/select_tests.py`): ffmpeg nur, wenn ein ausgewählter Test es braucht, Browser-Tests nur bei Seiten unter `docs/`; im Zweifel (Workflows, Konfiguration, gelöschte Dateien) läuft alles. Ein grüner voller PR-Lauf hinterlegt den geprüften Baum als Artefakt `validate-full-<tree>`; hat der Merge-Commit auf `main` genau diesen Baum, laufen die Tests dort nicht noch einmal. Der Produktionsworkflow führt diese Tests vor der eigentlichen Verarbeitung aus. Die Provider-Verträge sind eine technische Vorbereitung, noch keine funktionierende kostenpflichtige Pipeline.
 
 ### Rechenstandort als Auswahlkriterium
 

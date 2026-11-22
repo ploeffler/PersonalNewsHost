@@ -1,32 +1,98 @@
 name: validate
+
+# Sparsam mit dem Actions-Kontingent (übernommen aus GhostWriter #277, #439, #485):
+# - Pull Requests prüfen nur die Tests zu den geänderten Dateien (scripts/select_tests.py);
+#   ffmpeg nur, wenn ein ausgewählter Test es braucht; Browser-Tests nur bei Seiten unter docs/.
+# - Ein grüner voller PR-Lauf hinterlegt den geprüften Baum als Artefakt „validate-full-<tree>“.
+#   Hat der Merge-Commit auf main genau diesen Baum, laufen die Tests dort nicht noch einmal.
+# - Ein neuer Push bricht den älteren Lauf desselben PRs bzw. Branchs ab.
+# - Tests laufen parallel je Modul (scripts/run_tests.py), am Ende die langsamsten Module.
+
 on:
   pull_request:
   push:
     branches: [main]
   workflow_dispatch:
+
+concurrency:
+  group: validate-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
-concurrency:
-  group: validate-${{ github.ref }}
-  cancel-in-progress: true
+  actions: read        # Artefakte „validate-full-<tree>“ finden
+  pull-requests: read  # geänderte Dateien für die Testauswahl
+
 jobs:
+  scope:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    outputs:
+      mode: ${{ steps.scope.outputs.mode }}
+      tests: ${{ steps.scope.outputs.tests }}
+      ffmpeg: ${{ steps.scope.outputs.ffmpeg }}
+      browser: ${{ steps.scope.outputs.browser }}
+      tree: ${{ steps.scope.outputs.tree }}
+    steps:
+      - uses: actions/checkout@v5
+      - name: Testumfang bestimmen
+        id: scope
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          tree=$(git rev-parse 'HEAD^{tree}')
+          echo "tree=$tree" >> "$GITHUB_OUTPUT"
+          files="repos/$GITHUB_REPOSITORY/pulls/$PR/files"
+          if [ "$EVENT" = "push" ] && [ "$GITHUB_REF_NAME" = "main" ] \
+             && run=$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=validate-full-$tree&per_page=5" \
+                      --jq '[.artifacts[] | select(.expired | not) | .workflow_run.id][0] // empty' 2>/dev/null) \
+             && [ -n "$run" ] \
+             && [ "$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$run" --jq .conclusion 2>/dev/null)" = "success" ]; then
+            printf 'mode=skip\ntests=\nffmpeg=0\nbrowser=0\n' >> "$GITHUB_OUTPUT"
+            msg="Tests übersprungen: Baum $tree schon geprüft im Lauf https://github.com/$GITHUB_REPOSITORY/actions/runs/$run"
+            echo "$msg"; echo "$msg" >> "$GITHUB_STEP_SUMMARY"
+          elif [ -n "$PR" ] \
+             && gh api "$files" --paginate --jq '.[] | select(.status != "removed") | .filename' > /tmp/changed.txt \
+             && gh api "$files" --paginate --jq '.[] | select(.status == "removed" or .status == "renamed") | (.previous_filename // .filename)' > /tmp/removed.txt; then
+            python3 scripts/select_tests.py --files /tmp/changed.txt --removed /tmp/removed.txt --github-output "$GITHUB_OUTPUT"
+          else
+            printf 'mode=full\ntests=\nffmpeg=1\nbrowser=1\n' >> "$GITHUB_OUTPUT"
+            echo "Alle Tests"
+          fi
+
   python-tests:
+    needs: scope
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
       - name: Install tools
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends ffmpeg
+          if [ "${{ needs.scope.outputs.ffmpeg }}" = "1" ]; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
           python3 -m pip install --disable-pip-version-check Pillow
       - name: Compile scripts
         run: python3 -m compileall -q scripts tests
       - name: Unit tests
         env:
           PYTHONDONTWRITEBYTECODE: '1'
-        run: python3 -m unittest discover -s tests -v
+          MODE: ${{ needs.scope.outputs.mode }}
+          TESTS: ${{ needs.scope.outputs.tests }}
+        run: |
+          case "$MODE" in
+            skip) echo "Keine Tests: derselbe Stand wurde schon im Pull Request vollständig geprüft." ;;
+            none) echo "Keine Python-Tests betroffen (nur Doku oder Seiten)." ;;
+            subset) echo "Nur die betroffenen Tests: $TESTS"; python3 scripts/run_tests.py $TESTS ;;
+            *) python3 scripts/run_tests.py ;;
+          esac
+
   browser-tests:
+    needs: scope
+    if: needs.scope.outputs.browser == '1'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
@@ -47,3 +113,18 @@ jobs:
             node "$f"
             echo "::endgroup::"
           done
+
+  mark-validated:
+    # Nur nach einem grünen vollen Lauf im Pull Request: der Lauf auf main erkennt daran
+    # den schon geprüften Baum und spart die Tests.
+    needs: [scope, python-tests, browser-tests]
+    if: github.event_name == 'pull_request' && needs.scope.outputs.mode == 'full' && needs.python-tests.result == 'success' && needs.browser-tests.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - run: echo "${{ needs.scope.outputs.tree }}" > /tmp/validate-tree.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: validate-full-${{ needs.scope.outputs.tree }}
+          path: /tmp/validate-tree.txt
+          retention-days: 7
