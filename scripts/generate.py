@@ -276,9 +276,12 @@ def article_image_candidates(url):
 
 
 def improve_news_image(path, settings):
-    """Offline CPU neural upscaling with FSRCNN x2; conservative fallback."""
+    """Conservative Pillow upscaling (max 2x) with light contrast/sharpening.
+
+    The former FSRCNN/OpenCV mode was removed (Nov. 2026); "ai" in older
+    configs is treated like "balanced"."""
     from PIL import Image, ImageEnhance, ImageOps
-    mode = settings.get("enhancement", "ai")
+    mode = settings.get("enhancement", "balanced")
     if mode == "off":
         return path, "original"
     try:
@@ -287,29 +290,6 @@ def improve_news_image(path, settings):
             width, height = image.size
             if width < 64 or height < 64:
                 return path, "original"
-            if mode == "ai":
-                model = ROOT / "models" / "FSRCNN_x2.pb"
-                if model.is_file() and model.stat().st_size > 1000:
-                    try:
-                        import cv2
-                        import numpy as np
-                        # Keep CPU processing bounded on GitHub's free runners.
-                        if max(image.size) > 1100:
-                            image = ImageOps.contain(image, (1100, 1100),
-                                                     method=Image.Resampling.LANCZOS)
-                        network = cv2.dnn_superres.DnnSuperResImpl_create()
-                        network.readModel(str(model))
-                        network.setModel("fsrcnn", 2)
-                        rgb = np.asarray(image)
-                        enhanced = network.upsample(cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR))
-                        output = path.with_name(path.stem + "_ai.png")
-                        Image.fromarray(cv2.cvtColor(enhanced, cv2.COLOR_BGR2RGB)).save(output)
-                        print(f"Neural FSRCNN x2 enhancement: {path.name}")
-                        return output, "neural_fsrcnn_x2"
-                    except Exception as exc:
-                        print(f"Neural image enhancement fallback: {type(exc).__name__}: {exc}")
-                else:
-                    print("FSRCNN model unavailable; using conservative enhancement")
             factor = min(2.0, 1100 / min(width, height))
             if factor > 1.05:
                 image = image.resize((round(width * factor), round(height * factor)),
