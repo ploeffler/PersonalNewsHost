@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 186,
+  "revision": 187,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -352,7 +352,7 @@
       "id": "T030",
       "epic": "E3",
       "title": "Archiv mit Aufbewahrungsregeln",
-      "status": "review",
+      "status": "todo",
       "depends_on": [
         "T020"
       ],
@@ -382,7 +382,9 @@
           "scripts/generate.py",
           "scripts/produce_show.py",
           "tests/test_archive_store.py"
-        ]
+        ],
+        "reviewer": "claude-cloud-review",
+        "rejected": "Nachweis veraltet (Dateien seit Einreichung geaendert, u. a. #207-Merge); Neueinreichung auf aktuellem Stand"
       },
       "local_work_pending": false,
       "evidence": [],
@@ -7909,6 +7911,15 @@
       "client": "claude-cloud-review",
       "at": 1795421529.2339723,
       "note": "Neu geprueft auf aktuellem Stand, Tests gruen; theme.js ausserhalb Scope akzeptiert"
+    },
+    {
+      "operation_id": "f15c674f2c4a4281929617ff1e9c580d",
+      "revision": 187,
+      "action": "reject",
+      "task": "T030",
+      "client": "claude-cloud-review",
+      "at": 1795421531.2406085,
+      "note": "Nachweis veraltet (Dateien seit Einreichung geaendert, u. a. #207-Merge); Neueinreichung auf aktuellem Stand"
     }
   ]
 }
