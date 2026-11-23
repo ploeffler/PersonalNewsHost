@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 183,
+  "revision": 184,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -273,7 +273,7 @@
       "id": "T021",
       "epic": "E2",
       "title": "Startseite im Redaktionslayout",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T013",
         "T020"
@@ -290,11 +290,10 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A06",
-      "lease": null,
-      "review": {
-        "author": "claude-chillyconcane",
-        "commit": "11f3c152ec5ea19a0eefeb008c97fd840b748018",
-        "checks": "514 Python-Tests grün, davon 7 in tests/test_homepage.py (Rubriken nach feed_sections/Stichwörtern, Neueste Beiträge, 24-h-Fenster, Escaping/unsichere Links, Artikelseiten-Links, idempotente Platzierung, Eilmeldungsleiste, CSS-Variablen hell=dunkel und keine Festfarben in playlist/news-list.css). tests/test_homepage_a11y_browser.cjs: axe-core 4.10.3 WCAG 2.1 A/AA hell und dunkel ohne critical/serious, Tastaturbedienung des Design-Knopfs; läuft jetzt in foundation-ci (Lauf 44899999524 grün). Screenshots hell/dunkel geprüft. Zusätzlich angelegt außerhalb des angemeldeten Umfangs: docs/theme.js (Design-Umschalter).",
+      "lease": {
+        "client": "claude-cloud-author",
+        "token": "aa2a3d572b134d10a6c72fbdb078d5a1",
+        "expires_at": 1795425124.8509643,
         "files": [
           ".github/workflows/foundation-ci.yml",
           "docs/guide/index.md",
@@ -302,6 +301,7 @@
           "docs/news-list.css",
           "docs/playlist.css",
           "docs/site.css",
+          "docs/theme.js",
           "scripts/broadcast_archive.py",
           "scripts/collect_news.py",
           "scripts/generate.py",
@@ -309,10 +309,9 @@
           "tests/test_homepage.py",
           "tests/test_homepage_a11y_browser.cjs",
           "tests/test_offline_outputs.py"
-        ],
-        "reviewer": "claude-cloud-review",
-        "rejected": "Nachweis veraltet (Dateien seit Einreichung geaendert, u. a. #207-Merge); Neueinreichung auf aktuellem Stand"
+        ]
       },
+      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7878,6 +7877,15 @@
       "client": "claude-cloud-review",
       "at": 1795421513.7431781,
       "note": "Nachweis veraltet (Dateien seit Einreichung geaendert, u. a. #207-Merge); Neueinreichung auf aktuellem Stand"
+    },
+    {
+      "operation_id": "22035946f2b2428690840fa043696bfb",
+      "revision": 184,
+      "action": "claim",
+      "task": "T021",
+      "client": "claude-cloud-author",
+      "at": 1795421524.8509643,
+      "note": ""
     }
   ]
 }
