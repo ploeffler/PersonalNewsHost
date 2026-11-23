@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 187,
+  "revision": 188,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -352,7 +352,7 @@
       "id": "T030",
       "epic": "E3",
       "title": "Archiv mit Aufbewahrungsregeln",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T020"
       ],
@@ -368,11 +368,10 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A07",
-      "lease": null,
-      "review": {
-        "author": "claude-chillyconcane",
-        "commit": "d5f6703236e700f506de988d372764c5e42c8f23",
-        "checks": "522 Python-Tests grün, davon 8 in tests/test_archive_store.py: Index ohne Archivpfad, dauerhafte Kopie mit Manifest und lokalem Datum (Jahreswechsel Wien), idempotente Wiederholung, kein Überschreiben bei Konflikt, Archivkopien überleben Rotation der Veröffentlichungskopien (2 öffentlich, 3 archiviert), zwei Sendungen am selben Tag, Archivseite nach Datum mit Escaping, unsichere Show-ID/fehlendes Video als Fehler, Pfadauflösung; keine Löschoperation im Archivcode außer .part. Manueller generate.main()-Lauf mit PNH_ARCHIVE_PATH legt Video/Transkript/Untertitel/Manifest unter JJJJ/MM/TT/main/<id>/ ab. Klarstellung Benutzer: archivieren, wenn Archivpfad angegeben; nicht löschbar = aus der Oberfläche heraus (keine Lösch-Endpunkte vorhanden).",
+      "lease": {
+        "client": "claude-cloud-author",
+        "token": "1b94d09f8124476ca55c6723577d28f7",
+        "expires_at": 1795425133.438004,
         "files": [
           "config.example.json",
           "docs/guide/archiv.md",
@@ -382,10 +381,9 @@
           "scripts/generate.py",
           "scripts/produce_show.py",
           "tests/test_archive_store.py"
-        ],
-        "reviewer": "claude-cloud-review",
-        "rejected": "Nachweis veraltet (Dateien seit Einreichung geaendert, u. a. #207-Merge); Neueinreichung auf aktuellem Stand"
+        ]
       },
+      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7920,6 +7918,15 @@
       "client": "claude-cloud-review",
       "at": 1795421531.2406085,
       "note": "Nachweis veraltet (Dateien seit Einreichung geaendert, u. a. #207-Merge); Neueinreichung auf aktuellem Stand"
+    },
+    {
+      "operation_id": "e2e042364486404392e57072a03ea148",
+      "revision": 188,
+      "action": "claim",
+      "task": "T030",
+      "client": "claude-cloud-author",
+      "at": 1795421533.438004,
+      "note": ""
     }
   ]
 }
