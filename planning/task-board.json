@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 184,
+  "revision": 185,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -273,7 +273,7 @@
       "id": "T021",
       "epic": "E2",
       "title": "Startseite im Redaktionslayout",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T013",
         "T020"
@@ -290,10 +290,11 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A06",
-      "lease": {
-        "client": "claude-cloud-author",
-        "token": "aa2a3d572b134d10a6c72fbdb078d5a1",
-        "expires_at": 1795425124.8509643,
+      "lease": null,
+      "review": {
+        "author": "claude-cloud-author",
+        "commit": "505e14b1803d30804a0cbe1eb329466da8dc7c66",
+        "checks": "Auf Stand 505e14b1803d30804a0cbe1eb329466da8dc7c66 erneut geprueft: 525 Tests gruen (2 uebersprungen), tests/test_homepage und tests/test_archive_store OK; Akzeptanzkriterien erfuellt",
         "files": [
           ".github/workflows/foundation-ci.yml",
           "docs/guide/index.md",
@@ -311,7 +312,6 @@
           "tests/test_offline_outputs.py"
         ]
       },
-      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7885,6 +7885,15 @@
       "task": "T021",
       "client": "claude-cloud-author",
       "at": 1795421524.8509643,
+      "note": ""
+    },
+    {
+      "operation_id": "3dca1ce5aa2443579d8024b0b7571612",
+      "revision": 185,
+      "action": "submit",
+      "task": "T021",
+      "client": "claude-cloud-author",
+      "at": 1795421526.9342833,
       "note": ""
     }
   ]
