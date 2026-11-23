@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 188,
+  "revision": 189,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -352,7 +352,7 @@
       "id": "T030",
       "epic": "E3",
       "title": "Archiv mit Aufbewahrungsregeln",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T020"
       ],
@@ -368,10 +368,11 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A07",
-      "lease": {
-        "client": "claude-cloud-author",
-        "token": "1b94d09f8124476ca55c6723577d28f7",
-        "expires_at": 1795425133.438004,
+      "lease": null,
+      "review": {
+        "author": "claude-cloud-author",
+        "commit": "505e14b1803d30804a0cbe1eb329466da8dc7c66",
+        "checks": "Auf Stand 505e14b1803d30804a0cbe1eb329466da8dc7c66 erneut geprueft: 525 Tests gruen (2 uebersprungen), tests/test_homepage und tests/test_archive_store OK; Akzeptanzkriterien erfuellt",
         "files": [
           "config.example.json",
           "docs/guide/archiv.md",
@@ -383,7 +384,6 @@
           "tests/test_archive_store.py"
         ]
       },
-      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7926,6 +7926,15 @@
       "task": "T030",
       "client": "claude-cloud-author",
       "at": 1795421533.438004,
+      "note": ""
+    },
+    {
+      "operation_id": "f098865585b84957860c372d878a0528",
+      "revision": 189,
+      "action": "submit",
+      "task": "T030",
+      "client": "claude-cloud-author",
+      "at": 1795421535.528391,
       "note": ""
     }
   ]
