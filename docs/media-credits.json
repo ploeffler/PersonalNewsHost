@@ -1,14 +1,20 @@
 [
   {
-    "source": "https://www.krone.at/4378532",
+    "source": "https://orf.at/stories/3448974/",
     "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
+    "image_processing": "conservative",
     "original_media_retained": true
   },
   {
-    "source": "https://www.krone.at/4378486",
+    "source": "https://www.krone.at/4386313",
     "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
+    "image_processing": "conservative",
+    "original_media_retained": true
+  },
+  {
+    "source": "https://orf.at/stories/3448936/",
+    "image_origin": "article_metadata_or_rss",
+    "image_processing": "conservative",
     "original_media_retained": true
   },
   {
@@ -16,15 +22,9 @@
     "image_origin": "article_metadata_or_rss"
   },
   {
-    "source": "https://www.kleinezeitung.at/artikel/41463925/flughafen-postenbesetzung-in-salzburg-hoerl-zieht-bewerbung-zurueck",
+    "source": "https://orf.at/stories/3448801/",
     "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
-    "original_media_retained": true
-  },
-  {
-    "source": "https://www.derstandard.at/story/3000000349728/zwergmaus-zum-tier-des-jahres-2027-gek252rt?ref=rss",
-    "image_origin": "article_metadata_or_rss",
-    "image_processing": "neural_fsrcnn_x2",
+    "image_processing": "conservative",
     "original_media_retained": true
   }
 ]
