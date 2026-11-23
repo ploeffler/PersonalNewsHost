@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 182,
+  "revision": 183,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -273,7 +273,7 @@
       "id": "T021",
       "epic": "E2",
       "title": "Startseite im Redaktionslayout",
-      "status": "review",
+      "status": "todo",
       "depends_on": [
         "T013",
         "T020"
@@ -309,7 +309,9 @@
           "tests/test_homepage.py",
           "tests/test_homepage_a11y_browser.cjs",
           "tests/test_offline_outputs.py"
-        ]
+        ],
+        "reviewer": "claude-cloud-review",
+        "rejected": "Nachweis veraltet (Dateien seit Einreichung geaendert, u. a. #207-Merge); Neueinreichung auf aktuellem Stand"
       },
       "local_work_pending": false,
       "evidence": [],
@@ -7867,6 +7869,15 @@
       "client": "claude-chillyconcane",
       "at": 1795263992.957874,
       "note": ""
+    },
+    {
+      "operation_id": "cbe5de74c94e4b4886e0d006a8b80cbd",
+      "revision": 183,
+      "action": "reject",
+      "task": "T021",
+      "client": "claude-cloud-review",
+      "at": 1795421513.7431781,
+      "note": "Nachweis veraltet (Dateien seit Einreichung geaendert, u. a. #207-Merge); Neueinreichung auf aktuellem Stand"
     }
   ]
 }
