@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 189,
+  "revision": 190,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -352,7 +352,7 @@
       "id": "T030",
       "epic": "E3",
       "title": "Archiv mit Aufbewahrungsregeln",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T020"
       ],
@@ -382,10 +382,15 @@
           "scripts/generate.py",
           "scripts/produce_show.py",
           "tests/test_archive_store.py"
-        ]
+        ],
+        "reviewer": "claude-cloud-review",
+        "decision": "Neu geprueft auf aktuellem Stand, Tests gruen; theme.js ausserhalb Scope akzeptiert"
       },
       "local_work_pending": false,
-      "evidence": [],
+      "evidence": [
+        "505e14b1803d30804a0cbe1eb329466da8dc7c66",
+        "Auf Stand 505e14b1803d30804a0cbe1eb329466da8dc7c66 erneut geprueft: 525 Tests gruen (2 uebersprungen), tests/test_homepage und tests/test_archive_store OK; Akzeptanzkriterien erfuellt"
+      ],
       "implementation_note": "",
       "coordination_note": ""
     },
@@ -7936,6 +7941,15 @@
       "client": "claude-cloud-author",
       "at": 1795421535.528391,
       "note": ""
+    },
+    {
+      "operation_id": "10d9e29058cd42e28cf41a260b554b7b",
+      "revision": 190,
+      "action": "complete",
+      "task": "T030",
+      "client": "claude-cloud-review",
+      "at": 1795421539.8854923,
+      "note": "Neu geprueft auf aktuellem Stand, Tests gruen; theme.js ausserhalb Scope akzeptiert"
     }
   ]
 }
