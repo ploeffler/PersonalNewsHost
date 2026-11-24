@@ -33,3 +33,4 @@ Willkommen in der Wissensbasis zu PersonalNewsHost.
 - [Startseite im Redaktionslayout](startseite.md)
 - [Archiv](archiv.md)
 - [Rubriken- und Sendungsseiten](rubriken-sendungen.md)
+- [Suche](suche.md)

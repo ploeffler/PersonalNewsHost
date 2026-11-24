@@ -112,7 +112,8 @@ def render_blocks(store, config, manifest=None, now=None, zone='Europe/Vienna'):
             "<section id='latest-posts' class='latest-posts' aria-labelledby='latest-heading'>"
             "<h2 id='latest-heading'>Neueste Beiträge</h2><ol class='latest-list'>" + latest + '</ol>'
             f"<p class='block-meta'>Stand <time datetime='{updated.isoformat()}'>{updated.strftime('%d.%m.%Y, %H:%M')}</time>"
-            " · <a href='#news-overview'>Alle Nachrichten der letzten 24 Stunden</a></p></section></div>"
+            " · <a href='#news-overview'>Alle Nachrichten der letzten 24 Stunden</a>"
+            " · <a href='search.html'>Suche</a></p></section></div>"
             + navigation_html(config) + END)
 
 
@@ -171,6 +172,12 @@ def update_homepage(docs, config, now=None):
         from section_pages import build_section_pages
     build_section_pages(docs, config, store=read('news-store.json', {}), archive=read('archive.json', {}),
                         manifest=read('articles.json', {}), now=now)
+    try:
+        from scripts.search_index import write_index
+    except ModuleNotFoundError:
+        from search_index import write_index
+    write_index(docs, config, store=read('news-store.json', {}), archive=read('archive.json', {}),
+                manifest=read('articles.json', {}), now=now or 0)
     return True
 
 

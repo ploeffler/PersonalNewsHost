@@ -131,6 +131,10 @@
   "archive": {
     "path": ""
   },
+  "search": {
+    "enabled": true,
+    "max_bytes": 1000000
+  },
   "article_pages": {
     "enabled": true
   },
