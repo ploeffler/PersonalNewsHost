@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 205,
+  "revision": 206,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -816,7 +816,7 @@
       "id": "T062",
       "epic": "E6",
       "title": "Bildquellen und Lizenzen",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T020"
       ],
@@ -830,7 +830,22 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A05",
-      "lease": null,
+      "lease": {
+        "client": "claude-cloud-author",
+        "token": "84e89fc00f034a1b84a826340e0e3e83",
+        "expires_at": 1795540749.886749,
+        "files": [
+          "config.example.json",
+          "docs/guide/bildquellen.md",
+          "docs/guide/index.md",
+          "scripts/article_pages.py",
+          "scripts/generate.py",
+          "scripts/media_rights.py",
+          "tests/test_article_pages.py",
+          "tests/test_media_rights.py",
+          "tests/test_render_load.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -8161,6 +8176,15 @@
       "client": "claude-cloud-review",
       "at": 1795535244.7357087,
       "note": "Tests gruen (550); Kennzeichnung auf Startseite beim Video und auf Artikelseiten, Quellen/Abrufzeit, Ueber-Seite; Kennzeichnung im Videobild bleibt T280; Abnahme durch gleiche Instanz auf Anweisung des Benutzers"
+    },
+    {
+      "operation_id": "b20f93ebfbe542bcb1e181d45fcd9f3e",
+      "revision": 206,
+      "action": "claim",
+      "task": "T062",
+      "client": "claude-cloud-author",
+      "at": 1795537149.886749,
+      "note": ""
     }
   ]
 }
