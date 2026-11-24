@@ -1,10 +1,6 @@
 {
  "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
  "pairs": {
-  "04b711ca157e1a32f0588ea3|cef2d5727839db66ed75ee34": {
-   "decided_at": 1795436284,
-   "same": false
-  },
   "0b201713b2192cb2005b67a1|7b797cdd31d4f42a091356ed": {
    "decided_at": 1795478711,
    "same": false
@@ -13,24 +9,36 @@
    "decided_at": 1795478711,
    "same": true
   },
-  "238dbc7acef83a1764215623|74ae41a57f05d9cc1d0b3fda": {
-   "decided_at": 1795436284,
+  "1908cc143b617810973491e2|a111335bc4840e0ff6f190b4": {
+   "decided_at": 1795513613,
    "same": false
   },
-  "2495d2c48ae4ea8035d1eed5|cef2d5727839db66ed75ee34": {
-   "decided_at": 1795436284,
+  "1908cc143b617810973491e2|e5e2e5dc87c105ab15e7f97e": {
+   "decided_at": 1795513613,
    "same": false
   },
-  "24ef67b6722070ed5476170d|ad25ccfa4c578226b8a5ed56": {
-   "decided_at": 1795436284,
+  "241724411a3635b2e99f1c9d|e75fc8f9f65fb1bc662b6c1f": {
+   "decided_at": 1795513613,
    "same": false
   },
   "26f8755291a40c55be95d5b8|2bdb67e2abdfddbad3a41a0d": {
    "decided_at": 1795436284,
    "same": true
   },
+  "2ade6f30991e3fc3efc0f172|2d3074c58b851a0db15db556": {
+   "decided_at": 1795513613,
+   "same": true
+  },
+  "2ade6f30991e3fc3efc0f172|a1bb911a80384ca5f5cc985b": {
+   "decided_at": 1795513613,
+   "same": true
+  },
   "2c01e390fd9585fcf031cb10|5b5d098c63254e5142aaea1f": {
    "decided_at": 1795436284,
+   "same": true
+  },
+  "2d3074c58b851a0db15db556|a1bb911a80384ca5f5cc985b": {
+   "decided_at": 1795513613,
    "same": true
   },
   "330c4aebeb3061b2e0134cb3|4359fbb43dca4c04cc19038f": {
@@ -43,30 +51,6 @@
   },
   "38d09c186ca4411c2ccc39be|642bc087ee38bc23f9a5c88f": {
    "decided_at": 1795478711,
-   "same": false
-  },
-  "3e50539a7200f6de8576be5f|657e8c7c2ee130a95af55b65": {
-   "decided_at": 1795436284,
-   "same": true
-  },
-  "3e50539a7200f6de8576be5f|9f4ffdd4116250939e874c78": {
-   "decided_at": 1795478711,
-   "same": true
-  },
-  "3e50539a7200f6de8576be5f|fae7ae435acda129d222c01f": {
-   "decided_at": 1795436284,
-   "same": true
-  },
-  "3fdfb672c77ee3d303ecbca1|f430807f15a6eaf792709d1a": {
-   "decided_at": 1795436284,
-   "same": true
-  },
-  "5a6e9eb4bcb1e5a5ee710e32|74ae41a57f05d9cc1d0b3fda": {
-   "decided_at": 1795436284,
-   "same": false
-  },
-  "5a6e9eb4bcb1e5a5ee710e32|d44906bca64d1820bd02e369": {
-   "decided_at": 1795436284,
    "same": false
   },
   "5ac8275489d4c195919f5a48|8e061f0b530c4a391427dca8": {
@@ -85,24 +69,20 @@
    "decided_at": 1795478711,
    "same": false
   },
-  "74ae41a57f05d9cc1d0b3fda|d44906bca64d1820bd02e369": {
-   "decided_at": 1795436284,
-   "same": false
-  },
-  "74ae41a57f05d9cc1d0b3fda|e512a8f64ad988d09d6eb4eb": {
-   "decided_at": 1795436284,
-   "same": false
-  },
   "7b797cdd31d4f42a091356ed|8baa77ac485d3524e28bdce3": {
    "decided_at": 1795478711,
    "same": false
   },
-  "87238cdd53ec0cae9fcea070|b8e8ebe798bf5387f5778c2c": {
-   "decided_at": 1795436284,
-   "same": false
-  },
   "957b75cd09d7e0f81928cded|bd397935bf9191b62ac3cf5a": {
    "decided_at": 1795478711,
+   "same": true
+  },
+  "98f32d331f4e4d43e4ac3af9|b42667b2a61d32c73cccb4bd": {
+   "decided_at": 1795513613,
+   "same": false
+  },
+  "a111335bc4840e0ff6f190b4|e5e2e5dc87c105ab15e7f97e": {
+   "decided_at": 1795513613,
    "same": true
   },
   "b5e6d16ca756a4d8f5f1f955|f891eb8cd91d5d3cfc14533d": {
@@ -111,14 +91,6 @@
   },
   "c80eacfe104a02cae98a3c74|c95b94854d2b3cc49b94d0fd": {
    "decided_at": 1795478711,
-   "same": false
-  },
-  "cef2d5727839db66ed75ee34|dd165dc81d73664578446f4c": {
-   "decided_at": 1795436284,
-   "same": false
-  },
-  "d44906bca64d1820bd02e369|e512a8f64ad988d09d6eb4eb": {
-   "decided_at": 1795436284,
    "same": false
   },
   "dab9ae908128c62d90de1875|dfa3a53be0564b964bf5d9f7": {
