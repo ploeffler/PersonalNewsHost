@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 203,
+  "revision": 204,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -614,7 +614,7 @@
       "id": "T050",
       "epic": "E5",
       "title": "Quellentransparenz und Kennzeichnung KI-generierter Inhalte",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T020"
       ],
@@ -630,10 +630,11 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A05",
-      "lease": {
-        "client": "claude-cloud-author",
-        "token": "3ae396e8b9a54efb9998cd3d540f3dff",
-        "expires_at": 1795538690.8207865,
+      "lease": null,
+      "review": {
+        "author": "claude-cloud-author",
+        "commit": "dfce9d3308c051d1c03a8349463c5766943602ee",
+        "checks": "550 Python-Tests gruen (2 uebersprungen); neu tests/test_ai_disclosure.py (6 Tests: Ueber-Seite mit Funktionsweise/Grenzen/Korrekturkontakt und Escaping, Impressum-Fallback, Kennzeichnung bei Video und auf Artikelseiten mit Abrufzeit und Quellen, Idempotenz, missing_disclosure, Integration update_homepage + Sitemap)",
         "files": [
           "config.example.json",
           "docs/guide/index.md",
@@ -644,7 +645,6 @@
           "tests/test_ai_disclosure.py"
         ]
       },
-      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -8137,6 +8137,15 @@
       "task": "T050",
       "client": "claude-cloud-author",
       "at": 1795535090.8207865,
+      "note": ""
+    },
+    {
+      "operation_id": "fad4d318a2074b429dda089bd5d46fb0",
+      "revision": 204,
+      "action": "submit",
+      "task": "T050",
+      "client": "claude-cloud-author",
+      "at": 1795535207.6868122,
       "note": ""
     }
   ]
