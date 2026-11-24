@@ -102,13 +102,18 @@ def render_blocks(store, config, manifest=None, now=None, zone='Europe/Vienna'):
     latest = ''.join(_item(a, stamp(a), links, zone) for a in articles[:LATEST]) or \
         "<li class='block-empty'>Noch keine Beiträge.</li>"
     updated = dt.datetime.fromtimestamp(now, dt.timezone.utc).astimezone(zone)
+    try:
+        from scripts.section_pages import navigation_html
+    except ModuleNotFoundError:
+        from section_pages import navigation_html
     return (START + "<div class='homepage-blocks'>"
             "<section id='ressorts' class='ressorts' aria-labelledby='ressorts-heading'>"
             "<h2 id='ressorts-heading'>Rubriken</h2><div class='ressort-grid'>" + ''.join(blocks) + '</div></section>'
             "<section id='latest-posts' class='latest-posts' aria-labelledby='latest-heading'>"
             "<h2 id='latest-heading'>Neueste Beiträge</h2><ol class='latest-list'>" + latest + '</ol>'
             f"<p class='block-meta'>Stand <time datetime='{updated.isoformat()}'>{updated.strftime('%d.%m.%Y, %H:%M')}</time>"
-            " · <a href='#news-overview'>Alle Nachrichten der letzten 24 Stunden</a></p></section></div>" + END)
+            " · <a href='#news-overview'>Alle Nachrichten der letzten 24 Stunden</a></p></section></div>"
+            + navigation_html(config) + END)
 
 
 THEME_TOGGLE = ("<button type='button' id='theme-toggle' class='theme-toggle' aria-pressed='false'>"
@@ -159,6 +164,13 @@ def update_homepage(docs, config, now=None):
     updated = breaking_news.inject_banner(updated, breaking_news.settings_from(config)['banner_hours'])
     if updated != page:
         home.write_text(updated, encoding='utf-8')
+    # Rubriken- und Sendungsseiten (T022) folgen jedem RSS-Lauf und jeder Sendung.
+    try:
+        from scripts.section_pages import build_section_pages
+    except ModuleNotFoundError:
+        from section_pages import build_section_pages
+    build_section_pages(docs, config, store=read('news-store.json', {}), archive=read('archive.json', {}),
+                        manifest=read('articles.json', {}), now=now)
     return True
 
 

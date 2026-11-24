@@ -32,3 +32,4 @@ Willkommen in der Wissensbasis zu PersonalNewsHost.
 - [Planung und Laufzeitbudget](show-planung.md)
 - [Startseite im Redaktionslayout](startseite.md)
 - [Archiv](archiv.md)
+- [Rubriken- und Sendungsseiten](rubriken-sendungen.md)
