@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 202,
+  "revision": 203,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -614,7 +614,7 @@
       "id": "T050",
       "epic": "E5",
       "title": "Quellentransparenz und Kennzeichnung KI-generierter Inhalte",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T020"
       ],
@@ -630,7 +630,20 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A05",
-      "lease": null,
+      "lease": {
+        "client": "claude-cloud-author",
+        "token": "3ae396e8b9a54efb9998cd3d540f3dff",
+        "expires_at": 1795538690.8207865,
+        "files": [
+          "config.example.json",
+          "docs/guide/index.md",
+          "docs/guide/ki-kennzeichnung.md",
+          "scripts/ai_disclosure.py",
+          "scripts/homepage.py",
+          "scripts/site_meta.py",
+          "tests/test_ai_disclosure.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -8116,6 +8129,15 @@
       "client": "claude-cloud-review",
       "at": 1795535026.106333,
       "note": "Tests gruen (544), Akzeptanzkriterium erfuellt; Abnahme durch gleiche Instanz auf ausdrueckliche Anweisung des Benutzers"
+    },
+    {
+      "operation_id": "fac2146ed3614ce1ad071eac4f88d6d9",
+      "revision": 203,
+      "action": "claim",
+      "task": "T050",
+      "client": "claude-cloud-author",
+      "at": 1795535090.8207865,
+      "note": ""
     }
   ]
 }
