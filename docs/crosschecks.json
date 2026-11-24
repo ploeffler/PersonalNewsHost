@@ -4,6 +4,41 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
+    "pipeline_group_id": "6442030471ed0c456b71d571",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "fd4e12eb660b0c4d4e6fe46f",
+          "supported": true,
+          "quote": "In der Slowakei wurde die Briefwahl abgeschafft – auf Initiative der Regierung."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "8fed180aef160aa666a0cf93",
+          "supported": true,
+          "quote": "Der Schritt rief heftige Kritik bei der Opposition hervor."
+        },
+        {
+          "claim_index": 2,
+          "source_id": "59bfb01ccdc97d2d06ed1ec7",
+          "supported": true,
+          "quote": "Diese sei „nicht glaubwürdig“, sagte der Abgeordnete Tibor Gaspar von der Regierungspartei Smer dazu heute."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
     "pipeline_group_id": "5e10133a6ecf04b3318eaff7",
     "verification": {
       "status": "approved",
@@ -39,7 +74,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "b537f8df9c5050068fb25a76",
+    "pipeline_group_id": "a1cec03eb4f28a10369cc120",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -47,27 +82,50 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "9f4ffdd4116250939e874c78",
+          "source_id": "6d5d2fe85926ecacd0788e00",
           "supported": true,
-          "quote": "Die Förderungen für den Heizungstausch in den Jahren 2020 bis 2024 dürften auch zu gestiegenen Preisen geführt haben."
+          "quote": "Fürstenfeld im Bezirk Hartberg-Fürstenfeld: Ein 24-Jähriger steht im Verdacht, Montagabend, 23. November 2026, aus einem Supermarkt elektronische Geräte gestohlen zu haben."
         },
         {
           "claim_index": 1,
-          "source_id": "657e8c7c2ee130a95af55b65",
+          "source_id": "6d5d2fe85926ecacd0788e00",
           "supported": true,
-          "quote": "Kosten für Heizungstausch laut Rechnungshof-Bericht von 2020 bis 2024 um 60 Prozent gestiegen - Hohe Fördersätze brachten gestiegene Nachfrage und geringeres Kostenbewusstsein."
+          "quote": "Ein weiterer Diebstahl konnte ihm nachgewiesen werden."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "a09d7a8398f9f85ea9d98453",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "fdc27f7ec39cc5b40185f148",
+          "supported": true,
+          "quote": "Rund 47.000 Frauen und Mädchen sind im vergangenen Jahr weltweit von ihrem Partner oder einem Familienmitglied getötet worden."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "d38b113fb91d845dda50b346",
+          "supported": true,
+          "quote": "Die weltweite Mordrate sinkt, aber die Zahl der Femizide geht deutlich langsamer zurück."
         },
         {
           "claim_index": 2,
-          "source_id": "3e50539a7200f6de8576be5f",
+          "source_id": "c1a6bf886e389138dcc55ffa",
           "supported": true,
-          "quote": "Zwischen 2020 und 2024 stiegen die Preise beim Heizungstausch um 60 Prozent an."
-        },
-        {
-          "claim_index": 3,
-          "source_id": "9f4ffdd4116250939e874c78",
-          "supported": true,
-          "quote": "Zu diesem Schluss kam WIFO-Ökonomin Daniela Kletzan-Slamanig gestern im Ö1-Morgenjournal."
+          "quote": "Das geht aus einem neuen Bericht hervor, den das UNO-Büro für Drogen- und Verbrechensbekämpfung (UNODC) und UN Women zum morgigen Internationalen Tag zur Beseitigung der Gewalt gegen Frauen veröffentlicht haben."
         }
       ],
       "conflicts": [],
@@ -80,7 +138,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "5de5e99158043d4265ba2de3",
+    "pipeline_group_id": "9644b4d694f72b860a03b82a",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -88,79 +146,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "30c2d2a18affd925c2295270",
+          "source_id": "dbcea0d4dc2d65e0b1b2e943",
           "supported": true,
-          "quote": "Hartberg im Bezirk Hartberg-Fürstenfeld: Nach dem Brand in einem Entsorgungsunternehmen am Sonntagabend, 22. November 2026, liegen nun erste Ergebnisse der Brandursachenermittlung vor."
+          "quote": "Die wegen ihrer Positionen zu Israel und zum Nahostkonflikt umstrittene Politikerin Vanessa Emde muss die Berliner Linke-Fraktion in Deutschland verlassen."
         },
         {
           "claim_index": 1,
-          "source_id": "30c2d2a18affd925c2295270",
+          "source_id": "576332c5df6481f74749fd6b",
           "supported": true,
-          "quote": "Demnach dürfte gelagerte Asche den Brand ausgelöst haben."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "c7d2e1fd4017dbdad30ca3e6",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "a9c29e3a8e436be6e4c13dec",
-          "supported": true,
-          "quote": "Alice Huang, die eine Affäre mit dem früheren Nvidia-Chef Jensen Huang hatte, hat mehr als ein Jahr lang Kontakt zum chinesischen Geheimdienst gehalten."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "35027846e816b72955842451",
-          "supported": true,
-          "quote": "Die Chinesin Alice Huang hat einem Bericht zufolge mehr als ein Jahr lang Kontakt zu einem Mitarbeiter des wichtigsten chinesischen Geheimdiensts gehalten."
-        },
-        {
-          "claim_index": 2,
-          "source_id": "2aa02609b6b975b4a556df2f",
-          "supported": true,
-          "quote": "Wie die \"New York Times\" berichtet, soll die mutmaßliche chinesische Spionin mehr als ein Jahr lang Kontakt zum wichtigsten Geheimdienst gehalten haben."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "0a8becd1ed38913ac7c6886c",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "b5e6d16ca756a4d8f5f1f955",
-          "supported": true,
-          "quote": "Israels Geheimdienst Mossad hat nach Angaben von Ex-Chef David Barnea bei der Vereitelung des verhinderten Anschlags auf ein Konzert von Taylor Swift 2024 in Wien eine wichtige Rolle gespielt."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "f891eb8cd91d5d3cfc14533d",
-          "supported": true,
-          "quote": "David Barnea: Erster Hinweis kam aus Österreich."
+          "quote": "Bei einer Sitzung stimmte die nötige Mehrheit der Parteimitglieder (33 von 44) für den Ausschluss."
         }
       ],
       "conflicts": [],
