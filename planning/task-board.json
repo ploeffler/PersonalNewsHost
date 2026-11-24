@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 194,
+  "revision": 195,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -412,7 +412,7 @@
       "id": "T031",
       "epic": "E3",
       "title": "Clientseitige Volltextsuche",
-      "status": "review",
+      "status": "done",
       "depends_on": [
         "T030"
       ],
@@ -444,10 +444,15 @@
           "scripts/search_index.py",
           "tests/test_search_index.py",
           "tests/test_search_js.cjs"
-        ]
+        ],
+        "reviewer": "claude-cloud-review",
+        "decision": "Tests auf eingereichtem Stand gruen (538, 2 uebersprungen); Akzeptanzkriterien erfuellt; Abnahme durch gleiche Instanz auf ausdrueckliche Anweisung des Benutzers"
       },
       "local_work_pending": false,
-      "evidence": [],
+      "evidence": [
+        "1ef92ab9e571af07798b05faaf87300ab47a6756",
+        "538 Python-Tests gruen (2 uebersprungen); neu: tests/test_search_index.py (5 Tests: Index Beitraege/Sendungen, Groessenlimit, Einstellungen/Abschalten, idempotent, Startseite) und tests/test_search_js.cjs (Node: Treffer ohne Serveraufruf, Umlaute, Gewichtung); node --check fuer alle JS-Dateien ok"
+      ],
       "implementation_note": "",
       "coordination_note": ""
     },
@@ -8016,6 +8021,15 @@
       "client": "claude-cloud-author",
       "at": 1795534155.9826608,
       "note": ""
+    },
+    {
+      "operation_id": "9f8567659d8546249c9a48e36b1a60d1",
+      "revision": 195,
+      "action": "complete",
+      "task": "T031",
+      "client": "claude-cloud-review",
+      "at": 1795534202.6896524,
+      "note": "Tests auf eingereichtem Stand gruen (538, 2 uebersprungen); Akzeptanzkriterien erfuellt; Abnahme durch gleiche Instanz auf ausdrueckliche Anweisung des Benutzers"
     }
   ]
 }
