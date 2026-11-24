@@ -35,3 +35,4 @@ Willkommen in der Wissensbasis zu PersonalNewsHost.
 - [Rubriken- und Sendungsseiten](rubriken-sendungen.md)
 - [Suche](suche.md)
 - [Sitemap, Metadaten und Teilen](sitemap.md)
+- [KI-Kennzeichnung](ki-kennzeichnung.md)

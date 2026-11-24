@@ -22,7 +22,7 @@ from urllib.parse import quote
 DEFAULT_BASE = 'https://ploeffler.github.io/PersonalNewsHost/'
 START, END = '<!-- pnh:meta:start -->', '<!-- pnh:meta:end -->'
 SECTIONS = ('rubrik', 'sendung', 'artikel')
-ROOT_PAGES = ('index.html', 'archive.html', 'search.html')
+ROOT_PAGES = ('index.html', 'archive.html', 'search.html', 'ueber-diese-sendung.html')
 MAX_URLS = 50000
 STAMP = re.compile(r'(\d{8})T(\d{6})Z')
 

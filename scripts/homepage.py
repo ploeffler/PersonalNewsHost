@@ -182,6 +182,11 @@ def update_homepage(docs, config, now=None):
         from scripts.site_meta import update_site_meta
     except ModuleNotFoundError:
         from site_meta import update_site_meta
+    try:
+        from scripts.ai_disclosure import update_disclosure
+    except ModuleNotFoundError:
+        from ai_disclosure import update_disclosure
+    update_disclosure(docs, config)
     update_site_meta(docs, config)
     return True
 
