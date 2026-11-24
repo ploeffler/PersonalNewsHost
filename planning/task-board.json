@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 199,
+  "revision": 200,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -465,7 +465,7 @@
       "id": "T032",
       "epic": "E3",
       "title": "Sitemap, Metadaten und Teilen",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T020",
         "T022"
@@ -481,7 +481,20 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A06",
-      "lease": null,
+      "lease": {
+        "client": "claude-cloud-author",
+        "token": "220acc2d65ee4482ae495eda3411de0d",
+        "expires_at": 1795538012.0965445,
+        "files": [
+          ".github/workflows/foundation-ci.yml",
+          "config.example.json",
+          "docs/guide/index.md",
+          "docs/guide/sitemap.md",
+          "scripts/homepage.py",
+          "scripts/site_meta.py",
+          "tests/test_site_meta.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -8071,6 +8084,15 @@
       "client": "claude-cloud-review",
       "at": 1795534238.9489098,
       "note": "Neu geprueft, Tests gruen; Abnahme durch gleiche Instanz auf Anweisung des Benutzers"
+    },
+    {
+      "operation_id": "ad04e45978e24487966304887bcd24a6",
+      "revision": 200,
+      "action": "claim",
+      "task": "T032",
+      "client": "claude-cloud-author",
+      "at": 1795534412.0965445,
+      "note": ""
     }
   ]
 }
