@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 195,
+  "revision": 196,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -326,7 +326,7 @@
       "id": "T022",
       "epic": "E2",
       "title": "Rubrikenseiten und Sendungsseiten",
-      "status": "review",
+      "status": "todo",
       "depends_on": [
         "T010",
         "T021"
@@ -355,7 +355,9 @@
           "scripts/homepage.py",
           "scripts/section_pages.py",
           "tests/test_section_pages.py"
-        ]
+        ],
+        "reviewer": "claude-cloud-review",
+        "rejected": "Nachweis veraltet (homepage.py/index.md durch T031 geaendert); Neueinreichung auf aktuellem Stand"
       },
       "local_work_pending": false,
       "evidence": [],
@@ -8030,6 +8032,15 @@
       "client": "claude-cloud-review",
       "at": 1795534202.6896524,
       "note": "Tests auf eingereichtem Stand gruen (538, 2 uebersprungen); Akzeptanzkriterien erfuellt; Abnahme durch gleiche Instanz auf ausdrueckliche Anweisung des Benutzers"
+    },
+    {
+      "operation_id": "f5cd7bfea770467787d6ea5ae8c74b62",
+      "revision": 196,
+      "action": "reject",
+      "task": "T022",
+      "client": "claude-cloud-review",
+      "at": 1795534229.5717862,
+      "note": "Nachweis veraltet (homepage.py/index.md durch T031 geaendert); Neueinreichung auf aktuellem Stand"
     }
   ]
 }
