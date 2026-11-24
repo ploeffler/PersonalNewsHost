@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 191,
+  "revision": 192,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -326,7 +326,7 @@
       "id": "T022",
       "epic": "E2",
       "title": "Rubrikenseiten und Sendungsseiten",
-      "status": "in_progress",
+      "status": "review",
       "depends_on": [
         "T010",
         "T021"
@@ -341,10 +341,11 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A06",
-      "lease": {
-        "client": "claude-cloud-author",
-        "token": "bd6bec73af6d473a81b0f57397157654",
-        "expires_at": 1795536873.4687712,
+      "lease": null,
+      "review": {
+        "author": "claude-cloud-author",
+        "commit": "57ec4301fbe76bad7df99275664caba0197fdbc8",
+        "checks": "533 Python-Tests gruen (2 uebersprungen), davon 8 neue in tests/test_section_pages.py: Seite je Rubrik und Sendung, Zuordnung/Escaping/unsichere Links, Paginierung inkl. Entfernen veralteter Seiten, Brotkrumen und Navigation, Legacy-Config (main), sichere IDs, Startseiten-Verlinkung und Erzeugung ueber update_homepage",
         "files": [
           "docs/guide/index.md",
           "docs/guide/rubriken-sendungen.md",
@@ -356,7 +357,6 @@
           "tests/test_section_pages.py"
         ]
       },
-      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -7972,6 +7972,15 @@
       "task": "T022",
       "client": "claude-cloud-author",
       "at": 1795533273.4687712,
+      "note": ""
+    },
+    {
+      "operation_id": "57c1b8c4afe14d1daa13a764ef803a63",
+      "revision": 192,
+      "action": "submit",
+      "task": "T022",
+      "client": "claude-cloud-author",
+      "at": 1795533545.1382692,
       "note": ""
     }
   ]
