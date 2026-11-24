@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 192,
+  "revision": 193,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -412,7 +412,7 @@
       "id": "T031",
       "epic": "E3",
       "title": "Clientseitige Volltextsuche",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T030"
       ],
@@ -428,7 +428,23 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A07",
-      "lease": null,
+      "lease": {
+        "client": "claude-cloud-author",
+        "token": "c1903b03260943f7a460f065d83d6d2e",
+        "expires_at": 1795537416.811351,
+        "files": [
+          "config.example.json",
+          "docs/guide/index.md",
+          "docs/guide/suche.md",
+          "docs/search.html",
+          "docs/search.js",
+          "docs/site.css",
+          "scripts/homepage.py",
+          "scripts/search_index.py",
+          "tests/test_search_index.py",
+          "tests/test_search_js.cjs"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -7981,6 +7997,15 @@
       "task": "T022",
       "client": "claude-cloud-author",
       "at": 1795533545.1382692,
+      "note": ""
+    },
+    {
+      "operation_id": "72976dea2d70419eb1be900991070ea4",
+      "revision": 193,
+      "action": "claim",
+      "task": "T031",
+      "client": "claude-cloud-author",
+      "at": 1795533816.811351,
       "note": ""
     }
   ]
