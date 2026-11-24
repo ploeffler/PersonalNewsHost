@@ -101,6 +101,10 @@ Das ist eine lokale Vorschau, kein öffentlicher HTTPS-/Adminbetrieb. systemd,
 Scheduler und TLS folgen mit ihren eigenen Aufgaben. Details:
 [Betriebsvertrag](runtime-vertrag.md).
 
+## 6. Dauerbetrieb
+
+Für den automatischen Betrieb (Scheduler, lokale Auslieferung, `start.sh`/`stop.sh`/`status.sh`, optional systemd) siehe [Dienstbetrieb unter Linux](dienst.md).
+
 ## Abnahme und Fehler
 
 Der Workflow „Linux installation smoke“ installiert auf einem frischen

@@ -59,7 +59,8 @@ def produce(config_path, ident, paths):
     return produce_show(config, ident, paths['productions'])
 
 
-def preview(paths, port):
+def preview_server(paths, port):
+    """Bound (not yet serving) loopback server for the public preview directory."""
     if not 1024 <= port <= 65535:
         raise ValueError('Preview port must be 1024..65535')
     public = paths['public']
@@ -70,7 +71,11 @@ def preview(paths, port):
     if public.is_symlink() or any(path.is_symlink() for path in public.rglob('*')):
         raise ValueError('Public preview must not contain symlinks')
     handler = partial(SimpleHTTPRequestHandler, directory=str(public))
-    with ThreadingHTTPServer(('127.0.0.1', port), handler) as server:
+    return ThreadingHTTPServer(('127.0.0.1', port), handler)
+
+
+def preview(paths, port):
+    with preview_server(paths, port) as server:
         server.serve_forever()
 
 

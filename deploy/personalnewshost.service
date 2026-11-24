@@ -1,0 +1,21 @@
+# systemd-Benutzerdienst für PersonalNewsHost (T182). Vorlage: scripts/service.py install-systemd
+# ersetzt @ROOT@ und @PYTHON@ und schreibt die Datei nach ~/.config/systemd/user/.
+[Unit]
+Description=PersonalNewsHost (Scheduler und lokale Auslieferung)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=@ROOT@
+ExecStart=@PYTHON@ @ROOT@/scripts/service.py run --managed systemd
+# SIGTERM: der Dienst beendet laufende Aufträge geordnet; danach greift TimeoutStopSec.
+KillMode=mixed
+TimeoutStopSec=150
+Restart=on-failure
+RestartSec=15
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=default.target
