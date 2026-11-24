@@ -34,3 +34,4 @@ Willkommen in der Wissensbasis zu PersonalNewsHost.
 - [Archiv](archiv.md)
 - [Rubriken- und Sendungsseiten](rubriken-sendungen.md)
 - [Suche](suche.md)
+- [Sitemap, Metadaten und Teilen](sitemap.md)

@@ -57,6 +57,7 @@ jobs:
             node tests/test_feed_picker.cjs
             node tests/test_news_list.cjs
             node tests/test_playlist.cjs
+            node tests/test_search_js.cjs
             for file in docs/*.js tests/*.cjs; do node --check "$file"; done
           '
       - name: Start page accessibility (axe-core, light and dark mode)

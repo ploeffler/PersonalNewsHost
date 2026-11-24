@@ -131,6 +131,9 @@
   "archive": {
     "path": ""
   },
+  "site": {
+    "base_url": "https://ploeffler.github.io/PersonalNewsHost/"
+  },
   "search": {
     "enabled": true,
     "max_bytes": 1000000

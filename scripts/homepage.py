@@ -178,6 +178,11 @@ def update_homepage(docs, config, now=None):
         from search_index import write_index
     write_index(docs, config, store=read('news-store.json', {}), archive=read('archive.json', {}),
                 manifest=read('articles.json', {}), now=now or 0)
+    try:
+        from scripts.site_meta import update_site_meta
+    except ModuleNotFoundError:
+        from site_meta import update_site_meta
+    update_site_meta(docs, config)
     return True
 
 
