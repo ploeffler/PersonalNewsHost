@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 190,
+  "revision": 191,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -326,7 +326,7 @@
       "id": "T022",
       "epic": "E2",
       "title": "Rubrikenseiten und Sendungsseiten",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T010",
         "T021"
@@ -341,7 +341,21 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A06",
-      "lease": null,
+      "lease": {
+        "client": "claude-cloud-author",
+        "token": "bd6bec73af6d473a81b0f57397157654",
+        "expires_at": 1795536873.4687712,
+        "files": [
+          "docs/guide/index.md",
+          "docs/guide/rubriken-sendungen.md",
+          "docs/site.css",
+          "scripts/collect_news.py",
+          "scripts/generate.py",
+          "scripts/homepage.py",
+          "scripts/section_pages.py",
+          "tests/test_section_pages.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -7950,6 +7964,15 @@
       "client": "claude-cloud-review",
       "at": 1795421539.8854923,
       "note": "Neu geprueft auf aktuellem Stand, Tests gruen; theme.js ausserhalb Scope akzeptiert"
+    },
+    {
+      "operation_id": "5a9a73cac6404dfc8557ed746fbaec78",
+      "revision": 191,
+      "action": "claim",
+      "task": "T022",
+      "client": "claude-cloud-author",
+      "at": 1795533273.4687712,
+      "note": ""
     }
   ]
 }
