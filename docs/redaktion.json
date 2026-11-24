@@ -1,8 +1,40 @@
 {
- "generated_at": 1795478783.953171,
- "broadcast_at": 1795456665.457224,
- "broadcast_title": "Nachrichten 23.11.2026 um 18:57 Uhr",
+ "generated_at": 1795493972.5225718,
+ "broadcast_at": 1795493839.848404,
+ "broadcast_title": "Nachrichten 24.11.2026 um 05:17 Uhr",
  "events": [
+  {
+   "id": "5e10133a6ecf04b3318eaff7",
+   "headline": "Österreichischer Buchpreis 2026 geht an Elias Hirschl",
+   "summary": "Der Österreichische Buchpreis wurde 2026 an Elias Hirschl für seinen Roman „Schleifen“ vergeben. Den Debütpreis, der mit 10.000 Euro verbunden ist, erhält Marlen Mairhofer für „Alice“.",
+   "publishers": [
+    "derstandard.at",
+    "orf.at",
+    "kleinezeitung.at"
+   ],
+   "reports": 3,
+   "newest_at": 1795460970.0,
+   "status": "sendung",
+   "status_label": "In der Sendung (24.11. 05:17)",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Österreichischer Buchpreis geht an Elias Hirschl für \"Schleifen\"",
+     "url": "https://www.derstandard.at/story/3000000350502/oesterreichischer-buchpreis-geht-an-elias-hirschl-fuer-schleifen?ref=rss"
+    },
+    {
+     "publisher": "orf.at",
+     "title": "Österreichischer Buchpreis an Elias Hirschl",
+     "url": "https://orf.at/stories/3448749/"
+    },
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Österreichischer Buchpreis 2026 geht an Elias Hirschl",
+     "url": "https://www.kleinezeitung.at/artikel/41485950/oesterreichischer-buchpreis-2026-geht-an-elias-hirschl"
+    }
+   ]
+  },
   {
    "id": "b537f8df9c5050068fb25a76",
    "headline": "WIFO-Expertin: Förderungen verteuerten Heizungstausch",
@@ -16,7 +48,7 @@
    "reports": 4,
    "newest_at": 1795446029.0,
    "status": "sendung",
-   "status_label": "In der Sendung (23.11. 18:57)",
+   "status_label": "In der Sendung (24.11. 05:17)",
    "breaking_at": null,
    "links": [
     {
@@ -53,7 +85,7 @@
    "reports": 3,
    "newest_at": 1795429375.0,
    "status": "sendung",
-   "status_label": "In der Sendung (23.11. 18:57)",
+   "status_label": "In der Sendung (24.11. 05:17)",
    "breaking_at": null,
    "links": [
     {
@@ -74,90 +106,6 @@
    ]
   },
   {
-   "id": "50c052b58fd6475d88378b7f",
-   "headline": "Nvidia-Chef ist zurück – und US-Börsen explodieren",
-   "summary": "Die Rückkehr von Jensen Huang als Nvidia-Chef sorgt an der Wall Street für ein regelrechtes Kursfeuerwerk. Rückenwind von Donald Trump holt den Firmengründer zurück in den Chefsessel.",
-   "publishers": [
-    "derstandard.at",
-    "krone.at"
-   ],
-   "reports": 2,
-   "newest_at": 1795456451.0,
-   "status": "sendung",
-   "status_label": "In der Sendung (23.11. 18:57)",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "\"Nationaler Schatz\": Jensen Huang kehrt als Nvidia-Chef zurück",
-     "url": "https://www.derstandard.at/story/3000000350630/jensen-huang-ist-wieder-nvidia-chef?ref=rss"
-    },
-    {
-     "publisher": "krone.at",
-     "title": "Nvidia-Chef ist zurück – und US-Börsen explodieren",
-     "url": "https://www.krone.at/4387240"
-    }
-   ]
-  },
-  {
-   "id": "6c91782368cc64d5b1256ee2",
-   "headline": "„GTA VI“-Hacker zu sieben Jahren Haft verurteilt",
-   "summary": "Weil er für einen Hackerangriff auf den Entwickler des Videospiels „Grand Theft Auto“ VI verantwortlich ist, ist ein Brite zu sieben Jahren Gefängnis verurteilt worden. 21-Jähriger wurde 2022 gefasst und ist inzwischen wieder frei.",
-   "publishers": [
-    "derstandard.at",
-    "krone.at"
-   ],
-   "reports": 2,
-   "newest_at": 1795450868.0,
-   "status": "sendung",
-   "status_label": "In der Sendung (23.11. 18:57)",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Britischer \"GTA VI\"-Hacker zu sieben Jahren Haft verurteilt",
-     "url": "https://www.derstandard.at/story/3000000350668/britischer-gta-vi-hacker-zu-sieben-jahren-haft-verurteilt?ref=rss"
-    },
-    {
-     "publisher": "krone.at",
-     "title": "„GTA VI“-Hacker zu sieben Jahren Haft verurteilt",
-     "url": "https://www.krone.at/4387390"
-    }
-   ]
-  },
-  {
-   "id": "5e10133a6ecf04b3318eaff7",
-   "headline": "Österreichischer Buchpreis 2026 geht an Elias Hirschl",
-   "summary": "Der Österreichische Buchpreis wurde 2026 an Elias Hirschl für seinen Roman „Schleifen“ vergeben. Den Debütpreis, der mit 10.000 Euro verbunden ist, erhält Marlen Mairhofer für „Alice“.",
-   "publishers": [
-    "derstandard.at",
-    "orf.at",
-    "kleinezeitung.at"
-   ],
-   "reports": 3,
-   "newest_at": 1795460970.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Österreichischer Buchpreis geht an Elias Hirschl für \"Schleifen\"",
-     "url": "https://www.derstandard.at/story/3000000350502/oesterreichischer-buchpreis-geht-an-elias-hirschl-fuer-schleifen?ref=rss"
-    },
-    {
-     "publisher": "orf.at",
-     "title": "Österreichischer Buchpreis an Elias Hirschl",
-     "url": "https://orf.at/stories/3448749/"
-    },
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Österreichischer Buchpreis 2026 geht an Elias Hirschl",
-     "url": "https://www.kleinezeitung.at/artikel/41485950/oesterreichischer-buchpreis-2026-geht-an-elias-hirschl"
-    }
-   ]
-  },
-  {
    "id": "0a8becd1ed38913ac7c6886c",
    "headline": "Mossad und DSN verhinderten „Massenmord“ in Wien",
    "summary": "Israels Geheimdienst Mossad hat nach Angaben von Ex-Chef David Barnea bei der Vereitelung des verhinderten Anschlags auf ein Konzert von Taylor Swift 2024 in Wien eine wichtige Rolle gespielt. David Barnea: Erster Hinweis kam aus Österreich.",
@@ -167,8 +115,8 @@
    ],
    "reports": 2,
    "newest_at": 1795473689.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
+   "status": "sendung",
+   "status_label": "In der Sendung (24.11. 05:17)",
    "breaking_at": null,
    "links": [
     {
@@ -262,6 +210,32 @@
    ]
   },
   {
+   "id": "50c052b58fd6475d88378b7f",
+   "headline": "Nvidia-Chef ist zurück – und US-Börsen explodieren",
+   "summary": "Die Rückkehr von Jensen Huang als Nvidia-Chef sorgt an der Wall Street für ein regelrechtes Kursfeuerwerk. Rückenwind von Donald Trump holt den Firmengründer zurück in den Chefsessel.",
+   "publishers": [
+    "derstandard.at",
+    "krone.at"
+   ],
+   "reports": 2,
+   "newest_at": 1795456451.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "\"Nationaler Schatz\": Jensen Huang kehrt als Nvidia-Chef zurück",
+     "url": "https://www.derstandard.at/story/3000000350630/jensen-huang-ist-wieder-nvidia-chef?ref=rss"
+    },
+    {
+     "publisher": "krone.at",
+     "title": "Nvidia-Chef ist zurück – und US-Börsen explodieren",
+     "url": "https://www.krone.at/4387240"
+    }
+   ]
+  },
+  {
    "id": "3f20a8c171b45f6d7be7c60b",
    "headline": "„Verschlanken“: WKÖ-Chefin streicht 100 Gremien",
    "summary": "Seit einem Jahr sitzt Martha Schultz an der Spitze der Wirtschaftskammer – und nach dem Sparkurs bei den Mitarbeitern wird nun auch bei den 683 Fachorganisationen aufgeräumt. Die WKO-Präsidentin folgt Empfehlungen des Rechnungshofes und reduziert von 683 auf 583 Fachorganisationen.",
@@ -284,6 +258,32 @@
      "publisher": "krone.at",
      "title": "„Verschlanken“: WKÖ-Chefin streicht 100 Gremien",
      "url": "https://www.krone.at/4386668"
+    }
+   ]
+  },
+  {
+   "id": "6c91782368cc64d5b1256ee2",
+   "headline": "„GTA VI“-Hacker zu sieben Jahren Haft verurteilt",
+   "summary": "Weil er für einen Hackerangriff auf den Entwickler des Videospiels „Grand Theft Auto“ VI verantwortlich ist, ist ein Brite zu sieben Jahren Gefängnis verurteilt worden. 21-Jähriger wurde 2022 gefasst und ist inzwischen wieder frei.",
+   "publishers": [
+    "derstandard.at",
+    "krone.at"
+   ],
+   "reports": 2,
+   "newest_at": 1795450868.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Britischer \"GTA VI\"-Hacker zu sieben Jahren Haft verurteilt",
+     "url": "https://www.derstandard.at/story/3000000350668/britischer-gta-vi-hacker-zu-sieben-jahren-haft-verurteilt?ref=rss"
+    },
+    {
+     "publisher": "krone.at",
+     "title": "„GTA VI“-Hacker zu sieben Jahren Haft verurteilt",
+     "url": "https://www.krone.at/4387390"
     }
    ]
   },
@@ -496,54 +496,548 @@
    ]
   },
   {
-   "id": "94be3659b39022d35c52f926",
-   "headline": "Gewalt gegen Frauen: Burschen nach wenigen Klicks in der Manosphere",
-   "summary": "Frauenfeindliche Einstellungen sind bei jungen Männern präsenter geworden, beklagen Fachleute aus dem Bereich der Männerarbeit. Das sagten Fachleute aus dem Bereich Männerarbeit.",
+   "id": "25c3eb4f02aa16fd407815db",
+   "headline": "Huthi-Miliz meldet 17 Tote bei saudischem Angriff im Jemen",
+   "summary": "Elf weitere Personen wurden bei einem Angriff auf ein Gebäude des staatlichen Telekom-Unternehmens verletzt. Bei einem Angriff Saudi-Arabiens auf die jemenitische Hafenstadt Hudaida sind laut Angaben der proiranischen Huthi-Miliz 17 Menschen getötet worden.",
    "publishers": [
-    "kleinezeitung.at",
+    "orf.at",
     "derstandard.at"
    ],
    "reports": 2,
-   "newest_at": 1795411141.0,
+   "newest_at": 1795412850.0,
    "status": "nicht",
    "status_label": "Nicht in der Sendung",
    "breaking_at": null,
    "links": [
     {
-     "publisher": "kleinezeitung.at",
-     "title": "Experten: Burschen nach wenigen Klicks in der Manosphere",
-     "url": "https://www.kleinezeitung.at/artikel/41480908/experten-burschen-nach-wenigen-klicks-in-der-manosphere"
+     "publisher": "orf.at",
+     "title": "Huthis melden Tote bei saudischem Angriff im Jemen",
+     "url": "https://orf.at/stories/3448984/"
     },
     {
      "publisher": "derstandard.at",
-     "title": "Gewalt gegen Frauen: Burschen nach wenigen Klicks in der Manosphere",
-     "url": "https://www.derstandard.at/story/3000000350468/gewalt-gegen-frauen-burschen-nach-wenigen-klicks-in-der-manosphere?ref=rss"
+     "title": "Huthi-Miliz meldet 17 Tote bei saudischem Angriff im Jemen",
+     "url": "https://www.derstandard.at/story/3000000350473/huthi-miliz-meldet-vier-tote-bei-saudiarabischem-angriff-im-jemen?ref=rss"
     }
    ]
   },
   {
-   "id": "dda355a7c18e32bc6fa0cbb7",
-   "headline": "Fünftel der Schüler landet mit Lese-Defiziten im Gymnasium",
-   "summary": "In der Mittelschule haben nur 45 Prozent die Bildungsstandards am Ende der Volksschulzeit erreicht. In Österreich gibt es mit den AHS eine Schulform, die für besonders leistungsstarke Kinder vorgesehen ist.",
+   "id": "22a8be788082f3ccf8c3b19e",
+   "headline": "Rama Margarine ist \"ärgerlichstes Lebensmittel\" des Jahres",
+   "summary": "Knapp 6.000 Personen haben an der Wahl zur \"Konsum-Ente\" teilgenommen, die vom Verein für Konsumenteninformation (VKI) an das \"ärgerlichste Lebensmittel des...",
    "publishers": [
-    "kleinezeitung.at",
-    "derstandard.at"
+    "kleinezeitung.at"
    ],
-   "reports": 2,
-   "newest_at": 1795410690.0,
+   "reports": 1,
+   "newest_at": 1795493214.0,
    "status": "nicht",
    "status_label": "Nicht in der Sendung",
    "breaking_at": null,
    "links": [
     {
      "publisher": "kleinezeitung.at",
-     "title": "Fünftel der Schüler landet mit Lese-Defiziten im Gymnasium",
-     "url": "https://www.kleinezeitung.at/artikel/41480897/fuenftel-der-schueler-landet-mit-lese-defiziten-im-gymnasium"
-    },
+     "title": "Rama Margarine ist \"ärgerlichstes Lebensmittel\" des Jahres",
+     "url": "https://www.kleinezeitung.at/artikel/41486051/rama-margarine-ist-aergerlichstes-lebensmittel-des-jahres"
+    }
+   ]
+  },
+  {
+   "id": "9fba9077e92a231b608725f3",
+   "headline": "Gerücht um Straftäter-Anstalt: „Missverständnis“",
+   "summary": "In St. Valentin (NÖ) gibt es Aufregung um ein betreutes Wohnen. Besorgte Bürger sind überzeugt, dass ihnen ein forensisch-therapeutisches Zentrum für junge, psychisch beeinträchtigte Straftäter vor die Nase gesetzt wird.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492847.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Gerücht um Straftäter-Anstalt: „Missverständnis“",
+     "url": "https://www.krone.at/4387285"
+    }
+   ]
+  },
+  {
+   "id": "843cfea7dde7a2723ab4461b",
+   "headline": "Im Brandhaus hält nur die Tierärztin die Stellung",
+   "summary": "Nach den verheerenden Flammen in einem Wohnhaus im Salzburger Stadtteil Riedenburg dürfen die Bewohner bis auf Weiteres nicht zurück in ihre eigenen vier Wände – doch es gibt eine Ausnahme!",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492839.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Im Brandhaus hält nur die Tierärztin die Stellung",
+     "url": "https://www.krone.at/4387254"
+    }
+   ]
+  },
+  {
+   "id": "6127a48be1ad63646910635c",
+   "headline": "Dealender Familienvater erneut schuldig gesprochen",
+   "summary": "Kokaintransporte quer durch Europa, Drogengeschäfte im großen Stil und eine erdrückende Beweislage: Für einen 44-jährigen Familienvater endete der Prozess am Landesgericht Feldkirch mit einer empfindlichen Zusatzstrafe. Zum Abschied von seiner Frau fand er noch rührende Worte.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492837.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Dealender Familienvater erneut schuldig gesprochen",
+     "url": "https://www.krone.at/4387398"
+    }
+   ]
+  },
+  {
+   "id": "27d762e3124d5828eff5dca5",
+   "headline": "Sonne tanken, bevor das nächste Tief anklopft",
+   "summary": "Nach dem ersten winterlichen Vorgeschmack zum Wochenstart zeigt sich das Wetter am Dienstag zunächst von seiner freundlichen Seite. Vielerorts dürfen wir uns zuerst noch einmal über reichlich Sonnenschein freuen.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492827.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Sonne tanken, bevor das nächste Tief anklopft",
+     "url": "https://www.krone.at/4386811"
+    }
+   ]
+  },
+  {
+   "id": "32006bb17386c69244c901a8",
+   "headline": "Trockenheit macht Christbäumen zu schaffen",
+   "summary": "Das Weihnachtsgeschäft läuft an, doch für Kärntens Christbaumbauern beginnt der Kampf schon im Sommer: Hitze und Trockenheit lassen bis zu 50 Prozent der jungen Setzlinge verdursten. Bewässerung wird immer wichtiger.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492816.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Trockenheit macht Christbäumen zu schaffen",
+     "url": "https://www.krone.at/4386921"
+    }
+   ]
+  },
+  {
+   "id": "96e04757247c1332e8eaa3e3",
+   "headline": "Bodö/Glimt gegen den LASK – ab 18.45 Uhr LIVE",
+   "summary": "Hier im Liveticker Bodö/Glimt gegen den LASK – ab 18.45 Uhr LIVE Didi Kühbauer Fünfter Spieltag in der Champions League: Der LASK gastiert bei Bodö/Glimt. Wir berichten ab 18.45 Uhr live – siehe Ticker unten.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492815.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Bodö/Glimt gegen den LASK – ab 18.45 Uhr LIVE",
+     "url": "https://www.krone.at/4387599"
+    }
+   ]
+  },
+  {
+   "id": "8df62d5533b0a0b63c2df971",
+   "headline": "15-Jähriger drohte mit Amoklauf an Tiroler Schule",
+   "summary": "Riesenwirbel an den Tourismusschulen in St. Johann in Tirol (Bezirk Kitzbühel): Per SMS hatte ein 15-jähriger Schüler für Freitag, 13. November, einen Amoklauf angekündigt. Er wurde suspendiert und angezeigt, die Behörden sehen keine von ihm ausgehende Gefahr.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492804.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "15-Jähriger drohte mit Amoklauf an Tiroler Schule",
+     "url": "https://www.krone.at/4387244"
+    }
+   ]
+  },
+  {
+   "id": "40b9d8e87eb1f7cb89d55f3e",
+   "headline": "Vom Ranger zum neuen Chef des Biosphärenparks Nockberge",
+   "summary": "Ab 1. Dezember führt Heinrich Mayer den Biosphärenpark. Nach 34 Jahren kennt er dessen Entwicklung wie kaum ein anderer und folgt nun auf Dietmar Rossmann.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Vom Ranger zum neuen Chef des Biosphärenparks Nockberge",
+     "url": "https://www.kleinezeitung.at/artikel/41485354/vom-ranger-zum-neuen-chef-des-biosphaerenparks-nockberge"
+    }
+   ]
+  },
+  {
+   "id": "33013585c2b8a5b19f0b44ed",
+   "headline": "Physiker schicken Nachricht durch dicke Mauer – mittels Schwerkraft",
+   "summary": "Mithilfe der Veränderungen des Gravitationsfelds, die ein tonnenschwerer Aufzug verursachte, und eines Gravimeters übermittelten Forschende erstmals eine Kurznachricht.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
     {
      "publisher": "derstandard.at",
-     "title": "Fünftel der Schüler landet mit Lese-Defiziten im Gymnasium",
-     "url": "https://www.derstandard.at/story/3000000350467/f252nftel-der-sch252ler-landet-mit-lese-defiziten-im-gymnasium?ref=rss"
+     "title": "Physiker schicken Nachricht durch dicke Mauer – mittels Schwerkraft",
+     "url": "https://www.derstandard.at/story/3000000350553/physiker-schicken-nachricht-durch-dicke-mauer-mittels-schwerkraft?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "7ac42960630ded66f9c09183",
+   "headline": "\"Kosten pro Tötung\" senken: 16-jähriger gründet Startup für moderne KI-Raketen",
+   "summary": "Investoren im Silicon Valley investieren eine halbe Million Dollar in das neue Rüstungs-Unternehmen.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "\"Kosten pro Tötung\" senken: 16-jähriger gründet Startup für moderne KI-Raketen",
+     "url": "https://www.derstandard.at/story/3000000350587/kosten-pro-toetung-senken-16-jaehriger-gruendet-startup-fuer-moderne-ki-raketen?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "8b0e876e664390eaf7fe615a",
+   "headline": "Elon Musk hat 500 Millionen Dollar vergeudet und dennoch klug gehandelt – für sich",
+   "summary": "Wahlkampfspenden sind in vielen Fällen die beste Investition, die ein Superreicher tätigen kann. Das ist für die US-Demokratie verheerend.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Elon Musk hat 500 Millionen Dollar vergeudet und dennoch klug gehandelt – für sich",
+     "url": "https://www.derstandard.at/story/3000000350302/elon-musk-hat-500-millionen-dollar-vergeudet-und-dennoch-klug-gehandelt-fuer-sich?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "39a4a1737189de810f775ca6",
+   "headline": "Team Kärnten zieht sich aus Kärntner Stadtgemeinde zurück",
+   "summary": "Michael Schabernig und das Team Kärnten treten bei der Bürgermeister- und Gemeinderatswahl 2027 in Friesach nicht mehr an.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Team Kärnten zieht sich aus Kärntner Stadtgemeinde zurück",
+     "url": "https://www.kleinezeitung.at/artikel/41483991/team-kaernten-zieht-sich-aus-kaerntner-stadtgemeinde-zurueck"
+    }
+   ]
+  },
+  {
+   "id": "abd6e4001f24e6adc4f7dca7",
+   "headline": "Wirt „geht fremd“: Kärntner Haubenlokal tischt jetzt in Wien auf",
+   "summary": "Das „Fischerhaus“ in Moosburg geht nach Wien – aber nur für sechs Wochen. Werner Fischer kocht im ehemaligen „Café Engländer“ in einem Pop-up auf.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Wirt „geht fremd“: Kärntner Haubenlokal tischt jetzt in Wien auf",
+     "url": "https://www.kleinezeitung.at/artikel/41485278/wirt-geht-fremd-kaerntner-haubenlokal-tischt-jetzt-in-wien-auf"
+    }
+   ]
+  },
+  {
+   "id": "0f1179050bf3c7b7404f5939",
+   "headline": "Benjamin Karl: „Durch den Shitstorm hatten sich viele meiner Pläne in Luft aufgelöst“",
+   "summary": "Der zweifache Olympiasieger und Fünffach-Weltmeister Benjamin Karl (41) startet am 28./29. November in China in die neue Snowboardsaison.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Benjamin Karl: „Durch den Shitstorm hatten sich viele meiner Pläne in Luft aufgelöst“",
+     "url": "https://www.kleinezeitung.at/artikel/41485736/benjamin-karl-durch-den-shitstorm-hatten-sich-viele-meiner-plaene-in"
+    }
+   ]
+  },
+  {
+   "id": "efcbc6473b559561c0faa4a3",
+   "headline": "Mutter des Heiligen Acutis will nach Wolfsberg kommen",
+   "summary": "Bei Premiere des Kinofilms „Carlo Acutis – Der Millennial-Heilige“ traf Wolfsberger Stadtpfarrer die Mutter des jungen Heiligen. Sie wolle 2027 nach Wolfsberg kommen, wo Acutis in der Markuskirche verehrt wird.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Mutter des Heiligen Acutis will nach Wolfsberg kommen",
+     "url": "https://www.kleinezeitung.at/artikel/41483489/mutter-des-heiligen-acutis-will-nach-wolfsberg-kommen"
+    }
+   ]
+  },
+  {
+   "id": "d150c613f323c32b7b186164",
+   "headline": "MS Stein an der Enns wirkte erfolgreich an neuer Steirerhymne mit",
+   "summary": "Schulchor unter der Leitung von Sepp Schnedl reichte bei Musik-Mitmach-Projekt Strophe über das Ennstal ein und gewann damit in der Kategorie „Dialekt“.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "MS Stein an der Enns wirkte erfolgreich an neuer Steirerhymne mit",
+     "url": "https://www.kleinezeitung.at/artikel/41485351/ms-stein-an-der-enns-wirkte-erfolgreich-an-neuer-steirerhymne-mit"
+    }
+   ]
+  },
+  {
+   "id": "29d57562fe10399cddf38425",
+   "headline": "Regierung fördert Industrie mit 750 Millionen Euro: Wie viel Klientelpolitik steckt da drinnen?",
+   "summary": "Noch im Dezember wird eine dreijährige Subvention für die Stromkosten der Industrie fixiert. Die Preise sind stark gestiegen, die Begründung für die Maßnahme wirft dennoch Fragen auf.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Regierung fördert Industrie mit 750 Millionen Euro: Wie viel Klientelpolitik steckt da drinnen?",
+     "url": "https://www.derstandard.at/story/3000000350618/regierung-foerdert-industrie-mit-750-millionen-euro-wie-viel-klientelpolitik-steckt-da-drinnen?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "5eba797a1d1156dca4a76e00",
+   "headline": "Diese Südoststeirerin begeistert mit Adventkranz-Workshop",
+   "summary": "Kunsthandwerkerin Viktoria Weigl lud zum Adventkranz-Workshop in ihre Werkstatt „Herzstück“ nach Eichkögl ein. Im Fokus stand nicht nur das Binden von Adventkränzen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Diese Südoststeirerin begeistert mit Adventkranz-Workshop",
+     "url": "https://www.kleinezeitung.at/artikel/41482828/diese-suedoststeirerin-begeistert-mit-adventkranz-workshop"
+    }
+   ]
+  },
+  {
+   "id": "f550ae47e6db628b780f4dc1",
+   "headline": "Adventroas um den See: Steirische Roas gastiert in Stubenberg",
+   "summary": "Am Samstag, 12. Dezember, kommt die Steirische Roas nach Stubenberg. Gemeinsam mit dem Weihnachtsmarkt am See wartet ein stimmungsvolles Programm.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Adventroas um den See: Steirische Roas gastiert in Stubenberg",
+     "url": "https://www.kleinezeitung.at/artikel/41471336/adventroas-um-den-see-steirische-roas-gastiert-in-stubenberg"
+    }
+   ]
+  },
+  {
+   "id": "d9778278f83d78355e4b4457",
+   "headline": "Geleakte Dokumente: Junge Afrikanerinnen werden mit falschen Versprechungen in Russlands Drohnenfabriken gelockt",
+   "summary": "Russlands Waffenproduktion fußt auf einem rar werdenden Gut: Arbeitskraft. Vor allem junge Frauen aus Afrika werden für die Produktion unter menschenunwürdigen Bedingungen rekrutiert.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Geleakte Dokumente: Junge Afrikanerinnen werden mit falschen Versprechungen in Russlands Drohnenfabriken gelockt",
+     "url": "https://www.derstandard.at/story/3000000350096/geleakte-dokumente-junge-afrikanerinnen-werden-mit-falschen-versprechungen-in-russlands-drohnenfabriken-gelockt?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "3a51695fe378ec0a1be9687d",
+   "headline": "„Anhaltende Unsicherheit“: Wie geht es mit der Reha in Aflenz weiter?",
+   "summary": "Die SPÖ möchte von Gesundheitslandesrat Kornhäusl wissen, was man für den Erhalt der Einrichtung unternimmt. Noch können bei der PVA dafür Konzepte eingereicht werden.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "„Anhaltende Unsicherheit“: Wie geht es mit der Reha in Aflenz weiter?",
+     "url": "https://www.kleinezeitung.at/artikel/41484127/anhaltende-unsicherheit-wie-geht-es-mit-der-reha-in-aflenz-weiter"
+    }
+   ]
+  },
+  {
+   "id": "1602e85d0b8659dc40b0b7ba",
+   "headline": "„Besorgniserregend“: Grazer Stadtrat über Schwächen bei Lehrlingen",
+   "summary": "Nach Betriebsbesuchen schüttelt Stadtrat Apfelknab (FPÖ) den Kopf: Unternehmer orten gravierende Schwächen unter den Bewerbern in Deutsch und Mathe. So reagieren WKO und Bildungsdirektion.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795492800.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "„Besorgniserregend“: Grazer Stadtrat über Schwächen bei Lehrlingen",
+     "url": "https://www.kleinezeitung.at/artikel/41444347/besorgniserregend-grazer-stadtrat-ueber-schwaechen-bei-lehrlingen"
+    }
+   ]
+  },
+  {
+   "id": "47183879d5ecbfa19216e0a6",
+   "headline": "Trump: Todesurteile schneller vollstrecken",
+   "summary": "US-Präsident Donald will Todesurteile in den USA schneller vollstrecken lassen. Er wies das Justizministerium an, bei auf Bundesebene verhängten Todesstrafen auf eine zügige Durchführung hinzuwirken.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795487274.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Trump: Todesurteile schneller vollstrecken",
+     "url": "https://orf.at/stories/3449080/"
+    }
+   ]
+  },
+  {
+   "id": "6497d4da6426c7684fcfbe27",
+   "headline": "Russische Militärflugzeuge nahe Südkorea",
+   "summary": "Mehrere russische Militärflugzeuge sind südkoreanischen Medien zufolge in der Früh in die südkoreanische Luftverteidigungszone eingedrungen. Die südkoreanische Nachrichtenagentur Yonhap korrigierte einen früheren Bericht, wonach ein mutmaßliches nordkoreanisches Fluggerät den südkoreanischen Luftraum verletzt habe.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795480890.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Russische Militärflugzeuge nahe Südkorea",
+     "url": "https://orf.at/stories/3449079/"
+    }
+   ]
+  },
+  {
+   "id": "7a82e7134cf9da2a24593346",
+   "headline": "Jethro Tull: Die Wunderheilung des Flöten-Zampanos",
+   "summary": "Vor nicht einmal zwei Wochen musste sich Jethro Tull-Frontmann Ian Anderson einer dringenden Bauch-OP unterziehen und Konzerte u.a. in Linz und Bregenz verschieben – Mittwochabend feierte ein ausverkauftes Wiener Konzerthaus eine Art Wiederauferstehung. Der 79-Jährige war topfit und lieferte eine makellose Rock-Show der alten Schule ab.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795477475.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Jethro Tull: Die Wunderheilung des Flöten-Zampanos",
+     "url": "https://www.krone.at/4387671"
     }
    ]
   },
@@ -875,7 +1369,7 @@
   {
    "id": "6f1efbcee1110337cadab701",
    "headline": "297 Wellensittiche landeten in Grazer Tierheim",
-   "summary": "Höchst gefordert ist derzeit das steirische Landestierheim: Hunderte Wellensittiche wurden aus einem Haushalt abgegeben.",
+   "summary": "Besitzer im Spital 297 Wellensittiche landeten in Grazer Tierheim Hier nur einige der 297 Wellensittiche, die das Landestierheim Graz übernehmen musste. Höchst gefordert ist derzeit das steirische Landestierheim: Hunderte Wellensittiche wurden aus einem Haushalt abgegeben.",
    "publishers": [
     "krone.at"
    ],
@@ -4493,6 +4987,26 @@
    ]
   },
   {
+   "id": "daf0bb9ec2b13c2e1127b083",
+   "headline": "Gewalt gegen Frauen: Ruf nach schärferen Gesetzen",
+   "summary": "Regierung will auf jüngsten Fall eines Freispruchs wegen Vergewaltigung reagieren und analog zur Regelung bei Raufhandel nachschärfen.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795433769.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Gewalt gegen Frauen: Ruf nach schärferen Gesetzen",
+     "url": "https://www.kleinezeitung.at/artikel/41483559/gewalt-gegen-frauen-ruf-nach-schaerferen-gesetzen"
+    }
+   ]
+  },
+  {
    "id": "217cb69966ccecc229bde530",
    "headline": "Gemeindeaufsicht prüfte die düstere Finanzlage von Graz",
    "summary": "Die Gemeindeaufsicht drängt die Grazer Politik, „deutlicher“ zu sparen. Die Budgetprobleme im September hätten die Stadt nicht dermaßen überraschen dürfen.",
@@ -4969,6 +5483,26 @@
      "publisher": "kleinezeitung.at",
      "title": "Parken in Klagenfurt: „Strafe ist der einzige Weg, um dem Gesetz Genüge zu tun“",
      "url": "https://www.kleinezeitung.at/artikel/41481945/parken-in-klagenfurt-strafe-ist-der-einzige-weg-um-dem-gesetz-genuege"
+    }
+   ]
+  },
+  {
+   "id": "e547e3906a59ccf8e28060e9",
+   "headline": "Wie geht ihr mit den Geistern eurer Vergangenheit um?",
+   "summary": "Mein Forum: Diskutieren Sie dieses Thema mit der STANDARD-Community.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795431600.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Wie geht ihr mit den Geistern eurer Vergangenheit um?",
+     "url": "https://www.derstandard.at/story/3000000350503/wie-geht-ihr-mit-den-geistern-eurer-vergangenheit-um?ref=rss"
     }
    ]
   },
@@ -5489,6 +6023,26 @@
      "publisher": "derstandard.at",
      "title": "Bei Sturm ist weiter der Wurm drin: \"Definitiv zu wenig\"",
      "url": "https://www.derstandard.at/story/3000000350549/bei-sturm-ist-weiter-der-wurm-drin-definitiv-zu-wenig?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "b3d301c65606c5cbd8073ac6",
+   "headline": "Was ist Heimat für euch?",
+   "summary": "Mein Forum: Diskutieren Sie dieses Thema mit der STANDARD-Community.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795428000.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Was ist Heimat für euch?",
+     "url": "https://www.derstandard.at/story/3000000350540/was-ist-heimat-fuer-euch?ref=rss"
     }
    ]
   },
@@ -7293,6 +7847,26 @@
    ]
   },
   {
+   "id": "f5a7313a2a5f135cad20113a",
+   "headline": "Gewalt gegen Frauen: Burschen nach wenigen Klicks in der Manosphere",
+   "summary": "Frauenfeindliche Einstellungen sind bei jungen Männern präsenter geworden, beklagen Fachleute aus dem Bereich der Männerarbeit.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795411141.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Gewalt gegen Frauen: Burschen nach wenigen Klicks in der Manosphere",
+     "url": "https://www.derstandard.at/story/3000000350468/gewalt-gegen-frauen-burschen-nach-wenigen-klicks-in-der-manosphere?ref=rss"
+    }
+   ]
+  },
+  {
    "id": "c4b7547c6bce2a5cb0687826",
    "headline": "Handel zwischen Hoffen und Bangen",
    "summary": "Mit dem ersten Einkaufssamstag und den Aktionen rund um den Black Friday geht das für den Handel wichtige Weihnachtsgeschäft in die heiße Phase. Die Prognosen sind angesichts der heimischen Wirtschaftslage und Inflation durchwachsen, Handelsvertreter üben sich in Optimismus.",
@@ -7309,6 +7883,26 @@
      "publisher": "orf.at",
      "title": "Handel zwischen Hoffen und Bangen",
      "url": "https://orf.at/stories/3448753/"
+    }
+   ]
+  },
+  {
+   "id": "396d09cc83d86ff121eb6a05",
+   "headline": "Fünftel der Schüler landet mit Lese-Defiziten im Gymnasium",
+   "summary": "In der Mittelschule haben nur 45 Prozent die Bildungsstandards am Ende der Volksschulzeit erreicht. Klasse gibt es einen Abstand von mehr als einem Lernjahr zwischen AHS und Mittelschule.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795410690.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Fünftel der Schüler landet mit Lese-Defiziten im Gymnasium",
+     "url": "https://www.derstandard.at/story/3000000350467/f252nftel-der-sch252ler-landet-mit-lese-defiziten-im-gymnasium?ref=rss"
     }
    ]
   },
@@ -7729,292 +8323,6 @@
      "publisher": "kleinezeitung.at",
      "title": "Beschneiung trotz Trockenheit: Start auf steirischen Pisten hält",
      "url": "https://www.kleinezeitung.at/artikel/41469049/beschneiung-trotz-trockenheit-start-auf-steirischen-pisten-haelt"
-    }
-   ]
-  },
-  {
-   "id": "6448f89418a230b3b5fb0928",
-   "headline": "Van der Bellen besucht polarisiertes Spanien vor Wahl",
-   "summary": "Am Dienstagabend reist Bundespräsident Alexander Van der Bellen zu einem dreitägigen Staatsbesuch nach Spanien. Sein Aufenthalt in der spanischen Hauptstadt...",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795406798.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Van der Bellen besucht polarisiertes Spanien vor Wahl",
-     "url": "https://www.kleinezeitung.at/artikel/41480898/van-der-bellen-besucht-polarisiertes-spanien-vor-wahl"
-    }
-   ]
-  },
-  {
-   "id": "2afb48c25f3c7312997c026e",
-   "headline": "Was tun, wenn Gewalt im Freundeskreis vorkommt?",
-   "summary": "Gewalt in Beziehungen findet meist im Verborgenen statt - selbst das nahe Umfeld bekommt Gewaltvorfälle oft nicht mit. Wer den Verdacht hat, dass Freundinnen...",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795406798.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Was tun, wenn Gewalt im Freundeskreis vorkommt?",
-     "url": "https://www.kleinezeitung.at/artikel/41480894/was-tun-wenn-gewalt-im-freundeskreis-vorkommt"
-    }
-   ]
-  },
-  {
-   "id": "0e67d8df2399f49c3ee943ad",
-   "headline": "Trebesing Naturfriseurin setzt auf pflanzliche Haarfarben",
-   "summary": "Sabine Wölscher verzichtet als Naturfriseurin bei Haarfarben und Pflege auf Chemie, denn immer mehr Kunden berichten von allergischen Reaktionen auf herkömmliche Produkte.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795406400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Trebesing Naturfriseurin setzt auf pflanzliche Haarfarben",
-     "url": "https://www.kleinezeitung.at/artikel/41462211/trebesing-naturfriseurin-setzt-auf-pflanzliche-haarfarben"
-    }
-   ]
-  },
-  {
-   "id": "42799ebbd76788765a0f0dda",
-   "headline": "Arbeitszeitbetrug: \"Die meisten Menschen täuschen irgendwann mal Produktivität vor\"",
-   "summary": "Ob im Homeoffice oder im Büro: Viele Beschäftigte tun nur so, als wären sie beschäftigt. Journalist Vinzenz Greiner hat über das Phänomen ein Buch geschrieben.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795406400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Arbeitszeitbetrug: \"Die meisten Menschen täuschen irgendwann mal Produktivität vor\"",
-     "url": "https://www.derstandard.at/story/3000000349429/arbeitszeitbetrug-die-meisten-menschen-taeuschen-irgendwann-mal-produktivitaet-vor?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "ecaa0cee55372e96555467f2",
-   "headline": "Theaterleiterin: \"Unsere Keramikmaus heißt eigentlich Salzstreuer\"",
-   "summary": "Die Grazerin Johanna Hierzegger nennt ihre Wohnung einen \"Setzkasten voller Kitsch und Kunst\".",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795406400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Theaterleiterin: \"Unsere Keramikmaus heißt eigentlich Salzstreuer\"",
-     "url": "https://www.derstandard.at/story/3000000350027/theaterleiterin-unsere-keramikmaus-heisst-eigentlich-salzstreuer?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "12a9276e55cc369850208987",
-   "headline": "ÖSV-Jungstar Matej Svancer: „Ich spüre nach wie vor diese Leere“",
-   "summary": "Ski-Freestyle-Ass Matej Svancer (22), Olympia-Bronzemedaillengewinner 2026, gewährt vor dem Big-Air-Event in Innsbruck (27./28.11.) Einblicke in seine Gefühlswelt.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795406400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "ÖSV-Jungstar Matej Svancer: „Ich spüre nach wie vor diese Leere“",
-     "url": "https://www.kleinezeitung.at/artikel/41480662/oesv-jungstar-matej-svancer-ich-spuere-nach-wie-vor-diese-leere"
-    }
-   ]
-  },
-  {
-   "id": "8307bdfb81d1b394730b7838",
-   "headline": "Krankengeld während Aufenthalts in Südasien brachte Steirer vor Gericht",
-   "summary": "Südoststeirer reiste für einen Monat nach Sri Lanka. Bei der Krankenkasse hat er sich nicht abgemeldet und Leistungen bezogen.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795406400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Krankengeld während Aufenthalts in Südasien brachte Steirer vor Gericht",
-     "url": "https://www.kleinezeitung.at/artikel/41462189/krankengeld-waehrend-aufenthalts-in-suedasien-brachte-steirer-vor"
-    }
-   ]
-  },
-  {
-   "id": "b72f88a028f66fb54d598b9a",
-   "headline": "Weiterarbeiten, wenn Microsoft mal wieder streikt: Ein Wiener Unternehmen zeigt es vor",
-   "summary": "Der jüngste Ausfall hat gezeigt, wie rasch Verwaltungen und Betriebe ohne US-Cloud stillstehen. Ein kompletter Umstieg ist in der Praxis oft nicht möglich – genau hier setzt mit Keengen ein heimisches Unternehmen an.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795406400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Weiterarbeiten, wenn Microsoft mal wieder streikt: Ein Wiener Unternehmen zeigt es vor",
-     "url": "https://www.derstandard.at/story/3000000349796/weiterarbeiten-wenn-microsoft-mal-wieder-streikt-ein-wiener-unternehmen-zeigt-es-vor?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "1d4161e69bdac78210faca47",
-   "headline": "Psychologin eröffnet eine neue Praxis im Lavanttal",
-   "summary": "Karin Neuwirt aus St. Andrä hat in Bad St. Leonhard eine psychologische Praxis eröffnet. Sie begleitet Kinder, Jugendliche und Erwachsene.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795406400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Psychologin eröffnet eine neue Praxis im Lavanttal",
-     "url": "https://www.kleinezeitung.at/artikel/41476804/psychologin-eroeffnet-eine-neue-praxis-im-lavanttal"
-    }
-   ]
-  },
-  {
-   "id": "58ff244542668a3c9e2a4d99",
-   "headline": "Was Kindern mit ADHS in der Schule wirklich hilft",
-   "summary": "Gängige Maßnahmen zeigten in einer US-Studie keine messbare Wirkung. Anders war das bei Medikamenten und gezielten Strategien, die die Motivation fördern.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795406400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Was Kindern mit ADHS in der Schule wirklich hilft",
-     "url": "https://www.derstandard.at/story/3000000350039/was-kindern-mit-adhs-in-der-schule-wirklich-hilft?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "61370c281e726a1edc1e8ca0",
-   "headline": "Volksanwaltschaft prüft umstrittene Müllregeln in Klagenfurt",
-   "summary": "Die Müllverordnung, die seit fast einem Jahr in Kraft ist, sorgt in Klagenfurt noch immer für Diskussionen. Eine Familie schaltete die Volksanwaltschaft ein.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795406400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Volksanwaltschaft prüft umstrittene Müllregeln in Klagenfurt",
-     "url": "https://www.kleinezeitung.at/artikel/41471848/volksanwaltschaft-prueft-umstrittene-muellregeln-in-klagenfurt"
-    }
-   ]
-  },
-  {
-   "id": "87bc556f775cdc7c6ca8ddc5",
-   "headline": "Wegen Freisprüchen nach Vergewaltigungs-Anklage: Stocker will Strafrecht verschärfen",
-   "summary": "Künftig soll auch bestraft werden können, wer Teil einer Gruppe ist, in der jemand ein Sexualdelikt begeht. Strafrechtsprofessor Kert sieht das potenziell kritisch.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795406400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Wegen Freisprüchen nach Vergewaltigungs-Anklage: Stocker will Strafrecht verschärfen",
-     "url": "https://www.derstandard.at/story/3000000350415/wegen-freispruechen-nach-vergewaltigungs-anklage-stocker-will-strafrecht-verschaerfen?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "20502f4b9184d334d9fd33c0",
-   "headline": "Orange the World: Sie färben einen Kärntner Bezirk ein",
-   "summary": "Der Soroptimist Club St. Veit setzt auch heuer im Rahmen der Kampagne „Orange The World“ leuchtende Zeichen gegen Gewalt an Frauen und für ein friedliches Miteinander.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795406400.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Orange the World: Sie färben einen Kärntner Bezirk ein",
-     "url": "https://www.kleinezeitung.at/artikel/41467031/orange-the-world-sie-faerben-einen-kaerntner-bezirk-ein"
-    }
-   ]
-  },
-  {
-   "id": "25c3eb4f02aa16fd407815db",
-   "headline": "Huthi-Miliz meldet 17 Tote bei saudischem Angriff im Jemen",
-   "summary": "Elf weitere Personen wurden bei einem Angriff auf ein Gebäude des staatlichen Telekom-Unternehmens verletzt. Bei einem Angriff Saudi-Arabiens auf die jemenitische Hafenstadt Hudaida sind laut Angaben der proiranischen Huthi-Miliz zehn Menschen getötet worden.",
-   "publishers": [
-    "orf.at",
-    "derstandard.at"
-   ],
-   "reports": 2,
-   "newest_at": 1795412850.0,
-   "status": "zurueckgestellt",
-   "status_label": "Zurückgestellt: Quellen nennen abweichende Zahlen",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Huthis melden Tote bei saudischem Angriff im Jemen",
-     "url": "https://orf.at/stories/3448984/"
-    },
-    {
-     "publisher": "derstandard.at",
-     "title": "Huthi-Miliz meldet 17 Tote bei saudischem Angriff im Jemen",
-     "url": "https://www.derstandard.at/story/3000000350473/huthi-miliz-meldet-vier-tote-bei-saudiarabischem-angriff-im-jemen?ref=rss"
     }
    ]
   },

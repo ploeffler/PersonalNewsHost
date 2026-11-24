@@ -4,7 +4,42 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "c7229635ff4ac3c113d4b4b6",
+    "pipeline_group_id": "5e10133a6ecf04b3318eaff7",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "ae9c106c374179c5bb731be0",
+          "supported": true,
+          "quote": "Der Österreichische Buchpreis wurde 2026 an Elias Hirschl für seinen Roman „Schleifen“ vergeben."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "0726322ea06f44d2765ee6f2",
+          "supported": true,
+          "quote": "Den Debütpreis, der mit 10.000 Euro verbunden ist, erhält Marlen Mairhofer für „Alice“."
+        },
+        {
+          "claim_index": 2,
+          "source_id": "bf00aca3674cff5ff567ac80",
+          "supported": true,
+          "quote": "Die Auszeichnungen für das beste Buch und das beste Debüt des Jahres wurden im Vorfeld der Buch Wien am Montagabend im Wiener Konzerthaus vergeben."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "b537f8df9c5050068fb25a76",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -24,9 +59,44 @@
         },
         {
           "claim_index": 2,
+          "source_id": "3e50539a7200f6de8576be5f",
+          "supported": true,
+          "quote": "Zwischen 2020 und 2024 stiegen die Preise beim Heizungstausch um 60 Prozent an."
+        },
+        {
+          "claim_index": 3,
           "source_id": "9f4ffdd4116250939e874c78",
           "supported": true,
-          "quote": "Zu diesem Schluss kam WIFO-Ökonomin Daniela Kletzan-Slamanig heute im Ö1-Morgenjournal."
+          "quote": "Zu diesem Schluss kam WIFO-Ökonomin Daniela Kletzan-Slamanig gestern im Ö1-Morgenjournal."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "5de5e99158043d4265ba2de3",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "30c2d2a18affd925c2295270",
+          "supported": true,
+          "quote": "Hartberg im Bezirk Hartberg-Fürstenfeld: Nach dem Brand in einem Entsorgungsunternehmen am Sonntagabend, 22. November 2026, liegen nun erste Ergebnisse der Brandursachenermittlung vor."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "30c2d2a18affd925c2295270",
+          "supported": true,
+          "quote": "Demnach dürfte gelagerte Asche den Brand ausgelöst haben."
         }
       ],
       "conflicts": [],
@@ -74,7 +144,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "5de5e99158043d4265ba2de3",
+    "pipeline_group_id": "0a8becd1ed38913ac7c6886c",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -82,73 +152,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "30c2d2a18affd925c2295270",
+          "source_id": "b5e6d16ca756a4d8f5f1f955",
           "supported": true,
-          "quote": "Hartberg im Bezirk Hartberg-Fürstenfeld: Nach dem Brand in einem Entsorgungsunternehmen am Sonntagabend, 22. November 2026, liegen nun erste Ergebnisse der Brandursachenermittlung vor."
+          "quote": "Israels Geheimdienst Mossad hat nach Angaben von Ex-Chef David Barnea bei der Vereitelung des verhinderten Anschlags auf ein Konzert von Taylor Swift 2024 in Wien eine wichtige Rolle gespielt."
         },
         {
           "claim_index": 1,
-          "source_id": "30c2d2a18affd925c2295270",
+          "source_id": "f891eb8cd91d5d3cfc14533d",
           "supported": true,
-          "quote": "Demnach dürfte gelagerte Asche den Brand ausgelöst haben."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "50c052b58fd6475d88378b7f",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "f9cfafac55d8bfe8f9063c5c",
-          "supported": true,
-          "quote": "Die Rückkehr von Jensen Huang als Nvidia-Chef sorgt an der Wall Street für ein regelrechtes Kursfeuerwerk."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "5ad009cdee8be1c23fd7dc6e",
-          "supported": true,
-          "quote": "Rückenwind von Donald Trump holt den Firmengründer zurück in den Chefsessel."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "6c91782368cc64d5b1256ee2",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "f6ac66c0d2f548abd524323c",
-          "supported": true,
-          "quote": "Weil er für einen Hackerangriff auf den Entwickler des Videospiels „Grand Theft Auto“ VI verantwortlich ist, ist ein Brite zu sieben Jahren Gefängnis verurteilt worden."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "0f5b02ca9d79f7a6f38ce8de",
-          "supported": true,
-          "quote": "21-Jähriger wurde 2022 gefasst und ist inzwischen wieder frei."
+          "quote": "David Barnea: Erster Hinweis kam aus Österreich."
         }
       ],
       "conflicts": [],

@@ -1,54 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261123T001417Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 23.11.2026 um 01:14 Uhr",
-      "created_at": 1795392857.221133,
-      "video": "broadcasts/20261123T001417Z.mp4",
-      "sources": [
-        {
-          "title": "Frachter in russische Gewässer geschleppt",
-          "url": "https://orf.at/stories/3448974/"
-        },
-        {
-          "title": "Russen-Frachter wird in Heimat geschleppt",
-          "url": "https://www.krone.at/4386338"
-        },
-        {
-          "title": "Regennasse Fahrbahn: Pkw-Lenker landete am Dach",
-          "url": "https://www.krone.at/4386313"
-        },
-        {
-          "title": "Auto überschlug sich in Knittelfeld und landete am Dach",
-          "url": "https://www.kleinezeitung.at/artikel/41480770/auto-ueberschlug-sich-in-knittelfeld-und-landete-am-dach"
-        },
-        {
-          "title": "Zehetner pocht auf Senkung von Flugabgabe",
-          "url": "https://orf.at/stories/3448936/"
-        },
-        {
-          "title": "ÖVP-Staatssekretärin drängt auf rasche Senkung der Flugabgabe",
-          "url": "https://www.derstandard.at/story/3000000350441/oevp-staatssekretaerin-draengt-auf-rasche-senkung-der-flugabgabe?ref=rss"
-        },
-        {
-          "title": "Gestohlener Pkw angehalten: Zwei Jugendliche ausgeforscht",
-          "url": ""
-        },
-        {
-          "title": "Nestroys für Mahaffy, Löffler und Werths",
-          "url": "https://orf.at/stories/3448801/"
-        },
-        {
-          "title": "Löffler, Werths & Mahaffy gewinnen Schauspielpreis",
-          "url": "https://www.krone.at/4385875"
-        }
-      ],
-      "transcript": "broadcasts/20261123T001417Z.txt",
-      "subtitles": "broadcasts/20261123T001417Z.vtt",
-      "subtitle_download": "broadcasts/20261123T001417Z.srt"
-    },
-    {
       "id": "20261123T175745Z",
       "kind": "broadcast",
       "title": "Nachrichten 23.11.2026 um 18:57 Uhr",
@@ -103,6 +55,70 @@
       "transcript": "broadcasts/20261123T175745Z.txt",
       "subtitles": "broadcasts/20261123T175745Z.vtt",
       "subtitle_download": "broadcasts/20261123T175745Z.srt"
+    },
+    {
+      "id": "20261124T041719Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 24.11.2026 um 05:17 Uhr",
+      "created_at": 1795493839.848404,
+      "video": "broadcasts/20261124T041719Z.mp4",
+      "sources": [
+        {
+          "title": "Österreichischer Buchpreis 2026 geht an Elias Hirschl",
+          "url": "https://www.kleinezeitung.at/artikel/41485950/oesterreichischer-buchpreis-2026-geht-an-elias-hirschl"
+        },
+        {
+          "title": "Österreichischer Buchpreis an Elias Hirschl",
+          "url": "https://orf.at/stories/3448749/"
+        },
+        {
+          "title": "Österreichischer Buchpreis geht an Elias Hirschl für \"Schleifen\"",
+          "url": "https://www.derstandard.at/story/3000000350502/oesterreichischer-buchpreis-geht-an-elias-hirschl-fuer-schleifen?ref=rss"
+        },
+        {
+          "title": "WIFO-Expertin: Förderungen verteuerten Heizungstausch",
+          "url": "https://orf.at/stories/3449049/"
+        },
+        {
+          "title": "Wifo-Ökonomin: Hohe Förderung dürfte Heizungstausch verteuert haben",
+          "url": "https://www.derstandard.at/story/3000000350569/wifo-oekonomin-hohe-foerderung-duerfte-heizungstausch-verteuert-haben?ref=rss"
+        },
+        {
+          "title": "Hohe Förderungen dürften Heizungstausch verteuert haben",
+          "url": "https://www.kleinezeitung.at/artikel/41483162/hohe-foerderung-duerften-heizungstausch-verteuert-haben"
+        },
+        {
+          "title": "Förderung trieb Preis für Heizungstausch nach oben",
+          "url": "https://www.krone.at/4386626"
+        },
+        {
+          "title": "Brandursachenermittlung erfolgt",
+          "url": ""
+        },
+        {
+          "title": "Affäre Huangs hatte Kontakt zu Geheimdienst",
+          "url": "https://www.krone.at/4386679"
+        },
+        {
+          "title": "Nvidia: Schlüsselfigur mit Kontakt zu Chinas Geheimdienst",
+          "url": "https://orf.at/stories/3448986/"
+        },
+        {
+          "title": "Affäre von Ex-Nvidia-Chef Huang hatte laut Bericht Kontakt zu Chinas Geheimdienst",
+          "url": "https://www.derstandard.at/story/3000000350460/schl252sselfigur-im-nvidia-skandal-hatte-kontakt-zu-chinas-geheimdienst?ref=rss"
+        },
+        {
+          "title": "Mossad und DSN verhinderten „Massenmord“ in Wien",
+          "url": "https://www.krone.at/4387668"
+        },
+        {
+          "title": "Ex-Mossad-Chef: Israel half, geplanten Anschlag auf Swift-Konzert in Wien zu vereiteln",
+          "url": "https://www.derstandard.at/story/3000000350681/ex-mossad-chef-israel-half-bei-vereitelung-von-anschlagsplan-auf-swift-konzert-in-wien?ref=rss"
+        }
+      ],
+      "transcript": "broadcasts/20261124T041719Z.txt",
+      "subtitles": "broadcasts/20261124T041719Z.vtt",
+      "subtitle_download": "broadcasts/20261124T041719Z.srt"
     }
   ]
 }
