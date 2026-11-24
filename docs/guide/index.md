@@ -36,3 +36,4 @@ Willkommen in der Wissensbasis zu PersonalNewsHost.
 - [Suche](suche.md)
 - [Sitemap, Metadaten und Teilen](sitemap.md)
 - [KI-Kennzeichnung](ki-kennzeichnung.md)
+- [Bildquellen und Lizenzen](bildquellen.md)

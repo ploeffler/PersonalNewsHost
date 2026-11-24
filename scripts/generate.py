@@ -13,6 +13,11 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+try:
+    from scripts import media_rights
+except ModuleNotFoundError:  # run from the scripts folder
+    import media_rights
+
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 CONFIG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
@@ -127,7 +132,7 @@ def download_media(candidates, mode, directory, index, max_bytes):
                             raise ValueError("RSS media too large")
                         output.write(chunk)
             subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", str(path)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=12)
-            return (path, kind)
+            return (path, kind, url)
         except Exception as exc:
             print(f"RSS media skipped: {type(exc).__name__}: {exc}")
     return None
@@ -338,7 +343,9 @@ def search_commons_image(title):
                 continue
             image_url = info.get("thumburl") or info.get("url")
             if image_url and image_url.startswith("https://"):
-                return image_url, page.get("title", ""), info.get("descriptionurl", "")
+                meta = info.get("extmetadata", {})
+                return (image_url, page.get("title", ""), info.get("descriptionurl", ""),
+                        meta.get("LicenseShortName", {}).get("value", ""), meta.get("Artist", {}).get("value", ""))
     except Exception as exc:
         print(f"Commons image search unavailable: {exc}")
     return None
@@ -1098,20 +1105,30 @@ def _generate():
             videos = [candidate for candidate in entry[3] if candidate[1] == "video"]
             candidates = (videos if media_mode == "images_and_videos" else []) + article_images + entry[3]
             asset = download_media(candidates, media_mode, media_directory, i, max_media_bytes)
-            credit = {"source": entry[2], "image_origin": "article_metadata_or_rss"}
+            credit = None
+            if asset:
+                # Rights: publisher media is only used with a provable licence (T062).
+                credit = media_rights.publisher_credit(entry[2], asset[2] if len(asset) > 2 else "", CONFIG)
+                if not media_rights.usable(credit, CONFIG):
+                    print(f"Story {i + 1}: publisher image skipped (no provable licence)")
+                    asset, credit = None, media_rights.reject(credit)
             if asset is None and media_mode != "off" and media_settings.get("web_image_fallback", True):
                 result = search_commons_image(entry[0])
                 if result:
-                    url, image_title, source_url = result
+                    url, image_title, source_url, license_name, artist = result
                     asset = download_media([(url, "image")], "images", media_directory, i, max_media_bytes)
                     if asset:
-                        credit = {"title": image_title, "source": source_url, "note": "Illustrationsbild, nicht zwingend Aufnahme des Ereignisses"}
+                        credit = media_rights.commons_credit(source_url, image_title, license_name, artist)
                         print(f"Commons fallback for story {i + 1}: {image_title}")
+            if asset is None:
+                rejected = credit
+                credit = media_rights.generated_credit(entry[2])
+                if rejected:
+                    credit["rejected_publisher_image"] = rejected.get("image_url", "")
+            credit["story"] = entry[0]
             if asset and asset[1] == "image":
                 improved_path, method = improve_news_image(asset[0], media_settings)
                 asset = (improved_path, "image")
-                if credit is None:
-                    credit = {}
                 credit["image_processing"] = method
                 credit["original_media_retained"] = True
             return asset, credit
@@ -1119,6 +1136,8 @@ def _generate():
         media_results = parallel_map(prepare_media, enumerate(selected), "Media")
         story_media = [asset for asset, credit in media_results]
         media_credits = [credit for asset, credit in media_results]
+        for problem in media_rights.validate_credits(media_credits):
+            raise ValueError("Incomplete image credit: " + problem)
         (DOCS / "media-credits.json").write_text(json.dumps(media_credits, ensure_ascii=False, indent=2), encoding="utf-8")
         # Studio stays as background; story media appears on a tilted virtual screen.
         duration_text = subprocess.check_output(
@@ -1394,7 +1413,8 @@ def _generate():
         outro_editorial = Path(tmp) / "outro_editorial.txt"
         outro_editorial.write_text(
             "Redaktionelle Bearbeitung:\n"
-            "Quellensynthese und Quellenpruefung",
+            "Quellensynthese und Quellenpruefung\n"
+            + media_rights.outro_line(media_credits),
             encoding="utf-8"
         )
         outro_headline = Path(tmp) / "outro_headline.txt"
@@ -1500,6 +1520,7 @@ def _generate():
         {"title": group[0][0], "summary": parts[idx + 2],
          "category": category(group[0], entry_feeds.get((group[0][0], group[0][2]), ""), CONFIG),
          "section": section_ids[idx], "section_label": section_labels.get(section_ids[idx]),
+         "image_credit": media_rights.credit_text(media_credits[idx] if idx < len(media_credits) else None),
          "start": boundaries[idx + 2], "end": boundaries[idx + 3],
          "sources": [{"title": item[0], "url": item[2]} for item in group]}
         for idx, group in enumerate(story_groups)], now.timestamp(), str(CONFIG["title"]),

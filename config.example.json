@@ -120,6 +120,8 @@
     "mode": "images_and_videos",
     "max_download_mb": 12,
     "web_image_fallback": true,
+    "license_policy": "strict",
+    "licensed_sources": [],
     "enhancement": "balanced",
     "enhancement_modes": [
       "off",

@@ -102,6 +102,7 @@ def render_article(story, stamp, published_at, base_title, zone='Europe/Vienna')
         f"<h1>{esc(story['title'])}</h1>",
         f"<p class='meta'>Sendung vom <time datetime='{local.isoformat()}'>{esc(shown)}</time></p>",
         f'<p>{esc(summary)}</p>' if summary else '',
+        f"<p class='meta bildnachweis'>{esc(story['image_credit'])}</p>" if story.get('image_credit') else '',
         original_link,
         "<section aria-label='Video'>",
         f"<video controls preload='metadata' src='{esc(video, quote=True)}'>",

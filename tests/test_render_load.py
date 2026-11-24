@@ -44,7 +44,7 @@ class ProductionRenderTests(unittest.TestCase):
             config.update(max_items=5, feeds=['https://example.org/rss'])
             config['production'] = {'parallel_workers': 2}
             config['editorial'] = {'crosscheck': {'enabled': False}, 'topic_clustering': {'enabled': False}, 'pipeline': {'enabled': False}}
-            config['media'] = {'mode': 'images', 'web_image_fallback': False, 'enhancement': 'off'}
+            config['media'] = {'mode': 'images', 'web_image_fallback': False, 'enhancement': 'off', 'license_policy': 'record_only'}
             config['presenter_settings']['lip_sync'] = {'enabled': True, 'fps': 20}
             entries = [(f'Meldung {i}', 'Dies ist eine lokale Testmeldung.', f'https://example.org/{i}', []) for i in range(5)]
             # Eight segments: two intro parts, five stories and the outro.
@@ -86,6 +86,9 @@ class ProductionRenderTests(unittest.TestCase):
             self.assertEqual([part['story_index'] for part in timeline['segments'][2:-1]], list(range(5)))
             credits = json.loads((docs / 'media-credits.json').read_text())
             self.assertEqual([credit['source'] for credit in credits], [entry[2] for entry in entries])
+            from scripts import media_rights
+            self.assertEqual(media_rights.validate_credits(credits), [])
+            self.assertEqual({credit['license_status'] for credit in credits}, {'unverified'})
             command = next(args for args in commands if '-filter_complex' in args)
             graph = command[command.index('-filter_complex') + 1]
             self.assertNotIn('split=5', graph)
