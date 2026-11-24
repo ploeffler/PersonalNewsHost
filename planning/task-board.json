@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 208,
+  "revision": 209,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -2700,7 +2700,7 @@
       "id": "T182",
       "epic": "E16",
       "title": "Start-/Stop-Skripte und Linux-Dienst",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T070",
         "T071",
@@ -2720,7 +2720,23 @@
       "source": "planning/betriebswege-ergaenzung.yaml",
       "version": "0.2",
       "package": "A18",
-      "lease": null,
+      "lease": {
+        "client": "claude-cloud-author",
+        "token": "772068ab11984c8280e220ddf6bba5df",
+        "expires_at": 1795558975.4020073,
+        "files": [
+          "deploy/personalnewshost.service",
+          "docs/guide/dienst.md",
+          "docs/guide/index.md",
+          "docs/guide/linux-installation.md",
+          "scripts/local_runtime.py",
+          "scripts/service.py",
+          "start.sh",
+          "status.sh",
+          "stop.sh",
+          "tests/test_service.py"
+        ]
+      },
       "review": null,
       "local_work_pending": false,
       "evidence": [],
@@ -8208,6 +8224,15 @@
       "client": "claude-cloud-review",
       "at": 1795537771.9301262,
       "note": "Tests gruen (558); Nachweis je Bild im Datenmodell, auf Artikelseite und im Abspann; strict-Standard einmalig end-to-end geprueft; Abnahme durch gleiche Instanz auf Anweisung des Benutzers"
+    },
+    {
+      "operation_id": "b40b66213c4c41dc9b49661494410941",
+      "revision": 209,
+      "action": "claim",
+      "task": "T182",
+      "client": "claude-cloud-author",
+      "at": 1795555375.4020073,
+      "note": ""
     }
   ]
 }
