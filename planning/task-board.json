@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 196,
+  "revision": 197,
   "active_version": "0.2",
   "branch": "Full-featured-Newsoutlet",
   "tasks": [
@@ -326,7 +326,7 @@
       "id": "T022",
       "epic": "E2",
       "title": "Rubrikenseiten und Sendungsseiten",
-      "status": "todo",
+      "status": "in_progress",
       "depends_on": [
         "T010",
         "T021"
@@ -341,11 +341,10 @@
       "source": "todo-full-featured-newsoutlet-v2.yaml",
       "version": "0.2",
       "package": "A06",
-      "lease": null,
-      "review": {
-        "author": "claude-cloud-author",
-        "commit": "57ec4301fbe76bad7df99275664caba0197fdbc8",
-        "checks": "533 Python-Tests gruen (2 uebersprungen), davon 8 neue in tests/test_section_pages.py: Seite je Rubrik und Sendung, Zuordnung/Escaping/unsichere Links, Paginierung inkl. Entfernen veralteter Seiten, Brotkrumen und Navigation, Legacy-Config (main), sichere IDs, Startseiten-Verlinkung und Erzeugung ueber update_homepage",
+      "lease": {
+        "client": "claude-cloud-author",
+        "token": "fedede76bb1a483f8eab45effd0730c7",
+        "expires_at": 1795537832.003453,
         "files": [
           "docs/guide/index.md",
           "docs/guide/rubriken-sendungen.md",
@@ -355,10 +354,9 @@
           "scripts/homepage.py",
           "scripts/section_pages.py",
           "tests/test_section_pages.py"
-        ],
-        "reviewer": "claude-cloud-review",
-        "rejected": "Nachweis veraltet (homepage.py/index.md durch T031 geaendert); Neueinreichung auf aktuellem Stand"
+        ]
       },
+      "review": null,
       "local_work_pending": false,
       "evidence": [],
       "implementation_note": "",
@@ -8041,6 +8039,15 @@
       "client": "claude-cloud-review",
       "at": 1795534229.5717862,
       "note": "Nachweis veraltet (homepage.py/index.md durch T031 geaendert); Neueinreichung auf aktuellem Stand"
+    },
+    {
+      "operation_id": "5d30c9f76e984596ace29ff3346db735",
+      "revision": 197,
+      "action": "claim",
+      "task": "T022",
+      "client": "claude-cloud-author",
+      "at": 1795534232.003453,
+      "note": ""
     }
   ]
 }
