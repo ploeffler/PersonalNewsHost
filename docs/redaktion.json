@@ -1,7 +1,7 @@
 {
- "generated_at": 1795552077.0658903,
- "broadcast_at": 1795541546.012611,
- "broadcast_title": "Nachrichten 24.11.2026 um 18:32 Uhr",
+ "generated_at": 1795575856.93779,
+ "broadcast_at": 1795575704.81875,
+ "broadcast_title": "Nachrichten 25.11.2026 um 04:01 Uhr",
  "events": [
   {
    "id": "e2f221293658c7cb474ad24f",
@@ -15,7 +15,7 @@
    "reports": 3,
    "newest_at": 1795541428.0,
    "status": "sendung",
-   "status_label": "In der Sendung (24.11. 18:32)",
+   "status_label": "In der Sendung (25.11. 04:01)",
    "breaking_at": null,
    "links": [
     {
@@ -47,7 +47,7 @@
    "reports": 3,
    "newest_at": 1795534828.0,
    "status": "sendung",
-   "status_label": "In der Sendung (24.11. 18:32)",
+   "status_label": "In der Sendung (25.11. 04:01)",
    "breaking_at": null,
    "links": [
     {
@@ -68,6 +68,64 @@
    ]
   },
   {
+   "id": "4ac7be3e7996dfbab06665d4",
+   "headline": "Ungarn schafft Margenbegrenzung wieder ab",
+   "summary": "Ungarns Parlament hat am Dienstag die umstrittene Margenbeschränkung für Supermarktketten wieder aufgehoben. Das ungarische Parlament hat die umstrittene Margenbeschränkung für Supermarktketten, darunter die österreichische Spar-Gruppe, abgeschafft.",
+   "publishers": [
+    "derstandard.at",
+    "orf.at",
+    "krone.at"
+   ],
+   "reports": 3,
+   "newest_at": 1795533135.0,
+   "status": "sendung",
+   "status_label": "In der Sendung (25.11. 04:01)",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Ungarn schafft Handelsspannen-Deckel für Supermärkte ab",
+     "url": "https://www.derstandard.at/story/3000000350803/ungarn-schafft-handelsspannen-deckel-fuer-supermaerkte-ab?ref=rss"
+    },
+    {
+     "publisher": "orf.at",
+     "title": "Ungarn schafft Preisdeckel für Supermärkte ab",
+     "url": "https://orf.at/stories/3449142/"
+    },
+    {
+     "publisher": "krone.at",
+     "title": "Ungarn schafft Margenbegrenzung wieder ab",
+     "url": "https://www.krone.at/4388621"
+    }
+   ]
+  },
+  {
+   "id": "e0d0d5b14d328203b9b2ce1a",
+   "headline": "Neuer ÖBB-Chef im Anflug: Flughafen-Vorstand soll auf Matthä folgen",
+   "summary": "Das Match soll laut „Die Presse“ innerhalb der SPÖ entschieden worden sein. Der bisherige Vorstand des Flughafens Wien soll neuer Chef der ÖBB werden.",
+   "publishers": [
+    "derstandard.at",
+    "kleinezeitung.at"
+   ],
+   "reports": 2,
+   "newest_at": 1795543479.0,
+   "status": "sendung",
+   "status_label": "In der Sendung (25.11. 04:01)",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Medienbericht: Julian Jäger soll offenbar neuer ÖBB-Chef werden",
+     "url": "https://www.derstandard.at/story/3000000350864/medienberichte-julian-jaeger-soll-offenbar-neuer-oebb-chef-werden?ref=rss"
+    },
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Neuer ÖBB-Chef im Anflug: Flughafen-Vorstand soll auf Matthä folgen",
+     "url": "https://www.kleinezeitung.at/artikel/41489245/neuer-oebb-chef-im-anflug-flughafen-vorstand-soll-auf-matthae-folgen"
+    }
+   ]
+  },
+  {
    "id": "a09d7a8398f9f85ea9d98453",
    "headline": "Partner und Verwandte Haupttäter bei Femiziden",
    "summary": "Rund 47.000 Frauen und Mädchen sind im vergangenen Jahr weltweit von ihrem Partner oder einem Familienmitglied getötet worden. Die weltweite Mordrate sinkt, aber die Zahl der Femizide geht deutlich langsamer zurück.",
@@ -78,8 +136,8 @@
    ],
    "reports": 3,
    "newest_at": 1795507594.0,
-   "status": "sendung",
-   "status_label": "In der Sendung (24.11. 18:32)",
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
    "breaking_at": null,
    "links": [
     {
@@ -100,34 +158,54 @@
    ]
   },
   {
-   "id": "4ac7be3e7996dfbab06665d4",
-   "headline": "Ungarn schafft Margenbegrenzung wieder ab",
-   "summary": "Ungarns Parlament hat am Dienstag die umstrittene Margenbeschränkung für Supermarktketten wieder aufgehoben. Das ungarische Parlament hat die umstrittene Margenbeschränkung für Supermarktketten, darunter die österreichische Spar-Gruppe, abgeschafft.",
+   "id": "17b4650658f368188750436a",
+   "headline": "US-Gericht spricht Huawei schuldig",
+   "summary": "Der chinesische Technologiekonzern Huawei ist in den USA in einem jahrelangen Strafverfahren schuldig gesprochen worden. Der chinesische Technologiekonzern wurde in zehn von zwölf Anklagepunkten für schuldig befunden.",
    "publishers": [
     "derstandard.at",
-    "orf.at",
-    "krone.at"
+    "orf.at"
    ],
-   "reports": 3,
-   "newest_at": 1795533135.0,
+   "reports": 2,
+   "newest_at": 1795558387.0,
    "status": "nicht",
    "status_label": "Nicht in der Sendung",
    "breaking_at": null,
    "links": [
     {
      "publisher": "derstandard.at",
-     "title": "Ungarn schafft Handelsspannen-Deckel für Supermärkte ab",
-     "url": "https://www.derstandard.at/story/3000000350803/ungarn-schafft-handelsspannen-deckel-fuer-supermaerkte-ab?ref=rss"
+     "title": "US-Gericht spricht Huawei wegen Betrugs schuldig",
+     "url": "https://www.derstandard.at/story/3000000350873/us-gericht-spricht-huawei-wegen-betrugs-schuldig?ref=rss"
     },
     {
      "publisher": "orf.at",
-     "title": "Ungarn schafft Preisdeckel für Supermärkte ab",
-     "url": "https://orf.at/stories/3449142/"
+     "title": "US-Gericht spricht Huawei schuldig",
+     "url": "https://orf.at/stories/3449192/"
+    }
+   ]
+  },
+  {
+   "id": "aef430f15b24eb737fed07b1",
+   "headline": "Auspeitschung von iranischer Sängerin international verurteilt",
+   "summary": "Die Bestrafung der Künstlerin wegen eines Konzertes, das sie ohne Kopftuch gegeben hat, sei \"abscheulich\", erklärte Uno-Menschenrechtskommissar Volker Türk am Dienstag. Die Auspeitschung der iranischen Sängerin Parastu Ahmadi ist international scharf verurteilt worden.",
+   "publishers": [
+    "orf.at",
+    "derstandard.at"
+   ],
+   "reports": 2,
+   "newest_at": 1795552420.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Iran: Türk verurteilt Auspeitschung von Sängerin Ahmadi",
+     "url": "https://orf.at/stories/3449189/"
     },
     {
-     "publisher": "krone.at",
-     "title": "Ungarn schafft Margenbegrenzung wieder ab",
-     "url": "https://www.krone.at/4388621"
+     "publisher": "derstandard.at",
+     "title": "Auspeitschung von iranischer Sängerin international verurteilt",
+     "url": "https://www.derstandard.at/story/3000000350871/auspeitschung-von-iranischer-s228ngerin-international-verurteilt?ref=rss"
     }
    ]
   },
@@ -184,32 +262,6 @@
    ]
   },
   {
-   "id": "e0d0d5b14d328203b9b2ce1a",
-   "headline": "Neuer ÖBB-Chef im Anflug: Flughafen-Vorstand soll auf Matthä folgen",
-   "summary": "Das Match soll laut „Die Presse“ innerhalb der SPÖ entschieden worden sein. Der bisherige Vorstand des Flughafens Wien soll neuer Chef der ÖBB werden.",
-   "publishers": [
-    "derstandard.at",
-    "kleinezeitung.at"
-   ],
-   "reports": 2,
-   "newest_at": 1795543479.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Medienbericht: Julian Jäger soll offenbar neuer ÖBB-Chef werden",
-     "url": "https://www.derstandard.at/story/3000000350864/medienberichte-julian-jaeger-soll-offenbar-neuer-oebb-chef-werden?ref=rss"
-    },
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Neuer ÖBB-Chef im Anflug: Flughafen-Vorstand soll auf Matthä folgen",
-     "url": "https://www.kleinezeitung.at/artikel/41489245/neuer-oebb-chef-im-anflug-flughafen-vorstand-soll-auf-matthae-folgen"
-    }
-   ]
-  },
-  {
    "id": "b1a0d8c1ddde53f2efe6ca79",
    "headline": "Ist Margarine das ärgerlichste Lebensmittel?",
    "summary": "Die „Rama Margarine“ wurde vom Verein für Konsumenteninformation zur „Konsum-Ente“ des Jahres gewählt. Der Verein für Konsumenteninformation vergibt jährlich den Negativpreis.",
@@ -243,7 +295,7 @@
   {
    "id": "a4007bf4501ba19d23ff9eea",
    "headline": "Jemens Armee warnt vor Huthi-Angriff auf Aden",
-   "summary": "Unterdessen wurden bei einem erneuten Angriff auf das höchste Gebäude der saudiarabischen Hauptstadt Riad laut Zivilschutz elf Menschen verletzt. Der Zivilschutz machte laut staatlicher Nachrichtenagentur SPA heute die Huthi-Miliz aus dem Jemen für den Angriff verantwortlich.",
+   "summary": "Unterdessen wurden bei einem erneuten Angriff auf das höchste Gebäude der saudiarabischen Hauptstadt Riad laut Zivilschutz elf Menschen verletzt. Der Zivilschutz machte laut staatlicher Nachrichtenagentur SPA die Huthi-Miliz aus dem Jemen für den Angriff verantwortlich.",
    "publishers": [
     "orf.at",
     "derstandard.at"
@@ -347,7 +399,7 @@
   {
    "id": "d7f66f9e021ca85c0b0e9c8e",
    "headline": "Defizitverfahren: EU mit Österreich zufrieden",
-   "summary": "Die EU-Kommission hat Österreichs Defizitverfahren am Dienstag ein gutes Zeugnis ausgestellt. Die EU-Kommission hat heute die Herbstausgabe ihres Europäischen-Semester-Pakets mit wirtschafts- und haushaltspolitischen Empfehlungen und Bewertungen den EU-Ländern vorgelegt.",
+   "summary": "Die EU-Kommission hat Österreichs Defizitverfahren am Dienstag ein gutes Zeugnis ausgestellt. Die EU-Kommission hat gestern die Herbstausgabe ihres Europäischen-Semester-Pakets mit wirtschafts- und haushaltspolitischen Empfehlungen und Bewertungen den EU-Ländern vorgelegt.",
    "publishers": [
     "orf.at",
     "krone.at"
@@ -688,6 +740,426 @@
    ]
   },
   {
+   "id": "fc4865c6d5929bb2aca1468a",
+   "headline": "Briten haben nur noch halb so oft Sex wie früher",
+   "summary": "Briten haben immer weniger Sex – und das ist nicht der einzige bemerkenswerte Wandel im Schlafzimmer. Seit den 1990er-Jahren hat sich die Häufigkeit sexueller Kontakte beinahe halbiert.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795563045.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Briten haben nur noch halb so oft Sex wie früher",
+     "url": "https://www.krone.at/4387854"
+    }
+   ]
+  },
+  {
+   "id": "f442dc77d1657bc9114909ce",
+   "headline": "Früher Gleise – heute Natur",
+   "summary": "Wo früher Züge rangierten, leben heute seltene Tiere und Pflanzen. In Breitenlee zeigt die Stadt Wien, wie ehemalige Bahnflächen zu wertvollen Naturräumen werden – und warum die Natur dabei manchmal Unterstützung braucht.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795561293.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Früher Gleise – heute Natur",
+     "url": "https://www.krone.at/4369339"
+    }
+   ]
+  },
+  {
+   "id": "ca2bc60a767e0af81f34d34d",
+   "headline": "Standardrätsel H 11452",
+   "summary": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795561260.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Standardrätsel H 11452",
+     "url": "https://www.derstandard.at/story/3000000349502/standardraetsel-h-11452?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "aa7f2f31b0119b2e971cda2e",
+   "headline": "Hackerangriff auf US-Geheimdienst CIA laut Bericht",
+   "summary": "Einige als nicht geheim eingestufte Informationen sollen so offengelegt worden sein. Es ist nicht der erste Vorfall dieser Art in jüngerer Zeit.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795559541.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Hackerangriff auf US-Geheimdienst CIA laut Bericht",
+     "url": "https://www.derstandard.at/story/3000000350876/hackerangriff-auf-us-geheimdienst-cia-laut-bericht?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "9bc5da26380d605fe9e23ea0",
+   "headline": "Arsenal mit Remis gegen Dortmund, Real Madrid bleibt mit 5:1-Kantersieg makellos",
+   "summary": "Manchester City beweist Moral gegen Napoli. Leipzig und Galatasaray feiern Heimsiege in der Champions League.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795558587.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Arsenal mit Remis gegen Dortmund, Real Madrid bleibt mit 5:1-Kantersieg makellos",
+     "url": "https://www.derstandard.at/story/3000000350874/arsenal-mit-remis-gegen-dortmund-real-madrid-bleibt-mit-51-kantersieg-makellos?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "501e3db67faf6212007a50d3",
+   "headline": "Mario Kunasek: „Die Finanzlage ist mehr als ernst“",
+   "summary": "Alle vier Oppositionsparteien im steirischen Landtag sprachen der blau-schwarzen Landesregierung das Misstrauen aus. Grund ist das sich abzeichnende Budgetdesaster.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795558435.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Mario Kunasek: „Die Finanzlage ist mehr als ernst“",
+     "url": "https://www.krone.at/4389074"
+    }
+   ]
+  },
+  {
+   "id": "a2d2e7b18a2e02b6ac3e1d0d",
+   "headline": "Gady: „Eine Million Tote im Ukrainekrieg schon 2027 wahrscheinlich“",
+   "summary": "Am Dienstag sprach Militäranalyst Franz-Stefan Gady in der „Zeit im Bild 2“ über eine mögliche Eskalation des Ukraine-Kriegs über den Winter.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795557438.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Gady: „Eine Million Tote im Ukrainekrieg schon 2027 wahrscheinlich“",
+     "url": "https://www.kleinezeitung.at/artikel/41489367/gady-eine-million-tote-im-ukrainekrieg-schon-2027-wahrscheinlich"
+    }
+   ]
+  },
+  {
+   "id": "65901f27806a0b56b51bcb10",
+   "headline": "„So ein Nudeltor bekommen, das war bezeichnend!“",
+   "summary": "„Wir haben heute sicher nicht unser wahres Gesicht gezeigt. Wir haben etwas komplett anderes vorgehabt“, erklärt LASK-Trainer Didi Kühbauer nach dem bitteren 0:1 gegen Bodö/Glimt in der Champions League.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795557423.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "„So ein Nudeltor bekommen, das war bezeichnend!“",
+     "url": "https://www.krone.at/4389134"
+    }
+   ]
+  },
+  {
+   "id": "9b6a1234d28a2ded153961e2",
+   "headline": "Jannik Sinner erfolgreich operiert, Tschechien im Davis-Cup-Halbfinale",
+   "summary": "Wann der frühere Weltranglistenerste wieder auf die Tour zurückkehren wird, bleibt offen. Die Tschechen siegten in Bologna gegen Kanada.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795557083.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Jannik Sinner erfolgreich operiert, Tschechien im Davis-Cup-Halbfinale",
+     "url": "https://www.derstandard.at/story/3000000350875/jannik-sinner-erfolgreich-operiert-tschechien-im-davis-cup-halbfinale?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "29dec41af9fa3abdfeb839ba",
+   "headline": "Koalition verschärft Sexualstrafrecht – teilweise",
+   "summary": "Nach den vier Freisprüchen im Wiener Wellenbecken-Fall will die Regierung am Mittwoch ein Frauenschutzpaket auf den Weg bringen. Einer der strittigeren Punkte ist das Konsensprinzip im Sexualstrafrecht.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795554295.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Koalition verschärft Sexualstrafrecht – teilweise",
+     "url": "https://www.krone.at/4388676"
+    }
+   ]
+  },
+  {
+   "id": "6673955651bf9b9f42d4d4b6",
+   "headline": "Nächster Anlauf gegen den Angstgegner aus Italien",
+   "summary": "Nach dem 3:2 in Innsbruck wollen die Eisbullen daheim gegen Pustertal nachlegen. Gegen die Südtiroler hat Salzburg die letzten fünf Duelle verloren.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795554058.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Nächster Anlauf gegen den Angstgegner aus Italien",
+     "url": "https://www.krone.at/4389065"
+    }
+   ]
+  },
+  {
+   "id": "ae69dc3084593af06d084481",
+   "headline": "Schafft es die Grazerin Alina ins Finale von „Das große Backen“?",
+   "summary": "Wer kommt ins Finale der Puls 4- und Joyn-Show „Das große Backen Österreich“: Drei Kandidatinnen und ein Kandidat backen um den Einzug.",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795553760.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Schafft es die Grazerin Alina ins Finale von „Das große Backen“?",
+     "url": "https://www.kleinezeitung.at/artikel/41484816/schafft-es-die-grazerin-alina-ins-finale-von-das-grosse-backen"
+    }
+   ]
+  },
+  {
+   "id": "62a282412d7a474740664ba4",
+   "headline": "EU-Kommission will Russland-Flagge bei Sportevents verbieten",
+   "summary": "Ein neues Sanktionspaket soll russische Symbole bei Sportveranstaltungen verbannen. Auch Sponsorings sowie Führungspositionen in Sportverbänden sollen eingeschränkt werden.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795553359.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "EU-Kommission will Russland-Flagge bei Sportevents verbieten",
+     "url": "https://www.derstandard.at/story/3000000350858/eu-kommission-will-russland-flagge-bei-sportevents-verbieten?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "adccc48bc4eea922700114d8",
+   "headline": "Passant entdeckt Leiche in Gefrierschrank vor Haus",
+   "summary": "Grauenhafter Fund im Utrechter Stadtteil Pijlsweerd: Ein Passant entdeckte am Dienstag eine Leiche in einem Gefrierschrank vor einem Wohnhaus. Das Gerät war offenbar schon seit zwei Wochen dort abgestellt, bevor darin die sterblichen Überreste entdeckt wurden.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795553290.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Passant entdeckt Leiche in Gefrierschrank vor Haus",
+     "url": "https://www.krone.at/4389062"
+    }
+   ]
+  },
+  {
+   "id": "7e4f86bd4d7a55c05fb81b38",
+   "headline": "Strache steht wieder vor Gericht",
+   "summary": "Ex-Vizekanzler Heinz-Christian Strache (FPÖ) muss sich ab Mittwoch erneut vor Gericht verantworten. Dem früheren FPÖ-Chef sowie zwei Verantwortlichen des...",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795552647.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Strache steht wieder vor Gericht",
+     "url": "https://www.kleinezeitung.at/artikel/41489349/strache-steht-wieder-vor-gericht"
+    }
+   ]
+  },
+  {
+   "id": "c885a2defd6bf499bc58995f",
+   "headline": "Van der Bellen trifft in Madrid Spaniens Königspaar",
+   "summary": "Bundespräsident Alexander Van der Bellen trifft am Mittwoch im Zuge eines dreitägigen Arbeitsbesuchs in Madrid Spaniens König Felipe VI..",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795552647.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Van der Bellen trifft in Madrid Spaniens Königspaar",
+     "url": "https://www.kleinezeitung.at/artikel/41489352/van-der-bellen-trifft-in-madrid-spaniens-koenigspaar"
+    }
+   ]
+  },
+  {
+   "id": "23ad50c4107722e125944041",
+   "headline": "Prozess nach Attacke auf Ex-Freundin bei letzter Aussprache",
+   "summary": "Am Wiener Straflandesgericht wird am Mittwoch ein versuchter Femizid verhandelt. Ein damals 19-Jähriger muss sich vor Geschworenen verantworten, weil er am...",
+   "publishers": [
+    "kleinezeitung.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795552647.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "kleinezeitung.at",
+     "title": "Prozess nach Attacke auf Ex-Freundin bei letzter Aussprache",
+     "url": "https://www.kleinezeitung.at/artikel/41489348/prozess-nach-attacke-auf-ex-freundin-bei-letzter-aussprache"
+    }
+   ]
+  },
+  {
+   "id": "d40edd1d93e6aea30d5b80c9",
+   "headline": "Muntere erste Partie bei Schach-WM in Genf endet mit einem Remis",
+   "summary": "Weltmeister Gukesh und Herausforderer Sindarov trennen sich in einer Berliner Verteidigung nach interessantem Verlauf unentschieden, es steht 0,5 zu 0,5.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795552183.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Muntere erste Partie bei Schach-WM in Genf endet mit einem Remis",
+     "url": "https://www.derstandard.at/story/3000000350870/muntere-erste-partie-bei-schach-wm-in-genf-endet-mit-einem-remis?ref=rss"
+    }
+   ]
+  },
+  {
+   "id": "54bdc778300e8d70894ae363",
+   "headline": "Frau stürzte in Bus auf Mädchen: Zeugen gesucht",
+   "summary": "Eine bislang unbekannte Frau verlor am Dienstag während der Kurvenfahrt eines Linienbusses in Innsbruck den Halt und stürzte auf ein Mädchen (11). Dieses verspürte zunächst keinen Schmerz, wenig später allerdings schon.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795552179.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Frau stürzte in Bus auf Mädchen: Zeugen gesucht",
+     "url": "https://www.krone.at/4389055"
+    }
+   ]
+  },
+  {
+   "id": "dc360557e9d31b8654f9575c",
+   "headline": "Datenhack offenbart Russlands Kriegstote",
+   "summary": "Die Zahl der Toten im Ukraine-Krieg gilt auf beiden Seiten als Staatsgeheimnis. Ein Datenhack bei der russischen Statistikbehörde Rosstat zeigt nun, dass die Zahl der getöteten Russen enorm ist: Laut Auswertungen sind fast 500.000 Gefallene in den Daten bestätigt.",
+   "publishers": [
+    "orf.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795551927.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "orf.at",
+     "title": "Datenhack offenbart Russlands Kriegstote",
+     "url": "https://orf.at/stories/3449103/"
+    }
+   ]
+  },
+  {
+   "id": "04d62cf624c5a51cd9f3702e",
+   "headline": "Rotjacken-Seuche: Ausfälle treffen heuer die Alten",
+   "summary": "Der KAC gastiert bei Tabellenführer Bozen. Erneut müssen die Klagenfurter ihr Lazarett aufstocken.",
+   "publishers": [
+    "krone.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795550231.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "krone.at",
+     "title": "Rotjacken-Seuche: Ausfälle treffen heuer die Alten",
+     "url": "https://www.krone.at/4388693"
+    }
+   ]
+  },
+  {
    "id": "436eac6503b8dbbbcc90596b",
    "headline": "Eiskalt erwischt: LASK verliert nach spätem Gegentor gegen Bodö/Glimt",
    "summary": "In einer recht chancenarmen Partie bei Minusgraden sah es lange nach einem Remis aus. Dann schlugen die Norweger zu.",
@@ -724,26 +1196,6 @@
      "publisher": "derstandard.at",
      "title": "Was eine Atomexplosion im niedrigen Erdorbit anrichten würde",
      "url": "https://www.derstandard.at/story/3000000350808/was-eine-atomexplosion-im-niedrigen-erdorbit-anrichten-wuerde?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "5d97b5590f7e9db976b72010",
-   "headline": "Iran: Türk verurteilt Auspeitschung von Sängerin Ahmadi",
-   "summary": "Die Auspeitschung der iranischen Sängerin Parastu Ahmadi ist international scharf verurteilt worden. Die Bestrafung der Künstlerin wegen eines Konzertes, das sie ohne Kopftuch gegeben hat, sei „abscheulich“, sagte der UNO-Menschenrechtskommissar Volker Türk heute.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795549647.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Iran: Türk verurteilt Auspeitschung von Sängerin Ahmadi",
-     "url": "https://orf.at/stories/3449189/"
     }
    ]
   },
@@ -890,7 +1342,7 @@
   {
    "id": "f7e0b56561dbebbbe8fd63aa",
    "headline": "OGH: Arbeitgeber muss für Internetverbindung aufkommen",
-   "summary": "Wenn Beschäftigte regelmäßig von zu Hause aus arbeiten, also im Homeoffice sind, muss die Firma die dafür nötige Internetverbindung bereitstellen bzw. für deren Kosten aufkommen. Der Oberste Gerichtshof (OGH) hat im Oktober der entsprechenden Klage eines Zentralbetriebsrats recht gegeben, wie der „Standard“ heute zuerst berichtete.",
+   "summary": "Wenn Beschäftigte regelmäßig von zu Hause aus arbeiten, also im Homeoffice sind, muss die Firma die dafür nötige Internetverbindung bereitstellen bzw. für deren Kosten aufkommen. Der Oberste Gerichtshof (OGH) hat im Oktober der entsprechenden Klage eines Zentralbetriebsrats recht gegeben, wie der „Standard“ gestern zuerst berichtete.",
    "publishers": [
     "orf.at"
    ],
@@ -1130,7 +1582,7 @@
   {
    "id": "f97528a2dbd1d209ae5bb98b",
    "headline": "Magyar will Ungarn der Ukraine wieder annähern",
-   "summary": "Der ungarische Ministerpräsident Peter Magyar hat heute in der ukrainischen Grenzregion Transkarpatien den ukrainischen Präsidenten Wolodymyr Selenskyj getroffen. Beide nahmen an einer Gedenkveranstaltung auf einem Friedhof in Uschhorod teil, der Verwaltungshauptstadt der Region.",
+   "summary": "Der ungarische Ministerpräsident Peter Magyar hat gestern in der ukrainischen Grenzregion Transkarpatien den ukrainischen Präsidenten Wolodymyr Selenskyj getroffen. Beide nahmen an einer Gedenkveranstaltung auf einem Friedhof in Uschhorod teil, der Verwaltungshauptstadt der Region.",
    "publishers": [
     "orf.at"
    ],
@@ -1370,7 +1822,7 @@
   {
    "id": "9bd89535d737b2e5cab18f07",
    "headline": "Aktie von Anthropic rutscht unter den Ausgabepreis",
-   "summary": "Der Entwickler des KI-Modells Claude war zuletzt um 77 Dollar je Aktie zu haben. Das ist weniger als beim Börsenstart vor einer Woche.",
+   "summary": "Der Entwickler des KI-Modells Claude rutschte stark ab und schloss bei 81,90 Dollar. Das ist weniger als beim Börsenstart vor einer Woche.",
    "publishers": [
     "derstandard.at"
    ],
@@ -3189,8 +3641,8 @@
   },
   {
    "id": "35e45b01beaa79ac3bf5bf63",
-   "headline": "Wer wird der neue ÖFB-Sportdirektor? Vier Namen sollen auf der Shortlist stehen",
-   "summary": "Die Entscheidung, wer Peter Schöttel nachfolgt, soll laut einem Medienbericht noch in dieser Woche erfolgen.",
+   "headline": "Wer wird der neue ÖFB-Sportdirektor? Diese Namen sollen noch im Rennen sein",
+   "summary": "Die Entscheidung, wer Peter Schöttel nachfolgt, soll laut Medienberichten noch in dieser Woche erfolgen.",
    "publishers": [
     "derstandard.at"
    ],
@@ -3202,15 +3654,15 @@
    "links": [
     {
      "publisher": "derstandard.at",
-     "title": "Wer wird der neue ÖFB-Sportdirektor? Vier Namen sollen auf der Shortlist stehen",
+     "title": "Wer wird der neue ÖFB-Sportdirektor? Diese Namen sollen noch im Rennen sein",
      "url": "https://www.derstandard.at/story/3000000350833/wer-wird-der-neue-oefb-sportdirektor-vier-namen-sollen-auf-der-shortlist-stehen?ref=rss"
     }
    ]
   },
   {
    "id": "fdbf3af0ffbb2c5c2469b6a5",
-   "headline": "E-Auto-Produzent BYD will Werk in Frankreich kaufen",
-   "summary": "Der chinesische Elektroautobauer BYD verhandelt nach eigenen Angaben mit Ineos Automotive über den Kauf von dessen Werk im französischen Hambach. Die geplante Transaktion stehe noch unter dem Vorbehalt von Beratungen mit dem Betriebsrat, teilte Chinas größter Autobauer heute mit.",
+   "headline": "Chinas BYD will Autofabrik in Frankreich kaufen",
+   "summary": "Der chinesische Elektroautobauer BYD verhandelt nach eigenen Angaben mit Ineos Automotive über den Kauf von dessen Werk im französischen Hambach. Die geplante Transaktion stehe noch unter dem Vorbehalt von Beratungen mit dem Betriebsrat, teilte Chinas größter Autobauer gestern mit.",
    "publishers": [
     "orf.at"
    ],
@@ -3222,7 +3674,7 @@
    "links": [
     {
      "publisher": "orf.at",
-     "title": "E-Auto-Produzent BYD will Werk in Frankreich kaufen",
+     "title": "Chinas BYD will Autofabrik in Frankreich kaufen",
      "url": "https://orf.at/stories/3449156/"
     }
    ]
@@ -5108,6 +5560,26 @@
    ]
   },
   {
+   "id": "db594480fdcec407714eca9e",
+   "headline": "Spürt ihr Verantwortung für die Folgen der Ozeanversauerung?",
+   "summary": "Mein Forum: Diskutieren Sie dieses Thema mit der STANDARD-Community.",
+   "publishers": [
+    "derstandard.at"
+   ],
+   "reports": 1,
+   "newest_at": 1795514400.0,
+   "status": "nicht",
+   "status_label": "Nicht in der Sendung",
+   "breaking_at": null,
+   "links": [
+    {
+     "publisher": "derstandard.at",
+     "title": "Spürt ihr Verantwortung für die Folgen der Ozeanversauerung?",
+     "url": "https://www.derstandard.at/story/3000000350672/spuert-ihr-verantwortung-fuer-die-folgen-der-ozeanversauerung?ref=rss"
+    }
+   ]
+  },
+  {
    "id": "d672f39aa39b39c335b7ac8c",
    "headline": "Macht uns Taylor Swift wirklich produktiver?",
    "summary": "Selbst Liebesballaden werden heute auf Arbeitstauglichkeit abgeklopft. Warum uns Popstars plötzlich die Quartalszahlen retten sollen.",
@@ -5949,8 +6421,8 @@
   },
   {
    "id": "f845ecc73575162c9fd1b684",
-   "headline": "Spannung vor Misstrauensantrag gegen Landesregierung",
-   "summary": "November-Landtag: ÖVP „schwänzt“ Debatte über Grazer Altststadt ++ Einschnitte beim Gesundheitsfonds ++ Ringen um höhere Nächtigungsabgabe.",
+   "headline": "Misstrauensantrag gegen Landesregierung geht ins Leere",
+   "summary": "November-Landtag: ÖVP „schwänzt“ Debatte über Grazer Altstadt ++ Einschnitte beim Gesundheitsfonds ++ Ringen um höhere Nächtigungsabgabe.",
    "publishers": [
     "kleinezeitung.at"
    ],
@@ -5962,7 +6434,7 @@
    "links": [
     {
      "publisher": "kleinezeitung.at",
-     "title": "Spannung vor Misstrauensantrag gegen Landesregierung",
+     "title": "Misstrauensantrag gegen Landesregierung geht ins Leere",
      "url": "https://www.kleinezeitung.at/artikel/41483352/landtag-schlagabtausch-und-misstrauensantrag-wegen-schulden"
     }
    ]
@@ -8084,286 +8556,6 @@
      "publisher": "kleinezeitung.at",
      "title": "„Besorgniserregend“: Grazer Stadtrat über Schwächen bei Lehrlingen",
      "url": "https://www.kleinezeitung.at/artikel/41444347/besorgniserregend-grazer-stadtrat-ueber-schwaechen-bei-lehrlingen"
-    }
-   ]
-  },
-  {
-   "id": "47183879d5ecbfa19216e0a6",
-   "headline": "Trump: Todesurteile schneller vollstrecken",
-   "summary": "US-Präsident Donald Trump will Todesurteile in den USA schneller vollstrecken lassen. Er wies gestern das Justizministerium an, bei auf Bundesebene verhängten Todesstrafen auf eine zügige Durchführung hinzuwirken.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795487274.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Trump: Todesurteile schneller vollstrecken",
-     "url": "https://orf.at/stories/3449080/"
-    }
-   ]
-  },
-  {
-   "id": "6497d4da6426c7684fcfbe27",
-   "headline": "Russische Militärflugzeuge nahe Südkorea",
-   "summary": "Mehrere russische Militärflugzeuge sind südkoreanischen Medien zufolge heute Früh in die südkoreanische Luftverteidigungszone eingedrungen. Die südkoreanische Nachrichtenagentur Yonhap korrigierte einen früheren Bericht, wonach ein mutmaßliches nordkoreanisches Fluggerät den südkoreanischen Luftraum verletzt habe.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795480890.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Russische Militärflugzeuge nahe Südkorea",
-     "url": "https://orf.at/stories/3449079/"
-    }
-   ]
-  },
-  {
-   "id": "7a82e7134cf9da2a24593346",
-   "headline": "Jethro Tull: Die Wunderheilung des Flöten-Zampanos",
-   "summary": "Vor nicht einmal zwei Wochen musste sich Jethro Tull-Frontmann Ian Anderson einer dringenden Bauch-OP unterziehen und Konzerte u.a. in Linz und Bregenz verschieben – Mittwochabend feierte ein ausverkauftes Wiener Konzerthaus eine Art Wiederauferstehung. Der 79-Jährige war topfit und lieferte eine makellose Rock-Show der alten Schule ab.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795477475.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Jethro Tull: Die Wunderheilung des Flöten-Zampanos",
-     "url": "https://www.krone.at/4387671"
-    }
-   ]
-  },
-  {
-   "id": "33eabf72e1f080a0ea5e0a35",
-   "headline": "Demokraten zürnen Trump, Börsen jubeln",
-   "summary": "Die überraschende Rückkehr von Jensen Huang als Vorstandschef von Nvidia nach einer Spionageaffäre hat am Montag für eine kräftige Erholung an den US-Börsen gesorgt. Vor allem die technologielastige NASDAQ profitierte.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795476694.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "Demokraten zürnen Trump, Börsen jubeln",
-     "url": "https://orf.at/stories/3449062/"
-    }
-   ]
-  },
-  {
-   "id": "7f9129981090381e86ffa024",
-   "headline": "Standardrätsel E 11451",
-   "summary": "Täglich neu, exklusiv für Smart-Abonnent:innen: Das knifflige Quizkultur-Rätsel des STANDARD.",
-   "publishers": [
-    "derstandard.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795474860.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "derstandard.at",
-     "title": "Standardrätsel E 11451",
-     "url": "https://www.derstandard.at/story/3000000349501/standardraetsel-e-11451?ref=rss"
-    }
-   ]
-  },
-  {
-   "id": "9a7a795e4619d5c841d0e9a2",
-   "headline": "Mossad und DSN verhinderten „Massenmord“ in Wien",
-   "summary": "Israels Geheimdienst Mossad hat nach Angaben von Ex-Chef David Barnea bei der Vereitelung des verhinderten Anschlags auf ein Konzert von Taylor Swift 2024 in Wien eine wichtige Rolle gespielt.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795473689.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Mossad und DSN verhinderten „Massenmord“ in Wien",
-     "url": "https://www.krone.at/4387668"
-    }
-   ]
-  },
-  {
-   "id": "d30586abaa25da25a70479db",
-   "headline": "Mossad in Verhinderung von Swift-Anschlag involviert",
-   "summary": "Israels Geheimdienst Mossad hat nach Angaben von Ex-Chef David Barnea bei der Vereitelung des verhinderten Anschlags auf ein Konzert von Taylor Swift 2024 in...",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795472841.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Mossad in Verhinderung von Swift-Anschlag involviert",
-     "url": "https://www.kleinezeitung.at/artikel/41486029/mossad-in-verhinderung-von-swift-anschlag-involviert"
-    }
-   ]
-  },
-  {
-   "id": "c7dd901f57d90ecadb942c94",
-   "headline": "Den Wasserratten läuft langsam die Zeit davon",
-   "summary": "Mit Platz drei im Cup und der Einführung eines neuen Westliga-Formats hat sich bei den Wasserballern von Paris Lodron Salzburg zuletzt einiges getan. Sorgenfalten bereitet dem Klub, der in Rif beheimatet ist, aber weniger die neue Saison, die am Wochenende beginnt, sondern die Zukunftsperspektive.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795469414.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Den Wasserratten läuft langsam die Zeit davon",
-     "url": "https://www.krone.at/4387593"
-    }
-   ]
-  },
-  {
-   "id": "954905b130babd10ddf509a1",
-   "headline": "Verlag wirbt mit Bildern von Pelicots Missbrauch",
-   "summary": "Um ein neues Buch zu bewerben, hat ein Verlag Aufnahmen des Missbrauchs von Gisele Pelicot an Medien verschickt. Das Vergewaltigungsopfer wird in dem Buch sogar als mitschuldig an den an ihr begangenen Straftaten durch ihren eigenen Ehemann Dominique Pelicot bezichtigt.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795469029.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Verlag wirbt mit Bildern von Pelicots Missbrauch",
-     "url": "https://www.krone.at/4387547"
-    }
-   ]
-  },
-  {
-   "id": "898def8441f345287caaa332",
-   "headline": "Gesuchtes Tier in Istanbul war wohl doch kein Löwe",
-   "summary": "Nachdem in der Millionenstadt Istanbul angeblich ein Löwe gesichtet worden war, gab es nun Entwarnung: Bei dem Tier, nach dem intensiv gesucht wurde, soll es sich doch nicht um eine Raubkatze handeln.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795468884.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Gesuchtes Tier in Istanbul war wohl doch kein Löwe",
-     "url": "https://www.krone.at/4386748"
-    }
-   ]
-  },
-  {
-   "id": "e48f9f773f06c7af0bcd0edf",
-   "headline": "E-Auto blieb auf Sockel in Hauseingang hängen",
-   "summary": "In einen Hauseingang gefahren, einen Zaun abgeräumt und letztlich auf einem Sockel hängengeblieben ist ein Elektroauto in Bischofshofen in Salzburg am Montagabend. Besonders heikel: Da die Bodengruppe des Fahrzeuges aufsaß, musste für die Bergung ein Ladekran herangezogen werden.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795468326.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "E-Auto blieb auf Sockel in Hauseingang hängen",
-     "url": "https://www.krone.at/4387624"
-    }
-   ]
-  },
-  {
-   "id": "97e6469a5eec1beaff379358",
-   "headline": "Pilnacek-U-Ausschuss: Sobotka weist Vorwürfe von Tonaufnahme zurück",
-   "summary": "Die Fraktionen sehen in ehemaligem Nationalratspräsidenten zentrale Figur in der Causa Pilnacek. Am Nachmittag wurde Salzburgs Landeshauptfrau Edtstadler befragt.",
-   "publishers": [
-    "kleinezeitung.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795466171.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "kleinezeitung.at",
-     "title": "Pilnacek-U-Ausschuss: Sobotka weist Vorwürfe von Tonaufnahme zurück",
-     "url": "https://www.kleinezeitung.at/artikel/41486004/sobotka-wird-im-pilnacek-u-ausschuss-befragt"
-    }
-   ]
-  },
-  {
-   "id": "b72d3ebd2e259fde548b61aa",
-   "headline": "Feuerwehr Stans sicherte absturzgefährdeten Lkw",
-   "summary": "Auf einer Kehre im Gemeindegebiet Stans blieb Montagabend ein Lkw stecken. Aufgrund der Steilheit drohte das Fahrzeug zu kippen bzw. weiter abzurutschen.",
-   "publishers": [
-    "krone.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795465958.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "krone.at",
-     "title": "Feuerwehr Stans sicherte absturzgefährdeten Lkw",
-     "url": "https://www.krone.at/4387598"
-    }
-   ]
-  },
-  {
-   "id": "9fba5881321cfe62567fe4c5",
-   "headline": "WKStA übernimmt Ermittlungen gegen Benko aus Hamburg",
-   "summary": "Die Staatsanwaltschaft Hamburg hat Betrugsermittlungen gegen Signa-Gründer Rene Benko an die Wirtschafts- und Korruptionsstaatsanwaltschaft (WKStA) abgetreten. Investorengelder in Höhe von 82 Mio. Euro wurden – so der Verdacht der Hamburger – konzernintern zweckwidrig verwendet, berichtete gestern der „Kurier“.",
-   "publishers": [
-    "orf.at"
-   ],
-   "reports": 1,
-   "newest_at": 1795465891.0,
-   "status": "nicht",
-   "status_label": "Nicht in der Sendung",
-   "breaking_at": null,
-   "links": [
-    {
-     "publisher": "orf.at",
-     "title": "WKStA übernimmt Ermittlungen gegen Benko aus Hamburg",
-     "url": "https://orf.at/stories/3449075/"
     }
    ]
   },
