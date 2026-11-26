@@ -1,66 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261125T030144Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 25.11.2026 um 04:01 Uhr",
-      "created_at": 1795575704.81875,
-      "video": "broadcasts/20261125T030144Z.mp4",
-      "sources": [
-        {
-          "title": "Berliner Abgeordnete Emde muss Linke-Fraktion verlassen",
-          "url": "https://orf.at/stories/3449177/"
-        },
-        {
-          "title": "Umstrittene Abgeordnete Emde muss Linke verlassen",
-          "url": "https://www.krone.at/4388891"
-        },
-        {
-          "title": "Streit um Israel-Haltung: Berliner Linke stimmte für Ausschluss von Vanessa Emde",
-          "url": "https://www.derstandard.at/story/3000000350746/streit-um-israel-haltung-berliner-linke-stimmte-fuer-ausschluss-von-vanessa-emde?ref=rss"
-        },
-        {
-          "title": "Neuer ÖBB-Chef im Anflug: Flughafen-Vorstand soll auf Matthä folgen",
-          "url": "https://www.kleinezeitung.at/artikel/41489245/neuer-oebb-chef-im-anflug-flughafen-vorstand-soll-auf-matthae-folgen"
-        },
-        {
-          "title": "Medienbericht: Julian Jäger soll offenbar neuer ÖBB-Chef werden",
-          "url": "https://www.derstandard.at/story/3000000350864/medienberichte-julian-jaeger-soll-offenbar-neuer-oebb-chef-werden?ref=rss"
-        },
-        {
-          "title": "Verkehrsunfall",
-          "url": ""
-        },
-        {
-          "title": "Slowakei schafft Briefwahl ab: „Nicht glaubwürdig“",
-          "url": "https://www.krone.at/4388698"
-        },
-        {
-          "title": "Slowakei schafft auf Initiative der Regierung Briefwahl ab",
-          "url": "https://www.derstandard.at/story/3000000350842/slowakei-schafft-auf-initiative-der-regierung-briefwahl-ab?ref=rss"
-        },
-        {
-          "title": "Slowakei schafft auf Regierungsinitiative Briefwahl ab",
-          "url": "https://orf.at/stories/3449161/"
-        },
-        {
-          "title": "Ungarn schafft Margenbegrenzung wieder ab",
-          "url": "https://www.krone.at/4388621"
-        },
-        {
-          "title": "Ungarn schafft Preisdeckel für Supermärkte ab",
-          "url": "https://orf.at/stories/3449142/"
-        },
-        {
-          "title": "Ungarn schafft Handelsspannen-Deckel für Supermärkte ab",
-          "url": "https://www.derstandard.at/story/3000000350803/ungarn-schafft-handelsspannen-deckel-fuer-supermaerkte-ab?ref=rss"
-        }
-      ],
-      "transcript": "broadcasts/20261125T030144Z.txt",
-      "subtitles": "broadcasts/20261125T030144Z.vtt",
-      "subtitle_download": "broadcasts/20261125T030144Z.srt"
-    },
-    {
       "id": "20261125T170648Z",
       "kind": "broadcast",
       "title": "Nachrichten 25.11.2026 um 18:06 Uhr",
@@ -115,6 +55,58 @@
       "transcript": "broadcasts/20261125T170648Z.txt",
       "subtitles": "broadcasts/20261125T170648Z.vtt",
       "subtitle_download": "broadcasts/20261125T170648Z.srt"
+    },
+    {
+      "id": "20261126T020942Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 26.11.2026 um 03:09 Uhr",
+      "created_at": 1795658982.679585,
+      "video": "broadcasts/20261126T020942Z.mp4",
+      "sources": [
+        {
+          "title": "OECD: Österreichs Gesundheitssystem teuer, digitale Angebote wenig genutzt",
+          "url": "https://www.derstandard.at/story/3000000350921/oecd-214sterreichs-gesundheitssystem-teuer-e-health-wenig-genutzt?ref=rss"
+        },
+        {
+          "title": "OECD: Österreichs Gesundheitssystem eines der teuersten",
+          "url": "https://orf.at/stories/3449201/"
+        },
+        {
+          "title": "Österreichs Gesundheitssystem teuer, E-Health wenig genutzt",
+          "url": "https://www.kleinezeitung.at/artikel/41489415/oesterreichs-gesundheitssystem-teuer-e-health-wenig-genutzt"
+        },
+        {
+          "title": "Van der Bellen für weniger „Abhängigkeit von USA“",
+          "url": "https://www.krone.at/4390252"
+        },
+        {
+          "title": "Van der Bellen: Appell gegen Abhängigkeit von USA",
+          "url": "https://orf.at/stories/3449285/"
+        },
+        {
+          "title": "Motocrossunfall: 15-Jähriger schwer verletzt",
+          "url": ""
+        },
+        {
+          "title": "Bis zu 15 Zentimeter: In Innsbruck wird es weiß",
+          "url": "https://www.krone.at/4389718"
+        },
+        {
+          "title": "Bis zu 15 Zentimeter Schnee: Am Donnerstag wird Kärnten weiß",
+          "url": "https://www.kleinezeitung.at/artikel/41491454/bis-zu-15-zentimeter-schnee-am-donnerstag-wird-kaernten-weiss"
+        },
+        {
+          "title": "Einigung bei Telekom-KV: Mehr Gehalt und Prämie",
+          "url": "https://www.krone.at/4390225"
+        },
+        {
+          "title": "Telekom-Kollektivvertrag: Bis zu 3,2 Prozent mehr Gehalt und 500 Euro Prämie",
+          "url": "https://www.derstandard.at/story/3000000351093/telekom-kv-bis-zu-32-prozent-mehr-gehalt-und-500-euro-pr228mie?ref=rss"
+        }
+      ],
+      "transcript": "broadcasts/20261126T020942Z.txt",
+      "subtitles": "broadcasts/20261126T020942Z.vtt",
+      "subtitle_download": "broadcasts/20261126T020942Z.srt"
     }
   ]
 }

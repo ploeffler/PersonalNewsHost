@@ -39,7 +39,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "1206462091f5356cd789bc8b",
+    "pipeline_group_id": "3b0706539016ed152921dd3c",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -47,15 +47,15 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "2376d12fe7ef00ba9af4e54b",
+          "source_id": "fbd25b16b28b967b1bc20aca",
           "supported": true,
-          "quote": "Nach ukrainischen Angriffen auf zwei russische Schiffe vor der libyschen Küste sind zwei Soldaten an den Folgen ihrer Verletzungen gestorben."
+          "quote": "Bundespräsident Alexander Van der Bellen hat am Mittwoch im Rahmen eines Arbeitsbesuchs in Spanien eine größere Selbstständigkeit Europas bei Verteidigungs- und Wirtschaftsfragen von den USA gefordert."
         },
         {
           "claim_index": 1,
-          "source_id": "922ca0cd978687addef9496a",
+          "source_id": "65fbea7f6ee3d1c827384494",
           "supported": true,
-          "quote": "Die beiden Männer seien infolge der Verletzungen ums Leben gekommen, „die sie bei der Erfüllung ihrer nationalen Pflicht nach dem verbrecherischen Angriff auf den Marinestützpunkt Bengasi erlitten hatten“, teilte der Sohn des im Osten Libyens mächtigen Befehlshabers Chalifa Haftar, Saddam Haftar, in der Nacht auf heute auf Facebook mit."
+          "quote": "Nach einem Gespräch mit dem spanischen König Felipe VI. im Madrider Zarzuela-Palast, an dem auch die spanische Verteidigungsministerin Margarita Robles teilnahm, meinte Van der Bellen, Europa müsse seine strategische Eigenständigkeit stärken."
         }
       ],
       "conflicts": [],
@@ -68,7 +68,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "f8ef48bc6203ed908923eeee",
+    "pipeline_group_id": "835dc37759c5bbaf11d15a02",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -76,73 +76,73 @@
       "claims": [
         {
           "claim_index": 0,
+          "source_id": "d5df35b4d1b3d4c652c80d78",
+          "supported": true,
+          "quote": "Gersdorf an der Feistritz im Bezirk Weiz: Mittwochnachmittag, 25. November 2026, prallte ein 15-Jähriger mit einem Motocross-Motorrad gegen einen Holzstapel."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "d5df35b4d1b3d4c652c80d78",
+          "supported": true,
+          "quote": "Der Jugendliche erlitt schwere Verletzungen."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "5b04db301d8b903d93874e94",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "72f900254a26197d490982c1",
+          "supported": true,
+          "quote": "Ein Italientief bringt die erste nennenswerte und nachhaltige Portion Neuschnee nach Tirol, es schneit am Donnerstag bis ins Inntal herunter."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "35150b2005129d5e85bafdb9",
+          "supported": true,
+          "quote": "Adria-Tief bringt in ganz Kärnten Schneefälle."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "f7dd1d2ead86d9b531cbca64",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "e9c8fa51ad2177bf9bfe9669",
+          "supported": true,
+          "quote": "Für die Beschäftigten in Telekom-Unternehmen gibt es einen neuen Kollektivvertrag."
+        },
+        {
+          "claim_index": 1,
           "source_id": "bdcc13766880c1aa3c9bfb2f",
           "supported": true,
           "quote": "In der vierten Verhandlungsrunde erfolgte eine Einigung."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "729e71b1dd071fb7835c26df",
-          "supported": true,
-          "quote": "Für die Beschäftigten in Telekomunternehmen gibt es einen neuen Kollektivvertrag: In der vierten Verhandlungsrunde haben sich die Arbeitnehmervertreter auf einen Abschluss geeinigt, wie die Gewerkschaft GPA heute mitteilte."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "6dcd607ade820e2eee65b4b7",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "c82ba654a3108f47fed0633e",
-          "supported": true,
-          "quote": "Vera Gräfin von Lehndorff starb am Dienstag im Alter von 87 Jahren in Berlin."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "66c1b3caa479f618ac416a08",
-          "supported": true,
-          "quote": "Das unter dem Künstlernamen Veruschka bekannte Ex-Topmodel Vera Gräfin von Lehndorff ist tot."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "6b406499cc02e4956c6bb6f7",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "2d8c8dbaecc6761ea6b57620",
-          "supported": true,
-          "quote": "Justiz geht gegen das Medienimperium \"Informer\" vor, Chefredakteur Dragan Vucicevic wurde."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "c8da090c482125714dc5dd38",
-          "supported": true,
-          "quote": "Serbiens Justiz geht gegen das Medienimperium Informer vor, ein wichtiges Propagandaorgan, das den jahrelang autokratisch regierenden Ex-Präsidenten Aleksandar Vucic unterstützt hat."
         }
       ],
       "conflicts": [],
