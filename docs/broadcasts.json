@@ -1,62 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261125T170648Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 25.11.2026 um 18:06 Uhr",
-      "created_at": 1795626408.655397,
-      "video": "broadcasts/20261125T170648Z.mp4",
-      "sources": [
-        {
-          "title": "OECD: Österreichs Gesundheitssystem teuer, digitale Angebote wenig genutzt",
-          "url": "https://www.derstandard.at/story/3000000350921/oecd-214sterreichs-gesundheitssystem-teuer-e-health-wenig-genutzt?ref=rss"
-        },
-        {
-          "title": "OECD: Österreichs Gesundheitssystem eines der teuersten",
-          "url": "https://orf.at/stories/3449201/"
-        },
-        {
-          "title": "Österreichs Gesundheitssystem teuer, E-Health wenig genutzt",
-          "url": "https://www.kleinezeitung.at/artikel/41489415/oesterreichs-gesundheitssystem-teuer-e-health-wenig-genutzt"
-        },
-        {
-          "title": "Libysche Soldaten nach ukrainischen Angriffen tot",
-          "url": "https://www.krone.at/4390074"
-        },
-        {
-          "title": "Zwei libysche Soldaten nach ukrainischen Angriffen tot",
-          "url": "https://orf.at/stories/3449224/"
-        },
-        {
-          "title": "Telekom-Kollektivvertrag: Bis zu 3,2 Prozent mehr Gehalt und 500 Euro Prämie",
-          "url": "https://www.derstandard.at/story/3000000351093/telekom-kv-bis-zu-32-prozent-mehr-gehalt-und-500-euro-pr228mie?ref=rss"
-        },
-        {
-          "title": "Telekom-KV: Bis zu 3,2 Prozent mehr Gehalt und Prämie",
-          "url": "https://orf.at/stories/3449274/"
-        },
-        {
-          "title": "Früheres Topmodel Veruschka ist gestorben",
-          "url": "https://www.derstandard.at/story/3000000351091/fr252heres-topmodel-vera-gr228fin-von-lehndorff-ist-gestorben?ref=rss"
-        },
-        {
-          "title": "Deutsches Ex-Topmodel Veruschka gestorben",
-          "url": "https://orf.at/stories/3449272/"
-        },
-        {
-          "title": "Serbien: Chef von Vucic-Propagandamedium festgenommen",
-          "url": "https://www.derstandard.at/story/3000000351064/serbien-chef-von-vucic-propagandamedium-festgenommen?ref=rss"
-        },
-        {
-          "title": "Serbien: Chef von Vucic-Propagandamedium festgenommen",
-          "url": "https://orf.at/stories/3449249/"
-        }
-      ],
-      "transcript": "broadcasts/20261125T170648Z.txt",
-      "subtitles": "broadcasts/20261125T170648Z.vtt",
-      "subtitle_download": "broadcasts/20261125T170648Z.srt"
-    },
-    {
       "id": "20261126T020942Z",
       "kind": "broadcast",
       "title": "Nachrichten 26.11.2026 um 03:09 Uhr",
@@ -107,6 +51,66 @@
       "transcript": "broadcasts/20261126T020942Z.txt",
       "subtitles": "broadcasts/20261126T020942Z.vtt",
       "subtitle_download": "broadcasts/20261126T020942Z.srt"
+    },
+    {
+      "id": "20261126T164755Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 26.11.2026 um 17:47 Uhr",
+      "created_at": 1795711675.197101,
+      "video": "broadcasts/20261126T164755Z.mp4",
+      "sources": [
+        {
+          "title": "Hochzeitsfeier in Indien löste Verkehrschaos aus",
+          "url": "https://www.krone.at/4391562"
+        },
+        {
+          "title": "Hochzeitsfeier mit 400.000 Gästen löste Verkehrschaos in Indien aus",
+          "url": "https://www.derstandard.at/story/3000000351245/hochzeitsfeier-mit-400000-g228sten-l246ste-verkehrschaos-in-indien-aus?ref=rss"
+        },
+        {
+          "title": "Hochzeit mit 400.000 Gästen löst in Indien Chaos aus",
+          "url": "https://orf.at/stories/3449349/"
+        },
+        {
+          "title": "Sommertour des Kanzlers kostete 158 Euro pro Teilnehmer",
+          "url": "https://www.kleinezeitung.at/artikel/41495713/sommertour-des-kanzlers-kostete-158-euro-pro-teilnehmer"
+        },
+        {
+          "title": "Stockers Sommertour kostete 227.777 Euro",
+          "url": "https://www.derstandard.at/story/3000000351289/stockers-sommertour-kostete-227777-euro?ref=rss"
+        },
+        {
+          "title": "Schwerer Verkehrsunfall auf der B76: Drei Verletzte nach Pkw-Kollision",
+          "url": "https://www.kleinezeitung.at/artikel/41492587/schwerer-verkehrsunfall-auf-der-b76-drei-verletzte-nach-pkw-kollision"
+        },
+        {
+          "title": "Kollision zweier Pkw",
+          "url": ""
+        },
+        {
+          "title": "Norwegen verschickt Millionen SMS: Bist du wirklich gläubig?",
+          "url": "https://www.derstandard.at/story/3000000351229/norwegen-verschickt-millionen-sms-bist-du-wirklich-gl228ubig?ref=rss"
+        },
+        {
+          "title": "Norwegen fragt per SMS: Bist du wirklich gläubig?",
+          "url": "https://www.krone.at/4391075"
+        },
+        {
+          "title": "Norwegen fragt mit Millionen SMS nach Bekenntnis",
+          "url": "https://orf.at/stories/3449337/"
+        },
+        {
+          "title": "Irisches Gericht lehnt PTSB-Übernahme durch BAWAG ab",
+          "url": "https://orf.at/stories/3449382/"
+        },
+        {
+          "title": "Gericht stoppt Übernahme der irischen Bank PTSB durch Bawag",
+          "url": "https://www.derstandard.at/story/3000000351284/gericht-stoppt-220bernahme-der-irischen-bank-ptsb-durch-bawag?ref=rss"
+        }
+      ],
+      "transcript": "broadcasts/20261126T164755Z.txt",
+      "subtitles": "broadcasts/20261126T164755Z.vtt",
+      "subtitle_download": "broadcasts/20261126T164755Z.srt"
     }
   ]
 }
