@@ -1,58 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261126T020942Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 26.11.2026 um 03:09 Uhr",
-      "created_at": 1795658982.679585,
-      "video": "broadcasts/20261126T020942Z.mp4",
-      "sources": [
-        {
-          "title": "OECD: Österreichs Gesundheitssystem teuer, digitale Angebote wenig genutzt",
-          "url": "https://www.derstandard.at/story/3000000350921/oecd-214sterreichs-gesundheitssystem-teuer-e-health-wenig-genutzt?ref=rss"
-        },
-        {
-          "title": "OECD: Österreichs Gesundheitssystem eines der teuersten",
-          "url": "https://orf.at/stories/3449201/"
-        },
-        {
-          "title": "Österreichs Gesundheitssystem teuer, E-Health wenig genutzt",
-          "url": "https://www.kleinezeitung.at/artikel/41489415/oesterreichs-gesundheitssystem-teuer-e-health-wenig-genutzt"
-        },
-        {
-          "title": "Van der Bellen für weniger „Abhängigkeit von USA“",
-          "url": "https://www.krone.at/4390252"
-        },
-        {
-          "title": "Van der Bellen: Appell gegen Abhängigkeit von USA",
-          "url": "https://orf.at/stories/3449285/"
-        },
-        {
-          "title": "Motocrossunfall: 15-Jähriger schwer verletzt",
-          "url": ""
-        },
-        {
-          "title": "Bis zu 15 Zentimeter: In Innsbruck wird es weiß",
-          "url": "https://www.krone.at/4389718"
-        },
-        {
-          "title": "Bis zu 15 Zentimeter Schnee: Am Donnerstag wird Kärnten weiß",
-          "url": "https://www.kleinezeitung.at/artikel/41491454/bis-zu-15-zentimeter-schnee-am-donnerstag-wird-kaernten-weiss"
-        },
-        {
-          "title": "Einigung bei Telekom-KV: Mehr Gehalt und Prämie",
-          "url": "https://www.krone.at/4390225"
-        },
-        {
-          "title": "Telekom-Kollektivvertrag: Bis zu 3,2 Prozent mehr Gehalt und 500 Euro Prämie",
-          "url": "https://www.derstandard.at/story/3000000351093/telekom-kv-bis-zu-32-prozent-mehr-gehalt-und-500-euro-pr228mie?ref=rss"
-        }
-      ],
-      "transcript": "broadcasts/20261126T020942Z.txt",
-      "subtitles": "broadcasts/20261126T020942Z.vtt",
-      "subtitle_download": "broadcasts/20261126T020942Z.srt"
-    },
-    {
       "id": "20261126T164755Z",
       "kind": "broadcast",
       "title": "Nachrichten 26.11.2026 um 17:47 Uhr",
@@ -111,6 +59,74 @@
       "transcript": "broadcasts/20261126T164755Z.txt",
       "subtitles": "broadcasts/20261126T164755Z.vtt",
       "subtitle_download": "broadcasts/20261126T164755Z.srt"
+    },
+    {
+      "id": "20261127T020945Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 27.11.2026 um 03:09 Uhr",
+      "created_at": 1795745385.217999,
+      "video": "broadcasts/20261127T020945Z.mp4",
+      "sources": [
+        {
+          "title": "Kuwait: Rheinmetall-Techniker bei Angriff getötet",
+          "url": "https://www.krone.at/4392049"
+        },
+        {
+          "title": "Zwei italienische Rheinmetall-Mitarbeiter bei Drohnenangriff in Kuwait getötet",
+          "url": "https://www.derstandard.at/story/3000000351276/zwei-italienische-techniker-bei-drohnenangriff-im-kuwait-get246tet?ref=rss"
+        },
+        {
+          "title": "Italienische Techniker bei Drohnenangriff in Kuwait getötet",
+          "url": "https://orf.at/stories/3449373/"
+        },
+        {
+          "title": "Sommertour des Kanzlers kostete 158 Euro pro Teilnehmer",
+          "url": "https://www.kleinezeitung.at/artikel/41495713/sommertour-des-kanzlers-kostete-158-euro-pro-teilnehmer"
+        },
+        {
+          "title": "Kanzler-Tour kostete den Steuerzahler 227.777 Euro",
+          "url": "https://www.krone.at/4391445"
+        },
+        {
+          "title": "Stockers Sommertour kostete 227.777 Euro",
+          "url": "https://www.derstandard.at/story/3000000351289/stockers-sommertour-kostete-227777-euro?ref=rss"
+        },
+        {
+          "title": "Schwerer Verkehrsunfall auf der B76: Drei Verletzte nach Pkw-Kollision",
+          "url": "https://www.kleinezeitung.at/artikel/41492587/schwerer-verkehrsunfall-auf-der-b76-drei-verletzte-nach-pkw-kollision"
+        },
+        {
+          "title": "Kollision zweier Pkw",
+          "url": ""
+        },
+        {
+          "title": "Hochzeitsfeier in Indien löste Verkehrschaos aus",
+          "url": "https://www.krone.at/4391562"
+        },
+        {
+          "title": "Hochzeitsfeier mit 400.000 Gästen löste Verkehrschaos in Indien aus",
+          "url": "https://www.derstandard.at/story/3000000351245/hochzeitsfeier-mit-400000-g228sten-l246ste-verkehrschaos-in-indien-aus?ref=rss"
+        },
+        {
+          "title": "Hochzeit mit 400.000 Gästen löst in Indien Chaos aus",
+          "url": "https://orf.at/stories/3449349/"
+        },
+        {
+          "title": "Norwegen verschickt Millionen SMS: Bist du wirklich gläubig?",
+          "url": "https://www.derstandard.at/story/3000000351229/norwegen-verschickt-millionen-sms-bist-du-wirklich-gl228ubig?ref=rss"
+        },
+        {
+          "title": "Norwegen fragt per SMS: Bist du wirklich gläubig?",
+          "url": "https://www.krone.at/4391075"
+        },
+        {
+          "title": "Norwegen fragt mit Millionen SMS nach Bekenntnis",
+          "url": "https://orf.at/stories/3449337/"
+        }
+      ],
+      "transcript": "broadcasts/20261127T020945Z.txt",
+      "subtitles": "broadcasts/20261127T020945Z.vtt",
+      "subtitle_download": "broadcasts/20261127T020945Z.srt"
     }
   ]
 }

@@ -4,7 +4,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "5e478c92e2f4b25dc99b1ec7",
+    "pipeline_group_id": "525b0ac45b64b78f1fb5c02c",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -12,21 +12,21 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "012b403d2665d44de110bb0b",
+          "source_id": "1d2924ada4c09f45084a358e",
           "supported": true,
-          "quote": "In Indien hat eine riesige Hochzeitsfeier mit 400.000 Gästen für Aufsehen und Verkehrschaos gesorgt."
+          "quote": "Zwei italienische Techniker sind bei einem Drohnenangriff auf eine kuwaitische Militäreinrichtung ums Leben gekommen."
         },
         {
           "claim_index": 1,
-          "source_id": "dad62ccb728bd0a13fece054",
+          "source_id": "0213679d4e33b7c731f43676",
           "supported": true,
-          "quote": "Die Hochzeit der Tochter des Politikers Anant Singh, gegen den mehrere Strafverfahren anhängig sind, setzte auch für Indien neue Maßstäbe."
+          "quote": "Die beiden Techniker waren nach bisherigen Erkenntnissen an einer Radarstation der kuwaitischen Luftabwehr im Einsatz, als es zu einer heftigen Explosion kam."
         },
         {
           "claim_index": 2,
-          "source_id": "15f86d3d5810415e819b00fa",
+          "source_id": "77e32625a30be120b6ee95d4",
           "supported": true,
-          "quote": "Gastgeber der riesigen Feier im ärmsten Bundesstaat Bihar war der berüchtigte Politiker Anant Singh, gegen den Dutzende Strafverfahren anhängig sind, unter anderem wegen Mordes."
+          "quote": "Das teilte Außenminister Antonio Tajani heute im Senat in Rom mit."
         }
       ],
       "conflicts": [],
@@ -39,7 +39,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "aa8f77109db36e82006b6c7d",
+    "pipeline_group_id": "70434f0269d945f611ca2fbc",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -53,6 +53,12 @@
         },
         {
           "claim_index": 1,
+          "source_id": "4f0b598a6637dd5db29141f7",
+          "supported": true,
+          "quote": "158 Euro pro anwesendem Bürger: Das Kanzleramt legt die Abrechnung der Sommer-Tour von Bundeskanzler Christian Stocker (ÖVP) vor."
+        },
+        {
+          "claim_index": 2,
           "source_id": "282be22e443df60784ec75fb",
           "supported": true,
           "quote": "Kosten für die Bewerbung der \"Dialog-Tour\" sind darin aber nicht enthalten, erklärt das Kanzleramt."
@@ -97,6 +103,41 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
+    "pipeline_group_id": "5e478c92e2f4b25dc99b1ec7",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "012b403d2665d44de110bb0b",
+          "supported": true,
+          "quote": "In Indien hat eine riesige Hochzeitsfeier mit 400.000 Gästen für Aufsehen und Verkehrschaos gesorgt."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "dad62ccb728bd0a13fece054",
+          "supported": true,
+          "quote": "Die Hochzeit der Tochter des Politikers Anant Singh, gegen den mehrere Strafverfahren anhängig sind, setzte auch für Indien neue Maßstäbe."
+        },
+        {
+          "claim_index": 2,
+          "source_id": "15f86d3d5810415e819b00fa",
+          "supported": true,
+          "quote": "Gastgeber der riesigen Feier im ärmsten Bundesstaat Bihar war der berüchtigte Politiker Anant Singh, gegen den Dutzende Strafverfahren anhängig sind, unter anderem wegen Mordes."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
     "pipeline_group_id": "b87039c4406a787cf111e521",
     "verification": {
       "status": "approved",
@@ -120,35 +161,6 @@
           "source_id": "2ab24276cf7612341d7fc27a",
           "supported": true,
           "quote": "„Die Menschen sollen selbst entscheiden können, wo sie Mitglied sein möchten“, sagte Kinder- und Familienministerin Lene Vagslid laut einer Mitteilung."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "e716e59c36a25ff80b943770",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "19f501a3bfaee821d48e53df",
-          "supported": true,
-          "quote": "Der irische High Court hat die 1,6 Mrd. Euro schwere Übernahme der Bank Permanent TSB (PTSB) durch die heimische BAWAG heute abgelehnt."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "8ac07fe5ca6e1996730459fb",
-          "supported": true,
-          "quote": "Das irische Gericht lehnte die 1,6 Milliarden Euro schwere Transaktion ab, weil die Minderheitsaktionäre nicht gesondert über das Geschäft abstimmen konnten."
         }
       ],
       "conflicts": [],
