@@ -1,133 +1,85 @@
 {
  "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
  "pairs": {
-  "0c6d623136102f0c4b614cfd|3fe036e21b3056e77feb4a19": {
-   "decided_at": 1795703033,
+  "02f7349db8e2ea21d83b6a86|7b4cc0d850e11f4286c82871": {
+   "decided_at": 1795792794,
    "same": false
   },
   "10a06a98eb3962b3c4e6b49d|208d7535ba3a672bd6bd552a": {
    "decided_at": 1795734953,
    "same": true
   },
-  "1193b71c9cb1e9f55390bc33|187f418d5a9f0aa141f64056": {
-   "decided_at": 1795734953,
+  "11d4486c81fc94373ac3a688|7c628619306775f35f7b0afa": {
+   "decided_at": 1795792794,
    "same": false
   },
-  "187f418d5a9f0aa141f64056|4607db2a361c11f11d473b19": {
-   "decided_at": 1795734953,
-   "same": false
-  },
-  "1974d2c03977bc3c3558e9e1|aa9a0f1912a86aa324819e6c": {
-   "decided_at": 1795734953,
+  "1227c0d0328eede7f3942ab8|9a5220b1628a6078706da022": {
+   "decided_at": 1795792794,
    "same": false
   },
   "1c6e51bc24e792c5dedb1c4d|43d005dfd1241db2431800d3": {
    "decided_at": 1795734953,
    "same": true
   },
-  "2041d264f8b89c197588c7ad|2e290e57464c6cec69007d39": {
-   "decided_at": 1795703033,
+  "206714861fb861b3007fbdfb|73e5efce875d440eb50e0a73": {
+   "decided_at": 1795792794,
    "same": false
   },
-  "2041d264f8b89c197588c7ad|860ce720577e984c3c6717c4": {
-   "decided_at": 1795703033,
-   "same": false
-  },
-  "24f7ea8e1a3d055911a0e063|351c458ee0463da54912033e": {
-   "decided_at": 1795734953,
+  "23016ea63890c372480551f6|a5292b3d8654056494eeb512": {
+   "decided_at": 1795792794,
    "same": false
   },
   "250dacb5aea3692e15ef7c93|4f0b598a6637dd5db29141f7": {
    "decided_at": 1795734953,
    "same": true
   },
-  "28070bcd47e6b08dd4592214|ef7e710890424312738bb4ea": {
-   "decided_at": 1795703033,
+  "2b8b2c118fe2bbb2220b4f3c|46576765b7fc96b8646f6aa7": {
+   "decided_at": 1795792794,
    "same": true
   },
-  "282be22e443df60784ec75fb|83345d8e0ea8e80294a08e70": {
-   "decided_at": 1795734953,
-   "same": false
-  },
-  "2ab24276cf7612341d7fc27a|9c6dd7c61d5e9bb1526cfef6": {
-   "decided_at": 1795703033,
-   "same": true
-  },
-  "2d299cfa5acfff3a2d9e2453|9ef08a41fc6153a9f3e9ecc2": {
-   "decided_at": 1795703033,
-   "same": true
-  },
-  "2e7b48a1dfd0e4422495e7f7|60458b25814a5b23a2ab1aaf": {
-   "decided_at": 1795734953,
+  "2f4396fc751ed3a669565ccb|e356e720d495afd24c36a4cd": {
+   "decided_at": 1795792794,
    "same": false
   },
   "342128f519446a2c2b422623|8ac07fe5ca6e1996730459fb": {
    "decided_at": 1795734953,
    "same": true
   },
-  "36bb13ec63e9defc368bbbb2|5461f47b629dd137022f6115": {
-   "decided_at": 1795703033,
+  "4fb7e32eb4350741737f79f2|a4c9cbb275d4b281bd384a46": {
+   "decided_at": 1795792794,
    "same": false
   },
-  "3fe036e21b3056e77feb4a19|731e5acee7db9e017dd548a4": {
-   "decided_at": 1795734953,
-   "same": false
-  },
-  "3fe036e21b3056e77feb4a19|8b107a44ac9dc47c83a17f10": {
-   "decided_at": 1795703033,
-   "same": false
-  },
-  "3fe036e21b3056e77feb4a19|badb8685beb517154beb9212": {
-   "decided_at": 1795703033,
-   "same": false
-  },
-  "4a6a631674fef3d74c1e2fb2|af6a5d339973d57813940fcc": {
-   "decided_at": 1795703033,
-   "same": true
-  },
-  "4f0b598a6637dd5db29141f7|83345d8e0ea8e80294a08e70": {
-   "decided_at": 1795734953,
-   "same": false
-  },
-  "5461f47b629dd137022f6115|5c804ab864cd39c3cdfb3bed": {
-   "decided_at": 1795734953,
-   "same": false
-  },
-  "5c804ab864cd39c3cdfb3bed|ae8307a912f7177ead51701a": {
-   "decided_at": 1795703033,
-   "same": false
-  },
-  "5eb42354a98286ee8c065036|736b9f41692b5b7bfd57f674": {
-   "decided_at": 1795734953,
-   "same": false
-  },
-  "5eb42354a98286ee8c065036|edaad8c8ca302ba7c0950d65": {
-   "decided_at": 1795734953,
-   "same": false
-  },
-  "5eb42354a98286ee8c065036|f493be4e2dbd392bb5751eab": {
-   "decided_at": 1795734953,
+  "4fb7e32eb4350741737f79f2|ab8d5dd5edb8ed93eb1f2ae6": {
+   "decided_at": 1795792794,
    "same": false
   },
   "6a88ef08f811ba44644c185a|8f15745de47dd544d94ada41": {
    "decided_at": 1795734953,
    "same": true
   },
-  "6b44f6e5fec2c185203dac30|fbd8f886e2f4c83c37d126f9": {
-   "decided_at": 1795703033,
-   "same": true
-  },
-  "6c3e3b2277bb06ae55519fee|e3e9283e2ce967d145d91dac": {
-   "decided_at": 1795703033,
-   "same": true
-  },
-  "799896c34bbd42e02182e86a|909bd7853f854de2d46b3229": {
-   "decided_at": 1795734953,
+  "7425740fca788df0fae028d7|7b4cc0d850e11f4286c82871": {
+   "decided_at": 1795792794,
    "same": false
   },
-  "7c7f5302c6ebdca2035d9bd9|9723bc39aecfb51131d75e2d": {
-   "decided_at": 1795703033,
+  "7c628619306775f35f7b0afa|b36c07a886103a8e7e2e4c2c": {
+   "decided_at": 1795792794,
    "same": false
+  },
+  "853cd929ddb2417fe610a13c|c098b7c57bf2b9f7cf2276ec": {
+   "decided_at": 1795792794,
+   "same": false
+  },
+  "9a5220b1628a6078706da022|a6feeb5ada49da8c37f0eced": {
+   "decided_at": 1795792794,
+   "same": false
+  },
+  "9a5220b1628a6078706da022|fb98cd8256b436fffa66649f": {
+   "decided_at": 1795792794,
+   "same": false
+  },
+  "9b578d1488874f9e16b2f940|e932ab449b4ff025739935b0": {
+   "decided_at": 1795792794,
+   "same": true
   },
   "a3e1d85db99d1e80aeeecc22|cb4718c17a7f614156fe97ac": {
    "decided_at": 1795734953,
@@ -135,6 +87,14 @@
   },
   "bca4f37455899f3130cf7bfc|f083a8fabfbc78b981b37ca2": {
    "decided_at": 1795734953,
+   "same": false
+  },
+  "bddad43a2a659c7fb81013ef|f2fbb3c3c8d6f30281831712": {
+   "decided_at": 1795792794,
+   "same": true
+  },
+  "c97e903fbb422f28c0609042|cfefe04372cb3ef133015a92": {
+   "decided_at": 1795792794,
    "same": false
   }
  },
