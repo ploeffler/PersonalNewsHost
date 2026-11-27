@@ -1,66 +1,6 @@
 {
   "broadcasts": [
     {
-      "id": "20261126T164755Z",
-      "kind": "broadcast",
-      "title": "Nachrichten 26.11.2026 um 17:47 Uhr",
-      "created_at": 1795711675.197101,
-      "video": "broadcasts/20261126T164755Z.mp4",
-      "sources": [
-        {
-          "title": "Hochzeitsfeier in Indien löste Verkehrschaos aus",
-          "url": "https://www.krone.at/4391562"
-        },
-        {
-          "title": "Hochzeitsfeier mit 400.000 Gästen löste Verkehrschaos in Indien aus",
-          "url": "https://www.derstandard.at/story/3000000351245/hochzeitsfeier-mit-400000-g228sten-l246ste-verkehrschaos-in-indien-aus?ref=rss"
-        },
-        {
-          "title": "Hochzeit mit 400.000 Gästen löst in Indien Chaos aus",
-          "url": "https://orf.at/stories/3449349/"
-        },
-        {
-          "title": "Sommertour des Kanzlers kostete 158 Euro pro Teilnehmer",
-          "url": "https://www.kleinezeitung.at/artikel/41495713/sommertour-des-kanzlers-kostete-158-euro-pro-teilnehmer"
-        },
-        {
-          "title": "Stockers Sommertour kostete 227.777 Euro",
-          "url": "https://www.derstandard.at/story/3000000351289/stockers-sommertour-kostete-227777-euro?ref=rss"
-        },
-        {
-          "title": "Schwerer Verkehrsunfall auf der B76: Drei Verletzte nach Pkw-Kollision",
-          "url": "https://www.kleinezeitung.at/artikel/41492587/schwerer-verkehrsunfall-auf-der-b76-drei-verletzte-nach-pkw-kollision"
-        },
-        {
-          "title": "Kollision zweier Pkw",
-          "url": ""
-        },
-        {
-          "title": "Norwegen verschickt Millionen SMS: Bist du wirklich gläubig?",
-          "url": "https://www.derstandard.at/story/3000000351229/norwegen-verschickt-millionen-sms-bist-du-wirklich-gl228ubig?ref=rss"
-        },
-        {
-          "title": "Norwegen fragt per SMS: Bist du wirklich gläubig?",
-          "url": "https://www.krone.at/4391075"
-        },
-        {
-          "title": "Norwegen fragt mit Millionen SMS nach Bekenntnis",
-          "url": "https://orf.at/stories/3449337/"
-        },
-        {
-          "title": "Irisches Gericht lehnt PTSB-Übernahme durch BAWAG ab",
-          "url": "https://orf.at/stories/3449382/"
-        },
-        {
-          "title": "Gericht stoppt Übernahme der irischen Bank PTSB durch Bawag",
-          "url": "https://www.derstandard.at/story/3000000351284/gericht-stoppt-220bernahme-der-irischen-bank-ptsb-durch-bawag?ref=rss"
-        }
-      ],
-      "transcript": "broadcasts/20261126T164755Z.txt",
-      "subtitles": "broadcasts/20261126T164755Z.vtt",
-      "subtitle_download": "broadcasts/20261126T164755Z.srt"
-    },
-    {
       "id": "20261127T020945Z",
       "kind": "broadcast",
       "title": "Nachrichten 27.11.2026 um 03:09 Uhr",
@@ -127,6 +67,54 @@
       "transcript": "broadcasts/20261127T020945Z.txt",
       "subtitles": "broadcasts/20261127T020945Z.vtt",
       "subtitle_download": "broadcasts/20261127T020945Z.srt"
+    },
+    {
+      "id": "20261127T163316Z",
+      "kind": "broadcast",
+      "title": "Nachrichten 27.11.2026 um 17:33 Uhr",
+      "created_at": 1795797196.507154,
+      "video": "broadcasts/20261127T163316Z.mp4",
+      "sources": [
+        {
+          "title": "Bericht: Ukraine strebt Waffenruhe im Schwarzen Meer an",
+          "url": "https://orf.at/stories/3449483/"
+        },
+        {
+          "title": "Ukraine bietet Waffenruhe im Schwarzen Meer an",
+          "url": "https://www.derstandard.at/jetzt/livebericht/3000000351299/iaea-warnt-nach-stromausfall-im-atomkraftwerk-saporischschja-vor-prekaerer-sicherheitslage?ref=rss"
+        },
+        {
+          "title": "Delivery Hero: US-Fahrdienst Uber sichert sich fast 90 Prozent",
+          "url": "https://www.kleinezeitung.at/artikel/41499179/delivery-hero-us-fahrdienst-uber-sichert-sich-fast-90-prozent"
+        },
+        {
+          "title": "Uber sichert sich fast 90 Prozent an Delivery Hero",
+          "url": "https://orf.at/stories/3449462/"
+        },
+        {
+          "title": "Persmanhof: Erste Anklage gegen Camp-Teilnehmer",
+          "url": "https://www.krone.at/4393011"
+        },
+        {
+          "title": "Peršmanhof: Kärntner Teilnehmer an Antifa-Camp angeklagt",
+          "url": "https://www.kleinezeitung.at/artikel/41498425/persmanhof-kaerntner-teilnehmer-an-antifa-camp-angeklagt"
+        },
+        {
+          "title": "Tödlicher landwirtschaftlicher Unfall",
+          "url": ""
+        },
+        {
+          "title": "Die Lkw-Maut steigt im neuen Jahr um 3 bis 3,6 Prozent",
+          "url": "https://www.kleinezeitung.at/artikel/41499127/die-lkw-maut-steigt-im-neuen-jahr-um-3-bis-3-6-prozent"
+        },
+        {
+          "title": "Lkw-Maut steigt 2027 um mindestens drei Prozent",
+          "url": "https://orf.at/stories/3449459/"
+        }
+      ],
+      "transcript": "broadcasts/20261127T163316Z.txt",
+      "subtitles": "broadcasts/20261127T163316Z.vtt",
+      "subtitle_download": "broadcasts/20261127T163316Z.srt"
     }
   ]
 }
