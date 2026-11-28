@@ -4,7 +4,7 @@
     "matches": [],
     "scope": "stored_source_support",
     "claim_verified": false,
-    "pipeline_group_id": "b86bb6cbeb033fbb2a8ad9d5",
+    "pipeline_group_id": "51eb61bfe63474225450ce99",
     "verification": {
       "status": "approved",
       "scope": "stored_source_support",
@@ -12,131 +12,137 @@
       "claims": [
         {
           "claim_index": 0,
-          "source_id": "f687ac895525452931f50b16",
+          "source_id": "34a2afe53622585d38b9b106",
           "supported": true,
-          "quote": "Die Ukraine strebt nach eigenen Angaben eine Waffenruhe im Schwarzen Meer zur Sicherung des Lebensmittelexports an."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "62da557346155b159c9baadd",
-          "supported": true,
-          "quote": "Ein Vorschlag für eine Waffenruhe zur Sicherung des Lebensmittelexports wurde weitergeleitet."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "f209844d85a1dc4ce9e082d4",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "3e12a6b289fee224d3df7d78",
-          "supported": true,
-          "quote": "Uber will mit dem bis zu 13 Milliarden Euro schweren Zukauf zum weltgrößten Essenslieferdienst außerhalb Chinas werden."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "df467586165fd2d8aaf60b58",
-          "supported": true,
-          "quote": "Der US-Fahrdienst Uber hat sich mehr als 87 Prozent der Anteile am deutschen Essenslieferanten Delivery Hero gesichert."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "2ebad4a4ce79dfabdfe0dc77",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "2b8b2c118fe2bbb2220b4f3c",
-          "supported": true,
-          "quote": "Seit Juli 2025 wurde ermittelt – jetzt gibt es erste Teilererledigungen in dem umfangreichen Verfahren rund um das Antifa-Camp im NS-Museum am Peršmanhof in Kärnten."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "46576765b7fc96b8646f6aa7",
-          "supported": true,
-          "quote": "Staatsanwaltschaft Graz wirft dem Mann (50) Widerstand gegen die Staatsgewalt und versuchte schwere Körperverletzung vor."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "072b69ba71926a3b59bff94a",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "14031b6ec3027701defa655d",
-          "supported": true,
-          "quote": "Sinabelkirchen im Bezirk Weiz: Donnerstagnachmittag, 26. November 2026, kippte eine landwirtschaftliche Arbeitsmaschine beim Schneeräumen um."
-        },
-        {
-          "claim_index": 1,
-          "source_id": "14031b6ec3027701defa655d",
-          "supported": true,
-          "quote": "Der 52-jährige Lenker wurde tödlich verletzt."
-        }
-      ],
-      "conflicts": [],
-      "independent_fact_check": false,
-      "source_independence": "not_assessed"
-    }
-  },
-  {
-    "status": "source_support_approved",
-    "matches": [],
-    "scope": "stored_source_support",
-    "claim_verified": false,
-    "pipeline_group_id": "f86375bfd8fd8dffbd42fcb7",
-    "verification": {
-      "status": "approved",
-      "scope": "stored_source_support",
-      "issues": [],
-      "claims": [
-        {
-          "claim_index": 0,
-          "source_id": "f7a5a513bfba8ab93c7e79f5",
-          "supported": true,
-          "quote": "Für die am häufigsten auf Autobahnen anzutreffende Lkw-Klasse erhöht sich 2027 der Mauttarif um 3,5 Prozent auf 59,27 Cent je Kilometer."
+          "quote": "Für die am häufigsten auf Autobahnen anzutreffende Lkw-Klasse erhöht sich der Mauttarif um 3,5 Prozent auf 59,27 Cent je Kilometer."
         },
         {
           "claim_index": 1,
           "source_id": "b28bd921cc9e1b986cfe87c0",
           "supported": true,
-          "quote": "Die Bundesregierung hat heute die Lkw-Maut-Verordnung für 2027 veröffentlicht."
+          "quote": "Die Bundesregierung hat gestern die Lkw-Maut-Verordnung für 2027 veröffentlicht."
+        },
+        {
+          "claim_index": 2,
+          "source_id": "34a2afe53622585d38b9b106",
+          "supported": true,
+          "quote": "Die Vignette wird um zwei Prozent teurer."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "7f578ff41407ac197c1161db",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "f65daf2812115038b3a8bb20",
+          "supported": true,
+          "quote": "Die Wiener feierten einen späten 1:0-Auswärtserfolg in Innsbruck."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "509d9f538a41d19c4c948641",
+          "supported": true,
+          "quote": "Fußballliga hat die Vienna einen Auswärtssieg in Innsbruck gefeiert."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "3f48369f2de4bbb8794b13ce",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "116cf0a288cc823929305016",
+          "supported": true,
+          "quote": "Zwar sind die Todesfälle durch Masern stark zurückgegangen."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "ad5e74068dfb0eeb9c71307f",
+          "supported": true,
+          "quote": "Die Weltgesundheitsorganisation kritisiert den nachlassenden Impfschutz auf dem amerikanischen Kontinent und die niedrigen Impfraten in Teilen Europas."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "39145822c6c7adc711f8ed6a",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "3a2d307fd63adfd4e6e4adc8",
+          "supported": true,
+          "quote": "Das US-Militär hat nach eigenen Angaben ein Handelsschiff im Golf von Oman angegriffen."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "f118caa4e8459e90b7fce441",
+          "supported": true,
+          "quote": "Der Frachter soll laut den USA das Ziel gehabt haben, eine Seeblockade zu durchbrechen."
+        }
+      ],
+      "conflicts": [],
+      "independent_fact_check": false,
+      "source_independence": "not_assessed"
+    }
+  },
+  {
+    "status": "source_support_approved",
+    "matches": [],
+    "scope": "stored_source_support",
+    "claim_verified": false,
+    "pipeline_group_id": "e7f357dd07e42b8a531e0713",
+    "verification": {
+      "status": "approved",
+      "scope": "stored_source_support",
+      "issues": [],
+      "claims": [
+        {
+          "claim_index": 0,
+          "source_id": "fbcdfa5542c46fcf407c6d43",
+          "supported": true,
+          "quote": "Der Bau soll illegal sein, es liege laut den Behörden keine ordentliche Baugenehmigung vor."
+        },
+        {
+          "claim_index": 1,
+          "source_id": "079df39c04a4c875f719e175",
+          "supported": true,
+          "quote": "Belgische Behörden haben den US-Tech-Giganten angewiesen, den Bau eines Rechenzentrums im Süden des Landes zu stoppen."
         }
       ],
       "conflicts": [],
